@@ -66,3 +66,6 @@ DerivedDataCache/*
 *.swp
 *.swo
 .ctrlp_cache/
+
+# Visual Studio
+.vs
