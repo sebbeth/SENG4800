@@ -13,8 +13,8 @@ class TIMESCALEDEMO_API AGlowCube : public AActor
 	GENERATED_BODY()
 	
 public:	
-	static const FVector START_POINT;
-	static const FVector END_POINT;
+	//static const FVector START_POINT;
+	static const FVector END_OFFSET;
 	static const double ANIMATION_DURATION;
 	static const double STRAFE_SIN_REPETITIONS;
 	static const double SCALE_SIN_REPETITIONS;
@@ -23,6 +23,7 @@ public:
 	AGlowCube();
 
 private:
+	FVector startPoint;
 	double timeElapsed;
 	double speed;
 protected:
@@ -30,8 +31,8 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	UFUNCTION(BlueprintCallable, Category = "GlowCube")
+	void delegatedTick(float DeltaTime);
 
 	
 	

@@ -5,8 +5,8 @@
 #include <algorithm>
 #include <iostream>
 #include "Runtime/Engine/Classes/Engine/World.h"
-const FVector AGlowCube::START_POINT(-425, -425, 50);
-const FVector AGlowCube::END_POINT(425, 425, 50);
+//const FVector AGlowCube::START_POINT(-425, -425, 50);
+const FVector AGlowCube::END_OFFSET(425, 425, 50);
 const double AGlowCube::ANIMATION_DURATION = 5; //5 seconds
 const double AGlowCube::STRAFE_SIN_REPETITIONS = 2;
 const double AGlowCube::SCALE_SIN_REPETITIONS = 1;
@@ -23,24 +23,22 @@ AGlowCube::AGlowCube()
 void AGlowCube::BeginPlay()
 {
 	Super::BeginPlay();
-	SetActorLocation(START_POINT);
+	startPoint = GetActorLocation();
 	timeElapsed = 0;
 	speed = 1;
 }
 
-// Called every frame
-void AGlowCube::Tick(float DeltaTime)
+void AGlowCube::delegatedTick(float DeltaTime)
 {
 	/*
 		This is basically implemented by tracking the current point in the animation, and then using vector calculus to determine where the actor should be as an interpolation between the start and end positions of 
 	*/
-	Super::Tick(DeltaTime);
 	
 	//update the timeElapsed
 	timeElapsed = better_modulo(timeElapsed+(DeltaTime*speed), ANIMATION_DURATION);
 	
 	//create a vector between the start position and end point 
-	FVector directionVector = (END_POINT - START_POINT);
+	FVector directionVector = (END_OFFSET - startPoint);
 
 	//find the distance between the points
 	double totalYDistance = directionVector.Size();
@@ -52,7 +50,7 @@ void AGlowCube::Tick(float DeltaTime)
 	double timeScale = (timeElapsed / ANIMATION_DURATION);
 
 	//find the location that is timeScale along the path between the start and end points
-	FVector target = (START_POINT + directionVector * (totalYDistance*timeScale));
+	FVector target = (startPoint + directionVector * (totalYDistance*timeScale));
 
 	//the rest of this is just strafing the cube using a sin function; It's for show, don't worry too much about understanding it.
 
