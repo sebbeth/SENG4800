@@ -1,4 +1,4 @@
-#include "external/visualiser/Entity.h"
+#include "Entity.h"
 namespace visualiser {
     Entity::Entity(std::size_t id, Type type): id(id), type(type) {}
 

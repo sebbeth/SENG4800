@@ -1,4 +1,4 @@
-#include "external/visualiser/HyperCoord.h"
+#include "HyperCoord.h"
 namespace visualiser {
     HyperCoord::HyperCoord(Vector3D position, Vector3D rotation, Vector3D scale): position(position), rotation(rotation), scale(scale) {}
     HyperCoord operator+(const HyperCoord& a, const HyperCoord& b) {

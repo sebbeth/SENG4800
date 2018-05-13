@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\TimeScaleDemo.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{CBFD16B4-9590-445B-AD89-25375CD567E4}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TimeScaleDemo.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\TimeScaleDemoEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{57DD4AF3-CA6C-4CD3-AA33-8063151107B3}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\TimeScaleDemo">
+      <UniqueIdentifier>{A346AEE4-A42A-4913-A725-F70DBA6418A1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\DaHUD.cpp">
+      <Filter>Source\TimeScaleDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\DaHUD.h">
+      <Filter>Source\TimeScaleDemo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\GlowCube.cpp">
+      <Filter>Source\TimeScaleDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\GlowCube.h">
+      <Filter>Source\TimeScaleDemo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\SDaWidgetA.cpp">
+      <Filter>Source\TimeScaleDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\SDaWidgetA.h">
+      <Filter>Source\TimeScaleDemo</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\TimeScaleDemo\TimeScaleDemo.Build.cs">
+      <Filter>Source\TimeScaleDemo</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\TimeScaleDemo.cpp">
+      <Filter>Source\TimeScaleDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\TimeScaleDemo.h">
+      <Filter>Source\TimeScaleDemo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\TimeScaleDemoGameModeBase.cpp">
+      <Filter>Source\TimeScaleDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\TimeScaleDemoGameModeBase.h">
+      <Filter>Source\TimeScaleDemo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\external\visualiser\Entity.cpp">
+      <Filter>external\visualiser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\visualiser\HyperCoord.cpp">
+      <Filter>external\visualiser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\visualiser\Vector3D.cpp">
+      <Filter>external\visualiser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\visualiser\VisualisationController.cpp">
+      <Filter>external\visualiser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\VisualisationControllerWrapper.cpp">
+      <Filter>Source\TimeScaleDemo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\external\visualiser\Entity.h">
+      <Filter>external\visualiser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\visualiser\HyperCoord.h">
+      <Filter>external\visualiser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\visualiser\KeyFrame.h">
+      <Filter>external\visualiser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\visualiser\Vector3D.h">
+      <Filter>external\visualiser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\visualiser\VisualisationController.h">
+      <Filter>external\visualiser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\VisualisationControllerWrapper.h">
+      <Filter>Source\TimeScaleDemo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="external">
+      <UniqueIdentifier>{83c055e7-13bd-4ffa-856d-fcef5e7c8ce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\visualiser">
+      <UniqueIdentifier>{c596b759-14a4-48b1-b10e-395a89a827a4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

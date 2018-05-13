@@ -1,4 +1,4 @@
-#include "external/visualiser/Vector3D.h"
+#include "Vector3D.h"
 namespace visualiser {
     double Vector3D::dot(const Vector3D& a, const Vector3D& b) {
         return a.x*b.x + a.y*b.y + a.z*b.z;

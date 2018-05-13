@@ -1,5 +1,5 @@
 #pragma once
-#include "external/visualiser/Vector3D.h"
+#include "Vector3D.h"
 namespace visualiser {
     /**
      * A coordinate consisting of position, orientation and scale, each identifying a key frame/state for an object in the simulation

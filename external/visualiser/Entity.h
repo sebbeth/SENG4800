@@ -1,18 +1,18 @@
 #pragma once
 #include <vector>
-#include "external/visualiser/HyperCoord.h"
-#include "external/visualiser/KeyFrame.h"
+#include "HyperCoord.h"
+#include "KeyFrame.h"
 namespace visualiser {        
         //todo: should this just be implemented as an extension of vector<hypercoord>? or, should they be public, with the frame list having a class extension that supports indexing by time as well as number?
         //probably not;
     class Entity {
     public:
         enum Type {
+			DEMO_CUBE,
             COAL_PILE,
             STACKER,
             RECLAIMER,
-            TRAIN,
-            IDKWHATELSE
+            TRAIN
         };
 
         typedef std::vector<KeyFrame>::const_iterator state_iterator;
