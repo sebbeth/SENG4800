@@ -69,3 +69,6 @@ DerivedDataCache/*
 
 # Visual Studio
 .vs
+
+#VS Code
+.vscode
