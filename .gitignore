@@ -52,6 +52,9 @@ Saved/*
 
 # Compiled source files for the engine to use
 Intermediate/*
+# It also contains other stuff we need though
+!Intermediate/Config
+!Intermediate/ProjectFiles
 
 # Cache files for the editor to use
 DerivedDataCache/*
