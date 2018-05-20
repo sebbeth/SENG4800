@@ -24,16 +24,16 @@ void AStackerReclaimer::BeginPlay()
 	
 	state = 0;
 	task = 0;
-	moveToPosition = 0;
+	moveToTarget = 0.0f;
+	rotationTarget = 0.0f;
+	rotationOffset = 32.8f;
 
-	trackNodeA = FVector(-386690.0f, -200210.0f, -1430.0f);
-	trackNodeB = FVector(-283360.0f, -130770.0f, -1430.0f);
 
 	currentLocation = trackNodeA;
 	SetActorLocation(currentLocation);
 
 	targetLocation = trackNodeB;
-	speed = 20.0f;   // change this to whatever
+	speed = 250.0f;   // change this to whatever
 
 	
 }
@@ -51,26 +51,57 @@ void AStackerReclaimer::Tick(float DeltaTime)
 		break;
 	case 1:
 	{
-
+		speed = 250.0f;
 		currentLocation = this->GetActorLocation();
-		//create a vector between the start position and end point 
-		FVector directionVector = (targetLocation - currentLocation);
+	
+		FVector directionVector = (trackNodeB - trackNodeA);
 
-		//find the distance between the points
-		double totalYDistance = directionVector.Size();
-
-		//now we have the distance, we want the direction from start to end as a unit vector 
+		double targetDistance = moveToTarget * directionVector.Size();
 		directionVector.Normalize();
 
-		//find the location that is timeScale along the path between the start and end points
-		//FVector target = (currentLocation + directionVector * DeltaTime);
-		FVector target = currentLocation + (directionVector * speed);
-		//reposition the actor to the correct location
-		SetActorLocation(target);
+		directionVector = directionVector * targetDistance;
+
+		FVector targetVector = (trackNodeA + directionVector) - currentLocation;
+
+		// Slow down and stop
+		if (targetVector.Size() < 1000) {
+			speed = speed / 2.0;
+		}
+		if (targetVector.Size() < 300) {
+			speed = speed / 2.0;
+		}
+		if (targetVector.Size() < 200) {
+			speed = 0;
+			state = 0;
+		}
+		targetVector.Normalize();
+
+	
+		SetActorLocation( currentLocation + targetVector * speed);
 	}
 
 		break;
 	case 2:
+
+	{
+		// Rotate
+		FRotator currentRotation = this->GetActorRotation();
+		float difference = abs(currentRotation.Yaw - rotationTarget);
+
+		if (difference > 5) {
+			if (currentRotation.Yaw > rotationTarget) {
+				currentRotation.Yaw = currentRotation.Yaw - slewSpeed;
+			}
+			else {
+				currentRotation.Yaw = currentRotation.Yaw + slewSpeed;
+			}
+			SetActorRotation(currentRotation, ETeleportType::None);
+
+		} 
+		else {
+			state = 0;
+		}
+	}
 		break;
 	default:
 		break;
@@ -92,9 +123,16 @@ void AStackerReclaimer::Tick(float DeltaTime)
 	*/
 }
 
-void AStackerReclaimer::moveTo(int position) {
+
+void AStackerReclaimer::moveTo(float position) {
 	state = 1;
-	UE_LOG(LogTemp, Warning, TEXT("move"));
+	moveToTarget = position;
+
+}
+
+void AStackerReclaimer::rotateTo(float degrees) {
+	state = 2;
+	rotationTarget = degrees;
 
 }
 

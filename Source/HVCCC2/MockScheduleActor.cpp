@@ -20,15 +20,28 @@ void AMockScheduleActor::BeginPlay()
 	task = 0;
 
 
-	for (TActorIterator<AStackerReclaimer> ActorItr(GetWorld()); ActorItr; ++ActorItr)
-	{
-		// Same as with the Object Iterator, access the subclass instance with the * or -> operators.
-		AStackerReclaimer *Mesh = *ActorItr;
-		//ClientMessage(ActorItr->GetName());
-		//ClientMessage(ActorItr->GetActorLocation().ToString());
-		//UE_LOG(LogTemp, Warning, TEXT("actor %s"), *ActorItr->GetName());
+	int i = 0;
 
+
+
+}
+
+
+AStackerReclaimer* getStackerReclaimerAtIndex(int index, UWorld *world) {
+
+	int i = 0;
+	for (TActorIterator<AStackerReclaimer> ActorItr(world); ActorItr; ++ActorItr)
+	{
+		AStackerReclaimer *stackerReclaimer = *ActorItr;
+
+		if (i == index) {
+			return stackerReclaimer;
+		}
+
+		i++;
+		
 	}
+	return NULL;
 }
 
 // Called every frame
@@ -48,33 +61,79 @@ void AMockScheduleActor::iterateSchedule() {
 	UE_LOG(LogTemp, Warning, TEXT("schedule %d"), task);
 
 	switch (task) {
-	case 0:
-		//state = 0;
-		break;
 	case 1:
-		//state = 1;
+	{	
+
+		getStackerReclaimerAtIndex(0, GetWorld())->moveTo(0.3);
+		getStackerReclaimerAtIndex(1, GetWorld())->moveTo(1.0f);
+		getStackerReclaimerAtIndex(2, GetWorld())->moveTo(0.6);
+		getStackerReclaimerAtIndex(3, GetWorld())->moveTo(1.0f);
+		getStackerReclaimerAtIndex(4, GetWorld())->moveTo(1.0f);
+		getStackerReclaimerAtIndex(5, GetWorld())->moveTo(1.0f);
+		getStackerReclaimerAtIndex(6, GetWorld())->moveTo(1.0f);
+
+	}
+		break;
+	case 2:
 	{
 
-		// Get the reclaimer by iterating the Actors
-		for (TActorIterator<AStackerReclaimer> ActorItr(GetWorld()); ActorItr; ++ActorItr)
-		{
-			// Same as with the Object Iterator, access the subclass instance with the * or -> operators.
-			AStackerReclaimer *stackerReclaimer = *ActorItr;
-			stackerReclaimer->moveTo(50);
-		}
+		getStackerReclaimerAtIndex(0, GetWorld())->moveTo(0.8);
+		getStackerReclaimerAtIndex(2, GetWorld())->rotateTo(90.0);
+		getStackerReclaimerAtIndex(5, GetWorld())->rotateTo(-90.0);
+		getStackerReclaimerAtIndex(4, GetWorld())->moveTo(0.2f);
+		getStackerReclaimerAtIndex(6, GetWorld())->moveTo(0.5f);
+		getStackerReclaimerAtIndex(1, GetWorld())->rotateTo(-90.0);
 
 	}
 
 	break;
-	case 2:
-		//state = 2;
-		break;
 	case 3:
-		//state = 1;
+	{
+
+		getStackerReclaimerAtIndex(0, GetWorld())->moveTo(0);
+		getStackerReclaimerAtIndex(3, GetWorld())->rotateTo(90.0);
+		getStackerReclaimerAtIndex(5, GetWorld())->rotateTo(0.0);
+		getStackerReclaimerAtIndex(6, GetWorld())->moveTo(0.7f);
+		getStackerReclaimerAtIndex(4, GetWorld())->moveTo(0.0f);
+		getStackerReclaimerAtIndex(2, GetWorld())->rotateTo(-90.0);
+		getStackerReclaimerAtIndex(1, GetWorld())->moveTo(0.0f);
+
+
+	}
+		break;
+	case 4:
+	
+	{
+
+		getStackerReclaimerAtIndex(5, GetWorld())->moveTo(0.0);
+		getStackerReclaimerAtIndex(3, GetWorld())->moveTo(0.2f);
+		getStackerReclaimerAtIndex(1, GetWorld())->moveTo(0.2f);
+		getStackerReclaimerAtIndex(6, GetWorld())->moveTo(0.1f);
+		getStackerReclaimerAtIndex(0, GetWorld())->rotateTo(30.0);
+		getStackerReclaimerAtIndex(4, GetWorld())->rotateTo(-90.0);
+
+
+	}
+
+
 		break;
 
+	case 5:
+	{
+		getStackerReclaimerAtIndex(5, GetWorld())->rotateTo(-90.0);
+		getStackerReclaimerAtIndex(3, GetWorld())->moveTo(0.7f);
+		getStackerReclaimerAtIndex(1, GetWorld())->moveTo(0.7f);
+		getStackerReclaimerAtIndex(6, GetWorld())->moveTo(0.3f);
+		getStackerReclaimerAtIndex(2, GetWorld())->moveTo(1.0f);
+		getStackerReclaimerAtIndex(4, GetWorld())->moveTo(1.0f);
+
+
+	}
+
+	break;
+
 	default:
-		//state = 0;
+		task = 1;
 		break;
 	};
 }

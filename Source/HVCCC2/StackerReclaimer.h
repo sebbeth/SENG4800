@@ -21,7 +21,9 @@ protected:
 
 private:
 
-	int moveToPosition;
+	float moveToTarget;
+	float rotationTarget;
+	float rotationOffset;
 
 public:	
 	// Called every frame
@@ -30,8 +32,14 @@ public:
 	FVector currentLocation;
 	FVector targetLocation;
 
+	UPROPERTY(EditAnywhere)
 	FVector trackNodeA;
+
+	UPROPERTY(EditAnywhere)
 	FVector trackNodeB;
+
+	UPROPERTY(EditAnywhere)
+	float slewSpeed;
 
 	int state;
 	int task; // temp scheduling variable
@@ -42,5 +50,9 @@ public:
 	
 
 	UFUNCTION(BlueprintCallable, Category = "SR")
-	void moveTo(int position);
+	void moveTo(float position);
+
+	UFUNCTION(BlueprintCallable, Category = "SR")
+	void rotateTo(float degrees);
+
 };
