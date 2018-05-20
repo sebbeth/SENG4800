@@ -19,6 +19,10 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+private:
+
+	int moveToPosition;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -38,5 +42,5 @@ public:
 	
 
 	UFUNCTION(BlueprintCallable, Category = "SR")
-	void moveTo();
+	void moveTo(int position);
 };

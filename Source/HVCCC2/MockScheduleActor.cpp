@@ -36,14 +36,36 @@ void AMockScheduleActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	
+
+
+
+}
+
+void AMockScheduleActor::iterateSchedule() {
+		
+	task++;
+	UE_LOG(LogTemp, Warning, TEXT("schedule %d"), task);
+
 	switch (task) {
 	case 0:
 		//state = 0;
 		break;
 	case 1:
 		//state = 1;
+	{
 
-		break;
+		// Get the reclaimer by iterating the Actors
+		for (TActorIterator<AStackerReclaimer> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+		{
+			// Same as with the Object Iterator, access the subclass instance with the * or -> operators.
+			AStackerReclaimer *stackerReclaimer = *ActorItr;
+			stackerReclaimer->moveTo(50);
+		}
+
+	}
+
+	break;
 	case 2:
 		//state = 2;
 		break;
@@ -55,17 +77,6 @@ void AMockScheduleActor::Tick(float DeltaTime)
 		//state = 0;
 		break;
 	};
-
-
-
-}
-
-void AMockScheduleActor::iterateSchedule() {
-		
-	task++;
-	UE_LOG(LogTemp, Warning, TEXT("schedule %d"), task);
-
-
 }
 
 

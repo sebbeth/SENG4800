@@ -24,6 +24,7 @@ void AStackerReclaimer::BeginPlay()
 	
 	state = 0;
 	task = 0;
+	moveToPosition = 0;
 
 	trackNodeA = FVector(-386690.0f, -200210.0f, -1430.0f);
 	trackNodeB = FVector(-283360.0f, -130770.0f, -1430.0f);
@@ -42,25 +43,7 @@ void AStackerReclaimer::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	switch (task) {
-		case 0:
-			state = 0;
-			break;
-		case 1:
-			state = 1;
-			break;
-		case 2:
-			state = 2;
-			break;
-		case 3:
-			state = 1;
-			break;
 
-		default:
-			state = 0;
-			break;
-	};
-	
 
 	switch (state) {
 
@@ -109,9 +92,9 @@ void AStackerReclaimer::Tick(float DeltaTime)
 	*/
 }
 
-void AStackerReclaimer::moveTo() {
-	task++;
-	UE_LOG(LogTemp, Warning, TEXT("move %d"), task);
+void AStackerReclaimer::moveTo(int position) {
+	state = 1;
+	UE_LOG(LogTemp, Warning, TEXT("move"));
 
 }
 
