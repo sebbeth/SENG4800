@@ -64,25 +64,27 @@ void AMockScheduleActor::iterateSchedule() {
 	case 1:
 	{	
 
-		getStackerReclaimerAtIndex(0, GetWorld())->moveTo(0.3);
-		getStackerReclaimerAtIndex(1, GetWorld())->moveTo(1.0f);
+		getStackerReclaimerAtIndex(0, GetWorld())->rotateTo(38.0f);
+		getStackerReclaimerAtIndex(1, GetWorld())->moveTo(0.1f);
 		getStackerReclaimerAtIndex(2, GetWorld())->moveTo(0.6);
-		getStackerReclaimerAtIndex(3, GetWorld())->moveTo(1.0f);
-		getStackerReclaimerAtIndex(4, GetWorld())->moveTo(1.0f);
-		getStackerReclaimerAtIndex(5, GetWorld())->moveTo(1.0f);
-		getStackerReclaimerAtIndex(6, GetWorld())->moveTo(1.0f);
+		getStackerReclaimerAtIndex(3, GetWorld())->moveTo(0.2f);
+		getStackerReclaimerAtIndex(4, GetWorld())->rotateTo(38.0f);
+		getStackerReclaimerAtIndex(5, GetWorld())->rotateTo(38.0f);
+		getStackerReclaimerAtIndex(6, GetWorld())->rotateTo(38.0f);
+		getStackerReclaimerAtIndex(7, GetWorld())->moveTo(1.0f);
 
 	}
 		break;
 	case 2:
 	{
 
-		getStackerReclaimerAtIndex(0, GetWorld())->moveTo(0.8);
+		getStackerReclaimerAtIndex(0, GetWorld())->rotateTo(38.0f);
+		getStackerReclaimerAtIndex(4, GetWorld())->rotateTo(38.0f);
+		getStackerReclaimerAtIndex(6, GetWorld())->moveTo(0.5f);
+		getStackerReclaimerAtIndex(7, GetWorld())->moveTo(0.0f);
+		getStackerReclaimerAtIndex(1, GetWorld())->rotateTo(38.0f);
 		getStackerReclaimerAtIndex(2, GetWorld())->rotateTo(90.0);
 		getStackerReclaimerAtIndex(5, GetWorld())->rotateTo(-90.0);
-		getStackerReclaimerAtIndex(4, GetWorld())->moveTo(0.2f);
-		getStackerReclaimerAtIndex(6, GetWorld())->moveTo(0.5f);
-		getStackerReclaimerAtIndex(1, GetWorld())->rotateTo(-90.0);
 
 	}
 
@@ -91,13 +93,13 @@ void AMockScheduleActor::iterateSchedule() {
 	{
 
 		getStackerReclaimerAtIndex(0, GetWorld())->moveTo(0);
-		getStackerReclaimerAtIndex(3, GetWorld())->rotateTo(90.0);
-		getStackerReclaimerAtIndex(5, GetWorld())->rotateTo(0.0);
 		getStackerReclaimerAtIndex(6, GetWorld())->moveTo(0.7f);
 		getStackerReclaimerAtIndex(4, GetWorld())->moveTo(0.0f);
-		getStackerReclaimerAtIndex(2, GetWorld())->rotateTo(-90.0);
 		getStackerReclaimerAtIndex(1, GetWorld())->moveTo(0.0f);
-
+		getStackerReclaimerAtIndex(3, GetWorld())->rotateTo(90.0);
+		getStackerReclaimerAtIndex(5, GetWorld())->rotateTo(0.0);
+		getStackerReclaimerAtIndex(2, GetWorld())->rotateTo(-90.0);
+		getStackerReclaimerAtIndex(5, GetWorld())->rotateTo(38.0f);
 
 	}
 		break;
@@ -107,7 +109,7 @@ void AMockScheduleActor::iterateSchedule() {
 
 		getStackerReclaimerAtIndex(5, GetWorld())->moveTo(0.0);
 		getStackerReclaimerAtIndex(3, GetWorld())->moveTo(0.2f);
-		getStackerReclaimerAtIndex(1, GetWorld())->moveTo(0.2f);
+		getStackerReclaimerAtIndex(1, GetWorld())->moveTo(0.8f);
 		getStackerReclaimerAtIndex(6, GetWorld())->moveTo(0.1f);
 		getStackerReclaimerAtIndex(0, GetWorld())->rotateTo(30.0);
 		getStackerReclaimerAtIndex(4, GetWorld())->rotateTo(-90.0);
@@ -120,12 +122,13 @@ void AMockScheduleActor::iterateSchedule() {
 
 	case 5:
 	{
-		getStackerReclaimerAtIndex(5, GetWorld())->rotateTo(-90.0);
 		getStackerReclaimerAtIndex(3, GetWorld())->moveTo(0.7f);
-		getStackerReclaimerAtIndex(1, GetWorld())->moveTo(0.7f);
+		getStackerReclaimerAtIndex(1, GetWorld())->rotateTo(-90.0f);
 		getStackerReclaimerAtIndex(6, GetWorld())->moveTo(0.3f);
 		getStackerReclaimerAtIndex(2, GetWorld())->moveTo(1.0f);
 		getStackerReclaimerAtIndex(4, GetWorld())->moveTo(1.0f);
+		getStackerReclaimerAtIndex(5, GetWorld())->rotateTo(-90.0);
+		getStackerReclaimerAtIndex(7, GetWorld())->moveTo(0.5f);
 
 
 	}

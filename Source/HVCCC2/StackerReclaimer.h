@@ -45,7 +45,10 @@ public:
 	int task; // temp scheduling variable
 
 
-
+	UPROPERTY(EditAnywhere)
+	float maxSpeed;
+	
+	
 	float speed;
 	
 

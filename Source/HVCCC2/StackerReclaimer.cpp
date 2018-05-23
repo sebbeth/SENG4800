@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "StackerReclaimer.h"
-
+#include <cmath>
 /*
 state:
 0 rest
@@ -33,9 +33,8 @@ void AStackerReclaimer::BeginPlay()
 	SetActorLocation(currentLocation);
 
 	targetLocation = trackNodeB;
-	speed = 250.0f;   // change this to whatever
-
-	
+	//maxSpeed = 80.0f;
+	speed = maxSpeed;
 }
 
 // Called every frame
@@ -51,7 +50,7 @@ void AStackerReclaimer::Tick(float DeltaTime)
 		break;
 	case 1:
 	{
-		speed = 250.0f;
+		speed = maxSpeed;
 		currentLocation = this->GetActorLocation();
 	
 		FVector directionVector = (trackNodeB - trackNodeA);
