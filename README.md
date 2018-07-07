@@ -11,7 +11,7 @@ Visual Studio must be installed for this project to compile.
 
 Pull the project down from GitHub.
 
-Install Unreal Engine version 4.19.* preferably 4.19.2
+Install Unreal Engine version 4.19.* preferably 4.19.2 (https://docs.unrealengine.com/en-US/GettingStarted/Installation)
 
 Install Visual Studio 2017, community version is fine.
 
