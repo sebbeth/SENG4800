@@ -29,6 +29,8 @@ void ADataController::BeginPlay()
 	DataExtractor dExtractor("C:/Users/Nick/Documents/Unreal Projects/XMLCodeTesting/Source/XMLCodeTesting/");
 
 	vector<CCTShipLoaderLogEvent> dionteDemarcus = dExtractor.deserialize<CCTShipLoaderLogEvent>("CCTShipLoaderLog");
+
+	UE_LOG(LogTemp, Warning, TEXT("Size of vector: %d"), dionteDemarcus.size());
 }
 
 // Called every frame
