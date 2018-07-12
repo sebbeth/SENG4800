@@ -30,7 +30,15 @@ void ADataController::BeginPlay()
 
 	vector<CCTShipLoaderLogEvent> dionteDemarcus = dExtractor.deserialize<CCTShipLoaderLogEvent>("CCTShipLoaderLog");
 
-	UE_LOG(LogTemp, Warning, TEXT("Size of vector: %d"), dionteDemarcus.size());
+	for (int i = 0; i < dionteDemarcus.size(); i++) {
+		string str = dionteDemarcus.at(i).getEventName();
+		FString fstr = UTF8_TO_TCHAR(str.c_str());
+
+		UE_LOG(LogTemp, Warning, TEXT("%s"), *fstr);
+	}
+
+	UE_LOG(LogTemp, Warning, TEXT("The above is placeholder printouts to prove that the file is being deserialised"));
+	UE_LOG(LogTemp, Warning, TEXT("and its contents are accessible in memory."));
 }
 
 // Called every frame
