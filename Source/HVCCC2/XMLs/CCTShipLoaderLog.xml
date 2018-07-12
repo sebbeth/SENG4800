@@ -1,0 +1,74 @@
+<events>
+    <SlOnMove shiploaderID="SL1" time="282.533132" pos="50.00"/>
+    <SlOnStopMove shiploaderID="SL1" time="282.552576" pos="85.00"/>
+    <SlStartVesselLoad shiploaderID="SL1" time="282.587854" pos="85.00" vesselID="1392"/>
+    <SlLoadOpStart shiploaderID="SL1" time="282.587854" pos="85.00" stockpileID="CCT1392.1"/>
+    <SlLoadStart shiploaderID="SL1" time="282.642930" pos="85.00" stockpileID="CCT1392.1"/>
+    <SlLoadComp shiploaderID="SL1" time="319.493994" pos="85.00" stockpileID="CCT1392.1" amount="86600.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="319.493994" pos="85.00" stockpileID="CCT1392.1" amount="86600.00"/>
+    <SlStartVesselLoad shiploaderID="SL1" time="463.376457" pos="85.00" vesselID="1393"/>
+    <SlLoadOpStart shiploaderID="SL1" time="463.376457" pos="85.00" stockpileID="CCT1393.1"/>
+    <SlLoadStart shiploaderID="SL1" time="463.459917" pos="85.00" stockpileID="CCT1393.1"/>
+    <SlLoadComp shiploaderID="SL1" time="496.140768" pos="85.00" stockpileID="CCT1393.1" amount="76800.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="496.140768" pos="85.00" stockpileID="CCT1393.1" amount="76800.00"/>
+    <SlStartVesselLoad shiploaderID="SL1" time="629.817285" pos="85.00" vesselID="1394"/>
+    <SlLoadOpStart shiploaderID="SL1" time="629.817285" pos="85.00" stockpileID="CCT1394.1"/>
+    <SlLoadStart shiploaderID="SL1" time="629.871427" pos="85.00" stockpileID="CCT1394.1"/>
+    <SlLoadComp shiploaderID="SL1" time="667.360789" pos="85.00" stockpileID="CCT1394.1" amount="88100.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="667.360789" pos="85.00" stockpileID="CCT1394.1" amount="88100.00"/>
+    <SlStartVesselLoad shiploaderID="SL1" time="747.542743" pos="85.00" vesselID="1395"/>
+    <SlLoadOpStart shiploaderID="SL1" time="747.542743" pos="85.00" stockpileID="CCT1395.1"/>
+    <SlLoadStart shiploaderID="SL1" time="747.594889" pos="85.00" stockpileID="CCT1395.1"/>
+    <SlLoadComp shiploaderID="SL1" time="767.041698" pos="85.00" stockpileID="CCT1395.1" amount="45700.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="767.041698" pos="85.00" stockpileID="CCT1395.1" amount="45700.00"/>
+    <SlStartVesselLoad shiploaderID="SL1" time="956.283495" pos="85.00" vesselID="1396"/>
+    <SlLoadOpStart shiploaderID="SL1" time="956.283495" pos="85.00" stockpileID="CCT1396.1"/>
+    <SlLoadStart shiploaderID="SL1" time="956.338722" pos="85.00" stockpileID="CCT1396.1"/>
+    <SlLoadComp shiploaderID="SL1" time="994.508935" pos="85.00" stockpileID="CCT1396.1" amount="89700.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="994.508935" pos="85.00" stockpileID="CCT1396.1" amount="89700.00"/>
+    <SlStartVesselLoad shiploaderID="SL1" time="1169.995086" pos="85.00" vesselID="1397"/>
+    <SlLoadOpStart shiploaderID="SL1" time="1169.995086" pos="85.00" stockpileID="CCT1397.1"/>
+    <SlLoadStart shiploaderID="SL1" time="1170.079051" pos="85.00" stockpileID="CCT1397.1"/>
+    <SlLoadComp shiploaderID="SL1" time="1207.313093" pos="85.00" stockpileID="CCT1397.1" amount="87500.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="1207.313093" pos="85.00" stockpileID="CCT1397.1" amount="87500.00"/>
+    <SlStartVesselLoad shiploaderID="SL1" time="1376.034112" pos="85.00" vesselID="1398"/>
+    <SlLoadOpStart shiploaderID="SL1" time="1376.034112" pos="85.00" stockpileID="CCT1398.1"/>
+    <SlLoadStart shiploaderID="SL1" time="1376.118405" pos="85.00" stockpileID="CCT1398.1"/>
+    <SlLoadComp shiploaderID="SL1" time="1410.416278" pos="85.00" stockpileID="CCT1398.1" amount="80600.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="1410.416278" pos="85.00" stockpileID="CCT1398.1" amount="80600.00"/>
+    <SlStartVesselLoad shiploaderID="SL1" time="1524.586455" pos="85.00" vesselID="1399"/>
+    <SlLoadOpStart shiploaderID="SL1" time="1524.586455" pos="85.00" stockpileID="CCT1399.1"/>
+    <SlLoadStart shiploaderID="SL1" time="1524.645092" pos="85.00" stockpileID="CCT1399.1"/>
+    <SlLoadComp shiploaderID="SL1" time="1547.496155" pos="85.00" stockpileID="CCT1399.1" amount="53700.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="1547.496155" pos="85.00" stockpileID="CCT1399.1" amount="53700.00"/>
+    <SlStartVesselLoad shiploaderID="SL1" time="1650.808412" pos="85.00" vesselID="1400"/>
+    <SlLoadOpStart shiploaderID="SL1" time="1650.808412" pos="85.00" stockpileID="CCT1400.1"/>
+    <SlLoadStart shiploaderID="SL1" time="1650.888008" pos="85.00" stockpileID="CCT1400.1"/>
+    <SlLoadComp shiploaderID="SL1" time="1657.270986" pos="85.00" stockpileID="CCT1400.1" amount="15000.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="1657.270986" pos="85.00" stockpileID="CCT1400.1" amount="15000.00"/>
+    <SlLoadOpStart shiploaderID="SL1" time="1659.817754" pos="85.00" stockpileID="CCT1400.2"/>
+    <SlLoadStart shiploaderID="SL1" time="1659.902350" pos="85.00" stockpileID="CCT1400.2"/>
+    <SlLoadComp shiploaderID="SL1" time="1682.370435" pos="85.00" stockpileID="CCT1400.2" amount="52800.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="1682.370435" pos="85.00" stockpileID="CCT1400.2" amount="52800.00"/>
+    <SlStartVesselLoad shiploaderID="SL1" time="1852.530905" pos="85.00" vesselID="1401"/>
+    <SlLoadOpStart shiploaderID="SL1" time="1852.530905" pos="85.00" stockpileID="CCT1401.1"/>
+    <SlLoadStart shiploaderID="SL1" time="1852.581384" pos="85.00" stockpileID="CCT1401.1"/>
+    <SlLoadComp shiploaderID="SL1" time="1856.836703" pos="85.00" stockpileID="CCT1401.1" amount="10000.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="1856.836703" pos="85.00" stockpileID="CCT1401.1" amount="10000.00"/>
+    <SlLoadOpStart shiploaderID="SL1" time="1856.898926" pos="85.00" stockpileID="CCT1401.2"/>
+    <SlLoadStart shiploaderID="SL1" time="1856.955062" pos="85.00" stockpileID="CCT1401.2"/>
+    <SlLoadComp shiploaderID="SL1" time="1887.295488" pos="85.00" stockpileID="CCT1401.2" amount="71300.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="1887.295488" pos="85.00" stockpileID="CCT1401.2" amount="71300.00"/>
+    <SlStartVesselLoad shiploaderID="SL1" time="1903.812216" pos="85.00" vesselID="1402"/>
+    <SlLoadOpStart shiploaderID="SL1" time="1903.812216" pos="85.00" stockpileID="CCT1402.1"/>
+    <SlLoadStart shiploaderID="SL1" time="1903.864943" pos="85.00" stockpileID="CCT1402.1"/>
+    <SlLoadComp shiploaderID="SL1" time="1919.354305" pos="85.00" stockpileID="CCT1402.1" amount="36400.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="1919.354305" pos="85.00" stockpileID="CCT1402.1" amount="36400.00"/>
+    <SlStartVesselLoad shiploaderID="SL1" time="2019.384851" pos="85.00" vesselID="1403"/>
+    <SlLoadOpStart shiploaderID="SL1" time="2019.384851" pos="85.00" stockpileID="CCT1403.1"/>
+    <SlLoadStart shiploaderID="SL1" time="2019.438639" pos="85.00" stockpileID="CCT1403.1"/>
+    <SlLoadComp shiploaderID="SL1" time="2044.502468" pos="85.00" stockpileID="CCT1403.1" amount="58900.00"/>
+    <SlLoadOpComp shiploaderID="SL1" time="2044.502468" pos="85.00" stockpileID="CCT1403.1" amount="58900.00"/>
+    <SlWrapUp shiploaderID="SL1" time="12769250.708038" pos="85.00"/>
+    <SlWrapUp shiploaderID="SL2" time="12769250.708038" pos="750.00"/>
+</events>
