@@ -11,6 +11,8 @@
 #include "DataStorageClasses/CCTShipLoaderLogEvent.h"
 #include "DataStorageClasses/KCTReclaimerLogEvent.h"
 
+namespace fs = std::experimental::filesystem;
+
 // Sets default values
 ADataController::ADataController()
 {
@@ -24,6 +26,9 @@ void ADataController::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	DataExtractor dExtractor("C:/Users/Nick/Documents/Unreal Projects/XMLCodeTesting/Source/XMLCodeTesting/");
+
+	vector<CCTShipLoaderLogEvent> dionteDemarcus = dExtractor.deserialize<CCTShipLoaderLogEvent>("CCTShipLoaderLog");
 }
 
 // Called every frame
