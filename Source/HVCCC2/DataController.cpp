@@ -46,7 +46,7 @@ void ADataController::BeginPlay()
 	UE_LOG(LogTemp, Warning, TEXT("The above is placeholder printouts to prove that the file is being deserialised"));
 	UE_LOG(LogTemp, Warning, TEXT("and its contents are accessible in memory."));
 
-	UE_LOG(LogTemp, Warning, TEXT("888"));
+	UE_LOG(LogTemp, Warning, TEXT("What it do ladies?"));
 }
 
 // Called every frame

@@ -29,9 +29,7 @@ Once the project is open you can access c++ files in VS and modify them there.
 To get the binary data files deserialisation to work in the C++ files, you will have to carry out the following steps:
 1. Open up SENG4800/Source/HVCCC2/ProjectSourceDir.cpp
 2. Type up the file path to the source folder of this project for the value of the "filePath" variable
-* eg. C:/Users/Nick/Documents/Unreal Projects/SENG4800/Source/HVCCC2/
+* eg. C:/Users/Nick/Documents/Unreal Projects/SENG4800/Source/HVCCC2
 3. Save this file and run the project
 
-Notes on the format of the above string has to be in:
-1. Make sure to place a "/" at the end
-2. Make sure to use "/" instead of "\"
+Note: make sure to use "/" instead of "\"
