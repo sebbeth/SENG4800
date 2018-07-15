@@ -2,6 +2,7 @@
 
 #include "DataController.h"
 #include "DataExtractor.h"
+#include "ProjectSourceDir.h"
 #include "stdafx.h"
 
 #include <iostream>
@@ -26,6 +27,8 @@ void ADataController::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	ProjectSourceDir dir;
+
 	DataExtractor dExtractor("C:/Users/Nick/Documents/Unreal Projects/XMLCodeTesting/Source/XMLCodeTesting/");
 
 	vector<CCTShipLoaderLogEvent> dionteDemarcus = dExtractor.deserialize<CCTShipLoaderLogEvent>("CCTShipLoaderLog");
