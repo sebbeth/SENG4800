@@ -43,7 +43,7 @@ class HVCCC2_API DataExtractor
 			//Append the directory that the files will be stored in, in front of the file name passed in,
 			//as well as a custom data type "BinaryDataFile" (which isn't a real data type).
 			stringstream ss;
-			ss << _projectSourceFolderDirectory << "/BinaryDataFiles/" << fileName << ".BinaryDataFile";
+			ss << _projectSourceFolderDirectory << "/Deserialisation code/BinaryDataFiles/" << fileName << ".BinaryDataFile";
 			string properDirectoryString = ss.str();
 
 			ofstream outputFS(properDirectoryString, ios::binary);
@@ -78,7 +78,7 @@ class HVCCC2_API DataExtractor
 			//Append the directory that the files will be extracted from, in front of the file name passed in,
 			//as well as a custom data type "BinaryDataFile" (which isn't a real data type).
 			stringstream ss;
-			ss << _projectSourceFolderDirectory << "/BinaryDataFiles/" << fileName << ".BinaryDataFile";
+			ss << _projectSourceFolderDirectory << "/Deserialisation code/BinaryDataFiles/" << fileName << ".BinaryDataFile";
 			string properDirectoryString = ss.str();
 
 			ifstream inputFS(properDirectoryString, ios::binary);

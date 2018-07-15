@@ -1,16 +1,16 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "DataController.h"
-#include "ProjectSourceDir.h"
-#include "DataExtractor.h"
+#include "Deserialisation code/ProjectSourceDir.h"
+#include "Deserialisation code/DataExtractor.h"
 #include "stdafx.h"
 
 #include <iostream>
 #include <string>
 #include <filesystem>
 
-#include "DataStorageClasses/CCTShipLoaderLogEvent.h"
-#include "DataStorageClasses/KCTReclaimerLogEvent.h"
+#include "Deserialisation code/DataStorageClasses/CCTShipLoaderLogEvent.h"
+#include "Deserialisation code/DataStorageClasses/KCTReclaimerLogEvent.h"
 
 namespace fs = std::experimental::filesystem;
 
@@ -45,8 +45,6 @@ void ADataController::BeginPlay()
 
 	UE_LOG(LogTemp, Warning, TEXT("The above is placeholder printouts to prove that the file is being deserialised"));
 	UE_LOG(LogTemp, Warning, TEXT("and its contents are accessible in memory."));
-
-	UE_LOG(LogTemp, Warning, TEXT("What it do ladies?"));
 }
 
 // Called every frame

@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "DataExtractor.h"
-#include "stdafx.h"
+#include "../stdafx.h"
 
 //using namespace cereal;
 
