@@ -9,5 +9,5 @@
 	//eg. std::string ProjectSourceDir::filePath = "C:/Users/Nick/Documents/Unreal Projects/SENG4800/Source/HVCCC2/";
 
 ProjectSourceDir::ProjectSourceDir() {
-	filePath = "C:/Users/Nick/Documents/Unreal Projects/SENG4800/Source/HVCCC2/";
+	filePath = "";
 }
