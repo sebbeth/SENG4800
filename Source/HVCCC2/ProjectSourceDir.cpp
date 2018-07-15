@@ -1,5 +1,5 @@
-#include "stdafx.h"
 #include "ProjectSourceDir.h"
+#include "stdafx.h"
 
 //This file contains a string, which represents the file path for the source files folder of the project.
 	//We need to do this, since std::experimental::filesystem does not support wildcards (*) in its file paths.

@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "DataController.h"
-#include "DataExtractor.h"
 #include "ProjectSourceDir.h"
+#include "DataExtractor.h"
 #include "stdafx.h"
 
 #include <iostream>
@@ -27,9 +27,12 @@ void ADataController::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	//The class which holds the machine-dependent string pointing to the source folder of this project.
+		//(NOTE: you will have to edit the string held withing ProjectSourceDir.cpp,
+		//if you want the deserialisation functionality to work on your machine).
 	ProjectSourceDir dir;
 
-	DataExtractor dExtractor("C:/Users/Nick/Documents/Unreal Projects/XMLCodeTesting/Source/XMLCodeTesting/");
+	DataExtractor dExtractor(dir.filePath);
 
 	vector<CCTShipLoaderLogEvent> dionteDemarcus = dExtractor.deserialize<CCTShipLoaderLogEvent>("CCTShipLoaderLog");
 
@@ -42,6 +45,8 @@ void ADataController::BeginPlay()
 
 	UE_LOG(LogTemp, Warning, TEXT("The above is placeholder printouts to prove that the file is being deserialised"));
 	UE_LOG(LogTemp, Warning, TEXT("and its contents are accessible in memory."));
+
+	UE_LOG(LogTemp, Warning, TEXT("888"));
 }
 
 // Called every frame
