@@ -33,3 +33,11 @@ To get the binary data files deserialisation to work in the C++ files, you will 
 3. Save this file and run the project
 
 Note: make sure to use "/" instead of "\"
+
+
+# Blender model import procedure:
+
+1. Export the model from blender as a .obj file ensuring that export options forward = 'X Forward' and Up = 'Z Up' are set.
+2. Navigate to the folder in the UE4 Content Browser you want to import the model to or make a new folder.
+3. Click import and select the model file. In the import menu, set the value of Import Uniform Scale if nessesary. This can be changed later by 're-importing' the asset.
+4. Click 'Import' the model should now be imported as a static mesh and any textures made in Blender should have been converted into UE4 Materials as well. 
