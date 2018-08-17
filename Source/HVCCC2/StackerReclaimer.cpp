@@ -25,31 +25,23 @@ void AStackerReclaimer::Tick(float DeltaTime)
 
 }
 
-void AStackerReclaimer::test() {
-	UE_LOG(LogTemp, Warning, TEXT("TEST"));
 
-}
-
+/* Set the actor's position along it's rail,
+position 0 will place the actor at the start of the rail, 
+and position 1.0 at the end.
+*/
 void AStackerReclaimer::setPosition(float position) {
 
-
-	currentLocation = this->GetActorLocation();
-
-	FVector directionVector = (trackNodeB - trackNodeA);
-
-	double targetDistance = position * directionVector.Size();
+	
+	FVector directionVector = (trackNodeB - trackNodeA); 
+	double targetDistance = position * directionVector.Size(); // Get the distance we will be moving between the two vectors
 	directionVector.Normalize();
-
-	directionVector = directionVector * targetDistance;
-
-	FVector targetVector = (trackNodeA + directionVector) - currentLocation;
-
-
-	SetActorLocation(trackNodeA);
+	directionVector = directionVector * targetDistance; 
+	SetActorLocation(trackNodeA + directionVector);
 }
 
 void AStackerReclaimer::setRotation(float degrees) {
 	FRotator rotator(0.0f, degrees, 0.0f);
-	SetActorRotation(rotator, ETeleportType::None);
+	SetActorRotation(rotator, ETeleportType::None); 
 }
 
