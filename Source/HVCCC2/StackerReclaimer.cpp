@@ -30,3 +30,26 @@ void AStackerReclaimer::test() {
 
 }
 
+void AStackerReclaimer::setPosition(float position) {
+
+
+	currentLocation = this->GetActorLocation();
+
+	FVector directionVector = (trackNodeB - trackNodeA);
+
+	double targetDistance = position * directionVector.Size();
+	directionVector.Normalize();
+
+	directionVector = directionVector * targetDistance;
+
+	FVector targetVector = (trackNodeA + directionVector) - currentLocation;
+
+
+	SetActorLocation(trackNodeA);
+}
+
+void AStackerReclaimer::setRotation(float degrees) {
+	FRotator rotator(0.0f, degrees, 0.0f);
+	SetActorRotation(rotator, ETeleportType::None);
+}
+

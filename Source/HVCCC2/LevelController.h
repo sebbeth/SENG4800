@@ -32,7 +32,9 @@ public:
 
 
 private:
+
 	AStackerReclaimer* spawnAReclaimer(FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint);
 	
+	AStackerReclaimer *stackerReclaimers[4];
 	
 };
