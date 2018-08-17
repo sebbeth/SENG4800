@@ -23,6 +23,16 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<class AStackerReclaimer> largeSR_blueprint;
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<class AStackerReclaimer> stacker_blueprint;
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<class AStackerReclaimer> reclaimer_blueprint;
+
+
+private:
+	AStackerReclaimer* spawnAReclaimer(FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint);
 	
 	
 };
