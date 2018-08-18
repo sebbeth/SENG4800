@@ -5,7 +5,14 @@
 #include "ShipLoader.h"
 #include "Ship.h"
 #include "CoalStack.h"
+#include <deque>
 
+using namespace std;
+
+deque<ACoalStack*> coalStacks;
+deque<AStackerReclaimer*> stackerReclaimers;
+deque<AShipLoader*> shipLoaders;
+deque<AShip*> ships;
 
 // Sets default values
 ALevelController::ALevelController()
@@ -22,21 +29,23 @@ void ALevelController::BeginPlay()
 
 	testTime = 0;
 	// Spawn in reclaimers
-	stackerReclaimers[0] = spawnAReclaimer(SR0_rail_start->GetActorLocation(), SR0_rail_end->GetActorLocation(), largeSR_blueprint);
-	stackerReclaimers[1] = spawnAReclaimer(SR1_rail_start->GetActorLocation(), SR1_rail_end->GetActorLocation(), largeSR_blueprint);
-	stackerReclaimers[2] = spawnAReclaimer(SR2_rail_start->GetActorLocation(), SR2_rail_end->GetActorLocation(), largeSR_blueprint);
-	stackerReclaimers[3] = spawnAReclaimer(SR3_rail_start->GetActorLocation(), SR3_rail_end->GetActorLocation(), largeSR_blueprint);
+	stackerReclaimers.push_front(spawnAReclaimer(SR0_rail_start->GetActorLocation(), SR0_rail_end->GetActorLocation(), largeSR_blueprint));
+	stackerReclaimers.push_front(spawnAReclaimer(SR1_rail_start->GetActorLocation(), SR1_rail_end->GetActorLocation(), largeSR_blueprint));
+	stackerReclaimers.push_front(spawnAReclaimer(SR2_rail_start->GetActorLocation(), SR2_rail_end->GetActorLocation(), largeSR_blueprint));
+	stackerReclaimers.push_front(spawnAReclaimer(SR3_rail_start->GetActorLocation(), SR3_rail_end->GetActorLocation(), largeSR_blueprint));
 	
 	//Spawn in ship loaders
-	shipLoaders[0] = spawnAShipLoader(loader0_rail_start->GetActorLocation(), loader0_rail_end->GetActorLocation(), ship_loader_blueprint);
-	shipLoaders[1] = spawnAShipLoader(loader1_rail_start->GetActorLocation(), loader1_rail_end->GetActorLocation(), ship_loader_blueprint);
-	shipLoaders[2] = spawnAShipLoader(loader2_rail_start->GetActorLocation(), loader2_rail_end->GetActorLocation(), ship_loader_blueprint);
-	shipLoaders[3] = spawnAShipLoader(loader3_rail_start->GetActorLocation(), loader3_rail_end->GetActorLocation(), ship_loader_blueprint);
+	shipLoaders.push_front(spawnAShipLoader(loader0_rail_start->GetActorLocation(), loader0_rail_end->GetActorLocation(), ship_loader_blueprint));
+	shipLoaders.push_front(spawnAShipLoader(loader1_rail_start->GetActorLocation(), loader1_rail_end->GetActorLocation(), ship_loader_blueprint));
+	shipLoaders.push_front(spawnAShipLoader(loader2_rail_start->GetActorLocation(), loader2_rail_end->GetActorLocation(), ship_loader_blueprint));
+	shipLoaders.push_front(spawnAShipLoader(loader3_rail_start->GetActorLocation(), loader3_rail_end->GetActorLocation(), ship_loader_blueprint));
 
 	
-	ships[0] = spawnAShip(berth0_position->GetActorLocation(), berth0_position->GetActorRotation(), ship_blueprint);
+	ships.push_front(spawnAShip(berth0_position->GetActorLocation(), berth0_position->GetActorRotation(), ship_blueprint));
+	ships.push_front(spawnAShip(berth2_position->GetActorLocation(), berth2_position->GetActorRotation(), ship_blueprint));
 
-	coalStacks[0] = spawnACoalStack(padK0_position->GetActorLocation(), padK0_position->GetActorRotation(), coal_stack_blueprint);
+	coalStacks.push_front(spawnACoalStack(padK0_position->GetActorLocation(), padK0_position->GetActorRotation(), coal_stack_blueprint));
+	coalStacks.at(0)->setQuantity(0.8);
 
 	Super::BeginPlay();
 	
@@ -46,14 +55,14 @@ void ALevelController::BeginPlay()
 void ALevelController::Tick(float DeltaTime)
 {
 	// TEST INPUT
-	stackerReclaimers[0]->setPosition(0.6);
-	stackerReclaimers[1]->setPosition(0.8);
-	stackerReclaimers[0]->setRotation(180);
+	stackerReclaimers.at(0)->setPosition(0.6);
+	stackerReclaimers.at(1)->setPosition(0.8);
+	stackerReclaimers.at(0)->setRotation(180);
 
-	shipLoaders[0]->setPosition(0.8);
-	coalStacks[0]->setQuantity(0.4);
+	shipLoaders.at(0)->setPosition(0.8);
+	//coalStacks[0]->setQuantity(0.4);
 	if (testTime == 600) {
-		ships[0]->Destroy();
+		ships.at(0)->Destroy();
 	}
 
 	testTime++;

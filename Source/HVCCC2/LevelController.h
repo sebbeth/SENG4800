@@ -4,7 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+
+
 #include "LevelController.generated.h"
+
 
 UCLASS()
 class HVCCC2_API ALevelController : public AActor
@@ -95,10 +98,6 @@ private:
 	AShip * spawnAShip(FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint);
 	ACoalStack * spawnACoalStack(FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint);
 
-	AStackerReclaimer *stackerReclaimers[8];
-	AShipLoader *shipLoaders[4];
-	AShip *ships[20];
-	ACoalStack *coalStacks[30];
 
 	int testTime; // Just being used for testing
 
