@@ -28,6 +28,7 @@ void ACoalStack::Tick(float DeltaTime)
 // Set the coal stack to being a certian percent filled, 0 = invisible, 1.0 = max length
 void ACoalStack::setQuantity(float quantity) {
 
+	SetActorScale3D(FVector(1.0f, quantity, 1.0f));
 }
 
 

@@ -100,4 +100,6 @@ private:
 	AShip *ships[20];
 	ACoalStack *coalStacks[30];
 
+	int testTime; // Just being used for testing
+
 };

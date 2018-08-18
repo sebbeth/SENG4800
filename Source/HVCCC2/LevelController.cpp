@@ -20,7 +20,7 @@ void ALevelController::BeginPlay()
 {
 	// Level setup procedure
 
-
+	testTime = 0;
 	// Spawn in reclaimers
 	stackerReclaimers[0] = spawnAReclaimer(SR0_rail_start->GetActorLocation(), SR0_rail_end->GetActorLocation(), largeSR_blueprint);
 	stackerReclaimers[1] = spawnAReclaimer(SR1_rail_start->GetActorLocation(), SR1_rail_end->GetActorLocation(), largeSR_blueprint);
@@ -34,9 +34,9 @@ void ALevelController::BeginPlay()
 	shipLoaders[3] = spawnAShipLoader(loader3_rail_start->GetActorLocation(), loader3_rail_end->GetActorLocation(), ship_loader_blueprint);
 
 	
-	spawnAShip(berth0_position->GetActorLocation(), berth0_position->GetActorRotation(), ship_blueprint);
+	ships[0] = spawnAShip(berth0_position->GetActorLocation(), berth0_position->GetActorRotation(), ship_blueprint);
 
-	spawnACoalStack(padK0_position->GetActorLocation(), padK0_position->GetActorRotation(), coal_stack_blueprint);
+	coalStacks[0] = spawnACoalStack(padK0_position->GetActorLocation(), padK0_position->GetActorRotation(), coal_stack_blueprint);
 
 	Super::BeginPlay();
 	
@@ -51,12 +51,21 @@ void ALevelController::Tick(float DeltaTime)
 	stackerReclaimers[0]->setRotation(180);
 
 	shipLoaders[0]->setPosition(0.8);
+	coalStacks[0]->setQuantity(0.4);
+	if (testTime == 600) {
+		ships[0]->Destroy();
+	}
 
+	testTime++;
 
 	Super::Tick(DeltaTime);
 
 }
 
+
+/*
+Spawn functions for actor
+*/
 AShipLoader* ALevelController::spawnAShipLoader(FVector railStart, FVector railEnd, TSubclassOf<class AShipLoader> blueprint) {
 
 	UWorld* world = GetWorld();
