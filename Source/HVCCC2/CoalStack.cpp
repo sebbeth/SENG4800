@@ -1,10 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "MyActor.h"
+#include "CoalStack.h"
 
 
 // Sets default values
-AMyActor::AMyActor()
+ACoalStack::ACoalStack()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -12,22 +12,23 @@ AMyActor::AMyActor()
 }
 
 // Called when the game starts or when spawned
-void AMyActor::BeginPlay()
+void ACoalStack::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
 // Called every frame
-void AMyActor::Tick(float DeltaTime)
+void ACoalStack::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	FVector NewLocation = GetActorLocation();
-	float DeltaHeight = (FMath::Sin(RunningTime + DeltaTime) - FMath::Sin(RunningTime));
-	NewLocation.Z += DeltaHeight * 200.0f;       //Scale our height by a factor of 20
-	RunningTime += DeltaTime;
-	SetActorLocation(NewLocation);
-
 }
+
+// Set the coal stack to being a certian percent filled, 0 = invisible, 1.0 = max length
+void ACoalStack::setQuantity(float quantity) {
+
+	SetActorScale3D(FVector(1.0f, quantity, 1.0f));
+}
+
 

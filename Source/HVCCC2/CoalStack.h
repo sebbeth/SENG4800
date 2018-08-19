@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "MockScheduleActor.generated.h"
+#include "CoalStack.generated.h"
 
 UCLASS()
-class HVCCC2_API AMockScheduleActor : public AActor
+class HVCCC2_API ACoalStack : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	AMockScheduleActor();
+	ACoalStack();
 
 protected:
 	// Called when the game starts or when spawned
@@ -23,10 +23,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	int task;
 
-	UFUNCTION(BlueprintCallable, Category = "Schedule")
-	void iterateSchedule();
+	void setQuantity(float quantity);
 	
 	
 };

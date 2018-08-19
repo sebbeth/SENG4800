@@ -4,29 +4,26 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "StackerReclaimer.generated.h"
+#include "ShipLoader.generated.h"
 
 UCLASS()
-class HVCCC2_API AStackerReclaimer : public AActor
+class HVCCC2_API AShipLoader : public AActor
 {
 	GENERATED_BODY()
-
-public:
+	
+public:	
 	// Sets default values for this actor's properties
-	AStackerReclaimer();
+	AShipLoader();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	FVector currentLocation;
 
-
-public:
+public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	void setPosition(float position);
-	void setRotation(float degrees);
 	FVector trackNodeA;
 	FVector trackNodeB;
 	

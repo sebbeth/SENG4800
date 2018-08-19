@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "MyActor.generated.h"
+#include "Ship.generated.h"
 
 UCLASS()
-class HVCCC2_API AMyActor : public AActor
+class HVCCC2_API AShip : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	AMyActor();
+	AShip();
 
 protected:
 	// Called when the game starts or when spawned
@@ -23,8 +23,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	float RunningTime;
-	//fload runningJustintime=0.0;
-	//here is the source
+	
 	
 };
