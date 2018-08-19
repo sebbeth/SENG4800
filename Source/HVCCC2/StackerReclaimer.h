@@ -10,52 +10,24 @@ UCLASS()
 class HVCCC2_API AStackerReclaimer : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AStackerReclaimer();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	FVector currentLocation;
 
-private:
 
-	float moveToTarget;
-	float rotationTarget;
-	float rotationOffset;
-
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	FVector currentLocation;
-	FVector targetLocation;
-
-	UPROPERTY(EditAnywhere)
+	void setPosition(float position);
+	void setRotation(float degrees);
 	FVector trackNodeA;
-
-	UPROPERTY(EditAnywhere)
 	FVector trackNodeB;
-
-	UPROPERTY(EditAnywhere)
-	float slewSpeed;
-
-	int state;
-	int task; // temp scheduling variable
-
-
-	UPROPERTY(EditAnywhere)
-	float maxSpeed;
 	
-	
-	float speed;
-	
-
-	UFUNCTION(BlueprintCallable, Category = "SR")
-	void moveTo(float position);
-
-	UFUNCTION(BlueprintCallable, Category = "SR")
-	void rotateTo(float degrees);
-
 };
