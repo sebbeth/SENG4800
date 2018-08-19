@@ -44,8 +44,15 @@ void ALevelController::BeginPlay()
 	ships.push_front(spawnAShip(berth0_position->GetActorLocation(), berth0_position->GetActorRotation(), ship_blueprint));
 	ships.push_front(spawnAShip(berth2_position->GetActorLocation(), berth2_position->GetActorRotation(), ship_blueprint));
 
-	coalStacks.push_front(spawnACoalStack(padK0_position->GetActorLocation(), padK0_position->GetActorRotation(), coal_stack_blueprint));
+	// Spawn coal stacks
+	spawnACoalStack(padK0_position->GetActorLocation(), padK0_position->GetActorRotation(), coal_stack_blueprint);
+	spawnACoalStack(padK1_position->GetActorLocation(), padK1_position->GetActorRotation(), coal_stack_blueprint);
+	spawnACoalStack(padK2_position->GetActorLocation(), padK2_position->GetActorRotation(), coal_stack_blueprint);
+
+
 	coalStacks.at(0)->setQuantity(0.8);
+	coalStacks.at(1)->setQuantity(0.2);
+	coalStacks.at(2)->setQuantity(0.5);
 
 	Super::BeginPlay();
 	
@@ -118,15 +125,14 @@ AShip* ALevelController::spawnAShip(FVector position, FRotator rotator, TSubclas
 
 
 
-ACoalStack * ALevelController::spawnACoalStack(FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint) {
+void ALevelController::spawnACoalStack(FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint) {
 	UWorld* world = GetWorld();
 	if (world) {
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		ACoalStack *actor = world->SpawnActor<ACoalStack>(blueprint, position, rotator, spawnParams);
-		return actor;
+		coalStacks.push_front(actor); // Add the new actor to the array
 	}
-	return NULL;
 }
 
 

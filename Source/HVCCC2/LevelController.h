@@ -90,13 +90,16 @@ public:
 	//Coal Pad position markers
 	UPROPERTY(EditAnywhere)
 		AActor *padK0_position;
-
+	UPROPERTY(EditAnywhere)
+		AActor *padK1_position;
+	UPROPERTY(EditAnywhere)
+		AActor *padK2_position;
 private:
 
 	AStackerReclaimer * spawnAReclaimer(FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint);
 	AShipLoader * spawnAShipLoader(FVector railStart, FVector railEnd, TSubclassOf<class AShipLoader> blueprint);
 	AShip * spawnAShip(FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint);
-	ACoalStack * spawnACoalStack(FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint);
+	void spawnACoalStack(FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint);
 
 
 	int testTime; // Just being used for testing
