@@ -14,6 +14,9 @@ deque<AStackerReclaimer*> stackerReclaimers;
 deque<AShipLoader*> shipLoaders;
 deque<AShip*> ships;
 
+int mock_state;
+float mock_level;
+
 // Sets default values
 ALevelController::ALevelController()
 {
@@ -28,11 +31,13 @@ void ALevelController::BeginPlay()
 	// Level setup procedure
 
 	testTime = 0;
+	mock_state = 1;
+	mock_level = 0.2;
 	// Spawn in reclaimers
-	stackerReclaimers.push_front(spawnAReclaimer(SR0_rail_start->GetActorLocation(), SR0_rail_end->GetActorLocation(), largeSR_blueprint));
-	stackerReclaimers.push_front(spawnAReclaimer(SR1_rail_start->GetActorLocation(), SR1_rail_end->GetActorLocation(), largeSR_blueprint));
-	stackerReclaimers.push_front(spawnAReclaimer(SR2_rail_start->GetActorLocation(), SR2_rail_end->GetActorLocation(), largeSR_blueprint));
-	stackerReclaimers.push_front(spawnAReclaimer(SR3_rail_start->GetActorLocation(), SR3_rail_end->GetActorLocation(), largeSR_blueprint));
+	stackerReclaimers.push_back(spawnAReclaimer(SR0_rail_start->GetActorLocation(), SR0_rail_end->GetActorLocation(), largeSR_blueprint));
+	stackerReclaimers.push_back(spawnAReclaimer(SR1_rail_start->GetActorLocation(), SR1_rail_end->GetActorLocation(), largeSR_blueprint));
+	stackerReclaimers.push_back(spawnAReclaimer(SR2_rail_start->GetActorLocation(), SR2_rail_end->GetActorLocation(), largeSR_blueprint));
+	stackerReclaimers.push_back(spawnAReclaimer(SR3_rail_start->GetActorLocation(), SR3_rail_end->GetActorLocation(), largeSR_blueprint));
 	
 	//Spawn in ship loaders
 	shipLoaders.push_back(spawnAShipLoader(loader0_rail_start->GetActorLocation(), loader0_rail_end->GetActorLocation(), ship_loader_blueprint));
@@ -41,8 +46,8 @@ void ALevelController::BeginPlay()
 	shipLoaders.push_back(spawnAShipLoader(loader3_rail_start->GetActorLocation(), loader3_rail_end->GetActorLocation(), ship_loader_blueprint));
 
 	
-	ships.push_front(spawnAShip(berth0_position->GetActorLocation(), berth0_position->GetActorRotation(), ship_blueprint));
-	ships.push_front(spawnAShip(berth2_position->GetActorLocation(), berth2_position->GetActorRotation(), ship_blueprint));
+	ships.push_back(spawnAShip(berth0_position->GetActorLocation(), berth0_position->GetActorRotation(), ship_blueprint));
+	ships.push_back(spawnAShip(berth2_position->GetActorLocation(), berth2_position->GetActorRotation(), ship_blueprint));
 
 	// Spawn coal stacks
 	spawnACoalStack(padK0_position->GetActorLocation(), padK0_position->GetActorRotation(), coal_stack_blueprint);
@@ -62,9 +67,9 @@ void ALevelController::BeginPlay()
 void ALevelController::Tick(float DeltaTime)
 {
 	// TEST INPUT
-	stackerReclaimers.at(0)->setPosition(0.6);
+	stackerReclaimers.at(0)->setPosition(0.15);
 	stackerReclaimers.at(1)->setPosition(0.8);
-	stackerReclaimers.at(0)->setRotation(180);
+	stackerReclaimers.at(0)->setRotation(120);
 
 	shipLoaders.at(0)->setPosition(0.8);
 	//coalStacks[0]->setQuantity(0.4);
@@ -73,6 +78,27 @@ void ALevelController::Tick(float DeltaTime)
 	}
 
 	testTime++;
+	
+	if (testTime % 500 == 0) {
+		if (mock_state == 1) {
+			mock_state = 2;
+		} else {
+			mock_state = 1;
+		}
+	}
+	
+	if (mock_state ==  1) {
+		mock_level = mock_level + 0.001f;
+		stackerReclaimers.at(3)->setPosition(mock_level);
+	
+	}
+
+	if (mock_state == 2) {
+		mock_level = mock_level - 0.001f;
+		stackerReclaimers.at(3)->setPosition(mock_level);
+
+	}
+		coalStacks.at(0)->setQuantity(mock_level);
 
 	Super::Tick(DeltaTime);
 
@@ -131,7 +157,7 @@ void ALevelController::spawnACoalStack(FVector position, FRotator rotator, TSubc
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		ACoalStack *actor = world->SpawnActor<ACoalStack>(blueprint, position, rotator, spawnParams);
-		coalStacks.push_front(actor); // Add the new actor to the array
+		coalStacks.push_back(actor); // Add the new actor to the array
 	}
 }
 
