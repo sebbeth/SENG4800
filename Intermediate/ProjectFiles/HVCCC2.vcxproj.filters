@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\HVCCC2.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{B49869C8-C557-424D-8DFF-74957D3BEDA9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HVCCC2.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{A9E76D61-35AB-4BE8-B678-D80E46DF28B9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\HVCCC2">
+      <UniqueIdentifier>{2EB6CA56-3134-4610-A7C7-181D5CA4A5D6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\HVCCC2\CoalStack.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\CoalStack.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HVCCC2\DataController.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\DataController.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HVCCC2\GameBase.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\GameBase.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\HVCCC2\HVCCC2.Build.cs">
+      <Filter>Source\HVCCC2</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\HVCCC2\HVCCC2.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\HVCCC2.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HVCCC2\HVCCC2GameMode.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\HVCCC2GameMode.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HVCCC2\HVCCC2Pawn.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\HVCCC2Pawn.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HVCCC2\LevelController.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\LevelController.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HVCCC2\MenuManager.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\MenuManager.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HVCCC2\MyWorldSettings.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\MyWorldSettings.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HVCCC2\Ship.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\Ship.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HVCCC2\ShipLoader.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\ShipLoader.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HVCCC2\StackerReclaimer.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\StackerReclaimer.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HVCCC2\stdafx.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\stdafx.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HVCCC2\TestInputPawn.cpp">
+      <Filter>Source\HVCCC2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\TestInputPawn.h">
+      <Filter>Source\HVCCC2</Filter>
+    </ClInclude>
+    <Filter Include="Source\HVCCC2\Deserialisation code">
+      <UniqueIdentifier>{100C9095-6B63-4A4E-8513-48D1035B3210}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\HVCCC2\Deserialisation code\ProjectSourceDir.cpp">
+      <Filter>Source\HVCCC2\Deserialisation code</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\ProjectSourceDir.h">
+      <Filter>Source\HVCCC2\Deserialisation code</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HVCCC2\Deserialisation code\tinyxml2.cpp">
+      <Filter>Source\HVCCC2\Deserialisation code</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\tinyxml2.h">
+      <Filter>Source\HVCCC2\Deserialisation code</Filter>
+    </ClInclude>
+    <Filter Include="Source\HVCCC2\Deserialisation code\BinaryDataFiles">
+      <UniqueIdentifier>{06F0ED15-17E4-46B2-9C8A-9EF58F5F7B6D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\BinaryDataFiles\CCTShipLoaderLog.BinaryDataFile">
+      <Filter>Source\HVCCC2\Deserialisation code\BinaryDataFiles</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\BinaryDataFiles\KCTReclaimerLog.BinaryDataFile">
+      <Filter>Source\HVCCC2\Deserialisation code\BinaryDataFiles</Filter>
+    </None>
+    <Filter Include="Source\HVCCC2\Deserialisation code\cereal">
+      <UniqueIdentifier>{73ED5195-4F3D-48BC-9E5C-A9DDE44E13B7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\access.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\cereal.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\macros.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal</Filter>
+    </None>
+    <Filter Include="Source\HVCCC2\Deserialisation code\cereal\archives">
+      <UniqueIdentifier>{40035AEF-E203-4505-80BA-9795EE70563C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\archives\adapters.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\archives</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\archives\binary.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\archives</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\archives\json.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\archives</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\archives\portable_binary.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\archives</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\archives\xml.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\archives</Filter>
+    </None>
+    <Filter Include="Source\HVCCC2\Deserialisation code\cereal\details">
+      <UniqueIdentifier>{6DE23FDC-3AE4-442B-95A7-A1BB09E93041}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\details\helpers.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\details</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\details\polymorphic_impl.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\details</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\details\polymorphic_impl_fwd.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\details</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\details\static_object.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\details</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\details\traits.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\details</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\details\util.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\details</Filter>
+    </None>
+    <Filter Include="Source\HVCCC2\Deserialisation code\cereal\external">
+      <UniqueIdentifier>{630F133D-A762-4919-AAAB-A5B9BEBECEC9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\base64.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external</Filter>
+    </None>
+    <Filter Include="Source\HVCCC2\Deserialisation code\cereal\external\rapidjson">
+      <UniqueIdentifier>{5B28F417-2178-4E5A-BB64-F67954F81D14}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\allocators.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\document.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\encodedstream.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\encodings.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\filereadstream.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\filewritestream.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\fwd.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\istreamwrapper.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\memorybuffer.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\memorystream.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\ostreamwrapper.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\pointer.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\prettywriter.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\rapidjson.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\reader.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\schema.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\stream.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\stringbuffer.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\writer.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson</Filter>
+    </ClInclude>
+    <Filter Include="Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\error">
+      <UniqueIdentifier>{BC7A5E36-E86E-4118-807F-36362A7EEBFC}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\error\en.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\error\error.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\error</Filter>
+    </ClInclude>
+    <Filter Include="Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal">
+      <UniqueIdentifier>{8D272C12-7CC7-412A-9474-A5A3CC1CA200}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal\biginteger.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal\diyfp.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal\dtoa.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal\ieee754.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal\itoa.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal\meta.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal\pow10.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal\regex.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal\stack.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal\strfunc.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal\strtod.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal\swap.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\internal</Filter>
+    </ClInclude>
+    <Filter Include="Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\msinttypes">
+      <UniqueIdentifier>{5CAC5132-3D4D-4FAF-B181-5797FF68FB24}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\msinttypes\inttypes.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\msinttypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\msinttypes\stdint.h">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidjson\msinttypes</Filter>
+    </ClInclude>
+    <Filter Include="Source\HVCCC2\Deserialisation code\cereal\external\rapidxml">
+      <UniqueIdentifier>{FADCD850-F90B-43F2-A9FB-C8BCDBB8077B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidxml\license.txt">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidxml</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidxml\manual.html">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidxml</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidxml\rapidxml.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidxml</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidxml\rapidxml_iterators.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidxml</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidxml\rapidxml_print.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidxml</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\external\rapidxml\rapidxml_utils.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\external\rapidxml</Filter>
+    </None>
+    <Filter Include="Source\HVCCC2\Deserialisation code\cereal\types">
+      <UniqueIdentifier>{C7A7A3FA-E788-441E-A835-777A43CF359E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\array.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\base_class.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\bitset.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\boost_variant.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\chrono.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\common.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\complex.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\deque.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\forward_list.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\functional.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\list.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\map.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\memory.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\polymorphic.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\queue.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\set.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\stack.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\string.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\tuple.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\unordered_map.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\unordered_set.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\utility.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\valarray.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\vector.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types</Filter>
+    </None>
+    <Filter Include="Source\HVCCC2\Deserialisation code\cereal\types\concepts">
+      <UniqueIdentifier>{A9214B3F-D78E-41EE-83E7-E4E4101C78DA}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HVCCC2\Deserialisation code\cereal\types\concepts\pair_associative_container.hpp">
+      <Filter>Source\HVCCC2\Deserialisation code\cereal\types\concepts</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\HVCCC2\Deserialisation code\loadData.cpp">
+      <Filter>Source\HVCCC2\Deserialisation code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\HVCCC2\Deserialisation code\convertData.cpp">
+      <Filter>Source\HVCCC2\Deserialisation code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\HVCCC2\Deserialisation code\serialization.cpp">
+      <Filter>Source\HVCCC2\Deserialisation code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\HVCCC2\Deserialisation code\python\out\extractData.cpp">
+      <Filter>Source\HVCCC2\Deserialisation code</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\loadData.h">
+      <Filter>Source\HVCCC2\Deserialisation code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\convertData.h">
+      <Filter>Source\HVCCC2\Deserialisation code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\serialization.h">
+      <Filter>Source\HVCCC2\Deserialisation code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HVCCC2\Deserialisation code\python\out\extractData.h">
+      <Filter>Source\HVCCC2\Deserialisation code</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\HVCCC2\Deserialisation code\_python">
+      <UniqueIdentifier>{2f8e40fd-532f-4892-821a-8515e9e97011}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
