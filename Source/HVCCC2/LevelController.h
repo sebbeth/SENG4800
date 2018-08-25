@@ -39,6 +39,8 @@ public:
 		TSubclassOf<class AShip> ship_blueprint;
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class ACoalStack> coal_stack_blueprint;
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<class AConveyorBelt> conveyor_belt_blueprint;
 
 	// Koorigang Stacker Reclaimer track markers
 	UPROPERTY(EditAnywhere)
@@ -99,8 +101,9 @@ private:
 	AStackerReclaimer * spawnAReclaimer(FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint);
 	AShipLoader * spawnAShipLoader(FVector railStart, FVector railEnd, TSubclassOf<class AShipLoader> blueprint);
 	AShip * spawnAShip(FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint);
+	AConveyorBelt* spawnAConveyorBelt(FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint);
 	void spawnACoalStack(FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint);
-
+	
 
 	int testTime; // Just being used for testing
 

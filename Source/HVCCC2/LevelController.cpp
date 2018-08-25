@@ -5,6 +5,7 @@
 #include "ShipLoader.h"
 #include "Ship.h"
 #include "CoalStack.h"
+#include "ConveyorBelt.h"
 #include <deque>
 
 using namespace std;
@@ -13,6 +14,7 @@ deque<ACoalStack*> coalStacks;
 deque<AStackerReclaimer*> stackerReclaimers;
 deque<AShipLoader*> shipLoaders;
 deque<AShip*> ships;
+deque<AConveyorBelt*> conveyorBelts;
 
 int mock_state;
 float mock_level;
@@ -58,6 +60,8 @@ void ALevelController::BeginPlay()
 	coalStacks.at(0)->setQuantity(0.8);
 	coalStacks.at(1)->setQuantity(0.2);
 	coalStacks.at(2)->setQuantity(0.5);
+
+	
 
 	Super::BeginPlay();
 	
@@ -159,6 +163,21 @@ void ALevelController::spawnACoalStack(FVector position, FRotator rotator, TSubc
 		ACoalStack *actor = world->SpawnActor<ACoalStack>(blueprint, position, rotator, spawnParams);
 		coalStacks.push_back(actor); // Add the new actor to the array
 	}
+}
+
+
+AConveyorBelt* ALevelController::spawnAConveyorBelt(FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint) {
+
+	UWorld* world = GetWorld();
+	if (world) {
+		FActorSpawnParameters spawnParams;
+		spawnParams.Owner = this;
+		AConveyorBelt *actor = world->SpawnActor<AConveyorBelt>(blueprint, position, rotator, spawnParams);
+		return actor;
+	}
+	return NULL;
+
+
 }
 
 
