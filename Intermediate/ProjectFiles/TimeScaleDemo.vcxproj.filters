@@ -76,20 +76,134 @@
     <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\convertData.cpp">
       <Filter>Source\TimeScaleDemo\scheduling\data</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\VisualisationController.cpp">
-      <Filter>Source\TimeScaleDemo\scheduling</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\Entity.cpp">
-      <Filter>Source\TimeScaleDemo\scheduling</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\HyperCoord.cpp">
-      <Filter>Source\TimeScaleDemo\scheduling</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\Vector3D.cpp">
-      <Filter>Source\TimeScaleDemo\scheduling</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\TimeScaleDemo\LevelController.cpp">
       <Filter>Source\TimeScaleDemo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\LoadPoint\LoadPointEvent.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\LoadPoint\LoadPointEventType.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\LoadPoint\LoadPointState.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\LoadPoint\LoadPointStateTraits.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Reclaimer\ReclaimerEvent.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Reclaimer\ReclaimerEventType.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Reclaimer\ReclaimerState.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Reclaimer\ReclaimerStateTraits.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\ShipLoader\ShipLoaderEvent.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\ShipLoader\ShipLoaderEventType.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\ShipLoader\ShipLoaderState.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\ShipLoader\ShipLoaderStateTraits.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Signal\SignalEvent.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Signal\SignalEventType.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Signal\SignalState.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Signal\SignalStateTraits.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Signal\SignalStateType.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stacker\StackerEvent.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stacker\StackerEventType.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stacker\StackerState.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stacker\StackerStateTraits.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stockpile\StockpileEvent.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stockpile\StockpileEventType.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stockpile\StockpileState.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stockpile\StockpileStateTraits.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Train\TrainEvent.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Train\TrainEventType.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Train\TrainState.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Train\TrainStateTraits.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Vessel\VesselEvent.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Vessel\VesselEventType.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Vessel\VesselState.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Vessel\VesselStateTraits.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\extractData.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\DumpStation\DumpStationEvent.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\DumpStation\DumpStationEventType.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\DumpStation\DumpStationState.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\DumpStation\DumpStationStateTraits.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\VisualisationController.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\deprecated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\Vector3D.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\deprecated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\HyperCoord.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\deprecated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TimeScaleDemo\scheduling\Entity.cpp">
+      <Filter>Source\TimeScaleDemo\scheduling\deprecated</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -345,23 +459,164 @@
     <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\serialization.h">
       <Filter>Source\TimeScaleDemo\scheduling\data</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\Vector3D.h">
-      <Filter>Source\TimeScaleDemo\scheduling</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\VisualisationController.h">
-      <Filter>Source\TimeScaleDemo\scheduling</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\Entity.h">
-      <Filter>Source\TimeScaleDemo\scheduling</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\HyperCoord.h">
-      <Filter>Source\TimeScaleDemo\scheduling</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\KeyFrame.h">
-      <Filter>Source\TimeScaleDemo\scheduling</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\TimeScaleDemo\LevelController.h">
       <Filter>Source\TimeScaleDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\LoadPoint\LoadPointEvent.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\LoadPoint\LoadPointEventType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\LoadPoint\LoadPointState.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\LoadPoint\LoadPointStateTraits.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\LoadPoint\LoadPointStateType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Reclaimer\ReclaimerEvent.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Reclaimer\ReclaimerEventType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Reclaimer\ReclaimerState.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Reclaimer\ReclaimerStateTraits.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Reclaimer\ReclaimerStateType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\ShipLoader\ShipLoaderEvent.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\ShipLoader\ShipLoaderEventType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\ShipLoader\ShipLoaderState.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\ShipLoader\ShipLoaderStateTraits.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\ShipLoader\ShipLoaderStateType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Signal\SignalEvent.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Signal\SignalEventType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Signal\SignalState.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Signal\SignalStateTraits.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Signal\SignalStateType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stacker\StackerEvent.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stacker\StackerEventType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stacker\StackerState.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stacker\StackerStateTraits.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stacker\StackerStateType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stockpile\StockpileEvent.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stockpile\StockpileEventType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stockpile\StockpileState.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stockpile\StockpileStateTraits.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Stockpile\StockpileStateType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Train\TrainEvent.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Train\TrainEventType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Train\TrainState.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Train\TrainStateTraits.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Train\TrainStateType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Vessel\VesselEvent.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Vessel\VesselEventType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Vessel\VesselState.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Vessel\VesselStateTraits.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\Vessel\VesselStateType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\extractData.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\StateTraits.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\DumpStation\DumpStationEvent.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\DumpStation\DumpStationEventType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\DumpStation\DumpStationState.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\DumpStation\DumpStationStateTraits.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\data\python\out\DumpStation\DumpStationStateType.h">
+      <Filter>Source\TimeScaleDemo\scheduling\data\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\VisualisationController.h">
+      <Filter>Source\TimeScaleDemo\scheduling\deprecated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\Vector3D.h">
+      <Filter>Source\TimeScaleDemo\scheduling\deprecated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\KeyFrame.h">
+      <Filter>Source\TimeScaleDemo\scheduling\deprecated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\HyperCoord.h">
+      <Filter>Source\TimeScaleDemo\scheduling\deprecated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TimeScaleDemo\scheduling\Entity.h">
+      <Filter>Source\TimeScaleDemo\scheduling\deprecated</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -376,6 +631,12 @@
     </Filter>
     <Filter Include="Source\TimeScaleDemo\scheduling\data\tinyxml2">
       <UniqueIdentifier>{345df3b6-fe80-4c7b-9cd4-a489f27e4015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\TimeScaleDemo\scheduling\data\generated">
+      <UniqueIdentifier>{d0e45523-62e2-4fb5-bb68-5e0aafd972dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\TimeScaleDemo\scheduling\deprecated">
+      <UniqueIdentifier>{7af69ee1-45ae-4cdd-aa24-a9d039334610}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

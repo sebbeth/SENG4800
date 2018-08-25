@@ -13,8 +13,6 @@ class TIMESCALEDEMO_API AGlowCube : public AActor
 	GENERATED_BODY()
 	
 public:	
-	//static const FVector START_POINT;
-	static const FVector END_OFFSET;
 	static const double ANIMATION_DURATION;
 	static const double STRAFE_SIN_REPETITIONS;
 	static const double SCALE_SIN_REPETITIONS;
@@ -22,20 +20,16 @@ public:
 	// Sets default values for this actor's properties
 	AGlowCube();
 
-private:
+public:
 	FVector startPoint;
-	double timeElapsed;
-	double speed;
+	FVector endPoint;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	UFUNCTION(BlueprintCallable, Category = "GlowCube")
-	void delegatedTick(float DeltaTime);
-
-	
-	
+	void applyState(float delta);
 };
 
 //an implementation of the modulus operation that correctly wraps around when k is < 0
