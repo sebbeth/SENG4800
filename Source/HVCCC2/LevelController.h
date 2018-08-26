@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "scheduling/data/serialization.h"
 
 
 #include "LevelController.generated.h"
@@ -13,6 +14,20 @@ UCLASS()
 class HVCCC2_API ALevelController : public AActor
 {
 	GENERATED_BODY()
+	
+	StateMapTuple states;
+	double xMin, xMax;
+
+	std::pair<std::size_t, std::size_t> theWatch;
+
+	double worldTime;
+	double speed;
+
+	//AGlowCube *daCube;
+
+	//AGlowCube * spawnAGlowCube(FVector start, FVector end);
+
+	void moveTime(double deltaTime);
 	
 public:	
 	// Sets default values for this actor's properties
