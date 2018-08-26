@@ -1,615 +1,640 @@
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Maps/train-movement_BuiltData.uasset" 0
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Blueprints/PlayerController.uasset" 1
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/FlyingBP/Blueprints/FlyingGameMode.uasset" 2
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Flying/Menu/start-menu_noblur.uasset" 3
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Flying/HUDWidget.uasset" 4
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Flying/hvHUD.uasset" 5
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Blueprints/Temp.uasset" 6
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Flying/Meshes/BaseMaterial.uasset" 7
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Flying/Meshes/UFOMaterial.uasset" 8
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Flying/Meshes/UFO.uasset" 9
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/Material.uasset" 10
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/box.uasset" 11
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/None.uasset" 12
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/default.uasset" 13
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/FbxScene_kooragang.uasset" 14
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/ground.uasset" 15
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/Material_001.uasset" 16
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/Material_002.uasset" 17
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/CoalHopper/DarkMetal.uasset" 18
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/CoalHopper/HopperBody.uasset" 19
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/CoalHopper/TrainWheel.uasset" 20
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/CoalHopper/CoalHopperEmpty.uasset" 21
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/Meshes/CubeMaterial.uasset" 22
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/Meshes/1M_Cube.uasset" 23
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.uasset" 24
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Models/Textures/TrainTex.uasset" 25
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Models/Materials/Train_Master.uasset" 26
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Models/Train/train1.uasset" 27
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Materials/LargeR-SMaterial.uasset" 28
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/S-R.uasset" 29
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/source/S-R3_Blueprint.uasset" 30
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Basic_Wall.uasset" 31
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Architecture/Pillar_50x500.uasset" 32
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Architecture/Wall_400x300.uasset" 33
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Architecture/Wall_400x400.uasset" 34
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Architecture/Wall_500x500.uasset" 35
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Architecture/Wall_Door_400x400.uasset" 36
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Architecture/Wall_Window_400x400.uasset" 37
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Collapse01.uasset" 38
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Collapse02.uasset" 39
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Explosion01.uasset" 40
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Explosion02.uasset" 41
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Fire01.uasset" 42
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Fire_Sparks01.uasset" 43
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Light01.uasset" 44
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Light01_Cue.uasset" 45
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Light02.uasset" 46
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Light02_Cue.uasset" 47
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Smoke01.uasset" 48
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Starter_Birds01.uasset" 49
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Starter_Music01.uasset" 50
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Starter_Wind05.uasset" 51
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Starter_Wind06.uasset" 52
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Steam01.uasset" 53
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Explosion_Cue.uasset" 54
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Burst_M.uasset" 55
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/Materials/M_Burst.uasset" 56
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Explosion_SubUV.uasset" 57
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/Materials/M_explosion_subUV.uasset" 58
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/Materials/m_flare_01.uasset" 59
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradient.uasset" 60
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" 61
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" 62
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Smoke_Tiled_D.uasset" 63
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/Materials/M_smoke_subUV.uasset" 64
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/P_Explosion.uasset" 65
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Blueprint_Effect_Explosion.uasset" 66
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/T_ColorGrid.uasset" 67
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_ColorGrid_LowSpec.uasset" 68
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Bush_D.uasset" 69
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Bush_N.uasset" 70
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/Materials/M_Bush.uasset" 71
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_Bush.uasset" 72
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Chair_M.uasset" 73
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Chair_N.uasset" 74
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/Materials/M_Chair.uasset" 75
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_Couch.uasset" 76
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Glass.uasset" 77
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Door_M.uasset" 78
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Door_N.uasset" 79
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/Materials/M_Door.uasset" 80
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_Door.uasset" 81
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/Materials/M_MaterialSphere.uasset" 82
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/Materials/M_MaterialSphere_Plain.uasset" 83
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_MatPreviewMesh_02.uasset" 84
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.uasset" 85
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Detail_Rocky_N.uasset" 86
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Rock_Basalt_D.uasset" 87
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_RockMesh_M.uasset" 88
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_RockMesh_N.uasset" 89
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/Materials/M_Rock.uasset" 90
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_Rock.uasset" 91
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Shelf_M.uasset" 92
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Shelf_N.uasset" 93
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/Materials/M_Shelf.uasset" 94
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_Shelf.uasset" 95
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Basic_Floor.uasset" 96
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_Stairs.uasset" 97
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Cone.uasset" 98
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Cylinder.uasset" 99
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_NarrowCapsule.uasset" 100
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Pipe.uasset" 101
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Pipe_180.uasset" 102
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Pipe_90.uasset" 103
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Plane.uasset" 104
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Torus.uasset" 105
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Trim.uasset" 106
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Trim_90_In.uasset" 107
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Trim_90_Out.uasset" 108
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_TriPyramid.uasset" 109
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Tube.uasset" 110
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Wedge_A.uasset" 111
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Wedge_B.uasset" 112
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_WideCapsule.uasset" 113
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.uasset" 114
-"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_M.uasset" 115
-"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_N.uasset" 116
-"../../../Engine/Content/EngineMaterials/DefaultMaterial.uasset" 117
-"../../../Engine/Content/BasicShapes/Cylinder.uasset" 118
-"../../../Engine/Content/EditorLandscapeResources/DataLayer.uasset" 119
-"../../../Engine/Content/EditorMaterials/GizmoMaterial.uasset" 120
-"../../../Engine/Content/EditorMaterials/MAT_Groups_Toggle.uasset" 121
-"../../../Engine/Content/EditorMaterials/MAT_Groups_Visibility.uasset" 122
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 123
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 124
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_ColorTrack.uasset" 125
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Anim.uasset" 126
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_AudioMaster.uasset" 127
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Director.uasset" 128
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Event.uasset" 129
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Fade.uasset" 130
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Float.uasset" 131
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Move.uasset" 132
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Slomo.uasset" 133
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Sound.uasset" 134
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Vector.uasset" 135
-"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_NoImage.uasset" 136
-"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_OOD.uasset" 137
-"../../../Engine/Content/EditorMaterials/Camera/CineMat.uasset" 138
-"../../../Engine/Content/EditorMaterials/Camera/MI_CineMat_Rig.uasset" 139
-"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Arm.uasset" 140
-"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Base.uasset" 141
-"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Body.uasset" 142
-"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Mount.uasset" 143
-"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Mount.uasset" 144
-"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Track.uasset" 145
-"../../../Engine/Content/EditorResources/BSPVertex.uasset" 146
-"../../../Engine/Content/EditorResources/EmptyActor.uasset" 147
-"../../../Engine/Content/EditorResources/S_Actor.uasset" 148
-"../../../Engine/Content/EditorResources/S_Trigger.uasset" 149
-"../../../Engine/Content/EditorResources/AudioIcons/S_AudioComponent.uasset" 150
-"../../../Engine/Content/EditorResources/AudioIcons/S_AudioComponent_AutoActivate.uasset" 151
-"../../../Engine/Content/EditorResources/LightIcons/S_LightError.uasset" 152
-"../../../Engine/Content/EditorResources/SequenceRecorder/Countdown.uasset" 153
-"../../../Engine/Content/EditorResources/SequenceRecorder/RecordingIndicator.uasset" 154
-"../../../Engine/Content/EditorSounds/Notifications/CompileFailed.uasset" 155
-"../../../Engine/Content/EditorSounds/Notifications/CompileFailed_Cue.uasset" 156
-"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess.uasset" 157
-"../../../Engine/Content/EditorSounds/Notifications/CompileStart_Cue.uasset" 158
-"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess_Cue.uasset" 159
-"../../../Engine/Content/EngineDamageTypes/DmgTypeBP_Environmental.uasset" 160
-"../../../Engine/Content/EngineDebugMaterials/HeatmapGradient.uasset" 161
-"../../../Engine/Content/EngineDebugMaterials/BoneWeightMaterial.uasset" 162
-"../../../Engine/Content/EngineDebugMaterials/ClothMaterial.uasset" 163
-"../../../Engine/Content/EngineDebugMaterials/ClothMaterial_WF.uasset" 164
-"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset" 165
-"../../../Engine/Content/EngineDebugMaterials/DebugMeshMaterial.uasset" 166
-"../../../Engine/Content/EngineDebugMaterials/GeomMaterial.uasset" 167
-"../../../Engine/Content/EngineFonts/Faces/RobotoBold.uasset" 168
-"../../../Engine/Content/EngineFonts/Faces/RobotoBoldItalic.uasset" 169
-"../../../Engine/Content/EngineFonts/Faces/RobotoItalic.uasset" 170
-"../../../Engine/Content/EngineFonts/Faces/RobotoLight.uasset" 171
-"../../../Engine/Content/EngineFonts/Faces/RobotoRegular.uasset" 172
-"../../../Engine/Content/EngineFonts/Roboto.uasset" 173
-"../../../Engine/Content/EngineFonts/Faces/RobotoTiny.uasset" 174
-"../../../Engine/Content/EngineFonts/RobotoTiny.uasset" 175
-"../../../Engine/Content/EngineMaterials/DefaultBloomKernel.uasset" 176
-"../../../Engine/Content/EngineMaterials/DefaultBokeh.uasset" 177
-"../../../Engine/Content/EngineMaterials/DefaultDiffuse.uasset" 178
-"../../../Engine/Content/EngineMaterials/DefaultDeferredDecalMaterial.uasset" 179
-"../../../Engine/Content/EngineMaterials/DefaultLightFunctionMaterial.uasset" 180
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.uasset" 181
-"../../../Engine/Content/EngineMaterials/DefaultPostProcessMaterial.uasset" 182
-"../../../Engine/Content/EngineFonts/RobotoDistanceField.uasset" 183
-"../../../Engine/Content/EngineMaterials/DefaultTextMaterialOpaque.uasset" 184
-"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid.uasset" 185
-"../../../Engine/Content/EngineMaterials/EditorBrushMaterial.uasset" 186
-"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uasset" 187
-"../../../Engine/Content/EngineMaterials/MiniFont.uasset" 188
-"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.uasset" 189
-"../../../Engine/Content/EngineMaterials/M_InvalidLightmapSettings.uasset" 190
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/CameraOffset.uasset" 191
-"../../../Engine/Content/EngineMaterials/PhAT_JointLimitMaterial.uasset" 192
-"../../../Engine/Content/EngineMaterials/PreintegratedSkinBRDF.uasset" 193
-"../../../Engine/Content/EngineMaterials/RemoveSurfaceMaterial.uasset" 194
-"../../../Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.uasset" 195
-"../../../Engine/Content/EngineResources/WhiteSquareTexture.uasset" 196
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough.uasset" 197
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked.uasset" 198
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque.uasset" 199
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked_OneSided.uasset" 200
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque_OneSided.uasset" 201
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent.uasset" 202
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent_OneSided.uasset" 203
-"../../../Engine/Content/EngineMeshes/Cylinder.uasset" 204
-"../../../Engine/Content/EngineMeshes/Sphere.uasset" 205
-"../../../Engine/Content/EngineResources/Black.uasset" 206
-"../../../Engine/Content/EngineResources/DefaultTexture.uasset" 207
-"../../../Engine/Content/EngineResources/DefaultTextureCube.uasset" 208
-"../../../Engine/Content/EngineResources/GradientTexture0.uasset" 209
-"../../../Engine/Content/EngineSounds/Master.uasset" 210
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/ConvertFromDiffSpec.uasset" 211
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/PowerToRoughness.uasset" 212
-"../../../Engine/Content/Maps/Templates/Thumbnails/Default.uasset" 213
-"../../../Engine/Content/Maps/Templates/Thumbnails/VR-Basic.uasset" 214
-"../../../Engine/Content/MobileResources/T_MobileControls_texture.uasset" 215
-"../../../Engine/Content/MobileResources/T_MobileMenu2.uasset" 216
-"../../../Engine/Content/MobileResources/HUD/AnalogHat.uasset" 217
-"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Background.uasset" 218
-"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Thumb.uasset" 219
-"../../../Engine/Content/MobileResources/HUD/DefaultVirtualJoysticks.uasset" 220
-"../../../Engine/Content/MobileResources/HUD/LeftVirtualJoystickOnly.uasset" 221
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_off.uasset" 222
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_on.uasset" 223
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_off.uasset" 224
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_on.uasset" 225
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton3.uasset" 226
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButtonFire.uasset" 227
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad.uasset" 228
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad2.uasset" 229
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad3.uasset" 230
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionStick.uasset" 231
-"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 232
-"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 233
-"../../../Engine/Content/Tutorial/ContentIntroCurve.uasset" 234
-"../../../Engine/Content/Tutorial/Basics/TutorialAssets/icon_tab_Levels_40x.uasset" 235
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/BlueprintInterface_64x.uasset" 236
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/BlueprintMacroLibrary_64x.uasset" 237
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Blueprint_64x.uasset" 238
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_Interface.uasset" 239
-"../../../Engine/Content/Tutorial/Foliage/TutorialAssets/Foliage.uasset" 240
-"../../../Engine/Content/Tutorial/Landscape/TutorialAssets/Landscape.uasset" 241
-"../../../Engine/Content/Tutorial/Paper2D/TutorialAssets/Paper2DFlipbook_TutorialIcon.uasset" 242
-"../../../Engine/Content/Tutorial/Paper2D/TutorialAssets/Paper2DSprite_TutorialIcon.uasset" 243
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/icon_Editor_Preferences_General_40x.uasset" 244
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/icon_ShowSkeletalMeshes_40x.uasset" 245
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialMaterial.uasset" 246
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_SmokeSubUV_8X8.uasset" 247
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_soft_smoke.uasset" 248
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/M_smoke_subUV_blackbody.uasset" 249
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialParticleSystem.uasset" 250
-"../../../Engine/Content/VREditor/Devices/Generic/GenericHMDMaterial.uasset" 251
-"../../../Engine/Content/VREditor/Devices/Generic/GenericHMD.uasset" 252
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.uasset" 253
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreController_MasksB.uasset" 254
-"../../../Engine/Content/VREditor/Devices/Oculus/OculusControllerMaterial.uasset" 255
-"../../../Engine/Content/VREditor/Devices/Oculus/OculusControllerMaterial_Inst.uasset" 256
-"../../../Engine/Content/VREditor/Devices/Oculus/OculusControllerMesh.uasset" 257
-"../../../Engine/Content/VREditor/Devices/Vive/T_VivePreController_EM.uasset" 258
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreController_MasksA.uasset" 259
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerDiffuse.uasset" 260
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerSpec.uasset" 261
-"../../../Engine/Content/VREditor/LaserPointer/VR_LaserPower_01.uasset" 262
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerMaterial.uasset" 263
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerMaterial_Inst.uasset" 264
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerMesh.uasset" 265
-"../../../Engine/Content/VREditor/FloatingText/LineMaterial.uasset" 266
-"../../../Engine/Content/VREditor/FloatingText/JointSphere.uasset" 267
-"../../../Engine/Content/VREditor/FloatingText/LineSegmentCylinder.uasset" 268
-"../../../Engine/Content/VREditor/Fonts/VRText_RobotoLarge.uasset" 269
-"../../../Engine/Content/VREditor/Fonts/VRTextMaterial.uasset" 270
-"../../../Engine/Content/VREditor/Fonts/TranslucentVRTextMaterial.uasset" 271
-"../../../Engine/Content/EngineMaterials/WorldGridMaterial.uasset" 272
-"../../../Engine/Content/VREditor/LaserPointer/CursorPointer.uasset" 273
-"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial.uasset" 274
-"../../../Engine/Content/VREditor/LaserPointer/HoverMaterial.uasset" 275
-"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial.uasset" 276
-"../../../Engine/Content/VREditor/LaserPointer/TranslucentHoverMaterial.uasset" 277
-"../../../Engine/Content/VREditor/LaserPointer/HoverMesh.uasset" 278
-"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMaterial.uasset" 279
-"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMaterialInst.uasset" 280
-"../../../Engine/Content/VREditor/LaserPointer/TranslucentLaserPointerMaterialInst.uasset" 281
-"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMesh.uasset" 282
-"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMesh_End.uasset" 283
-"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMesh_Start.uasset" 284
-"../../../Engine/Content/VREditor/Sounds/VR_teleport.uasset" 285
-"../../../Engine/Content/VREditor/Sounds/UI/Click_on_Button.uasset" 286
-"../../../Engine/Content/VREditor/Sounds/UI/Click_on_Button_Cue.uasset" 287
-"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Close.uasset" 288
-"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Drop.uasset" 289
-"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Open.uasset" 290
-"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Pick_Up.uasset" 291
-"../../../Engine/Content/VREditor/Sounds/UI/Drop_Item_From_ContentBrowser.uasset" 292
-"../../../Engine/Content/VREditor/Sounds/UI/Floating_UI_Open-001.uasset" 293
-"../../../Engine/Content/VREditor/Sounds/UI/Radial_Menu_FadeOut.uasset" 294
-"../../../Engine/Content/VREditor/Sounds/UI/Teleport_Mode_Entered.uasset" 295
-"../../../Engine/Content/VREditor/Teleport/TeleportDirectionMaterial.uasset" 296
-"../../../Engine/Content/VREditor/Teleport/TeleportDirectionMaterial_Inst.uasset" 297
-"../../../Engine/Content/VREditor/Teleport/TeleportDirectionMesh.uasset" 298
-"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxCorner.uasset" 299
-"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxEdge.uasset" 300
-"../../../Engine/Content/VREditor/TransformGizmo/PlaneTranslationHandle.uasset" 301
-"../../../Engine/Content/VREditor/TransformGizmo/Main.uasset" 302
-"../../../Engine/Content/VREditor/TransformGizmo/Xray.uasset" 303
-"../../../Engine/Content/VREditor/TransformGizmo/SM_Dialog_Close.uasset" 304
-"../../../Engine/Content/VREditor/TransformGizmo/SM_Dialog_Move.uasset" 305
-"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Key.uasset" 306
-"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Node.uasset" 307
-"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial_Inst.uasset" 308
-"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial_Inst.uasset" 309
-"../../../Engine/Content/VREditor/Devices/Vive/UE4_Logo.uasset" 310
-"../../../Engine/Content/VREditor/UI/M_ContentWindow.uasset" 311
-"../../../Engine/Content/VREditor/UI/SM_ContentWindow_01.uasset" 312
-"../../../Engine/Content/VREditor/UI/KeyDiskMaterial.uasset" 313
-"../../../Engine/Content/VREditor/UI/DiscMaterial.uasset" 314
-"../../../Engine/Content/VREditor/UI/SM_Radial_Disk.uasset" 315
-"../../../Engine/Content/VREditor/UI/ArrowMaterial.uasset" 316
-"../../../Engine/Content/VREditor/UI/SM_Radial_Pointer.uasset" 317
-"../../../Engine/Content/VREditor/WorldMovementGrid/SimpleGrid.uasset" 318
-"../../../Engine/Content/VREditor/WorldMovementGrid/GridMaterial.uasset" 319
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.uasset" 320
-"../../../Engine/Content/VREditor/WorldMovementGrid/GridPostProcess.uasset" 321
-"../../../Engine/Content/EditorLandscapeResources/FlattenHeightMat.uasset" 322
-"../../../Engine/Content/VREditor/WorldMovementGrid/PlaneMesh.uasset" 323
-"../../Plugins/2D/Paper2D/Content/PlaceholderTextures/DummySpriteTexture.uasset" 324
-"../../Plugins/2D/Paper2D/Content/DummySprite.uasset" 325
-"../../Plugins/2D/Paper2D/Content/DefaultPaperTerrainMaterial.uasset" 326
-"../../Plugins/2D/Paper2D/Content/DefaultSpriteMaterial.uasset" 327
-"../../Plugins/2D/Paper2D/Content/MaskedUnlitSpriteMaterial.uasset" 328
-"../../Plugins/2D/Paper2D/Content/OpaqueUnlitSpriteMaterial.uasset" 329
-"../../Plugins/Media/MediaCompositing/Content/DefaultMediaPlaneTexture.uasset" 330
-"../../Plugins/Media/MediaCompositing/Content/DefaultMediaPlaneMaterial.uasset" 331
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.uasset" 332
-"../../Plugins/Runtime/AppleARKit/Content/ARKitCameraMaterial.uasset" 333
-"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_AO.uasset" 334
-"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_Color.uasset" 335
-"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_Normal.uasset" 336
-"../../Plugins/Runtime/Oculus/OculusVR/Content/Materials/GearVRControllerMaterial.uasset" 337
-"../../Plugins/Runtime/Oculus/OculusVR/Content/Meshes/GearVrController.uasset" 338
-"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 339
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Blueprints/ConveyorVolume.uasset" 340
-"../../../Engine/Content/EngineSky/C_Sky_Cloud_Color.uasset" 341
-"../../../Engine/Content/EngineSky/C_Sky_Horizon_Color.uasset" 342
-"../../../Engine/Content/EngineSky/C_Sky_Zenith_Color.uasset" 343
-"../../../Engine/Content/EngineSky/T_Sky_Blue.uasset" 344
-"../../../Engine/Content/EngineSky/T_Sky_Clouds_M.uasset" 345
-"../../../Engine/Content/EngineSky/T_Sky_Stars.uasset" 346
-"../../../Engine/Content/EngineSky/M_Sky_Panning_Clouds2.uasset" 347
-"../../../Engine/Content/EngineSky/SM_SkySphere.uasset" 348
-"../../../Engine/Content/EngineSky/BP_Sky_Sphere.uasset" 349
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Models/Track/pillar.uasset" 350
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Models/Track/rail.uasset" 351
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Blueprints/BP_Rails.uasset" 352
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/CoalHopper/Coal.uasset" 353
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/CoalHopper/CoalHopperFull.uasset" 354
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/Locomotive/BlackMetal.uasset" 355
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/Locomotive/Glass.uasset" 356
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/Locomotive/Locomotive_Blue.uasset" 357
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/Locomotive/Material.uasset" 358
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/Locomotive/Locomotive.uasset" 359
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Models/Train/bogie.uasset" 360
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Blueprints/BP_Train.uasset" 361
-"../../../Engine/Content/BasicShapes/Sphere.uasset" 362
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Blueprints/ConveyorCoal.uasset" 363
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Blueprints/CoalSpawner.uasset" 364
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Materials/GreenCladdingMaterial.uasset" 365
-"../../../Engine/Content/BasicShapes/Cube.uasset" 366
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Cube8_Blueprint.uasset" 367
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Flying/Menu/PauseMenu.uasset" 368
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/FlyingBP/Blueprints/FlyingPawn.uasset" 369
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Materials/YellowMaterial.uasset" 370
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/source/S-R5_Blueprint.uasset" 371
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Maps/Kooragang-basic_BuiltData.uasset" 372
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Materials/CoalMaterial.uasset" 373
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Materials/newcastleoverview.uasset" 374
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Materials/newcastleoverview_Mat.uasset" 375
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Materials/OrangeMaterial.uasset" 376
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Materials/RedMaterial.uasset" 377
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Materials/StructureMaterial.uasset" 378
-"../../../Engine/Content/MapTemplates/Sky/DaylightAmbientCubemap.uasset" 379
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Master.uasset" 380
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Black.uasset" 381
-"../../../Engine/Content/BasicShapes/Cone.uasset" 382
-"../../../Engine/Content/BasicShapes/Plane.uasset" 383
-"../../../Engine/Content/EngineMeshes/Cube.uasset" 384
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Materials/TreeMaterial.uasset" 385
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/BasicTree.uasset" 386
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/BasicShip.uasset" 387
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/coalbridge.uasset" 388
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/conveyerbelt.uasset" 389
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/loader.uasset" 390
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/pilelong.uasset" 391
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/Stacker.uasset" 392
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Maps/Kooragang-basic.umap" 393
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Blueprints/MenuController.uasset" 394
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Flying/Menu/MainMenuWidget.uasset" 395
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Flying/Menu/MainMenuHUD.uasset" 396
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/FlyingBP/Blueprints/MainMenuGM.uasset" 397
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Maps/MainMenu.umap" 398
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Flying/Menu/OptionsScreenWidget.uasset" 399
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Flying/Menu/OptionsScreenHUD.uasset" 400
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/FlyingBP/Blueprints/OptionsScreenGM.uasset" 401
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Maps/OptionsScreen.umap" 402
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Maps/terrain_BuiltData.uasset" 403
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Ground_Grass_D.uasset" 404
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Ground_Grass_N.uasset" 405
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_MacroVariation.uasset" 406
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Perlin_Noise_M.uasset" 407
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Ground_Grass.uasset" 408
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Flying/Meshes/GrayMaterial.uasset" 409
-"../../../Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uasset" 410
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/Meshes/1M_Cube_Chamfer.uasset" 411
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Geometry/Meshes/TemplateFloor.uasset" 412
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Maps/terrain.umap" 413
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Maps/Train_Tut_BuiltData.uasset" 414
-"../../../Engine/Content/MapTemplates/SM_Template_Map_Floor.uasset" 415
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Models/Train/wagon_SPW_Vehicle_Train_Freight_Train_Trailer_02.uasset" 416
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/Maps/Train_Tut.umap" 417
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/FlyingCPP/Maps/FlyingExampleMap_BuiltData.uasset" 418
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/FlyingCPP/Maps/FlyingExampleMap.umap" 419
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Assets/FogBrightnessLUT.uasset" 420
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Assets/SunlightColorLUT.uasset" 421
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Assets/M_LightStage_Arrows.uasset" 422
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_HDRI.uasset" 423
-"../../../Engine/Content/EditorMaterials/Thumbnails/SkySphereMaterial.uasset" 424
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Assets/Skybox.uasset" 425
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Assets/SM_Arrows.uasset" 426
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" 427
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/BP_LightStudio.uasset" 428
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Maps/Advanced_Lighting_BuiltData.uasset" 429
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_AssetPlatform.uasset" 430
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ChromeBall.uasset" 431
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ClearCoat.uasset" 432
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ClearCoatBlack.uasset" 433
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/Color_checker.uasset" 434
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ColorGrid.uasset" 435
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_GreyBall.uasset" 436
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/SM_ColorCalibrator.uasset" 437
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Architecture/SM_AssetPlatform.uasset" 438
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Maps/Advanced_Lighting.umap" 439
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset" 440
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Metal_Brushed_Nickel.uasset" 441
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Metal_Aluminum_D.uasset" 442
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Metal_Gold_N.uasset" 443
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Metal_Burnished_Steel.uasset" 444
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Metal_Copper_D.uasset" 445
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Metal_Copper.uasset" 446
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Statue_M.uasset" 447
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Statue_N.uasset" 448
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/Materials/M_StatueGlass.uasset" 449
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Architecture/Floor_400x400.uasset" 450
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Starter_Background_Cue.uasset" 451
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_Chair.uasset" 452
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/Materials/M_Statue.uasset" 453
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_Statue.uasset" 454
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_TableRound_M.uasset" 455
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_TableRound_N.uasset" 456
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/Materials/M_TableRound.uasset" 457
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_TableRound.uasset" 458
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Maps/Minimal_Default.umap" 459
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Fire01_Cue.uasset" 460
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Fire_SubUV.uasset" 461
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Fire_Tiled_D.uasset" 462
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/Materials/M_Fire_SubUV.uasset" 463
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Water_N.uasset" 464
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/Materials/M_Heat_Distortion.uasset" 465
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/Materials/M_Radial_Gradient.uasset" 466
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/P_Fire.uasset" 467
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset" 468
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Smoke01_Cue.uasset" 469
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/P_Smoke.uasset" 470
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Blueprint_Effect_Smoke.uasset" 471
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Fire_Sparks01_Cue.uasset" 472
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Spark_Core.uasset" 473
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/Materials/M_Spark.uasset" 474
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/P_Sparks.uasset" 475
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset" 476
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Steam01_Cue.uasset" 477
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/P_Steam_Lit.uasset" 478
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Blueprint_Effect_Steam.uasset" 479
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Lamp_M.uasset" 480
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Lamp_N.uasset" 481
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/Materials/M_Lamp.uasset" 482
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_Lamp_Ceiling.uasset" 483
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" 484
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_Lamp_Wall.uasset" 485
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Blueprints/Blueprint_WallSconce.uasset" 486
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Maps/StarterMap_BuiltData.uasset" 487
-"../../../Engine/Content/Functions/Engine_MaterialFunctions03/Procedurals/ComputeFilterWidth.uasset" 488
-"../../../Engine/Content/EngineMaterials/AntiAliasedTextMaterialTranslucent.uasset" 489
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_Beveled_D.uasset" 490
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_Beveled_M.uasset" 491
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_Beveled_N.uasset" 492
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Brick_Clay_Beveled.uasset" 493
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_New_D.uasset" 494
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_New_M.uasset" 495
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_New_N.uasset" 496
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Brick_Clay_New.uasset" 497
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_Old_D.uasset" 498
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_Old_N.uasset" 499
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Brick_Clay_Old.uasset" 500
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Brick_Cut_Stone_D.uasset" 501
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Brick_Cut_Stone_N.uasset" 502
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Brick_Cut_Stone.uasset" 503
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Brick_Hewn_Stone_D.uasset" 504
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Brick_Hewn_Stone_M.uasset" 505
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Brick_Hewn_Stone_N.uasset" 506
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Brick_Hewn_Stone.uasset" 507
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Ceramic_Tile_M.uasset" 508
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Ceramic_Tile_N.uasset" 509
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Rock_Marble_Polished_D.uasset" 510
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Ceramic_Tile_Checker.uasset" 511
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Pebble_D.uasset" 512
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Pebble_M.uasset" 513
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Pebble_N.uasset" 514
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_CobbleStone_Pebble.uasset" 515
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Rough_D.uasset" 516
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Rough_N.uasset" 517
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Gradinet_01.uasset" 518
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Rock_Smooth_Granite_D.uasset" 519
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_CobbleStone_Rough.uasset" 520
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Smooth_D.uasset" 521
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Smooth_M.uasset" 522
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Smooth_N.uasset" 523
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_CobbleStone_Smooth.uasset" 524
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Concrete_Grime_D.uasset" 525
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Metal_Rust_N.uasset" 526
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Concrete_Grime.uasset" 527
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Concrete_Panels_D.uasset" 528
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Concrete_Panels_N.uasset" 529
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Concrete_Panels.uasset" 530
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Concrete_Poured_D.uasset" 531
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Concrete_Poured_N.uasset" 532
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Concrete_Poured.uasset" 533
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Concrete_Tiles_D.uasset" 534
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Concrete_Tiles_M.uasset" 535
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Concrete_Tiles_N.uasset" 536
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Concrete_Tiles_Variation_M.uasset" 537
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Concrete_Tiles.uasset" 538
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Ground_Gravel_D.uasset" 539
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Ground_Gravel_N.uasset" 540
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Ground_Gravel.uasset" 541
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_ground_Moss_D.uasset" 542
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Ground_Moss_N.uasset" 543
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Ground_Moss.uasset" 544
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Metal_Chrome.uasset" 545
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Metal_Gold_D.uasset" 546
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Metal_Gold.uasset" 547
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Metal_Rust_D.uasset" 548
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Metal_Rust.uasset" 549
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Metal_Steel_D.uasset" 550
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Metal_Steel_N.uasset" 551
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Metal_Steel.uasset" 552
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Rock_Basalt_N.uasset" 553
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Rock_Basalt.uasset" 554
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Rock_Marble_Polished.uasset" 555
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Rock_Sandstone_D.uasset" 556
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Rock_Sandstone_N.uasset" 557
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Rock_Sandstone.uasset" 558
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Rock_Slate_D.uasset" 559
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Rock_Slate_N.uasset" 560
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Rock_Slate.uasset" 561
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Checker_Noise_M.uasset" 562
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Single_Tile_N.uasset" 563
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Tech_Dot_M.uasset" 564
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Tech_Dot_N.uasset" 565
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Tech_Checker_Dot.uasset" 566
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Tech_Hex_Tile_M.uasset" 567
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Tech_Hex_Tile_N.uasset" 568
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Tech_Hex_Tile.uasset" 569
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.uasset" 570
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Tech_Panel_M.uasset" 571
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Tech_Panel_N.uasset" 572
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Tech_Panel.uasset" 573
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Water_Lake.uasset" 574
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Water_M.uasset" 575
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Water_Ocean.uasset" 576
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Wood_Floor_Walnut_D.uasset" 577
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Wood_Floor_Walnut_M.uasset" 578
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Wood_Floor_Walnut_N.uasset" 579
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Polished.uasset" 580
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/AlphaOffset.uasset" 581
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Worn.uasset" 582
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Wood_Oak_D.uasset" 583
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Wood_Oak_N.uasset" 584
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Wood_Oak.uasset" 585
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Wood_Pine_D.uasset" 586
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Wood_Pine_N.uasset" 587
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Wood_Pine.uasset" 588
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset" 589
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset" 590
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Materials/M_Wood_Walnut.uasset" 591
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Architecture/Wall_400x200.uasset" 592
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Architecture/Wall_Door_400x300.uasset" 593
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Architecture/Wall_Window_400x300.uasset" 594
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Collapse_Cue.uasset" 595
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Audio/Starter_Music_Cue.uasset" 596
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Dust_Particle_D.uasset" 597
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/Materials/M_Dust_Particle.uasset" 598
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Particles/P_Ambient_Dust.uasset" 599
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/MaterialSphere.uasset" 600
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Frame_M.uasset" 601
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Textures/T_Frame_N.uasset" 602
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/Materials/M_Frame.uasset" 603
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_CornerFrame.uasset" 604
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_DoorFrame.uasset" 605
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_GlassWindow.uasset" 606
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_PillarFrame.uasset" 607
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_PillarFrame300.uasset" 608
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Props/SM_WindowFrame.uasset" 609
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Cube.uasset" 610
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_QuadPyramid.uasset" 611
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Shapes/Shape_Sphere.uasset" 612
-"../../../../../../Users/Jack/Documents/Unreal Projects/SENG4800/Content/StarterContent/Maps/StarterMap.umap" 613
-"../../../Engine/Content/Maps/Entry.umap" 614
+"F:/seng4211/SENG4800/Content/Maps/train-movement_BuiltData.uasset" 0
+"F:/seng4211/SENG4800/Content/Blueprints/CoalDespawner.uasset" 1
+"F:/seng4211/SENG4800/Content/Blueprints/PlayerController.uasset" 2
+"F:/seng4211/SENG4800/Content/FlyingBP/Blueprints/FlyingGameMode.uasset" 3
+"F:/seng4211/SENG4800/Content/Camera/Minimap_RenderTarget.uasset" 4
+"F:/seng4211/SENG4800/Content/Camera/Minimap_RenderTaget_Mat.uasset" 5
+"F:/seng4211/SENG4800/Content/Camera/Minimap_Widget.uasset" 6
+"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 7
+"F:/seng4211/SENG4800/Content/Flying/Menu/start-menu_noblur.uasset" 8
+"F:/seng4211/SENG4800/Content/Flying/Menu/OptionsScreenWidget.uasset" 9
+"F:/seng4211/SENG4800/Content/Flying/Menu/PauseMenu.uasset" 10
+"F:/seng4211/SENG4800/Content/FlyingBP/Blueprints/FlyingPawn.uasset" 11
+"F:/seng4211/SENG4800/Content/Flying/Menu/OptionsScreenWidget_HUD.uasset" 12
+"F:/seng4211/SENG4800/Content/Flying/Menu/FileMenu.uasset" 13
+"F:/seng4211/SENG4800/Content/Flying/HUDWidget.uasset" 14
+"F:/seng4211/SENG4800/Content/Flying/hvHUD.uasset" 15
+"F:/seng4211/SENG4800/Content/Blueprints/Temp.uasset" 16
+"F:/seng4211/SENG4800/Content/Flying/Meshes/BaseMaterial.uasset" 17
+"F:/seng4211/SENG4800/Content/Flying/Meshes/UFOMaterial.uasset" 18
+"F:/seng4211/SENG4800/Content/Flying/Meshes/UFO.uasset" 19
+"F:/seng4211/SENG4800/Content/Materials/RedMaterial.uasset" 20
+"F:/seng4211/SENG4800/Content/Geometry/BasicShip.uasset" 21
+"F:/seng4211/SENG4800/Content/Geometry/Material.uasset" 22
+"F:/seng4211/SENG4800/Content/Geometry/box.uasset" 23
+"F:/seng4211/SENG4800/Content/Geometry/None.uasset" 24
+"F:/seng4211/SENG4800/Content/Geometry/default.uasset" 25
+"F:/seng4211/SENG4800/Content/Geometry/FbxScene_kooragang.uasset" 26
+"F:/seng4211/SENG4800/Content/Geometry/ground.uasset" 27
+"F:/seng4211/SENG4800/Content/Geometry/Material_001.uasset" 28
+"F:/seng4211/SENG4800/Content/Geometry/Material_002.uasset" 29
+"F:/seng4211/SENG4800/Content/Geometry/CoalHopper/DarkMetal.uasset" 30
+"F:/seng4211/SENG4800/Content/Geometry/CoalHopper/HopperBody.uasset" 31
+"F:/seng4211/SENG4800/Content/Geometry/CoalHopper/TrainWheel.uasset" 32
+"F:/seng4211/SENG4800/Content/Geometry/CoalHopper/CoalHopperEmpty.uasset" 33
+"F:/seng4211/SENG4800/Content/Geometry/Meshes/CubeMaterial.uasset" 34
+"F:/seng4211/SENG4800/Content/Geometry/Meshes/1M_Cube.uasset" 35
+"F:/seng4211/SENG4800/Content/Materials/CoalMaterial.uasset" 36
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.uasset" 37
+"F:/seng4211/SENG4800/Content/Models/Textures/TrainTex.uasset" 38
+"F:/seng4211/SENG4800/Content/Models/Materials/Train_Master.uasset" 39
+"F:/seng4211/SENG4800/Content/Models/Train/train1.uasset" 40
+"F:/seng4211/SENG4800/Content/Materials/LargeR-SMaterial.uasset" 41
+"F:/seng4211/SENG4800/Content/Geometry/S-R.uasset" 42
+"F:/seng4211/SENG4800/Content/source/S-R3_Blueprint.uasset" 43
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Basic_Wall.uasset" 44
+"F:/seng4211/SENG4800/Content/StarterContent/Architecture/Pillar_50x500.uasset" 45
+"F:/seng4211/SENG4800/Content/StarterContent/Architecture/Wall_400x300.uasset" 46
+"F:/seng4211/SENG4800/Content/StarterContent/Architecture/Wall_400x400.uasset" 47
+"F:/seng4211/SENG4800/Content/StarterContent/Architecture/Wall_500x500.uasset" 48
+"F:/seng4211/SENG4800/Content/StarterContent/Architecture/Wall_Door_400x400.uasset" 49
+"F:/seng4211/SENG4800/Content/StarterContent/Architecture/Wall_Window_400x400.uasset" 50
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Collapse01.uasset" 51
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Collapse02.uasset" 52
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Explosion01.uasset" 53
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Explosion02.uasset" 54
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Fire01.uasset" 55
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Fire_Sparks01.uasset" 56
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Light01.uasset" 57
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Light01_Cue.uasset" 58
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Light02.uasset" 59
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Light02_Cue.uasset" 60
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Smoke01.uasset" 61
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Starter_Birds01.uasset" 62
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Starter_Music01.uasset" 63
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Starter_Wind05.uasset" 64
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Starter_Wind06.uasset" 65
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Steam01.uasset" 66
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Explosion_Cue.uasset" 67
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Burst_M.uasset" 68
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/Materials/M_Burst.uasset" 69
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Explosion_SubUV.uasset" 70
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/Materials/M_explosion_subUV.uasset" 71
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/Materials/m_flare_01.uasset" 72
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradient.uasset" 73
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" 74
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" 75
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Smoke_Tiled_D.uasset" 76
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/Materials/M_smoke_subUV.uasset" 77
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/P_Explosion.uasset" 78
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Blueprint_Effect_Explosion.uasset" 79
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/T_ColorGrid.uasset" 80
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_ColorGrid_LowSpec.uasset" 81
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Bush_D.uasset" 82
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Bush_N.uasset" 83
+"F:/seng4211/SENG4800/Content/StarterContent/Props/Materials/M_Bush.uasset" 84
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_Bush.uasset" 85
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Chair_M.uasset" 86
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Chair_N.uasset" 87
+"F:/seng4211/SENG4800/Content/StarterContent/Props/Materials/M_Chair.uasset" 88
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_Couch.uasset" 89
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Glass.uasset" 90
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Door_M.uasset" 91
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Door_N.uasset" 92
+"F:/seng4211/SENG4800/Content/StarterContent/Props/Materials/M_Door.uasset" 93
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_Door.uasset" 94
+"F:/seng4211/SENG4800/Content/StarterContent/Props/Materials/M_MaterialSphere.uasset" 95
+"F:/seng4211/SENG4800/Content/StarterContent/Props/Materials/M_MaterialSphere_Plain.uasset" 96
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_MatPreviewMesh_02.uasset" 97
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.uasset" 98
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Detail_Rocky_N.uasset" 99
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Rock_Basalt_D.uasset" 100
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_RockMesh_M.uasset" 101
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_RockMesh_N.uasset" 102
+"F:/seng4211/SENG4800/Content/StarterContent/Props/Materials/M_Rock.uasset" 103
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_Rock.uasset" 104
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Shelf_M.uasset" 105
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Shelf_N.uasset" 106
+"F:/seng4211/SENG4800/Content/StarterContent/Props/Materials/M_Shelf.uasset" 107
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_Shelf.uasset" 108
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Basic_Floor.uasset" 109
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_Stairs.uasset" 110
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Cone.uasset" 111
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Cylinder.uasset" 112
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_NarrowCapsule.uasset" 113
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Pipe.uasset" 114
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Pipe_180.uasset" 115
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Pipe_90.uasset" 116
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Plane.uasset" 117
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Torus.uasset" 118
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Trim.uasset" 119
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Trim_90_In.uasset" 120
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Trim_90_Out.uasset" 121
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_TriPyramid.uasset" 122
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Tube.uasset" 123
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Wedge_A.uasset" 124
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Wedge_B.uasset" 125
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_WideCapsule.uasset" 126
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.uasset" 127
+"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_M.uasset" 128
+"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_N.uasset" 129
+"../../../Engine/Content/EngineMaterials/DefaultMaterial.uasset" 130
+"../../../Engine/Content/BasicShapes/Cylinder.uasset" 131
+"../../../Engine/Content/EditorLandscapeResources/DataLayer.uasset" 132
+"../../../Engine/Content/EditorMaterials/GizmoMaterial.uasset" 133
+"../../../Engine/Content/EditorMaterials/MAT_Groups_Toggle.uasset" 134
+"../../../Engine/Content/EditorMaterials/MAT_Groups_Visibility.uasset" 135
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 136
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 137
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_ColorTrack.uasset" 138
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Anim.uasset" 139
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_AudioMaster.uasset" 140
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Director.uasset" 141
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Event.uasset" 142
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Fade.uasset" 143
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Float.uasset" 144
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Move.uasset" 145
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Slomo.uasset" 146
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Sound.uasset" 147
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Vector.uasset" 148
+"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_NoImage.uasset" 149
+"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_OOD.uasset" 150
+"../../../Engine/Content/EditorMaterials/Camera/CineMat.uasset" 151
+"../../../Engine/Content/EditorMaterials/Camera/MI_CineMat_Rig.uasset" 152
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Arm.uasset" 153
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Base.uasset" 154
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Body.uasset" 155
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Mount.uasset" 156
+"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Mount.uasset" 157
+"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Track.uasset" 158
+"../../../Engine/Content/EditorResources/BSPVertex.uasset" 159
+"../../../Engine/Content/EditorResources/EmptyActor.uasset" 160
+"../../../Engine/Content/EditorResources/S_Actor.uasset" 161
+"../../../Engine/Content/EditorResources/S_Trigger.uasset" 162
+"../../../Engine/Content/EditorResources/AudioIcons/S_AudioComponent.uasset" 163
+"../../../Engine/Content/EditorResources/AudioIcons/S_AudioComponent_AutoActivate.uasset" 164
+"../../../Engine/Content/EditorResources/LightIcons/S_LightError.uasset" 165
+"../../../Engine/Content/EditorResources/SequenceRecorder/Countdown.uasset" 166
+"../../../Engine/Content/EditorResources/SequenceRecorder/RecordingIndicator.uasset" 167
+"../../../Engine/Content/EditorSounds/Notifications/CompileFailed.uasset" 168
+"../../../Engine/Content/EditorSounds/Notifications/CompileFailed_Cue.uasset" 169
+"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess.uasset" 170
+"../../../Engine/Content/EditorSounds/Notifications/CompileStart_Cue.uasset" 171
+"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess_Cue.uasset" 172
+"../../../Engine/Content/EngineDamageTypes/DmgTypeBP_Environmental.uasset" 173
+"../../../Engine/Content/EngineDebugMaterials/HeatmapGradient.uasset" 174
+"../../../Engine/Content/EngineDebugMaterials/BoneWeightMaterial.uasset" 175
+"../../../Engine/Content/EngineDebugMaterials/ClothMaterial.uasset" 176
+"../../../Engine/Content/EngineDebugMaterials/ClothMaterial_WF.uasset" 177
+"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset" 178
+"../../../Engine/Content/EngineDebugMaterials/DebugMeshMaterial.uasset" 179
+"../../../Engine/Content/EngineDebugMaterials/GeomMaterial.uasset" 180
+"../../../Engine/Content/EngineFonts/Faces/RobotoBold.uasset" 181
+"../../../Engine/Content/EngineFonts/Faces/RobotoBoldItalic.uasset" 182
+"../../../Engine/Content/EngineFonts/Faces/RobotoItalic.uasset" 183
+"../../../Engine/Content/EngineFonts/Faces/RobotoLight.uasset" 184
+"../../../Engine/Content/EngineFonts/Faces/RobotoRegular.uasset" 185
+"../../../Engine/Content/EngineFonts/Roboto.uasset" 186
+"../../../Engine/Content/EngineFonts/Faces/RobotoTiny.uasset" 187
+"../../../Engine/Content/EngineFonts/RobotoTiny.uasset" 188
+"../../../Engine/Content/EngineMaterials/DefaultBloomKernel.uasset" 189
+"../../../Engine/Content/EngineMaterials/DefaultBokeh.uasset" 190
+"../../../Engine/Content/EngineMaterials/DefaultDiffuse.uasset" 191
+"../../../Engine/Content/EngineMaterials/DefaultDeferredDecalMaterial.uasset" 192
+"../../../Engine/Content/EngineMaterials/DefaultLightFunctionMaterial.uasset" 193
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.uasset" 194
+"../../../Engine/Content/EngineMaterials/DefaultPostProcessMaterial.uasset" 195
+"../../../Engine/Content/EngineFonts/RobotoDistanceField.uasset" 196
+"../../../Engine/Content/EngineMaterials/DefaultTextMaterialOpaque.uasset" 197
+"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid.uasset" 198
+"../../../Engine/Content/EngineMaterials/EditorBrushMaterial.uasset" 199
+"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uasset" 200
+"../../../Engine/Content/EngineMaterials/MiniFont.uasset" 201
+"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.uasset" 202
+"../../../Engine/Content/EngineMaterials/M_InvalidLightmapSettings.uasset" 203
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/CameraOffset.uasset" 204
+"../../../Engine/Content/EngineMaterials/PhAT_JointLimitMaterial.uasset" 205
+"../../../Engine/Content/EngineMaterials/PreintegratedSkinBRDF.uasset" 206
+"../../../Engine/Content/EngineMaterials/RemoveSurfaceMaterial.uasset" 207
+"../../../Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.uasset" 208
+"../../../Engine/Content/EngineResources/WhiteSquareTexture.uasset" 209
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough.uasset" 210
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked.uasset" 211
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque.uasset" 212
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked_OneSided.uasset" 213
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque_OneSided.uasset" 214
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent.uasset" 215
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent_OneSided.uasset" 216
+"../../../Engine/Content/EngineMeshes/Cylinder.uasset" 217
+"../../../Engine/Content/EngineMeshes/Sphere.uasset" 218
+"../../../Engine/Content/EngineResources/Black.uasset" 219
+"../../../Engine/Content/EngineResources/DefaultTexture.uasset" 220
+"../../../Engine/Content/EngineResources/DefaultTextureCube.uasset" 221
+"../../../Engine/Content/EngineResources/GradientTexture0.uasset" 222
+"../../../Engine/Content/EngineSounds/Master.uasset" 223
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/ConvertFromDiffSpec.uasset" 224
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/PowerToRoughness.uasset" 225
+"../../../Engine/Content/Maps/Templates/Thumbnails/Default.uasset" 226
+"../../../Engine/Content/Maps/Templates/Thumbnails/VR-Basic.uasset" 227
+"../../../Engine/Content/MobileResources/T_MobileControls_texture.uasset" 228
+"../../../Engine/Content/MobileResources/T_MobileMenu2.uasset" 229
+"../../../Engine/Content/MobileResources/HUD/AnalogHat.uasset" 230
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Background.uasset" 231
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Thumb.uasset" 232
+"../../../Engine/Content/MobileResources/HUD/DefaultVirtualJoysticks.uasset" 233
+"../../../Engine/Content/MobileResources/HUD/LeftVirtualJoystickOnly.uasset" 234
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_off.uasset" 235
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_on.uasset" 236
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_off.uasset" 237
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_on.uasset" 238
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton3.uasset" 239
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButtonFire.uasset" 240
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad.uasset" 241
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad2.uasset" 242
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad3.uasset" 243
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionStick.uasset" 244
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 245
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 246
+"../../../Engine/Content/Tutorial/ContentIntroCurve.uasset" 247
+"../../../Engine/Content/Tutorial/Basics/TutorialAssets/CameraActor_64x.uasset" 248
+"../../../Engine/Content/Tutorial/Basics/TutorialAssets/icon_tab_Levels_40x.uasset" 249
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/BlueprintInterface_64x.uasset" 250
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/BlueprintMacroLibrary_64x.uasset" 251
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Blueprint_64x.uasset" 252
+"../../../Engine/Content/EditorBlueprintResources/ActorMacros.uasset" 253
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_Class.uasset" 254
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_Interface.uasset" 255
+"../../../Engine/Content/Tutorial/Foliage/TutorialAssets/Foliage.uasset" 256
+"../../../Engine/Content/Tutorial/Landscape/TutorialAssets/Landscape.uasset" 257
+"../../../Engine/Content/Tutorial/Paper2D/TutorialAssets/Paper2DFlipbook_TutorialIcon.uasset" 258
+"../../../Engine/Content/Tutorial/Paper2D/TutorialAssets/Paper2DSprite_TutorialIcon.uasset" 259
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/icon_Editor_Preferences_General_40x.uasset" 260
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/icon_ShowSkeletalMeshes_40x.uasset" 261
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialMaterial.uasset" 262
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_SmokeSubUV_8X8.uasset" 263
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_soft_smoke.uasset" 264
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/M_smoke_subUV_blackbody.uasset" 265
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialParticleSystem.uasset" 266
+"../../../Engine/Content/VREditor/Devices/Generic/GenericHMDMaterial.uasset" 267
+"../../../Engine/Content/VREditor/Devices/Generic/GenericHMD.uasset" 268
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.uasset" 269
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreController_MasksB.uasset" 270
+"../../../Engine/Content/VREditor/Devices/Oculus/OculusControllerMaterial.uasset" 271
+"../../../Engine/Content/VREditor/Devices/Oculus/OculusControllerMaterial_Inst.uasset" 272
+"../../../Engine/Content/VREditor/Devices/Oculus/OculusControllerMesh.uasset" 273
+"../../../Engine/Content/VREditor/Devices/Vive/T_VivePreController_EM.uasset" 274
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreController_MasksA.uasset" 275
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerDiffuse.uasset" 276
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerSpec.uasset" 277
+"../../../Engine/Content/VREditor/LaserPointer/VR_LaserPower_01.uasset" 278
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerMaterial.uasset" 279
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerMaterial_Inst.uasset" 280
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerMesh.uasset" 281
+"../../../Engine/Content/VREditor/FloatingText/LineMaterial.uasset" 282
+"../../../Engine/Content/VREditor/FloatingText/JointSphere.uasset" 283
+"../../../Engine/Content/VREditor/FloatingText/LineSegmentCylinder.uasset" 284
+"../../../Engine/Content/VREditor/Fonts/VRText_RobotoLarge.uasset" 285
+"../../../Engine/Content/VREditor/Fonts/VRTextMaterial.uasset" 286
+"../../../Engine/Content/VREditor/Fonts/TranslucentVRTextMaterial.uasset" 287
+"../../../Engine/Content/EngineMaterials/WorldGridMaterial.uasset" 288
+"../../../Engine/Content/VREditor/LaserPointer/CursorPointer.uasset" 289
+"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial.uasset" 290
+"../../../Engine/Content/VREditor/LaserPointer/HoverMaterial.uasset" 291
+"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial.uasset" 292
+"../../../Engine/Content/VREditor/LaserPointer/TranslucentHoverMaterial.uasset" 293
+"../../../Engine/Content/VREditor/LaserPointer/HoverMesh.uasset" 294
+"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMaterial.uasset" 295
+"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMaterialInst.uasset" 296
+"../../../Engine/Content/VREditor/LaserPointer/TranslucentLaserPointerMaterialInst.uasset" 297
+"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMesh.uasset" 298
+"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMesh_End.uasset" 299
+"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMesh_Start.uasset" 300
+"../../../Engine/Content/VREditor/Sounds/VR_teleport.uasset" 301
+"../../../Engine/Content/VREditor/Sounds/UI/Click_on_Button.uasset" 302
+"../../../Engine/Content/VREditor/Sounds/UI/Click_on_Button_Cue.uasset" 303
+"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Close.uasset" 304
+"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Drop.uasset" 305
+"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Open.uasset" 306
+"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Pick_Up.uasset" 307
+"../../../Engine/Content/VREditor/Sounds/UI/Drop_Item_From_ContentBrowser.uasset" 308
+"../../../Engine/Content/VREditor/Sounds/UI/Floating_UI_Open-001.uasset" 309
+"../../../Engine/Content/VREditor/Sounds/UI/Radial_Menu_FadeOut.uasset" 310
+"../../../Engine/Content/VREditor/Sounds/UI/Teleport_Mode_Entered.uasset" 311
+"../../../Engine/Content/VREditor/Teleport/TeleportDirectionMaterial.uasset" 312
+"../../../Engine/Content/VREditor/Teleport/TeleportDirectionMaterial_Inst.uasset" 313
+"../../../Engine/Content/VREditor/Teleport/TeleportDirectionMesh.uasset" 314
+"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxCorner.uasset" 315
+"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxEdge.uasset" 316
+"../../../Engine/Content/VREditor/TransformGizmo/PlaneTranslationHandle.uasset" 317
+"../../../Engine/Content/VREditor/TransformGizmo/Main.uasset" 318
+"../../../Engine/Content/VREditor/TransformGizmo/Xray.uasset" 319
+"../../../Engine/Content/VREditor/TransformGizmo/SM_Dialog_Close.uasset" 320
+"../../../Engine/Content/VREditor/TransformGizmo/SM_Dialog_Move.uasset" 321
+"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Key.uasset" 322
+"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Node.uasset" 323
+"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial_Inst.uasset" 324
+"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial_Inst.uasset" 325
+"../../../Engine/Content/VREditor/Devices/Vive/UE4_Logo.uasset" 326
+"../../../Engine/Content/VREditor/UI/M_ContentWindow.uasset" 327
+"../../../Engine/Content/VREditor/UI/SM_ContentWindow_01.uasset" 328
+"../../../Engine/Content/VREditor/UI/KeyDiskMaterial.uasset" 329
+"../../../Engine/Content/VREditor/UI/DiscMaterial.uasset" 330
+"../../../Engine/Content/VREditor/UI/SM_Radial_Disk.uasset" 331
+"../../../Engine/Content/VREditor/UI/ArrowMaterial.uasset" 332
+"../../../Engine/Content/VREditor/UI/SM_Radial_Pointer.uasset" 333
+"../../../Engine/Content/VREditor/WorldMovementGrid/SimpleGrid.uasset" 334
+"../../../Engine/Content/VREditor/WorldMovementGrid/GridMaterial.uasset" 335
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.uasset" 336
+"../../../Engine/Content/VREditor/WorldMovementGrid/GridPostProcess.uasset" 337
+"../../../Engine/Content/EditorLandscapeResources/FlattenHeightMat.uasset" 338
+"../../../Engine/Content/VREditor/WorldMovementGrid/PlaneMesh.uasset" 339
+"../../Plugins/2D/Paper2D/Content/PlaceholderTextures/DummySpriteTexture.uasset" 340
+"../../Plugins/2D/Paper2D/Content/DummySprite.uasset" 341
+"../../Plugins/2D/Paper2D/Content/DefaultPaperTerrainMaterial.uasset" 342
+"../../Plugins/2D/Paper2D/Content/DefaultSpriteMaterial.uasset" 343
+"../../Plugins/2D/Paper2D/Content/MaskedUnlitSpriteMaterial.uasset" 344
+"../../Plugins/2D/Paper2D/Content/OpaqueUnlitSpriteMaterial.uasset" 345
+"../../Plugins/Media/MediaCompositing/Content/DefaultMediaPlaneTexture.uasset" 346
+"../../Plugins/Media/MediaCompositing/Content/DefaultMediaPlaneMaterial.uasset" 347
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.uasset" 348
+"../../Plugins/Runtime/AppleARKit/Content/ARKitCameraMaterial.uasset" 349
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_AO.uasset" 350
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_Color.uasset" 351
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_Normal.uasset" 352
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Materials/GearVRControllerMaterial.uasset" 353
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Meshes/GearVrController.uasset" 354
+"F:/seng4211/SENG4800/Content/Blueprints/ConveyorVolume.uasset" 355
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Cube.uasset" 356
+"F:/seng4211/SENG4800/Content/Blueprints/PositionMarker.uasset" 357
+"../../../Engine/Content/EngineSky/C_Sky_Cloud_Color.uasset" 358
+"../../../Engine/Content/EngineSky/C_Sky_Horizon_Color.uasset" 359
+"../../../Engine/Content/EngineSky/C_Sky_Zenith_Color.uasset" 360
+"../../../Engine/Content/EngineSky/T_Sky_Blue.uasset" 361
+"../../../Engine/Content/EngineSky/T_Sky_Clouds_M.uasset" 362
+"../../../Engine/Content/EngineSky/T_Sky_Stars.uasset" 363
+"../../../Engine/Content/EngineSky/M_Sky_Panning_Clouds2.uasset" 364
+"../../../Engine/Content/EngineSky/SM_SkySphere.uasset" 365
+"../../../Engine/Content/EngineSky/BP_Sky_Sphere.uasset" 366
+"F:/seng4211/SENG4800/Content/Geometry/CoalHopper/Coal.uasset" 367
+"F:/seng4211/SENG4800/Content/Geometry/pilelong.uasset" 368
+"F:/seng4211/SENG4800/Content/Blueprints/BP_CoalStack.uasset" 369
+"F:/seng4211/SENG4800/Content/Blueprints/BP_Reclaimer.uasset" 370
+"F:/seng4211/SENG4800/Content/Geometry/BulkCarrier/BuilCarrier_white.uasset" 371
+"F:/seng4211/SENG4800/Content/Geometry/BulkCarrier/BulkCarrier_deck.uasset" 372
+"F:/seng4211/SENG4800/Content/Geometry/BulkCarrier/BulkCarrier_hull.uasset" 373
+"F:/seng4211/SENG4800/Content/Geometry/BulkCarrier/BulkCarrier_smokeStack.uasset" 374
+"F:/seng4211/SENG4800/Content/Geometry/BulkCarrier/BulkCarrier.uasset" 375
+"F:/seng4211/SENG4800/Content/Blueprints/BP_Ship.uasset" 376
+"F:/seng4211/SENG4800/Content/Geometry/Loader/Loader_black.uasset" 377
+"F:/seng4211/SENG4800/Content/Geometry/Loader/Loader_yellow.uasset" 378
+"F:/seng4211/SENG4800/Content/Geometry/Loader/loader.uasset" 379
+"F:/seng4211/SENG4800/Content/Blueprints/BP_ShipLoader.uasset" 380
+"F:/seng4211/SENG4800/Content/Materials/YellowMaterial.uasset" 381
+"F:/seng4211/SENG4800/Content/Geometry/Stacker.uasset" 382
+"F:/seng4211/SENG4800/Content/Blueprints/BP_Stacker.uasset" 383
+"F:/seng4211/SENG4800/Content/Blueprints/BP_StackerReclaimer.uasset" 384
+"../../../Engine/Content/BasicShapes/Sphere.uasset" 385
+"F:/seng4211/SENG4800/Content/Blueprints/ConveyorCoal.uasset" 386
+"F:/seng4211/SENG4800/Content/Blueprints/CoalSpawner.uasset" 387
+"F:/seng4211/SENG4800/Content/Materials/GreenCladdingMaterial.uasset" 388
+"../../../Engine/Content/BasicShapes/Cube.uasset" 389
+"F:/seng4211/SENG4800/Content/Cube8_Blueprint.uasset" 390
+"F:/seng4211/SENG4800/Content/source/S-R5_Blueprint.uasset" 391
+"F:/seng4211/SENG4800/Content/Maps/Kooragang-basic_BuiltData.uasset" 392
+"F:/seng4211/SENG4800/Content/Materials/newcastleoverview.uasset" 393
+"F:/seng4211/SENG4800/Content/Materials/newcastleoverview_Mat.uasset" 394
+"F:/seng4211/SENG4800/Content/Materials/OrangeMaterial.uasset" 395
+"../../../Engine/Content/BasicShapes/Cone.uasset" 396
+"../../../Engine/Content/BasicShapes/Plane.uasset" 397
+"../../../Engine/Content/EngineMeshes/Cube.uasset" 398
+"F:/seng4211/SENG4800/Content/Materials/TreeMaterial.uasset" 399
+"F:/seng4211/SENG4800/Content/BasicTree.uasset" 400
+"F:/seng4211/SENG4800/Content/Materials/StructureMaterial.uasset" 401
+"F:/seng4211/SENG4800/Content/Geometry/coalbridge.uasset" 402
+"F:/seng4211/SENG4800/Content/Geometry/conveyerbelt.uasset" 403
+"F:/seng4211/SENG4800/Content/Maps/Kooragang-basic.umap" 404
+"F:/seng4211/SENG4800/Content/Blueprints/MenuController.uasset" 405
+"F:/seng4211/SENG4800/Content/Flying/Menu/MainMenuWidget.uasset" 406
+"F:/seng4211/SENG4800/Content/Flying/Menu/MainMenuHUD.uasset" 407
+"F:/seng4211/SENG4800/Content/FlyingBP/Blueprints/MainMenuGM.uasset" 408
+"F:/seng4211/SENG4800/Content/Maps/MainMenu.umap" 409
+"F:/seng4211/SENG4800/Content/Flying/Menu/OptionsScreenHUD.uasset" 410
+"F:/seng4211/SENG4800/Content/FlyingBP/Blueprints/OptionsScreenGM.uasset" 411
+"F:/seng4211/SENG4800/Content/Maps/OptionsScreen.umap" 412
+"F:/seng4211/SENG4800/Content/Maps/terrain_BuiltData.uasset" 413
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Ground_Grass_D.uasset" 414
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Ground_Grass_N.uasset" 415
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_MacroVariation.uasset" 416
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Perlin_Noise_M.uasset" 417
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Ground_Grass.uasset" 418
+"F:/seng4211/SENG4800/Content/Flying/Meshes/GrayMaterial.uasset" 419
+"../../../Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uasset" 420
+"F:/seng4211/SENG4800/Content/Geometry/Meshes/1M_Cube_Chamfer.uasset" 421
+"F:/seng4211/SENG4800/Content/Geometry/Meshes/TemplateFloor.uasset" 422
+"F:/seng4211/SENG4800/Content/Maps/terrain.umap" 423
+"F:/seng4211/SENG4800/Content/Models/Track/pillar.uasset" 424
+"F:/seng4211/SENG4800/Content/Models/Track/rail.uasset" 425
+"F:/seng4211/SENG4800/Content/Blueprints/BP_Rails.uasset" 426
+"F:/seng4211/SENG4800/Content/Geometry/CoalHopper/CoalHopperFull.uasset" 427
+"F:/seng4211/SENG4800/Content/Geometry/Locomotive/BlackMetal.uasset" 428
+"F:/seng4211/SENG4800/Content/Geometry/Locomotive/Glass.uasset" 429
+"F:/seng4211/SENG4800/Content/Geometry/Locomotive/Locomotive_Blue.uasset" 430
+"F:/seng4211/SENG4800/Content/Geometry/Locomotive/Material.uasset" 431
+"F:/seng4211/SENG4800/Content/Geometry/Locomotive/Locomotive.uasset" 432
+"F:/seng4211/SENG4800/Content/Models/Train/bogie.uasset" 433
+"F:/seng4211/SENG4800/Content/Blueprints/BP_Train.uasset" 434
+"F:/seng4211/SENG4800/Content/Maps/train-tracks_BuiltData.uasset" 435
+"F:/seng4211/SENG4800/Content/Maps/train-tracks.umap" 436
+"F:/seng4211/SENG4800/Content/Maps/Train_Tut_BuiltData.uasset" 437
+"../../../Engine/Content/MapTemplates/SM_Template_Map_Floor.uasset" 438
+"F:/seng4211/SENG4800/Content/Models/Train/wagon_SPW_Vehicle_Train_Freight_Train_Trailer_02.uasset" 439
+"F:/seng4211/SENG4800/Content/Maps/Train_Tut.umap" 440
+"F:/seng4211/SENG4800/Content/FlyingCPP/Maps/FlyingExampleMap_BuiltData.uasset" 441
+"F:/seng4211/SENG4800/Content/FlyingCPP/Maps/FlyingExampleMap.umap" 442
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Assets/FogBrightnessLUT.uasset" 443
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Assets/SunlightColorLUT.uasset" 444
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Assets/M_LightStage_Arrows.uasset" 445
+"../../../Engine/Content/MapTemplates/Sky/DaylightAmbientCubemap.uasset" 446
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Master.uasset" 447
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Black.uasset" 448
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_HDRI.uasset" 449
+"../../../Engine/Content/EditorMaterials/Thumbnails/SkySphereMaterial.uasset" 450
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Assets/Skybox.uasset" 451
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Assets/SM_Arrows.uasset" 452
+"F:/seng4211/SENG4800/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" 453
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/BP_LightStudio.uasset" 454
+"F:/seng4211/SENG4800/Content/StarterContent/Maps/Advanced_Lighting_BuiltData.uasset" 455
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_AssetPlatform.uasset" 456
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ChromeBall.uasset" 457
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ClearCoat.uasset" 458
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ClearCoatBlack.uasset" 459
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/Color_checker.uasset" 460
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ColorGrid.uasset" 461
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_GreyBall.uasset" 462
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/SM_ColorCalibrator.uasset" 463
+"F:/seng4211/SENG4800/Content/StarterContent/Architecture/SM_AssetPlatform.uasset" 464
+"F:/seng4211/SENG4800/Content/StarterContent/Maps/Advanced_Lighting.umap" 465
+"F:/seng4211/SENG4800/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset" 466
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Metal_Brushed_Nickel.uasset" 467
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Metal_Aluminum_D.uasset" 468
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Metal_Gold_N.uasset" 469
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Metal_Burnished_Steel.uasset" 470
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Metal_Copper_D.uasset" 471
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Metal_Copper.uasset" 472
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Statue_M.uasset" 473
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Statue_N.uasset" 474
+"F:/seng4211/SENG4800/Content/StarterContent/Props/Materials/M_StatueGlass.uasset" 475
+"F:/seng4211/SENG4800/Content/StarterContent/Architecture/Floor_400x400.uasset" 476
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Starter_Background_Cue.uasset" 477
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_Chair.uasset" 478
+"F:/seng4211/SENG4800/Content/StarterContent/Props/Materials/M_Statue.uasset" 479
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_Statue.uasset" 480
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_TableRound_M.uasset" 481
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_TableRound_N.uasset" 482
+"F:/seng4211/SENG4800/Content/StarterContent/Props/Materials/M_TableRound.uasset" 483
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_TableRound.uasset" 484
+"F:/seng4211/SENG4800/Content/StarterContent/Maps/Minimal_Default.umap" 485
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Fire01_Cue.uasset" 486
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Fire_SubUV.uasset" 487
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Fire_Tiled_D.uasset" 488
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/Materials/M_Fire_SubUV.uasset" 489
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Water_N.uasset" 490
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/Materials/M_Heat_Distortion.uasset" 491
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/Materials/M_Radial_Gradient.uasset" 492
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/P_Fire.uasset" 493
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset" 494
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Smoke01_Cue.uasset" 495
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/P_Smoke.uasset" 496
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Blueprint_Effect_Smoke.uasset" 497
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Fire_Sparks01_Cue.uasset" 498
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Spark_Core.uasset" 499
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/Materials/M_Spark.uasset" 500
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/P_Sparks.uasset" 501
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset" 502
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Steam01_Cue.uasset" 503
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/P_Steam_Lit.uasset" 504
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Blueprint_Effect_Steam.uasset" 505
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Lamp_M.uasset" 506
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Lamp_N.uasset" 507
+"F:/seng4211/SENG4800/Content/StarterContent/Props/Materials/M_Lamp.uasset" 508
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_Lamp_Ceiling.uasset" 509
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" 510
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_Lamp_Wall.uasset" 511
+"F:/seng4211/SENG4800/Content/StarterContent/Blueprints/Blueprint_WallSconce.uasset" 512
+"F:/seng4211/SENG4800/Content/StarterContent/Maps/StarterMap_BuiltData.uasset" 513
+"../../../Engine/Content/Functions/Engine_MaterialFunctions03/Procedurals/ComputeFilterWidth.uasset" 514
+"../../../Engine/Content/EngineMaterials/AntiAliasedTextMaterialTranslucent.uasset" 515
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_Beveled_D.uasset" 516
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_Beveled_M.uasset" 517
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_Beveled_N.uasset" 518
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Brick_Clay_Beveled.uasset" 519
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_New_D.uasset" 520
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_New_M.uasset" 521
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_New_N.uasset" 522
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Brick_Clay_New.uasset" 523
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_Old_D.uasset" 524
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Brick_Clay_Old_N.uasset" 525
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Brick_Clay_Old.uasset" 526
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Brick_Cut_Stone_D.uasset" 527
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Brick_Cut_Stone_N.uasset" 528
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Brick_Cut_Stone.uasset" 529
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Brick_Hewn_Stone_D.uasset" 530
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Brick_Hewn_Stone_M.uasset" 531
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Brick_Hewn_Stone_N.uasset" 532
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Brick_Hewn_Stone.uasset" 533
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Ceramic_Tile_M.uasset" 534
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Ceramic_Tile_N.uasset" 535
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Rock_Marble_Polished_D.uasset" 536
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Ceramic_Tile_Checker.uasset" 537
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Pebble_D.uasset" 538
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Pebble_M.uasset" 539
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Pebble_N.uasset" 540
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_CobbleStone_Pebble.uasset" 541
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Rough_D.uasset" 542
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Rough_N.uasset" 543
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Gradinet_01.uasset" 544
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Rock_Smooth_Granite_D.uasset" 545
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_CobbleStone_Rough.uasset" 546
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Smooth_D.uasset" 547
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Smooth_M.uasset" 548
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_CobbleStone_Smooth_N.uasset" 549
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_CobbleStone_Smooth.uasset" 550
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Concrete_Grime_D.uasset" 551
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Metal_Rust_N.uasset" 552
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Concrete_Grime.uasset" 553
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Concrete_Panels_D.uasset" 554
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Concrete_Panels_N.uasset" 555
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Concrete_Panels.uasset" 556
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Concrete_Poured_D.uasset" 557
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Concrete_Poured_N.uasset" 558
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Concrete_Poured.uasset" 559
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Concrete_Tiles_D.uasset" 560
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Concrete_Tiles_M.uasset" 561
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Concrete_Tiles_N.uasset" 562
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Concrete_Tiles_Variation_M.uasset" 563
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Concrete_Tiles.uasset" 564
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Ground_Gravel_D.uasset" 565
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Ground_Gravel_N.uasset" 566
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Ground_Gravel.uasset" 567
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_ground_Moss_D.uasset" 568
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Ground_Moss_N.uasset" 569
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Ground_Moss.uasset" 570
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Metal_Chrome.uasset" 571
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Metal_Gold_D.uasset" 572
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Metal_Gold.uasset" 573
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Metal_Rust_D.uasset" 574
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Metal_Rust.uasset" 575
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Metal_Steel_D.uasset" 576
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Metal_Steel_N.uasset" 577
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Metal_Steel.uasset" 578
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Rock_Basalt_N.uasset" 579
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Rock_Basalt.uasset" 580
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Rock_Marble_Polished.uasset" 581
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Rock_Sandstone_D.uasset" 582
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Rock_Sandstone_N.uasset" 583
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Rock_Sandstone.uasset" 584
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Rock_Slate_D.uasset" 585
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Rock_Slate_N.uasset" 586
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Rock_Slate.uasset" 587
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Checker_Noise_M.uasset" 588
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Single_Tile_N.uasset" 589
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Tech_Dot_M.uasset" 590
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Tech_Dot_N.uasset" 591
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Tech_Checker_Dot.uasset" 592
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Tech_Hex_Tile_M.uasset" 593
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Tech_Hex_Tile_N.uasset" 594
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Tech_Hex_Tile.uasset" 595
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.uasset" 596
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Tech_Panel_M.uasset" 597
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Tech_Panel_N.uasset" 598
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Tech_Panel.uasset" 599
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Water_Lake.uasset" 600
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Water_M.uasset" 601
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Water_Ocean.uasset" 602
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Wood_Floor_Walnut_D.uasset" 603
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Wood_Floor_Walnut_M.uasset" 604
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Wood_Floor_Walnut_N.uasset" 605
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Polished.uasset" 606
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/AlphaOffset.uasset" 607
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Worn.uasset" 608
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Wood_Oak_D.uasset" 609
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Wood_Oak_N.uasset" 610
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Wood_Oak.uasset" 611
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Wood_Pine_D.uasset" 612
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Wood_Pine_N.uasset" 613
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Wood_Pine.uasset" 614
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset" 615
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset" 616
+"F:/seng4211/SENG4800/Content/StarterContent/Materials/M_Wood_Walnut.uasset" 617
+"F:/seng4211/SENG4800/Content/StarterContent/Architecture/Wall_400x200.uasset" 618
+"F:/seng4211/SENG4800/Content/StarterContent/Architecture/Wall_Door_400x300.uasset" 619
+"F:/seng4211/SENG4800/Content/StarterContent/Architecture/Wall_Window_400x300.uasset" 620
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Collapse_Cue.uasset" 621
+"F:/seng4211/SENG4800/Content/StarterContent/Audio/Starter_Music_Cue.uasset" 622
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Dust_Particle_D.uasset" 623
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/Materials/M_Dust_Particle.uasset" 624
+"F:/seng4211/SENG4800/Content/StarterContent/Particles/P_Ambient_Dust.uasset" 625
+"F:/seng4211/SENG4800/Content/StarterContent/Props/MaterialSphere.uasset" 626
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Frame_M.uasset" 627
+"F:/seng4211/SENG4800/Content/StarterContent/Textures/T_Frame_N.uasset" 628
+"F:/seng4211/SENG4800/Content/StarterContent/Props/Materials/M_Frame.uasset" 629
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_CornerFrame.uasset" 630
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_DoorFrame.uasset" 631
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_GlassWindow.uasset" 632
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_PillarFrame.uasset" 633
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_PillarFrame300.uasset" 634
+"F:/seng4211/SENG4800/Content/StarterContent/Props/SM_WindowFrame.uasset" 635
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_QuadPyramid.uasset" 636
+"F:/seng4211/SENG4800/Content/StarterContent/Shapes/Shape_Sphere.uasset" 637
+"F:/seng4211/SENG4800/Content/StarterContent/Maps/StarterMap.umap" 638
+"../../../Engine/Content/Maps/Entry.umap" 639

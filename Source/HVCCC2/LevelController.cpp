@@ -70,7 +70,8 @@ void ALevelController::BeginPlay()
 	spawnACoalStack(padK1_position->GetActorLocation(), padK1_position->GetActorRotation(), coal_stack_blueprint);
 	spawnACoalStack(padK2_position->GetActorLocation(), padK2_position->GetActorRotation(), coal_stack_blueprint);
 
-
+	UE_LOG(LogTemp, Warning, TEXT("stackCount: %d"), coalStacks.size());
+	UE_LOG(LogTemp, Warning, TEXT("stack1: %d, stack2: %d, stack3: %d"), coalStacks.at(0), coalStacks.at(1), coalStacks.at(2));
 	coalStacks.at(0)->setQuantity(0.8);
 	coalStacks.at(1)->setQuantity(0.2);
 	coalStacks.at(2)->setQuantity(0.5);
@@ -121,21 +122,13 @@ void ALevelController::Tick(float DeltaTime)
 
 	// DATA STUFF
 
-	/*
 	moveTime(DeltaTime * speed);
 	auto firstObjStates = std::get<std::map<std::string, std::vector<StackerState>>>(states)["3.58"];
 
 	int indexA = theWatch.first;
 	int indexB = theWatch.second;
-	*/
+
 	
-
-
-	/*while (firstObjStates[indexA].type == firstObjStates[indexB].type && firstObjStates[indexA].position == firstObjStates[indexB].position && theWatch.second < firstObjStates.size() - 1) {
-	++indexB;
-	}*/
-
-	/*
 	double timeA = firstObjStates[indexA].time;
 	double timeB = firstObjStates[indexB].time;
 
@@ -158,18 +151,12 @@ void ALevelController::Tick(float DeltaTime)
 
 	UE_LOG(LogTemp, Warning, TEXT("Time: %f; state a: %d, state b: %d, typea: %d, typeb: %d"), float(worldTime), indexA, indexB, (int)firstObjStates[indexA].type, (int)firstObjStates[indexB].type);
 	UE_LOG(LogTemp, Warning, TEXT("scale: %f, timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position delta: %f"), float(scale), float(timeA), float(timeB), float(positionA), float(positionB), float(positionInterpolated), float(positionDelta));
-
-	//daCube->applyState(positionDelta);
-	*/
 	
-
-
-
-	/* TEST INPUT
-	stackerReclaimers.at(0)->setPosition(0.15);
-	stackerReclaimers.at(1)->setPosition(0.8);
-	stackerReclaimers.at(0)->setRotation(120);
-
+	// TEST INPUT
+	for (auto each : stackerReclaimers) {
+		each->setPosition(positionDelta);
+	}
+	/*
 	shipLoaders.at(0)->setPosition(0.8);
 	//coalStacks[0]->setQuantity(0.4);
 	if (testTime == 600) {
