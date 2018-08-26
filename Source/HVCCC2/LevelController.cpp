@@ -12,17 +12,11 @@
 
 #include "scheduling/data/env_config.h"
 #include "Runtime/Engine/Classes/Engine/World.h"
-
+#include "Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h"
 #include <algorithm>
 
 
 using namespace std;
-
-deque<ACoalStack*> coalStacks;
-deque<AStackerReclaimer*> stackerReclaimers;
-deque<AShipLoader*> shipLoaders;
-deque<AShip*> ships;
-deque<AConveyorBelt*> conveyorBelts;
 
 int mock_state;
 float mock_level;
@@ -37,6 +31,10 @@ ALevelController::ALevelController()
 	worldTime = 0;
 	speed = 1;
 
+	/*static ConstructorHelpers::FObjectFinder<UBlueprint> ItemBlueprint(TEXT("Blueprint'/Game/Blueprints/BP_StackerReclaimer.BP_StackerReclaimer'"));
+	if (ItemBlueprint.Object) {
+		largeSR_blueprint = (UClass*)ItemBlueprint.Object->GeneratedClass;
+	}*/
 }
 
 // Called when the game starts or when spawned
@@ -45,36 +43,43 @@ void ALevelController::BeginPlay()
 	Super::BeginPlay();
 
 	// Level setup procedure
+	
+	//codification of stacker positions
+	stackerReclaimers.Add(spawnAReclaimer(FVector(-388140.0, -185080.0, -650.0), FVector(-288140.0, -117870.0, -650.0), largeSR_blueprint));
+	stackerReclaimers.Add(spawnAReclaimer(FVector(-384350.0, -198780.0, -650.0), FVector(-281070.0, -129330.0, -650.0), largeSR_blueprint));
+	stackerReclaimers.Add(spawnAReclaimer(FVector(-380530.0, -212410.0, -650.0), FVector(-275020.0, -141400.0, -650.0), largeSR_blueprint));
+	stackerReclaimers.Add(spawnAReclaimer(FVector(-375470.0, -225210.0, -650.0), FVector(-268670.0, -153550.0, -650.0), largeSR_blueprint));
 
-	testTime = 0;
-	mock_state = 1;
-	mock_level = 0.2;
+
+	//testTime = 0;
+	//mock_state = 1;
+	//mock_level = 0.2;
 	// Spawn in reclaimers
-	stackerReclaimers.push_back(spawnAReclaimer(SR0_rail_start->GetActorLocation(), SR0_rail_end->GetActorLocation(), largeSR_blueprint));
-	stackerReclaimers.push_back(spawnAReclaimer(SR1_rail_start->GetActorLocation(), SR1_rail_end->GetActorLocation(), largeSR_blueprint));
-	stackerReclaimers.push_back(spawnAReclaimer(SR2_rail_start->GetActorLocation(), SR2_rail_end->GetActorLocation(), largeSR_blueprint));
-	stackerReclaimers.push_back(spawnAReclaimer(SR3_rail_start->GetActorLocation(), SR3_rail_end->GetActorLocation(), largeSR_blueprint));
+	/*stackerReclaimers.Add(spawnAReclaimer(SR0_rail_start->GetActorLocation(), SR0_rail_end->GetActorLocation(), largeSR_blueprint));
+	stackerReclaimers.Add(spawnAReclaimer(SR1_rail_start->GetActorLocation(), SR1_rail_end->GetActorLocation(), largeSR_blueprint));
+	stackerReclaimers.Add(spawnAReclaimer(SR2_rail_start->GetActorLocation(), SR2_rail_end->GetActorLocation(), largeSR_blueprint));
+	stackerReclaimers.Add(spawnAReclaimer(SR3_rail_start->GetActorLocation(), SR3_rail_end->GetActorLocation(), largeSR_blueprint));*/
 	
-	//Spawn in ship loaders
-	shipLoaders.push_back(spawnAShipLoader(loader0_rail_start->GetActorLocation(), loader0_rail_end->GetActorLocation(), ship_loader_blueprint));
-	shipLoaders.push_back(spawnAShipLoader(loader1_rail_start->GetActorLocation(), loader1_rail_end->GetActorLocation(), ship_loader_blueprint));
-	shipLoaders.push_back(spawnAShipLoader(loader2_rail_start->GetActorLocation(), loader2_rail_end->GetActorLocation(), ship_loader_blueprint));
-	shipLoaders.push_back(spawnAShipLoader(loader3_rail_start->GetActorLocation(), loader3_rail_end->GetActorLocation(), ship_loader_blueprint));
+	////Spawn in ship loaders
+	//shipLoaders.Add(spawnAShipLoader(loader0_rail_start->GetActorLocation(), loader0_rail_end->GetActorLocation(), ship_loader_blueprint));
+	//shipLoaders.Add(spawnAShipLoader(loader1_rail_start->GetActorLocation(), loader1_rail_end->GetActorLocation(), ship_loader_blueprint));
+	//shipLoaders.Add(spawnAShipLoader(loader2_rail_start->GetActorLocation(), loader2_rail_end->GetActorLocation(), ship_loader_blueprint));
+	//shipLoaders.Add(spawnAShipLoader(loader3_rail_start->GetActorLocation(), loader3_rail_end->GetActorLocation(), ship_loader_blueprint));
 
-	
-	ships.push_back(spawnAShip(berth0_position->GetActorLocation(), berth0_position->GetActorRotation(), ship_blueprint));
-	ships.push_back(spawnAShip(berth2_position->GetActorLocation(), berth2_position->GetActorRotation(), ship_blueprint));
+	//
+	//ships.Add(spawnAShip(berth0_position->GetActorLocation(), berth0_position->GetActorRotation(), ship_blueprint));
+	//ships.Add(spawnAShip(berth2_position->GetActorLocation(), berth2_position->GetActorRotation(), ship_blueprint));
 
-	// Spawn coal stacks
-	spawnACoalStack(padK0_position->GetActorLocation(), padK0_position->GetActorRotation(), coal_stack_blueprint);
-	spawnACoalStack(padK1_position->GetActorLocation(), padK1_position->GetActorRotation(), coal_stack_blueprint);
-	spawnACoalStack(padK2_position->GetActorLocation(), padK2_position->GetActorRotation(), coal_stack_blueprint);
+	//// Spawn coal stacks
+	//spawnACoalStack(padK0_position->GetActorLocation(), padK0_position->GetActorRotation(), coal_stack_blueprint);
+	//spawnACoalStack(padK1_position->GetActorLocation(), padK1_position->GetActorRotation(), coal_stack_blueprint);
+	//spawnACoalStack(padK2_position->GetActorLocation(), padK2_position->GetActorRotation(), coal_stack_blueprint);
 
-	UE_LOG(LogTemp, Warning, TEXT("stackCount: %d"), coalStacks.size());
-	UE_LOG(LogTemp, Warning, TEXT("stack1: %d, stack2: %d, stack3: %d"), coalStacks.at(0), coalStacks.at(1), coalStacks.at(2));
-	coalStacks.at(0)->setQuantity(0.8);
-	coalStacks.at(1)->setQuantity(0.2);
-	coalStacks.at(2)->setQuantity(0.5);
+	//UE_LOG(LogTemp, Warning, TEXT("stackCount: %d"), coalStacks.size());
+	//UE_LOG(LogTemp, Warning, TEXT("stack1: %d, stack2: %d, stack3: %d"), coalStacks.at(0), coalStacks.at(1), coalStacks.at(2));
+	//coalStacks.at(0)->setQuantity(0.8);
+	//coalStacks.at(1)->setQuantity(0.2);
+	//coalStacks.at(2)->setQuantity(0.5);
 
 
 
@@ -258,7 +263,7 @@ void ALevelController::spawnACoalStack(FVector position, FRotator rotator, TSubc
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		ACoalStack *actor = world->SpawnActor<ACoalStack>(blueprint, position, rotator, spawnParams);
-		coalStacks.push_back(actor); // Add the new actor to the array
+		coalStacks.Add(actor); // Add the new actor to the array
 	}
 }
 

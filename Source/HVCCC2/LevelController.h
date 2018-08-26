@@ -23,6 +23,7 @@ class HVCCC2_API ALevelController : public AActor
 	double worldTime;
 	double speed;
 
+
 	//AGlowCube *daCube;
 
 	//AGlowCube * spawnAGlowCube(FVector start, FVector end);
@@ -111,6 +112,18 @@ public:
 		AActor *padK1_position;
 	UPROPERTY(EditAnywhere)
 		AActor *padK2_position;
+	
+	//actors
+	UPROPERTY(EditAnywhere)
+	TArray<ACoalStack*> coalStacks;
+	UPROPERTY(EditAnywhere)
+	TArray<AStackerReclaimer*> stackerReclaimers;
+	UPROPERTY(EditAnywhere)
+	TArray<AShipLoader*> shipLoaders;
+	UPROPERTY(EditAnywhere)
+	TArray<AShip*> ships;
+	UPROPERTY(EditAnywhere)
+	TArray<AConveyorBelt*> conveyorBelts;
 private:
 
 	AStackerReclaimer * spawnAReclaimer(FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint);
