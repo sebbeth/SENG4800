@@ -18,7 +18,8 @@ class HVCCC2_API ALevelController : public AActor
 	StateMapTuple states;
 	double xMin, xMax;
 
-	std::pair<std::size_t, std::size_t> theWatch;
+	//sliding windows peeking into the state-sequences of actors we are currently animating
+	std::vector<std::pair<std::size_t, std::size_t>> windows;
 
 	double worldTime;
 	double speed;

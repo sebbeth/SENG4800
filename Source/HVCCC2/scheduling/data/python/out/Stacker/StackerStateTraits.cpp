@@ -7,7 +7,7 @@ StackerState StateTraits<StackerState>::initializeFromEvent(const StackerEvent& 
 
 StackerState StateTraits<StackerState>::generateNextState(const StackerState& current, const StackerEvent& event) {
     /* STUB: FILL IN WITH LOGIC FOR UPDATING ALL THE ATTRIBUTES */
-    StackerState result = initializeFromEvent(event);//remove this line if/when you do
+    StackerState result = current;//remove this line if/when you do
     result.type = StackerState::determineNextType(current.type, event.type);
     if(event.hasAmount()) {
         result.amount = event.amount;

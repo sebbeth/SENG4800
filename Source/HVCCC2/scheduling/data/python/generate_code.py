@@ -277,7 +277,7 @@ public:
 
 {1}State StateTraits<{1}State>::generateNextState(const {1}State& current, const {1}Event& event) {{
 {0}/* STUB: FILL IN WITH LOGIC FOR UPDATING ALL THE ATTRIBUTES */
-{0}{1}State result = initializeFromEvent(event);//remove this line if/when you do
+{0}{1}State result = current;
 {0}result.type = {1}State::determineNextType(current.type, event.type);'''.format(tab_spaces, entity.name)
 
     for each_name in filter(lambda x: x != 'type', sorted(entity.attributes)):
