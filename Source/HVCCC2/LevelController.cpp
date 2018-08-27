@@ -13,8 +13,10 @@
 #include "scheduling/data/env_config.h"
 #include "Runtime/Engine/Classes/Engine/World.h"
 #include "Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h"
+#include "Runtime/Core/Public/Misc/Paths.h"
 #include <algorithm>
-
+#include <cstdlib>
+#include <fstream>
 
 using namespace std;
 
@@ -35,6 +37,14 @@ ALevelController::ALevelController()
 	if (ItemBlueprint.Object) {
 		largeSR_blueprint = (UClass*)ItemBlueprint.Object->GeneratedClass;
 	}*/
+
+	std::string AbsoluteFilePath = std::string(TCHAR_TO_UTF8(*FPaths::GameDir()));
+	std::string RelativePath = std::string(TCHAR_TO_UTF8(*FPaths::GameContentDir()));
+
+	std::fstream fileStrm("C:/Users/SENG/Documents/file.txt", std::fstream::out);
+	fileStrm << AbsoluteFilePath << std::endl << RelativePath << std::endl;
+	fileStrm.flush();
+	fileStrm.close();
 }
 
 // Called when the game starts or when spawned
