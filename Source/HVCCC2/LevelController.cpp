@@ -73,6 +73,8 @@ void ALevelController::BeginPlay()
 	if (windows.size() >= 4) {
 		stackerReclaimers.Add(spawnAReclaimer(SR3_rail_start->GetActorLocation(), SR3_rail_end->GetActorLocation(), largeSR_blueprint));
 	}
+	spawnAConveyorBelt(conv1_position->GetActorLocation(), conv1_position->GetActorRotation(), conveyor_belt_blueprint);
+	//conveyorBelts[0]->setMaterial();
 
 	// Level setup procedure
 	
@@ -241,16 +243,14 @@ void ALevelController::spawnACoalStack(FVector position, FRotator rotator, TSubc
 }
 
 
-AConveyorBelt* ALevelController::spawnAConveyorBelt(FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint) {
-
+void ALevelController::spawnAConveyorBelt(FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint) {
 	UWorld* world = GetWorld();
 	if (world) {
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		AConveyorBelt *actor = world->SpawnActor<AConveyorBelt>(blueprint, position, rotator, spawnParams);
-		return actor;
+		conveyorBelts.Add(actor);
 	}
-	return NULL;
 
 
 }

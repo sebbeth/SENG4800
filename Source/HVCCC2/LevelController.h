@@ -125,12 +125,20 @@ public:
 	TArray<AShip*> ships;
 	UPROPERTY(EditAnywhere)
 	TArray<AConveyorBelt*> conveyorBelts;
+
+	//Conveyor Belt position markers
+	UPROPERTY(EditAnywhere)
+		AActor *conv1_position;
+	UPROPERTY(EditAnywhere)
+		AActor *conv2_position;
+
+
 private:
 
 	AStackerReclaimer * spawnAReclaimer(FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint);
 	AShipLoader * spawnAShipLoader(FVector railStart, FVector railEnd, TSubclassOf<class AShipLoader> blueprint);
 	AShip * spawnAShip(FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint);
-	AConveyorBelt* spawnAConveyorBelt(FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint);
+	void spawnAConveyorBelt(FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint);
 	void spawnACoalStack(FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint);
 	
 

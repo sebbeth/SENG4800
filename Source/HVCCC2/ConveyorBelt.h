@@ -26,7 +26,7 @@ public:
 	
 	void setMaterial();
 
-	UFUNCTION(BlueprintImplementableEvent)
+	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
 	void ChangeMaterial();
 	
 	
