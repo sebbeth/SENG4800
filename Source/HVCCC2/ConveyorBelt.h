@@ -29,5 +29,5 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 	void ChangeMaterial();
 	
-	
+	FString id;
 };

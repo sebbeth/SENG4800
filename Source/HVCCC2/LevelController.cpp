@@ -210,6 +210,7 @@ AStackerReclaimer* ALevelController::spawnAReclaimer(FVector railStart, FVector 
 		AStackerReclaimer *actor = world->SpawnActor<AStackerReclaimer>(blueprint, railStart, FRotator(0.0f, 0.0f, 0.0f), spawnParams);
 		actor->trackNodeA = railStart;
 		actor->trackNodeB = railEnd;
+		actor->id = "SR0";
 		return actor;
 	}
 	return NULL;
