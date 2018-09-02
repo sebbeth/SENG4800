@@ -27,7 +27,9 @@ public:
 
 	void setPosition(float position);
 	void setRotation(float degrees);
+
 	FVector trackNodeA;
 	FVector trackNodeB;
+	FString id;
 	
 };

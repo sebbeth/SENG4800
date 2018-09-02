@@ -6,7 +6,6 @@
 #include "GameFramework/Actor.h"
 #include "scheduling/data/serialization.h"
 
-
 #include "LevelController.generated.h"
 
 

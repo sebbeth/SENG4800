@@ -23,8 +23,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-
 	void setQuantity(float quantity);
 	
-	
+	FString id;
+
 };

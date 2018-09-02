@@ -29,5 +29,5 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
 	void ChangeMaterial();
 	
-	
+	FString id;
 };
