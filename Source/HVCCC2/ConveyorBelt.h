@@ -24,10 +24,16 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	
-	void setMaterial();
+	void setMaterial(int choice);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
-	void ChangeMaterial();
+	void ResetMaterial();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
+		void StackMaterial();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
+		void ReclaimMaterial();
 	
 	FString id;
 };

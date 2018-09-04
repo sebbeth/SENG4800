@@ -73,8 +73,18 @@ void ALevelController::BeginPlay()
 	if (windows.size() >= 4) {
 		stackerReclaimers.Add(spawnAReclaimer(SR3_rail_start->GetActorLocation(), SR3_rail_end->GetActorLocation(), largeSR_blueprint));
 	}
-	//spawnAConveyorBelt(conv1_position->GetActorLocation(), conv1_position->GetActorRotation(), conveyor_belt_blueprint);
-	//conveyorBelts[0]->setMaterial();
+
+	/*
+	spawnAConveyorBelt(conv1_position->GetActorLocation(), conv1_position->GetActorRotation(), conveyor_belt_blueprint);
+	conveyorBelts[0]->setMaterial(0);
+
+	spawnAConveyorBelt(conv2_position->GetActorLocation(), conv2_position->GetActorRotation(), conveyor_belt_blueprint);
+	conveyorBelts[1]->setMaterial(2);
+
+	//stackerReclaimers[0]->setMaterial(0);
+	//stackerReclaimers[1]->setMaterial(2);
+	*/
+
 
 	// Level setup procedure
 	

@@ -44,3 +44,22 @@ void AStackerReclaimer::setRotation(float degrees) {
 	SetActorRotation(rotator, ETeleportType::None); 
 }
 
+void AStackerReclaimer::setMaterial(int choice) {
+
+	//IF 0 -> BLUE -> Conveyor Reclaiming
+	//IF 1 -> RESET Material -> Grey
+	//IF 2 -> RED -> Conveyor Stacking
+	if (choice == 0) {
+		ReclaimMaterial();
+	}
+	else if (choice == 1) {
+		ResetMaterial();
+	}
+	else if (choice == 2) {
+		StackMaterial();
+	}
+
+
+
+}
+

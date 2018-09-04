@@ -28,9 +28,22 @@ void AConveyorBelt::Tick(float DeltaTime)
 }
 
 
-void AConveyorBelt::setMaterial() {
+void AConveyorBelt::setMaterial(int choice) {
 
-	ChangeMaterial();
+	//IF 0 -> BLUE -> Conveyor Reclaiming
+	//IF 1 -> RESET Material -> Grey
+	//IF 2 -> RED -> Conveyor Stacking
+	if (choice == 0) {
+		ReclaimMaterial();
+	}
+	else if (choice == 1) {
+		ResetMaterial();
+	}
+	else if (choice == 2) {
+		StackMaterial();
+	}
+
+
 
 }
 
