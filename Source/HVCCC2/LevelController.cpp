@@ -6,7 +6,7 @@
 #include "Ship.h"
 #include "CoalStack.h"
 #include "ConveyorBelt.h"
-#include <deque>
+#include "Train.h"
 
 #include "scheduling/data/serialization.h"
 
@@ -62,17 +62,21 @@ void ALevelController::BeginPlay()
 	}
 
 	if (windows.size() >= 1) {
-		stackerReclaimers.Add(spawnAReclaimer(SR0_rail_start->GetActorLocation(), SR0_rail_end->GetActorLocation(), largeSR_blueprint));
+		stackerReclaimers.Add(spawnAReclaimer(NCT_SR_rails_start[0]->GetActorLocation(), NCT_SR_rails_end[0]->GetActorLocation(), largeSR_blueprint));
 	}
 	if (windows.size() >= 2) {
-		stackerReclaimers.Add(spawnAReclaimer(SR1_rail_start->GetActorLocation(), SR1_rail_end->GetActorLocation(), largeSR_blueprint));
+		stackerReclaimers.Add(spawnAReclaimer(NCT_SR_rails_start[1]->GetActorLocation(), NCT_SR_rails_end[1]->GetActorLocation(), largeSR_blueprint));
 	}
 	if (windows.size() >= 3) {
-		stackerReclaimers.Add(spawnAReclaimer(SR2_rail_start->GetActorLocation(), SR2_rail_end->GetActorLocation(), largeSR_blueprint));
+		stackerReclaimers.Add(spawnAReclaimer(NCT_SR_rails_start[2]->GetActorLocation(), NCT_SR_rails_end[2]->GetActorLocation(), largeSR_blueprint));
 	}
 	if (windows.size() >= 4) {
-		stackerReclaimers.Add(spawnAReclaimer(SR3_rail_start->GetActorLocation(), SR3_rail_end->GetActorLocation(), largeSR_blueprint));
+		stackerReclaimers.Add(spawnAReclaimer(NCT_SR_rails_start[3]->GetActorLocation(), NCT_SR_rails_end[3]->GetActorLocation(), largeSR_blueprint));
 	}
+
+	/* Train test */
+	spawnATrain("t_0", NCT_pads[1]->GetActorLocation(), train_locomotive_blueprint);
+
 
 	/*
 	spawnAConveyorBelt(conv1_position->GetActorLocation(), conv1_position->GetActorRotation(), conveyor_belt_blueprint);
@@ -113,7 +117,7 @@ void ALevelController::BeginPlay()
 	//ships.Add(spawnAShip(berth2_position->GetActorLocation(), berth2_position->GetActorRotation(), ship_blueprint));
 
 	//// Spawn coal stacks
-	//spawnACoalStack(padK0_position->GetActorLocation(), padK0_position->GetActorRotation(), coal_stack_blueprint);
+	spawnACoalStack(NCT_pads[0]->GetActorLocation(), NCT_pads[0]->GetActorRotation(), coal_stack_blueprint);
 	//spawnACoalStack(padK1_position->GetActorLocation(), padK1_position->GetActorRotation(), coal_stack_blueprint);
 	//spawnACoalStack(padK2_position->GetActorLocation(), padK2_position->GetActorRotation(), coal_stack_blueprint);
 
@@ -265,5 +269,16 @@ void ALevelController::spawnAConveyorBelt(FVector position, FRotator rotator, TS
 
 
 }
+
+void ALevelController::spawnATrain(FString id, FVector position, TSubclassOf<class ATrain> blueprint) {
+	UWorld* world = GetWorld();
+	if (world) {
+		FActorSpawnParameters spawnParams;
+		spawnParams.Owner = this;
+		ATrain *actor = world->SpawnActor<ATrain>(blueprint, position, FRotator(0,0,0), spawnParams);
+		trains.Add(actor);
+	}
+}
+
 
 

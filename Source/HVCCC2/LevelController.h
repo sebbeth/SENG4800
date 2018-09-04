@@ -54,65 +54,35 @@ public:
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class AShip> ship_blueprint;
 	UPROPERTY(EditAnywhere)
+		TSubclassOf<class ATrain> train_locomotive_blueprint;
+	UPROPERTY(EditAnywhere)
 		TSubclassOf<class ACoalStack> coal_stack_blueprint;
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class AConveyorBelt> conveyor_belt_blueprint;
 
 	// Koorigang Stacker Reclaimer track markers
 	UPROPERTY(EditAnywhere)
-		AActor *SR0_rail_start;
+		TArray<AActor*> NCT_SR_rails_start;
 	UPROPERTY(EditAnywhere)
-		AActor *SR0_rail_end;
-	UPROPERTY(EditAnywhere)
-		AActor *SR1_rail_start;
-	UPROPERTY(EditAnywhere)
-		AActor *SR1_rail_end;
-	UPROPERTY(EditAnywhere)
-		AActor *SR2_rail_start;
-	UPROPERTY(EditAnywhere)
-		AActor *SR2_rail_end;
-	UPROPERTY(EditAnywhere)
-		AActor *SR3_rail_start;
-	UPROPERTY(EditAnywhere)
-		AActor *SR3_rail_end;
+		TArray<AActor*> NCT_SR_rails_end;
+
 
 	// Koorigang ship loader track markers
 	UPROPERTY(EditAnywhere)
-		AActor *loader0_rail_start;
+		TArray<AActor*> NCT_loader_rails_start;
 	UPROPERTY(EditAnywhere)
-		AActor *loader0_rail_end;
-	UPROPERTY(EditAnywhere)
-		AActor *loader1_rail_start;
-	UPROPERTY(EditAnywhere)
-		AActor *loader1_rail_end;
-	UPROPERTY(EditAnywhere)
-		AActor *loader2_rail_start;
-	UPROPERTY(EditAnywhere)
-		AActor *loader2_rail_end;
-	UPROPERTY(EditAnywhere)
-		AActor *loader3_rail_start;
-	UPROPERTY(EditAnywhere)
-		AActor *loader3_rail_end;
+		TArray<AActor*> NCT_loader_rails_end;
 
 	// Ship berth position markers
 	UPROPERTY(EditAnywhere)
-		AActor *berth0_position;
-	UPROPERTY(EditAnywhere)
-		AActor *berth1_position;
-	UPROPERTY(EditAnywhere)
-		AActor *berth2_position;
-	UPROPERTY(EditAnywhere)
-		AActor *berth3_position;
+		TArray<AActor*> NCT_berths;
+
 
 
 	//Coal Pad position markers
 	UPROPERTY(EditAnywhere)
-		AActor *padK0_position;
-	UPROPERTY(EditAnywhere)
-		AActor *padK1_position;
-	UPROPERTY(EditAnywhere)
-		AActor *padK2_position;
-	
+		TArray<AActor*> NCT_pads;
+
 	//actors
 	UPROPERTY(EditAnywhere)
 	TArray<ACoalStack*> coalStacks;
@@ -122,6 +92,8 @@ public:
 	TArray<AShipLoader*> shipLoaders;
 	UPROPERTY(EditAnywhere)
 	TArray<AShip*> ships;
+	UPROPERTY(EditAnywhere)
+		TArray<ATrain*> trains;
 	UPROPERTY(EditAnywhere)
 	TArray<AConveyorBelt*> conveyorBelts;
 
@@ -139,7 +111,8 @@ private:
 	AShip * spawnAShip(FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint);
 	void spawnAConveyorBelt(FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint);
 	void spawnACoalStack(FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint);
-	
+	void spawnATrain(FString id, FVector position, TSubclassOf<class ATrain> blueprint);
+
 
 	int testTime; // Just being used for testing
 
