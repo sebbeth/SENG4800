@@ -90,13 +90,6 @@ void ALevelController::BeginPlay()
 	*/
 
 
-	// Level setup procedure
-	
-	//currently unused codification of stacker positions
-	/*stackerReclaimers.Add(spawnAReclaimer(FVector(-388140.0, -185080.0, -650.0), FVector(-288140.0, -117870.0, -650.0), largeSR_blueprint));
-	stackerReclaimers.Add(spawnAReclaimer(FVector(-384350.0, -198780.0, -650.0), FVector(-281070.0, -129330.0, -650.0), largeSR_blueprint));
-	stackerReclaimers.Add(spawnAReclaimer(FVector(-380530.0, -212410.0, -650.0), FVector(-275020.0, -141400.0, -650.0), largeSR_blueprint));
-	stackerReclaimers.Add(spawnAReclaimer(FVector(-375470.0, -225210.0, -650.0), FVector(-268670.0, -153550.0, -650.0), largeSR_blueprint));*/
 
 
 	//testTime = 0;
@@ -107,14 +100,13 @@ void ALevelController::BeginPlay()
 	
 	
 	////Spawn in ship loaders
-	//shipLoaders.Add(spawnAShipLoader(loader0_rail_start->GetActorLocation(), loader0_rail_end->GetActorLocation(), ship_loader_blueprint));
-	//shipLoaders.Add(spawnAShipLoader(loader1_rail_start->GetActorLocation(), loader1_rail_end->GetActorLocation(), ship_loader_blueprint));
-	//shipLoaders.Add(spawnAShipLoader(loader2_rail_start->GetActorLocation(), loader2_rail_end->GetActorLocation(), ship_loader_blueprint));
-	//shipLoaders.Add(spawnAShipLoader(loader3_rail_start->GetActorLocation(), loader3_rail_end->GetActorLocation(), ship_loader_blueprint));
-
+	spawnAShipLoader(loader0_rail_start->GetActorLocation(), loader0_rail_end->GetActorLocation(), ship_loader_blueprint);
+	spawnAShipLoader(loader1_rail_start->GetActorLocation(), loader1_rail_end->GetActorLocation(), ship_loader_blueprint);
+	spawnAShipLoader(loader2_rail_start->GetActorLocation(), loader2_rail_end->GetActorLocation(), ship_loader_blueprint);
+    spawnAShipLoader(loader3_rail_start->GetActorLocation(), loader3_rail_end->GetActorLocation(), ship_loader_blueprint);
 	//
-	//ships.Add(spawnAShip(berth0_position->GetActorLocation(), berth0_position->GetActorRotation(), ship_blueprint));
-	//ships.Add(spawnAShip(berth2_position->GetActorLocation(), berth2_position->GetActorRotation(), ship_blueprint));
+	spawnAShip(berth0_position->GetActorLocation(), berth0_position->GetActorRotation(), ship_blueprint);
+	spawnAShip(berth2_position->GetActorLocation(), berth2_position->GetActorRotation(), ship_blueprint);
 
 	//// Spawn coal stacks
 	spawnACoalStack("CS_1", NCT_pads[0]->GetActorLocation(), NCT_pads[0]->GetActorRotation(), coal_stack_blueprint);
@@ -123,9 +115,9 @@ void ALevelController::BeginPlay()
 
 	//UE_LOG(LogTemp, Warning, TEXT("stackCount: %d"), coalStacks.size());
 	//UE_LOG(LogTemp, Warning, TEXT("stack1: %d, stack2: %d, stack3: %d"), coalStacks.at(0), coalStacks.at(1), coalStacks.at(2));
-	//coalStacks.at(0)->setQuantity(0.8);
-	//coalStacks.at(1)->setQuantity(0.2);
-	//coalStacks.at(2)->setQuantity(0.5);
+	coalStacks[0]->setQuantity(0.8);
+	coalStacks[1]->setQuantity(0.2);
+	coalStacks[2]->setQuantity(0.5);
 }
 
 

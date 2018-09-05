@@ -22,18 +22,9 @@ When VS is installed, add the following packages to it using VS Installer
 
 After all these packages are installed, Open the project, you will be prompted to recompile the project, if you have installed the required packages successfully it will work from here and you will be able to edit the project, if there were errors it will probably fail to compile.
 
-Once the project is open you can access c++ files in VS and modify them there.
+In a file explorer outside of UE Editor and Visual Studio, right click on "HVCCC2.uproject" and click on "Generate Visual Studio project files" to stop the over 100 compilation errors in Visual Studio.
 
-# Data Deserialisation in C++ Code:
-
-To get the binary data files deserialisation to work in the C++ files, you will have to carry out the following steps:
-1. Open up SENG4800/Source/HVCCC2/ProjectSourceDir.cpp
-2. Type up the file path to the source folder of this project for the value of the "filePath" variable
-* eg. C:/Users/Nick/Documents/Unreal Projects/SENG4800/Source/HVCCC2
-3. Save this file and run the project
-
-Note: make sure to use "/" instead of "\"
-
+Once the project is open you can access the C++ files in VS and modify them there.
 
 # Blender model import procedure:
 
