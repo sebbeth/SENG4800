@@ -62,16 +62,16 @@ void ALevelController::BeginPlay()
 	}
 
 	if (windows.size() >= 1) {
-		stackerReclaimers.Add(spawnAReclaimer(NCT_SR_rails_start[0]->GetActorLocation(), NCT_SR_rails_end[0]->GetActorLocation(), largeSR_blueprint));
+		spawnAStackerReclaimer("SR_0", NCT_SR_rails_start[0]->GetActorLocation(), NCT_SR_rails_end[0]->GetActorLocation(), largeSR_blueprint);
 	}
 	if (windows.size() >= 2) {
-		stackerReclaimers.Add(spawnAReclaimer(NCT_SR_rails_start[1]->GetActorLocation(), NCT_SR_rails_end[1]->GetActorLocation(), largeSR_blueprint));
+		spawnAStackerReclaimer("SR_1", NCT_SR_rails_start[1]->GetActorLocation(), NCT_SR_rails_end[1]->GetActorLocation(), largeSR_blueprint);
 	}
 	if (windows.size() >= 3) {
-		stackerReclaimers.Add(spawnAReclaimer(NCT_SR_rails_start[2]->GetActorLocation(), NCT_SR_rails_end[2]->GetActorLocation(), largeSR_blueprint));
+		spawnAStackerReclaimer("SR_2", NCT_SR_rails_start[2]->GetActorLocation(), NCT_SR_rails_end[2]->GetActorLocation(), largeSR_blueprint);
 	}
 	if (windows.size() >= 4) {
-		stackerReclaimers.Add(spawnAReclaimer(NCT_SR_rails_start[3]->GetActorLocation(), NCT_SR_rails_end[3]->GetActorLocation(), largeSR_blueprint));
+		spawnAStackerReclaimer("SR_3", NCT_SR_rails_start[3]->GetActorLocation(), NCT_SR_rails_end[3]->GetActorLocation(), largeSR_blueprint);
 	}
 
 	/* Train test */
@@ -117,7 +117,7 @@ void ALevelController::BeginPlay()
 	//ships.Add(spawnAShip(berth2_position->GetActorLocation(), berth2_position->GetActorRotation(), ship_blueprint));
 
 	//// Spawn coal stacks
-	spawnACoalStack(NCT_pads[0]->GetActorLocation(), NCT_pads[0]->GetActorRotation(), coal_stack_blueprint);
+	spawnACoalStack("CS_1", NCT_pads[0]->GetActorLocation(), NCT_pads[0]->GetActorRotation(), coal_stack_blueprint);
 	//spawnACoalStack(padK1_position->GetActorLocation(), padK1_position->GetActorRotation(), coal_stack_blueprint);
 	//spawnACoalStack(padK2_position->GetActorLocation(), padK2_position->GetActorRotation(), coal_stack_blueprint);
 
@@ -200,24 +200,23 @@ void ALevelController::Tick(float DeltaTime)
 
 
 
-/*
-Spawn functions for actor
+/*  *** Actor spawn functions *** 
+
+Each function
+	instantiates a new actor, 
+	sets any attributes required (position, ID, etc)
+	adds the actor to the appropriate actor array
+	and returns the actor.
+
+
+NOTE: there is no need to add the returned actor to an array manually, it is added to the appropriate array here.
+
+example usage: 
+	spawnACoalStack("CS_1", NCT_pads[0]->GetActorLocation(), NCT_pads[0]->GetActorRotation(), coal_stack_blueprint);
 */
-AShipLoader* ALevelController::spawnAShipLoader(FVector railStart, FVector railEnd, TSubclassOf<class AShipLoader> blueprint) {
 
-	UWorld* world = GetWorld();
-	if (world) {
-		FActorSpawnParameters spawnParams;
-		spawnParams.Owner = this;
-		AShipLoader *actor = world->SpawnActor<AShipLoader>(blueprint, railStart, FRotator(0.0f, 0.0f, 0.0f), spawnParams);
-		actor->trackNodeA = railStart;
-		actor->trackNodeB = railEnd;
-		return actor;
-	}
-	return NULL;
-}
 
-AStackerReclaimer* ALevelController::spawnAReclaimer(FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint) {
+AStackerReclaimer * ALevelController::spawnAStackerReclaimer(FString id, FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint) {
 	
 	UWorld* world = GetWorld();
 	if (world) {
@@ -227,19 +226,37 @@ AStackerReclaimer* ALevelController::spawnAReclaimer(FVector railStart, FVector 
 		actor->trackNodeA = railStart;
 		actor->trackNodeB = railEnd;
 		actor->id = "SR0";
+		stackerReclaimers.Add(actor);
 		return actor;
 	}
 	return NULL;
 }
 
 
-AShip* ALevelController::spawnAShip(FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint) {
+AShipLoader * ALevelController::spawnAShipLoader(FString id, FVector railStart, FVector railEnd, TSubclassOf<class AShipLoader> blueprint) {
+
+	UWorld* world = GetWorld();
+	if (world) {
+		FActorSpawnParameters spawnParams;
+		spawnParams.Owner = this;
+		AShipLoader *actor = world->SpawnActor<AShipLoader>(blueprint, railStart, FRotator(0.0f, 0.0f, 0.0f), spawnParams);
+		actor->trackNodeA = railStart;
+		actor->trackNodeB = railEnd;
+		shipLoaders.Add(actor);
+		return actor;
+	}
+	return NULL;
+}
+
+
+AShip * ALevelController::spawnAShip(FString id, FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint) {
 	
 	UWorld* world = GetWorld();
 	if (world) {
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		AShip *actor = world->SpawnActor<AShip>(blueprint, position, rotator, spawnParams);
+		ships.Add(actor);
 		return actor;
 	}
 	return NULL;
@@ -247,37 +264,41 @@ AShip* ALevelController::spawnAShip(FVector position, FRotator rotator, TSubclas
 
 
 
-void ALevelController::spawnACoalStack(FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint) {
+ACoalStack * ALevelController::spawnACoalStack(FString id, FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint) {
 	UWorld* world = GetWorld();
 	if (world) {
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		ACoalStack *actor = world->SpawnActor<ACoalStack>(blueprint, position, rotator, spawnParams);
-		coalStacks.Add(actor); // Add the new actor to the array
+		coalStacks.Add(actor);
+		return actor;
 	}
+	return NULL;
 }
 
 
-void ALevelController::spawnAConveyorBelt(FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint) {
+AConveyorBelt * ALevelController::spawnAConveyorBelt(FString id, FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint) {
 	UWorld* world = GetWorld();
 	if (world) {
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		AConveyorBelt *actor = world->SpawnActor<AConveyorBelt>(blueprint, position, rotator, spawnParams);
 		conveyorBelts.Add(actor);
+		return actor;
 	}
-
-
+	return NULL;
 }
 
-void ALevelController::spawnATrain(FString id, FVector position, TSubclassOf<class ATrain> blueprint) {
+ATrain * ALevelController::spawnATrain(FString id, FVector position, TSubclassOf<class ATrain> blueprint) {
 	UWorld* world = GetWorld();
 	if (world) {
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		ATrain *actor = world->SpawnActor<ATrain>(blueprint, position, FRotator(0,0,0), spawnParams);
 		trains.Add(actor);
+		return actor;
 	}
+	return NULL;
 }
 
 
