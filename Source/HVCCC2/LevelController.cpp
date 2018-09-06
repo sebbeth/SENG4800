@@ -100,16 +100,23 @@ void ALevelController::BeginPlay()
 	
 	
 	////Spawn in ship loaders
-	//spawnAShipLoader(loader0_rail_start->GetActorLocation(), loader0_rail_end->GetActorLocation(), ship_loader_blueprint);
+	//spawnAShipLoader(FString id, FVector railStart, FVector railEnd, TSubclassOf<class AShipLoader> blueprint)
+	spawnAShipLoader("NCT_ShipLoader_01", NCT_loader_rails_start[0]->GetActorLocation(), NCT_loader_rails_end[0]->GetActorLocation(), ship_loader_blueprint);
+	spawnAShipLoader("NCT_ShipLoader_02", NCT_loader_rails_start[1]->GetActorLocation(), NCT_loader_rails_end[1]->GetActorLocation(), ship_loader_blueprint);
+
 	//spawnAShipLoader(loader1_rail_start->GetActorLocation(), loader1_rail_end->GetActorLocation(), ship_loader_blueprint);
 	//spawnAShipLoader(loader2_rail_start->GetActorLocation(), loader2_rail_end->GetActorLocation(), ship_loader_blueprint);
     //spawnAShipLoader(loader3_rail_start->GetActorLocation(), loader3_rail_end->GetActorLocation(), ship_loader_blueprint);
 	//
-	//spawnAShip(berth0_position->GetActorLocation(), berth0_position->GetActorRotation(), ship_blueprint);
-	//spawnAShip(berth2_position->GetActorLocation(), berth2_position->GetActorRotation(), ship_blueprint);
+
+	//spawnAShip(FString id, FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint)
+	spawnAShip("NCT_Ship_01", NCT_berths[0]->GetActorLocation(), NCT_berths[0]->GetActorRotation(), ship_blueprint);
+	spawnAShip("NCT_Ship_02", NCT_berths[1]->GetActorLocation(), NCT_berths[1]->GetActorRotation(), ship_blueprint);
 
 	//// Spawn coal stacks
-	spawnACoalStack("CS_1", NCT_pads[0]->GetActorLocation(), NCT_pads[0]->GetActorRotation(), coal_stack_blueprint);
+	spawnACoalStack("NCT_CS_1", NCT_pads[0]->GetActorLocation(), NCT_pads[0]->GetActorRotation(), coal_stack_blueprint);
+	spawnACoalStack("NCT_CS_2", NCT_pads[1]->GetActorLocation(), NCT_pads[1]->GetActorRotation(), coal_stack_blueprint);
+	spawnACoalStack("NCT_CS_3", NCT_pads[2]->GetActorLocation(), NCT_pads[2]->GetActorRotation(), coal_stack_blueprint);
 	//spawnACoalStack(padK1_position->GetActorLocation(), padK1_position->GetActorRotation(), coal_stack_blueprint);
 	//spawnACoalStack(padK2_position->GetActorLocation(), padK2_position->GetActorRotation(), coal_stack_blueprint);
 
