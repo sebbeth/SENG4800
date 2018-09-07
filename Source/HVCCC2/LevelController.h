@@ -41,6 +41,8 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	UFUNCTION(BlueprintCallable, Category = "time")
+	float getWorldTime();
 
 	// Get the blueprints to be used
 	UPROPERTY(EditAnywhere)
