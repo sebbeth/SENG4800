@@ -25,7 +25,7 @@ namespace visualiser {
 
         double worldTime;
 
-        double timeForward;
+        bool timeForward;
 
         //note that this speed is the playspeed as shown in the UI, and scales the impact of updateTime calls
         double speed;
