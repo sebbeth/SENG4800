@@ -20,16 +20,12 @@ class HVCCC2_API ALevelController : public AActor
 	//sliding windows peeking into the state-sequences of actors we are currently animating
 	std::vector<std::pair<std::size_t, std::size_t>> windows;
 
-	double worldTime;
+	double simTime;
 	double speed;
-
-
-	//AGlowCube *daCube;
-
-	//AGlowCube * spawnAGlowCube(FVector start, FVector end);
-
-	void moveTime(double deltaTime);
+	bool isPlaying;
 	
+	//updates the windows etc according to the new time - note that setting times to something absolute may require resetting the sim instead of updating it updating the sim is near-constant in complexity, but resetting is not
+	void updateSim();
 public:	
 	// Sets default values for this actor's properties
 	ALevelController();
@@ -38,10 +34,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
+public:
 	// Get the blueprints to be used
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class AStackerReclaimer> largeSR_blueprint;
@@ -102,6 +95,34 @@ public:
 		AActor *conv1_position;
 	UPROPERTY(EditAnywhere)
 		AActor *conv2_position;
+
+	//resets to the beginning of the of the simulation and then updates them
+	UFUNCTION(BlueprintCallable, Category = "time")
+	void resetSim();
+	//time controls
+	UFUNCTION(BlueprintCallable, Category = "time")
+	float getSimTime();
+	UFUNCTION(BlueprintCallable, Category = "time")
+	void setSimTime(float absoluteTime);
+	UFUNCTION(BlueprintCallable, Category = "time")
+	void moveSimTime(float deltaTime);
+	UFUNCTION(BlueprintCallable, Category = "time")
+	float getPlaySpeed();
+	UFUNCTION(BlueprintCallable, Category = "time")
+	void setPlaySpeed(float speed);
+
+	//true if playing, false if paused
+	UFUNCTION(BlueprintCallable, Category = "time")
+	bool getPlayState();
+	//true if playing, false if paused
+	UFUNCTION(BlueprintCallable, Category = "time")
+	void setPlayState(bool isPlaying);
+
+
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+
 
 
 private:
