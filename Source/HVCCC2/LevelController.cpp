@@ -224,6 +224,13 @@ AStackerReclaimer * ALevelController::spawnAStackerReclaimer(FString id, FVector
 		AStackerReclaimer *actor = world->SpawnActor<AStackerReclaimer>(blueprint, railStart, FRotator(0.0f, 0.0f, 0.0f), spawnParams);
 		actor->trackNodeA = railStart;
 		actor->trackNodeB = railEnd;
+		// Now, orient the object's base to the track 
+
+		actor->setBaseRotation();
+
+
+
+
 		actor->id = "SR0";
 		stackerReclaimers.Add(actor);
 		return actor;

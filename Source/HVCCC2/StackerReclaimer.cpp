@@ -14,7 +14,6 @@ AStackerReclaimer::AStackerReclaimer()
 void AStackerReclaimer::BeginPlay()
 {
 	Super::BeginPlay();
-	this->setBaseRotation(124.0f);
 }
 
 // Called every frame
@@ -44,8 +43,15 @@ void AStackerReclaimer::setRotation() {
 	//SetActorRotation(rotator, ETeleportType::None);
 }
 
-void AStackerReclaimer::setBaseRotation(float degrees) {
-	FRotator rotator(0.0f, degrees, 0.0f);
+/*
+This function sets the base rotation by calculating the angle between the two points of the stacker reclaimer track
+*/
+
+void AStackerReclaimer::setBaseRotation() {
+
+	double rotation = atan((trackNodeA.Y - trackNodeB.Y) / (trackNodeA.X - trackNodeB.X));
+
+	FRotator rotator(0.0f, rotation, 0.0f); //124.0f
 	SetActorRotation(rotator, ETeleportType::None);
 }
 

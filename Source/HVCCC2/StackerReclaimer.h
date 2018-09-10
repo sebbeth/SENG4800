@@ -26,7 +26,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	void setPosition(float position);
-	void setBaseRotation(float degrees);
+	void setBaseRotation();
 
 	//UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
 	void setRotation();
