@@ -96,14 +96,17 @@ const std::string {1}::XML_TAG_PREFIX = "{2}";
 bool operator<(const {1}::Id& a, const {1}::Id& b) {{
 {0}return '''.format(tab_spaces, entity.name)
     if entity.has_terminal:
-        impl += '''a.terminal < b.terminal &&'''
-    impl += '''a.name < b.name;
+        impl += '''a.terminal < b.terminal || (a.terminal == b.terminal && '''
+    impl += '''a.name < b.name'''
+    if entity.has_terminal:
+        impl += ''')'''
+    impl += ''';
 }}
 
 bool operator==(const {1}::Id& a, const {1}::Id& b) {{
 {0}return '''.format(tab_spaces, entity.name)
     if entity.has_terminal:
-        impl += '''a.terminal == b.terminal &&'''
+        impl += '''a.terminal == b.terminal && '''
     impl += '''a.name == b.name;
 }}
 std::string {1}::Id::nameForBinaryFile() const {{
@@ -615,6 +618,9 @@ inline tinyxml2::XMLError extractAttribute(const tinyxml2::XMLElement& source, {
 {0}//extract the identifying name
 {0}XMLCheckResult(extractAttribute(source, destination.id.name, "{3}"), 0);
 '''.format(tab_spaces, extraction_signature, each_entity.name, each_entity.identifier)
+        if each_entity.has_terminal:
+            impl += '''{0}destination.id.terminal = theTerminal;
+'''.format(tab_spaces)
 
         allEventAttributes = set(each_entity.attributes)
         for each_event in each_entity.events.values():
@@ -669,15 +675,15 @@ inline tinyxml2::XMLError extractAttribute(const tinyxml2::XMLElement& source, {
 
                     if '::Id' in each_entity.attribute_types[each_attribute]:
                         is_id_attr = True
-                        impl += 'id.name'
+                        impl += '{1}.name'.format(tab_spaces, each_attribute)
                     else:
                         impl += each_attribute
 
                     impl += ''', "{1}"), 0);'''.format(tab_spaces, each_entity.attribute_codes[each_attribute])
 
-                    if is_id_attr:
+                    if is_id_attr and entities[each_entity.attribute_types[each_attribute].split('::Id')[0]].has_terminal:
                         impl += '''
-{0}{0}{0}destination.id.terminal = theTerminal;'''.format(tab_spaces)
+{0}{0}{0}destination.{1}.terminal = theTerminal;'''.format(tab_spaces, each_attribute)
                 impl += '''
 {0}{0}{0}break;'''.format(tab_spaces)
             impl += '''
@@ -699,8 +705,8 @@ inline tinyxml2::XMLError extractAttribute(const tinyxml2::XMLElement& source, {
 {0}tinyxml2::XMLNode* root;
 {0}tinyxml2::XMLElement* eachElement;
 
-{0}int fileNameIndex = std::max(srcFilePath.rfind('/'), srcFilePath.rfind('\\\\'))+1;
-{0}std::string terminalName = srcFilePath.substr(fileNameIndex, fileNameIndex+TERMINAL_CODE_LENGTH);
+{0}int fileNameIndex = std::max(int(srcFilePath.rfind('/')), int(srcFilePath.rfind('\\\\')))+1;
+{0}std::string terminalName = srcFilePath.substr(fileNameIndex, TERMINAL_CODE_LENGTH);
 {0}TerminalId theTerminal = decodeTerminalId(terminalName); //not that this could easily be null;
 
 {0}tinyxml2::XMLError eResult = document.LoadFile(srcFilePath.c_str());

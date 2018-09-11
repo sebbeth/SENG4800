@@ -206,6 +206,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Source\HVCCC2\data\cereal\external\rapidxml\manual.html" />
+    <None Include="..\Source\HVCCC2\data\StateInfo.json" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
