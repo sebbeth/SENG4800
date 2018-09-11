@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 15:53:43.172985
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 23:08:55.254916
  **/
 #pragma once
 #include <string>
@@ -19,7 +19,9 @@ public:
     double position;
     Stockpile::Id stockpileID;
     double time;
+    
     ReclaimerState() = default;
+
     template<class Archive>
     void serialize(Archive & archive);
     static ReclaimerStateType determineNextType(ReclaimerStateType stateType, ReclaimerEventType eventType);

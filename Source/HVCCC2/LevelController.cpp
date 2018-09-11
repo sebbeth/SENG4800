@@ -39,11 +39,20 @@ void ALevelController::BeginPlay()
 	//Data stuff
 	bool success = deserialize(BINARY_PATH, states);
 
-	//NOTE: this is a temporary hack for a demo; removes two stackerreclaimers we don't want in the demo so srs 3.56-3.59 show in the demo
-	std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).erase({TerminalId::KTC,"3.21" });
-	std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).erase({ TerminalId::KTC,"3.22" });
+	//Getting the states from XML
+	EventVectorTuple allEvents = getEventsFromXMLFolder(XML_PATH);
 
-	for (auto eachEntity : std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states)) {
+	EventMapTuple<EntitiesWithEvents> organisedEventsTuple;
+	forEachInTuple(allEvents, MapAndSortFunctor<EntitiesWithEvents>(organisedEventsTuple));
+
+	StateMapTuple<AllEntities> statesTuple;
+	forEachInTuple(organisedEventsTuple, ConvertFunctor<AllEntities>(statesTuple));
+
+	//note that this isn't fully templated, but should never need other specialisations
+	merge(statesTuple, std::get<StateMap<StackerReclaimer>>(statesTuple));
+
+	auto& srStates = std::get<StateMap<StackerReclaimer>>(states);
+	for (auto eachEntity : srStates) {
 		FString fstr = UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str());
 		UE_LOG(LogTemp, Warning, TEXT("Stacker name: %s"), *fstr);
 		for (auto eachState : eachEntity.second) {
@@ -128,7 +137,7 @@ void ALevelController::BeginPlay()
 
 void ALevelController::updateSim() {
 	auto watchIt = windows.begin();
-	auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
+	auto entIt = std::get<StateMap<Stacker>>(states).begin();
 	auto actorIt = stackerReclaimers.CreateConstIterator();
 	for (; watchIt != windows.end(); (++watchIt, ++entIt)) {
 		auto eachWindow = (*watchIt);

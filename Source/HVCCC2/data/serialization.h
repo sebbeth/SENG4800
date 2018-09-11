@@ -19,10 +19,26 @@ namespace fs = std::experimental::filesystem;
 
 #include "util.h"
 
-
-
-template<typename Id, typename Value>
-bool serialize(const std::map<Id, std::vector<Value>>& source, const std::string& destinationPath);
+namespace serialisation_detail {
+	struct serialisation_functor {
+		bool& result;
+		std::string destinationPath;
+		template<typename Id, typename Value>
+		void operator() (const std::map<Id, std::vector<Value>>& each) {
+			result = result && serialize(each, destinationPath);
+		}
+		serialisation_functor(bool& result, const std::string& destinationPath);
+	};
+	struct deserialisation_functor {
+		bool& result;
+		std::string sourcePath;
+		template<typename Id, typename Value>
+		void operator() (std::map<Id, std::vector<Value>>& each) {
+			result = result && deserialize(sourcePath, each);
+		}
+		deserialisation_functor(bool& result, const std::string& sourcePath);
+	};
+}
 
 template<typename... Ids, typename... Values>
 bool serialize(const std::tuple<typename std::map<Ids, Values>...>& source, const std::string& destinationPath) {
@@ -39,10 +55,6 @@ bool deserialize(const std::string& sourcePath, std::tuple<typename std::map<Ids
     forEachInTuple(destination, tmp);
     return success;
 }
-
-template<typename Id, typename Value>
-bool deserialize(const std::string& sourcePath, std::map<typename Id, std::vector<Value>>& destination);
-
 template<typename Id, typename Value>
 bool serialize(const std::map<Id, std::vector<Value>>& source, const std::string& destinationPath) {
 	for (auto each : source) {
@@ -74,7 +86,6 @@ bool serialize(const std::map<Id, std::vector<Value>>& source, const std::string
 	}
 	return true;
 }
-
 
 template<typename Id, typename Value>
 bool deserialize(const std::string& sourcePath, std::map<typename Id, std::vector<Value>>& destination) {
@@ -119,25 +130,4 @@ bool deserialize(const std::string& sourcePath, std::map<typename Id, std::vecto
 		}
 	}
 	return true;
-}
-
-namespace serialisation_detail {
-	struct serialisation_functor {
-		bool& result;
-		std::string destinationPath;
-		template<typename Id, typename Value>
-		void operator() (const std::map<Id, std::vector<Value>>& each) {
-			result = result && serialize(each, destinationPath);
-		}
-		serialisation_functor(bool& result, const std::string& destinationPath);
-	};
-    struct deserialisation_functor {
-        bool& result;
-        std::string sourcePath;
-		template<typename Id, typename Value>
-		void operator() (std::map<Id, std::vector<Value>>& each) {
-            result = result && deserialize(sourcePath, each);
-        }
-        deserialisation_functor(bool& result, const std::string& sourcePath);
-    };
 }

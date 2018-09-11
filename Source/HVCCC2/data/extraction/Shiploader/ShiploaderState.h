@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 15:53:43.172985
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 23:08:55.254916
  **/
 #pragma once
 #include <string>
@@ -21,7 +21,9 @@ public:
     Stockpile::Id stockpileID;
     double time;
     Vessel::Id vesselID;
+    
     ShiploaderState() = default;
+
     template<class Archive>
     void serialize(Archive & archive);
     static ShiploaderStateType determineNextType(ShiploaderStateType stateType, ShiploaderEventType eventType);

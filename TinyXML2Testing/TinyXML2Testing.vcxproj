@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Source\HVCCC2\data\convertData.cpp" />
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Dumpstation\Dumpstation.cpp" />
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Dumpstation\DumpstationEvent.cpp" />
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Dumpstation\DumpstationEventType.cpp" />

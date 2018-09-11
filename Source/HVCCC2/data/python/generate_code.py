@@ -68,7 +68,16 @@ public:''' +
 {0}{0}TerminalId terminal;'''.format(tab_spaces)
     decl += '''
 {0}{0}std::string name;
-{0}{0}std::string nameForBinaryFile() const;
+{0}{0}Id();
+{0}{0}Id('''.format(tab_spaces)
+    if entity.has_terminal:
+        decl += '''TerminalId terminal, '''
+    decl += '''const std::string& name);'''
+    if merge_targets:
+        for each_merge in merge_targets:
+            decl += '''
+{0}{0}Id(const {1}::Id& src);'''.format(tab_spaces, each_merge)
+    decl += '''{0}{0}std::string nameForBinaryFile() const;
 {0}{0}template<class Archive>
 {0}{0}void serialize(Archive & archive);
 {0}}};
@@ -76,6 +85,7 @@ public:''' +
 
 bool operator<(const {1}::Id& a, const {1}::Id& b);
 bool operator==(const {1}::Id& a, const {1}::Id& b);
+bool operator!=(const {1}::Id& a, const {1}::Id& b);
 
 template<class Archive>
 void {1}::Id::serialize(Archive & archive) {{
@@ -86,6 +96,37 @@ void {1}::Id::serialize(Archive & archive) {{
 }}'''.format(tab_spaces, entity.name)
 
     impl = '''#include "{1}.h"
+'''.format(tab_spaces, entity.name)
+
+    impl += '''
+{1}::Id::Id(): 
+'''.format(tab_spaces, entity.name)
+
+    if entity.has_terminal:
+        impl += '''terminal(TerminalId::Invalid), '''
+    impl += ''' name("") {{
+}}'''.format(tab_spaces)
+
+    impl += '''
+{1}::Id::Id('''.format(tab_spaces, entity.name)
+    if entity.has_terminal:
+        impl += '''TerminalId terminal, '''
+    impl += '''const std::string& name): '''
+    if entity.has_terminal:
+        impl += '''terminal(terminal), '''
+    impl += '''name(name) {{
+}}'''.format(tab_spaces)
+
+    if merge_targets:
+        for each_merge in merge_targets:
+            impl += '''
+{1}::Id::Id(const {2}::Id& src): '''.format(tab_spaces, entity.name, each_merge)
+            if entity.has_terminal:
+                impl += '''terminal(src.terminal), '''.format(tab_spaces)
+            impl += '''name(src.name) {{
+}}'''.format(tab_spaces)
+
+    impl += '''
 const std::string {1}::ENTITY_NAME = "{1}";'''.format(tab_spaces, entity.name)
     if has_event:
         impl += '''
@@ -109,6 +150,11 @@ bool operator==(const {1}::Id& a, const {1}::Id& b) {{
         impl += '''a.terminal == b.terminal && '''
     impl += '''a.name == b.name;
 }}
+
+bool operator!=(const {1}::Id& a, const {1}::Id& b) {{
+{0} return !(a == b);
+}}
+
 std::string {1}::Id::nameForBinaryFile() const {{
 {0}return '''.format(tab_spaces, entity.name)
     if entity.has_terminal:
@@ -317,7 +363,9 @@ public:
     else:
         attributes_to_add = []
     decl += '''
+    
 {0}{1}State() = default;
+
 {0}template<class Archive>
 {0}void serialize(Archive & archive);'''.format(tab_spaces, entity.name);
 
@@ -385,6 +433,7 @@ def generate_merge_state_class(entities, merge_name, merge_target_names):
 
     decl += '''
 class {1}State {{
+public:
 {0}using Entity = {1};
 {0}Entity::Id id;
 {0}{1}StateType type;'''.format(tab_spaces, merge_name)
@@ -404,6 +453,9 @@ class {1}State {{
 {0}{1}State(const {2}State& src);'''.format(tab_spaces, merge_name, each_to_merge.name)
 
     decl += '''
+    
+{0}{1}State() = default;
+    
 {0}template<class Archive>
 {0}void serialize(Archive & archive);
 }};
@@ -793,26 +845,12 @@ def generate_entity_type_lists(entities, merges):
 
 #define EntitiesWithEvents {1}
 #define MergeEntities {2}
-#define AllEntities {3}
-
-using EventMapTuple = std::tuple<'''.format(
+#define AllEntities {3}'''.format(
         tab_spaces,
         ', '.join(sorted(entities)),
         ', '.join(sorted(merges.keys())),
         ', '.join(sorted(list(entities) + list(merges.keys()))))
 
-    decl += ', '.join(
-        '''std::map<{1}::Id, std::vector<{1}Event>>'''.format(tab_spaces, each_name) for each_name in sorted(entities))
-    decl += '''>;
-using BasicStateMapTuple = std::tuple<'''
-    decl += ', '.join(
-        '''std::map<{1}::Id, std::vector<{1}State>>'''.format(tab_spaces, each_name) for each_name in sorted(entities))
-    decl += '''>;
-using FullStateMapTuple = std::tuple<'''
-    decl += ', '.join('''std::map<{1}::Id, std::vector<{1}State>>'''.format(tab_spaces, each_name) for each_name in
-                      sorted(list(entities) + list(merges.keys())))
-    decl += '''>;
-'''.format(tab_spaces)
     return decl
 
 
