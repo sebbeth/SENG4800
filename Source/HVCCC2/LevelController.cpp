@@ -7,10 +7,7 @@
 #include "CoalStack.h"
 #include "ConveyorBelt.h"
 #include "Train.h"
-
-#include "scheduling/data/serialization.h"
-
-#include "scheduling/data/env_config.h"
+#include "data/env_config.h"
 #include "Runtime/Engine/Classes/Engine/World.h"
 #include "Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h"
 #include "Runtime/Core/Public/Misc/Paths.h"

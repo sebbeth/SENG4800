@@ -7,3 +7,6 @@
 *.sdf
 *.suo
 /
+
+tinyxml2_build
+!TinyXML2Testing.sln

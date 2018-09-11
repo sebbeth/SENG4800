@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "scheduling/data/serialization.h"
+#include "data/serialization.h"
 
 #include "LevelController.generated.h"
 
@@ -14,7 +14,7 @@ class HVCCC2_API ALevelController : public AActor
 {
 	GENERATED_BODY()
 	
-	StateMapTuple states;
+	std::tuple<std::map<Stacker::Id, std::vector<StackerState>>> states;
 	double xMin, xMax;
 
 	//sliding windows peeking into the state-sequences of actors we are currently animating
