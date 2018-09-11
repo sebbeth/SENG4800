@@ -40,11 +40,11 @@ void ALevelController::BeginPlay()
 	bool success = deserialize(BINARY_PATH, states);
 
 	//NOTE: this is a temporary hack for a demo; removes two stackerreclaimers we don't want in the demo so srs 3.56-3.59 show in the demo
-	std::get<std::map<std::string, std::vector<StackerState>>>(states).erase("3.21");
-	std::get<std::map<std::string, std::vector<StackerState>>>(states).erase("3.22");
+	std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).erase({TerminalId::KTC,"3.21" });
+	std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).erase({ TerminalId::KTC,"3.22" });
 
-	for (auto eachEntity : std::get<std::map<std::string, std::vector<StackerState>>>(states)) {
-		FString fstr = UTF8_TO_TCHAR(eachEntity.first.c_str());
+	for (auto eachEntity : std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states)) {
+		FString fstr = UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str());
 		UE_LOG(LogTemp, Warning, TEXT("Stacker name: %s"), *fstr);
 		for (auto eachState : eachEntity.second) {
 			/*UE_LOG(LogTemp, Warning, TEXT("index: %d, Time: %f; Stacker Position: %f"), i++, eachState.time, eachState.position);*/
@@ -128,7 +128,7 @@ void ALevelController::BeginPlay()
 
 void ALevelController::updateSim() {
 	auto watchIt = windows.begin();
-	auto entIt = std::get<std::map<std::string, std::vector<StackerState>>>(states).begin();
+	auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
 	auto actorIt = stackerReclaimers.CreateConstIterator();
 	for (; watchIt != windows.end(); (++watchIt, ++entIt)) {
 		auto eachWindow = (*watchIt);
@@ -191,7 +191,7 @@ void ALevelController::Tick(float DeltaTime)
 	if (isPlaying) {
 		moveSimTime(DeltaTime * speed);
 		auto watchIt = windows.begin();
-		auto entIt = std::get<std::map<std::string, std::vector<StackerState>>>(states).begin();
+		auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
 		auto actorIt = stackerReclaimers.CreateConstIterator();
 		for (; watchIt != windows.end() && actorIt; (++watchIt, ++entIt, ++actorIt)) {
 			auto eachWindow = (*watchIt);
@@ -221,7 +221,7 @@ void ALevelController::Tick(float DeltaTime)
 
 			double positionDelta = (positionInterpolated - xMin) / (xMax - xMin);
 
-			UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f; state a: %d, state b: %d, typea: %d, typeb: %d"), UTF8_TO_TCHAR(eachEntity.first.c_str()), float(simTime), indexA, indexB, (int)eachEntity.second[indexA].type, (int)eachEntity.second[indexB].type);
+			UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f; state a: %d, state b: %d, typea: %d, typeb: %d"), UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str()), float(simTime), indexA, indexB, (int)eachEntity.second[indexA].type, (int)eachEntity.second[indexB].type);
 			UE_LOG(LogTemp, Warning, TEXT("scale: %f, timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position delta: %f"), float(scale), float(timeA), float(timeB), float(positionA), float(positionB), float(positionInterpolated), float(positionDelta));
 
 			// TEST INPUT

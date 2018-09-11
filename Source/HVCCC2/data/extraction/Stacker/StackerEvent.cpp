@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-10 19:35:46.474699
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
  **/
 #include "StackerEvent.h"
 
@@ -28,11 +28,24 @@ bool StackerEvent::hasAmount() const {
 
 bool StackerEvent::hasPosition() const {
     switch (type) {
-        case StackerEventType::Invalid:
-            return false;
-        default:
+        case StackerEventType::Complete:
+        case StackerEventType::DoubleHandleComplete:
+        case StackerEventType::DoubleHandleOperationStart:
+        case StackerEventType::DoubleHandleStart:
+        case StackerEventType::Fail:
+        case StackerEventType::Fix:
+        case StackerEventType::OnMove:
+        case StackerEventType::OnStopMove:
+        case StackerEventType::OperationComplete:
+        case StackerEventType::OperationStart:
+        case StackerEventType::Start:
             return true;
-
+        case StackerEventType::MaintenanceComplete:
+        case StackerEventType::MaintenanceStart:
+        case StackerEventType::SyncedFail:
+        case StackerEventType::SyncedFix:
+        default:
+            return false;
     }
 }
 
@@ -47,13 +60,13 @@ bool StackerEvent::hasStockpileID() const {
         case StackerEventType::OperationComplete:
         case StackerEventType::OperationStart:
         case StackerEventType::Start:
-        case StackerEventType::SyncedFail:
-        case StackerEventType::SyncedFix:
             return true;
         case StackerEventType::MaintenanceComplete:
         case StackerEventType::MaintenanceStart:
         case StackerEventType::OnMove:
         case StackerEventType::OnStopMove:
+        case StackerEventType::SyncedFail:
+        case StackerEventType::SyncedFix:
         default:
             return false;
     }
@@ -61,10 +74,23 @@ bool StackerEvent::hasStockpileID() const {
 
 bool StackerEvent::hasTime() const {
     switch (type) {
-        case StackerEventType::Invalid:
-            return false;
-        default:
+        case StackerEventType::Complete:
+        case StackerEventType::DoubleHandleComplete:
+        case StackerEventType::DoubleHandleOperationStart:
+        case StackerEventType::DoubleHandleStart:
+        case StackerEventType::Fail:
+        case StackerEventType::Fix:
+        case StackerEventType::OnMove:
+        case StackerEventType::OnStopMove:
+        case StackerEventType::OperationComplete:
+        case StackerEventType::OperationStart:
+        case StackerEventType::Start:
             return true;
-
+        case StackerEventType::MaintenanceComplete:
+        case StackerEventType::MaintenanceStart:
+        case StackerEventType::SyncedFail:
+        case StackerEventType::SyncedFix:
+        default:
+            return false;
     }
 }

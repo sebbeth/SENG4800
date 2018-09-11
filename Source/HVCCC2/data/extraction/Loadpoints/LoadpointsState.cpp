@@ -1,9 +1,10 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-10 19:35:46.474699
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
  **/
 #include "LoadpointsState.h"
 
-LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType stateType, LoadpointsEventType eventType) {    switch(stateType) {
+LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType stateType, LoadpointsEventType eventType) {
+    switch(stateType) {
         case LoadpointsStateType::Idle:
             switch(eventType) {
                 case LoadpointsEventType::StartPreload:
@@ -133,10 +134,7 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
                     return LoadpointsStateType::Invalid;
             }
         case LoadpointsStateType::RechargingFix:
-            switch(eventType) {
-                default:
-                    return LoadpointsStateType::Invalid;
-            }
+            return LoadpointsStateType::Invalid;
         case LoadpointsStateType::RecharingFix:
             switch(eventType) {
                 case LoadpointsEventType::StartRecharge:

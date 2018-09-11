@@ -25,8 +25,8 @@ xml_src_path = args.xml_directory
 code_dst_path = args.output_directory
 should_generate_stubs = args.generate_stubs
 
-
 tab_spaces = ' ' * 4
+
 
 def generate_entity_class(entity, has_event=True, merge_targets=None):
     decl = '''#pragma once
@@ -45,17 +45,17 @@ class {1}Event;'''.format(tab_spaces, entity.name)
 class {1}State;
 class {1} {{
 public:''' +
-            ('''
+             ('''
 {0}using AssociatedEvent = {1}Event;''' if has_event else ''
-             ) +
-            (
-                    ('''
+              ) +
+             (
+                 ('''
 {0}using AssociatedEntities = TypeList<''' + ', '.join(merge_targets) + '''>;''') if merge_targets else ''
              )
-            +
-            '''
-{0}using AssociatedState = {1}State;
-{0}static const std::string ENTITY_NAME;''').format(tab_spaces, entity.name)
+             +
+             '''
+ {0}using AssociatedState = {1}State;
+ {0}static const std::string ENTITY_NAME;''').format(tab_spaces, entity.name)
     if has_event:
         decl += '''
 {0}static const std::string XML_TAG_PREFIX;'''.format(tab_spaces)
@@ -92,7 +92,7 @@ const std::string {1}::ENTITY_NAME = "{1}";'''.format(tab_spaces, entity.name)
 const std::string {1}::XML_TAG_PREFIX = "{2}";
 '''.format(tab_spaces, entity.name, entity.prefix)
     impl += '''
-    
+
 bool operator<(const {1}::Id& a, const {1}::Id& b) {{
 {0}return '''.format(tab_spaces, entity.name)
     if entity.has_terminal:
@@ -115,8 +115,9 @@ std::string {1}::Id::nameForBinaryFile() const {{
 
     return decl, impl
 
+
 def generate_enum(enum_name, codemap, decode=True, encode=None):
-    #default to implementing an encode if we're decoding
+    # default to implementing an encode if we're decoding
     if encode is None:
         encode = decode
     decl = '''#pragma once
@@ -304,7 +305,7 @@ public:
     if entity.attributes:
         attributes_to_add = list(entity.attributes)
 
-        #don't duplicate the statetype if the state is encodable
+        # don't duplicate the statetype if the state is encodable
         if entity.has_encodable_state:
             attributes_to_add.remove('''{}State'''.format(entity.name[0].lower() + entity.name[1:]))
         for each_name in sorted(attributes_to_add):
@@ -320,27 +321,36 @@ public:
     impl = None
     if not entity.has_encodable_state:
         decl += '''
-{0}static {1}StateType determineNextType({1}StateType stateType, {1}EventType eventType);'''.format(tab_spaces, entity.name)
+{0}static {1}StateType determineNextType({1}StateType stateType, {1}EventType eventType);'''.format(tab_spaces,
+                                                                                                    entity.name)
 
         impl = '''#include "{1}State.h"
 
-{1}StateType {1}State::determineNextType({1}StateType stateType, {1}EventType eventType) {{'''.format(tab_spaces, entity.name)
+{1}StateType {1}State::determineNextType({1}StateType stateType, {1}EventType eventType) {{'''.format(tab_spaces,
+                                                                                                      entity.name)
 
-        impl += '''{0}switch(stateType) {{'''.format(tab_spaces, entity.name)
+        impl += '''
+{0}switch(stateType) {{'''.format(tab_spaces, entity.name)
         for each_state in entity.states.values():
             impl += '''
-{0}{0}case {1}StateType::{2}:
+{0}{0}case {1}StateType::{2}:'''.format(tab_spaces, entity.name, each_state.name)
+            if each_state.transitions:
+                impl += '''
 {0}{0}{0}switch(eventType) {{'''.format(tab_spaces, entity.name, each_state.name)
 
-            for each_event, each_destination_state in each_state.transitions.items():
-                impl += '''
+                for each_event, each_destination_state in each_state.transitions.items():
+                    impl += '''
 {0}{0}{0}{0}case {1}EventType::{2}:
-{0}{0}{0}{0}{0}return {1}StateType::{3};'''.format(tab_spaces, entity.name, each_event.name, each_destination_state.name)
+{0}{0}{0}{0}{0}return {1}StateType::{3};'''.format(tab_spaces, entity.name, each_event.name,
+                                                       each_destination_state.name)
 
-            impl += '''
+                impl += '''
 {0}{0}{0}{0}default:
 {0}{0}{0}{0}{0}return {1}StateType::Invalid;
 {0}{0}{0}}}'''.format(tab_spaces, entity.name)
+            else:
+                impl += '''
+{0}{0}{0}return {1}StateType::Invalid;'''.format(tab_spaces, entity.name)
 
         impl += '''
 {0}{0}default:
@@ -359,6 +369,7 @@ void {1}State::serialize(Archive & archive) {{
 }}'''.format(tab_spaces, entity.name)
 
     return decl, impl
+
 
 def generate_merge_state_class(entities, merge_name, merge_target_names):
     entities_to_merge = list(filter(lambda x: x.name in merge_target_names, entities.values()))
@@ -402,7 +413,8 @@ void {1}State::serialize(Archive & archive) {{
     impl = '''#include "{1}State.h"'''.format(tab_spaces, merge_name)
     for each_to_merge in entities_to_merge:
         impl += '''
-{1}State::{1}State(const {2}State& src): type({1}StateType::Invalid), id({{src.id.terminal, src.id.name}})'''.format(tab_spaces, merge_name, each_to_merge.name)
+{1}State::{1}State(const {2}State& src): type({1}StateType::Invalid), id({{src.id.terminal, src.id.name}})'''.format(
+            tab_spaces, merge_name, each_to_merge.name)
         for each_attribute in attributes_to_add:
             impl += ''', {1}(src.{1})'''.format(tab_spaces, each_attribute)
         impl += '''{{
@@ -419,6 +431,8 @@ void {1}State::serialize(Archive & archive) {{
 }}'''.format(tab_spaces, merge_name)
 
     return decl, impl
+
+
 def generate_traits_template():
     decl = '''#pragma once
 #include <string>
@@ -431,19 +445,21 @@ public:
 
     return decl
 
+
 '''
 This generates the stubs for the template specialisations for each type
 '''
-def generate_traits_stub(entity):
 
+
+def generate_traits_stub(entity):
     attributes_to_add = list(entity.attributes)
-    #don't duplicate the statetype if the state is encodable
+    # don't duplicate the statetype if the state is encodable
     if entity.has_encodable_state:
         to_remove = '''{}State'''.format(entity.name[0].lower() + entity.name[1:])
         if attributes_to_add.count(to_remove):
             attributes_to_add.remove(to_remove)
 
-    #this is a hackish workaround that I /think/ works but only for current data
+    # this is a hackish workaround that I /think/ works but only for current data
     initial_state_selection = None
     if entity.has_encodable_state:
         initial_state_selection = '''src.{0}State'''.format(entity.name[0].lower() + entity.name[1:])
@@ -474,15 +490,16 @@ public:
 {0}{0}{1}State result = initializeFromEvent(event);//remove this line if/when you do
 {0}{0}result.id = event.id;'''.format(tab_spaces, entity.name)
 
-    #if it has encodable state this will be given by initialising from the event
+    # if it has encodable state this will be given by initialising from the event
     if not entity.has_encodable_state:
-        decl += '''{0}{0}result.type = {1}State::determineNextType(current.type, event.type);'''.format(tab_spaces, entity.name)
+        decl += '''{0}{0}result.type = {1}State::determineNextType(current.type, event.type);'''.format(tab_spaces,
+                                                                                                        entity.name)
 
     for each_name in filter(lambda x: x != 'type', sorted(attributes_to_add)):
         decl += '''
 {0}{0}if(event.has{1}()) {{
 {0}{0}result.{2} = event.{2};
-{0}{0}}}'''.format(tab_spaces, each_name[0].upper()+each_name[1:], each_name)
+{0}{0}}}'''.format(tab_spaces, each_name[0].upper() + each_name[1:], each_name)
 
     decl += '''
 {0}{0}return result;
@@ -491,6 +508,7 @@ public:
 }};'''.format(tab_spaces)
 
     return decl, ''
+
 
 def generate_data_extractor(entities, decodable_entities):
     tuple_signature = '''std::tuple<''' + ', '.join(
@@ -516,7 +534,7 @@ def generate_data_extractor(entities, decodable_entities):
     )
 
     decl += '''
-    
+
 //This macro prints out an error message if the XMLError holds anything that isn't an tinyxml2::XML_SUCCESS
 #ifndef XMLCheckResult
 {0}//#define XMLCheckResult(a_eResult) if (a_eResult != tinyxml2::XML_SUCCESS){{ std::printf("Error: %i\\n", a_eResult); return a_eResult;}}
@@ -580,9 +598,10 @@ inline tinyxml2::XMLError extractAttribute(const tinyxml2::XMLElement& source, {
 #include <regex>'''.format(tab_spaces)
 
     for each_entity in sorted(entities.values()):
-        extraction_signature = '''tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, {1}Event& destination, const std::string& eventTypeCode{2})'''.format(tab_spaces, each_entity.name, ', TerminalId theTerminal' if each_entity.has_terminal else '')
+        extraction_signature = '''tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, {1}Event& destination, const std::string& eventTypeCode{2})'''.format(
+            tab_spaces, each_entity.name, ', TerminalId theTerminal' if each_entity.has_terminal else '')
         decl += '''
-        
+
 {};'''.format(extraction_signature)
 
         impl += '''
@@ -674,7 +693,7 @@ inline tinyxml2::XMLError extractAttribute(const tinyxml2::XMLElement& source, {
 {};'''.format(extraction_signature)
 
     impl += '''
-    
+
 {1} {{
 {0}tinyxml2::XMLDocument document;
 {0}tinyxml2::XMLNode* root;
@@ -712,7 +731,8 @@ inline tinyxml2::XMLError extractAttribute(const tinyxml2::XMLElement& source, {
 
     impl += ' else '.join(
         ('''if (entityTypeCode == {1}::XML_TAG_PREFIX) {{
-{0}{0}{0}{0}extractEvent(*eachElement, std::get<std::vector<{1}Event>>(destination), eventTypeCode''' + (', theTerminal' if each.has_terminal else '') + '''); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
+{0}{0}{0}{0}extractEvent(*eachElement, std::get<std::vector<{1}Event>>(destination), eventTypeCode''' + (
+            ', theTerminal' if each.has_terminal else '') + '''); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
 {0}{0}{0}}}''').format(tab_spaces, each.name)
         for each in sorted(entities.values())
     )
@@ -745,6 +765,7 @@ inline tinyxml2::XMLError extractAttribute(const tinyxml2::XMLElement& source, {
 
     return decl, impl
 
+
 def generate_entity_type_lists(entities, merges):
     decl = '''#pragma once
 #include "../util.h"
@@ -763,24 +784,27 @@ def generate_entity_type_lists(entities, merges):
 #include "{1}/{1}State.h"'''.format(tab_spaces, each_name)
 
     decl += '''
-    
+
 #define EntitiesWithEvents {1}
 #define MergeEntities {2}
 #define AllEntities {3}
 
 using EventMapTuple = std::tuple<'''.format(
-    tab_spaces,
-    ', '.join(sorted(entities)),
-    ', '.join(sorted(merges.keys())),
-    ', '.join(sorted(list(entities) + list(merges.keys()))))
+        tab_spaces,
+        ', '.join(sorted(entities)),
+        ', '.join(sorted(merges.keys())),
+        ', '.join(sorted(list(entities) + list(merges.keys()))))
 
-    decl += ', '.join('''std::map<{1}::Id, std::vector<{1}Event>>'''.format(tab_spaces, each_name) for each_name in sorted(entities))
+    decl += ', '.join(
+        '''std::map<{1}::Id, std::vector<{1}Event>>'''.format(tab_spaces, each_name) for each_name in sorted(entities))
     decl += '''>;
 using BasicStateMapTuple = std::tuple<'''
-    decl += ', '.join('''std::map<{1}::Id, std::vector<{1}State>>'''.format(tab_spaces, each_name) for each_name in sorted(entities))
+    decl += ', '.join(
+        '''std::map<{1}::Id, std::vector<{1}State>>'''.format(tab_spaces, each_name) for each_name in sorted(entities))
     decl += '''>;
 using FullStateMapTuple = std::tuple<'''
-    decl += ', '.join('''std::map<{1}::Id, std::vector<{1}State>>'''.format(tab_spaces, each_name) for each_name in sorted(list(entities) + list(merges.keys())))
+    decl += ', '.join('''std::map<{1}::Id, std::vector<{1}State>>'''.format(tab_spaces, each_name) for each_name in
+                      sorted(list(entities) + list(merges.keys())))
     decl += '''>;
 '''.format(tab_spaces)
     return decl
@@ -816,18 +840,18 @@ def generate_code(json_file_path, xml_folder, out_folder, should_generate_stubs)
         out_path = '{}'.format(entity.name)
         os.makedirs('{}/{}'.format(out_folder, out_path), exist_ok=True)
 
-        #generate base entity traits like the id type and the string associated with the entity
+        # generate base entity traits like the id type and the string associated with the entity
         # generate and write the main event class
         decl, impl = generate_entity_class(entity)
         each_path = '{}/{}.h'.format(out_path, entity.name)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-            decl_file.write(generation_timestamp+decl)
+            decl_file.write(generation_timestamp + decl)
 
         each_path = '{}/{}.cpp'.format(out_path, entity.name)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as impl_file:
-            impl_file.write(generation_timestamp+impl)
+            impl_file.write(generation_timestamp + impl)
 
         # generate and write-to-file the eventtype enum
         event_code_map = {each.code: each.name for each in entity.events.values()}
@@ -837,24 +861,24 @@ def generate_code(json_file_path, xml_folder, out_folder, should_generate_stubs)
         each_path = '{}/{}.h'.format(out_path, event_type_enum_name)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-            decl_file.write(generation_timestamp+decl)
+            decl_file.write(generation_timestamp + decl)
 
         each_path = '{}/{}.cpp'.format(out_path, event_type_enum_name)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as impl_file:
-            impl_file.write(generation_timestamp+impl)
+            impl_file.write(generation_timestamp + impl)
 
         # generate and write the main event class
         decl, impl = generate_event_class(entity, decodable_entities)
         each_path = '{}/{}Event.h'.format(out_path, entity.name)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-            decl_file.write(generation_timestamp+decl)
+            decl_file.write(generation_timestamp + decl)
 
         each_path = '{}/{}Event.cpp'.format(out_path, entity.name)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as impl_file:
-            impl_file.write(generation_timestamp+impl)
+            impl_file.write(generation_timestamp + impl)
 
         # generate and write the StateType enum
         state_id_enum_state = '{}StateType'.format(entity.name)
@@ -865,26 +889,26 @@ def generate_code(json_file_path, xml_folder, out_folder, should_generate_stubs)
         each_path = '{}/{}.h'.format(out_path, state_id_enum_state)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-            decl_file.write(generation_timestamp+decl)
+            decl_file.write(generation_timestamp + decl)
 
         if entity.has_encodable_state:
             each_path = '{}/{}.cpp'.format(out_path, state_id_enum_state)
             file_list.append(each_path)
             with open('{}/{}'.format(out_folder, each_path), 'w') as impl_file:
-                impl_file.write(generation_timestamp+impl)
+                impl_file.write(generation_timestamp + impl)
 
         # generate and write the state class
         decl, impl = generate_state_class(entity, decodable_entities)
         each_path = '{}/{}State.h'.format(out_path, entity.name)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-            decl_file.write(generation_timestamp+decl)
+            decl_file.write(generation_timestamp + decl)
 
         if not entity.has_encodable_state:
             each_path = '{}/{}State.cpp'.format(out_path, entity.name)
             file_list.append(each_path)
             with open('{}/{}'.format(out_folder, each_path), 'w') as impl_file:
-                impl_file.write(generation_timestamp+impl)
+                impl_file.write(generation_timestamp + impl)
 
         if should_generate_stubs:
             decl, impl = generate_traits_stub(entity)
@@ -892,7 +916,7 @@ def generate_code(json_file_path, xml_folder, out_folder, should_generate_stubs)
             file_list.append(each_path)
             traits_header_list.append(each_path)
             with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-                decl_file.write(generation_timestamp+decl)
+                decl_file.write(generation_timestamp + decl)
 
             # each_path = '{}/{}StateTraits.cpp'.format(out_path, entity.name)
             # file_list.append(each_path)
@@ -908,7 +932,7 @@ def generate_code(json_file_path, xml_folder, out_folder, should_generate_stubs)
             # file_list.append(each_path)
             # traits_header_list.append(each_path)
 
-    #now do merges
+    # now do merges
 
     for each_name, each_targets in merges.items():
         out_path = '{}'.format(each_name)
@@ -919,44 +943,45 @@ def generate_code(json_file_path, xml_folder, out_folder, should_generate_stubs)
                 event_code_map[each_state] = each_state
         state_type_enum_name = '{}StateType'.format(each_name)
 
-        #the new state enum
+        # the new state enum
         decl, impl = generate_enum(state_type_enum_name, event_code_map, False, each_targets)
         each_path = '{}/{}.h'.format(out_path, state_type_enum_name)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-            decl_file.write(generation_timestamp+decl)
+            decl_file.write(generation_timestamp + decl)
 
-        #the new entity
-        #using a fake class
+        # the new entity
+        # using a fake class
         class fake:
             name = each_name
             has_terminal = all(map(lambda x: entities[x].has_terminal, each_targets))
+
         decl, impl = generate_entity_class(fake, False, each_targets)
         each_path = '{}/{}.h'.format(out_path, each_name)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-            decl_file.write(generation_timestamp+decl)
+            decl_file.write(generation_timestamp + decl)
 
         each_path = '{}/{}.cpp'.format(out_path, each_name)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as impl_file:
-            impl_file.write(generation_timestamp+impl)
+            impl_file.write(generation_timestamp + impl)
 
-        #the new state class itself
+        # the new state class itself
         decl, impl = generate_merge_state_class(entities, each_name, each_targets)
         each_path = '{}/{}State.h'.format(out_path, each_name)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-            decl_file.write(generation_timestamp+decl)
+            decl_file.write(generation_timestamp + decl)
 
         each_path = '{}/{}State.cpp'.format(out_path, each_name)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as impl_file:
-            impl_file.write(generation_timestamp+impl)
+            impl_file.write(generation_timestamp + impl)
 
-    #now some global stuff
+    # now some global stuff
 
-    #an enum for terminals
+    # an enum for terminals
     decl, impl = generate_enum("TerminalId", {each: each for each in terminals}, decode=True)
 
     decl += '''
@@ -966,12 +991,12 @@ static const int TERMINAL_CODE_LENGTH = {1};
     each_path = 'TerminalId.h'.format(out_path, entity.name)
     file_list.append(each_path)
     with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-        decl_file.write(generation_timestamp+decl)
+        decl_file.write(generation_timestamp + decl)
 
     each_path = 'TerminalId.cpp'.format(out_path, entity.name)
     file_list.append(each_path)
     with open('{}/{}'.format(out_folder, each_path), 'w') as impl_file:
-        impl_file.write(generation_timestamp+impl)
+        impl_file.write(generation_timestamp + impl)
 
     # write the base template for all traits
     decl = generate_traits_template()
@@ -979,39 +1004,38 @@ static const int TERMINAL_CODE_LENGTH = {1};
     file_list.append(each_path)
     traits_header_list.append(each_path)
     with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-        decl_file.write(generation_timestamp+decl)
+        decl_file.write(generation_timestamp + decl)
 
-    #create a header including all the traits we actually use
+    # create a header including all the traits we actually use
     decl = '''#pragma once\n''' + '\n'.join('''#include "{0}"'''.format(each_path) for each_path in traits_header_list)
     each_path = 'implementedTraits.h'
     file_list.append(each_path)
     with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-        decl_file.write(generation_timestamp+decl)
+        decl_file.write(generation_timestamp + decl)
 
-    #create a header for the type lists
+    # create a header for the type lists
     decl = generate_entity_type_lists(entities, merges)
     each_path = 'implementedEntities.h'
     file_list.append(each_path)
     with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-        decl_file.write(generation_timestamp+decl)
+        decl_file.write(generation_timestamp + decl)
 
     # generate and write out the data extractor
     decl, impl = generate_data_extractor(entities, decodable_entities)
     each_path = 'extractData.h'
     file_list.append(each_path)
     with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
-        decl_file.write(generation_timestamp+decl)
+        decl_file.write(generation_timestamp + decl)
 
     each_path = 'extractData.cpp'
     file_list.append(each_path)
     with open('{}/{}'.format(out_folder, each_path), 'w') as impl_file:
-        impl_file.write(generation_timestamp+impl)
+        impl_file.write(generation_timestamp + impl)
 
     with open('{}/CMakeLists.txt'.format(out_folder, each_path), 'w') as cmake_file:
-        cmake_file.write(generation_timestamp+'''set(GENERATED
+        cmake_file.write(generation_timestamp + '''set(GENERATED
 {0}${{CMAKE_CURRENT_SOURCE_DIR}}/python/out/{1}
 )'''.format(tab_spaces, ('''\n{0}${{CMAKE_CURRENT_SOURCE_DIR}}/python/out/'''.format(tab_spaces)).join(file_list)))
 
 
 generate_code(json_src_path, glob.glob("{}/*.xml".format(xml_src_path)), code_dst_path, should_generate_stubs)
-

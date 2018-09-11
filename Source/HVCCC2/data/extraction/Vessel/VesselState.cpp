@@ -1,9 +1,10 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-10 19:35:46.474699
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
  **/
 #include "VesselState.h"
 
-VesselStateType VesselState::determineNextType(VesselStateType stateType, VesselEventType eventType) {    switch(stateType) {
+VesselStateType VesselState::determineNextType(VesselStateType stateType, VesselEventType eventType) {
+    switch(stateType) {
         case VesselStateType::Idle:
             switch(eventType) {
                 case VesselEventType::AtAnchorage:
@@ -102,10 +103,7 @@ VesselStateType VesselState::determineNextType(VesselStateType stateType, Vessel
                     return VesselStateType::Invalid;
             }
         case VesselStateType::Exited:
-            switch(eventType) {
-                default:
-                    return VesselStateType::Invalid;
-            }
+            return VesselStateType::Invalid;
         default:
             return VesselStateType::Invalid;
     }

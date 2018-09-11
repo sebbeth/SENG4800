@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-10 19:35:46.474699
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
  **/
 #pragma once
 #include <string>
@@ -11,8 +11,8 @@ class StackerReclaimerState;
 class StackerReclaimer {
 public:
     using AssociatedEntities = TypeList<Stacker, Reclaimer>;
-    using AssociatedState = StackerReclaimerState;
-    static const std::string ENTITY_NAME;
+     using AssociatedState = StackerReclaimerState;
+     static const std::string ENTITY_NAME;
     class Id {
     public:
         TerminalId terminal;

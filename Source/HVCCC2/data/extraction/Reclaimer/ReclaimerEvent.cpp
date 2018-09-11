@@ -1,14 +1,14 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-10 19:35:46.474699
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
  **/
 #include "ReclaimerEvent.h"
 
 bool ReclaimerEvent::hasAmount() const {
     switch (type) {
         case ReclaimerEventType::Complete:
+        case ReclaimerEventType::DoubleHandleComplete:
         case ReclaimerEventType::OperationComplete:
             return true;
-        case ReclaimerEventType::DoubleHandleComplete:
         case ReclaimerEventType::DoubleHandleOperationStart:
         case ReclaimerEventType::DoubleHandleStart:
         case ReclaimerEventType::Fail:
@@ -29,11 +29,9 @@ bool ReclaimerEvent::hasAmount() const {
 bool ReclaimerEvent::hasPosition() const {
     switch (type) {
         case ReclaimerEventType::Complete:
+        case ReclaimerEventType::DoubleHandleComplete:
         case ReclaimerEventType::DoubleHandleOperationStart:
-        case ReclaimerEventType::Fail:
-        case ReclaimerEventType::Fix:
-        case ReclaimerEventType::MaintenanceComplete:
-        case ReclaimerEventType::MaintenanceStart:
+        case ReclaimerEventType::DoubleHandleStart:
         case ReclaimerEventType::OnMove:
         case ReclaimerEventType::OnStopMove:
         case ReclaimerEventType::OperationComplete:
@@ -42,8 +40,10 @@ bool ReclaimerEvent::hasPosition() const {
         case ReclaimerEventType::SyncedFail:
         case ReclaimerEventType::SyncedFix:
             return true;
-        case ReclaimerEventType::DoubleHandleComplete:
-        case ReclaimerEventType::DoubleHandleStart:
+        case ReclaimerEventType::Fail:
+        case ReclaimerEventType::Fix:
+        case ReclaimerEventType::MaintenanceComplete:
+        case ReclaimerEventType::MaintenanceStart:
         default:
             return false;
     }
@@ -52,17 +52,17 @@ bool ReclaimerEvent::hasPosition() const {
 bool ReclaimerEvent::hasStockpileID() const {
     switch (type) {
         case ReclaimerEventType::Complete:
+        case ReclaimerEventType::DoubleHandleComplete:
         case ReclaimerEventType::DoubleHandleOperationStart:
-        case ReclaimerEventType::Fail:
-        case ReclaimerEventType::Fix:
+        case ReclaimerEventType::DoubleHandleStart:
         case ReclaimerEventType::OperationComplete:
         case ReclaimerEventType::OperationStart:
         case ReclaimerEventType::Start:
         case ReclaimerEventType::SyncedFail:
         case ReclaimerEventType::SyncedFix:
             return true;
-        case ReclaimerEventType::DoubleHandleComplete:
-        case ReclaimerEventType::DoubleHandleStart:
+        case ReclaimerEventType::Fail:
+        case ReclaimerEventType::Fix:
         case ReclaimerEventType::MaintenanceComplete:
         case ReclaimerEventType::MaintenanceStart:
         case ReclaimerEventType::OnMove:
@@ -75,11 +75,9 @@ bool ReclaimerEvent::hasStockpileID() const {
 bool ReclaimerEvent::hasTime() const {
     switch (type) {
         case ReclaimerEventType::Complete:
+        case ReclaimerEventType::DoubleHandleComplete:
         case ReclaimerEventType::DoubleHandleOperationStart:
-        case ReclaimerEventType::Fail:
-        case ReclaimerEventType::Fix:
-        case ReclaimerEventType::MaintenanceComplete:
-        case ReclaimerEventType::MaintenanceStart:
+        case ReclaimerEventType::DoubleHandleStart:
         case ReclaimerEventType::OnMove:
         case ReclaimerEventType::OnStopMove:
         case ReclaimerEventType::OperationComplete:
@@ -88,8 +86,10 @@ bool ReclaimerEvent::hasTime() const {
         case ReclaimerEventType::SyncedFail:
         case ReclaimerEventType::SyncedFix:
             return true;
-        case ReclaimerEventType::DoubleHandleComplete:
-        case ReclaimerEventType::DoubleHandleStart:
+        case ReclaimerEventType::Fail:
+        case ReclaimerEventType::Fix:
+        case ReclaimerEventType::MaintenanceComplete:
+        case ReclaimerEventType::MaintenanceStart:
         default:
             return false;
     }

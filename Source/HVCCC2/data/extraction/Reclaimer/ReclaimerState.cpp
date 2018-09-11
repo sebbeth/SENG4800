@@ -1,9 +1,10 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-10 19:35:46.474699
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
  **/
 #include "ReclaimerState.h"
 
-ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateType, ReclaimerEventType eventType) {    switch(stateType) {
+ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateType, ReclaimerEventType eventType) {
+    switch(stateType) {
         case ReclaimerStateType::Idle:
             switch(eventType) {
                 case ReclaimerEventType::OperationStart:
@@ -143,10 +144,7 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
                     return ReclaimerStateType::Invalid;
             }
         case ReclaimerStateType::PostDoubleHandleReserved:
-            switch(eventType) {
-                default:
-                    return ReclaimerStateType::Invalid;
-            }
+            return ReclaimerStateType::Invalid;
         case ReclaimerStateType::WorkingDoubleHandleFail:
             switch(eventType) {
                 case ReclaimerEventType::Fix:

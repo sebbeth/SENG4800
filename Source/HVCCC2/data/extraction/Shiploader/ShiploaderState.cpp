@@ -1,9 +1,10 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-10 19:35:46.474699
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
  **/
 #include "ShiploaderState.h"
 
-ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType stateType, ShiploaderEventType eventType) {    switch(stateType) {
+ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType stateType, ShiploaderEventType eventType) {
+    switch(stateType) {
         case ShiploaderStateType::Idle:
             switch(eventType) {
                 case ShiploaderEventType::MaintenanceStart:
@@ -106,10 +107,7 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
                     return ShiploaderStateType::Invalid;
             }
         case ShiploaderStateType::ChaningHatches:
-            switch(eventType) {
-                default:
-                    return ShiploaderStateType::Invalid;
-            }
+            return ShiploaderStateType::Invalid;
         case ShiploaderStateType::PostLoadSyncedFail:
             switch(eventType) {
                 case ShiploaderEventType::SyncedFix:
@@ -145,10 +143,7 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
                     return ShiploaderStateType::Invalid;
             }
         case ShiploaderStateType::ChangingHatchesSyncedFail:
-            switch(eventType) {
-                default:
-                    return ShiploaderStateType::Invalid;
-            }
+            return ShiploaderStateType::Invalid;
         case ShiploaderStateType::ChangingHatchesFailed:
             switch(eventType) {
                 case ShiploaderEventType::Fix:

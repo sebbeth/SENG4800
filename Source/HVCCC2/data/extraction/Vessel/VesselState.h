@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-10 19:35:46.474699
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
  **/
 #pragma once
 #include <string>
@@ -14,11 +14,10 @@ public:
     VesselStateType type;
     
 
-    bool isTidal;
-    double metermark;
+    int ballast;
+    int cargo;
     std::string terminalID;
     double time;
-    int tugs;
     VesselState() = default;
     template<class Archive>
     void serialize(Archive & archive);
@@ -27,5 +26,5 @@ public:
 
 template<class Archive>
 void VesselState::serialize(Archive & archive) {
-    archive(id, type, isTidal, metermark, terminalID, time, tugs);
+    archive(id, type, ballast, cargo, terminalID, time);
 }

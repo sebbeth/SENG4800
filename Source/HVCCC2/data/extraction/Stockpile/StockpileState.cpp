@@ -1,9 +1,10 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-10 19:35:46.474699
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
  **/
 #include "StockpileState.h"
 
-StockpileStateType StockpileState::determineNextType(StockpileStateType stateType, StockpileEventType eventType) {    switch(stateType) {
+StockpileStateType StockpileState::determineNextType(StockpileStateType stateType, StockpileEventType eventType) {
+    switch(stateType) {
         case StockpileStateType::Idle:
             switch(eventType) {
                 case StockpileEventType::StockpileCreated:
@@ -71,10 +72,7 @@ StockpileStateType StockpileState::determineNextType(StockpileStateType stateTyp
                     return StockpileStateType::Invalid;
             }
         case StockpileStateType::DedicatedReclaiming:
-            switch(eventType) {
-                default:
-                    return StockpileStateType::Invalid;
-            }
+            return StockpileStateType::Invalid;
         case StockpileStateType::RemnantStacking:
             switch(eventType) {
                 case StockpileEventType::StackTransferComplete:

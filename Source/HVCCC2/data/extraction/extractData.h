@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-10 19:35:46.474699
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
  **/
 #pragma once
 
@@ -17,7 +17,7 @@
 #include "Stacker/StackerEvent.h"
 #include "Stockpile/StockpileEvent.h"
 #include "Vessel/VesselEvent.h"
-    
+
 //This macro prints out an error message if the XMLError holds anything that isn't an tinyxml2::XML_SUCCESS
 #ifndef XMLCheckResult
     //#define XMLCheckResult(a_eResult) if (a_eResult != tinyxml2::XML_SUCCESS){ std::printf("Error: %i\n", a_eResult); return a_eResult;}
@@ -82,21 +82,21 @@ inline tinyxml2::XMLError extractAttribute(const tinyxml2::XMLElement& source, S
     destination = decodeSignalStateType(tmp);
     return result;
 }
-        
+
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, DumpstationEvent& destination, const std::string& eventTypeCode, TerminalId theTerminal);
-        
+
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, LoadpointsEvent& destination, const std::string& eventTypeCode);
-        
+
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ReclaimerEvent& destination, const std::string& eventTypeCode, TerminalId theTerminal);
-        
+
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ShiploaderEvent& destination, const std::string& eventTypeCode, TerminalId theTerminal);
-        
+
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, SignalEvent& destination, const std::string& eventTypeCode);
-        
+
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StackerEvent& destination, const std::string& eventTypeCode, TerminalId theTerminal);
-        
+
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StockpileEvent& destination, const std::string& eventTypeCode, TerminalId theTerminal);
-        
+
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, VesselEvent& destination, const std::string& eventTypeCode);
 
 tinyxml2::XMLError extractAll(const std::string& srcFilePath, EventVectorTuple& destination);

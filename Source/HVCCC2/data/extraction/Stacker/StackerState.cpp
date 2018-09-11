@@ -1,9 +1,10 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-10 19:35:46.474699
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
  **/
 #include "StackerState.h"
 
-StackerStateType StackerState::determineNextType(StackerStateType stateType, StackerEventType eventType) {    switch(stateType) {
+StackerStateType StackerState::determineNextType(StackerStateType stateType, StackerEventType eventType) {
+    switch(stateType) {
         case StackerStateType::Idle:
             switch(eventType) {
                 case StackerEventType::OperationStart:
@@ -143,10 +144,7 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
                     return StackerStateType::Invalid;
             }
         case StackerStateType::PostDoubleHandleReserved:
-            switch(eventType) {
-                default:
-                    return StackerStateType::Invalid;
-            }
+            return StackerStateType::Invalid;
         case StackerStateType::WorkingDoubleHandleFail:
             switch(eventType) {
                 case StackerEventType::Fix:

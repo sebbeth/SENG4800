@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-10 19:35:46.474699
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
  **/
 #include "LoadpointsEvent.h"
 
@@ -44,6 +44,8 @@ bool LoadpointsEvent::hasCycleID() const {
 bool LoadpointsEvent::hasLoadpointName() const {
     switch (type) {
         case LoadpointsEventType::FinishLoad:
+        case LoadpointsEventType::MaintenanceComplete:
+        case LoadpointsEventType::MaintenanceStart:
         case LoadpointsEventType::OnFail:
         case LoadpointsEventType::OnFix:
         case LoadpointsEventType::StartIdle:
@@ -52,8 +54,6 @@ bool LoadpointsEvent::hasLoadpointName() const {
         case LoadpointsEventType::StartPreload:
         case LoadpointsEventType::StartRecharge:
             return true;
-        case LoadpointsEventType::MaintenanceComplete:
-        case LoadpointsEventType::MaintenanceStart:
         case LoadpointsEventType::StartPostLoad:
         default:
             return false;
@@ -63,6 +63,8 @@ bool LoadpointsEvent::hasLoadpointName() const {
 bool LoadpointsEvent::hasTime() const {
     switch (type) {
         case LoadpointsEventType::FinishLoad:
+        case LoadpointsEventType::MaintenanceComplete:
+        case LoadpointsEventType::MaintenanceStart:
         case LoadpointsEventType::OnFail:
         case LoadpointsEventType::OnFix:
         case LoadpointsEventType::StartIdle:
@@ -71,8 +73,6 @@ bool LoadpointsEvent::hasTime() const {
         case LoadpointsEventType::StartPreload:
         case LoadpointsEventType::StartRecharge:
             return true;
-        case LoadpointsEventType::MaintenanceComplete:
-        case LoadpointsEventType::MaintenanceStart:
         case LoadpointsEventType::StartPostLoad:
         default:
             return false;
