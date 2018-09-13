@@ -127,10 +127,6 @@ void ALevelController::BeginPlay()
 	coalStacks[0]->setQuantity(0.8);
 	coalStacks[1]->setQuantity(0.2);
 	coalStacks[2]->setQuantity(0.5);
-
-	//Temporarily setting the play state to true here,
-	//so that the animations start right at the beginning:
-	setPlayState(true);
 }
 
 
