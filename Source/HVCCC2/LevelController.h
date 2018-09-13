@@ -35,8 +35,6 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UFUNCTION(BlueprintCallable, Category = "time")
-	float getWorldTime();
 	// Get the blueprints to be used
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class AStackerReclaimer> largeSR_blueprint;

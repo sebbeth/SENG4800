@@ -239,12 +239,6 @@ void ALevelController::Tick(float DeltaTime)
 	}
 }
 
-
-float ALevelController::getWorldTime() {
-	return worldTime;
-}
-
-
 /*  *** Actor spawn functions *** 
 
 Each function
