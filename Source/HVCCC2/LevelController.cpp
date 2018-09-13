@@ -154,19 +154,16 @@ void ALevelController::updateSim() {
 	}
 }
 
-void ALevelController::resetSim() {
-	for (auto watchIt : windows) {
-		watchIt.first = 0;
-		watchIt.second = 0;
-	}
-}
 float ALevelController::getSimTime() {
 	return simTime;
 }
 
 void ALevelController::setSimTime(float absoluteTime) {
 	simTime = absoluteTime;
-	resetSim();
+	for (auto watchIt : windows) {
+		watchIt.first = 0;
+		watchIt.second = 0;
+	}
 	updateSim();
 }
 
@@ -199,43 +196,43 @@ void ALevelController::Tick(float DeltaTime)
 	// DATA STUFF
 	if (isPlaying) {
 		moveSimTime(DeltaTime * speed);
-		auto watchIt = windows.begin();
-		auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
-		auto actorIt = stackerReclaimers.CreateConstIterator();
-		for (; watchIt != windows.end() && actorIt; (++watchIt, ++entIt, ++actorIt)) {
-			auto eachWindow = (*watchIt);
-			auto eachEntity = (*entIt);
-			auto eachActor = (*actorIt);
-			int indexA = eachWindow.first;
-			int indexB = eachWindow.second;
+	}
+	auto watchIt = windows.begin();
+	auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
+	auto actorIt = stackerReclaimers.CreateConstIterator();
+	for (; watchIt != windows.end() && actorIt; (++watchIt, ++entIt, ++actorIt)) {
+		auto eachWindow = (*watchIt);
+		auto eachEntity = (*entIt);
+		auto eachActor = (*actorIt);
+		int indexA = eachWindow.first;
+		int indexB = eachWindow.second;
 
 
-			double timeA = eachEntity.second[indexA].time;
-			double timeB = eachEntity.second[indexB].time;
+		double timeA = eachEntity.second[indexA].time;
+		double timeB = eachEntity.second[indexB].time;
 
-			//the length of time available between the states
-			double aToBTimeDist = timeB - timeA;
+		//the length of time available between the states
+		double aToBTimeDist = timeB - timeA;
 
-			//we have to limit the target time in case the worldTime is beyond the current frame
-			double targetTime = std::max(timeA, std::min(timeB, simTime));
+		//we have to limit the target time in case the worldTime is beyond the current frame
+		double targetTime = std::max(timeA, std::min(timeB, simTime));
 
-			//determine the scale as a 
-			double scale = aToBTimeDist > 0 ? (targetTime - timeA) / aToBTimeDist : 0;
+		//determine the scale as a 
+		double scale = aToBTimeDist > 0 ? (targetTime - timeA) / aToBTimeDist : 0;
 
 
-			double positionA = eachEntity.second[indexA].position;
-			double positionB = eachEntity.second[indexB].position;
+		double positionA = eachEntity.second[indexA].position;
+		double positionB = eachEntity.second[indexB].position;
 
-			double positionInterpolated = positionA + (positionB - positionA)*(scale);
+		double positionInterpolated = positionA + (positionB - positionA)*(scale);
 
-			double positionDelta = (positionInterpolated - xMin) / (xMax - xMin);
+		double positionDelta = (positionInterpolated - xMin) / (xMax - xMin);
 
-			UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f; state a: %d, state b: %d, typea: %d, typeb: %d"), UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str()), float(simTime), indexA, indexB, (int)eachEntity.second[indexA].type, (int)eachEntity.second[indexB].type);
-			UE_LOG(LogTemp, Warning, TEXT("scale: %f, timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position delta: %f"), float(scale), float(timeA), float(timeB), float(positionA), float(positionB), float(positionInterpolated), float(positionDelta));
+		UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f; state a: %d, state b: %d, typea: %d, typeb: %d"), UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str()), float(simTime), indexA, indexB, (int)eachEntity.second[indexA].type, (int)eachEntity.second[indexB].type);
+		UE_LOG(LogTemp, Warning, TEXT("scale: %f, timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position delta: %f"), float(scale), float(timeA), float(timeB), float(positionA), float(positionB), float(positionInterpolated), float(positionDelta));
 
-			// TEST INPUT
-			eachActor->setPosition(positionDelta);
-		}
+		// TEST INPUT
+		eachActor->setPosition(positionDelta);
 	}
 }
 

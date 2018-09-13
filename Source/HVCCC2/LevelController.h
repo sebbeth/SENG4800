@@ -96,9 +96,6 @@ protected:
 	UPROPERTY(EditAnywhere)
 		AActor *conv2_position;
 
-	//resets to the beginning of the of the simulation and then updates them
-	UFUNCTION(BlueprintCallable, Category = "time")
-	void resetSim();
 	//time controls
 	UFUNCTION(BlueprintCallable, Category = "time")
 	float getSimTime();
