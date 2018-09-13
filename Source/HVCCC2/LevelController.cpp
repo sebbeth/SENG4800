@@ -36,22 +36,18 @@ void ALevelController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//Data stuff
-	bool success = deserialize(BINARY_PATH, states);
-
 	//Getting the states from XML
 	EventVectorTuple allEvents = getEventsFromXMLFolder(XML_PATH);
 
 	EventMapTuple<EntitiesWithEvents> organisedEventsTuple;
 	forEachInTuple(allEvents, MapAndSortFunctor<EntitiesWithEvents>(organisedEventsTuple));
-
-	StateMapTuple<AllEntities> statesTuple;
-	forEachInTuple(organisedEventsTuple, ConvertFunctor<AllEntities>(statesTuple));
+	forEachInTuple(organisedEventsTuple, ConvertFunctor<AllEntities>(states));
 
 	//note that this isn't fully templated, but should never need other specialisations
-	merge(statesTuple, std::get<StateMap<StackerReclaimer>>(statesTuple));
-
-	auto& srStates = std::get<StateMap<StackerReclaimer>>(states);
+	merge(states, std::get<StateMap<StackerReclaimer>>(states));
+	FString fstr = UTF8_TO_TCHAR(XML_PATH.c_str());
+	UE_LOG(LogTemp, Warning, TEXT("test '%s' blah "), *fstr);
+	auto& srStates = std::get<StateMap<Stacker>>(states);
 	for (auto eachEntity : srStates) {
 		FString fstr = UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str());
 		UE_LOG(LogTemp, Warning, TEXT("Stacker name: %s"), *fstr);

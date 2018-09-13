@@ -56,5 +56,5 @@ int main() {
 	//std::tuple<std::map<Stacker::Id, std::vector<StackerState>>> deserializedStates;
 	//bool could_deser = deserialize(BINARY_PATH, deserializedStates);
 	//std::cout << "Data deserialised from binary files into memory." << std::endl;
-	//return 0;
+	return 0;
 }
