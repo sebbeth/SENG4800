@@ -1,0 +1,469 @@
+{
+	"entities": {
+		"Stockpile": {
+			"tagPrefix": "sp",
+			"initial": "Idle",
+			"hasTerminal": true,
+            "identifier": "stockpileID",
+			"transitions": {
+				"Built": {
+					"StackStart": "StackingBuilt",
+					"ReclaimStart": "Reclaiming"
+				},
+				"Created": {
+					"StackStart": "Stacking",
+					"StockpileBuilt": "Built"
+				},
+				"DeciatedReclaiming": {
+					"ReclaimComp": "DedicatedCreated"
+				},
+				"DedicatedCreated": {
+					"ReclaimStart": "DedicatedReclaiming",
+					"StackTransStart": "RemnantStacking",
+					"StackStart": "DedicatedStacking"
+				},
+				"DedicatedStacking": {
+					"StackComp": "DedicatedCreated"
+				},
+				"Idle": {
+					"StockpileCreated": "Created",
+					"DedicatedStockpileCreated": "DedicatedCreated"
+				},
+				"Reclaimed": {
+					"StockpileRemnant": "Remnant",
+					"StockpileRemoved": "Idle"
+				},
+				"Reclaiming": {
+					"ReclaimComp": "Reclaimed"
+				},
+				"Remnant": {
+					"ReclaimTransStart": "RemnantReclaiming",
+					"RemnantRemoved": "Idle"
+				},
+				"RemnantReclaiming": {
+					"ReclaimTransComp": "Remnant"
+				},
+				"RemnantStacking": {
+					"StackTransComp": "DedicatedCreated"
+				},
+				"Stacking": {
+					"StackComp": "Created"
+				},
+				"StackingBuilt": {
+					"StackComp": "Built"
+				}
+			}
+		},
+		"Stacker": {
+			"tagPrefix": "stk",
+			"initial": "Idle",
+			"hasTerminal": true,
+            "identifier": "stackerID",
+			"transitions": {
+				"Idle": {
+					"OpStart": "PreStackReserved",
+					"DoubleHandleOpStart": "PreDoubleHandleReserved",
+					"OnMove": "Moving",
+					"MaintStart": "Maintenance"
+				},
+				"Maintenance": {
+					"MaintComp": "Idle"
+				},
+				"Moving": {
+					"OnStopMove": "Idle"
+				},
+				"PreStackReserved": {
+					"Start": "WorkingStack",
+					"Fail": "PreStackReservedFail",
+					"SyncedFail": "PreStackReservedSyncFail"
+				},
+				"PreStackReservedFail": {
+					"Fix": "PreStackReserved"
+				},
+				"PreStackReservedSyncFail": {
+					"SyncedFix": "PreStackReserved"
+				},
+				"WorkingStack": {
+					"Comp": "PostStackReserved",
+					"Fail": "WorkingStackFail",
+					"SyncedFail": "WorkingStackSyncFail"
+				},
+				"WorkingStackFail": {
+					"Fix": "WorkingStack"
+				},
+				"WorkingStackSyncFail": {
+					"SyncedFix": "WorkingStack"
+				},
+				"PostStackReserved": {
+					"Fail": "PostStackReservedFail",
+					"SyncedFail": "PostStackReservedSyncFail",
+					"OpComp": "Idle"
+				},
+				"PostStackReservedFail": {
+					"Fix": "PostStackReserved"
+				},
+				"PostStackReservedSyncFail": {
+					"SyncedFix": "PostStackReserved"
+				},
+				"PreDoubleHandleReserved": {
+					"Fail": "PreDoubleHandleReservedFail",
+					"SyncedFail": "PreDoubleHandleReservedSyncFail",
+					"DoubleHandleStart": "WorkingDoubleHandle"
+				},
+				"PreDoubleHandleReservedFail": {
+					"Fix": "PreDoubleHandleReserved"
+				},
+				"PreDoubleHandleReservedSyncFail": {
+					"SyncedFix": "PreDoubleHandleReserved"
+				},
+				"WorkingDoubleHandle": {
+					"DoubleHandleComp": "PostDoubleHandleReserved",
+					"Fail": "WorkingDoubleHandleFail",
+					"SyncedFail": "WorkingDoubleHandleSyncFail"
+				},
+				"WorkingDoubleHandleFail": {
+					"Fix": "WorkingDoubleHandle"
+				},
+				"WorkingDoubleHandleSyncFail": {
+					"SyncedFix": "WorkingDoubleHandle"
+				}
+			}
+		},
+		"Reclaimer": {
+			"tagPrefix": "rec",
+			"initial": "Idle",
+			"hasTerminal": true,
+            "identifier": "reclaimerID",
+			"transitions": {
+				"Idle": {
+					"OpStart": "PreReclaimReserved",
+					"DoubleHandleOpStart": "PreDoubleHandleReserved",
+					"OnMove": "Moving",
+					"MaintStart": "Maintenance"
+				},
+				"Maintenance": {
+					"MaintComp": "Idle"
+				},
+				"Moving": {
+					"OnStopMove": "Idle"
+				},
+				"PreReclaimReserved": {
+					"Start": "WorkingReclaim",
+					"Fail": "PreReclaimReservedFail",
+					"SyncedFail": "PreReclaimReservedSyncFail"
+				},
+				"PreReclaimReservedFail": {
+					"Fix": "PreReclaimReserved"
+				},
+				"PreReclaimReservedSyncFail": {
+					"SyncedFix": "PreReclaimReserved"
+				},
+				"WorkingReclaim": {
+					"Comp": "PostReclaimReserved",
+					"Fail": "WorkingReclaimFail",
+					"SyncedFail": "WorkingReclaimSyncFail"
+				},
+				"WorkingReclaimFail": {
+					"Fix": "WorkingReclaim"
+				},
+				"WorkingReclaimSyncFail": {
+					"SyncedFix": "WorkingReclaim"
+				},
+				"PostReclaimReserved": {
+					"Fail": "PostReclaimReservedFail",
+					"SyncedFail": "PostReclaimReservedSyncFail",
+					"OpComp": "Idle"
+				},
+				"PostReclaimReservedFail": {
+					"Fix": "PostReclaimReserved"
+				},
+				"PostReclaimReservedSyncFail": {
+					"SyncedFix": "PostReclaimReserved"
+				},
+				"PreDoubleHandleReserved": {
+					"Fail": "PreDoubleHandleReservedFail",
+					"SyncedFail": "PreDoubleHandleReservedSyncFail",
+					"DoubleHandleStart": "WorkingDoubleHandle"
+				},
+				"PreDoubleHandleReservedFail": {
+					"Fix": "PreDoubleHandleReserved"
+				},
+				"PreDoubleHandleReservedSyncFail": {
+					"SyncedFix": "PreDoubleHandleReserved"
+				},
+				"WorkingDoubleHandle": {
+					"DoubleHandleComp": "PostDoubleHandleReserved",
+					"Fail": "WorkingDoubleHandleFail",
+					"SyncedFail": "WorkingDoubleHandleSyncFail"
+				},
+				"WorkingDoubleHandleFail": {
+					"Fix": "WorkingDoubleHandle"
+				},
+				"WorkingDoubleHandleSyncFail": {
+					"SyncedFix": "WorkingDoubleHandle"
+				}
+			}
+		},
+		"Signal": {
+			"tagPrefix": "signal",
+            "identifier": "signalID",
+			"stateCodes": {
+				"GREEN": "Green",
+				"RED": "Red"
+			},
+			"hasTerminal": false,
+			"events": [
+				"StateChange"
+			]
+		},
+		"Dumpstation": {
+			"tagPrefix": "ds",
+			"initial": "idle",
+			"hasTerminal": true,
+			"identifier": "dumpstationID",
+			"transitions": {
+				"idle":{
+					"MaintStart":"maintenance",
+					"DumpOpStart":"preDumpReserved"
+				},
+				"maintenance":{
+					"MaintComp":"idle"
+				},
+				"preDumpReserved":{
+					"Fail":"preDumpReservedFail",
+					"SyncedFail":"preDumpReservedSyncedFail",
+					"DumpFail":"working"
+				},
+				"preDumpReservedFail":{
+					"Fix":"preDumpReserved"
+				},
+				"preDumpReservedSyncedFail":{
+					"SyncedFix":"preDumpReserved"
+				},
+				"working":{
+					"Fail":"workingFail",
+					"SyncedFail":"workingSyncedFail",
+					"DumpComp":"postDumpReserved"
+				},
+				"workingFail":{
+					"Fix":"working"
+				},
+				"workingSyncedFail":{
+					"SyncedFix":"working"
+				},
+				"postDumpReserved":{
+					"Fail":"postReservedDumpFail",
+					"SyncedFail":"postDumpReservedSyncedFail",
+					"DumpOpComp":"idle"
+				},
+				"postDumpReservedFail":{
+					"Fix":"postDumpReserved"
+				},
+				"postDumpReservedSyncedFix":{
+					"SyncedFix":"postDumpReserved"
+				}
+			}
+		},
+		"Loadpoints":{
+			"tagPrefix":"lp",
+			"initial":"Idle",
+			"hasTerminal":false,
+			"identifier":"loadpointID",
+			"transitions":{
+				"Idle":{
+					"StartPreload":"Preload",
+					"OnFail":"IdleFail",
+					"MaintStart":"Maintenance",
+					"StartIdle":"Idle"
+				},
+				"IdleFail":{
+					"OnFix":"IdleFix"
+				},
+				"IdleFix":{
+					"StartIdle":"Idle"
+				},
+				"Maintenance":{
+					"MaintComp":"Idle"
+				},
+				"Preload":{
+					"OnFail":"PreloadFail",
+					"StartLoad":"Loading"
+				},
+				"PreloadFail":{
+					"OnFix":"PreloadFix"
+				},
+				"PreloadFix":{
+					"StartPreload":"Preload"
+				},
+				"Loading":{
+					"FinishLoad":"IdleLoading"
+				},
+				"IdleLoading":{
+					"OnFail":"IdleLoadingFail",
+					"StartLoad":"Loading",
+					"StartPostLoad":"Postload"
+				},
+				"IdleLoadingFail":{
+					"OnFix":"IdleLoadingFix"
+				},
+				"IdleLoadingFix":{
+					"StartLoad":"Loading"
+				},
+				"Postload":{
+					"OnFail":"PostloadFail",
+					"StartRecharge":"Recharging"
+				},
+				"PostloadFail":{
+					"OnFix":"PostloadFix"
+				},
+				"PostloadFix":{
+					"StartPostload":"Postload"
+				},
+				"Recharging":{
+					"OnFail":"RechargingFail",
+					"StartIdle":"Idle"
+				},
+				"RechargingFail":{
+					"OnFix":"RechargingFix"
+				},
+				"RecharingFix":{
+					"StartRecharge":"Recharging"
+				}
+			}
+		},
+		"Vessel":{
+			"tagPrefix":"vessel",
+			"initial":"Idle",
+			"hasTerminal":false,
+			"identifier":"vesselID",
+			"transitions":{
+				"Idle":{
+					"AtEA":"WaitingForCoal",
+					"Created":"Idle"
+				},
+				"WaitingForCoal":{
+					"WaitBerth":"WaitingForBerth"
+				},
+				"WaitingForBerth":{
+					"WaitEnter":"WaitingToEnter"
+				},
+				"WaitingToEnter":{
+					"EnterChannel":"TravellingToTerminal"
+				},
+				"TravellingToTerminal":{
+					"ArriveTerminal":"Berthed"
+				},
+				"Berthed":{
+					"StartLoading":"Loading"
+				},
+				"Loading":{
+					"HatchChangeComplete":"ChangingHatches",
+					"DraftSurveyStart":"InterimDraftSurvey",
+					"StopForDeballasting":"StoppedForDeballasting"
+				},
+				"ChangingHatches":{
+					"HatchChangeComplete":"Loading"
+				},
+				"InterimDraftSurvey":{
+					"DraftSurveyComplete":"Loading"
+				},
+				"StoppedForDeballasting":{
+					"StopForDeballastingComplete":"Loading"
+				},
+				"Loaded":{
+					"WaitSail":"WaitingToSail"
+				},
+				"WaitingToSail":{
+					"DepTerminal":"TravellingFromTerminal"
+				},
+				"TravellingFromTerminal":{
+					"ExitChannel":"Exited"
+				},
+				"Exited":{}
+			}
+		},
+		"Shiploader":{
+			"tagPrefix":"sl",
+			"initial":"Idle",
+			"hasTerminal":true,
+			"identifier":"shiploaderID",
+			"transitions":{
+				"Idle":{
+					"MaintStart":"Maintenance",
+					"OnMove":"Moving",
+					"StartVesselLoad":"Idle",
+					"LoadOpStart":"PreLoadReserved"
+				},
+				"Maintenance":{
+					"MaintComp":"Idle"
+				},
+				"Moving":{
+					"OnStopMove":"Idle"
+				},
+				"PreLoadReserved":{
+					"LoadStart":"Working",
+					"Fail":"PreLoadFailed",
+					"SyncedFail":"PreLoadSyncedFail"
+				},
+				"PreLoadFailed":{
+					"Fix":"PreLoadReserved"
+				},
+				"PreLoadSyncedFail":{
+					"SyncedFix":"PreLoadReserved"
+				},
+				"Working":{
+					"Fail":"WorkingFailed",
+					"LoadComp":"PostLoadReserved",
+					"StartVesselDraftSurvey":"InterimDraftSurvey",
+					"SyncedFail":"WorkingSyncedFail",
+					"HatchChangeStart":"ChaningHatches"
+				},
+				"WorkingFailed":{
+					"Fix":"Working"
+				},
+				"PostLoadReserved":{
+					"SyncedFail":"PostLoadSyncedFail",
+					"Fail":"PostLoadFailed",
+					"LoadOpComp":"Idle"
+				},
+				"PostLoadSyncedFail":{
+					"SyncedFix":"PostLoadReserved"
+				},
+				"PostLoadFailed":{
+					"Fix":"PostLoadReserved"
+				},
+				"InterimDraftSurvey":{
+					"SyncedFail":"InterimDraftSyncFail",
+					"FinishVesselDraftSurvey":"Working"
+				},
+				"InterimDraftSyncFail":{
+					"SyncedFix":"InterimDraftSurvey",
+					"FinishVesselDraftSurvey":"WorkingSyncedFail"
+				},
+				"WorkingSyncedFail":{
+					"SyncedFix":"Working"
+				},
+				"ChangingHatches":{
+					"OnHatchChangeComplete":"Working",
+					"SyncedFail":"ChangingHatchesSyncedFail",
+					"Fail":"ChangingHatchesFailed"
+				},
+				"ChangingHatchesSyncedFailed":{
+					"OnHatchChangeComplete":"WorkingSyncedFail",
+					"SyncedFix":"ChangingHatches"
+				},
+				"ChangingHatchesFailed":{
+					"Fix":"ChangingHatches"
+				}
+			}
+		}
+	},
+    "terminals": [
+      "CCT",
+      "KCT",
+      "NCT"
+    ],
+	"merges": {
+		"StackerReclaimer": ["Stacker", "Reclaimer"]
+	}
+}

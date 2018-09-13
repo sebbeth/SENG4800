@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Dumpstation\Dumpstation.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Dumpstation\DumpstationEvent.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Dumpstation\DumpstationEventType.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Dumpstation\DumpstationState.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\extractData.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Loadpoints\Loadpoints.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Loadpoints\LoadpointsEvent.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Loadpoints\LoadpointsEventType.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Loadpoints\LoadpointsState.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Reclaimer\Reclaimer.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Reclaimer\ReclaimerEvent.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Reclaimer\ReclaimerEventType.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Reclaimer\ReclaimerState.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Shiploader\Shiploader.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderEvent.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderEventType.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderState.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Signal\Signal.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Signal\SignalEvent.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Signal\SignalEventType.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Signal\SignalStateType.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimer.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimerState.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Stacker\Stacker.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Stacker\StackerEvent.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Stacker\StackerEventType.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Stacker\StackerState.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Stockpile\Stockpile.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Stockpile\StockpileEvent.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Stockpile\StockpileEventType.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Stockpile\StockpileState.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\TerminalId.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\Vessel.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEvent.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEventType.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\VesselState.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\loadData.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\serialization.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\TinyXML2Testing.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\tinyxml2\tinyxml2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\access.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\archives\adapters.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\archives\binary.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\archives\json.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\archives\portable_binary.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\archives\xml.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\cereal.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\details\helpers.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\details\polymorphic_impl.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\details\polymorphic_impl_fwd.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\details\static_object.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\details\traits.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\details\util.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\base64.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\allocators.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\document.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\encodedstream.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\encodings.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\error\en.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\error\error.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\filereadstream.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\filewritestream.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\fwd.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\internal\itoa.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\internal\meta.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\internal\pow10.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\internal\regex.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\internal\stack.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\internal\strtod.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\internal\swap.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\memorybuffer.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\memorystream.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\pointer.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\prettywriter.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\rapidjson.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\reader.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\schema.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\stream.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\stringbuffer.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidjson\writer.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidxml\rapidxml.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidxml\rapidxml_iterators.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidxml\rapidxml_print.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\external\rapidxml\rapidxml_utils.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\macros.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\array.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\base_class.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\bitset.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\boost_variant.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\chrono.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\common.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\complex.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\concepts\pair_associative_container.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\deque.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\forward_list.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\functional.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\list.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\map.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\memory.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\polymorphic.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\queue.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\set.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\stack.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\string.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\tuple.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\unordered_map.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\unordered_set.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\utility.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\valarray.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\cereal\types\vector.hpp" />
+    <ClInclude Include="..\Source\HVCCC2\data\convertData.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\env_config.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Dumpstation\Dumpstation.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Dumpstation\DumpstationEvent.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Dumpstation\DumpstationEventType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Dumpstation\DumpstationState.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Dumpstation\DumpstationStateTraits.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Dumpstation\DumpstationStateType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\extractData.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\implementedEntities.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\implementedTraits.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Loadpoints\Loadpoints.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Loadpoints\LoadpointsEvent.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Loadpoints\LoadpointsEventType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Loadpoints\LoadpointsState.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Loadpoints\LoadpointsStateTraits.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Loadpoints\LoadpointsStateType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Reclaimer\Reclaimer.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Reclaimer\ReclaimerEvent.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Reclaimer\ReclaimerEventType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Reclaimer\ReclaimerState.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Reclaimer\ReclaimerStateTraits.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Reclaimer\ReclaimerStateType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Shiploader\Shiploader.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderEvent.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderEventType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderState.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderStateTraits.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderStateType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\Signal.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalEvent.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalEventType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalState.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalStateTraits.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalStateType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimer.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimerState.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimerStateType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Stacker\Stacker.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Stacker\StackerEvent.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Stacker\StackerEventType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Stacker\StackerState.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Stacker\StackerStateTraits.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Stacker\StackerStateType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\StateTraits.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Stockpile\Stockpile.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Stockpile\StockpileEvent.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Stockpile\StockpileEventType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Stockpile\StockpileState.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Stockpile\StockpileStateTraits.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Stockpile\StockpileStateType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\TerminalId.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\Vessel.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEvent.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEventType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselState.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselStateTraits.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselStateType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\loadData.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\serialization.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\tinyxml2\tinyxml2.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Source\HVCCC2\data\cereal\external\rapidxml\manual.html" />
+    <None Include="..\Source\HVCCC2\data\StateInfo.json" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{C11583CB-35C5-4A00-9688-99788FD83C48}</ProjectGuid>
+    <RootNamespace>TinyXML2Testing</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\tinyxml2_build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>\tinyxml2_build\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

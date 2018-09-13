@@ -32,3 +32,73 @@ Once the project is open you can access the C++ files in VS and modify them ther
 2. Navigate to the folder in the UE4 Content Browser you want to import the model to or make a new folder.
 3. Click import and select the model file. In the import menu, set the value of Import Uniform Scale if nessesary. This can be changed later by 're-importing' the asset.
 4. Click 'Import' the model should now be imported as a static mesh and any textures made in Blender should have been converted into UE4 Materials as well. 
+
+---------------------
+# TinyXML2Testing Information
+========================================================================
+    CONSOLE APPLICATION : TinyXML2Testing Project Overview
+========================================================================
+
+## Instructions for generating cpp code from Python
+Assumming you have python3 installed, run the generate_python.py script located at python/generate_python.py.
+Running it with with the -h/--help flag (i.e. `python3 python/generate_python.py -h`) will print out a list of required parameters.
+Explanation of StateInfo.json:
+The general format of json file is something like:
+```
+{
+    "entities": {
+        "{AnEntityName e.g. Stockpile}": {
+            "tagPrefix": "{prefix, e.g. sp for Stockpile}",
+            "initial": "{e.g. Idle"},
+            "hasTerminal": true,
+            "identifier": "anEntityNameID",
+            "transitions": {
+                "{FromStateName}": {
+                    "{AnEventName}": "{ToStateName}",
+                    ...
+                    "{AnotherEventName}": "{AnotherToStateName}"
+                }
+                ...
+                "{AnotherFromStateName}": {
+                    "{AnEventName}": "{ToStateName}",
+                    ...
+                    "{AnotherEventName}": "{AnotherToStateName}"
+                }
+            }
+        },
+        ...
+        "{AnEntityWhichEncodesStatesName}": {
+            "tagPrefix": "{prefix, e.g. sp for Stockpile}",
+            "initial": "{e.g. Idle"},
+            "hasTerminal": false,
+            "identifier": "anEntityWhichEncodesStatesNameID",
+            "stateCodes": {
+                "ASTATECODE": "ACorrespondingStateName",
+                ...
+                "AnotherSTATECODE": "AnotherCorrespondingStateName"
+            }
+            "events": [
+                "AnEventName",
+                ...
+                "AnotherEventName"
+            ]
+        }
+    },
+    "terminals": [
+      "ABC",
+      "EFG",
+      "HIJ"
+    ],
+    "merges": {
+		"AnEntityAnotherEntity": ["AnEntity", "AnotherEntity"]
+	}
+}
+```
+There are two types of entities, with different attribute sets in the JSON:
+- Standard entities like the first in the above example. These have initial states ('initial') and state transitions ('transitions'), specified as a destination-staet per event type per start state.
+- Entities whose state is included in the event data, like the second entity in the above example. These have maps for determining the state-name from the code in the event data ('stateCodes'), and a list of valid event codes ('events')
+
+The following is common to both types of entities:
+- The 'identifier' attribute, which should match the XML attribute used to uniquely identify instances of the entity (e.g. tell one stacker apart from another)
+- The 'tagPrefix' attribute, which is used to identify the tags relating to that entity.
+- The 'hasTerminal' attribute, indicating whether or not the entity relates to a specific terminal (e.g. Stackers do, Vessels don't)

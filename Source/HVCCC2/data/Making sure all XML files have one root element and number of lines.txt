@@ -1,0 +1,43 @@
+Ordered by file name:
+	| File name:			| Has one root element: | Number of lines: |
+    ----------------------------------------------------------------------
+	CCTDumpLog				y						395		
+	CCTReclaimerLog			y						143
+	CCTShipLoaderLog		y						75
+	CCTStackerLog			y						507
+	CCTStockpileLog			y						341
+	CoalVesselLog			y						672
+	KCTDumpLog				y						1957
+	KCTReclaimerLog			y						1527
+	KCTShipLoaderLog		y						1387
+	KCTStackerLog			y						2545
+	KCTStockpileLog			y						1961
+	LoadpointLog			y (<?xml line)			5533
+	NCTDumpLog				y						1103
+	NCTShipLoaderLog		y						2277
+	NCTStackerReclaimerLog	y						3601
+	NCTStockpileLog			y						1766
+	RailEventsLog			y (<?xml line)			317152
+	SignalLog				y (<?xml line)			658971
+
+Ordered by number of lines:
+	| File name:			| Has one root element: | Number of lines: | Asigned person: 	| Done: |
+    ----------------------------------------------------------------------------------------------
+	CCTShipLoaderLog		y						75					Nick				y
+	CCTReclaimerLog			y						143					Nathan				y
+	CCTStockpileLog			y						341					Nick
+	CCTDumpLog				y						395					Nathan				y
+	CCTStackerLog			y						507					Nick
+	CoalVesselLog			y						672					Nathan				y
+	NCTDumpLog				y						1103				Nick
+	KCTShipLoaderLog		y						1387				Nathan				y
+	KCTReclaimerLog			y						1527				Nick				y
+	NCTStockpileLog			y						1766				Nathan				y
+	KCTDumpLog				y						1957				Nick
+	KCTStockpileLog			y						1961				Nathan				y
+	NCTShipLoaderLog		y						2277				Nick
+	KCTStackerLog			y						2545				Nathan				y
+	NCTStackerReclaimerLog	y						3601				Nick
+	LoadpointLog			y (<?xml line)			5533				Nathan				y
+	RailEventsLog			y (<?xml line)			317152				Nick
+	SignalLog				y (<?xml line)			658971				Nathan				y
