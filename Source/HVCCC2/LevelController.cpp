@@ -7,10 +7,7 @@
 #include "CoalStack.h"
 #include "ConveyorBelt.h"
 #include "Train.h"
-
-#include "scheduling/data/serialization.h"
-
-#include "scheduling/data/env_config.h"
+#include "data/env_config.h"
 #include "Runtime/Engine/Classes/Engine/World.h"
 #include "Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h"
 #include "Runtime/Core/Public/Misc/Paths.h"
@@ -30,7 +27,7 @@ ALevelController::ALevelController()
 	PrimaryActorTick.bCanEverTick = true;
 	xMin = std::numeric_limits<double>::infinity();
 	xMax = -std::numeric_limits<double>::infinity();
-	worldTime = 0;
+	simTime = 0;
 	speed = 1;
 }
 
@@ -39,15 +36,20 @@ void ALevelController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//Data stuff
-	bool success = deserialize(BINARY_PATH, states);
+	//Getting the states from XML
+	EventVectorTuple allEvents = getEventsFromXMLFolder(XML_PATH);
 
-	//NOTE: this is a temporary hack for a demo; removes two stackerreclaimers we don't want in the demo so srs 3.56-3.59 show in the demo
-	std::get<std::map<std::string, std::vector<StackerState>>>(states).erase("3.21");
-	std::get<std::map<std::string, std::vector<StackerState>>>(states).erase("3.22");
+	EventMapTuple<EntitiesWithEvents> organisedEventsTuple;
+	forEachInTuple(allEvents, MapAndSortFunctor<EntitiesWithEvents>(organisedEventsTuple));
+	forEachInTuple(organisedEventsTuple, ConvertFunctor<AllEntities>(states));
 
-	for (auto eachEntity : std::get<std::map<std::string, std::vector<StackerState>>>(states)) {
-		FString fstr = UTF8_TO_TCHAR(eachEntity.first.c_str());
+	//note that this isn't fully templated, but should never need other specialisations
+	merge(states, std::get<StateMap<StackerReclaimer>>(states));
+	FString fstr = UTF8_TO_TCHAR(XML_PATH.c_str());
+	UE_LOG(LogTemp, Warning, TEXT("test '%s' blah "), *fstr);
+	auto& srStates = std::get<StateMap<Stacker>>(states);
+	for (auto eachEntity : srStates) {
+		FString fstr = UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str());
 		UE_LOG(LogTemp, Warning, TEXT("Stacker name: %s"), *fstr);
 		for (auto eachState : eachEntity.second) {
 			/*UE_LOG(LogTemp, Warning, TEXT("index: %d, Time: %f; Stacker Position: %f"), i++, eachState.time, eachState.position);*/
@@ -86,11 +88,11 @@ void ALevelController::BeginPlay()
 	//conveyorBelts[10]->setMaterial(2);
 	//stackerReclaimers[1]->setMaterial(2);
 
-	stackerReclaimers[1]->setRotation(-120);
+	//stackerReclaimers[1]->setRotation(-120);
 
-	stackCoal(3);
+	//stackCoal(3);
 
-	reclaimCoal(1, 1);
+	//reclaimCoal(1, 1);
 
 
 	//testTime = 0;
@@ -121,24 +123,58 @@ void ALevelController::BeginPlay()
 }
 
 
-void ALevelController::moveTime(double deltaTime) {
-	worldTime += deltaTime;
+
+void ALevelController::updateSim() {
 	auto watchIt = windows.begin();
-	auto entIt = std::get<std::map<std::string, std::vector<StackerState>>>(states).begin();
+	auto entIt = std::get<StateMap<Stacker>>(states).begin();
 	auto actorIt = stackerReclaimers.CreateConstIterator();
 	for (; watchIt != windows.end(); (++watchIt, ++entIt)) {
 		auto eachWindow = (*watchIt);
 		auto eachEntity = (*entIt);
-		while (eachEntity.second[eachWindow.second].time < worldTime && eachWindow.second < eachEntity.second.size() - 1) {
+		while (eachEntity.second[eachWindow.second].time < simTime && eachWindow.second < eachEntity.second.size() - 1) {
 			if (eachWindow.first != eachWindow.second) {
 				++eachWindow.first;
 			}
 			++eachWindow.second;
 		}
-		if (eachEntity.second[eachWindow.second].time < worldTime) {
+		if (eachEntity.second[eachWindow.second].time < simTime) {
 			eachWindow.first = eachWindow.second;
 		}
 	}
+}
+
+float ALevelController::getSimTime() {
+	return simTime;
+}
+
+void ALevelController::setSimTime(float absoluteTime) {
+	simTime = absoluteTime;
+	for (auto watchIt : windows) {
+		watchIt.first = 0;
+		watchIt.second = 0;
+	}
+	updateSim();
+}
+
+void ALevelController::moveSimTime(float deltaTime) {
+	simTime += deltaTime;
+	updateSim();
+}
+
+float ALevelController::getPlaySpeed() {
+	return speed;
+}
+
+void ALevelController::setPlaySpeed(float speed) {
+	this->speed = speed;
+}
+
+bool ALevelController::getPlayState() {
+	return isPlaying;
+}
+
+void ALevelController::setPlayState(bool isPlaying) {
+	this->isPlaying = isPlaying;
 }
 
 // Called every frame
@@ -147,10 +183,11 @@ void ALevelController::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	// DATA STUFF
-
-	moveTime(DeltaTime * speed);
+	if (isPlaying) {
+		moveSimTime(DeltaTime * speed);
+	}
 	auto watchIt = windows.begin();
-	auto entIt = std::get<std::map<std::string, std::vector<StackerState>>>(states).begin();
+	auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
 	auto actorIt = stackerReclaimers.CreateConstIterator();
 	for (; watchIt != windows.end() && actorIt; (++watchIt, ++entIt, ++actorIt)) {
 		auto eachWindow = (*watchIt);
@@ -167,7 +204,7 @@ void ALevelController::Tick(float DeltaTime)
 		double aToBTimeDist = timeB - timeA;
 
 		//we have to limit the target time in case the worldTime is beyond the current frame
-		double targetTime = std::max(timeA, std::min(timeB, worldTime));
+		double targetTime = std::max(timeA, std::min(timeB, simTime));
 
 		//determine the scale as a 
 		double scale = aToBTimeDist > 0 ? (targetTime - timeA) / aToBTimeDist : 0;
@@ -180,7 +217,7 @@ void ALevelController::Tick(float DeltaTime)
 
 		double positionDelta = (positionInterpolated - xMin) / (xMax - xMin);
 
-		UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f; state a: %d, state b: %d, typea: %d, typeb: %d"), UTF8_TO_TCHAR(eachEntity.first.c_str()), float(worldTime), indexA, indexB, (int)eachEntity.second[indexA].type, (int)eachEntity.second[indexB].type);
+		UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f; state a: %d, state b: %d, typea: %d, typeb: %d"), UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str()), float(simTime), indexA, indexB, (int)eachEntity.second[indexA].type, (int)eachEntity.second[indexB].type);
 		UE_LOG(LogTemp, Warning, TEXT("scale: %f, timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position delta: %f"), float(scale), float(timeA), float(timeB), float(positionA), float(positionB), float(positionInterpolated), float(positionDelta));
 
 		// TEST INPUT

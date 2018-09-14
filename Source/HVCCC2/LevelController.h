@@ -4,32 +4,48 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "scheduling/data/serialization.h"
+#include "data/serialization.h"
+#include "data/extraction/implementedEntities.h"
 
 #include "LevelController.generated.h"
 
+
+//specialise this for each entity, specifying the associated actor type
+template<typename Entity>
+struct UActorType {
+	using type = void;
+};
+template<typename Entity, typename Actor= typename UActorType<Entity>::type>
+using DataMap = std::map<
+	typename Entity::Id,
+	std::tuple<
+		std::vector<typename Entity::AssociatedState>, //states
+		std::pair<std::size_t, std::size_t>, //window into the states at current time
+		Actor*, //UActor pointer
+		bool //whether or not this actor is within render distance/needs to be updated
+	>
+>;
+
+template<typename... Entities>
+using DataMapTuple = std::tuple<StateMap<Entities>...>;
 
 UCLASS()
 class HVCCC2_API ALevelController : public AActor
 {
 	GENERATED_BODY()
 	
-	StateMapTuple states;
+	StateMapTuple<AllEntities> states;
 	double xMin, xMax;
 
 	//sliding windows peeking into the state-sequences of actors we are currently animating
 	std::vector<std::pair<std::size_t, std::size_t>> windows;
 
-	double worldTime;
+	double simTime;
 	double speed;
-
-
-	//AGlowCube *daCube;
-
-	//AGlowCube * spawnAGlowCube(FVector start, FVector end);
-
-	void moveTime(double deltaTime);
+	bool isPlaying;
 	
+	//updates the windows etc according to the new time - note that setting times to something absolute may require resetting the sim instead of updating it updating the sim is near-constant in complexity, but resetting is not
+	void updateSim();
 public:	
 	// Sets default values for this actor's properties
 	ALevelController();
@@ -37,10 +53,6 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
 	// Get the blueprints to be used
 	UPROPERTY(EditAnywhere)
@@ -102,6 +114,31 @@ public:
 		AActor *conv1_position;
 	UPROPERTY(EditAnywhere)
 		AActor *conv2_position;
+
+	//time controls
+	UFUNCTION(BlueprintCallable, Category = "time")
+	float getSimTime();
+	UFUNCTION(BlueprintCallable, Category = "time")
+	void setSimTime(float absoluteTime);
+	UFUNCTION(BlueprintCallable, Category = "time")
+	void moveSimTime(float deltaTime);
+	UFUNCTION(BlueprintCallable, Category = "time")
+	float getPlaySpeed();
+	UFUNCTION(BlueprintCallable, Category = "time")
+	void setPlaySpeed(float speed);
+
+	//true if playing, false if paused
+	UFUNCTION(BlueprintCallable, Category = "time")
+	bool getPlayState();
+	//true if playing, false if paused
+	UFUNCTION(BlueprintCallable, Category = "time")
+	void setPlayState(bool isPlaying);
+
+
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+
 
 
 private:

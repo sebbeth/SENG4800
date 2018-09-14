@@ -1,0 +1,70 @@
+<events>
+    <VesselYardSpaceAllocated vesselID="1" time="0.000000"/>
+    <VesselCreated vesselID="1" time="0.000000"/>
+    <VesselYardSpaceAllocated vesselID="2" time="5.000000"/>
+    <VesselCreated vesselID="2" time="5.000000"/>
+    <VesselStartLoading vesselID="1" time="52.465056" terminalID="kct" cargo="0" ballast="135113"/>
+    <VesselStopForDeballasting vesselID="1" time="53.259173"/>
+    <VesselStopForDeballastingComplete vesselID="1" time="55.259173"/>
+    <VesselHatchChangeStart vesselID="1" time="55.779067"/>
+    <VesselHatchChangeComplete vesselID="1" time="55.979067"/>
+    <VesselHatchChangeStart vesselID="1" time="56.776126"/>
+    <VesselHatchChangeComplete vesselID="1" time="56.976126"/>
+    <VesselHatchChangeStart vesselID="1" time="57.773185"/>
+    <VesselHatchChangeComplete vesselID="1" time="57.973185"/>
+    <VesselHatchChangeStart vesselID="1" time="59.277015"/>
+    <VesselHatchChangeComplete vesselID="1" time="59.477015"/>
+    <VesselHatchChangeStart vesselID="1" time="60.274074"/>
+    <VesselHatchChangeComplete vesselID="1" time="60.474074"/>
+    <VesselHatchChangeStart vesselID="1" time="61.271133"/>
+    <VesselHatchChangeComplete vesselID="1" time="61.471133"/>
+    <VesselHatchChangeStart vesselID="1" time="62.268192"/>
+    <VesselHatchChangeComplete vesselID="1" time="62.468192"/>
+    <VesselStopForDeballasting vesselID="1" time="62.950612"/>
+    <VesselStopForDeballastingComplete vesselID="1" time="64.950612"/>
+    <VesselHatchChangeStart vesselID="1" time="65.990455"/>
+    <VesselHatchChangeComplete vesselID="1" time="66.190455"/>
+    <VesselHatchChangeStart vesselID="1" time="66.987514"/>
+    <VesselHatchChangeComplete vesselID="1" time="67.187514"/>
+    <VesselHatchChangeStart vesselID="1" time="68.464523"/>
+    <VesselHatchChangeComplete vesselID="1" time="68.664523"/>
+    <VesselHatchChangeStart vesselID="1" time="69.461582"/>
+    <VesselHatchChangeComplete vesselID="1" time="69.661582"/>
+    <VesselHatchChangeStart vesselID="1" time="71.320850"/>
+    <VesselHatchChangeComplete vesselID="1" time="71.520850"/>
+    <VesselDraftSurveyStart vesselID="1" time="73.730457" terminalID="kct" cargo="122182" ballast="7521"/>
+    <VesselDraftSurveyComplete vesselID="1" time="74.230457" terminalID="kct" cargo="122182" ballast="7521"/>
+    <VesselBallastTankEmpty vesselID="1" time="75.483904"/>
+    <VesselFullyLoaded vesselID="1" time="75.573791" terminalID="kct" cargo="135600" numCargoes="4"/>
+    <VesselStartLoading vesselID="2" time="86.693878" terminalID="nct" cargo="0" ballast="71321"/>
+    <VesselStopForDeballasting vesselID="2" time="87.216528"/>
+    <VesselStopForDeballastingComplete vesselID="2" time="89.216528"/>
+    <VesselHatchChangeStart vesselID="2" time="89.494361"/>
+    <VesselHatchChangeComplete vesselID="2" time="89.694361"/>
+    <VesselHatchChangeStart vesselID="2" time="90.196574"/>
+    <VesselHatchChangeComplete vesselID="2" time="90.396574"/>
+    <VesselHatchChangeStart vesselID="2" time="90.898672"/>
+    <VesselHatchChangeComplete vesselID="2" time="91.098672"/>
+    <VesselHatchChangeStart vesselID="2" time="91.600770"/>
+    <VesselHatchChangeComplete vesselID="2" time="91.800770"/>
+    <VesselHatchChangeStart vesselID="2" time="92.302868"/>
+    <VesselHatchChangeComplete vesselID="2" time="92.502868"/>
+    <VesselHatchChangeStart vesselID="2" time="93.004966"/>
+    <VesselHatchChangeComplete vesselID="2" time="93.204966"/>
+    <VesselHatchChangeStart vesselID="2" time="93.707064"/>
+    <VesselHatchChangeComplete vesselID="2" time="93.907064"/>
+    <VesselHatchChangeStart vesselID="2" time="94.409162"/>
+    <VesselHatchChangeComplete vesselID="2" time="94.609162"/>
+    <VesselHatchChangeStart vesselID="2" time="95.111259"/>
+    <VesselHatchChangeComplete vesselID="2" time="95.311259"/>
+    <VesselHatchChangeStart vesselID="2" time="95.813357"/>
+    <VesselHatchChangeComplete vesselID="2" time="96.013357"/>
+    <VesselStopForDeballasting vesselID="2" time="96.542224"/>
+    <VesselStopForDeballastingComplete vesselID="2" time="98.542224"/>
+    <VesselBallastTankEmpty vesselID="2" time="98.580670"/>
+    <VesselHatchChangeStart vesselID="2" time="99.111437"/>
+    <VesselHatchChangeComplete vesselID="2" time="99.311437"/>
+    <VesselDraftSurveyStart vesselID="2" time="99.679687" terminalID="nct" cargo="64803" ballast="0"/>
+    <VesselDraftSurveyComplete vesselID="2" time="100.179687" terminalID="nct" cargo="64803" ballast="0"/>
+    <VesselFullyLoaded vesselID="2" time="100.980192" terminalID="nct" cargo="71800" numCargoes="1"/>
+</events>
