@@ -10,6 +10,25 @@
 #include "LevelController.generated.h"
 
 
+//specialise this for each entity, specifying the associated actor type
+template<typename Entity>
+struct UActorType {
+	using type = void;
+};
+template<typename Entity, typename Actor= typename UActorType<Entity>::type>
+using DataMap = std::map<
+	typename Entity::Id,
+	std::tuple<
+		std::vector<typename Entity::AssociatedState>, //states
+		std::pair<std::size_t, std::size_t>, //window into the states at current time
+		Actor*, //UActor pointer
+		bool //whether or not this actor is within render distance/needs to be updated
+	>
+>;
+
+template<typename... Entities>
+using DataMapTuple = std::tuple<StateMap<Entities>...>;
+
 UCLASS()
 class HVCCC2_API ALevelController : public AActor
 {
