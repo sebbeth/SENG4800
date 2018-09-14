@@ -115,10 +115,13 @@ private:
 
 	void stackCoal(int stackerId);
 	void stopStackingCoal(int stackerId);
-	void setCoalStackingState(int stackerId, int state);
 
 	void reclaimCoal(int stackerId, int loaderId);
 	void stopReclaimingCoal(int stackerId, int loaderId);
+
+
+	// Helper functions, don't call these directy
+	void setCoalStackingState(int stackerId, int state);
 	void setCoalReclaimingState(int stackerId,int loaderId, int state);
 
 	int testTime; // Just being used for testing
