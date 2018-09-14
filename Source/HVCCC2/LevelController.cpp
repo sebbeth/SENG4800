@@ -89,7 +89,6 @@ void ALevelController::BeginPlay()
 	stackerReclaimers[1]->setRotation(-120);
 
 	stackCoal(3);
-	stopStackingCoal(3);
 
 	reclaimCoal(1, 1);
 
