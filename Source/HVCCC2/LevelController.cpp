@@ -80,18 +80,19 @@ void ALevelController::BeginPlay()
 	spawnATrain("t_0", NCT_pads[1]->GetActorLocation(), train_locomotive_blueprint);
 
 
-	/*
-	spawnAConveyorBelt(conv1_position->GetActorLocation(), conv1_position->GetActorRotation(), conveyor_belt_blueprint);
-	conveyorBelts[0]->setMaterial(0);
-
-	spawnAConveyorBelt(conv2_position->GetActorLocation(), conv2_position->GetActorRotation(), conveyor_belt_blueprint);
-	conveyorBelts[1]->setMaterial(2);
-
+	//conveyorBelts[6]->setMaterial(0);
+	//conveyorBelts[11]->setMaterial(0);
 	//stackerReclaimers[0]->setMaterial(0);
+
+	//conveyorBelts[5]->setMaterial(2);
+	//conveyorBelts[10]->setMaterial(2);
 	//stackerReclaimers[1]->setMaterial(2);
-	*/
 
+	//stackerReclaimers[1]->setRotation(-120);
 
+	//stackCoal(3);
+
+	//reclaimCoal(1, 1);
 
 
 	//testTime = 0;
@@ -102,16 +103,9 @@ void ALevelController::BeginPlay()
 	
 	
 	////Spawn in ship loaders
-	//spawnAShipLoader(FString id, FVector railStart, FVector railEnd, TSubclassOf<class AShipLoader> blueprint)
 	spawnAShipLoader("NCT_ShipLoader_01", NCT_loader_rails_start[0]->GetActorLocation(), NCT_loader_rails_end[0]->GetActorLocation(), ship_loader_blueprint);
 	spawnAShipLoader("NCT_ShipLoader_02", NCT_loader_rails_start[1]->GetActorLocation(), NCT_loader_rails_end[1]->GetActorLocation(), ship_loader_blueprint);
 
-	//spawnAShipLoader(loader1_rail_start->GetActorLocation(), loader1_rail_end->GetActorLocation(), ship_loader_blueprint);
-	//spawnAShipLoader(loader2_rail_start->GetActorLocation(), loader2_rail_end->GetActorLocation(), ship_loader_blueprint);
-    //spawnAShipLoader(loader3_rail_start->GetActorLocation(), loader3_rail_end->GetActorLocation(), ship_loader_blueprint);
-	//
-
-	//spawnAShip(FString id, FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint)
 	spawnAShip("NCT_Ship_01", NCT_berths[0]->GetActorLocation(), NCT_berths[0]->GetActorRotation(), ship_blueprint);
 	spawnAShip("NCT_Ship_02", NCT_berths[1]->GetActorLocation(), NCT_berths[1]->GetActorRotation(), ship_blueprint);
 
@@ -119,8 +113,7 @@ void ALevelController::BeginPlay()
 	spawnACoalStack("NCT_CS_1", NCT_pads[0]->GetActorLocation(), NCT_pads[0]->GetActorRotation(), coal_stack_blueprint);
 	spawnACoalStack("NCT_CS_2", NCT_pads[1]->GetActorLocation(), NCT_pads[1]->GetActorRotation(), coal_stack_blueprint);
 	spawnACoalStack("NCT_CS_3", NCT_pads[2]->GetActorLocation(), NCT_pads[2]->GetActorRotation(), coal_stack_blueprint);
-	//spawnACoalStack(padK1_position->GetActorLocation(), padK1_position->GetActorRotation(), coal_stack_blueprint);
-	//spawnACoalStack(padK2_position->GetActorLocation(), padK2_position->GetActorRotation(), coal_stack_blueprint);
+
 
 	//UE_LOG(LogTemp, Warning, TEXT("stackCount: %d"), coalStacks.size());
 	//UE_LOG(LogTemp, Warning, TEXT("stack1: %d, stack2: %d, stack3: %d"), coalStacks.at(0), coalStacks.at(1), coalStacks.at(2));
@@ -231,6 +224,126 @@ void ALevelController::Tick(float DeltaTime)
 		eachActor->setPosition(positionDelta);
 	}
 }
+
+
+
+/*
+
+*/
+void ALevelController::stackCoal(int stackerId) {
+	setCoalStackingState(stackerId, 2);
+}
+
+
+
+void ALevelController::stopStackingCoal(int stackerId) {
+	setCoalStackingState(stackerId, 1);
+
+}
+
+/*
+Helper function used by addCoal and stopAddingCoal to set materials for Actors
+*/
+void ALevelController::setCoalStackingState(int stackerId, int state) {
+	if (stackerReclaimers[stackerId] == NULL) {
+		return; // Return if given invalid input
+	}
+	stackerReclaimers[stackerId]->setMaterial(state); // Set the material of the stacker
+    // Now we need to figure out which conveyor belts need to be lit
+	switch (stackerId)
+	{
+	case 0:
+		conveyorBelts[0]->setMaterial(state);
+		conveyorBelts[1]->setMaterial(state);
+		conveyorBelts[6]->setMaterial(state);
+		conveyorBelts[11]->setMaterial(state);
+		break;
+	case 1:
+		conveyorBelts[0]->setMaterial(state);
+		conveyorBelts[1]->setMaterial(state);
+		conveyorBelts[5]->setMaterial(state);
+		conveyorBelts[10]->setMaterial(state);
+		break;
+	case 2:
+		conveyorBelts[0]->setMaterial(state);
+		conveyorBelts[1]->setMaterial(state);
+		conveyorBelts[4]->setMaterial(state);
+		conveyorBelts[9]->setMaterial(state);
+		break;
+	case 3:
+		conveyorBelts[0]->setMaterial(state);
+		conveyorBelts[1]->setMaterial(state);
+		conveyorBelts[3]->setMaterial(state);
+		conveyorBelts[2]->setMaterial(state);
+		break;
+	default:
+		break;
+	}
+}
+
+/*
+
+*/
+void ALevelController::reclaimCoal(int stackerId, int loaderId) {
+	setCoalReclaimingState(stackerId, loaderId, 0);
+}
+
+
+void ALevelController::stopReclaimingCoal(int stackerId, int loaderId) {
+	setCoalReclaimingState(stackerId, loaderId, 1);
+
+}
+
+void ALevelController::setCoalReclaimingState(int stackerId, int loaderId, int state) {
+
+//	if ((stackerReclaimers[stackerId] == NULL) || (shipLoaders[loaderId] == NULL) ) {
+//		return; // Return if given invalid input
+	//}
+
+	stackerReclaimers[stackerId]->setMaterial(state); // Set the material of the stacker
+	//TODO loaders able to change material
+
+	// Now set the material for the terminal conveyor belts
+	switch (stackerId)
+	{
+	case 0:
+		conveyorBelts[6]->setMaterial(state);
+		break;
+	case 1:
+		conveyorBelts[5]->setMaterial(state);
+		break;
+	case 2:
+		conveyorBelts[4]->setMaterial(state);
+		conveyorBelts[7]->setMaterial(state);
+		break;
+	case 3:
+		conveyorBelts[3]->setMaterial(state);
+		conveyorBelts[8]->setMaterial(state);
+		break;
+	default:
+		break;
+	}
+
+	// Now set the material for the loader conveyor belts
+	switch (loaderId)
+	{
+	case 0:
+		conveyorBelts[12]->setMaterial(state);
+		conveyorBelts[15]->setMaterial(state);\
+		break;
+	case 1:
+		conveyorBelts[13]->setMaterial(state);
+		conveyorBelts[14]->setMaterial(state);
+		break;
+	default:
+		break;
+	}
+
+
+
+}
+
+
 
 /*  *** Actor spawn functions *** 
 
