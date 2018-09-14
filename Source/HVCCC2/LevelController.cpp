@@ -89,6 +89,14 @@ void ALevelController::BeginPlay()
 	//stackerReclaimers[1]->setMaterial(2);
 	*/
 
+	conveyorBelts[6]->setMaterial(0);
+	conveyorBelts[11]->setMaterial(0);
+	stackerReclaimers[0]->setMaterial(0);
+
+	conveyorBelts[5]->setMaterial(2);
+	conveyorBelts[10]->setMaterial(2);
+	stackerReclaimers[1]->setMaterial(2);
+
 
 
 
