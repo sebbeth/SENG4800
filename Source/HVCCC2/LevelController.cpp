@@ -97,6 +97,8 @@ void ALevelController::BeginPlay()
 	conveyorBelts[10]->setMaterial(2);
 	stackerReclaimers[1]->setMaterial(2);
 
+	stackerReclaimers[1]->setRotation(-120);
+
 
 
 

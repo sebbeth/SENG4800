@@ -17,12 +17,6 @@ void AStackerReclaimer::BeginPlay()
 	this->setBaseRotation(124.0f);
 }
 
-// Called every frame
-void AStackerReclaimer::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
 
 
 /* Set the actor's position along it's rail,
@@ -39,10 +33,6 @@ void AStackerReclaimer::setPosition(float position) {
 	SetActorLocation(trackNodeA + directionVector);
 }
 
-void AStackerReclaimer::setRotation() {
-	//FRotator rotator(0.0f, degrees, 0.0f);
-	//SetActorRotation(rotator, ETeleportType::None);
-}
 
 void AStackerReclaimer::setBaseRotation(float degrees) {
 	FRotator rotator(0.0f, degrees, 0.0f);
