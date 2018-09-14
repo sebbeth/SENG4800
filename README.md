@@ -15,14 +15,16 @@ Install Unreal Engine version 4.19.* preferably 4.19.2 (https://docs.unrealengin
 
 Install Visual Studio 2017, community version is fine.
 
-When VS is installed, add the following packages to it using VS Installer
+When VS is installed, add the following packages to it using Visual Studio Installer (a separate program to Visual Studio)
 - https://drive.google.com/file/d/1ASWWaXu223DRYypJaPbyuzRmzA0YW2S7/view?usp=sharing
 - https://drive.google.com/file/d/1hrIddU0KsTgE-sJ6vBuA4Z0bfNSqkNvy/view?usp=sharing
-- https://drive.google.com/open?id=1e2UrahadnAju7gm7VgEZvP-PO4ovVQ0P
+- https://drive.google.com/open?id=1e2UrahadnAju7gm7VgEZvP-PO4ovVQ0P 
 
-After all these packages are installed, Open the project, you will be prompted to recompile the project, if you have installed the required packages successfully it will work from here and you will be able to edit the project, if there were errors it will probably fail to compile.
+After all these packages are installed, open the project and you will be prompted to recompile the project. If you have installed the required packages successfully, it will work from here and you will be able to edit the project. If there were errors it will probably fail to compile.
 
-In a file explorer outside of UE Editor and Visual Studio, right click on "HVCCC2.uproject" and click on "Generate Visual Studio project files" to stop the over 100 compilation errors in Visual Studio.
+If you are getting over 100 compilation errors in Visual Studio, you can try opening a file explorer outside of UE Editor and Visual Studio, right click on "HVCCC2.uproject" and click on "Generate Visual Studio project files".
+
+If you are getting the getting the error "Unable to start program '...\UE4.exe'. The system cannot find the file specified.", you have to right click on "HVCCC2" in the Solution Explorer inside Visual Studio. After that, you need to select "Set as StartUp Project", then recompile.
 
 Once the project is open you can access the C++ files in VS and modify them there.
 
