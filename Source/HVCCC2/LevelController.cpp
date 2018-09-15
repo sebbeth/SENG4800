@@ -129,9 +129,10 @@ void ALevelController::updateSim() {
 	auto entIt = std::get<StateMap<Stacker>>(states).begin();
 	auto actorIt = stackerReclaimers.CreateConstIterator();
 	for (; watchIt != windows.end(); (++watchIt, ++entIt)) {
-		auto eachWindow = (*watchIt);
-		auto eachEntity = (*entIt);
-		while (eachEntity.second[eachWindow.second].time < simTime && eachWindow.second < eachEntity.second.size() - 1) {
+		auto& eachWindow = (*watchIt);
+		auto& eachEntity = (*entIt);
+		while (eachEntity.second[eachWindow.second].time < simTime && eachWindow.second < (eachEntity.second.size() - 1)) {
+			UE_LOG(LogTemp, Warning, TEXT("Entity %s: moving window to states %d and %d"), UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str()), eachWindow.first, eachWindow.second);
 			if (eachWindow.first != eachWindow.second) {
 				++eachWindow.first;
 			}
@@ -190,9 +191,9 @@ void ALevelController::Tick(float DeltaTime)
 	auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
 	auto actorIt = stackerReclaimers.CreateConstIterator();
 	for (; watchIt != windows.end() && actorIt; (++watchIt, ++entIt, ++actorIt)) {
-		auto eachWindow = (*watchIt);
-		auto eachEntity = (*entIt);
-		auto eachActor = (*actorIt);
+		auto& eachWindow = (*watchIt);
+		auto& eachEntity = (*entIt);
+		auto& eachActor = (*actorIt);
 		int indexA = eachWindow.first;
 		int indexB = eachWindow.second;
 
