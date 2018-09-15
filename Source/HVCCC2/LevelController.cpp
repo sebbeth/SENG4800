@@ -120,6 +120,9 @@ void ALevelController::BeginPlay()
 	coalStacks[0]->setQuantity(0.8);
 	coalStacks[1]->setQuantity(0.2);
 	coalStacks[2]->setQuantity(0.5);
+
+	//For debugging purposes:
+	singelStockpileSize = 0.1;
 }
 
 // Called every frame
@@ -133,6 +136,9 @@ void ALevelController::Tick(float DeltaTime)
 	}
 
 	auto watchIt = windows.begin();
+	//We'll need a way of fetching a specific item's ID-vector "pairing".
+		//Currently, this uses the first item in the respective vector for the item type
+		//eg. the first in the vector of stackers.
 	auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
 	auto actorIt = stackerReclaimers.CreateConstIterator();
 
@@ -180,6 +186,46 @@ void ALevelController::Tick(float DeltaTime)
 
 		//Move the model in the scene, based on the interpolated distance it needs to travel in this Tick() call:
 		eachActor->setPosition(positionDelta);
+	}
+
+	//For animating the coal piles/stockpiles:
+	watchIt = windows.begin();
+	auto coalStackEntityIterator = std::get<std::map<Stockpile::Id, std::vector<StockpileState>>>(states).begin();
+	auto coalStackActorIterator = coalStacks.CreateConstIterator();
+
+	for (; watchIt != windows.end() && coalStackActorIterator; (++watchIt, ++coalStackEntityIterator, ++coalStackActorIterator)) {
+		//Fetch the item that each iterator is currently positioned at:
+		auto& eachWindow = (*watchIt);
+		auto& eachEntity = (*coalStackEntityIterator);
+		auto& eachActor = (*coalStackActorIterator);
+
+		//Store the indexes of the current state and the state after that one:
+		int indexA = eachWindow.first;
+		int indexB = eachWindow.second;
+
+		//Store the times that the two states occurred:
+		double timeA = eachEntity.second[indexA].time;
+		double timeB = eachEntity.second[indexB].time;
+
+		//The length of time available between the states:
+		double aToBTimeDist = timeB - timeA;
+		//We have to limit the target time in case the worldTime is beyond the current frame:
+		double targetTime = std::max(timeA, std::min(timeB, simTime));
+
+		//Scale the coal pile/stockpile based on the operation conducted:
+		if (isPlaying) {
+			//This is where we'll check out the state type of the current and next state, then decide to scale up or scale down the stockpile.
+			//I (Nick) haven't figured out the exact way we'll decide how quickly we'll scale the object.
+			//if () {
+
+			//}
+
+			eachActor->setQuantity(singelStockpileSize);
+
+			singelStockpileSize = singelStockpileSize + 0.001;
+		}
+
+		
 	}
 }
 

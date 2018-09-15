@@ -162,5 +162,5 @@ private:
 	void setCoalReclaimingState(int stackerId,int loaderId, int state);
 
 	int testTime; // Just being used for testing
-
+	float singelStockpileSize;
 };

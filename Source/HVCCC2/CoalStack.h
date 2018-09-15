@@ -24,7 +24,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	void setQuantity(float quantity);
-	
-	FString id;
 
+	FString id;
 };
