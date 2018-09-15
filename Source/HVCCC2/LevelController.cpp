@@ -122,7 +122,84 @@ void ALevelController::BeginPlay()
 	coalStacks[2]->setQuantity(0.5);
 }
 
+// Called every frame
+void ALevelController::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
 
+	//If the isPlaying flag is set to true, progress the simulation time:
+	if (isPlaying) {
+		moveSimTime(DeltaTime * speed);
+	}
+
+	auto watchIt = windows.begin();
+	auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
+	auto actorIt = stackerReclaimers.CreateConstIterator();
+
+	for (; watchIt != windows.end() && actorIt; (++watchIt, ++entIt, ++actorIt)) {
+		//Fetch the item that each iterator is currently positioned at:
+		auto& eachWindow = (*watchIt);
+		auto& eachEntity = (*entIt);
+		auto& eachActor = (*actorIt);
+
+		//Store the indexes of the current state and the state after that one:
+		int indexA = eachWindow.first;
+		int indexB = eachWindow.second;
+
+		//Store the times that the two states occurred:
+		double timeA = eachEntity.second[indexA].time;
+		double timeB = eachEntity.second[indexB].time;
+
+		//The length of time available between the states:
+		double aToBTimeDist = timeB - timeA;
+		//We have to limit the target time in case the worldTime is beyond the current frame:
+		double targetTime = std::max(timeA, std::min(timeB, simTime));
+
+		/*"scale" is an interpolation scale in terms of time
+			If "aToBTimeDist" is greater than 0, it will set "scale" to "(targetTime - timeA) / aToBTimeDist"
+			If "aToBTimeDist" is less than or equal to 0, then "scale" is set to 0
+		*/
+		double scale = aToBTimeDist > 0 ? (targetTime - timeA) / aToBTimeDist : 0;
+
+		//Determine the positions that the two states were carried out at:
+		double positionA = eachEntity.second[indexA].position;
+		double positionB = eachEntity.second[indexB].position;
+
+		//Add the interpolated distance to the position of the first state:
+		double positionInterpolated = positionA + (positionB - positionA)*(scale);
+		//Calculates the ratio along the distance the stacker can be placed, that the stacker will now be moved to.
+			//eg. 0.5 = half way along length it can be placed,
+			//0.75 = three quaters of the way it can be plcaed.
+		double positionDelta = (positionInterpolated - xMin) / (xMax - xMin);
+
+		//Only print out to the log if the simulation is currently being played:
+		if (isPlaying) {
+			UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f; state a: %d, state b: %d, typea: %d, typeb: %d"), UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str()), float(simTime), indexA, indexB, (int)eachEntity.second[indexA].type, (int)eachEntity.second[indexB].type);
+			UE_LOG(LogTemp, Warning, TEXT("scale: %f, timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position delta: %f"), float(scale), float(timeA), float(timeB), float(positionA), float(positionB), float(positionInterpolated), float(positionDelta));
+		}
+
+		//Move the model in the scene, based on the interpolated distance it needs to travel in this Tick() call:
+		eachActor->setPosition(positionDelta);
+	}
+}
+
+void ALevelController::moveSimTime(float deltaTime) {
+	simTime += deltaTime;
+	updateSim();
+}
+
+void ALevelController::setSimTime(float absoluteTime) {
+	simTime = absoluteTime;
+	for (auto watchIt : windows) {
+		watchIt.first = 0;
+		watchIt.second = 0;
+	}
+	updateSim();
+}
+
+float ALevelController::getSimTime() {
+	return simTime;
+}
 
 void ALevelController::updateSim() {
 	auto watchIt = windows.begin();
@@ -144,24 +221,6 @@ void ALevelController::updateSim() {
 	}
 }
 
-float ALevelController::getSimTime() {
-	return simTime;
-}
-
-void ALevelController::setSimTime(float absoluteTime) {
-	simTime = absoluteTime;
-	for (auto watchIt : windows) {
-		watchIt.first = 0;
-		watchIt.second = 0;
-	}
-	updateSim();
-}
-
-void ALevelController::moveSimTime(float deltaTime) {
-	simTime += deltaTime;
-	updateSim();
-}
-
 float ALevelController::getPlaySpeed() {
 	return speed;
 }
@@ -176,56 +235,6 @@ bool ALevelController::getPlayState() {
 
 void ALevelController::setPlayState(bool isPlaying) {
 	this->isPlaying = isPlaying;
-}
-
-// Called every frame
-void ALevelController::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-	// DATA STUFF
-	if (isPlaying) {
-		moveSimTime(DeltaTime * speed);
-	}
-	auto watchIt = windows.begin();
-	auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
-	auto actorIt = stackerReclaimers.CreateConstIterator();
-	for (; watchIt != windows.end() && actorIt; (++watchIt, ++entIt, ++actorIt)) {
-		auto& eachWindow = (*watchIt);
-		auto& eachEntity = (*entIt);
-		auto& eachActor = (*actorIt);
-		int indexA = eachWindow.first;
-		int indexB = eachWindow.second;
-
-
-		double timeA = eachEntity.second[indexA].time;
-		double timeB = eachEntity.second[indexB].time;
-
-		//the length of time available between the states
-		double aToBTimeDist = timeB - timeA;
-
-		//we have to limit the target time in case the worldTime is beyond the current frame
-		double targetTime = std::max(timeA, std::min(timeB, simTime));
-
-		//determine the scale as a 
-		double scale = aToBTimeDist > 0 ? (targetTime - timeA) / aToBTimeDist : 0;
-
-
-		double positionA = eachEntity.second[indexA].position;
-		double positionB = eachEntity.second[indexB].position;
-
-		double positionInterpolated = positionA + (positionB - positionA)*(scale);
-
-		double positionDelta = (positionInterpolated - xMin) / (xMax - xMin);
-
-		if (isPlaying) {
-			UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f; state a: %d, state b: %d, typea: %d, typeb: %d"), UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str()), float(simTime), indexA, indexB, (int)eachEntity.second[indexA].type, (int)eachEntity.second[indexB].type);
-			UE_LOG(LogTemp, Warning, TEXT("scale: %f, timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position delta: %f"), float(scale), float(timeA), float(timeB), float(positionA), float(positionB), float(positionInterpolated), float(positionDelta));
-		}
-
-		// TEST INPUT
-		eachActor->setPosition(positionDelta);
-	}
 }
 
 
