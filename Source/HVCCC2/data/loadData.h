@@ -3,12 +3,8 @@
 #include <map>
 #include <vector>
 
-template<typename Entity>
-using EventMap = std::map<typename Entity::Id, std::vector<typename Entity::AssociatedEvent>>;
-
-template<typename... Entities>
-using EventMapTuple = std::tuple<EventMap<Entities>...>;
-
+#include "convertData.h"
+#include "serialization.h"
 namespace load_data_detail {
 	template<typename... Entities>
 	struct map_and_sort_functor {
@@ -38,12 +34,25 @@ namespace load_data_detail {
 template<typename... Entities>
 using MapAndSortFunctor = load_data_detail::map_and_sort_functor<Entities...>;
 
-EventVectorTuple getEventsFromXMLFolder(const std::string& xmlFolderPath);
+/**
+ * pair<data, success/fail>
+ */
+std::pair<EventVectorTuple, bool> getEventsFromXMLFolder(const std::string& xmlFolderPath);
+
+/**
+ * pair<data, success/fail>
+ */
+std::pair<StateMapTuple<AllEntities>, bool> loadXMLData(const std::string& srcPath);
+
+/**
+ * pair<data, success/fail>
+ */
+std::pair<StateMapTuple<AllEntities>, bool> loadBinaryData(const std::string& srcPath);
 
 template<typename Event>
 EventMap<typename Event::Entity> mapAndSort(const std::vector<Event>& source) {
 	EventMap<typename Event::Entity> result;
-	for (auto eachEvent : source) {
+	for (auto& eachEvent : source) {
 		auto eachId = eachEvent.id;
 		//This variable is used to find out whether the std::pair for the
 		//currently examined object (eg. stockpile with stockpileID "CCT1392.1")
@@ -60,7 +69,7 @@ EventMap<typename Event::Entity> mapAndSort(const std::vector<Event>& source) {
 	}
 
 	//now do the sort
-	for (auto eachEntry : result) {
+	for (auto& eachEntry : result) {
 		std::sort(eachEntry.second.begin(), eachEntry.second.end(), [](const Event& a, const Event& b) {return a.time < b.time; });
 	}
 	return result;

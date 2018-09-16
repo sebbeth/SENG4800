@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 23:08:55.254916
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
  **/
 #pragma once
 #include <string>
@@ -10,11 +10,12 @@ class LoadpointsState;
 class Loadpoints {
 public:
     using AssociatedEvent = LoadpointsEvent;
-     using AssociatedState = LoadpointsState;
-     static const std::string ENTITY_NAME;
+        using AssociatedState = LoadpointsState;
+    static const std::string ENTITY_NAME;
     static const std::string XML_TAG_PREFIX;
     class Id {
     public:
+        using Entity = Loadpoints;
         std::string name;
         Id();
         Id(const std::string& name);        std::string nameForBinaryFile() const;

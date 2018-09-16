@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 23:08:55.254916
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
  **/
 set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Dumpstation/Dumpstation.h
@@ -42,16 +42,6 @@ set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Shiploader/ShiploaderState.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Shiploader/ShiploaderState.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Shiploader/ShiploaderStateTraits.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/Signal.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/Signal.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalEventType.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalEventType.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalEvent.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalEvent.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalStateType.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalStateType.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalState.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalStateTraits.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stacker/Stacker.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stacker/Stacker.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stacker/StackerEventType.h
