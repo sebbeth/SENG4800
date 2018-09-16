@@ -192,36 +192,37 @@ bool ALevelController::loadXMLData(const  FString& srcPath) {
 		//spawnACoalStack("NCT_CS_2", NCT_pads[1]->GetActorLocation(), NCT_pads[1]->GetActorRotation(), coal_stack_blueprint);
 		//spawnACoalStack("NCT_CS_3", NCT_pads[2]->GetActorLocation(), NCT_pads[2]->GetActorRotation(), coal_stack_blueprint);
 
-// Called every frame
-void ALevelController::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
 
+		////UE_LOG(LogTemp, Warning, TEXT("stackCount: %d"), coalStacks.size());
+		////UE_LOG(LogTemp, Warning, TEXT("stack1: %d, stack2: %d, stack3: %d"), coalStacks.at(0), coalStacks.at(1), coalStacks.at(2));
+		//coalStacks[0]->setQuantity(0.8);
+		//coalStacks[1]->setQuantity(0.2);
+		//coalStacks[2]->setQuantity(0.5);
 
-void ALevelController::updateSim() {
-	auto watchIt = windows.begin();
-	auto entIt = std::get<StateMap<Stacker>>(states).begin();
-	auto actorIt = stackerReclaimers.CreateConstIterator();
-	for (; watchIt != windows.end(); (++watchIt, ++entIt)) {
-		auto& eachWindow = (*watchIt);
-		auto& eachEntity = (*entIt);
-		while (eachEntity.second[eachWindow.second].time < simTime && eachWindow.second < (eachEntity.second.size() - 1)) {
-			UE_LOG(LogTemp, Warning, TEXT("Entity %s: moving window to states %d and %d"), UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str()), eachWindow.first, eachWindow.second);
-			if (eachWindow.first != eachWindow.second) {
-				++eachWindow.first;
-			}
-			++eachWindow.second;
-		}
-		if (eachEntity.second[eachWindow.second].time < simTime) {
-			eachWindow.first = eachWindow.second;
-		}
 	}
 
 	return stateResultPair.second;
 }
 
+// Called when the game starts or when spawned
+void ALevelController::BeginPlay()
+{
+	Super::BeginPlay();
+	loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
+}
+
 float ALevelController::getSimTime() {
 	return simTime;
+}
+
+float ALevelController::getSimStart()
+{
+	return simStartTime;
+}
+
+float ALevelController::getSimEndTime()
+{
+	return simEndTime;
 }
 
 void ALevelController::setSimTime(float absoluteTime) {
@@ -230,28 +231,7 @@ void ALevelController::setSimTime(float absoluteTime) {
 }
 
 void ALevelController::moveSimTime(float deltaTime) {
-	simTime += deltaTime;
-	updateSim();
-}
-
-void ALevelController::updateSim() {
-	auto watchIt = windows.begin();
-	auto entIt = std::get<StateMap<Stacker>>(states).begin();
-	auto actorIt = stackerReclaimers.CreateConstIterator();
-	for (; watchIt != windows.end(); (++watchIt, ++entIt)) {
-		auto& eachWindow = (*watchIt);
-		auto& eachEntity = (*entIt);
-		while (eachEntity.second[eachWindow.second].time < simTime && eachWindow.second < (eachEntity.second.size() - 1)) {
-			UE_LOG(LogTemp, Warning, TEXT("Entity %s: moving window to states %d and %d"), UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str()), eachWindow.first, eachWindow.second);
-			if (eachWindow.first != eachWindow.second) {
-				++eachWindow.first;
-			}
-			++eachWindow.second;
-		}
-		if (eachEntity.second[eachWindow.second].time < simTime) {
-			eachWindow.first = eachWindow.second;
-		}
-	}
+	setSimTime(simTime + deltaTime);
 }
 
 float ALevelController::getPlaySpeed() {
@@ -269,56 +249,6 @@ bool ALevelController::getPlayState() {
 void ALevelController::setPlayState(bool isPlaying) {
 	this->isPlaying = isPlaying;
 }
-
-// Called every frame
-void ALevelController::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-	// DATA STUFF
-	if (isPlaying) {
-		moveSimTime(DeltaTime * speed);
-	}
-	auto watchIt = windows.begin();
-	auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
-	auto actorIt = stackerReclaimers.CreateConstIterator();
-	for (; watchIt != windows.end() && actorIt; (++watchIt, ++entIt, ++actorIt)) {
-		auto& eachWindow = (*watchIt);
-		auto& eachEntity = (*entIt);
-		auto& eachActor = (*actorIt);
-		int indexA = eachWindow.first;
-		int indexB = eachWindow.second;
-
-
-		double timeA = eachEntity.second[indexA].time;
-		double timeB = eachEntity.second[indexB].time;
-
-		//the length of time available between the states
-		double aToBTimeDist = timeB - timeA;
-
-		//we have to limit the target time in case the worldTime is beyond the current frame
-		double targetTime = std::max(timeA, std::min(timeB, simTime));
-
-		//determine the scale as a 
-		double scale = aToBTimeDist > 0 ? (targetTime - timeA) / aToBTimeDist : 0;
-
-
-		double positionA = eachEntity.second[indexA].position;
-		double positionB = eachEntity.second[indexB].position;
-
-		double positionInterpolated = positionA + (positionB - positionA)*(scale);
-
-		double positionDelta = (positionInterpolated - xMin) / (xMax - xMin);
-
-		UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f; state a: %d, state b: %d, typea: %d, typeb: %d"), UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str()), float(simTime), indexA, indexB, (int)eachEntity.second[indexA].type, (int)eachEntity.second[indexB].type);
-		UE_LOG(LogTemp, Warning, TEXT("scale: %f, timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position delta: %f"), float(scale), float(timeA), float(timeB), float(positionA), float(positionB), float(positionInterpolated), float(positionDelta));
-
-		// TEST INPUT
-		eachActor->setPosition(positionDelta);
-	}
-}
-
-
 
 /*
 
@@ -584,30 +514,3 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 
 	UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
 }
-		////UE_LOG(LogTemp, Warning, TEXT("stackCount: %d"), coalStacks.size());
-		////UE_LOG(LogTemp, Warning, TEXT("stack1: %d, stack2: %d, stack3: %d"), coalStacks.at(0), coalStacks.at(1), coalStacks.at(2));
-		//coalStacks[0]->setQuantity(0.8);
-		//coalStacks[1]->setQuantity(0.2);
-		//coalStacks[2]->setQuantity(0.5);
-// Called when the game starts or when spawned
-void ALevelController::BeginPlay()
-{
-	Super::BeginPlay();
-	loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
-}
-
-float ALevelController::getSimTime() {
-	return simTime;
-}
-
-float ALevelController::getSimStart()
-{
-	return simStartTime;
-}
-
-float ALevelController::getSimEndTime()
-{
-	return simEndTime;
-}
-void ALevelController::moveSimTime(float deltaTime) {
-	setSimTime(simTime + deltaTime);
