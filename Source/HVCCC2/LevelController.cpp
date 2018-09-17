@@ -497,6 +497,11 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 			}
 		}
 	}
+
+	if (previousState.type == StackerReclaimerStateType::Moving) {
+
+	}
+
 	//end of temporary hack
 	
 	//calculate the absolute position of the machine (along it's rail) by interpolating the previous and next positions
@@ -513,4 +518,8 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 
 
 	UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
+}
+
+void ALevelController::animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale) {
+
 }

@@ -9,6 +9,7 @@
 #include "data/serialization.h"
 #include "data/extraction/implementedEntities.h"
 #include "SimulationData.h"
+#include "CoalStack.h"
 
 #include "StackerReclaimer.h"
 
@@ -105,6 +106,11 @@ struct ClearDataFunctor {
 template<>
 struct u_actor_type<StackerReclaimer> {
 	using type = AStackerReclaimer;
+};
+
+template<>
+struct u_actor_type<Stockpile> {
+	using type = ACoalStack;
 };
 
 UCLASS()
@@ -268,6 +274,7 @@ private:
 	}
 	
 	void animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale);
+	void animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale);
 
 	void stackCoal(int stackerId);
 	void stopStackingCoal(int stackerId);
