@@ -108,6 +108,9 @@ protected:
 		TArray<ATrain*> trains;
 	UPROPERTY(EditAnywhere)
 	TArray<AConveyorBelt*> conveyorBelts;
+	//UPROPERTY(EditAnywhere)
+	//	TArray<ATrackSpline*> trainTracks;
+
 
 	//Conveyor Belt position markers
 	UPROPERTY(EditAnywhere)
