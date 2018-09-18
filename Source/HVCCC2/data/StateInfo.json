@@ -64,69 +64,88 @@
           "OpStart": "PreStackReserved",
           "DoubleHandleOpStart": "PreDoubleHandleReserved",
           "OnMove": "Moving",
-          "MaintStart": "Maintenance"
+          "MaintStart": "Maintenance",
+          "WrapUp": "WrappedUp"
         },
         "Maintenance": {
-          "MaintComp": "Idle"
+          "MaintComp": "Idle",
+          "WrapUp": "WrappedUp"
         },
         "Moving": {
-          "OnStopMove": "Idle"
+          "OnStopMove": "Idle",
+          "WrapUp": "WrappedUp"
         },
         "PreStackReserved": {
           "Start": "WorkingStack",
           "Fail": "PreStackReservedFail",
-          "SyncedFail": "PreStackReservedSyncFail"
+          "SyncedFail": "PreStackReservedSyncFail",
+          "WrapUp": "WrappedUp"
         },
         "PreStackReservedFail": {
-          "Fix": "PreStackReserved"
+          "Fix": "PreStackReserved",
+          "WrapUp": "WrappedUp"
         },
         "PreStackReservedSyncFail": {
-          "SyncedFix": "PreStackReserved"
+          "SyncedFix": "PreStackReserved",
+          "WrapUp": "WrappedUp"
         },
         "WorkingStack": {
           "Comp": "PostStackReserved",
           "Fail": "WorkingStackFail",
-          "SyncedFail": "WorkingStackSyncFail"
+          "SyncedFail": "WorkingStackSyncFail",
+          "WrapUp": "WrappedUp"
         },
         "WorkingStackFail": {
-          "Fix": "WorkingStack"
+          "Fix": "WorkingStack",
+          "WrapUp": "WrappedUp"
         },
         "WorkingStackSyncFail": {
-          "SyncedFix": "WorkingStack"
+          "SyncedFix": "WorkingStack",
+          "WrapUp": "WrappedUp"
         },
         "PostStackReserved": {
           "Fail": "PostStackReservedFail",
           "SyncedFail": "PostStackReservedSyncFail",
-          "OpComp": "Idle"
+          "OpComp": "Idle",
+          "WrapUp": "WrappedUp"
         },
         "PostStackReservedFail": {
-          "Fix": "PostStackReserved"
+          "Fix": "PostStackReserved",
+          "WrapUp": "WrappedUp"
         },
         "PostStackReservedSyncFail": {
-          "SyncedFix": "PostStackReserved"
+          "SyncedFix": "PostStackReserved",
+          "WrapUp": "WrappedUp"
         },
         "PreDoubleHandleReserved": {
           "Fail": "PreDoubleHandleReservedFail",
           "SyncedFail": "PreDoubleHandleReservedSyncFail",
-          "DoubleHandleStart": "WorkingDoubleHandle"
+          "DoubleHandleStart": "WorkingDoubleHandle",
+          "WrapUp": "WrappedUp"
         },
         "PreDoubleHandleReservedFail": {
-          "Fix": "PreDoubleHandleReserved"
+          "Fix": "PreDoubleHandleReserved",
+          "WrapUp": "WrappedUp"
         },
         "PreDoubleHandleReservedSyncFail": {
-          "SyncedFix": "PreDoubleHandleReserved"
+          "SyncedFix": "PreDoubleHandleReserved",
+          "WrapUp": "WrappedUp"
         },
         "WorkingDoubleHandle": {
           "DoubleHandleComp": "PostDoubleHandleReserved",
           "Fail": "WorkingDoubleHandleFail",
-          "SyncedFail": "WorkingDoubleHandleSyncFail"
+          "SyncedFail": "WorkingDoubleHandleSyncFail",
+          "WrapUp": "WrappedUp"
         },
         "WorkingDoubleHandleFail": {
-          "Fix": "WorkingDoubleHandle"
+          "Fix": "WorkingDoubleHandle",
+          "WrapUp": "WrappedUp"
         },
         "WorkingDoubleHandleSyncFail": {
-          "SyncedFix": "WorkingDoubleHandle"
-        }
+          "SyncedFix": "WorkingDoubleHandle",
+          "WrapUp": "WrappedUp"
+        },
+        "WrappedUp": {}
       }
     },
     "Reclaimer": {
@@ -139,69 +158,88 @@
           "OpStart": "PreReclaimReserved",
           "DoubleHandleOpStart": "PreDoubleHandleReserved",
           "OnMove": "Moving",
-          "MaintStart": "Maintenance"
+          "MaintStart": "Maintenance",
+          "WrapUp": "WrappedUp"
         },
         "Maintenance": {
-          "MaintComp": "Idle"
+          "MaintComp": "Idle",
+          "WrapUp": "WrappedUp"
         },
         "Moving": {
-          "OnStopMove": "Idle"
+          "OnStopMove": "Idle",
+          "WrapUp": "WrappedUp"
         },
         "PreReclaimReserved": {
           "Start": "WorkingReclaim",
           "Fail": "PreReclaimReservedFail",
-          "SyncedFail": "PreReclaimReservedSyncFail"
+          "SyncedFail": "PreReclaimReservedSyncFail",
+          "WrapUp": "WrappedUp"
         },
         "PreReclaimReservedFail": {
-          "Fix": "PreReclaimReserved"
+          "Fix": "PreReclaimReserved",
+          "WrapUp": "WrappedUp"
         },
         "PreReclaimReservedSyncFail": {
-          "SyncedFix": "PreReclaimReserved"
+          "SyncedFix": "PreReclaimReserved",
+          "WrapUp": "WrappedUp"
         },
         "WorkingReclaim": {
           "Comp": "PostReclaimReserved",
           "Fail": "WorkingReclaimFail",
-          "SyncedFail": "WorkingReclaimSyncFail"
+          "SyncedFail": "WorkingReclaimSyncFail",
+          "WrapUp": "WrappedUp"
         },
         "WorkingReclaimFail": {
-          "Fix": "WorkingReclaim"
+          "Fix": "WorkingReclaim",
+          "WrapUp": "WrappedUp"
         },
         "WorkingReclaimSyncFail": {
-          "SyncedFix": "WorkingReclaim"
+          "SyncedFix": "WorkingReclaim",
+          "WrapUp": "WrappedUp"
         },
         "PostReclaimReserved": {
           "Fail": "PostReclaimReservedFail",
           "SyncedFail": "PostReclaimReservedSyncFail",
-          "OpComp": "Idle"
+          "OpComp": "Idle",
+          "WrapUp": "WrappedUp"
         },
         "PostReclaimReservedFail": {
-          "Fix": "PostReclaimReserved"
+          "Fix": "PostReclaimReserved",
+          "WrapUp": "WrappedUp"
         },
         "PostReclaimReservedSyncFail": {
-          "SyncedFix": "PostReclaimReserved"
+          "SyncedFix": "PostReclaimReserved",
+          "WrapUp": "WrappedUp"
         },
         "PreDoubleHandleReserved": {
           "Fail": "PreDoubleHandleReservedFail",
           "SyncedFail": "PreDoubleHandleReservedSyncFail",
-          "DoubleHandleStart": "WorkingDoubleHandle"
+          "DoubleHandleStart": "WorkingDoubleHandle",
+          "WrapUp": "WrappedUp"
         },
         "PreDoubleHandleReservedFail": {
-          "Fix": "PreDoubleHandleReserved"
+          "Fix": "PreDoubleHandleReserved",
+          "WrapUp": "WrappedUp"
         },
         "PreDoubleHandleReservedSyncFail": {
-          "SyncedFix": "PreDoubleHandleReserved"
+          "SyncedFix": "PreDoubleHandleReserved",
+          "WrapUp": "WrappedUp"
         },
         "WorkingDoubleHandle": {
           "DoubleHandleComp": "PostDoubleHandleReserved",
           "Fail": "WorkingDoubleHandleFail",
-          "SyncedFail": "WorkingDoubleHandleSyncFail"
+          "SyncedFail": "WorkingDoubleHandleSyncFail",
+          "WrapUp": "WrappedUp"
         },
         "WorkingDoubleHandleFail": {
-          "Fix": "WorkingDoubleHandle"
+          "Fix": "WorkingDoubleHandle",
+          "WrapUp": "WrappedUp"
         },
         "WorkingDoubleHandleSyncFail": {
-          "SyncedFix": "WorkingDoubleHandle"
-        }
+          "SyncedFix": "WorkingDoubleHandle",
+          "WrapUp": "WrappedUp"
+        },
+        "WrappedUp": {}
       }
     },
     "Signal": {
@@ -272,61 +310,79 @@
           "StartPreload": "Preload",
           "OnFail": "IdleFail",
           "MaintStart": "Maintenance",
-          "StartIdle": "Idle"
+          "StartIdle": "Idle",
+          "WrapUp": "WrappedUp"
         },
         "IdleFail": {
-          "OnFix": "IdleFix"
+          "OnFix": "IdleFix",
+          "WrapUp": "WrappedUp"
         },
         "IdleFix": {
-          "StartIdle": "Idle"
+          "StartIdle": "Idle",
+          "WrapUp": "WrappedUp"
         },
         "Maintenance": {
-          "MaintComp": "Idle"
+          "MaintComp": "Idle",
+          "WrapUp": "WrappedUp"
         },
         "Preload": {
           "OnFail": "PreloadFail",
-          "StartLoad": "Loading"
+          "StartLoad": "Loading",
+          "WrapUp": "WrappedUp"
         },
         "PreloadFail": {
-          "OnFix": "PreloadFix"
+          "OnFix": "PreloadFix",
+          "WrapUp": "WrappedUp"
         },
         "PreloadFix": {
-          "StartPreload": "Preload"
+          "StartPreload": "Preload",
+          "WrapUp": "WrappedUp"
         },
         "Loading": {
-          "FinishLoad": "IdleLoading"
+          "FinishLoad": "IdleLoading",
+          "WrapUp": "WrappedUp"
         },
         "IdleLoading": {
           "OnFail": "IdleLoadingFail",
           "StartLoad": "Loading",
-          "StartPostLoad": "Postload"
+          "StartPostLoad": "Postload",
+          "WrapUp": "WrappedUp"
         },
         "IdleLoadingFail": {
-          "OnFix": "IdleLoadingFix"
+          "OnFix": "IdleLoadingFix",
+          "WrapUp": "WrappedUp"
         },
         "IdleLoadingFix": {
-          "StartLoad": "Loading"
+          "StartLoad": "Loading",
+          "WrapUp": "WrappedUp"
         },
         "Postload": {
           "OnFail": "PostloadFail",
-          "StartRecharge": "Recharging"
+          "StartRecharge": "Recharging",
+          "WrapUp": "WrappedUp"
         },
         "PostloadFail": {
-          "OnFix": "PostloadFix"
+          "OnFix": "PostloadFix",
+          "WrapUp": "WrappedUp"
         },
         "PostloadFix": {
-          "StartPostload": "Postload"
+          "StartPostload": "Postload",
+          "WrapUp": "WrappedUp"
         },
         "Recharging": {
           "OnFail": "RechargingFail",
-          "StartIdle": "Idle"
+          "StartIdle": "Idle",
+          "WrapUp": "WrappedUp"
         },
         "RechargingFail": {
-          "OnFix": "RechargingFix"
+          "OnFix": "RechargingFix",
+          "WrapUp": "WrappedUp"
         },
         "RecharingFix": {
-          "StartRecharge": "Recharging"
-        }
+          "StartRecharge": "Recharging",
+          "WrapUp": "WrappedUp"
+        },
+        "WrappedUp": {}
       }
     },
     "Vessel": {
@@ -390,69 +446,87 @@
           "MaintStart": "Maintenance",
           "OnMove": "Moving",
           "StartVesselLoad": "Idle",
-          "LoadOpStart": "PreLoadReserved"
+          "LoadOpStart": "PreLoadReserved",
+          "WrapUp": "WrappedUp"
         },
         "Maintenance": {
-          "MaintComp": "Idle"
+          "MaintComp": "Idle",
+          "WrapUp": "WrappedUp"
         },
         "Moving": {
-          "OnStopMove": "Idle"
+          "OnStopMove": "Idle",
+          "WrapUp": "WrappedUp"
         },
         "PreLoadReserved": {
           "LoadStart": "Working",
           "Fail": "PreLoadFailed",
-          "SyncedFail": "PreLoadSyncedFail"
+          "SyncedFail": "PreLoadSyncedFail",
+          "WrapUp": "WrappedUp"
         },
         "PreLoadFailed": {
-          "Fix": "PreLoadReserved"
+          "Fix": "PreLoadReserved",
+          "WrapUp": "WrappedUp"
         },
         "PreLoadSyncedFail": {
-          "SyncedFix": "PreLoadReserved"
+          "SyncedFix": "PreLoadReserved",
+          "WrapUp": "WrappedUp"
         },
         "Working": {
           "Fail": "WorkingFailed",
           "LoadComp": "PostLoadReserved",
           "StartVesselDraftSurvey": "InterimDraftSurvey",
           "SyncedFail": "WorkingSyncedFail",
-          "HatchChangeStart": "ChaningHatches"
+          "HatchChangeStart": "ChaningHatches",
+          "WrapUp": "WrappedUp"
         },
         "WorkingFailed": {
-          "Fix": "Working"
+          "Fix": "Working",
+          "WrapUp": "WrappedUp"
         },
         "PostLoadReserved": {
           "SyncedFail": "PostLoadSyncedFail",
           "Fail": "PostLoadFailed",
-          "LoadOpComp": "Idle"
+          "LoadOpComp": "Idle",
+          "WrapUp": "WrappedUp"
         },
         "PostLoadSyncedFail": {
-          "SyncedFix": "PostLoadReserved"
+          "SyncedFix": "PostLoadReserved",
+          "WrapUp": "WrappedUp"
         },
         "PostLoadFailed": {
-          "Fix": "PostLoadReserved"
+          "Fix": "PostLoadReserved",
+          "WrapUp": "WrappedUp"
         },
         "InterimDraftSurvey": {
           "SyncedFail": "InterimDraftSyncFail",
-          "FinishVesselDraftSurvey": "Working"
+          "FinishVesselDraftSurvey": "Working",
+          "WrapUp": "WrappedUp"
         },
         "InterimDraftSyncFail": {
           "SyncedFix": "InterimDraftSurvey",
-          "FinishVesselDraftSurvey": "WorkingSyncedFail"
+          "FinishVesselDraftSurvey": "WorkingSyncedFail",
+          "WrapUp": "WrappedUp"
         },
         "WorkingSyncedFail": {
-          "SyncedFix": "Working"
+          "SyncedFix": "Working",
+          "WrapUp": "WrappedUp"
         },
         "ChangingHatches": {
           "OnHatchChangeComplete": "Working",
           "SyncedFail": "ChangingHatchesSyncedFail",
-          "Fail": "ChangingHatchesFailed"
+          "Fail": "ChangingHatchesFailed",
+          "WrapUp": "WrappedUp"
         },
         "ChangingHatchesSyncedFailed": {
           "OnHatchChangeComplete": "WorkingSyncedFail",
-          "SyncedFix": "ChangingHatches"
+          "SyncedFix": "ChangingHatches",
+          "WrapUp": "WrappedUp"
         },
         "ChangingHatchesFailed": {
-          "Fix": "ChangingHatches"
-        }
+          "Fix": "ChangingHatches",
+          "WrapUp": "WrappedUp"
+        },
+        "WrappedUp": {}
       }
     },
     "TrainMovement": {

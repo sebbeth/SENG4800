@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:05:50.446537
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
  **/
 #include "ShiploaderEventType.h"
         
@@ -38,6 +38,8 @@ ShiploaderEventType decodeShiploaderEventType(const std::string& enumeratorStrin
         return ShiploaderEventType::SyncedFail;
     } else if (enumeratorString == "SyncedFix") {
         return ShiploaderEventType::SyncedFix;
+    } else if (enumeratorString == "WrapUp") {
+        return ShiploaderEventType::WrapUp;
     } else {
         return ShiploaderEventType::Invalid;
     }
@@ -58,6 +60,10 @@ std::string encodeShiploaderEventType(const ShiploaderEventType& value) {
 
         case ShiploaderEventType::LoadOperationStart:
             return "LoadOpStart";
+            break;
+
+        case ShiploaderEventType::WrapUp:
+            return "WrapUp";
             break;
 
         case ShiploaderEventType::MaintenanceComplete:

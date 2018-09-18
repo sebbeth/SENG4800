@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:05:50.446537
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
  **/
 #include "ShiploaderState.h"
 
@@ -15,6 +15,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
                     return ShiploaderStateType::Idle;
                 case ShiploaderEventType::LoadOperationStart:
                     return ShiploaderStateType::PreLoadReserved;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -22,6 +24,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
             switch(eventType) {
                 case ShiploaderEventType::MaintenanceComplete:
                     return ShiploaderStateType::Idle;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -29,6 +33,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
             switch(eventType) {
                 case ShiploaderEventType::OnStopMove:
                     return ShiploaderStateType::Idle;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -40,9 +46,13 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
                     return ShiploaderStateType::PreLoadFailed;
                 case ShiploaderEventType::SyncedFail:
                     return ShiploaderStateType::PreLoadSyncedFail;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
+        case ShiploaderStateType::WrappedUp:
+            return ShiploaderStateType::Invalid;
         case ShiploaderStateType::Working:
             switch(eventType) {
                 case ShiploaderEventType::Fail:
@@ -55,6 +65,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
                     return ShiploaderStateType::WorkingSyncedFail;
                 case ShiploaderEventType::HatchChangeStart:
                     return ShiploaderStateType::ChaningHatches;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -62,6 +74,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
             switch(eventType) {
                 case ShiploaderEventType::Fix:
                     return ShiploaderStateType::PreLoadReserved;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -69,6 +83,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
             switch(eventType) {
                 case ShiploaderEventType::SyncedFix:
                     return ShiploaderStateType::PreLoadReserved;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -76,6 +92,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
             switch(eventType) {
                 case ShiploaderEventType::Fix:
                     return ShiploaderStateType::Working;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -87,6 +105,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
                     return ShiploaderStateType::PostLoadFailed;
                 case ShiploaderEventType::LoadOperationComplete:
                     return ShiploaderStateType::Idle;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -96,6 +116,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
                     return ShiploaderStateType::InterimDraftSyncFail;
                 case ShiploaderEventType::FinishVesselDraftSurvey:
                     return ShiploaderStateType::Working;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -103,6 +125,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
             switch(eventType) {
                 case ShiploaderEventType::SyncedFix:
                     return ShiploaderStateType::Working;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -112,6 +136,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
             switch(eventType) {
                 case ShiploaderEventType::SyncedFix:
                     return ShiploaderStateType::PostLoadReserved;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -119,6 +145,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
             switch(eventType) {
                 case ShiploaderEventType::Fix:
                     return ShiploaderStateType::PostLoadReserved;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -128,6 +156,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
                     return ShiploaderStateType::InterimDraftSurvey;
                 case ShiploaderEventType::FinishVesselDraftSurvey:
                     return ShiploaderStateType::WorkingSyncedFail;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -139,6 +169,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
                     return ShiploaderStateType::ChangingHatchesSyncedFail;
                 case ShiploaderEventType::Fail:
                     return ShiploaderStateType::ChangingHatchesFailed;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -148,6 +180,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
             switch(eventType) {
                 case ShiploaderEventType::Fix:
                     return ShiploaderStateType::ChangingHatches;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }
@@ -157,6 +191,8 @@ ShiploaderStateType ShiploaderState::determineNextType(ShiploaderStateType state
                     return ShiploaderStateType::WorkingSyncedFail;
                 case ShiploaderEventType::SyncedFix:
                     return ShiploaderStateType::ChangingHatches;
+                case ShiploaderEventType::WrapUp:
+                    return ShiploaderStateType::WrappedUp;
                 default:
                     return ShiploaderStateType::Invalid;
             }

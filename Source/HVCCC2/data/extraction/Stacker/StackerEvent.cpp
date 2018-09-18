@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:05:50.446537
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
  **/
 #include "StackerEvent.h"
 
@@ -21,6 +21,7 @@ bool StackerEvent::hasAmount() const {
         case StackerEventType::Start:
         case StackerEventType::SyncedFail:
         case StackerEventType::SyncedFix:
+        case StackerEventType::WrapUp:
         default:
             return false;
     }
@@ -39,6 +40,7 @@ bool StackerEvent::hasPosition() const {
         case StackerEventType::OperationComplete:
         case StackerEventType::OperationStart:
         case StackerEventType::Start:
+        case StackerEventType::WrapUp:
             return true;
         case StackerEventType::MaintenanceComplete:
         case StackerEventType::MaintenanceStart:
@@ -67,6 +69,7 @@ bool StackerEvent::hasStockpileID() const {
         case StackerEventType::OnStopMove:
         case StackerEventType::SyncedFail:
         case StackerEventType::SyncedFix:
+        case StackerEventType::WrapUp:
         default:
             return false;
     }
@@ -85,6 +88,7 @@ bool StackerEvent::hasTime() const {
         case StackerEventType::OperationComplete:
         case StackerEventType::OperationStart:
         case StackerEventType::Start:
+        case StackerEventType::WrapUp:
             return true;
         case StackerEventType::MaintenanceComplete:
         case StackerEventType::MaintenanceStart:

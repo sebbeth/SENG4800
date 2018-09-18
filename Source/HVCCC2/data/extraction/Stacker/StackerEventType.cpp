@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:05:50.446537
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
  **/
 #include "StackerEventType.h"
         
@@ -34,6 +34,8 @@ StackerEventType decodeStackerEventType(const std::string& enumeratorString) {
         return StackerEventType::SyncedFail;
     } else if (enumeratorString == "SyncedFix") {
         return StackerEventType::SyncedFix;
+    } else if (enumeratorString == "WrapUp") {
+        return StackerEventType::WrapUp;
     } else {
         return StackerEventType::Invalid;
     }
@@ -54,6 +56,10 @@ std::string encodeStackerEventType(const StackerEventType& value) {
 
         case StackerEventType::MaintenanceStart:
             return "MaintStart";
+            break;
+
+        case StackerEventType::WrapUp:
+            return "WrapUp";
             break;
 
         case StackerEventType::MaintenanceComplete:

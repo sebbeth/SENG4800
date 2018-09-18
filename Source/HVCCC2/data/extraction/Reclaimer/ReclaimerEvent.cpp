@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:05:50.446537
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
  **/
 #include "ReclaimerEvent.h"
 
@@ -21,6 +21,7 @@ bool ReclaimerEvent::hasAmount() const {
         case ReclaimerEventType::Start:
         case ReclaimerEventType::SyncedFail:
         case ReclaimerEventType::SyncedFix:
+        case ReclaimerEventType::WrapUp:
         default:
             return false;
     }
@@ -39,6 +40,7 @@ bool ReclaimerEvent::hasPosition() const {
         case ReclaimerEventType::Start:
         case ReclaimerEventType::SyncedFail:
         case ReclaimerEventType::SyncedFix:
+        case ReclaimerEventType::WrapUp:
             return true;
         case ReclaimerEventType::Fail:
         case ReclaimerEventType::Fix:
@@ -67,6 +69,7 @@ bool ReclaimerEvent::hasStockpileID() const {
         case ReclaimerEventType::MaintenanceStart:
         case ReclaimerEventType::OnMove:
         case ReclaimerEventType::OnStopMove:
+        case ReclaimerEventType::WrapUp:
         default:
             return false;
     }
@@ -85,6 +88,7 @@ bool ReclaimerEvent::hasTime() const {
         case ReclaimerEventType::Start:
         case ReclaimerEventType::SyncedFail:
         case ReclaimerEventType::SyncedFix:
+        case ReclaimerEventType::WrapUp:
             return true;
         case ReclaimerEventType::Fail:
         case ReclaimerEventType::Fix:

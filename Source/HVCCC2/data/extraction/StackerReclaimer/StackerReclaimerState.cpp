@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:05:50.446537
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
  **/
 #include "StackerReclaimerState.h"
 StackerReclaimerState::StackerReclaimerState(const StackerState& src): type(StackerReclaimerStateType::Invalid), id({src.id.terminal, src.id.name}), position(src.position), time(src.time), stockpileID(src.stockpileID), amount(src.amount){
@@ -18,6 +18,9 @@ StackerReclaimerState::StackerReclaimerState(const StackerState& src): type(Stac
             break;
         case StackerStateType::Maintenance:
             type = StackerReclaimerStateType::Maintenance;
+            break;
+        case StackerStateType::WrappedUp:
+            type = StackerReclaimerStateType::WrappedUp;
             break;
         case StackerStateType::WorkingStack:
             type = StackerReclaimerStateType::WorkingStack;
@@ -81,6 +84,9 @@ StackerReclaimerState::StackerReclaimerState(const ReclaimerState& src): type(St
             break;
         case ReclaimerStateType::Maintenance:
             type = StackerReclaimerStateType::Maintenance;
+            break;
+        case ReclaimerStateType::WrappedUp:
+            type = StackerReclaimerStateType::WrappedUp;
             break;
         case ReclaimerStateType::WorkingReclaim:
             type = StackerReclaimerStateType::WorkingReclaim;

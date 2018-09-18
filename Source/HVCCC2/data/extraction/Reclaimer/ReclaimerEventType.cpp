@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:05:50.446537
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
  **/
 #include "ReclaimerEventType.h"
         
@@ -34,6 +34,8 @@ ReclaimerEventType decodeReclaimerEventType(const std::string& enumeratorString)
         return ReclaimerEventType::SyncedFail;
     } else if (enumeratorString == "SyncedFix") {
         return ReclaimerEventType::SyncedFix;
+    } else if (enumeratorString == "WrapUp") {
+        return ReclaimerEventType::WrapUp;
     } else {
         return ReclaimerEventType::Invalid;
     }
@@ -54,6 +56,10 @@ std::string encodeReclaimerEventType(const ReclaimerEventType& value) {
 
         case ReclaimerEventType::MaintenanceStart:
             return "MaintStart";
+            break;
+
+        case ReclaimerEventType::WrapUp:
+            return "WrapUp";
             break;
 
         case ReclaimerEventType::MaintenanceComplete:

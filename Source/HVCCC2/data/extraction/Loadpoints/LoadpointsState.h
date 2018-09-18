@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:05:50.446537
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
  **/
 #pragma once
 #include <string>
@@ -7,6 +7,7 @@
 #include "LoadpointsEvent.h"
 #include "LoadpointsStateType.h"
 #include "../Loadpoints/Loadpoints.h"
+#include "../TrainMovement/TrainMovement.h"
 class LoadpointsState {
 public:
     using Entity = Loadpoints;
@@ -15,7 +16,7 @@ public:
     
 
     double amount;
-    int cycleID;
+    TrainMovement::Id cycleID;
     std::string loadpointName;
     double time;
     
