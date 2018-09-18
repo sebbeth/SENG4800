@@ -25,8 +25,8 @@ void ALevelController::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	if (isPlaying) {
 		moveSimTime(DeltaTime * speed);
-		forEachInTuple(data, animateEntitiesFunctor);
 	}
+	forEachInTuple(data, animateEntitiesFunctor);
 
 	//// DATA STUFF
 	//if (isPlaying) {
