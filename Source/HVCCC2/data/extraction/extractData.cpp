@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:04:35.914436
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:27:51.338785
  **/
 #include "extractData.h"
 #include <regex>
@@ -319,10 +319,13 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, VesselEvent&
     XMLCheckResult(extractAttribute(source, destination.id.name, "vesselID"), 0);
 
     switch(destination.type) {
+        case VesselEventType::BallastTankEmpty:
         case VesselEventType::Created:
         case VesselEventType::HatchChangeComplete:
+        case VesselEventType::HatchChangeStart:
         case VesselEventType::StopForDeballasting:
         case VesselEventType::StopForDeballastingComplete:
+        case VesselEventType::YardSpaceAllocated:
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
         case VesselEventType::DraftSurveyComplete:
@@ -330,6 +333,12 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, VesselEvent&
         case VesselEventType::StartLoading:
             XMLCheckResult(extractAttribute(source, destination.ballast, "ballast"), 0);
             XMLCheckResult(extractAttribute(source, destination.cargo, "cargo"), 0);
+            XMLCheckResult(extractAttribute(source, destination.terminalID, "terminalID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
+            break;
+        case VesselEventType::FullyLoaded:
+            XMLCheckResult(extractAttribute(source, destination.cargo, "cargo"), 0);
+            XMLCheckResult(extractAttribute(source, destination.numcargoes, "numCargoes"), 0);
             XMLCheckResult(extractAttribute(source, destination.terminalID, "terminalID"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;

@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:04:35.914436
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:27:51.338785
  **/
 set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Dumpstation/Dumpstation.h

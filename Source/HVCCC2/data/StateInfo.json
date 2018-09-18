@@ -415,7 +415,8 @@
       "transitions": {
         "Idle": {
           "AtEA": "WaitingForCoal",
-          "Created": "Idle"
+          "Created": "Idle",
+          "YardSpaceAllocated": "Idle"
         },
         "WaitingForCoal": {
           "WaitBerth": "WaitingForBerth"
@@ -433,9 +434,10 @@
           "StartLoading": "Loading"
         },
         "Loading": {
-          "HatchChangeComplete": "ChangingHatches",
+          "HatchChangeStart": "ChangingHatches",
           "DraftSurveyStart": "InterimDraftSurvey",
-          "StopForDeballasting": "StoppedForDeballasting"
+          "StopForDeballasting": "StoppedForDeballasting",
+          "FullyLoaded": "Loaded"
         },
         "ChangingHatches": {
           "HatchChangeComplete": "Loading"
@@ -444,6 +446,7 @@
           "DraftSurveyComplete": "Loading"
         },
         "StoppedForDeballasting": {
+          "BallastTankEmpty": "StoppedForDeballasting",
           "StopForDeballastingComplete": "Loading"
         },
         "Loaded": {
