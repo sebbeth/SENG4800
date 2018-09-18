@@ -8,6 +8,7 @@
 #include "FileDialog.h"
 
 
+
 bool UOpenDialog::ShowOpenFileDialog(FString InitialDir, FString Title, bool UseFilter, FString& Filepath) {
 	FileDialog* dialog = new FileDialog();
 	dialog->FilterIndex = 1;
@@ -26,3 +27,4 @@ bool UOpenDialog::ShowOpenFileDialog(FString InitialDir, FString Title, bool Use
 	}
 	return false;
 }
+
