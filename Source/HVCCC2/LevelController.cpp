@@ -495,11 +495,12 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 			if (eachState.position > maxPosition) {
 				maxPosition = eachState.position;
 			}
+			
 		}
 	}
 
-	if (previousState.type == StackerReclaimerStateType::Moving) {
-
+	if (nextState.type == StackerReclaimerStateType::Moving) {
+		UE_LOG(LogTemp, Warning, TEXT("Moving"));
 	}
 
 	//end of temporary hack
@@ -517,9 +518,65 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 	//TODO: ADD TURNING CONSIDERATIONS
 
 
-	UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
+	//UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
 }
 
 void ALevelController::animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale) {
 
+	// Animate the Stockpiles
+
+	//Stockpile::Id targetId = previousState.id;
+	//float minSize = 0;
+	//float maxSize = 0;
+	//auto& theMap = std::get<DataMap<Stockpile>>(data);
+	//auto targetIterator = theMap.find(targetId);
+	//if (targetIterator != theMap.end()) {
+	//	for (auto eachState : (*targetIterator).second.states) {
+	//		UE_LOG(LogTemp, Warning, TEXT("StockPile %f"), 0.0f);
+	//	}
+	//}
+
+
+	//UE_LOG(LogTemp, Warning, TEXT("StockPile %f"),0.0f);
+
+	/*
+	//For animating the coal piles/stockpiles:
+	watchIt = windows.begin();
+	auto coalStackEntityIterator = std::get<std::map<Stockpile::Id, std::vector<StockpileState>>>(states).begin();
+	auto coalStackActorIterator = coalStacks.CreateConstIterator();
+
+	for (; watchIt != windows.end() && coalStackActorIterator; (++watchIt, ++coalStackEntityIterator, ++coalStackActorIterator)) {
+		//Fetch the item that each iterator is currently positioned at:
+		auto& eachWindow = (*watchIt);
+		auto& eachEntity = (*coalStackEntityIterator);
+		auto& eachActor = (*coalStackActorIterator);
+
+		//Store the indexes of the current state and the state after that one:
+		int indexA = eachWindow.first;
+		int indexB = eachWindow.second;
+
+		//Store the times that the two states occurred:
+		double timeA = eachEntity.second[indexA].time;
+		double timeB = eachEntity.second[indexB].time;
+
+		//The length of time available between the states:
+		double aToBTimeDist = timeB - timeA;
+		//We have to limit the target time in case the worldTime is beyond the current frame:
+		double targetTime = std::max(timeA, std::min(timeB, simTime));
+
+		//Scale the coal pile/stockpile based on the operation conducted:
+		if (isPlaying) {
+			//This is where we'll check out the state type of the current and next state, then decide to scale up or scale down the stockpile.
+			//I (Nick) haven't figured out the exact way we'll decide how quickly we'll scale the object.
+			//if () {
+
+			//}
+
+			eachActor->setQuantity(singelStockpileSize);
+
+			singelStockpileSize = singelStockpileSize + 0.001;
+		}
+
+
+	}*/
 }
