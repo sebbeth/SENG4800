@@ -9,7 +9,7 @@
 #include "data/serialization.h"
 #include "data/extraction/implementedEntities.h"
 #include "SimulationData.h"
-
+#include "TrainTrackSpline.h"
 #include "StackerReclaimer.h"
 
 #include "LevelController.generated.h"
@@ -199,8 +199,8 @@ protected:
 		TArray<ATrain*> trains;
 	UPROPERTY(EditAnywhere)
 	TArray<AConveyorBelt*> conveyorBelts;
-	//UPROPERTY(EditAnywhere)
-	//	TArray<ATrackSpline*> trainTracks;
+	UPROPERTY(EditAnywhere)
+	TArray<ATrainTrackSpline*> trainTracks;
 
 
 	//Conveyor Belt position markers
