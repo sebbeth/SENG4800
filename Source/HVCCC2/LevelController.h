@@ -88,7 +88,7 @@ struct FindSimTimeBoundsFunctor {
 struct ClearDataFunctor {
 	ALevelController* context;
 	/**
-	 * Clears the existing entities from a givn
+	 * Clears the existing entities for the data in the msp
 	 */
 	template<typename Each>
 	void operator()(Each& eachDataMap);
@@ -100,6 +100,26 @@ struct ClearDataFunctor {
 
 	ClearDataFunctor(); //set context to a nullptr because unreal wants a default constructor
 	ClearDataFunctor(ALevelController* context);
+};
+
+//Note/TODO: cheating by using the states instead of events for now
+struct StringifyEventsFunctor {
+	ALevelController* context;
+	std::vector<std::pair<float, std::string>> interimResult;
+
+	/**
+	 * Gets a string describing each of the events/states in the map
+	 */
+	template<typename Each>
+	void operator()(Each& eachDataMap);
+
+	/**
+	 * Gets a string describing each of the events/states in the context's current data
+	 */
+	TArray<FString> operator()();
+
+	StringifyEventsFunctor(); //set context to a nullptr because unreal wants a default constructor
+	StringifyEventsFunctor(ALevelController* context);
 };
 
 template<>
@@ -117,13 +137,14 @@ class HVCCC2_API ALevelController : public AActor
 	friend struct AnimateEntitiesFunctor;
 	friend struct FindSimTimeBoundsFunctor;
 	friend struct ClearDataFunctor;
+	friend struct StringifyEventsFunctor;
 
 	AddToSimFunctor addToSimFunctor;
 	UpdateWindowsFunctor updateWindowsFunctor;
 	AnimateEntitiesFunctor animateEntitiesFunctor;
 	FindSimTimeBoundsFunctor findSimTimeBoundsFunctor;
 	ClearDataFunctor clearDataFunctor;
-	
+	StringifyEventsFunctor stringifyEventsFunctor;
 	/*double xMin, xMax;*/
 
 	double simTime;
@@ -216,6 +237,9 @@ public:
 	 */
 	UFUNCTION(BlueprintCallable, Category = "data")
 	bool loadXMLData(const FString& srcPath);
+
+	UFUNCTION(BlueprintCallable, Category = "data")
+	TArray<FString> getEventMessages();
 
 	//time controls
 	UFUNCTION(BlueprintCallable, Category = "time")
@@ -409,8 +433,24 @@ void FindSimTimeBoundsFunctor::operator()(const Each& eachDataMap) {
 	}
 }
 
-
 template<typename Each>
 void ClearDataFunctor::operator()(Each& eachStateMap) {
 	eachStateMap.clear();
+}
+
+template<typename Each>
+inline void StringifyEventsFunctor::operator()(Each & eachDataMap)
+{
+	std::stringstream eachResultBuilder;
+	for (auto& eachEntry : eachDataMap) {
+		auto& eachId = eachEntry.first;
+		for (auto& eachState : eachEntry.second.states) {
+
+			//TODO: REPLACE WITH SOMETHING LIKE StateTraits<typename Each::key_type::Entity>::displayFriendlyStringFor(eachState) (note: this method is not yet implemented or even declared)
+			eachResultBuilder.str("");
+			//TODO: IMPLEMENT A TYPEDEF OR SIMILAR THAT CAN GET FROM Entity CLASSES TO THE STATETYPEDECODER e.g. std::function<std::string(StackerStateType)>Stacker::stateTypeDecoder(StackerStateType type)
+			eachResultBuilder << "Entity " << eachId.nameForBinaryFile() << ": Current State: " << int(eachState.type);
+			interimResult.emplace_back(eachState.time, eachResultBuilder.str());
+		}
+	}
 }
