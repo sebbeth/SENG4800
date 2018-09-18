@@ -6,7 +6,11 @@
 #include "extraction/implementedTraits.h"
 #include "extraction/extractData.h"
 
-#include "loadData.h"
+template<typename Entity>
+using EventMap = std::map<typename Entity::Id, std::vector<typename Entity::AssociatedEvent>>;
+
+template<typename... Entities>
+using EventMapTuple = std::tuple<EventMap<Entities>...>;
 
 template<typename Entity>
 using StateMap = std::map<typename Entity::Id, std::vector<typename Entity::AssociatedState>>;
@@ -35,7 +39,7 @@ template<typename Each, typename Event = typename Each::mapped_type::value_type>
 StateMap<typename Event::Entity> convert(const Each& source) {
 	StateMap<typename Event::Entity> result;
 	//Iterate through every single event which is of the currently examined type (eg. stockpiles):
-	for (auto eachSourceEntry : source) {
+	for (auto& eachSourceEntry : source) {
 		auto eachDestinationEntry = result.emplace(std::piecewise_construct, std::make_tuple(eachSourceEntry.first), std::make_tuple()).first;
 		auto eachState = StateTraits<typename Event::Entity::AssociatedState>::initializeFromEvent(eachSourceEntry.second.front());
 		(*eachDestinationEntry).second.reserve(eachSourceEntry.second.size());
