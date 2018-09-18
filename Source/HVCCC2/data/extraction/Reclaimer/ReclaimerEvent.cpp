@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:04:35.914436
  **/
 #include "ReclaimerEvent.h"
 
@@ -7,6 +7,7 @@ bool ReclaimerEvent::hasAmount() const {
     switch (type) {
         case ReclaimerEventType::Complete:
         case ReclaimerEventType::DoubleHandleComplete:
+        case ReclaimerEventType::DoubleHandleOperationComplete:
         case ReclaimerEventType::OperationComplete:
             return true;
         case ReclaimerEventType::DoubleHandleOperationStart:
@@ -31,6 +32,7 @@ bool ReclaimerEvent::hasPosition() const {
     switch (type) {
         case ReclaimerEventType::Complete:
         case ReclaimerEventType::DoubleHandleComplete:
+        case ReclaimerEventType::DoubleHandleOperationComplete:
         case ReclaimerEventType::DoubleHandleOperationStart:
         case ReclaimerEventType::DoubleHandleStart:
         case ReclaimerEventType::OnMove:
@@ -55,6 +57,7 @@ bool ReclaimerEvent::hasStockpileID() const {
     switch (type) {
         case ReclaimerEventType::Complete:
         case ReclaimerEventType::DoubleHandleComplete:
+        case ReclaimerEventType::DoubleHandleOperationComplete:
         case ReclaimerEventType::DoubleHandleOperationStart:
         case ReclaimerEventType::DoubleHandleStart:
         case ReclaimerEventType::OperationComplete:
@@ -79,6 +82,7 @@ bool ReclaimerEvent::hasTime() const {
     switch (type) {
         case ReclaimerEventType::Complete:
         case ReclaimerEventType::DoubleHandleComplete:
+        case ReclaimerEventType::DoubleHandleOperationComplete:
         case ReclaimerEventType::DoubleHandleOperationStart:
         case ReclaimerEventType::DoubleHandleStart:
         case ReclaimerEventType::OnMove:

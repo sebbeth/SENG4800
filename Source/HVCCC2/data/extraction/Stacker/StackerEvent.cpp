@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:04:35.914436
  **/
 #include "StackerEvent.h"
 
@@ -7,6 +7,7 @@ bool StackerEvent::hasAmount() const {
     switch (type) {
         case StackerEventType::Complete:
         case StackerEventType::DoubleHandleComplete:
+        case StackerEventType::DoubleHandleOperationComplete:
         case StackerEventType::OperationComplete:
             return true;
         case StackerEventType::DoubleHandleOperationStart:
@@ -31,6 +32,7 @@ bool StackerEvent::hasPosition() const {
     switch (type) {
         case StackerEventType::Complete:
         case StackerEventType::DoubleHandleComplete:
+        case StackerEventType::DoubleHandleOperationComplete:
         case StackerEventType::DoubleHandleOperationStart:
         case StackerEventType::DoubleHandleStart:
         case StackerEventType::Fail:
@@ -55,6 +57,7 @@ bool StackerEvent::hasStockpileID() const {
     switch (type) {
         case StackerEventType::Complete:
         case StackerEventType::DoubleHandleComplete:
+        case StackerEventType::DoubleHandleOperationComplete:
         case StackerEventType::DoubleHandleOperationStart:
         case StackerEventType::DoubleHandleStart:
         case StackerEventType::Fail:
@@ -79,6 +82,7 @@ bool StackerEvent::hasTime() const {
     switch (type) {
         case StackerEventType::Complete:
         case StackerEventType::DoubleHandleComplete:
+        case StackerEventType::DoubleHandleOperationComplete:
         case StackerEventType::DoubleHandleOperationStart:
         case StackerEventType::DoubleHandleStart:
         case StackerEventType::Fail:

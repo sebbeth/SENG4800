@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:04:35.914436
  **/
 #include "StackerEventType.h"
         
@@ -8,6 +8,8 @@ StackerEventType decodeStackerEventType(const std::string& enumeratorString) {
         return StackerEventType::Complete;
     } else if (enumeratorString == "DoubleHandleComp") {
         return StackerEventType::DoubleHandleComplete;
+    } else if (enumeratorString == "DoubleHandleOpComp") {
+        return StackerEventType::DoubleHandleOperationComplete;
     } else if (enumeratorString == "DoubleHandleOpStart") {
         return StackerEventType::DoubleHandleOperationStart;
     } else if (enumeratorString == "DoubleHandleStart") {
@@ -104,6 +106,10 @@ std::string encodeStackerEventType(const StackerEventType& value) {
 
         case StackerEventType::DoubleHandleComplete:
             return "DoubleHandleComp";
+            break;
+
+        case StackerEventType::DoubleHandleOperationComplete:
+            return "DoubleHandleOpComp";
             break;
 
         default:

@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:04:35.914436
  **/
 #include "ReclaimerState.h"
 
@@ -178,7 +178,16 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
                     return ReclaimerStateType::Invalid;
             }
         case ReclaimerStateType::PostDoubleHandleReserved:
-            return ReclaimerStateType::Invalid;
+            switch(eventType) {
+                case ReclaimerEventType::Fail:
+                    return ReclaimerStateType::PostDoubleHandleReservedFail;
+                case ReclaimerEventType::SyncedFail:
+                    return ReclaimerStateType::PostDoubleHandleReservedSyncFail;
+                case ReclaimerEventType::DoubleHandleOperationComplete:
+                    return ReclaimerStateType::Idle;
+                default:
+                    return ReclaimerStateType::Invalid;
+            }
         case ReclaimerStateType::WorkingDoubleHandleFail:
             switch(eventType) {
                 case ReclaimerEventType::Fix:
@@ -194,6 +203,20 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
                     return ReclaimerStateType::WorkingDoubleHandle;
                 case ReclaimerEventType::WrapUp:
                     return ReclaimerStateType::WrappedUp;
+                default:
+                    return ReclaimerStateType::Invalid;
+            }
+        case ReclaimerStateType::PostDoubleHandleReservedFail:
+            switch(eventType) {
+                case ReclaimerEventType::Fix:
+                    return ReclaimerStateType::PostDoubleHandleReserved;
+                default:
+                    return ReclaimerStateType::Invalid;
+            }
+        case ReclaimerStateType::PostDoubleHandleReservedSyncFail:
+            switch(eventType) {
+                case ReclaimerEventType::SyncedFix:
+                    return ReclaimerStateType::PostDoubleHandleReserved;
                 default:
                     return ReclaimerStateType::Invalid;
             }

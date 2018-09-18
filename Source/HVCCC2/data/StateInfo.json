@@ -145,6 +145,17 @@
           "SyncedFix": "WorkingDoubleHandle",
           "WrapUp": "WrappedUp"
         },
+        "PostDoubleHandleReserved": {
+          "Fail": "PostDoubleHandleReservedFail",
+          "SyncedFail": "PostDoubleHandleReservedSyncFail",
+          "DoubleHandleOpComp": "Idle"
+        },
+        "PostDoubleHandleReservedFail": {
+          "Fix": "PostDoubleHandleReserved"
+        },
+        "PostDoubleHandleReservedSyncFail": {
+          "SyncedFix": "PostDoubleHandleReserved"
+        },
         "WrappedUp": {}
       }
     },
@@ -239,6 +250,17 @@
           "SyncedFix": "WorkingDoubleHandle",
           "WrapUp": "WrappedUp"
         },
+        "PostDoubleHandleReserved": {
+          "Fail": "PostDoubleHandleReservedFail",
+          "SyncedFail": "PostDoubleHandleReservedSyncFail",
+          "DoubleHandleOpComp": "Idle"
+        },
+        "PostDoubleHandleReservedFail": {
+          "Fix": "PostDoubleHandleReserved"
+        },
+        "PostDoubleHandleReservedSyncFail": {
+          "SyncedFix": "PostDoubleHandleReserved"
+        },
         "WrappedUp": {}
       }
     },
@@ -268,7 +290,7 @@
         "preDumpReserved": {
           "Fail": "preDumpReservedFail",
           "SyncedFail": "preDumpReservedSyncedFail",
-          "DumpFail": "working"
+          "DumpStart": "working"
         },
         "preDumpReservedFail": {
           "Fix": "preDumpReserved"

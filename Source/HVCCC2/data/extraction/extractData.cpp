@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:04:35.914436
  **/
 #include "extractData.h"
 #include <regex>
@@ -22,6 +22,7 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, DumpstationE
             break;
         case DumpstationEventType::DumpOperationComplete:
         case DumpstationEventType::DumpOperationStart:
+        case DumpstationEventType::DumpStart:
             XMLCheckResult(extractAttribute(source, destination.cycleID.name, "cycleID"), 0);
             XMLCheckResult(extractAttribute(source, destination.stockpileID.name, "stockpileID"), 0);
             destination.stockpileID.terminal = theTerminal;
@@ -98,6 +99,7 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ReclaimerEve
             break;
         case ReclaimerEventType::Complete:
         case ReclaimerEventType::DoubleHandleComplete:
+        case ReclaimerEventType::DoubleHandleOperationComplete:
         case ReclaimerEventType::OperationComplete:
             XMLCheckResult(extractAttribute(source, destination.amount, "amount"), 0);
             XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
@@ -198,6 +200,7 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StackerEvent
             break;
         case StackerEventType::Complete:
         case StackerEventType::DoubleHandleComplete:
+        case StackerEventType::DoubleHandleOperationComplete:
         case StackerEventType::OperationComplete:
             XMLCheckResult(extractAttribute(source, destination.amount, "amount"), 0);
             XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);

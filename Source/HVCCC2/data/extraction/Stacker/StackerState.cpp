@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:04:35.914436
  **/
 #include "StackerState.h"
 
@@ -178,7 +178,16 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
                     return StackerStateType::Invalid;
             }
         case StackerStateType::PostDoubleHandleReserved:
-            return StackerStateType::Invalid;
+            switch(eventType) {
+                case StackerEventType::Fail:
+                    return StackerStateType::PostDoubleHandleReservedFail;
+                case StackerEventType::SyncedFail:
+                    return StackerStateType::PostDoubleHandleReservedSyncFail;
+                case StackerEventType::DoubleHandleOperationComplete:
+                    return StackerStateType::Idle;
+                default:
+                    return StackerStateType::Invalid;
+            }
         case StackerStateType::WorkingDoubleHandleFail:
             switch(eventType) {
                 case StackerEventType::Fix:
@@ -194,6 +203,20 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
                     return StackerStateType::WorkingDoubleHandle;
                 case StackerEventType::WrapUp:
                     return StackerStateType::WrappedUp;
+                default:
+                    return StackerStateType::Invalid;
+            }
+        case StackerStateType::PostDoubleHandleReservedFail:
+            switch(eventType) {
+                case StackerEventType::Fix:
+                    return StackerStateType::PostDoubleHandleReserved;
+                default:
+                    return StackerStateType::Invalid;
+            }
+        case StackerStateType::PostDoubleHandleReservedSyncFail:
+            switch(eventType) {
+                case StackerEventType::SyncedFix:
+                    return StackerStateType::PostDoubleHandleReserved;
                 default:
                     return StackerStateType::Invalid;
             }

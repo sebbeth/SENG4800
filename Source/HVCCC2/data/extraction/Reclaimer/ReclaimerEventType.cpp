@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:04:35.914436
  **/
 #include "ReclaimerEventType.h"
         
@@ -8,6 +8,8 @@ ReclaimerEventType decodeReclaimerEventType(const std::string& enumeratorString)
         return ReclaimerEventType::Complete;
     } else if (enumeratorString == "DoubleHandleComp") {
         return ReclaimerEventType::DoubleHandleComplete;
+    } else if (enumeratorString == "DoubleHandleOpComp") {
+        return ReclaimerEventType::DoubleHandleOperationComplete;
     } else if (enumeratorString == "DoubleHandleOpStart") {
         return ReclaimerEventType::DoubleHandleOperationStart;
     } else if (enumeratorString == "DoubleHandleStart") {
@@ -104,6 +106,10 @@ std::string encodeReclaimerEventType(const ReclaimerEventType& value) {
 
         case ReclaimerEventType::DoubleHandleComplete:
             return "DoubleHandleComp";
+            break;
+
+        case ReclaimerEventType::DoubleHandleOperationComplete:
+            return "DoubleHandleOpComp";
             break;
 
         default:

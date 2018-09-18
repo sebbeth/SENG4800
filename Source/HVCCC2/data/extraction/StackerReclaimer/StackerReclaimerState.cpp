@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 20:48:43.204362
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:04:35.914436
  **/
 #include "StackerReclaimerState.h"
 StackerReclaimerState::StackerReclaimerState(const StackerState& src): type(StackerReclaimerStateType::Invalid), id({src.id.terminal, src.id.name}), position(src.position), time(src.time), stockpileID(src.stockpileID), amount(src.amount){
@@ -63,6 +63,12 @@ StackerReclaimerState::StackerReclaimerState(const StackerState& src): type(Stac
             break;
         case StackerStateType::WorkingDoubleHandleSyncFail:
             type = StackerReclaimerStateType::WorkingDoubleHandleSyncFail;
+            break;
+        case StackerStateType::PostDoubleHandleReservedFail:
+            type = StackerReclaimerStateType::PostDoubleHandleReservedFail;
+            break;
+        case StackerStateType::PostDoubleHandleReservedSyncFail:
+            type = StackerReclaimerStateType::PostDoubleHandleReservedSyncFail;
             break;
         default:
             type = StackerReclaimerStateType::Invalid;
@@ -129,6 +135,12 @@ StackerReclaimerState::StackerReclaimerState(const ReclaimerState& src): type(St
             break;
         case ReclaimerStateType::WorkingDoubleHandleSyncFail:
             type = StackerReclaimerStateType::WorkingDoubleHandleSyncFail;
+            break;
+        case ReclaimerStateType::PostDoubleHandleReservedFail:
+            type = StackerReclaimerStateType::PostDoubleHandleReservedFail;
+            break;
+        case ReclaimerStateType::PostDoubleHandleReservedSyncFail:
+            type = StackerReclaimerStateType::PostDoubleHandleReservedSyncFail;
             break;
         default:
             type = StackerReclaimerStateType::Invalid;
