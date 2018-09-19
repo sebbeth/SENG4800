@@ -1,12 +1,10 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:27:51.338785
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
  **/
 #pragma once
 #include <string>
 #include "TrainMovementEventType.h"
 #include "TrainMovement.h"
-#include "../Signal/Signal.h"
-#include "../Signal/SignalStateType.h"
 #include "../TrainMovement/TrainMovement.h"
 class TrainMovementEvent {
 public:
@@ -16,8 +14,8 @@ public:
 
     std::string direction;
     std::string sectionID;
-    Signal::Id signalID;
-    SignalStateType signalState;
+    std::string signalID;
+    std::string signalState;
     double speed;
     double time;
     std::string trackID;

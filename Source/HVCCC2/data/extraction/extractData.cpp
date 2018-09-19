@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:27:51.338785
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
  **/
 #include "extractData.h"
 #include <regex>
@@ -157,20 +157,6 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ShiploaderEv
 }
 
 //Note: If this needs to be implemented manually, if can be shortened to one if(hasX) {...extractEvent(source,&destination.x,"attributeTextX")..} for each attribute
-tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, SignalEvent& destination, const std::string& eventTypeCode) {
-    destination.type = decodeSignalEventType(eventTypeCode);
-    if (destination.type == SignalEventType::Invalid) {
-        XMLCheckResult(tinyxml2::XML_ERROR_PARSING_ELEMENT, 0);
-    }
-    //extract the identifying name
-    XMLCheckResult(extractAttribute(source, destination.id.name, "signalID"), 0);
-
-    XMLCheckResult(extractAttribute(source, destination.signalState, "signalState"), 0);
-    XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
-    return tinyxml2::XML_SUCCESS;
-}
-
-//Note: If this needs to be implemented manually, if can be shortened to one if(hasX) {...extractEvent(source,&destination.x,"attributeTextX")..} for each attribute
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StackerEvent& destination, const std::string& eventTypeCode, TerminalId theTerminal) {
     destination.type = decodeStackerEventType(eventTypeCode);
     if (destination.type == StackerEventType::Invalid) {
@@ -264,18 +250,6 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StockpileEve
 }
 
 //Note: If this needs to be implemented manually, if can be shortened to one if(hasX) {...extractEvent(source,&destination.x,"attributeTextX")..} for each attribute
-tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, TrainCoalTransportationEvent& destination, const std::string& eventTypeCode) {
-    destination.type = decodeTrainCoalTransportationEventType(eventTypeCode);
-    if (destination.type == TrainCoalTransportationEventType::Invalid) {
-        XMLCheckResult(tinyxml2::XML_ERROR_PARSING_ELEMENT, 0);
-    }
-    //extract the identifying name
-    XMLCheckResult(extractAttribute(source, destination.id.name, "cycleID"), 0);
-
-    return tinyxml2::XML_SUCCESS;
-}
-
-//Note: If this needs to be implemented manually, if can be shortened to one if(hasX) {...extractEvent(source,&destination.x,"attributeTextX")..} for each attribute
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, TrainMovementEvent& destination, const std::string& eventTypeCode) {
     destination.type = decodeTrainMovementEventType(eventTypeCode);
     if (destination.type == TrainMovementEventType::Invalid) {
@@ -300,7 +274,7 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, TrainMovemen
             XMLCheckResult(extractAttribute(source, destination.trainID, "trainID"), 0);
             break;
         case TrainMovementEventType::ReachedSignal:
-            XMLCheckResult(extractAttribute(source, destination.signalID.name, "signalID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.signalID, "signalID"), 0);
             XMLCheckResult(extractAttribute(source, destination.signalState, "signalState"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             XMLCheckResult(extractAttribute(source, destination.trainID, "trainID"), 0);
@@ -387,14 +361,10 @@ tinyxml2::XMLError extractAll(const std::string& srcFilePath, EventVectorTuple& 
                 extractEvent(*eachElement, std::get<std::vector<ReclaimerEvent>>(destination), eventTypeCode, theTerminal); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
             } else if (entityTypeCode == Shiploader::XML_TAG_PREFIX) {
                 extractEvent(*eachElement, std::get<std::vector<ShiploaderEvent>>(destination), eventTypeCode, theTerminal); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
-            } else if (entityTypeCode == Signal::XML_TAG_PREFIX) {
-                extractEvent(*eachElement, std::get<std::vector<SignalEvent>>(destination), eventTypeCode); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
             } else if (entityTypeCode == Stacker::XML_TAG_PREFIX) {
                 extractEvent(*eachElement, std::get<std::vector<StackerEvent>>(destination), eventTypeCode, theTerminal); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
             } else if (entityTypeCode == Stockpile::XML_TAG_PREFIX) {
                 extractEvent(*eachElement, std::get<std::vector<StockpileEvent>>(destination), eventTypeCode, theTerminal); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
-            } else if (entityTypeCode == TrainCoalTransportation::XML_TAG_PREFIX) {
-                extractEvent(*eachElement, std::get<std::vector<TrainCoalTransportationEvent>>(destination), eventTypeCode); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
             } else if (entityTypeCode == TrainMovement::XML_TAG_PREFIX) {
                 extractEvent(*eachElement, std::get<std::vector<TrainMovementEvent>>(destination), eventTypeCode); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
             } else if (entityTypeCode == Vessel::XML_TAG_PREFIX) {

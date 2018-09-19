@@ -264,16 +264,6 @@
         "WrappedUp": {}
       }
     },
-    "Signal": {
-      "tagPrefix": "signal",
-      "identifier": "signalID",
-      "stateCodes": {
-        "GREEN": "Green",
-        "RED": "Red"
-      },
-      "hasTerminal": false,
-      "events": ["StateChange"]
-    },
     "Dumpstation": {
       "tagPrefix": "ds",
       "initial": "idle",
@@ -585,46 +575,6 @@
         },
         "Maintenance": {
           "MaintCompleted": "InTrack"
-        }
-      }
-    },
-    "TrainCoalTransportation": {
-      "tagPrefix": "tct",
-      "initial": "Nonexistent",
-      "hasTerminal": false,
-      "identifier": "cycleID",
-      "transitions": {
-        "Nonexistent": {
-          "Created": "Idle"
-        },
-        "Idle": {
-          "DepartTerminal": "DepartedTerminal"
-        },
-        "DepartedTerminal": {
-          "ArrivedLoadpoint": "ArrivedLoadpoint"
-        },
-        "ArrivedLoadpoint": {
-          "LoadStart": "Loading"
-        },
-        "Loading": {
-          "LoadComp": "Loaded"
-        },
-        "Loaded": {
-          "LoadStart": "Loading",
-          "DepartLoadpoint": "DepartedLoadpoint"
-        },
-        "DepartedLoadpoint": {
-          "ArrivedDumpstation": "ArrivedDumpstation"
-        },
-        "ArrivedDumpstation": {
-          "DumpStart": "Dumping"
-        },
-        "Dumping": {
-          "DumpComp": "Dumped"
-        },
-        "Dumped": {
-          "DumpStart": "Dumping",
-          "DepartTerminal": "DepartedTerminal"
         }
       }
     }

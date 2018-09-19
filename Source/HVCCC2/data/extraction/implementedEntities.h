@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:27:51.338785
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
  **/
 #pragma once
 #include "../util.h"
@@ -15,9 +15,6 @@
 #include "Reclaimer/Reclaimer.h"
 #include "Reclaimer/ReclaimerEvent.h"
 #include "Reclaimer/ReclaimerState.h"
-#include "Signal/Signal.h"
-#include "Signal/SignalEvent.h"
-#include "Signal/SignalState.h"
 #include "Dumpstation/Dumpstation.h"
 #include "Dumpstation/DumpstationEvent.h"
 #include "Dumpstation/DumpstationState.h"
@@ -33,12 +30,9 @@
 #include "TrainMovement/TrainMovement.h"
 #include "TrainMovement/TrainMovementEvent.h"
 #include "TrainMovement/TrainMovementState.h"
-#include "TrainCoalTransportation/TrainCoalTransportation.h"
-#include "TrainCoalTransportation/TrainCoalTransportationEvent.h"
-#include "TrainCoalTransportation/TrainCoalTransportationState.h"
 #include "StackerReclaimer/StackerReclaimer.h"
 #include "StackerReclaimer/StackerReclaimerState.h"
 
-#define EntitiesWithEvents Dumpstation, Loadpoints, Reclaimer, Shiploader, Signal, Stacker, Stockpile, TrainCoalTransportation, TrainMovement, Vessel
+#define EntitiesWithEvents Dumpstation, Loadpoints, Reclaimer, Shiploader, Stacker, Stockpile, TrainMovement, Vessel
 #define MergeEntities StackerReclaimer
-#define AllEntities Dumpstation, Loadpoints, Reclaimer, Shiploader, Signal, Stacker, StackerReclaimer, Stockpile, TrainCoalTransportation, TrainMovement, Vessel
+#define AllEntities Dumpstation, Loadpoints, Reclaimer, Shiploader, Stacker, StackerReclaimer, Stockpile, TrainMovement, Vessel

@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:27:51.338785
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
  **/
 #pragma once
 
@@ -13,10 +13,8 @@
 #include "Loadpoints/LoadpointsEvent.h"
 #include "Reclaimer/ReclaimerEvent.h"
 #include "Shiploader/ShiploaderEvent.h"
-#include "Signal/SignalEvent.h"
 #include "Stacker/StackerEvent.h"
 #include "Stockpile/StockpileEvent.h"
-#include "TrainCoalTransportation/TrainCoalTransportationEvent.h"
 #include "TrainMovement/TrainMovementEvent.h"
 #include "Vessel/VesselEvent.h"
 
@@ -32,10 +30,8 @@ typedef std::tuple<
     std::vector<LoadpointsEvent>, 
     std::vector<ReclaimerEvent>, 
     std::vector<ShiploaderEvent>, 
-    std::vector<SignalEvent>, 
     std::vector<StackerEvent>, 
     std::vector<StockpileEvent>, 
-    std::vector<TrainCoalTransportationEvent>, 
     std::vector<TrainMovementEvent>, 
     std::vector<VesselEvent>
 > EventVectorTuple;
@@ -78,15 +74,6 @@ inline tinyxml2::XMLError extractAttribute(const tinyxml2::XMLElement& source, s
     return result;
 }
 
-template<>
-inline tinyxml2::XMLError extractAttribute(const tinyxml2::XMLElement& source, SignalStateType& destination, const std::string& attributeName) {
-    const char* tmp;
-    tinyxml2::XMLError result = source.QueryStringAttribute(attributeName.c_str(), &tmp);
-    XMLCheckResult(result, 1);
-    destination = decodeSignalStateType(tmp);
-    return result;
-}
-
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, DumpstationEvent& destination, const std::string& eventTypeCode, TerminalId theTerminal);
 
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, LoadpointsEvent& destination, const std::string& eventTypeCode);
@@ -95,13 +82,9 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ReclaimerEve
 
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ShiploaderEvent& destination, const std::string& eventTypeCode, TerminalId theTerminal);
 
-tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, SignalEvent& destination, const std::string& eventTypeCode);
-
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StackerEvent& destination, const std::string& eventTypeCode, TerminalId theTerminal);
 
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StockpileEvent& destination, const std::string& eventTypeCode, TerminalId theTerminal);
-
-tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, TrainCoalTransportationEvent& destination, const std::string& eventTypeCode);
 
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, TrainMovementEvent& destination, const std::string& eventTypeCode);
 

@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-18 21:27:51.338785
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
  **/
 set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Dumpstation/Dumpstation.h
@@ -42,16 +42,6 @@ set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Shiploader/ShiploaderState.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Shiploader/ShiploaderState.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Shiploader/ShiploaderStateTraits.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/Signal.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/Signal.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalEventType.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalEventType.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalEvent.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalEvent.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalStateType.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalStateType.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalState.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Signal/SignalStateTraits.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stacker/Stacker.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stacker/Stacker.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stacker/StackerEventType.h
@@ -72,16 +62,6 @@ set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stockpile/StockpileState.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stockpile/StockpileState.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stockpile/StockpileStateTraits.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainCoalTransportation/TrainCoalTransportation.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainCoalTransportation/TrainCoalTransportation.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainCoalTransportation/TrainCoalTransportationEventType.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainCoalTransportation/TrainCoalTransportationEventType.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainCoalTransportation/TrainCoalTransportationEvent.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainCoalTransportation/TrainCoalTransportationEvent.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainCoalTransportation/TrainCoalTransportationStateType.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainCoalTransportation/TrainCoalTransportationState.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainCoalTransportation/TrainCoalTransportationState.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainCoalTransportation/TrainCoalTransportationStateTraits.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovement.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovement.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementEventType.h
