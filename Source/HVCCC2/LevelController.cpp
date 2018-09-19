@@ -27,6 +27,7 @@ void ALevelController::Tick(float DeltaTime)
 		moveSimTime(DeltaTime * speed);
 		forEachInTuple(data, animateEntitiesFunctor);
 	}
+	forEachInTuple(data, animateEntitiesFunctor);
 
 	//// DATA STUFF
 	//if (isPlaying) {
@@ -118,7 +119,7 @@ int mock_state;
 float mock_level;
 
 // Sets default values
-ALevelController::ALevelController(): addToSimFunctor(this), updateWindowsFunctor(this), animateEntitiesFunctor(this), findSimTimeBoundsFunctor(this), clearDataFunctor(this), simTime(0), simStartTime(0), simEndTime(0), speed(1), isPlaying(false) {
+ALevelController::ALevelController(): addToSimFunctor(this), updateWindowsFunctor(this), animateEntitiesFunctor(this), findSimTimeBoundsFunctor(this), clearDataFunctor(this), stringifyEventsFunctor(this), simTime(0), simStartTime(0), simEndTime(0), speed(1), isPlaying(false) {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 }
@@ -135,73 +136,13 @@ bool ALevelController::loadXMLData(const  FString& srcPath) {
 		auto& states = stateResultPair.first;
 		forEachInTuple(states, addToSimFunctor);
 		findSimTimeBoundsFunctor();
-
-		//FString fstr = UTF8_TO_TCHAR(XML_PATH.c_str());
-		//UE_LOG(LogTemp, Warning, TEXT("test '%s' blah "), *fstr);
-		//auto& srStates = std::get<StateMap<Stacker>>(states);
-		//for (auto eachEntity : srStates) {
-		//	FString fstr = UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str());
-		//	UE_LOG(LogTemp, Warning, TEXT("Stacker name: %s"), *fstr);
-		//	for (auto eachState : eachEntity.second) {
-		//		/*UE_LOG(LogTemp, Warning, TEXT("index: %d, Time: %f; Stacker Position: %f"), i++, eachState.time, eachState.position);*/
-		//		if (eachState.position < xMin) {
-		//			xMin = eachState.position;
-		//		}
-		//		if (eachState.position > xMax) {
-		//			xMax = eachState.position;
-		//		}
-		//	}
-		//	windows.emplace_back(0, std::min(std::size_t(1), eachEntity.second.size()));
-		//}
-
-		///* Train test */
-		//spawnATrain("t_0", NCT_pads[1]->GetActorLocation(), train_locomotive_blueprint);
-
-
-		////conveyorBelts[6]->setMaterial(0);
-		////conveyorBelts[11]->setMaterial(0);
-		////stackerReclaimers[0]->setMaterial(0);
-
-		////conveyorBelts[5]->setMaterial(2);
-		////conveyorBelts[10]->setMaterial(2);
-		////stackerReclaimers[1]->setMaterial(2);
-
-		////stackerReclaimers[1]->setRotation(-120);
-
-		////stackCoal(3);
-
-		////reclaimCoal(1, 1);
-
-
-		////testTime = 0;
-		////mock_state = 1;
-		////mock_level = 0.2;
-		//// Spawn in reclaimers
-		////TODO: SUGGEST TO DO THE APPLICATION OF THESE IN THE BLUEPRINT FLOW GRAPHS INSTEAD OF IN THE DETAILS VIEW FOR CLARITY?
-
-
-		//////Spawn in ship loaders
-		//spawnAShipLoader("NCT_ShipLoader_01", NCT_loader_rails_start[0]->GetActorLocation(), NCT_loader_rails_end[0]->GetActorLocation(), ship_loader_blueprint);
-		//spawnAShipLoader("NCT_ShipLoader_02", NCT_loader_rails_start[1]->GetActorLocation(), NCT_loader_rails_end[1]->GetActorLocation(), ship_loader_blueprint);
-
-		//spawnAShip("NCT_Ship_01", NCT_berths[0]->GetActorLocation(), NCT_berths[0]->GetActorRotation(), ship_blueprint);
-		//spawnAShip("NCT_Ship_02", NCT_berths[1]->GetActorLocation(), NCT_berths[1]->GetActorRotation(), ship_blueprint);
-
-		////// Spawn coal stacks
-		//spawnACoalStack("NCT_CS_1", NCT_pads[0]->GetActorLocation(), NCT_pads[0]->GetActorRotation(), coal_stack_blueprint);
-		//spawnACoalStack("NCT_CS_2", NCT_pads[1]->GetActorLocation(), NCT_pads[1]->GetActorRotation(), coal_stack_blueprint);
-		//spawnACoalStack("NCT_CS_3", NCT_pads[2]->GetActorLocation(), NCT_pads[2]->GetActorRotation(), coal_stack_blueprint);
-
-
-		////UE_LOG(LogTemp, Warning, TEXT("stackCount: %d"), coalStacks.size());
-		////UE_LOG(LogTemp, Warning, TEXT("stack1: %d, stack2: %d, stack3: %d"), coalStacks.at(0), coalStacks.at(1), coalStacks.at(2));
-		//coalStacks[0]->setQuantity(0.8);
-		//coalStacks[1]->setQuantity(0.2);
-		//coalStacks[2]->setQuantity(0.5);
-
 	}
 
 	return stateResultPair.second;
+}
+
+TArray<FString> ALevelController::getEventMessages() {
+	return stringifyEventsFunctor();
 }
 
 // Called when the game starts or when spawned
@@ -514,3 +455,23 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 
 	UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
 }
+
+TArray<FString> StringifyEventsFunctor::operator()() {
+	interimResult.clear();
+	forEachInTuple(context->data, (*this));
+	std::sort(interimResult.begin(), interimResult.end());
+	TArray<FString> result;
+	for (auto eachPair : interimResult) {
+		result.Add(UTF8_TO_TCHAR(eachPair.second.c_str()));
+	}
+	return result;
+}
+
+StringifyEventsFunctor::StringifyEventsFunctor()
+{
+}
+
+StringifyEventsFunctor::StringifyEventsFunctor(ALevelController * context): context(context){
+}
+
+	forEachInTuple(data, animateEntitiesFunctor);
