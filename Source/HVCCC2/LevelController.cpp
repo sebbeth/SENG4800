@@ -180,9 +180,15 @@ bool ALevelController::loadXMLData(const  FString& srcPath) {
 		////TODO: SUGGEST TO DO THE APPLICATION OF THESE IN THE BLUEPRINT FLOW GRAPHS INSTEAD OF IN THE DETAILS VIEW FOR CLARITY?
 
 
-		//////Spawn in ship loaders
-		//spawnAShipLoader("NCT_ShipLoader_01", NCT_loader_rails_start[0]->GetActorLocation(), NCT_loader_rails_end[0]->GetActorLocation(), ship_loader_blueprint);
-		//spawnAShipLoader("NCT_ShipLoader_02", NCT_loader_rails_start[1]->GetActorLocation(), NCT_loader_rails_end[1]->GetActorLocation(), ship_loader_blueprint);
+	//UE_LOG(LogTemp, Warning, TEXT("stackCount: %d"), coalStacks.size());
+	//UE_LOG(LogTemp, Warning, TEXT("stack1: %d, stack2: %d, stack3: %d"), coalStacks.at(0), coalStacks.at(1), coalStacks.at(2));
+	coalStacks[0]->setQuantity(0.8);
+	coalStacks[1]->setQuantity(0.2);
+	coalStacks[2]->setQuantity(0.5);
+
+	//For debugging purposes:
+	singelStockpileSize = 0.1;
+}
 
 		//spawnAShip("NCT_Ship_01", NCT_berths[0]->GetActorLocation(), NCT_berths[0]->GetActorRotation(), ship_blueprint);
 		//spawnAShip("NCT_Ship_02", NCT_berths[1]->GetActorLocation(), NCT_berths[1]->GetActorRotation(), ship_blueprint);
@@ -192,6 +198,54 @@ bool ALevelController::loadXMLData(const  FString& srcPath) {
 		//spawnACoalStack("NCT_CS_2", NCT_pads[1]->GetActorLocation(), NCT_pads[1]->GetActorRotation(), coal_stack_blueprint);
 		//spawnACoalStack("NCT_CS_3", NCT_pads[2]->GetActorLocation(), NCT_pads[2]->GetActorRotation(), coal_stack_blueprint);
 
+	auto watchIt = windows.begin();
+	//We'll need a way of fetching a specific item's ID-vector "pairing".
+		//Currently, this uses the first item in the respective vector for the item type
+		//eg. the first in the vector of stackers.
+	auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
+	auto actorIt = stackerReclaimers.CreateConstIterator();
+
+	for (; watchIt != windows.end() && actorIt; (++watchIt, ++entIt, ++actorIt)) {
+		//Fetch the item that each iterator is currently positioned at:
+		auto& eachWindow = (*watchIt);
+		auto& eachEntity = (*entIt);
+		auto& eachActor = (*actorIt);
+
+		//Store the indexes of the current state and the state after that one:
+		int indexA = eachWindow.first;
+		int indexB = eachWindow.second;
+
+		//Store the times that the two states occurred:
+		double timeA = eachEntity.second[indexA].time;
+		double timeB = eachEntity.second[indexB].time;
+
+		//The length of time available between the states:
+		double aToBTimeDist = timeB - timeA;
+		//We have to limit the target time in case the worldTime is beyond the current frame:
+		double targetTime = std::max(timeA, std::min(timeB, simTime));
+
+		/*"scale" is an interpolation scale in terms of time
+			If "aToBTimeDist" is greater than 0, it will set "scale" to "(targetTime - timeA) / aToBTimeDist"
+			If "aToBTimeDist" is less than or equal to 0, then "scale" is set to 0
+		*/
+		double scale = aToBTimeDist > 0 ? (targetTime - timeA) / aToBTimeDist : 0;
+
+		//Determine the positions that the two states were carried out at:
+		double positionA = eachEntity.second[indexA].position;
+		double positionB = eachEntity.second[indexB].position;
+
+		//Add the interpolated distance to the position of the first state:
+		double positionInterpolated = positionA + (positionB - positionA)*(scale);
+		//Calculates the ratio along the distance the stacker can be placed, that the stacker will now be moved to.
+			//eg. 0.5 = half way along length it can be placed,
+			//0.75 = three quaters of the way it can be plcaed.
+		double positionDelta = (positionInterpolated - xMin) / (xMax - xMin);
+
+		//Only print out to the log if the simulation is currently being played:
+		if (isPlaying) {
+			UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f; state a: %d, state b: %d, typea: %d, typeb: %d"), UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str()), float(simTime), indexA, indexB, (int)eachEntity.second[indexA].type, (int)eachEntity.second[indexB].type);
+			UE_LOG(LogTemp, Warning, TEXT("scale: %f, timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position delta: %f"), float(scale), float(timeA), float(timeB), float(positionA), float(positionB), float(positionInterpolated), float(positionDelta));
+		}
 
 		////UE_LOG(LogTemp, Warning, TEXT("stackCount: %d"), coalStacks.size());
 		////UE_LOG(LogTemp, Warning, TEXT("stack1: %d, stack2: %d, stack3: %d"), coalStacks.at(0), coalStacks.at(1), coalStacks.at(2));
@@ -200,6 +254,47 @@ bool ALevelController::loadXMLData(const  FString& srcPath) {
 		//coalStacks[2]->setQuantity(0.5);
 
 	}
+
+	//For animating the coal piles/stockpiles:
+	watchIt = windows.begin();
+	auto coalStackEntityIterator = std::get<std::map<Stockpile::Id, std::vector<StockpileState>>>(states).begin();
+	auto coalStackActorIterator = coalStacks.CreateConstIterator();
+
+	for (; watchIt != windows.end() && coalStackActorIterator; (++watchIt, ++coalStackEntityIterator, ++coalStackActorIterator)) {
+		//Fetch the item that each iterator is currently positioned at:
+		auto& eachWindow = (*watchIt);
+		auto& eachEntity = (*coalStackEntityIterator);
+		auto& eachActor = (*coalStackActorIterator);
+
+		//Store the indexes of the current state and the state after that one:
+		int indexA = eachWindow.first;
+		int indexB = eachWindow.second;
+
+		//Store the times that the two states occurred:
+		double timeA = eachEntity.second[indexA].time;
+		double timeB = eachEntity.second[indexB].time;
+
+		//The length of time available between the states:
+		double aToBTimeDist = timeB - timeA;
+		//We have to limit the target time in case the worldTime is beyond the current frame:
+		double targetTime = std::max(timeA, std::min(timeB, simTime));
+
+		//Scale the coal pile/stockpile based on the operation conducted:
+		if (isPlaying) {
+			//This is where we'll check out the state type of the current and next state, then decide to scale up or scale down the stockpile.
+			//I (Nick) haven't figured out the exact way we'll decide how quickly we'll scale the object.
+			//if () {
+
+			//}
+
+			eachActor->setQuantity(singelStockpileSize);
+
+			singelStockpileSize = singelStockpileSize + 0.001;
+		}
+
+		
+	}
+}
 
 	return stateResultPair.second;
 }

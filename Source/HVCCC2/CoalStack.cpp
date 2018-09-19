@@ -30,5 +30,3 @@ void ACoalStack::setQuantity(float quantity) {
 
 	SetActorScale3D(FVector(1.0f, quantity, 1.0f));
 }
-
-
