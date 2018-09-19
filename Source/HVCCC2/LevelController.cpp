@@ -19,6 +19,9 @@
 
 using namespace std;
 
+int mock_state;
+float mock_level;
+
 // Called every frame; not very interesting; see template<typename Each> void AnimateEntitiesFunctor::operator()(const Each& eachDataMap) in the header file
 void ALevelController::Tick(float DeltaTime)
 {
@@ -102,6 +105,13 @@ ClearDataFunctor::ClearDataFunctor() : context(nullptr) {
 ClearDataFunctor::ClearDataFunctor(ALevelController* context): context(context) {
 }
 
+StringifyEventsFunctor::StringifyEventsFunctor()
+{
+}
+
+StringifyEventsFunctor::StringifyEventsFunctor(ALevelController * context) : context(context) {
+}
+
 void FindSimTimeBoundsFunctor::operator()() {
 	context->simStartTime = std::numeric_limits<float>::infinity();
 	context->simEndTime = -std::numeric_limits<float>::infinity();
@@ -115,8 +125,16 @@ void ClearDataFunctor::operator()() {
 	context->actorPointers.Empty();
 }
 
-int mock_state;
-float mock_level;
+TArray<FString> StringifyEventsFunctor::operator()() {
+	interimResult.clear();
+	forEachInTuple(context->data, (*this));
+	std::sort(interimResult.begin(), interimResult.end());
+	TArray<FString> result;
+	for (auto eachPair : interimResult) {
+		result.Add(UTF8_TO_TCHAR(eachPair.second.c_str()));
+	}
+	return result;
+}
 
 // Sets default values
 ALevelController::ALevelController(): addToSimFunctor(this), updateWindowsFunctor(this), animateEntitiesFunctor(this), findSimTimeBoundsFunctor(this), clearDataFunctor(this), stringifyEventsFunctor(this), simTime(0), simStartTime(0), simEndTime(0), speed(1), isPlaying(false) {
@@ -455,23 +473,3 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 
 	UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
 }
-
-TArray<FString> StringifyEventsFunctor::operator()() {
-	interimResult.clear();
-	forEachInTuple(context->data, (*this));
-	std::sort(interimResult.begin(), interimResult.end());
-	TArray<FString> result;
-	for (auto eachPair : interimResult) {
-		result.Add(UTF8_TO_TCHAR(eachPair.second.c_str()));
-	}
-	return result;
-}
-
-StringifyEventsFunctor::StringifyEventsFunctor()
-{
-}
-
-StringifyEventsFunctor::StringifyEventsFunctor(ALevelController * context): context(context){
-}
-
-	forEachInTuple(data, animateEntitiesFunctor);

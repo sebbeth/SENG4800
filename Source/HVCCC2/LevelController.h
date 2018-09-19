@@ -8,7 +8,8 @@
 #include "GameFramework/Actor.h"
 #include "data/serialization.h"
 #include "data/extraction/implementedEntities.h"
-#include "SimulationData.h"
+#include "data/simulation/SimulationData.h"
+#include "data/simulation/StockpileData.h"
 
 #include "StackerReclaimer.h"
 
@@ -276,20 +277,24 @@ private:
 
 
 	template<typename Id>
-	UActorType<typename Id::Entity>* getOrSpawnActor(const typename Id& id) {
-		/*default implementation for entities that aren't spawned/animated yet*/
-		return nullptr;
-	}
+	UActorType<typename Id::Entity>* getOrSpawnActor(const typename Id& id);
 
 	AStackerReclaimer* getOrSpawnActor(const StackerReclaimer::Id& id);
 
 	/**
+	 * Exposes all the information about an entity for animation; defaults to calling a function exposing less information for backward compatability;
+	 * interpolationScale is how far towards nextState the current time is from previousState. The scale is from 0.0 to 1.0; at 0.0 the current time is exactly that of previousState; at 1.0 the current time is exactly that of nextState
+	 * Note: it is not neccessary to add inline when overloading this yourself
+	 */
+	template<typename Entity>
+	inline void animateEntity(const SimulationData<Entity>& data, float interpolationScale);
+
+	/**
+	 * Uses only the ends of the window and the interpolationScale to animate an entity
 	 * interpolationScale is how far towards nextState the current time is from previousState. The scale is from 0.0 to 1.0; at 0.0 the current time is exactly that of previousState; at 1.0 the current time is exactly that of nextState
 	 */
 	template<typename Actor, typename State>
-	void animateEntity(Actor* actorPointer, const typename State& previousState, const typename State& nextState, float interpolationScale) {
-		/*default implementation for entities that aren't spawned/animated yet*/
-	}
+	void animateEntity(Actor* actorPointer, const typename State& previousState, const typename State& nextState, float interpolationScale);
 	
 	void animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale);
 
@@ -307,6 +312,30 @@ private:
 	int testTime; // Just being used for testing
 
 };
+
+template<typename Id>
+UActorType<typename Id::Entity>* ALevelController::getOrSpawnActor(const typename Id& id) {
+	/*default implementation for entities that aren't spawned/animated yet*/
+	return nullptr;
+}
+
+template<typename Entity>
+inline void ALevelController::animateEntity(const SimulationData<Entity>& data, float interpolationScale) {
+	//Commented out code provides hinting on types, and an example of how to get the variables used in the simpler animateEntity
+	using Actor = UActorType<Entity>;
+	//using State = typename Entity::State;
+	Actor* actorPointer = data.actorPointer;
+	//const State& beforeState = (*data.stateWindow.first);
+	//const State& afterState = (*data.stateWindow.second);
+
+	//note that the pointer stored in data is a const pointer to a non-const actor 
+	animateEntity(data.actorPointer, (*data.stateWindow.first), (*data.stateWindow.second), interpolationScale);
+}
+
+template<typename Actor, typename State>
+void ALevelController::animateEntity(Actor* actorPointer, const typename State& previousState, const typename State& nextState, float interpolationScale) {
+	/*default implementation for entities that aren't spawned/animated yet*/
+}
 
 template<typename Each>
 void AddToSimFunctor::operator()(const Each& eachStateMap) {
@@ -414,7 +443,7 @@ void AnimateEntitiesFunctor::operator()(Each& eachDataMap) {
 			auto eachStates = eachSimulationData.states;
 			//UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f, state a: %d, state b: %d, typea: %d, typeb: %d, interpolationScale: %f"), UTF8_TO_TCHAR(eachEntry.first.nameForBinaryFile().c_str()), float(context->simTime), std::distance(eachStates.cbegin(), eachWindow.first), std::distance(eachStates.cbegin(), eachWindow.second), previousState.type, nextState.type, interpolationScale);
 
-			context->animateEntity(eachSimulationData.actorPointer, previousState, nextState, interpolationScale);
+			context->animateEntity(eachSimulationData, interpolationScale);
 		}
 	}
 }
