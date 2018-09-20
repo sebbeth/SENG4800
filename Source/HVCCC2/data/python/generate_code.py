@@ -54,14 +54,15 @@ public:''' +
              )
              +
              '''
- {0}using AssociatedState = {1}State;
- {0}static const std::string ENTITY_NAME;''').format(tab_spaces, entity.name)
+{0}{0}using AssociatedState = {1}State;
+{0}static const std::string ENTITY_NAME;''').format(tab_spaces, entity.name)
     if has_event:
         decl += '''
 {0}static const std::string XML_TAG_PREFIX;'''.format(tab_spaces)
     decl += '''
 {0}class Id {{
-{0}public:'''.format(tab_spaces, entity.name)
+{0}public:
+{0}{0}using Entity = {1};'''.format(tab_spaces, entity.name)
 
     if entity.has_terminal:
         decl += '''

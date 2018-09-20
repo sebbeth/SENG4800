@@ -38,6 +38,8 @@ void AConveyorBelt::setMaterial(int choice) {
 	}
 	else if (choice == 1) {
 		ResetMaterial();
+		ResetCube2Material();
+		ResetCube3Material();
 	}
 	else if (choice == 2) {
 		StackMaterial();

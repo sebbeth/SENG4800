@@ -204,18 +204,6 @@
 				}
 			}
 		},
-		"Signal": {
-			"tagPrefix": "signal",
-            "identifier": "signalID",
-			"stateCodes": {
-				"GREEN": "Green",
-				"RED": "Red"
-			},
-			"hasTerminal": false,
-			"events": [
-				"StateChange"
-			]
-		},
 		"Dumpstation": {
 			"tagPrefix": "ds",
 			"initial": "idle",

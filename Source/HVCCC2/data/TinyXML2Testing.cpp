@@ -36,25 +36,18 @@ namespace fs = std::experimental::filesystem;
 int main() {
 	//Extraction of all of the data inside each XML file:
 	std::cout << "Now starting the data extraction process." << std::endl;
-	
-	EventVectorTuple allEvents = getEventsFromXMLFolder(XML_PATH);
-	
-	EventMapTuple<EntitiesWithEvents> organisedEventsTuple;
-	forEachInTuple(allEvents, MapAndSortFunctor<EntitiesWithEvents>(organisedEventsTuple));
 
-	StateMapTuple<AllEntities> statesTuple;
-	forEachInTuple(organisedEventsTuple, ConvertFunctor<AllEntities> (statesTuple));
+	auto data = loadXMLData(XML_PATH).first;
 
-	//note that this isn't fully templated, but should never need other specialisations
-	merge(statesTuple, std::get<StateMap<StackerReclaimer>>(statesTuple));
-
-	////Serialise all of the extracted data into binary files:
+	//serialisation is broken atm
+	//Serialise all of the extracted data into binary files:
 	//bool could_ser = serialize(statesTuple, BINARY_PATH);
 	//std::cout << "Serialised the data into binary files.\n" << std::endl;
 
-	////Deserialise the data from the binary data files into memory:
-	//std::tuple<std::map<Stacker::Id, std::vector<StackerState>>> deserializedStates;
-	//bool could_deser = deserialize(BINARY_PATH, deserializedStates);
+	//Deserialise the data from the binary data files into memory:
+	//auto pair = loadBinaryData(BINARY_PATH);
+	//auto deserialisedStates = pair.first;
+	//auto could_deser = pair.second;
 	//std::cout << "Data deserialised from binary files into memory." << std::endl;
 	return 0;
 }

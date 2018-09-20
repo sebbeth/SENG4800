@@ -30,6 +30,12 @@ public:
 	void ResetMaterial();
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
+		void ResetCube2Material();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
+		void ResetCube3Material();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
 		void StackMaterial();
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
