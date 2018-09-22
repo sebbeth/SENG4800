@@ -283,6 +283,7 @@ int ALevelController::getPadLength(TerminalId terminal, const int& padId) {
 					return 2155;
 				case 3: //pad d
 					return 2315;
+					
 			}
 		case TerminalId::NCT:
 			switch (padId) {
@@ -299,10 +300,10 @@ int ALevelController::getPadLength(TerminalId terminal, const int& padId) {
 			}
 		case TerminalId::CCT:
 			switch (padId) { // alls pads are defined the same length
+				case 0:
 				case 1:
 				case 2:
 				case 3:
-				case 4:
 					return 770;
 			}
 		default: 
@@ -317,27 +318,26 @@ int ALevelController::getTrackLength(TerminalId terminal, const int& trackId) {
 	case TerminalId::KTC:
 		switch (trackId) {
 		case 0: // Track a
-			return 2315;
 		case 1: // Track b
-			return 2315;
 		case 2: // Track c
-			return 2315;
 		case 3: // Track d
+		case 4: // Track e
 			return 2315;
 		}
 	case TerminalId::NCT:
 		switch (trackId) {
 		case 0: // Track a
 			return 1100;
-		case 1: // Track bc
+		case 1: // Track b
 			return 1113;
-		case 2: // Track de
+		case 2: // Track c
 			return 1160;
-		case 3: // Track fg
+		case 3: // Track d
 			return 1173;
 		}
 	case TerminalId::CCT:
 		switch (trackId) { // alls Track are defined the same length
+		case 0:
 		case 1:
 		case 2:
 		case 3:
