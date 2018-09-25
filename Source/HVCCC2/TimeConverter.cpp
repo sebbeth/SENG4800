@@ -61,10 +61,18 @@ bool UTimeConverter::ConvertTime(bool totalTime, float hoursIn, int& hoursOut, i
 	outputWD.Append("Day: ");
 	outputWD.AppendInt(daysOut);
 
+	string hoursInString = to_string(hoursIn);
+
+	FString hoursInStr = "";
+	hoursInStr.Append(FString(hoursInString.c_str()));
+
+
 	if (!totalTime) {
 		outputHM.Append(hoursOutStr);
 		outputHM.Append(":");
 		outputHM.Append(minutesOutStr);
+		outputHM.Append("  HVCCC: ");
+		outputHM.Append(hoursInStr);
 	}
 	else {
 		outputWD.Append("   ");
