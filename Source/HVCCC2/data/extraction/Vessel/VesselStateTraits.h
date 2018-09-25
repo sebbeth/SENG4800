@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
  **/
 #pragma once
 #include "../StateTraits.h"
@@ -9,7 +9,7 @@ class StateTraits<VesselState> {
 public:
     static VesselState initializeFromEvent(const VesselEvent& src) {
         /* STUB: REPLACE WITH LOGIC FOR GUESSING THE INITIAL STATE FROM THE EVENT */
-        return {src.id, VesselStateType::Idle, src.ballast, src.cargo, src.terminalID, src.time};
+        return {src.id, VesselStateType::Idle, src.ballast, src.cargo, src.numcargoes, src.terminalID, src.time};
     }
 
     static VesselState generateNextState(const VesselState& current, const VesselEvent& event) {
@@ -22,6 +22,9 @@ public:
         }
         if(event.hasCargo()) {
         result.cargo = event.cargo;
+        }
+        if(event.hasNumcargoes()) {
+        result.numcargoes = event.numcargoes;
         }
         if(event.hasTerminalID()) {
         result.terminalID = event.terminalID;

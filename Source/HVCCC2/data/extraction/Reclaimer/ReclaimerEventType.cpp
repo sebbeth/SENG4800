@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
  **/
 #include "ReclaimerEventType.h"
         
@@ -8,6 +8,8 @@ ReclaimerEventType decodeReclaimerEventType(const std::string& enumeratorString)
         return ReclaimerEventType::Complete;
     } else if (enumeratorString == "DoubleHandleComp") {
         return ReclaimerEventType::DoubleHandleComplete;
+    } else if (enumeratorString == "DoubleHandleOpComp") {
+        return ReclaimerEventType::DoubleHandleOperationComplete;
     } else if (enumeratorString == "DoubleHandleOpStart") {
         return ReclaimerEventType::DoubleHandleOperationStart;
     } else if (enumeratorString == "DoubleHandleStart") {
@@ -34,6 +36,8 @@ ReclaimerEventType decodeReclaimerEventType(const std::string& enumeratorString)
         return ReclaimerEventType::SyncedFail;
     } else if (enumeratorString == "SyncedFix") {
         return ReclaimerEventType::SyncedFix;
+    } else if (enumeratorString == "WrapUp") {
+        return ReclaimerEventType::WrapUp;
     } else {
         return ReclaimerEventType::Invalid;
     }
@@ -54,6 +58,10 @@ std::string encodeReclaimerEventType(const ReclaimerEventType& value) {
 
         case ReclaimerEventType::MaintenanceStart:
             return "MaintStart";
+            break;
+
+        case ReclaimerEventType::WrapUp:
+            return "WrapUp";
             break;
 
         case ReclaimerEventType::MaintenanceComplete:
@@ -98,6 +106,10 @@ std::string encodeReclaimerEventType(const ReclaimerEventType& value) {
 
         case ReclaimerEventType::DoubleHandleComplete:
             return "DoubleHandleComp";
+            break;
+
+        case ReclaimerEventType::DoubleHandleOperationComplete:
+            return "DoubleHandleOpComp";
             break;
 
         default:

@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
  **/
 #include "extractData.h"
 #include <regex>
@@ -17,12 +17,13 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, DumpstationE
     switch(destination.type) {
         case DumpstationEventType::DumpComplete:
             XMLCheckResult(extractAttribute(source, destination.amount, "amount"), 0);
-            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.cycleID.name, "cycleID"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
         case DumpstationEventType::DumpOperationComplete:
         case DumpstationEventType::DumpOperationStart:
-            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
+        case DumpstationEventType::DumpStart:
+            XMLCheckResult(extractAttribute(source, destination.cycleID.name, "cycleID"), 0);
             XMLCheckResult(extractAttribute(source, destination.stockpileID.name, "stockpileID"), 0);
             destination.stockpileID.terminal = theTerminal;
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
@@ -49,17 +50,18 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, LoadpointsEv
         case LoadpointsEventType::StartPostload:
         case LoadpointsEventType::StartPreload:
         case LoadpointsEventType::StartRecharge:
+        case LoadpointsEventType::WrapUp:
             XMLCheckResult(extractAttribute(source, destination.loadpointName, "loadpointName"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
         case LoadpointsEventType::StartLoad:
-            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.cycleID.name, "cycleID"), 0);
             XMLCheckResult(extractAttribute(source, destination.loadpointName, "loadpointName"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
         case LoadpointsEventType::FinishLoad:
             XMLCheckResult(extractAttribute(source, destination.amount, "amount"), 0);
-            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.cycleID.name, "cycleID"), 0);
             XMLCheckResult(extractAttribute(source, destination.loadpointName, "loadpointName"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
@@ -80,6 +82,7 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ReclaimerEve
     switch(destination.type) {
         case ReclaimerEventType::OnMove:
         case ReclaimerEventType::OnStopMove:
+        case ReclaimerEventType::WrapUp:
             XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
@@ -96,6 +99,7 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ReclaimerEve
             break;
         case ReclaimerEventType::Complete:
         case ReclaimerEventType::DoubleHandleComplete:
+        case ReclaimerEventType::DoubleHandleOperationComplete:
         case ReclaimerEventType::OperationComplete:
             XMLCheckResult(extractAttribute(source, destination.amount, "amount"), 0);
             XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
@@ -122,6 +126,7 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ShiploaderEv
         case ShiploaderEventType::OnHatchChangeComplete:
         case ShiploaderEventType::OnMove:
         case ShiploaderEventType::OnStopMove:
+        case ShiploaderEventType::WrapUp:
             XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
@@ -164,6 +169,7 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StackerEvent
     switch(destination.type) {
         case StackerEventType::OnMove:
         case StackerEventType::OnStopMove:
+        case StackerEventType::WrapUp:
             XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
@@ -180,6 +186,7 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StackerEvent
             break;
         case StackerEventType::Complete:
         case StackerEventType::DoubleHandleComplete:
+        case StackerEventType::DoubleHandleOperationComplete:
         case StackerEventType::OperationComplete:
             XMLCheckResult(extractAttribute(source, destination.amount, "amount"), 0);
             XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
@@ -243,6 +250,40 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StockpileEve
 }
 
 //Note: If this needs to be implemented manually, if can be shortened to one if(hasX) {...extractEvent(source,&destination.x,"attributeTextX")..} for each attribute
+tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, TrainMovementEvent& destination, const std::string& eventTypeCode) {
+    destination.type = decodeTrainMovementEventType(eventTypeCode);
+    if (destination.type == TrainMovementEventType::Invalid) {
+        XMLCheckResult(tinyxml2::XML_ERROR_PARSING_ELEMENT, 0);
+    }
+    //extract the identifying name
+    XMLCheckResult(extractAttribute(source, destination.id.name, "cycleID"), 0);
+
+    switch(destination.type) {
+        case TrainMovementEventType::WaitForTracks:
+            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
+            XMLCheckResult(extractAttribute(source, destination.trainID, "trainID"), 0);
+            break;
+        case TrainMovementEventType::EnterTrack:
+        case TrainMovementEventType::HeadLeaveTrack:
+        case TrainMovementEventType::TailLeaveTrack:
+            XMLCheckResult(extractAttribute(source, destination.direction, "direction"), 0);
+            XMLCheckResult(extractAttribute(source, destination.sectionID, "sectionID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.speed, "speed"), 0);
+            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
+            XMLCheckResult(extractAttribute(source, destination.trackID, "trackID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.trainID, "trainID"), 0);
+            break;
+        case TrainMovementEventType::ReachedSignal:
+            XMLCheckResult(extractAttribute(source, destination.signalID, "signalID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.signalState, "signalState"), 0);
+            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
+            XMLCheckResult(extractAttribute(source, destination.trainID, "trainID"), 0);
+            break;
+    }
+    return tinyxml2::XML_SUCCESS;
+}
+
+//Note: If this needs to be implemented manually, if can be shortened to one if(hasX) {...extractEvent(source,&destination.x,"attributeTextX")..} for each attribute
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, VesselEvent& destination, const std::string& eventTypeCode) {
     destination.type = decodeVesselEventType(eventTypeCode);
     if (destination.type == VesselEventType::Invalid) {
@@ -252,10 +293,13 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, VesselEvent&
     XMLCheckResult(extractAttribute(source, destination.id.name, "vesselID"), 0);
 
     switch(destination.type) {
+        case VesselEventType::BallastTankEmpty:
         case VesselEventType::Created:
         case VesselEventType::HatchChangeComplete:
+        case VesselEventType::HatchChangeStart:
         case VesselEventType::StopForDeballasting:
         case VesselEventType::StopForDeballastingComplete:
+        case VesselEventType::YardSpaceAllocated:
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
         case VesselEventType::DraftSurveyComplete:
@@ -263,6 +307,12 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, VesselEvent&
         case VesselEventType::StartLoading:
             XMLCheckResult(extractAttribute(source, destination.ballast, "ballast"), 0);
             XMLCheckResult(extractAttribute(source, destination.cargo, "cargo"), 0);
+            XMLCheckResult(extractAttribute(source, destination.terminalID, "terminalID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
+            break;
+        case VesselEventType::FullyLoaded:
+            XMLCheckResult(extractAttribute(source, destination.cargo, "cargo"), 0);
+            XMLCheckResult(extractAttribute(source, destination.numcargoes, "numCargoes"), 0);
             XMLCheckResult(extractAttribute(source, destination.terminalID, "terminalID"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
@@ -315,6 +365,8 @@ tinyxml2::XMLError extractAll(const std::string& srcFilePath, EventVectorTuple& 
                 extractEvent(*eachElement, std::get<std::vector<StackerEvent>>(destination), eventTypeCode, theTerminal); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
             } else if (entityTypeCode == Stockpile::XML_TAG_PREFIX) {
                 extractEvent(*eachElement, std::get<std::vector<StockpileEvent>>(destination), eventTypeCode, theTerminal); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
+            } else if (entityTypeCode == TrainMovement::XML_TAG_PREFIX) {
+                extractEvent(*eachElement, std::get<std::vector<TrainMovementEvent>>(destination), eventTypeCode); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
             } else if (entityTypeCode == Vessel::XML_TAG_PREFIX) {
                 extractEvent(*eachElement, std::get<std::vector<VesselEvent>>(destination), eventTypeCode); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
             } else {

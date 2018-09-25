@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
  **/
 #include "StackerReclaimerState.h"
 StackerReclaimerState::StackerReclaimerState(const StackerState& src): type(StackerReclaimerStateType::Invalid), id({src.id.terminal, src.id.name}), position(src.position), time(src.time), stockpileID(src.stockpileID), amount(src.amount){
@@ -18,6 +18,9 @@ StackerReclaimerState::StackerReclaimerState(const StackerState& src): type(Stac
             break;
         case StackerStateType::Maintenance:
             type = StackerReclaimerStateType::Maintenance;
+            break;
+        case StackerStateType::WrappedUp:
+            type = StackerReclaimerStateType::WrappedUp;
             break;
         case StackerStateType::WorkingStack:
             type = StackerReclaimerStateType::WorkingStack;
@@ -61,6 +64,12 @@ StackerReclaimerState::StackerReclaimerState(const StackerState& src): type(Stac
         case StackerStateType::WorkingDoubleHandleSyncFail:
             type = StackerReclaimerStateType::WorkingDoubleHandleSyncFail;
             break;
+        case StackerStateType::PostDoubleHandleReservedFail:
+            type = StackerReclaimerStateType::PostDoubleHandleReservedFail;
+            break;
+        case StackerStateType::PostDoubleHandleReservedSyncFail:
+            type = StackerReclaimerStateType::PostDoubleHandleReservedSyncFail;
+            break;
         default:
             type = StackerReclaimerStateType::Invalid;
     }
@@ -81,6 +90,9 @@ StackerReclaimerState::StackerReclaimerState(const ReclaimerState& src): type(St
             break;
         case ReclaimerStateType::Maintenance:
             type = StackerReclaimerStateType::Maintenance;
+            break;
+        case ReclaimerStateType::WrappedUp:
+            type = StackerReclaimerStateType::WrappedUp;
             break;
         case ReclaimerStateType::WorkingReclaim:
             type = StackerReclaimerStateType::WorkingReclaim;
@@ -123,6 +135,12 @@ StackerReclaimerState::StackerReclaimerState(const ReclaimerState& src): type(St
             break;
         case ReclaimerStateType::WorkingDoubleHandleSyncFail:
             type = StackerReclaimerStateType::WorkingDoubleHandleSyncFail;
+            break;
+        case ReclaimerStateType::PostDoubleHandleReservedFail:
+            type = StackerReclaimerStateType::PostDoubleHandleReservedFail;
+            break;
+        case ReclaimerStateType::PostDoubleHandleReservedSyncFail:
+            type = StackerReclaimerStateType::PostDoubleHandleReservedSyncFail;
             break;
         default:
             type = StackerReclaimerStateType::Invalid;

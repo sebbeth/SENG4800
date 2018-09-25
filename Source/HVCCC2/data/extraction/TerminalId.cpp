@@ -1,13 +1,13 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
  **/
 #include "TerminalId.h"
         
 TerminalId decodeTerminalId(const std::string& enumeratorString) {
     if (enumeratorString == "CCT") {
         return TerminalId::CCT;
-    } else if (enumeratorString == "KCT") {
-        return TerminalId::KCT;
+    } else if (enumeratorString == "KTC") {
+        return TerminalId::KTC;
     } else if (enumeratorString == "NCT") {
         return TerminalId::NCT;
     } else {
@@ -20,8 +20,8 @@ std::string encodeTerminalId(const TerminalId& value) {
             return "CCT";
             break;
 
-        case TerminalId::KCT:
-            return "KCT";
+        case TerminalId::KTC:
+            return "KTC";
             break;
 
         case TerminalId::NCT:

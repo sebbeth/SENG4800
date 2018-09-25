@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
  **/
 #include "ShiploaderEvent.h"
 
@@ -23,6 +23,7 @@ bool ShiploaderEvent::hasAmount() const {
         case ShiploaderEventType::StartVesselLoad:
         case ShiploaderEventType::SyncedFail:
         case ShiploaderEventType::SyncedFix:
+        case ShiploaderEventType::WrapUp:
         default:
             return false;
     }
@@ -41,6 +42,7 @@ bool ShiploaderEvent::hasPosition() const {
         case ShiploaderEventType::OnStopMove:
         case ShiploaderEventType::StartVesselDraftSurvey:
         case ShiploaderEventType::StartVesselLoad:
+        case ShiploaderEventType::WrapUp:
             return true;
         case ShiploaderEventType::Fail:
         case ShiploaderEventType::Fix:
@@ -73,6 +75,7 @@ bool ShiploaderEvent::hasStockpileID() const {
         case ShiploaderEventType::StartVesselLoad:
         case ShiploaderEventType::SyncedFail:
         case ShiploaderEventType::SyncedFix:
+        case ShiploaderEventType::WrapUp:
         default:
             return false;
     }
@@ -91,6 +94,7 @@ bool ShiploaderEvent::hasTime() const {
         case ShiploaderEventType::OnStopMove:
         case ShiploaderEventType::StartVesselDraftSurvey:
         case ShiploaderEventType::StartVesselLoad:
+        case ShiploaderEventType::WrapUp:
             return true;
         case ShiploaderEventType::Fail:
         case ShiploaderEventType::Fix:
@@ -123,6 +127,7 @@ bool ShiploaderEvent::hasVesselID() const {
         case ShiploaderEventType::StartVesselDraftSurvey:
         case ShiploaderEventType::SyncedFail:
         case ShiploaderEventType::SyncedFix:
+        case ShiploaderEventType::WrapUp:
         default:
             return false;
     }

@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
  **/
 #include "StackerEventType.h"
         
@@ -8,6 +8,8 @@ StackerEventType decodeStackerEventType(const std::string& enumeratorString) {
         return StackerEventType::Complete;
     } else if (enumeratorString == "DoubleHandleComp") {
         return StackerEventType::DoubleHandleComplete;
+    } else if (enumeratorString == "DoubleHandleOpComp") {
+        return StackerEventType::DoubleHandleOperationComplete;
     } else if (enumeratorString == "DoubleHandleOpStart") {
         return StackerEventType::DoubleHandleOperationStart;
     } else if (enumeratorString == "DoubleHandleStart") {
@@ -34,6 +36,8 @@ StackerEventType decodeStackerEventType(const std::string& enumeratorString) {
         return StackerEventType::SyncedFail;
     } else if (enumeratorString == "SyncedFix") {
         return StackerEventType::SyncedFix;
+    } else if (enumeratorString == "WrapUp") {
+        return StackerEventType::WrapUp;
     } else {
         return StackerEventType::Invalid;
     }
@@ -54,6 +58,10 @@ std::string encodeStackerEventType(const StackerEventType& value) {
 
         case StackerEventType::MaintenanceStart:
             return "MaintStart";
+            break;
+
+        case StackerEventType::WrapUp:
+            return "WrapUp";
             break;
 
         case StackerEventType::MaintenanceComplete:
@@ -98,6 +106,10 @@ std::string encodeStackerEventType(const StackerEventType& value) {
 
         case StackerEventType::DoubleHandleComplete:
             return "DoubleHandleComp";
+            break;
+
+        case StackerEventType::DoubleHandleOperationComplete:
+            return "DoubleHandleOpComp";
             break;
 
         default:

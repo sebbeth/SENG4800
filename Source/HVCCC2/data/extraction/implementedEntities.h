@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
  **/
 #pragma once
 #include "../util.h"
@@ -27,9 +27,12 @@
 #include "Shiploader/Shiploader.h"
 #include "Shiploader/ShiploaderEvent.h"
 #include "Shiploader/ShiploaderState.h"
+#include "TrainMovement/TrainMovement.h"
+#include "TrainMovement/TrainMovementEvent.h"
+#include "TrainMovement/TrainMovementState.h"
 #include "StackerReclaimer/StackerReclaimer.h"
 #include "StackerReclaimer/StackerReclaimerState.h"
 
-#define EntitiesWithEvents Dumpstation, Loadpoints, Reclaimer, Shiploader, Stacker, Stockpile, Vessel
+#define EntitiesWithEvents Dumpstation, Loadpoints, Reclaimer, Shiploader, Stacker, Stockpile, TrainMovement, Vessel
 #define MergeEntities StackerReclaimer
-#define AllEntities Dumpstation, Loadpoints, Reclaimer, Shiploader, Stacker, StackerReclaimer, Stockpile, Vessel
+#define AllEntities Dumpstation, Loadpoints, Reclaimer, Shiploader, Stacker, StackerReclaimer, Stockpile, TrainMovement, Vessel

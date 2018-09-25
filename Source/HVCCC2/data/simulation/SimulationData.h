@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "StackerReclaimer.h"
+#include "GameFramework/Actor.h"
 //specialise this for each entity, specifying the associated actor type
 template<typename Entity>
 struct u_actor_type {
@@ -29,6 +29,7 @@ public:
 
 	//whether or not this actor is within render distance/needs to be updated
 	bool isBeingRendered;
+
 	SimulationData(const std::vector<typename Entity::AssociatedState>& states, Actor* actorPointer, bool isBeingRendered);
 };
 
