@@ -8,7 +8,10 @@
 #include "GameFramework/Actor.h"
 #include "data/serialization.h"
 #include "data/extraction/implementedEntities.h"
-#include "SimulationData.h"
+#include "data/simulation/SimulationData.h"
+#include "data/simulation/StockpileData.h"
+
+#include "TrainTrackSpline.h"
 
 #include "StackerReclaimer.h"
 
@@ -486,7 +489,3 @@ inline void StringifyEventsFunctor::operator()(Each & eachDataMap)
 	}
 }
 
-#include "data/simulation/SimulationData.h"
-#include "data/simulation/StockpileData.h"
-
-#include "TrainTrackSpline.h"
