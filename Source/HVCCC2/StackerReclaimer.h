@@ -22,11 +22,12 @@ protected:
 
 
 public:
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
 	void setPosition(float position);
-	void setRotation(float degrees);
+	void setBaseRotation(float degrees);
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
+		void setRotation(int rotation);
 
 	void setMaterial(int choice);
 

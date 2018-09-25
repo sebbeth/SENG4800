@@ -7,22 +7,16 @@
 AStackerReclaimer::AStackerReclaimer()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 }
 
 // Called when the game starts or when spawned
 void AStackerReclaimer::BeginPlay()
 {
 	Super::BeginPlay();
-
+	this->setBaseRotation(124.0f);
 }
 
-// Called every frame
-void AStackerReclaimer::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
 
 
 /* Set the actor's position along it's rail,
@@ -39,9 +33,10 @@ void AStackerReclaimer::setPosition(float position) {
 	SetActorLocation(trackNodeA + directionVector);
 }
 
-void AStackerReclaimer::setRotation(float degrees) {
+
+void AStackerReclaimer::setBaseRotation(float degrees) {
 	FRotator rotator(0.0f, degrees, 0.0f);
-	SetActorRotation(rotator, ETeleportType::None); 
+	SetActorRotation(rotator, ETeleportType::None);
 }
 
 void AStackerReclaimer::setMaterial(int choice) {

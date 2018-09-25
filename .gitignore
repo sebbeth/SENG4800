@@ -7,3 +7,11 @@
 *.sdf
 *.suo
 /
+
+**/.idea
+**/__pycache__
+
+tinyxml2_build
+!TinyXML2Testing.sln
+
+BinaryDataFiles
