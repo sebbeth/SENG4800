@@ -462,7 +462,7 @@ void FindSimTimeBoundsFunctor::operator()(const Each& eachDataMap) {
 				context->simStartTime = eachState.time;
 			}
 			if (eachState.time > context->simEndTime) {
-				context->simStartTime = eachState.time;
+				context->simEndTime = eachState.time;
 			}
 		}
 	}
