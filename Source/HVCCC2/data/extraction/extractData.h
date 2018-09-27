@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
  **/
 #pragma once
 
@@ -15,6 +15,7 @@
 #include "Shiploader/ShiploaderEvent.h"
 #include "Stacker/StackerEvent.h"
 #include "Stockpile/StockpileEvent.h"
+#include "TrainMovement/TrainMovementEvent.h"
 #include "Vessel/VesselEvent.h"
 
 //This macro prints out an error message if the XMLError holds anything that isn't an tinyxml2::XML_SUCCESS
@@ -31,6 +32,7 @@ typedef std::tuple<
     std::vector<ShiploaderEvent>, 
     std::vector<StackerEvent>, 
     std::vector<StockpileEvent>, 
+    std::vector<TrainMovementEvent>, 
     std::vector<VesselEvent>
 > EventVectorTuple;
 
@@ -83,6 +85,8 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ShiploaderEv
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StackerEvent& destination, const std::string& eventTypeCode, TerminalId theTerminal);
 
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StockpileEvent& destination, const std::string& eventTypeCode, TerminalId theTerminal);
+
+tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, TrainMovementEvent& destination, const std::string& eventTypeCode);
 
 tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, VesselEvent& destination, const std::string& eventTypeCode);
 

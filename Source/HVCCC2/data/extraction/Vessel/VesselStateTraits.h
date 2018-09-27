@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
  **/
 #pragma once
 #include "../StateTraits.h"
@@ -9,7 +9,8 @@ class StateTraits<VesselState> {
 public:
     static VesselState initializeFromEvent(const VesselEvent& src) {
         /* STUB: REPLACE WITH LOGIC FOR GUESSING THE INITIAL STATE FROM THE EVENT */
-        return {src.id, VesselStateType::Idle, src.ballast, src.cargo, src.terminalID, src.time};
+        auto tentativeState = VesselState::determineNextType(VesselStateType::Idle, src.type);//see if the initial event is something that leaves the initial state; (addresses issue where some entities don't have their own creation event in the xml); still just a quickfix stub though
+        return {src.id, tentativeState != VesselStateType::Invalid ? tentativeState : VesselStateType::Idle, src.ballast, src.cargo, src.numcargoes, src.terminalID, src.time};
     }
 
     static VesselState generateNextState(const VesselState& current, const VesselEvent& event) {
@@ -22,6 +23,9 @@ public:
         }
         if(event.hasCargo()) {
         result.cargo = event.cargo;
+        }
+        if(event.hasNumcargoes()) {
+        result.numcargoes = event.numcargoes;
         }
         if(event.hasTerminalID()) {
         result.terminalID = event.terminalID;

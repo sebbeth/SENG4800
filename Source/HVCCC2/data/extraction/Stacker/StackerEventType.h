@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
  **/
 #pragma once
 #include <string>
@@ -7,6 +7,7 @@
 enum class StackerEventType {
     Complete,
     DoubleHandleComplete,
+    DoubleHandleOperationComplete,
     DoubleHandleOperationStart,
     DoubleHandleStart,
     Fail,
@@ -20,6 +21,7 @@ enum class StackerEventType {
     Start,
     SyncedFail,
     SyncedFix,
+    WrapUp,
     Invalid
 };
 
