@@ -21,6 +21,8 @@ using namespace std;
 
 int mock_state;
 float mock_level;
+std::tuple<TerminalId, std::string, int> padLengths;
+std::tuple<TerminalId, std::string, int> trackLengths;
 
 // Called every frame; not very interesting; see template<typename Each> void AnimateEntitiesFunctor::operator()(const Each& eachDataMap) in the header file
 void ALevelController::Tick(float DeltaTime)
@@ -263,6 +265,89 @@ void ALevelController::setCoalStackingState(int stackerId, int state) {
 	}
 }
 
+
+/*
+	Terminal ID - the ids will link to a terminal (KCT, NCIG, CCT), the pad will also have an ID value.
+*/
+int ALevelController::getPadLength(TerminalId terminal, const int& padId) {
+	// KCT Terminal Pads.
+	
+	switch (terminal) {
+		case TerminalId::KTC:
+			switch(padId) {
+				case 0: // Pad a
+					return 2285;
+				case 1: // pad b
+					return 2180;
+				case 2: //pad c
+					return 2155;
+				case 3: //pad d
+					return 2315;
+					
+			}
+		case TerminalId::NCT:
+			switch (padId) {
+				case 0: // Pad a
+					return 1055;
+				case 1: // pad bc
+					return 1100;
+				case 2: //pad de
+					return 1113;
+				case 3: //pad fg
+					return 1160;
+				case 4: // pad H
+					return 1173;
+			}
+		case TerminalId::CCT:
+			switch (padId) { // alls pads are defined the same length
+				case 0:
+				case 1:
+				case 2:
+				case 3:
+					return 770;
+			}
+		default: 
+			return -1;
+	}
+}
+/*
+*/
+int ALevelController::getTrackLength(TerminalId terminal, const int& trackId) {
+
+	switch (terminal) {
+	case TerminalId::KTC:
+		switch (trackId) {
+		case 0: // Track a
+		case 1: // Track b
+		case 2: // Track c
+		case 3: // Track d
+		case 4: // Track e
+			return 2315;
+		}
+	case TerminalId::NCT:
+		switch (trackId) {
+		case 0: // Track a
+			return 1100;
+		case 1: // Track b
+			return 1113;
+		case 2: // Track c
+			return 1160;
+		case 3: // Track d
+			return 1173;
+		}
+	case TerminalId::CCT:
+		switch (trackId) { // alls Track are defined the same length
+		case 0:
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+			return 770;
+		}
+	default:
+		return -1;
+	}
+}
 /*
 
 */

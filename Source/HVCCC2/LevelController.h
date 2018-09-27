@@ -10,8 +10,10 @@
 #include "data/extraction/implementedEntities.h"
 #include "data/simulation/SimulationData.h"
 #include "data/simulation/StockpileData.h"
-
+#include "data/extraction/TerminalId.h"
 #include "StackerReclaimer.h"
+
+
 
 #include "LevelController.generated.h"
 
@@ -308,6 +310,10 @@ private:
 	// Helper functions, don't call these directy
 	void setCoalStackingState(int stackerId, int state);
 	void setCoalReclaimingState(int stackerId,int loaderId, int state);
+
+	// Pad lengths
+	int getPadLength(TerminalId TerminalId, const int& padId);
+	int getTrackLength(TerminalId TerminalId, const int& trackID);
 
 	int testTime; // Just being used for testing
 
