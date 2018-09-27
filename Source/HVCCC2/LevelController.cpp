@@ -24,6 +24,19 @@ float mock_level;
 std::tuple<TerminalId, std::string, int> padLengths;
 std::tuple<TerminalId, std::string, int> trackLengths;
 
+// Sets default values
+ALevelController::ALevelController() : addToSimFunctor(this), updateWindowsFunctor(this), animateEntitiesFunctor(this), findSimTimeBoundsFunctor(this), clearDataFunctor(this), stringifyEventsFunctor(this), simTime(0), simStartTime(0), simEndTime(0), speed(1), isPlaying(false) {
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+}
+
+// Called when the game starts or when spawned
+void ALevelController::BeginPlay()
+{
+	Super::BeginPlay();
+	loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
+}
+
 // Called every frame; not very interesting; see template<typename Each> void AnimateEntitiesFunctor::operator()(const Each& eachDataMap) in the header file
 void ALevelController::Tick(float DeltaTime)
 {
@@ -33,48 +46,6 @@ void ALevelController::Tick(float DeltaTime)
 		forEachInTuple(data, animateEntitiesFunctor);
 	}
 	forEachInTuple(data, animateEntitiesFunctor);
-
-	//// DATA STUFF
-	//if (isPlaying) {
-	//	moveSimTime(DeltaTime * speed);
-	//}
-	//auto watchIt = windows.begin();
-	//auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
-	//auto actorIt = stackerReclaimers.CreateConstIterator();
-	//for (; watchIt != windows.end() && actorIt; (++watchIt, ++entIt, ++actorIt)) {
-	//	auto& eachWindow = (*watchIt);
-	//	auto& eachEntity = (*entIt);
-	//	auto& eachActor = (*actorIt);
-	//	int indexA = eachWindow.first;
-	//	int indexB = eachWindow.second;
-
-
-	//	double timeA = eachEntity.second[indexA].time;
-	//	double timeB = eachEntity.second[indexB].time;
-
-	//	//the length of time available between the states
-	//	double aToBTimeDist = timeB - timeA;
-
-	//	//we have to limit the target time in case the worldTime is beyond the current frame
-	//	double targetTime = std::max(timeA, std::min(timeB, simTime));
-
-	//	//determine the scale as a 
-	//	double scale = aToBTimeDist > 0 ? (targetTime - timeA) / aToBTimeDist : 0;
-
-
-	//	double positionA = eachEntity.second[indexA].position;
-	//	double positionB = eachEntity.second[indexB].position;
-
-	//	double positionInterpolated = positionA + (positionB - positionA)*(scale);
-
-	//	double positionDelta = (positionInterpolated - xMin) / (xMax - xMin);
-
-	//	UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f; state a: %d, state b: %d, typea: %d, typeb: %d"), UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str()), float(simTime), indexA, indexB, (int)eachEntity.second[indexA].type, (int)eachEntity.second[indexB].type);
-	//	UE_LOG(LogTemp, Warning, TEXT("scale: %f, timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position delta: %f"), float(scale), float(timeA), float(timeB), float(positionA), float(positionB), float(positionInterpolated), float(positionDelta));
-
-	//	// TEST INPUT
-	//	eachActor->setPosition(positionDelta);
-	//}
 }
 
 AddToSimFunctor::AddToSimFunctor(): context(nullptr) {
@@ -138,13 +109,6 @@ TArray<FString> StringifyEventsFunctor::operator()() {
 	return result;
 }
 
-// Sets default values
-ALevelController::ALevelController(): addToSimFunctor(this), updateWindowsFunctor(this), animateEntitiesFunctor(this), findSimTimeBoundsFunctor(this), clearDataFunctor(this), stringifyEventsFunctor(this), simTime(0), simStartTime(0), simEndTime(0), speed(1), isPlaying(false) {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-}
-
-
 bool ALevelController::loadXMLData(const  FString& srcPath) {
 	auto stateResultPair = ::loadXMLData(TCHAR_TO_UTF8(*srcPath));
 
@@ -163,13 +127,6 @@ bool ALevelController::loadXMLData(const  FString& srcPath) {
 
 TArray<FString> ALevelController::getEventMessages() {
 	return stringifyEventsFunctor();
-}
-
-// Called when the game starts or when spawned
-void ALevelController::BeginPlay()
-{
-	Super::BeginPlay();
-	loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
 }
 
 float ALevelController::getSimTime() {

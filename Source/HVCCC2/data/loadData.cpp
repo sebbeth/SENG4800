@@ -20,10 +20,14 @@ std::pair<EventVectorTuple, bool> getEventsFromXMLFolder(const std::string& xmlF
 		std::smatch match;
 		std::regex_search(pathToFile, match, r);
 
-		//Print out a notice which states which files will next have its data extracted:
-		std::cout << "    Extracting data from " << match[3] << match[4] << std::endl;
+		//Make sure the file/folder examined is an XML file, not a folder or other type of file
+		//before attempting to extract data from it:
+		if (match.size() > 0) {
+			//Print out a notice which states which files will next have its data extracted:
+			std::cout << "    Extracting data from " << match[3] << match[4] << std::endl;
 
-		err = extractAll(pathToFile, result);
+			err = extractAll(pathToFile, result);
+		}
 	}
 	return std::make_pair(result, err == tinyxml2::XMLError::XML_SUCCESS);
 }
