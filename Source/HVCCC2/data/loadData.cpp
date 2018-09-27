@@ -11,7 +11,7 @@ namespace fs = std::experimental::filesystem;
 
 std::pair<EventVectorTuple, bool> getEventsFromXMLFolder(const std::string& xmlFolderPath) {
 	EventVectorTuple result;
-	tinyxml2::XMLError err = tinyxml2::XMLError::XML_ERROR_PARSING_UNKNOWN;
+	tinyxml2::XMLError result_err = tinyxml2::XMLError::XML_ERROR_PARSING_UNKNOWN;
 	for (const auto& each : fs::directory_iterator(xmlFolderPath)) {
 		std::string pathToFile = each.path().string();
 
@@ -25,11 +25,14 @@ std::pair<EventVectorTuple, bool> getEventsFromXMLFolder(const std::string& xmlF
 		if (match.size() > 0) {
 			//Print out a notice which states which files will next have its data extracted:
 			std::cout << "    Extracting data from " << match[3] << match[4] << std::endl;
-
-			err = extractAll(pathToFile, result);
+			//return success if /any/ file loads correctly, such that bad files (not just bad individual tags) can be safely ignored
+			tinyxml2::XMLError each_err = extractAll(pathToFile, result);
+			if (result_err != tinyxml2::XMLError::XML_SUCCESS) {
+				result_err = each_err;
+			}
 		}
 	}
-	return std::make_pair(result, err == tinyxml2::XMLError::XML_SUCCESS);
+	return std::make_pair(result, result_err == tinyxml2::XMLError::XML_SUCCESS);
 }
 
 std::pair<StateMapTuple<AllEntities>, bool> loadXMLData(const std::string& srcPath) {

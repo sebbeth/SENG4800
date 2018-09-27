@@ -1,22 +1,22 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
  **/
 #pragma once
 #include <string>
 
 enum class DumpstationStateType {
-    idle,
-    maintenance,
-    postDumpReserved,
-    postDumpReservedFail,
-    postDumpReservedSyncedFail,
-    postDumpReservedSyncedFix,
-    postReservedDumpFail,
-    preDumpReserved,
-    preDumpReservedFail,
-    preDumpReservedSyncedFail,
-    working,
-    workingFail,
-    workingSyncedFail,
+    Idle,
+    Maintenance,
+    PostDumpReserved,
+    PostDumpReservedFail,
+    PostDumpReservedSyncedFail,
+    PostDumpReservedSyncedFix,
+    PostReservedDumpFail,
+    PreDumpReserved,
+    PreDumpReservedFail,
+    PreDumpReservedSyncedFail,
+    Working,
+    WorkingFail,
+    WorkingSyncedFail,
     Invalid
 };

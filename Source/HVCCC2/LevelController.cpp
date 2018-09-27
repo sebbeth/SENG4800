@@ -230,7 +230,7 @@ int ALevelController::getPadLength(TerminalId terminal, const int& padId) {
 	// KCT Terminal Pads.
 	
 	switch (terminal) {
-		case TerminalId::KTC:
+		case TerminalId::KCT:
 			switch(padId) {
 				case 0: // Pad a
 					return 2285;
@@ -272,7 +272,7 @@ int ALevelController::getPadLength(TerminalId terminal, const int& padId) {
 int ALevelController::getTrackLength(TerminalId terminal, const int& trackId) {
 
 	switch (terminal) {
-	case TerminalId::KTC:
+	case TerminalId::KCT:
 		switch (trackId) {
 		case 0: // Track a
 		case 1: // Track b

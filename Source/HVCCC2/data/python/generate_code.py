@@ -532,7 +532,8 @@ class StateTraits<{1}State> {{
 public:
 {0}static {1}State initializeFromEvent(const {1}Event& src) {{
 {0}{0}/* STUB: REPLACE WITH LOGIC FOR GUESSING THE INITIAL STATE FROM THE EVENT */
-{0}{0}return {{src.id, {2}, '''.format(tab_spaces, entity.name, initial_state_selection)
+{0}{0}auto tentativeState = {1}State::determineNextType({2}, src.type);//see if the initial event is something that leaves the initial state; (addresses issue where some entities don't have their own creation event in the xml); still just a quickfix stub though
+{0}{0}return {{src.id, tentativeState != {1}StateType::Invalid ? tentativeState : {2}, '''.format(tab_spaces, entity.name, initial_state_selection)
 
     decl += ', '.join(
         '''src.{1}'''.format(tab_spaces, each_name)
