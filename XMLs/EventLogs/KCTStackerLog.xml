@@ -1,0 +1,354 @@
+<events>
+    <StkOnMove stackerID="3.58" time="5.951505" pos="50.00"/>
+    <StkOnStopMove stackerID="3.58" time="6.122894" pos="358.50"/>
+    <StkOpStart stackerID="3.58" time="6.122894" pos="358.50" stockpileID="KCT1.4"/>
+    <StkStart stackerID="3.58" time="6.165495" pos="358.50" stockpileID="KCT1.4"/>
+    <StkComp stackerID="3.58" time="7.177260" pos="358.50" stockpileID="KCT1.4" amount="8600.00"/>
+    <StkOpComp stackerID="3.58" time="7.177260" pos="358.50" stockpileID="KCT1.4" amount="0.00"/>
+    <StkOnMove stackerID="3.58" time="8.337916" pos="358.50"/>
+    <StkOnStopMove stackerID="3.58" time="8.407360" pos="233.50"/>
+    <StkOpStart stackerID="3.58" time="8.407360" pos="233.50" stockpileID="KCT1.3"/>
+    <StkStart stackerID="3.58" time="8.443648" pos="233.50" stockpileID="KCT1.3"/>
+    <StkComp stackerID="3.58" time="9.384825" pos="233.50" stockpileID="KCT1.3" amount="8000.00"/>
+    <StkOpComp stackerID="3.58" time="9.384825" pos="233.50" stockpileID="KCT1.3" amount="0.00"/>
+    <StkOnMove stackerID="3.58" time="9.385103" pos="233.50"/>
+    <StkOnStopMove stackerID="3.58" time="9.454547" pos="358.50"/>
+    <StkOpStart stackerID="3.58" time="9.454547" pos="358.50" stockpileID="KCT1.4"/>
+    <StkStart stackerID="3.58" time="9.497148" pos="358.50" stockpileID="KCT1.4"/>
+    <StkOnMove stackerID="3.21" time="9.825947" pos="50.00"/>
+    <StkOnStopMove stackerID="3.21" time="9.873170" pos="135.00"/>
+    <StkOpStart stackerID="3.21" time="9.873170" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="9.903473" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="10.162296" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="10.162296" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkComp stackerID="3.58" time="10.567736" pos="358.50" stockpileID="KCT1.4" amount="9100.00"/>
+    <StkOpComp stackerID="3.58" time="10.567736" pos="358.50" stockpileID="KCT1.4" amount="0.00"/>
+    <StkOnMove stackerID="3.58" time="10.568014" pos="358.50"/>
+    <StkOnStopMove stackerID="3.58" time="10.719125" pos="86.50"/>
+    <StkOpStart stackerID="3.58" time="10.719125" pos="86.50" stockpileID="KCT1.1"/>
+    <StkStart stackerID="3.58" time="10.747989" pos="86.50" stockpileID="KCT1.1"/>
+    <StkComp stackerID="3.58" time="11.547989" pos="86.50" stockpileID="KCT1.1" amount="6800.00"/>
+    <StkOpComp stackerID="3.58" time="11.547989" pos="86.50" stockpileID="KCT1.1" amount="0.00"/>
+    <StkOnMove stackerID="3.58" time="11.548267" pos="86.50"/>
+    <StkOnStopMove stackerID="3.58" time="11.699378" pos="358.50"/>
+    <StkOpStart stackerID="3.58" time="11.699378" pos="358.50" stockpileID="KCT1.4"/>
+    <StkStart stackerID="3.58" time="11.741979" pos="358.50" stockpileID="KCT1.4"/>
+    <StkComp stackerID="3.58" time="12.671390" pos="358.50" stockpileID="KCT1.4" amount="7900.00"/>
+    <StkOpComp stackerID="3.58" time="12.671390" pos="358.50" stockpileID="KCT1.4" amount="0.00"/>
+    <StkOnMove stackerID="3.58" time="12.671668" pos="358.50"/>
+    <StkOpStart stackerID="3.21" time="12.694380" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="12.724683" pos="135.00" stockpileID="KCT2.1"/>
+    <StkOnStopMove stackerID="3.58" time="12.741113" pos="233.50"/>
+    <StkOpStart stackerID="3.58" time="12.741113" pos="233.50" stockpileID="KCT1.3"/>
+    <StkStart stackerID="3.58" time="12.777401" pos="233.50" stockpileID="KCT1.3"/>
+    <StkComp stackerID="3.21" time="12.983507" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="12.983507" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkComp stackerID="3.58" time="13.847989" pos="233.50" stockpileID="KCT1.3" amount="9100.00"/>
+    <StkOpComp stackerID="3.58" time="13.847989" pos="233.50" stockpileID="KCT1.3" amount="0.00"/>
+    <StkOpStart stackerID="3.58" time="13.848267" pos="233.50" stockpileID="KCT1.3"/>
+    <StkStart stackerID="3.58" time="13.884554" pos="233.50" stockpileID="KCT1.3"/>
+    <StkComp stackerID="3.58" time="14.825731" pos="233.50" stockpileID="KCT1.3" amount="8000.00"/>
+    <StkOpComp stackerID="3.58" time="14.825731" pos="233.50" stockpileID="KCT1.3" amount="0.00"/>
+    <StkOnMove stackerID="3.58" time="14.826009" pos="233.50"/>
+    <StkOnStopMove stackerID="3.58" time="14.895453" pos="358.50"/>
+    <StkOpStart stackerID="3.58" time="14.895453" pos="358.50" stockpileID="KCT1.4"/>
+    <StkStart stackerID="3.58" time="14.938054" pos="358.50" stockpileID="KCT1.4"/>
+    <StkComp stackerID="3.58" time="15.949819" pos="358.50" stockpileID="KCT1.4" amount="8600.00"/>
+    <StkOpComp stackerID="3.58" time="15.949819" pos="358.50" stockpileID="KCT1.4" amount="0.00"/>
+    <StkOpStart stackerID="3.58" time="15.972809" pos="358.50" stockpileID="KCT1.4"/>
+    <StkStart stackerID="3.58" time="16.015410" pos="358.50" stockpileID="KCT1.4"/>
+    <StkComp stackerID="3.58" time="17.027175" pos="358.50" stockpileID="KCT1.4" amount="8600.00"/>
+    <StkOpComp stackerID="3.58" time="17.027175" pos="358.50" stockpileID="KCT1.4" amount="0.00"/>
+    <StkOpStart stackerID="3.58" time="17.027452" pos="358.50" stockpileID="KCT1.4"/>
+    <StkStart stackerID="3.58" time="17.070053" pos="358.50" stockpileID="KCT1.4"/>
+    <StkComp stackerID="3.58" time="17.999465" pos="358.50" stockpileID="KCT1.4" amount="7900.00"/>
+    <StkOpComp stackerID="3.58" time="17.999465" pos="358.50" stockpileID="KCT1.4" amount="0.00"/>
+    <StkOnMove stackerID="3.58" time="17.999743" pos="358.50"/>
+    <StkOnStopMove stackerID="3.58" time="18.150854" pos="86.50"/>
+    <StkOpStart stackerID="3.58" time="18.150854" pos="86.50" stockpileID="KCT1.1"/>
+    <StkStart stackerID="3.58" time="18.179718" pos="86.50" stockpileID="KCT1.1"/>
+    <StkComp stackerID="3.58" time="18.979718" pos="86.50" stockpileID="KCT1.1" amount="6800.00"/>
+    <StkOpComp stackerID="3.58" time="18.979718" pos="86.50" stockpileID="KCT1.1" amount="0.00"/>
+    <StkOnMove stackerID="3.58" time="21.638546" pos="86.50"/>
+    <StkOnStopMove stackerID="3.58" time="21.720213" pos="233.50"/>
+    <StkOpStart stackerID="3.58" time="21.720213" pos="233.50" stockpileID="KCT1.3"/>
+    <StkStart stackerID="3.58" time="21.756501" pos="233.50" stockpileID="KCT1.3"/>
+    <StkOnMove stackerID="3.59" time="22.799806" pos="2370.00"/>
+    <StkComp stackerID="3.58" time="22.827089" pos="233.50" stockpileID="KCT1.3" amount="9100.00"/>
+    <StkOpComp stackerID="3.58" time="22.827089" pos="233.50" stockpileID="KCT1.3" amount="0.00"/>
+    <StkOnMove stackerID="3.58" time="22.827367" pos="233.50"/>
+    <StkOnStopMove stackerID="3.58" time="22.896811" pos="358.50"/>
+    <StkOpStart stackerID="3.58" time="22.896811" pos="358.50" stockpileID="KCT1.4"/>
+    <StkStart stackerID="3.58" time="22.939412" pos="358.50" stockpileID="KCT1.4"/>
+    <StkOnStopMove stackerID="3.59" time="22.960361" pos="2081.00"/>
+    <StkOpStart stackerID="3.59" time="22.960361" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="23.088947" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkComp stackerID="3.58" time="23.951177" pos="358.50" stockpileID="KCT1.4" amount="8600.00"/>
+    <StkOpComp stackerID="3.58" time="23.951177" pos="358.50" stockpileID="KCT1.4" amount="0.00"/>
+    <StkOpStart stackerID="3.58" time="23.951455" pos="358.50" stockpileID="KCT1.4"/>
+    <StkStart stackerID="3.58" time="23.994056" pos="358.50" stockpileID="KCT1.4"/>
+    <StkComp stackerID="3.59" time="24.100712" pos="2081.00" stockpileID="KCT1836.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.59" time="24.100712" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkComp stackerID="3.58" time="25.064644" pos="358.50" stockpileID="KCT1.4" amount="9100.00"/>
+    <StkOpComp stackerID="3.58" time="25.064644" pos="358.50" stockpileID="KCT1.4" amount="0.00"/>
+    <StkOpStart stackerID="3.59" time="25.801359" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="25.929945" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkComp stackerID="3.59" time="26.941709" pos="2081.00" stockpileID="KCT1836.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.59" time="26.941709" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkOpStart stackerID="3.59" time="29.330845" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="29.459431" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkOnMove stackerID="3.58" time="29.491117" pos="358.50"/>
+    <StkOnStopMove stackerID="3.58" time="29.601673" pos="159.50"/>
+    <StkOpStart stackerID="3.58" time="29.601673" pos="159.50" stockpileID="KCT1.2"/>
+    <StkStart stackerID="3.58" time="29.634223" pos="159.50" stockpileID="KCT1.2"/>
+    <StkComp stackerID="3.59" time="30.471196" pos="2081.00" stockpileID="KCT1836.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.59" time="30.471196" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkComp stackerID="3.58" time="30.645988" pos="159.50" stockpileID="KCT1.2" amount="8600.00"/>
+    <StkOpComp stackerID="3.58" time="30.645988" pos="159.50" stockpileID="KCT1.2" amount="0.00"/>
+    <StkOnMove stackerID="3.58" time="31.194121" pos="159.50"/>
+    <StkOnStopMove stackerID="3.58" time="31.304676" pos="358.50"/>
+    <StkOpStart stackerID="3.58" time="31.304676" pos="358.50" stockpileID="KCT1.4"/>
+    <StkStart stackerID="3.58" time="31.347277" pos="358.50" stockpileID="KCT1.4"/>
+    <StkComp stackerID="3.58" time="32.417866" pos="358.50" stockpileID="KCT1.4" amount="9100.00"/>
+    <StkOpComp stackerID="3.58" time="32.417866" pos="358.50" stockpileID="KCT1.4" amount="0.00"/>
+    <StkOnMove stackerID="3.22" time="34.219500" pos="2370.00"/>
+    <StkOnStopMove stackerID="3.22" time="34.276722" pos="2267.00"/>
+    <StkOpStart stackerID="3.22" time="34.276722" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkStart stackerID="3.22" time="34.414702" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkComp stackerID="3.22" time="35.344114" pos="2267.00" stockpileID="KCT3.1" amount="7900.00"/>
+    <StkOpComp stackerID="3.22" time="35.344114" pos="2267.00" stockpileID="KCT3.1" amount="0.00"/>
+    <StkOpStart stackerID="3.22" time="42.601059" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkStart stackerID="3.22" time="42.739039" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkComp stackerID="3.22" time="43.668451" pos="2267.00" stockpileID="KCT3.1" amount="7900.00"/>
+    <StkOpComp stackerID="3.22" time="43.668451" pos="2267.00" stockpileID="KCT3.1" amount="0.00"/>
+    <StkOpStart stackerID="3.58" time="50.387875" pos="358.50" stockpileID="KCT1.4"/>
+    <StkStart stackerID="3.58" time="50.430476" pos="358.50" stockpileID="KCT1.4"/>
+    <StkComp stackerID="3.58" time="51.501064" pos="358.50" stockpileID="KCT1.4" amount="9100.00"/>
+    <StkOpComp stackerID="3.58" time="51.501064" pos="358.50" stockpileID="KCT1.4" amount="0.00"/>
+    <StkOpStart stackerID="3.59" time="57.760285" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="57.888871" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkOnMove stackerID="3.58" time="58.073132" pos="358.50"/>
+    <StkOnStopMove stackerID="3.58" time="58.183688" pos="159.50"/>
+    <StkOpStart stackerID="3.58" time="58.183688" pos="159.50" stockpileID="KCT1.2"/>
+    <StkStart stackerID="3.58" time="58.216238" pos="159.50" stockpileID="KCT1.2"/>
+    <StkComp stackerID="3.59" time="58.900636" pos="2081.00" stockpileID="KCT1836.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.59" time="58.900636" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkComp stackerID="3.58" time="59.286826" pos="159.50" stockpileID="KCT1.2" amount="9100.00"/>
+    <StkOpComp stackerID="3.58" time="59.286826" pos="159.50" stockpileID="KCT1.2" amount="0.00"/>
+    <StkOpStart stackerID="3.58" time="62.491049" pos="159.50" stockpileID="KCT1.2"/>
+    <StkStart stackerID="3.58" time="62.523599" pos="159.50" stockpileID="KCT1.2"/>
+    <StkOpStart stackerID="3.59" time="63.130233" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="63.258819" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkComp stackerID="3.58" time="63.594187" pos="159.50" stockpileID="KCT1.2" amount="9100.00"/>
+    <StkOpComp stackerID="3.58" time="63.594187" pos="159.50" stockpileID="KCT1.2" amount="0.00"/>
+    <StkComp stackerID="3.59" time="64.270583" pos="2081.00" stockpileID="KCT1836.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.59" time="64.270583" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkOpStart stackerID="3.22" time="65.034809" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkStart stackerID="3.22" time="65.172789" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkOpStart stackerID="3.59" time="65.968846" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="66.097432" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkComp stackerID="3.22" time="66.102201" pos="2267.00" stockpileID="KCT3.1" amount="7900.00"/>
+    <StkOpComp stackerID="3.22" time="66.102201" pos="2267.00" stockpileID="KCT3.1" amount="0.00"/>
+    <StkComp stackerID="3.59" time="67.038608" pos="2081.00" stockpileID="KCT1836.1" amount="8000.00"/>
+    <StkOpComp stackerID="3.59" time="67.038608" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkOpStart stackerID="3.59" time="68.401647" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="68.530232" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkComp stackerID="3.59" time="69.471409" pos="2081.00" stockpileID="KCT1836.1" amount="8000.00"/>
+    <StkOpComp stackerID="3.59" time="69.471409" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkOpStart stackerID="3.59" time="71.279055" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="71.407641" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkOpStart stackerID="3.22" time="71.727768" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkStart stackerID="3.22" time="71.865748" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkFail stackerID="3.22" time="71.965166" pos="2267.00" stockpileID="Stockpile ID"/>
+    <StkComp stackerID="3.59" time="72.419405" pos="2081.00" stockpileID="KCT1836.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.59" time="72.419405" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkFix stackerID="3.22" time="72.671028" pos="2267.00" stockpileID="Stockpile ID"/>
+    <StkComp stackerID="3.22" time="73.501021" pos="2267.00" stockpileID="KCT3.1" amount="7900.00"/>
+    <StkOpComp stackerID="3.22" time="73.501021" pos="2267.00" stockpileID="KCT3.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="74.403094" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="74.541074" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="75.482251" pos="135.00" stockpileID="KCT2.1" amount="8000.00"/>
+    <StkOpComp stackerID="3.21" time="75.482251" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="77.888699" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="78.026679" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="79.038444" pos="135.00" stockpileID="KCT2.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.21" time="79.038444" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOpStart stackerID="3.22" time="79.038721" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkStart stackerID="3.22" time="79.176701" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkComp stackerID="3.22" time="80.106113" pos="2267.00" stockpileID="KCT3.1" amount="7900.00"/>
+    <StkOpComp stackerID="3.22" time="80.106113" pos="2267.00" stockpileID="KCT3.1" amount="0.00"/>
+    <StkOpStart stackerID="3.22" time="82.719519" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkStart stackerID="3.22" time="82.857499" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkComp stackerID="3.22" time="83.786911" pos="2267.00" stockpileID="KCT3.1" amount="7900.00"/>
+    <StkOpComp stackerID="3.22" time="83.786911" pos="2267.00" stockpileID="KCT3.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="83.789824" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="83.927804" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="84.186628" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="84.186628" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="84.998020" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="85.136000" pos="135.00" stockpileID="KCT2.1"/>
+    <StkOpStart stackerID="3.59" time="85.158292" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="85.286878" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkComp stackerID="3.21" time="86.147764" pos="135.00" stockpileID="KCT2.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.21" time="86.147764" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkComp stackerID="3.59" time="86.298643" pos="2081.00" stockpileID="KCT1836.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.59" time="86.298643" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkOpStart stackerID="3.22" time="86.360947" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkStart stackerID="3.22" time="86.498926" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkOpStart stackerID="3.59" time="87.290918" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="87.419504" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkComp stackerID="3.22" time="87.428338" pos="2267.00" stockpileID="KCT3.1" amount="7900.00"/>
+    <StkOpComp stackerID="3.22" time="87.428338" pos="2267.00" stockpileID="KCT3.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="88.140005" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="88.277985" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.59" time="88.431268" pos="2081.00" stockpileID="KCT1836.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.59" time="88.431268" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkOnMove stackerID="3.58" time="88.690214" pos="159.50"/>
+    <StkOnStopMove stackerID="3.58" time="88.730769" pos="86.50"/>
+    <StkOpStart stackerID="3.58" time="88.730769" pos="86.50" stockpileID="KCT1.1"/>
+    <StkStart stackerID="3.58" time="88.759633" pos="86.50" stockpileID="KCT1.1"/>
+    <StkComp stackerID="3.21" time="89.289750" pos="135.00" stockpileID="KCT2.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.21" time="89.289750" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkComp stackerID="3.58" time="89.559633" pos="86.50" stockpileID="KCT1.1" amount="6800.00"/>
+    <StkOpComp stackerID="3.58" time="89.559633" pos="86.50" stockpileID="KCT1.1" amount="0.00"/>
+    <StkOpStart stackerID="3.22" time="89.764178" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkStart stackerID="3.22" time="89.902158" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkComp stackerID="3.22" time="90.831570" pos="2267.00" stockpileID="KCT3.1" amount="7900.00"/>
+    <StkOpComp stackerID="3.22" time="90.831570" pos="2267.00" stockpileID="KCT3.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="91.334807" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="91.472787" pos="135.00" stockpileID="KCT2.1"/>
+    <StkFail stackerID="3.21" time="91.703291" pos="135.00" stockpileID="Stockpile ID"/>
+    <StkFix stackerID="3.21" time="92.137078" pos="135.00" stockpileID="Stockpile ID"/>
+    <StkComp stackerID="3.21" time="92.165397" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="92.165397" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="93.816323" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="93.954303" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="94.966068" pos="135.00" stockpileID="KCT2.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.21" time="94.966068" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOpStart stackerID="3.22" time="95.291113" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkStart stackerID="3.22" time="95.429093" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkOpStart stackerID="3.59" time="95.448402" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="95.576988" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkOnMove stackerID="3.58" time="96.167172" pos="86.50"/>
+    <StkComp stackerID="3.22" time="96.358505" pos="2267.00" stockpileID="KCT3.1" amount="7900.00"/>
+    <StkOpComp stackerID="3.22" time="96.358505" pos="2267.00" stockpileID="KCT3.1" amount="0.00"/>
+    <StkComp stackerID="3.59" time="96.518164" pos="2081.00" stockpileID="KCT1836.1" amount="8000.00"/>
+    <StkOpComp stackerID="3.59" time="96.518164" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkOnStopMove stackerID="3.58" time="96.743005" pos="1123.00"/>
+    <StkDoubleHandleOpStart stackerID="3.58" time="96.743005" pos="1123.00" stockpileID="PadC remnant"/>
+    <StkDoubleHandleStart stackerID="3.58" time="96.922424" pos="1123.00" stockpileID="PadC remnant"/>
+    <StkOpStart stackerID="3.59" time="97.347353" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="97.475939" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkDoubleHandleComp stackerID="3.58" time="97.722424" pos="1123.00" stockpileID="PadC remnant" amount="6800.00"/>
+    <StkDoubleHandleOpComp stackerID="3.58" time="97.722424" pos="1123.00" stockpileID="PadC remnant" amount="6800.00"/>
+    <StkComp stackerID="3.59" time="98.487704" pos="2081.00" stockpileID="KCT1836.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.59" time="98.487704" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkOpStart stackerID="3.22" time="100.649205" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkStart stackerID="3.22" time="100.787185" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkComp stackerID="3.22" time="101.716596" pos="2267.00" stockpileID="KCT3.1" amount="7900.00"/>
+    <StkOpComp stackerID="3.22" time="101.716596" pos="2267.00" stockpileID="KCT3.1" amount="0.00"/>
+    <StkOpStart stackerID="3.22" time="104.000124" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkStart stackerID="3.22" time="104.138104" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkComp stackerID="3.22" time="105.079280" pos="2267.00" stockpileID="KCT3.1" amount="8000.00"/>
+    <StkOpComp stackerID="3.22" time="105.079280" pos="2267.00" stockpileID="KCT3.1" amount="0.00"/>
+    <StkDoubleHandleOpStart stackerID="3.58" time="107.630709" pos="1123.00" stockpileID="PadC remnant"/>
+    <StkDoubleHandleStart stackerID="3.58" time="107.813866" pos="1123.00" stockpileID="PadC remnant"/>
+    <StkDoubleHandleComp stackerID="3.58" time="109.366807" pos="1123.00" stockpileID="PadC remnant" amount="13200.00"/>
+    <StkDoubleHandleOpComp stackerID="3.58" time="109.366807" pos="1123.00" stockpileID="PadC remnant" amount="13200.00"/>
+    <StkOpStart stackerID="3.22" time="114.293519" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkStart stackerID="3.22" time="114.431499" pos="2267.00" stockpileID="KCT3.1"/>
+    <StkComp stackerID="3.22" time="115.360911" pos="2267.00" stockpileID="KCT3.1" amount="7900.00"/>
+    <StkOpComp stackerID="3.22" time="115.360911" pos="2267.00" stockpileID="KCT3.1" amount="0.00"/>
+    <StkDoubleHandleOpStart stackerID="3.58" time="118.608218" pos="1123.00" stockpileID="PadC remnant"/>
+    <StkDoubleHandleStart stackerID="3.58" time="118.797687" pos="1123.00" stockpileID="PadC remnant"/>
+    <StkFail stackerID="3.58" time="119.190354" pos="1123.00" stockpileID="Stockpile ID"/>
+    <StkFix stackerID="3.58" time="119.616702" pos="1123.00" stockpileID="Stockpile ID"/>
+    <StkDoubleHandleComp stackerID="3.58" time="120.635800" pos="1123.00" stockpileID="PadC remnant" amount="12000.00"/>
+    <StkDoubleHandleOpComp stackerID="3.58" time="120.635800" pos="1123.00" stockpileID="PadC remnant" amount="12000.00"/>
+    <StkDoubleHandleOpStart stackerID="3.58" time="120.787189" pos="1123.00" stockpileID="PadC remnant"/>
+    <StkDoubleHandleStart stackerID="3.58" time="120.962921" pos="1123.00" stockpileID="PadC remnant"/>
+    <StkDoubleHandleComp stackerID="3.58" time="121.009980" pos="1123.00" stockpileID="PadC remnant" amount="400.00"/>
+    <StkDoubleHandleOpComp stackerID="3.58" time="121.009980" pos="1123.00" stockpileID="PadC remnant" amount="400.00"/>
+    <StkOpStart stackerID="3.59" time="121.072660" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="121.201246" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkComp stackerID="3.59" time="122.213011" pos="2081.00" stockpileID="KCT1836.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.59" time="122.213011" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkOpStart stackerID="3.59" time="123.379831" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkStart stackerID="3.59" time="123.508417" pos="2081.00" stockpileID="KCT1836.1"/>
+    <StkComp stackerID="3.59" time="124.520182" pos="2081.00" stockpileID="KCT1836.1" amount="8600.00"/>
+    <StkOpComp stackerID="3.59" time="124.520182" pos="2081.00" stockpileID="KCT1836.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="130.723012" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="130.860992" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="131.119816" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="131.119816" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="137.507179" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="137.645159" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="137.903983" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="137.903983" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOnMove stackerID="3.22" time="139.596152" pos="2267.00"/>
+    <StkOnStopMove stackerID="3.22" time="140.187263" pos="1203.00"/>
+    <StkDoubleHandleOpStart stackerID="3.22" time="140.187263" pos="1203.00" stockpileID="PadD remnant"/>
+    <StkDoubleHandleStart stackerID="3.22" time="140.476152" pos="1203.00" stockpileID="PadD remnant"/>
+    <StkFail stackerID="3.22" time="141.313891" pos="1203.00" stockpileID="Stockpile ID"/>
+    <StkFix stackerID="3.22" time="142.148930" pos="1203.00" stockpileID="Stockpile ID"/>
+    <StkDoubleHandleComp stackerID="3.22" time="142.370014" pos="1203.00" stockpileID="PadD remnant" amount="9000.00"/>
+    <StkDoubleHandleOpComp stackerID="3.22" time="142.370014" pos="1203.00" stockpileID="PadD remnant" amount="9000.00"/>
+    <StkOpStart stackerID="3.21" time="142.370292" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="142.454534" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="142.713358" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="142.713358" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="143.383807" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="143.468050" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="143.726873" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="143.726873" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="147.596352" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="147.680594" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="147.939418" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="147.939418" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOnMove stackerID="3.59" time="148.572529" pos="2081.00"/>
+    <StkOnStopMove stackerID="3.59" time="149.104751" pos="1123.00"/>
+    <StkDoubleHandleOpStart stackerID="3.59" time="149.104751" pos="1123.00" stockpileID="PadC remnant"/>
+    <StkDoubleHandleStart stackerID="3.59" time="149.381215" pos="1123.00" stockpileID="PadC remnant"/>
+    <StkFail stackerID="3.59" time="149.650912" pos="1123.00" stockpileID="Stockpile ID"/>
+    <StkFix stackerID="3.59" time="150.128354" pos="1123.00" stockpileID="Stockpile ID"/>
+    <StkSyncedFail stackerID="3.59" time="150.219294" pos="1123.00" stockpileID="Stockpile ID"/>
+    <StkOpStart stackerID="3.21" time="150.490559" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="150.574801" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="150.833625" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="150.833625" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkSyncedFix stackerID="3.59" time="151.062657" pos="1123.00" stockpileID="Stockpile ID"/>
+    <StkDoubleHandleComp stackerID="3.59" time="151.231433" pos="1123.00" stockpileID="PadC remnant" amount="4500.00"/>
+    <StkDoubleHandleOpComp stackerID="3.59" time="151.231433" pos="1123.00" stockpileID="PadC remnant" amount="4500.00"/>
+    <StkOpStart stackerID="3.21" time="153.384766" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="153.469008" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="153.727832" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="153.727832" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="155.950009" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="156.034251" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="156.293075" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="156.293075" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="159.313941" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="159.398183" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="159.657007" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="159.657007" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="162.177873" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="162.262115" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="162.520939" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="162.520939" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOpStart stackerID="3.21" time="164.676736" pos="135.00" stockpileID="KCT2.1"/>
+    <StkStart stackerID="3.21" time="164.760979" pos="135.00" stockpileID="KCT2.1"/>
+    <StkComp stackerID="3.21" time="165.019802" pos="135.00" stockpileID="KCT2.1" amount="2200.00"/>
+    <StkOpComp stackerID="3.21" time="165.019802" pos="135.00" stockpileID="KCT2.1" amount="0.00"/>
+    <StkOnMove stackerID="3.21" time="180.678468" pos="135.00"/>
+    <StkOnStopMove stackerID="3.21" time="181.271802" pos="1203.00"/>
+    <StkDoubleHandleOpStart stackerID="3.21" time="181.271802" pos="1203.00" stockpileID="PadD remnant"/>
+    <StkDoubleHandleStart stackerID="3.21" time="181.454024" pos="1203.00" stockpileID="PadD remnant"/>
+    <StkDoubleHandleComp stackerID="3.21" time="181.877553" pos="1203.00" stockpileID="PadD remnant" amount="3600.00"/>
+    <StkDoubleHandleOpComp stackerID="3.21" time="181.877553" pos="1203.00" stockpileID="PadD remnant" amount="3600.00"/>
+    <StkWrapUp stackerID="3.56" time="181.877553" pos="50.00"/>
+    <StkWrapUp stackerID="3.57" time="181.877553" pos="2370.00"/>
+    <StkWrapUp stackerID="3.58" time="181.877553" pos="1123.00"/>
+    <StkWrapUp stackerID="3.59" time="181.877553" pos="1123.00"/>
+    <StkWrapUp stackerID="3.21" time="181.877553" pos="1203.00"/>
+    <StkWrapUp stackerID="3.22" time="181.877553" pos="1203.00"/>
+</events>
