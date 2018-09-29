@@ -34,7 +34,7 @@ ALevelController::ALevelController() : addToSimFunctor(this), updateWindowsFunct
 void ALevelController::BeginPlay()
 {
 	Super::BeginPlay();
-	loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
+	//loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
 }
 
 // Called every frame; not very interesting; see template<typename Each> void AnimateEntitiesFunctor::operator()(const Each& eachDataMap) in the header file
@@ -144,7 +144,7 @@ float ALevelController::getSimEndTime()
 }
 
 void ALevelController::setSimTime(float absoluteTime) {
-	simTime = absoluteTime;
+	simTime = std::max(0.0, std::min(simEndTime, (double)absoluteTime));
 	forEachInTuple(data, updateWindowsFunctor);
 }
 

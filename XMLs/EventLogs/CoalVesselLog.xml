@@ -1,0 +1,54 @@
+<events>
+    <VesselYardSpaceAllocated vesselID="1" time="0.000000"/>
+    <VesselCreated vesselID="1" time="0.000000"/>
+    <VesselYardSpaceAllocated vesselID="1836" time="5.000000"/>
+    <VesselCreated vesselID="1836" time="5.000000"/>
+    <VesselYardSpaceAllocated vesselID="2" time="5.000000"/>
+    <VesselCreated vesselID="2" time="5.000000"/>
+    <VesselYardSpaceAllocated vesselID="3" time="11.000000"/>
+    <VesselCreated vesselID="3" time="11.000000"/>
+    <VesselStartLoading vesselID="1" time="89.640786" terminalID="kct" cargo="0" ballast="135194"/>
+    <VesselStopForDeballasting vesselID="1" time="90.223744"/>
+    <VesselStopForDeballastingComplete vesselID="1" time="92.223744"/>
+    <VesselStopForDeballasting vesselID="1" time="96.166894"/>
+    <VesselStopForDeballastingComplete vesselID="1" time="98.166894"/>
+    <VesselStopForDeballasting vesselID="1" time="101.657376"/>
+    <VesselStopForDeballastingComplete vesselID="1" time="103.657376"/>
+    <VesselStopForDeballasting vesselID="1" time="107.548765"/>
+    <VesselStopForDeballastingComplete vesselID="1" time="109.548765"/>
+    <VesselStopForDeballasting vesselID="1" time="112.953143"/>
+    <VesselStopForDeballastingComplete vesselID="1" time="114.953143"/>
+    <VesselDraftSurveyStart vesselID="1" time="115.792428" terminalID="kct" cargo="122182" ballast="4436"/>
+    <VesselDraftSurveyComplete vesselID="1" time="116.292428" terminalID="kct" cargo="122182" ballast="4436"/>
+    <VesselBallastTankEmpty vesselID="1" time="117.179633"/>
+    <VesselFullyLoaded vesselID="1" time="118.607662" terminalID="kct" cargo="135600" numCargoes="4"/>
+    <VesselStartLoading vesselID="3" time="118.763865" terminalID="kct" cargo="0" ballast="68885"/>
+    <VesselStopForDeballasting vesselID="3" time="124.518429"/>
+    <VesselStartLoading vesselID="1836" time="124.623793" terminalID="kct" cargo="0" ballast="113582"/>
+    <VesselStopForDeballasting vesselID="1836" time="125.689512"/>
+    <VesselStopForDeballastingComplete vesselID="3" time="126.518429"/>
+    <VesselStopForDeballastingComplete vesselID="1836" time="127.689512"/>
+    <VesselStopForDeballasting vesselID="3" time="130.259884"/>
+    <VesselStopForDeballastingComplete vesselID="3" time="132.259884"/>
+    <VesselBallastTankEmpty vesselID="3" time="132.540911"/>
+    <VesselStopForDeballasting vesselID="1836" time="137.690653"/>
+    <VesselDraftSurveyStart vesselID="3" time="138.295369" terminalID="kct" cargo="77452" ballast="0"/>
+    <VesselDraftSurveyComplete vesselID="3" time="138.795369" terminalID="kct" cargo="77452" ballast="0"/>
+    <VesselFullyLoaded vesselID="3" time="139.595874" terminalID="kct" cargo="85900" numCargoes="1"/>
+    <VesselStopForDeballastingComplete vesselID="1836" time="139.690653"/>
+    <VesselDraftSurveyStart vesselID="1836" time="146.981859" terminalID="kct" cargo="102832" ballast="1792"/>
+    <VesselDraftSurveyComplete vesselID="1836" time="147.481859" terminalID="kct" cargo="102832" ballast="1792"/>
+    <VesselBallastTankEmpty vesselID="1836" time="147.840182"/>
+    <VesselFullyLoaded vesselID="1836" time="148.572251" terminalID="kct" cargo="114100" numCargoes="1"/>
+    <VesselStartLoading vesselID="2" time="165.177283" terminalID="kct" cargo="0" ballast="71013"/>
+    <VesselStopForDeballasting vesselID="2" time="165.880744"/>
+    <VesselStopForDeballastingComplete vesselID="2" time="167.880744"/>
+    <VesselStopForDeballasting vesselID="2" time="171.077491"/>
+    <VesselStopForDeballastingComplete vesselID="2" time="173.077491"/>
+    <VesselStopForDeballasting vesselID="2" time="176.328426"/>
+    <VesselStopForDeballastingComplete vesselID="2" time="178.328426"/>
+    <VesselDraftSurveyStart vesselID="2" time="179.377685" terminalID="kct" cargo="64762" ballast="11"/>
+    <VesselDraftSurveyComplete vesselID="2" time="179.877685" terminalID="kct" cargo="64762" ballast="11"/>
+    <VesselBallastTankEmpty vesselID="2" time="179.879802"/>
+    <VesselFullyLoaded vesselID="2" time="180.678190" terminalID="kct" cargo="71800" numCargoes="1"/>
+</events>
