@@ -1,0 +1,838 @@
+<events>
+    <RecMaintStart reclaimerID="4.59" time="0.000556" pos="50.00"/>
+    <RecMaintComp reclaimerID="4.59" time="4.841441" pos="50.00"/>
+    <RecOnMove reclaimerID="4.11" time="241.142163" pos="50.00"/>
+    <RecOnStopMove reclaimerID="4.11" time="241.162440" pos="86.50"/>
+    <RecOpStart reclaimerID="4.11" time="241.223038" pos="86.50" stockpileID="KCT1.1"/>
+    <RecStart reclaimerID="4.11" time="241.223038" pos="86.50" stockpileID="KCT1.1"/>
+    <RecComp reclaimerID="4.11" time="243.575979" pos="86.50" stockpileID="KCT1.1" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.11" time="243.712195" pos="86.50" stockpileID="KCT1.1" amount="20000.00"/>
+    <RecOnMove reclaimerID="4.11" time="243.712473" pos="86.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="243.794139" pos="233.50"/>
+    <RecOpStart reclaimerID="4.11" time="243.794139" pos="233.50" stockpileID="KCT1.3"/>
+    <RecStart reclaimerID="4.11" time="243.794139" pos="233.50" stockpileID="KCT1.3"/>
+    <RecComp reclaimerID="4.11" time="246.264727" pos="233.50" stockpileID="KCT1.3" amount="21000.00"/>
+    <RecOpComp reclaimerID="4.11" time="246.408368" pos="233.50" stockpileID="KCT1.3" amount="21000.00"/>
+    <RecOnMove reclaimerID="4.11" time="246.408645" pos="233.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="246.449757" pos="159.50"/>
+    <RecOpStart reclaimerID="4.11" time="246.449757" pos="159.50" stockpileID="KCT1.2"/>
+    <RecStart reclaimerID="4.11" time="246.449757" pos="159.50" stockpileID="KCT1.2"/>
+    <RecSyncedFail reclaimerID="4.11" time="246.812133" pos="159.50" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.11" time="247.096768" pos="159.50" stockpileID="Stockpile ID"/>
+    <RecSyncedFail reclaimerID="4.11" time="247.453604" pos="159.50" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.11" time="247.470322" pos="159.50" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.11" time="249.104051" pos="159.50" stockpileID="KCT1.2" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.11" time="249.243954" pos="159.50" stockpileID="KCT1.2" amount="20000.00"/>
+    <RecOnMove reclaimerID="4.11" time="249.244232" pos="159.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="249.354787" pos="358.50"/>
+    <RecOpStart reclaimerID="4.11" time="249.354787" pos="358.50" stockpileID="KCT1.4"/>
+    <RecStart reclaimerID="4.11" time="249.354787" pos="358.50" stockpileID="KCT1.4"/>
+    <RecSyncedFail reclaimerID="4.11" time="255.660955" pos="358.50" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.11" time="255.698057" pos="358.50" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.11" time="258.168360" pos="358.50" stockpileID="KCT1.4" amount="74600.00"/>
+    <RecOpComp reclaimerID="4.11" time="258.318313" pos="358.50" stockpileID="KCT1.4" amount="74600.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="258.614146" pos="358.50" stockpileID="KCT1.4"/>
+    <RecStart reclaimerID="4.11" time="258.614146" pos="358.50" stockpileID="KCT1.4"/>
+    <RecComp reclaimerID="4.11" time="259.943558" pos="358.50" stockpileID="KCT1.4" amount="11300.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="260.133003" pos="358.50" stockpileID="KCT1.4" amount="11300.00"/>
+    <RecOnMove reclaimerID="4.11" time="260.133280" pos="358.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="260.243836" pos="159.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="260.243836" pos="159.50" stockpileID="KCT1.2"/>
+    <RecStart reclaimerID="4.11" time="260.243836" pos="159.50" stockpileID="KCT1.2"/>
+    <RecComp reclaimerID="4.11" time="261.102659" pos="159.50" stockpileID="KCT1.2" amount="7300.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="261.282053" pos="159.50" stockpileID="KCT1.2" amount="7300.00"/>
+    <RecOnMove reclaimerID="4.11" time="261.282331" pos="159.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="261.323442" pos="233.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="261.323442" pos="233.50" stockpileID="KCT1.3"/>
+    <RecStart reclaimerID="4.11" time="261.323442" pos="233.50" stockpileID="KCT1.3"/>
+    <RecComp reclaimerID="4.11" time="262.829325" pos="233.50" stockpileID="KCT1.3" amount="12800.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="263.012456" pos="233.50" stockpileID="KCT1.3" amount="12800.00"/>
+    <RecOnMove reclaimerID="4.11" time="263.012734" pos="233.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="263.094400" pos="86.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="263.094400" pos="86.50" stockpileID="KCT1.1"/>
+    <RecStart reclaimerID="4.11" time="263.094400" pos="86.50" stockpileID="KCT1.1"/>
+    <RecComp reclaimerID="4.11" time="263.141459" pos="86.50" stockpileID="KCT1.1" amount="400.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="263.317166" pos="86.50" stockpileID="KCT1.1" amount="400.00"/>
+    <RecOnMove reclaimerID="4.12" time="277.450116" pos="2370.00"/>
+    <RecOnStopMove reclaimerID="4.12" time="277.618171" pos="2067.50"/>
+    <RecOpStart reclaimerID="4.12" time="277.618171" pos="2067.50" stockpileID="KCT4.1"/>
+    <RecStart reclaimerID="4.12" time="277.618171" pos="2067.50" stockpileID="KCT4.1"/>
+    <RecComp reclaimerID="4.12" time="292.735818" pos="2067.50" stockpileID="KCT4.1" amount="128500.00"/>
+    <RecOpComp reclaimerID="4.12" time="292.972225" pos="2067.50" stockpileID="KCT4.1" amount="128500.00"/>
+    <RecOnMove reclaimerID="4.11" time="292.972503" pos="86.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="293.006669" pos="148.00"/>
+    <RecOpStart reclaimerID="4.11" time="293.137997" pos="148.00" stockpileID="KCT3.1"/>
+    <RecStart reclaimerID="4.11" time="293.137997" pos="148.00" stockpileID="KCT3.1"/>
+    <RecDoubleHandleOpStart reclaimerID="4.12" time="293.309169" pos="2067.50" stockpileID="KCT4.1"/>
+    <RecStart reclaimerID="4.12" time="293.309169" pos="2067.50" stockpileID="KCT4.1"/>
+    <RecComp reclaimerID="4.12" time="295.309169" pos="2067.50" stockpileID="KCT4.1" amount="17000.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.12" time="295.584927" pos="2067.50" stockpileID="KCT4.1" amount="17000.00"/>
+    <RecComp reclaimerID="4.11" time="303.243879" pos="148.00" stockpileID="KCT3.1" amount="85900.00"/>
+    <RecOpComp reclaimerID="4.11" time="303.398386" pos="148.00" stockpileID="KCT3.1" amount="85900.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="303.719498" pos="148.00" stockpileID="KCT3.1"/>
+    <RecStart reclaimerID="4.11" time="303.719498" pos="148.00" stockpileID="KCT3.1"/>
+    <RecComp reclaimerID="4.11" time="304.837145" pos="148.00" stockpileID="KCT3.1" amount="9500.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="305.019998" pos="148.00" stockpileID="KCT3.1" amount="9500.00"/>
+    <RecOnMove reclaimerID="4.59" time="319.493152" pos="50.00"/>
+    <RecOnStopMove reclaimerID="4.59" time="319.631485" pos="299.00"/>
+    <RecOpStart reclaimerID="4.59" time="319.639677" pos="299.00" stockpileID="KCT9.1"/>
+    <RecStart reclaimerID="4.59" time="319.639677" pos="299.00" stockpileID="KCT9.1"/>
+    <RecSyncedFail reclaimerID="4.59" time="319.882532" pos="299.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.59" time="320.358651" pos="299.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.59" time="327.809913" pos="299.00" stockpileID="KCT9.1" amount="65400.00"/>
+    <RecOpComp reclaimerID="4.59" time="327.957716" pos="299.00" stockpileID="KCT9.1" amount="65400.00"/>
+    <RecOnMove reclaimerID="4.59" time="327.957994" pos="299.00"/>
+    <RecOnStopMove reclaimerID="4.59" time="328.024661" pos="419.00"/>
+    <RecOpStart reclaimerID="4.59" time="328.024661" pos="419.00" stockpileID="KCT9.2"/>
+    <RecStart reclaimerID="4.59" time="328.024661" pos="419.00" stockpileID="KCT9.2"/>
+    <RecSyncedFail reclaimerID="4.59" time="329.857161" pos="419.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.59" time="329.881609" pos="419.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.59" time="330.966755" pos="419.00" stockpileID="KCT9.2" amount="24800.00"/>
+    <RecOpComp reclaimerID="4.59" time="331.120619" pos="419.00" stockpileID="KCT9.2" amount="24800.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="331.614508" pos="419.00" stockpileID="KCT9.2"/>
+    <RecStart reclaimerID="4.59" time="331.614508" pos="419.00" stockpileID="KCT9.2"/>
+    <RecComp reclaimerID="4.59" time="331.790978" pos="419.00" stockpileID="KCT9.2" amount="1500.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="331.985751" pos="419.00" stockpileID="KCT9.2" amount="1500.00"/>
+    <RecOnMove reclaimerID="4.59" time="331.986029" pos="419.00"/>
+    <RecOnStopMove reclaimerID="4.59" time="332.052695" pos="299.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="332.052695" pos="299.00" stockpileID="KCT9.1"/>
+    <RecStart reclaimerID="4.59" time="332.052695" pos="299.00" stockpileID="KCT9.1"/>
+    <RecComp reclaimerID="4.59" time="332.946813" pos="299.00" stockpileID="KCT9.1" amount="7600.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="333.135525" pos="299.00" stockpileID="KCT9.1" amount="7600.00"/>
+    <RecOnMove reclaimerID="4.59" time="415.574639" pos="299.00"/>
+    <RecOnStopMove reclaimerID="4.59" time="415.639361" pos="182.50"/>
+    <RecOpStart reclaimerID="4.59" time="415.639361" pos="182.50" stockpileID="KCT5.1"/>
+    <RecStart reclaimerID="4.59" time="415.639361" pos="182.50" stockpileID="KCT5.1"/>
+    <RecSyncedFail reclaimerID="4.59" time="417.678497" pos="182.50" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.59" time="417.848791" pos="182.50" stockpileID="Stockpile ID"/>
+    <RecFail reclaimerID="4.59" time="430.009231" pos="182.50" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.59" time="430.193567" pos="182.50" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.59" time="430.441050" pos="182.50" stockpileID="KCT5.1" amount="122800.00"/>
+    <RecOpComp reclaimerID="4.59" time="430.582665" pos="182.50" stockpileID="KCT5.1" amount="122800.00"/>
+    <RecOnMove reclaimerID="4.11" time="430.582943" pos="148.00"/>
+    <RecOnStopMove reclaimerID="4.11" time="430.709054" pos="375.00"/>
+    <RecOpStart reclaimerID="4.11" time="430.710346" pos="375.00" stockpileID="KCT18.1"/>
+    <RecStart reclaimerID="4.11" time="430.710346" pos="375.00" stockpileID="KCT18.1"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="430.886832" pos="182.50" stockpileID="KCT5.1"/>
+    <RecStart reclaimerID="4.59" time="430.886832" pos="182.50" stockpileID="KCT5.1"/>
+    <RecComp reclaimerID="4.59" time="432.263302" pos="182.50" stockpileID="KCT5.1" amount="11700.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="432.444489" pos="182.50" stockpileID="KCT5.1" amount="11700.00"/>
+    <RecComp reclaimerID="4.11" time="444.745640" pos="375.00" stockpileID="KCT18.1" amount="119300.00"/>
+    <RecOpComp reclaimerID="4.11" time="444.908559" pos="375.00" stockpileID="KCT18.1" amount="119300.00"/>
+    <RecOnMove reclaimerID="4.11" time="444.908837" pos="375.00"/>
+    <RecOnStopMove reclaimerID="4.11" time="445.090504" pos="702.00"/>
+    <RecOpStart reclaimerID="4.11" time="445.090504" pos="702.00" stockpileID="KCT7.3"/>
+    <RecStart reclaimerID="4.11" time="445.090504" pos="702.00" stockpileID="KCT7.3"/>
+    <RecComp reclaimerID="4.11" time="447.902269" pos="702.00" stockpileID="KCT7.3" amount="23900.00"/>
+    <RecOpComp reclaimerID="4.11" time="448.069069" pos="702.00" stockpileID="KCT7.3" amount="23900.00"/>
+    <RecOnMove reclaimerID="4.11" time="448.069346" pos="702.00"/>
+    <RecOnStopMove reclaimerID="4.11" time="448.131291" pos="590.50"/>
+    <RecOpStart reclaimerID="4.11" time="448.131291" pos="590.50" stockpileID="KCT7.2"/>
+    <RecStart reclaimerID="4.11" time="448.131291" pos="590.50" stockpileID="KCT7.2"/>
+    <RecComp reclaimerID="4.11" time="454.872467" pos="590.50" stockpileID="KCT7.2" amount="57300.00"/>
+    <RecOpComp reclaimerID="4.11" time="455.033636" pos="590.50" stockpileID="KCT7.2" amount="57300.00"/>
+    <RecOnMove reclaimerID="4.11" time="455.033914" pos="590.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="455.093914" pos="482.50"/>
+    <RecOpStart reclaimerID="4.11" time="455.093914" pos="482.50" stockpileID="KCT7.1"/>
+    <RecStart reclaimerID="4.11" time="455.093914" pos="482.50" stockpileID="KCT7.1"/>
+    <RecComp reclaimerID="4.11" time="457.446855" pos="482.50" stockpileID="KCT7.1" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.11" time="457.602569" pos="482.50" stockpileID="KCT7.1" amount="20000.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="458.096458" pos="482.50" stockpileID="KCT7.1"/>
+    <RecStart reclaimerID="4.11" time="458.096458" pos="482.50" stockpileID="KCT7.1"/>
+    <RecComp reclaimerID="4.11" time="459.919987" pos="482.50" stockpileID="KCT7.1" amount="15500.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="460.115694" pos="482.50" stockpileID="KCT7.1" amount="15500.00"/>
+    <RecOnMove reclaimerID="4.11" time="460.115972" pos="482.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="460.175972" pos="590.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="460.175972" pos="590.50" stockpileID="KCT7.2"/>
+    <RecStart reclaimerID="4.11" time="460.175972" pos="590.50" stockpileID="KCT7.2"/>
+    <RecComp reclaimerID="4.11" time="460.905384" pos="590.50" stockpileID="KCT7.2" amount="6200.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="461.106546" pos="590.50" stockpileID="KCT7.2" amount="6200.00"/>
+    <RecOnMove reclaimerID="4.11" time="461.107101" pos="590.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="461.226823" pos="375.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="461.427934" pos="375.00" stockpileID="KCT18.1"/>
+    <RecStart reclaimerID="4.11" time="461.427934" pos="375.00" stockpileID="KCT18.1"/>
+    <RecComp reclaimerID="4.11" time="461.792640" pos="375.00" stockpileID="KCT18.1" amount="3100.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="461.986959" pos="375.00" stockpileID="KCT18.1" amount="3100.00"/>
+    <RecOnMove reclaimerID="4.11" time="462.411149" pos="375.00"/>
+    <RecOnStopMove reclaimerID="4.11" time="462.592816" pos="702.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="462.592816" pos="702.00" stockpileID="KCT7.3"/>
+    <RecStart reclaimerID="4.11" time="462.592816" pos="702.00" stockpileID="KCT7.3"/>
+    <RecComp reclaimerID="4.11" time="462.792816" pos="702.00" stockpileID="KCT7.3" amount="1700.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="462.999609" pos="702.00" stockpileID="KCT7.3" amount="1700.00"/>
+    <RecOnMove reclaimerID="4.59" time="487.560008" pos="182.50"/>
+    <RecOnStopMove reclaimerID="4.59" time="487.586397" pos="135.00"/>
+    <RecOpStart reclaimerID="4.59" time="487.586397" pos="135.00" stockpileID="KCT2.1"/>
+    <RecStart reclaimerID="4.59" time="487.586397" pos="135.00" stockpileID="KCT2.1"/>
+    <RecSyncedFail reclaimerID="4.59" time="493.125969" pos="135.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.59" time="493.262191" pos="135.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFail reclaimerID="4.59" time="494.646194" pos="135.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.59" time="494.685565" pos="135.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFail reclaimerID="4.59" time="495.806301" pos="135.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.59" time="496.080223" pos="135.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.59" time="496.482970" pos="135.00" stockpileID="KCT2.1" amount="71800.00"/>
+    <RecOpComp reclaimerID="4.59" time="496.621519" pos="135.00" stockpileID="KCT2.1" amount="71800.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="496.910964" pos="135.00" stockpileID="KCT2.1"/>
+    <RecStart reclaimerID="4.59" time="496.910964" pos="135.00" stockpileID="KCT2.1"/>
+    <RecComp reclaimerID="4.59" time="497.405082" pos="135.00" stockpileID="KCT2.1" amount="4200.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="497.585511" pos="135.00" stockpileID="KCT2.1" amount="4200.00"/>
+    <RecOnMove reclaimerID="4.59" time="500.193005" pos="135.00"/>
+    <RecOnStopMove reclaimerID="4.59" time="500.340505" pos="400.50"/>
+    <RecOpStart reclaimerID="4.59" time="500.340505" pos="400.50" stockpileID="KCT12.1"/>
+    <RecStart reclaimerID="4.59" time="500.340505" pos="400.50" stockpileID="KCT12.1"/>
+    <RecOnMove reclaimerID="4.11" time="503.347156" pos="702.00"/>
+    <RecOnStopMove reclaimerID="4.11" time="503.438545" pos="866.50"/>
+    <RecOpStart reclaimerID="4.11" time="503.438545" pos="866.50" stockpileID="KCT25.1"/>
+    <RecStart reclaimerID="4.11" time="503.438545" pos="866.50" stockpileID="KCT25.1"/>
+    <RecFail reclaimerID="4.11" time="508.725087" pos="866.50" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.59" time="508.846388" pos="400.50" stockpileID="KCT12.1" amount="72300.00"/>
+    <RecFix reclaimerID="4.11" time="508.852724" pos="866.50" stockpileID="Stockpile ID"/>
+    <RecOpComp reclaimerID="4.59" time="509.012179" pos="400.50" stockpileID="KCT12.1" amount="72300.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="509.188012" pos="400.50" stockpileID="KCT12.1"/>
+    <RecStart reclaimerID="4.59" time="509.188012" pos="400.50" stockpileID="KCT12.1"/>
+    <RecComp reclaimerID="4.59" time="510.282130" pos="400.50" stockpileID="KCT12.1" amount="9300.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="510.474327" pos="400.50" stockpileID="KCT12.1" amount="9300.00"/>
+    <RecComp reclaimerID="4.11" time="516.507358" pos="866.50" stockpileID="KCT25.1" amount="110000.00"/>
+    <RecOpComp reclaimerID="4.11" time="516.710390" pos="866.50" stockpileID="KCT25.1" amount="110000.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="516.897335" pos="866.50" stockpileID="KCT25.1"/>
+    <RecStart reclaimerID="4.11" time="516.897335" pos="866.50" stockpileID="KCT25.1"/>
+    <RecComp reclaimerID="4.11" time="517.991452" pos="866.50" stockpileID="KCT25.1" amount="9300.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="518.210594" pos="866.50" stockpileID="KCT25.1" amount="9300.00"/>
+    <RecOnMove reclaimerID="4.60" time="524.210365" pos="2370.00"/>
+    <RecOnStopMove reclaimerID="4.60" time="524.383976" pos="2057.50"/>
+    <RecOpStart reclaimerID="4.60" time="524.383976" pos="2057.50" stockpileID="KCT6.2"/>
+    <RecStart reclaimerID="4.60" time="524.383976" pos="2057.50" stockpileID="KCT6.2"/>
+    <RecComp reclaimerID="4.60" time="532.525153" pos="2057.50" stockpileID="KCT6.2" amount="69200.00"/>
+    <RecOpComp reclaimerID="4.60" time="532.761841" pos="2057.50" stockpileID="KCT6.2" amount="69200.00"/>
+    <RecOnMove reclaimerID="4.60" time="532.762118" pos="2057.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="532.832674" pos="1930.50"/>
+    <RecOpStart reclaimerID="4.60" time="532.832674" pos="1930.50" stockpileID="KCT6.1"/>
+    <RecStart reclaimerID="4.60" time="532.832674" pos="1930.50" stockpileID="KCT6.1"/>
+    <RecComp reclaimerID="4.60" time="536.173851" pos="1930.50" stockpileID="KCT6.1" amount="28400.00"/>
+    <RecOpComp reclaimerID="4.60" time="536.404124" pos="1930.50" stockpileID="KCT6.1" amount="28400.00"/>
+    <RecOnMove reclaimerID="4.60" time="536.404402" pos="1930.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="536.545791" pos="2185.00"/>
+    <RecOpStart reclaimerID="4.60" time="536.545791" pos="2185.00" stockpileID="KCT6.3"/>
+    <RecStart reclaimerID="4.60" time="536.545791" pos="2185.00" stockpileID="KCT6.3"/>
+    <RecComp reclaimerID="4.60" time="539.981085" pos="2185.00" stockpileID="KCT6.3" amount="29200.00"/>
+    <RecOpComp reclaimerID="4.60" time="540.224212" pos="2185.00" stockpileID="KCT6.3" amount="29200.00"/>
+    <RecOnMove reclaimerID="4.60" time="540.224490" pos="2185.00"/>
+    <RecOnStopMove reclaimerID="4.60" time="540.401712" pos="1866.00"/>
+    <RecOpStart reclaimerID="4.60" time="540.401712" pos="1866.00" stockpileID="KCT10.3"/>
+    <RecStart reclaimerID="4.60" time="540.401712" pos="1866.00" stockpileID="KCT10.3"/>
+    <RecFail reclaimerID="4.60" time="542.678729" pos="1866.00" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.60" time="543.847248" pos="1866.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.60" time="552.581995" pos="1866.00" stockpileID="KCT10.3" amount="93600.00"/>
+    <RecOpComp reclaimerID="4.60" time="552.823208" pos="1866.00" stockpileID="KCT10.3" amount="93600.00"/>
+    <RecOnMove reclaimerID="4.60" time="552.823486" pos="1866.00"/>
+    <RecOnStopMove reclaimerID="4.60" time="552.943208" pos="1650.50"/>
+    <RecOpStart reclaimerID="4.60" time="552.943208" pos="1650.50" stockpileID="KCT10.1"/>
+    <RecStart reclaimerID="4.60" time="552.943208" pos="1650.50" stockpileID="KCT10.1"/>
+    <RecComp reclaimerID="4.60" time="555.296149" pos="1650.50" stockpileID="KCT10.1" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.60" time="555.526478" pos="1650.50" stockpileID="KCT10.1" amount="20000.00"/>
+    <RecOnMove reclaimerID="4.60" time="555.526756" pos="1650.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="555.567589" pos="1724.00"/>
+    <RecOpStart reclaimerID="4.60" time="555.567589" pos="1724.00" stockpileID="KCT10.2"/>
+    <RecStart reclaimerID="4.60" time="555.567589" pos="1724.00" stockpileID="KCT10.2"/>
+    <RecComp reclaimerID="4.60" time="557.979354" pos="1724.00" stockpileID="KCT10.2" amount="20500.00"/>
+    <RecOpComp reclaimerID="4.60" time="558.213395" pos="1724.00" stockpileID="KCT10.2" amount="20500.00"/>
+    <RecOnMove reclaimerID="4.59" time="558.213672" pos="400.50"/>
+    <RecOnMove reclaimerID="4.60" time="558.213950" pos="1724.00"/>
+    <RecOnStopMove reclaimerID="4.59" time="558.318117" pos="588.50"/>
+    <RecOpStart reclaimerID="4.59" time="558.365036" pos="588.50" stockpileID="KCT21.1"/>
+    <RecStart reclaimerID="4.59" time="558.365036" pos="588.50" stockpileID="KCT21.1"/>
+    <RecOnStopMove reclaimerID="4.60" time="558.470061" pos="2185.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="558.470061" pos="2185.00" stockpileID="KCT6.3"/>
+    <RecStart reclaimerID="4.60" time="558.470061" pos="2185.00" stockpileID="KCT6.3"/>
+    <RecComp reclaimerID="4.60" time="559.340650" pos="2185.00" stockpileID="KCT6.3" amount="7400.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="559.622973" pos="2185.00" stockpileID="KCT6.3" amount="7400.00"/>
+    <RecOnMove reclaimerID="4.60" time="559.623251" pos="2185.00"/>
+    <RecOnStopMove reclaimerID="4.60" time="559.879362" pos="1724.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="559.879362" pos="1724.00" stockpileID="KCT10.2"/>
+    <RecStart reclaimerID="4.60" time="559.879362" pos="1724.00" stockpileID="KCT10.2"/>
+    <RecComp reclaimerID="4.60" time="560.502891" pos="1724.00" stockpileID="KCT10.2" amount="5300.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="560.764583" pos="1724.00" stockpileID="KCT10.2" amount="5300.00"/>
+    <RecOnMove reclaimerID="4.60" time="560.765139" pos="1724.00"/>
+    <RecFail reclaimerID="4.59" time="560.840545" pos="588.50" stockpileID="Stockpile ID"/>
+    <RecOnStopMove reclaimerID="4.60" time="560.879861" pos="1930.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="560.879861" pos="1930.50" stockpileID="KCT6.1"/>
+    <RecStart reclaimerID="4.60" time="560.879861" pos="1930.50" stockpileID="KCT6.1"/>
+    <RecFix reclaimerID="4.59" time="560.979839" pos="588.50" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.60" time="561.126920" pos="1930.50" stockpileID="KCT6.1" amount="2100.00"/>
+    <RecFail reclaimerID="4.59" time="561.130638" pos="588.50" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.59" time="561.213065" pos="588.50" stockpileID="Stockpile ID"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="561.396389" pos="1930.50" stockpileID="KCT6.1" amount="2100.00"/>
+    <RecOnMove reclaimerID="4.60" time="561.396667" pos="1930.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="561.467223" pos="2057.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="561.467223" pos="2057.50" stockpileID="KCT6.2"/>
+    <RecStart reclaimerID="4.60" time="561.467223" pos="2057.50" stockpileID="KCT6.2"/>
+    <RecComp reclaimerID="4.60" time="562.561340" pos="2057.50" stockpileID="KCT6.2" amount="9300.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="562.837224" pos="2057.50" stockpileID="KCT6.2" amount="9300.00"/>
+    <RecOnMove reclaimerID="4.60" time="562.837502" pos="2057.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="563.063613" pos="1650.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="563.293057" pos="1650.50" stockpileID="KCT10.1"/>
+    <RecStart reclaimerID="4.60" time="563.293057" pos="1650.50" stockpileID="KCT10.1"/>
+    <RecComp reclaimerID="4.60" time="564.093057" pos="1650.50" stockpileID="KCT10.1" amount="6800.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="564.351037" pos="1650.50" stockpileID="KCT10.1" amount="6800.00"/>
+    <RecOnMove reclaimerID="4.60" time="564.351315" pos="1650.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="564.471037" pos="1866.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="564.471037" pos="1866.00" stockpileID="KCT10.3"/>
+    <RecStart reclaimerID="4.60" time="564.471037" pos="1866.00" stockpileID="KCT10.3"/>
+    <RecComp reclaimerID="4.60" time="565.282802" pos="1866.00" stockpileID="KCT10.3" amount="6900.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="565.551666" pos="1866.00" stockpileID="KCT10.3" amount="6900.00"/>
+    <RecOnMove reclaimerID="4.60" time="569.007363" pos="1866.00"/>
+    <RecOnStopMove reclaimerID="4.60" time="569.085974" pos="2007.50"/>
+    <RecOpStart reclaimerID="4.60" time="569.085974" pos="2007.50" stockpileID="KCT8.1"/>
+    <RecStart reclaimerID="4.60" time="569.085974" pos="2007.50" stockpileID="KCT8.1"/>
+    <RecComp reclaimerID="4.59" time="569.245581" pos="588.50" stockpileID="KCT21.1" amount="90600.00"/>
+    <RecOpComp reclaimerID="4.59" time="569.408513" pos="588.50" stockpileID="KCT21.1" amount="90600.00"/>
+    <RecOnMove reclaimerID="4.12" time="569.408791" pos="2067.50"/>
+    <RecOnStopMove reclaimerID="4.12" time="569.489902" pos="2213.50"/>
+    <RecOpStart reclaimerID="4.12" time="569.563438" pos="2213.50" stockpileID="KCT13.2"/>
+    <RecStart reclaimerID="4.12" time="569.563438" pos="2213.50" stockpileID="KCT13.2"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="569.822124" pos="588.50" stockpileID="KCT21.1"/>
+    <RecStart reclaimerID="4.59" time="569.822124" pos="588.50" stockpileID="KCT21.1"/>
+    <RecFail reclaimerID="4.59" time="570.991398" pos="588.50" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.59" time="571.288709" pos="588.50" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.59" time="571.342965" pos="588.50" stockpileID="KCT21.1" amount="10400.00"/>
+    <RecComp reclaimerID="4.60" time="571.438915" pos="2007.50" stockpileID="KCT8.1" amount="20000.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="571.544657" pos="588.50" stockpileID="KCT21.1" amount="10400.00"/>
+    <RecOpComp reclaimerID="4.60" time="571.701530" pos="2007.50" stockpileID="KCT8.1" amount="20000.00"/>
+    <RecOnMove reclaimerID="4.60" time="571.701807" pos="2007.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="571.782641" pos="2153.00"/>
+    <RecOpStart reclaimerID="4.60" time="571.782641" pos="2153.00" stockpileID="KCT8.2"/>
+    <RecStart reclaimerID="4.60" time="571.782641" pos="2153.00" stockpileID="KCT8.2"/>
+    <RecComp reclaimerID="4.12" time="573.269320" pos="2213.50" stockpileID="KCT13.2" amount="31500.00"/>
+    <RecOpComp reclaimerID="4.12" time="573.527372" pos="2213.50" stockpileID="KCT13.2" amount="31500.00"/>
+    <RecOnMove reclaimerID="4.12" time="573.527650" pos="2213.50"/>
+    <RecOnStopMove reclaimerID="4.12" time="573.574316" pos="2129.50"/>
+    <RecOpStart reclaimerID="4.12" time="573.574316" pos="2129.50" stockpileID="KCT13.1"/>
+    <RecStart reclaimerID="4.12" time="573.574316" pos="2129.50" stockpileID="KCT13.1"/>
+    <RecComp reclaimerID="4.12" time="575.927258" pos="2129.50" stockpileID="KCT13.1" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.12" time="576.181067" pos="2129.50" stockpileID="KCT13.1" amount="20000.00"/>
+    <RecOnMove reclaimerID="4.12" time="576.181344" pos="2129.50"/>
+    <RecOnStopMove reclaimerID="4.12" time="576.283289" pos="2313.00"/>
+    <RecOpStart reclaimerID="4.12" time="576.283289" pos="2313.00" stockpileID="KCT13.3"/>
+    <RecStart reclaimerID="4.12" time="576.283289" pos="2313.00" stockpileID="KCT13.3"/>
+    <RecFail reclaimerID="4.60" time="579.734533" pos="2153.00" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.60" time="579.832845" pos="2153.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.12" time="580.589171" pos="2313.00" stockpileID="KCT13.3" amount="36600.00"/>
+    <RecOpComp reclaimerID="4.12" time="580.852248" pos="2313.00" stockpileID="KCT13.3" amount="36600.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.12" time="581.414192" pos="2313.00" stockpileID="KCT13.3"/>
+    <RecStart reclaimerID="4.12" time="581.414192" pos="2313.00" stockpileID="KCT13.3"/>
+    <RecComp reclaimerID="4.12" time="582.425957" pos="2313.00" stockpileID="KCT13.3" amount="8600.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.12" time="582.717144" pos="2313.00" stockpileID="KCT13.3" amount="8600.00"/>
+    <RecOnMove reclaimerID="4.12" time="582.717422" pos="2313.00"/>
+    <RecOnStopMove reclaimerID="4.12" time="582.819366" pos="2129.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.12" time="582.819366" pos="2129.50" stockpileID="KCT13.1"/>
+    <RecStart reclaimerID="4.12" time="582.819366" pos="2129.50" stockpileID="KCT13.1"/>
+    <RecComp reclaimerID="4.12" time="583.278190" pos="2129.50" stockpileID="KCT13.1" amount="3900.00"/>
+    <RecComp reclaimerID="4.60" time="583.363306" pos="2153.00" stockpileID="KCT8.2" amount="97600.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.12" time="583.560109" pos="2129.50" stockpileID="KCT13.1" amount="3900.00"/>
+    <RecOpComp reclaimerID="4.60" time="583.633269" pos="2153.00" stockpileID="KCT8.2" amount="97600.00"/>
+    <RecOnMove reclaimerID="4.60" time="583.633547" pos="2153.00"/>
+    <RecOnStopMove reclaimerID="4.60" time="583.714380" pos="2298.50"/>
+    <RecOpStart reclaimerID="4.60" time="583.714380" pos="2298.50" stockpileID="KCT8.3"/>
+    <RecStart reclaimerID="4.60" time="583.714380" pos="2298.50" stockpileID="KCT8.3"/>
+    <RecComp reclaimerID="4.60" time="586.067321" pos="2298.50" stockpileID="KCT8.3" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.60" time="586.344633" pos="2298.50" stockpileID="KCT8.3" amount="20000.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="586.800466" pos="2298.50" stockpileID="KCT8.3"/>
+    <RecStart reclaimerID="4.60" time="586.800466" pos="2298.50" stockpileID="KCT8.3"/>
+    <RecComp reclaimerID="4.60" time="587.106348" pos="2298.50" stockpileID="KCT8.3" amount="2600.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="587.397056" pos="2298.50" stockpileID="KCT8.3" amount="2600.00"/>
+    <RecOnMove reclaimerID="4.60" time="587.397333" pos="2298.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="587.478167" pos="2153.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="587.478167" pos="2153.00" stockpileID="KCT8.2"/>
+    <RecStart reclaimerID="4.60" time="587.478167" pos="2153.00" stockpileID="KCT8.2"/>
+    <RecComp reclaimerID="4.60" time="587.678167" pos="2153.00" stockpileID="KCT8.2" amount="1700.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="587.961525" pos="2153.00" stockpileID="KCT8.2" amount="1700.00"/>
+    <RecOnMove reclaimerID="4.60" time="587.961803" pos="2153.00"/>
+    <RecOnStopMove reclaimerID="4.60" time="588.042636" pos="2007.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="588.042636" pos="2007.50" stockpileID="KCT8.1"/>
+    <RecStart reclaimerID="4.60" time="588.042636" pos="2007.50" stockpileID="KCT8.1"/>
+    <RecOnMove reclaimerID="4.12" time="588.720064" pos="2129.50"/>
+    <RecOnStopMove reclaimerID="4.12" time="588.766731" pos="2213.50"/>
+    <RecComp reclaimerID="4.60" time="588.783813" pos="2007.50" stockpileID="KCT8.1" amount="6300.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.12" time="588.963120" pos="2213.50" stockpileID="KCT13.2"/>
+    <RecStart reclaimerID="4.12" time="588.963120" pos="2213.50" stockpileID="KCT13.2"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="589.059823" pos="2007.50" stockpileID="KCT8.1" amount="6300.00"/>
+    <RecComp reclaimerID="4.12" time="589.304296" pos="2213.50" stockpileID="KCT13.2" amount="2900.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.12" time="589.590458" pos="2213.50" stockpileID="KCT13.2" amount="2900.00"/>
+    <RecOnMove reclaimerID="4.11" time="654.733628" pos="866.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="655.142239" pos="131.00"/>
+    <RecOpStart reclaimerID="4.11" time="655.142239" pos="131.00" stockpileID="KCT30.1"/>
+    <RecStart reclaimerID="4.11" time="655.142239" pos="131.00" stockpileID="KCT30.1"/>
+    <RecSyncedFail reclaimerID="4.11" time="657.495123" pos="131.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.11" time="657.934156" pos="131.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.11" time="663.522448" pos="131.00" stockpileID="KCT30.1" amount="67500.00"/>
+    <RecOpComp reclaimerID="4.11" time="663.661238" pos="131.00" stockpileID="KCT30.1" amount="67500.00"/>
+    <RecOnMove reclaimerID="4.11" time="663.661516" pos="131.00"/>
+    <RecOnStopMove reclaimerID="4.11" time="663.751238" pos="292.50"/>
+    <RecOpStart reclaimerID="4.11" time="663.751238" pos="292.50" stockpileID="KCT30.2"/>
+    <RecStart reclaimerID="4.11" time="663.751238" pos="292.50" stockpileID="KCT30.2"/>
+    <RecComp reclaimerID="4.11" time="671.633591" pos="292.50" stockpileID="KCT30.2" amount="67000.00"/>
+    <RecOpComp reclaimerID="4.11" time="671.780538" pos="292.50" stockpileID="KCT30.2" amount="67000.00"/>
+    <RecOnMove reclaimerID="4.59" time="671.780816" pos="588.50"/>
+    <RecOnStopMove reclaimerID="4.59" time="671.824427" pos="667.00"/>
+    <RecOpStart reclaimerID="4.59" time="671.906988" pos="667.00" stockpileID="KCT11.2"/>
+    <RecStart reclaimerID="4.59" time="671.906988" pos="667.00" stockpileID="KCT11.2"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="671.939982" pos="292.50" stockpileID="KCT30.2"/>
+    <RecStart reclaimerID="4.11" time="671.939982" pos="292.50" stockpileID="KCT30.2"/>
+    <RecSyncedFail reclaimerID="4.11" time="672.109277" pos="292.50" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.11" time="672.494600" pos="292.50" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.11" time="673.101777" pos="292.50" stockpileID="KCT30.2" amount="6600.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="673.291928" pos="292.50" stockpileID="KCT30.2" amount="6600.00"/>
+    <RecOnMove reclaimerID="4.11" time="673.292206" pos="292.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="673.381928" pos="131.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="673.381928" pos="131.00" stockpileID="KCT30.1"/>
+    <RecStart reclaimerID="4.11" time="673.381928" pos="131.00" stockpileID="KCT30.1"/>
+    <RecComp reclaimerID="4.11" time="673.852516" pos="131.00" stockpileID="KCT30.1" amount="4000.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="674.034511" pos="131.00" stockpileID="KCT30.1" amount="4000.00"/>
+    <RecFail reclaimerID="4.59" time="678.824841" pos="667.00" stockpileID="Stockpile ID"/>
+    <RecOnMove reclaimerID="4.12" time="678.837304" pos="2213.50"/>
+    <RecOnStopMove reclaimerID="4.12" time="679.030915" pos="1865.00"/>
+    <RecOpStart reclaimerID="4.12" time="679.030915" pos="1865.00" stockpileID="KCT15.2"/>
+    <RecStart reclaimerID="4.12" time="679.030915" pos="1865.00" stockpileID="KCT15.2"/>
+    <RecFix reclaimerID="4.59" time="679.068883" pos="667.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.59" time="684.386324" pos="667.00" stockpileID="KCT11.2" amount="104000.00"/>
+    <RecOpComp reclaimerID="4.59" time="684.562644" pos="667.00" stockpileID="KCT11.2" amount="104000.00"/>
+    <RecOnMove reclaimerID="4.59" time="684.562922" pos="667.00"/>
+    <RecOnStopMove reclaimerID="4.59" time="684.652367" pos="506.00"/>
+    <RecOpStart reclaimerID="4.59" time="684.652367" pos="506.00" stockpileID="KCT11.1"/>
+    <RecStart reclaimerID="4.59" time="684.652367" pos="506.00" stockpileID="KCT11.1"/>
+    <RecComp reclaimerID="4.12" time="684.972092" pos="1865.00" stockpileID="KCT15.2" amount="50500.00"/>
+    <RecOpComp reclaimerID="4.12" time="685.223054" pos="1865.00" stockpileID="KCT15.2" amount="50500.00"/>
+    <RecOnMove reclaimerID="4.12" time="685.223331" pos="1865.00"/>
+    <RecOnStopMove reclaimerID="4.12" time="685.303609" pos="1720.50"/>
+    <RecOpStart reclaimerID="4.12" time="685.303609" pos="1720.50" stockpileID="KCT15.1"/>
+    <RecStart reclaimerID="4.12" time="685.303609" pos="1720.50" stockpileID="KCT15.1"/>
+    <RecComp reclaimerID="4.59" time="688.181778" pos="506.00" stockpileID="KCT11.1" amount="30000.00"/>
+    <RecOpComp reclaimerID="4.59" time="688.349968" pos="506.00" stockpileID="KCT11.1" amount="30000.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="688.797114" pos="506.00" stockpileID="KCT11.1"/>
+    <RecStart reclaimerID="4.59" time="688.797114" pos="506.00" stockpileID="KCT11.1"/>
+    <RecComp reclaimerID="4.59" time="689.314761" pos="506.00" stockpileID="KCT11.1" amount="4400.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="689.513927" pos="506.00" stockpileID="KCT11.1" amount="4400.00"/>
+    <RecOnMove reclaimerID="4.59" time="689.514205" pos="506.00"/>
+    <RecOnStopMove reclaimerID="4.59" time="689.603650" pos="667.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="689.603650" pos="667.00" stockpileID="KCT11.2"/>
+    <RecStart reclaimerID="4.59" time="689.603650" pos="667.00" stockpileID="KCT11.2"/>
+    <RecComp reclaimerID="4.59" time="690.486002" pos="667.00" stockpileID="KCT11.2" amount="7500.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="690.693300" pos="667.00" stockpileID="KCT11.2" amount="7500.00"/>
+    <RecComp reclaimerID="4.12" time="693.068315" pos="1720.50" stockpileID="KCT15.1" amount="66000.00"/>
+    <RecOpComp reclaimerID="4.12" time="693.311979" pos="1720.50" stockpileID="KCT15.1" amount="66000.00"/>
+    <RecOnMove reclaimerID="4.60" time="693.312257" pos="2007.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="693.467535" pos="1728.00"/>
+    <RecOpStart reclaimerID="4.60" time="693.467535" pos="1728.00" stockpileID="KCT17.1"/>
+    <RecStart reclaimerID="4.60" time="693.467535" pos="1728.00" stockpileID="KCT17.1"/>
+    <RecDoubleHandleOpStart reclaimerID="4.12" time="693.843368" pos="1720.50" stockpileID="KCT15.1"/>
+    <RecStart reclaimerID="4.12" time="693.843368" pos="1720.50" stockpileID="KCT15.1"/>
+    <RecSyncedFail reclaimerID="4.60" time="694.458947" pos="1728.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.60" time="694.576403" pos="1728.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.12" time="695.737486" pos="1720.50" stockpileID="KCT15.1" amount="16100.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.12" time="695.995718" pos="1720.50" stockpileID="KCT15.1" amount="16100.00"/>
+    <RecOnMove reclaimerID="4.12" time="697.737894" pos="1720.50"/>
+    <RecOnStopMove reclaimerID="4.12" time="697.818172" pos="1865.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.12" time="698.268728" pos="1865.00" stockpileID="KCT15.2"/>
+    <RecStart reclaimerID="4.12" time="698.268728" pos="1865.00" stockpileID="KCT15.2"/>
+    <RecComp reclaimerID="4.12" time="699.751081" pos="1865.00" stockpileID="KCT15.2" amount="12600.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.12" time="700.016611" pos="1865.00" stockpileID="KCT15.2" amount="12600.00"/>
+    <RecSyncedFail reclaimerID="4.60" time="706.146698" pos="1728.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.60" time="706.603508" pos="1728.00" stockpileID="Stockpile ID"/>
+    <RecFail reclaimerID="4.60" time="707.180575" pos="1728.00" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.60" time="707.215735" pos="1728.00" stockpileID="Stockpile ID"/>
+    <RecFail reclaimerID="4.60" time="710.635585" pos="1728.00" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.60" time="710.930771" pos="1728.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.60" time="712.078029" pos="1728.00" stockpileID="KCT17.1" amount="150500.00"/>
+    <RecOpComp reclaimerID="4.60" time="712.333930" pos="1728.00" stockpileID="KCT17.1" amount="150500.00"/>
+    <RecOnMove reclaimerID="4.60" time="712.334208" pos="1728.00"/>
+    <RecOnStopMove reclaimerID="4.60" time="712.453097" pos="1514.00"/>
+    <RecOpStart reclaimerID="4.60" time="712.456902" pos="1514.00" stockpileID="KCT16.1"/>
+    <RecStart reclaimerID="4.60" time="712.456902" pos="1514.00" stockpileID="KCT16.1"/>
+    <RecComp reclaimerID="4.60" time="722.798079" pos="1514.00" stockpileID="KCT16.1" amount="87900.00"/>
+    <RecOpComp reclaimerID="4.60" time="723.007033" pos="1514.00" stockpileID="KCT16.1" amount="87900.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="723.374533" pos="1514.00" stockpileID="KCT16.1"/>
+    <RecStart reclaimerID="4.60" time="723.374533" pos="1514.00" stockpileID="KCT16.1"/>
+    <RecFail reclaimerID="4.60" time="724.159233" pos="1514.00" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.60" time="724.985969" pos="1514.00" stockpileID="Stockpile ID"/>
+    <RecFail reclaimerID="4.60" time="725.061514" pos="1514.00" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.60" time="725.185960" pos="1514.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.60" time="725.890422" pos="1514.00" stockpileID="KCT16.1" amount="13300.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="726.141508" pos="1514.00" stockpileID="KCT16.1" amount="13300.00"/>
+    <RecOnMove reclaimerID="4.60" time="726.141786" pos="1514.00"/>
+    <RecOnStopMove reclaimerID="4.60" time="726.260675" pos="1728.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="726.349008" pos="1728.00" stockpileID="KCT17.1"/>
+    <RecStart reclaimerID="4.60" time="726.349008" pos="1728.00" stockpileID="KCT17.1"/>
+    <RecComp reclaimerID="4.60" time="727.560773" pos="1728.00" stockpileID="KCT17.1" amount="10300.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="727.820015" pos="1728.00" stockpileID="KCT17.1" amount="10300.00"/>
+    <RecOnMove reclaimerID="4.12" time="747.099774" pos="1865.00"/>
+    <RecOnStopMove reclaimerID="4.12" time="747.218107" pos="2078.00"/>
+    <RecOpStart reclaimerID="4.12" time="747.231924" pos="2078.00" stockpileID="KCT35.1"/>
+    <RecStart reclaimerID="4.12" time="747.231924" pos="2078.00" stockpileID="KCT35.1"/>
+    <RecOnMove reclaimerID="4.59" time="747.319029" pos="667.00"/>
+    <RecOnStopMove reclaimerID="4.59" time="747.518751" pos="307.50"/>
+    <RecOpStart reclaimerID="4.59" time="747.518751" pos="307.50" stockpileID="KCT34.1"/>
+    <RecStart reclaimerID="4.59" time="747.518751" pos="307.50" stockpileID="KCT34.1"/>
+    <RecSyncedFail reclaimerID="4.12" time="749.478621" pos="2078.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.12" time="749.702743" pos="2078.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFail reclaimerID="4.12" time="754.003872" pos="2078.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.12" time="754.169178" pos="2078.00" stockpileID="Stockpile ID"/>
+    <RecFail reclaimerID="4.59" time="755.018707" pos="307.50" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.59" time="755.300780" pos="307.50" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.59" time="756.565530" pos="307.50" stockpileID="KCT34.1" amount="74500.00"/>
+    <RecOpComp reclaimerID="4.59" time="756.749033" pos="307.50" stockpileID="KCT34.1" amount="74500.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="757.238199" pos="307.50" stockpileID="KCT34.1"/>
+    <RecStart reclaimerID="4.59" time="757.238199" pos="307.50" stockpileID="KCT34.1"/>
+    <RecComp reclaimerID="4.59" time="757.755846" pos="307.50" stockpileID="KCT34.1" amount="4400.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="757.944988" pos="307.50" stockpileID="KCT34.1" amount="4400.00"/>
+    <RecComp reclaimerID="4.12" time="761.374294" pos="2078.00" stockpileID="KCT35.1" amount="116900.00"/>
+    <RecOpComp reclaimerID="4.12" time="761.623747" pos="2078.00" stockpileID="KCT35.1" amount="116900.00"/>
+    <RecOnMove reclaimerID="4.12" time="761.624025" pos="2078.00"/>
+    <RecOnStopMove reclaimerID="4.12" time="761.673747" pos="1988.50"/>
+    <RecOpStart reclaimerID="4.12" time="761.758422" pos="1988.50" stockpileID="KCT19.2"/>
+    <RecStart reclaimerID="4.12" time="761.758422" pos="1988.50" stockpileID="KCT19.2"/>
+    <RecComp reclaimerID="4.12" time="772.711363" pos="1988.50" stockpileID="KCT19.2" amount="93100.00"/>
+    <RecFail reclaimerID="4.12" time="772.792569" pos="1988.50" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.12" time="773.269262" pos="1988.50" stockpileID="Stockpile ID"/>
+    <RecOpComp reclaimerID="4.12" time="773.444240" pos="1988.50" stockpileID="KCT19.2" amount="93100.00"/>
+    <RecOnMove reclaimerID="4.12" time="773.444518" pos="1988.50"/>
+    <RecOnStopMove reclaimerID="4.12" time="773.532573" pos="1830.00"/>
+    <RecOpStart reclaimerID="4.12" time="773.532573" pos="1830.00" stockpileID="KCT19.1"/>
+    <RecStart reclaimerID="4.12" time="773.532573" pos="1830.00" stockpileID="KCT19.1"/>
+    <RecComp reclaimerID="4.12" time="778.085515" pos="1830.00" stockpileID="KCT19.1" amount="38700.00"/>
+    <RecOpComp reclaimerID="4.12" time="778.333693" pos="1830.00" stockpileID="KCT19.1" amount="38700.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.12" time="778.577026" pos="1830.00" stockpileID="KCT19.1"/>
+    <RecStart reclaimerID="4.12" time="778.577026" pos="1830.00" stockpileID="KCT19.1"/>
+    <RecComp reclaimerID="4.12" time="778.694673" pos="1830.00" stockpileID="KCT19.1" amount="1000.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.12" time="778.961466" pos="1830.00" stockpileID="KCT19.1" amount="1000.00"/>
+    <RecOnMove reclaimerID="4.12" time="778.961744" pos="1830.00"/>
+    <RecOnStopMove reclaimerID="4.12" time="779.049800" pos="1988.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.12" time="779.049800" pos="1988.50" stockpileID="KCT19.2"/>
+    <RecStart reclaimerID="4.12" time="779.049800" pos="1988.50" stockpileID="KCT19.2"/>
+    <RecComp reclaimerID="4.12" time="781.496859" pos="1988.50" stockpileID="KCT19.2" amount="20800.00"/>
+    <RecFail reclaimerID="4.12" time="781.599004" pos="1988.50" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.12" time="781.899856" pos="1988.50" stockpileID="Stockpile ID"/>
+    <RecDoubleHandleOpComp reclaimerID="4.12" time="782.072508" pos="1988.50" stockpileID="KCT19.2" amount="20800.00"/>
+    <RecOnMove reclaimerID="4.12" time="782.073063" pos="1988.50"/>
+    <RecOnStopMove reclaimerID="4.12" time="782.122785" pos="2078.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.12" time="782.293341" pos="2078.00" stockpileID="KCT35.1"/>
+    <RecStart reclaimerID="4.12" time="782.293341" pos="2078.00" stockpileID="KCT35.1"/>
+    <RecComp reclaimerID="4.12" time="783.246282" pos="2078.00" stockpileID="KCT35.1" amount="8100.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.12" time="783.522570" pos="2078.00" stockpileID="KCT35.1" amount="8100.00"/>
+    <RecOnMove reclaimerID="4.12" time="797.887155" pos="2078.00"/>
+    <RecOnMove reclaimerID="4.60" time="797.975038" pos="1728.00"/>
+    <RecOnStopMove reclaimerID="4.60" time="798.091149" pos="1519.00"/>
+    <RecOpStart reclaimerID="4.60" time="798.113849" pos="1519.00" stockpileID="KCT22.3"/>
+    <RecStart reclaimerID="4.60" time="798.113849" pos="1519.00" stockpileID="KCT22.3"/>
+    <RecOnStopMove reclaimerID="4.12" time="798.130488" pos="1640.00"/>
+    <RecOpStart reclaimerID="4.12" time="798.130488" pos="1640.00" stockpileID="KCT24.1"/>
+    <RecStart reclaimerID="4.12" time="798.130488" pos="1640.00" stockpileID="KCT24.1"/>
+    <RecComp reclaimerID="4.60" time="802.313849" pos="1519.00" stockpileID="KCT22.3" amount="35700.00"/>
+    <RecOpComp reclaimerID="4.60" time="802.521440" pos="1519.00" stockpileID="KCT22.3" amount="35700.00"/>
+    <RecOnMove reclaimerID="4.60" time="802.521718" pos="1519.00"/>
+    <RecOnStopMove reclaimerID="4.60" time="802.570329" pos="1431.50"/>
+    <RecOpStart reclaimerID="4.60" time="802.570329" pos="1431.50" stockpileID="KCT22.2"/>
+    <RecStart reclaimerID="4.60" time="802.570329" pos="1431.50" stockpileID="KCT22.2"/>
+    <RecComp reclaimerID="4.60" time="804.923270" pos="1431.50" stockpileID="KCT22.2" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.60" time="805.126442" pos="1431.50" stockpileID="KCT22.2" amount="20000.00"/>
+    <RecOnMove reclaimerID="4.60" time="805.126720" pos="1431.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="805.172831" pos="1348.50"/>
+    <RecOpStart reclaimerID="4.60" time="805.172831" pos="1348.50" stockpileID="KCT22.1"/>
+    <RecStart reclaimerID="4.60" time="805.172831" pos="1348.50" stockpileID="KCT22.1"/>
+    <RecFail reclaimerID="4.60" time="807.510823" pos="1348.50" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.60" time="807.826864" pos="1348.50" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.60" time="809.065344" pos="1348.50" stockpileID="KCT22.1" amount="30400.00"/>
+    <RecOpComp reclaimerID="4.60" time="809.264324" pos="1348.50" stockpileID="KCT22.1" amount="30400.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="809.797379" pos="1348.50" stockpileID="KCT22.1"/>
+    <RecStart reclaimerID="4.60" time="809.797379" pos="1348.50" stockpileID="KCT22.1"/>
+    <RecComp reclaimerID="4.60" time="810.479732" pos="1348.50" stockpileID="KCT22.1" amount="5800.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="810.719808" pos="1348.50" stockpileID="KCT22.1" amount="5800.00"/>
+    <RecOnMove reclaimerID="4.60" time="810.720086" pos="1348.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="810.766197" pos="1431.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="810.766197" pos="1431.50" stockpileID="KCT22.2"/>
+    <RecStart reclaimerID="4.60" time="810.766197" pos="1431.50" stockpileID="KCT22.2"/>
+    <RecComp reclaimerID="4.60" time="811.213256" pos="1431.50" stockpileID="KCT22.2" amount="3800.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="811.457524" pos="1431.50" stockpileID="KCT22.2" amount="3800.00"/>
+    <RecOnMove reclaimerID="4.60" time="811.457801" pos="1431.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="811.506412" pos="1519.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="811.506412" pos="1519.00" stockpileID="KCT22.3"/>
+    <RecStart reclaimerID="4.60" time="811.506412" pos="1519.00" stockpileID="KCT22.3"/>
+    <RecComp reclaimerID="4.60" time="812.318177" pos="1519.00" stockpileID="KCT22.3" amount="6900.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="812.566864" pos="1519.00" stockpileID="KCT22.3" amount="6900.00"/>
+    <RecComp reclaimerID="4.12" time="813.048135" pos="1640.00" stockpileID="KCT24.1" amount="126800.00"/>
+    <RecOpComp reclaimerID="4.12" time="813.298553" pos="1640.00" stockpileID="KCT24.1" amount="126800.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.12" time="813.298831" pos="1640.00" stockpileID="KCT24.1"/>
+    <RecStart reclaimerID="4.12" time="813.298831" pos="1640.00" stockpileID="KCT24.1"/>
+    <RecComp reclaimerID="4.12" time="815.581184" pos="1640.00" stockpileID="KCT24.1" amount="19400.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.12" time="815.785173" pos="1640.00" stockpileID="KCT24.1" amount="19400.00"/>
+    <RecOnMove reclaimerID="4.11" time="828.553591" pos="131.00"/>
+    <RecOnStopMove reclaimerID="4.11" time="828.828036" pos="625.00"/>
+    <RecOpStart reclaimerID="4.11" time="828.828036" pos="625.00" stockpileID="KCT20.1"/>
+    <RecStart reclaimerID="4.11" time="828.828036" pos="625.00" stockpileID="KCT20.1"/>
+    <RecSyncedFail reclaimerID="4.11" time="834.669980" pos="625.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.11" time="835.129474" pos="625.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.11" time="842.334589" pos="625.00" stockpileID="KCT20.1" amount="110900.00"/>
+    <RecOpComp reclaimerID="4.11" time="842.498196" pos="625.00" stockpileID="KCT20.1" amount="110900.00"/>
+    <RecOnMove reclaimerID="4.11" time="842.498473" pos="625.00"/>
+    <RecOnStopMove reclaimerID="4.11" time="842.634584" pos="870.00"/>
+    <RecOpStart reclaimerID="4.11" time="842.634584" pos="870.00" stockpileID="KCT27.1"/>
+    <RecStart reclaimerID="4.11" time="842.634584" pos="870.00" stockpileID="KCT27.1"/>
+    <RecOnMove reclaimerID="4.59" time="845.773135" pos="307.50"/>
+    <RecOnStopMove reclaimerID="4.59" time="845.909802" pos="553.50"/>
+    <RecOpStart reclaimerID="4.59" time="845.926468" pos="553.50" stockpileID="KCT39.1"/>
+    <RecStart reclaimerID="4.59" time="845.926468" pos="553.50" stockpileID="KCT39.1"/>
+    <RecSyncedFail reclaimerID="4.59" time="846.193818" pos="553.50" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.59" time="846.255339" pos="553.50" stockpileID="Stockpile ID"/>
+    <RecFail reclaimerID="4.11" time="846.868966" pos="870.00" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.11" time="847.610581" pos="870.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFail reclaimerID="4.11" time="853.258345" pos="870.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.11" time="853.321774" pos="870.00" stockpileID="Stockpile ID"/>
+    <RecFail reclaimerID="4.11" time="854.899815" pos="870.00" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.11" time="855.771642" pos="870.00" stockpileID="Stockpile ID"/>
+    <RecFail reclaimerID="4.59" time="857.195072" pos="553.50" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.59" time="857.196157" pos="553.50" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.11" time="858.240867" pos="870.00" stockpileID="KCT27.1" amount="118400.00"/>
+    <RecOpComp reclaimerID="4.11" time="858.426757" pos="870.00" stockpileID="KCT27.1" amount="118400.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="858.595646" pos="870.00" stockpileID="KCT27.1"/>
+    <RecStart reclaimerID="4.11" time="858.595646" pos="870.00" stockpileID="KCT27.1"/>
+    <RecSyncedFail reclaimerID="4.11" time="858.642549" pos="870.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.11" time="859.071405" pos="870.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.59" time="859.600838" pos="553.50" stockpileID="KCT39.1" amount="115700.00"/>
+    <RecOpComp reclaimerID="4.59" time="859.783453" pos="553.50" stockpileID="KCT39.1" amount="115700.00"/>
+    <RecComp reclaimerID="4.11" time="859.918619" pos="870.00" stockpileID="KCT27.1" amount="7600.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="860.133896" pos="870.00" stockpileID="KCT27.1" amount="7600.00"/>
+    <RecOnMove reclaimerID="4.11" time="860.134174" pos="870.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="860.141396" pos="553.50" stockpileID="KCT39.1"/>
+    <RecStart reclaimerID="4.59" time="860.141396" pos="553.50" stockpileID="KCT39.1"/>
+    <RecOnStopMove reclaimerID="4.11" time="860.534730" pos="149.00"/>
+    <RecOpStart reclaimerID="4.11" time="860.534730" pos="149.00" stockpileID="KCT38.1"/>
+    <RecStart reclaimerID="4.11" time="860.534730" pos="149.00" stockpileID="KCT38.1"/>
+    <RecComp reclaimerID="4.59" time="860.929632" pos="553.50" stockpileID="KCT39.1" amount="6700.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="861.129556" pos="553.50" stockpileID="KCT39.1" amount="6700.00"/>
+    <RecFail reclaimerID="4.11" time="863.268296" pos="149.00" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.11" time="863.588945" pos="149.00" stockpileID="Stockpile ID"/>
+    <RecOnMove reclaimerID="4.60" time="870.220932" pos="1519.00"/>
+    <RecOnStopMove reclaimerID="4.60" time="870.403987" pos="1848.50"/>
+    <RecOpStart reclaimerID="4.60" time="870.403987" pos="1848.50" stockpileID="KCT37.2"/>
+    <RecStart reclaimerID="4.60" time="870.403987" pos="1848.50" stockpileID="KCT37.2"/>
+    <RecComp reclaimerID="4.11" time="871.102438" pos="149.00" stockpileID="KCT38.1" amount="87100.00"/>
+    <RecOpComp reclaimerID="4.11" time="871.276339" pos="149.00" stockpileID="KCT38.1" amount="87100.00"/>
+    <RecOnMove reclaimerID="4.11" time="871.276616" pos="149.00"/>
+    <RecOnStopMove reclaimerID="4.11" time="871.393561" pos="359.50"/>
+    <RecOpStart reclaimerID="4.11" time="871.393561" pos="359.50" stockpileID="KCT38.3"/>
+    <RecStart reclaimerID="4.11" time="871.393561" pos="359.50" stockpileID="KCT38.3"/>
+    <RecComp reclaimerID="4.11" time="873.746502" pos="359.50" stockpileID="KCT38.3" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.11" time="873.931034" pos="359.50" stockpileID="KCT38.3" amount="20000.00"/>
+    <RecOnMove reclaimerID="4.11" time="873.931312" pos="359.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="873.971867" pos="432.50"/>
+    <RecOpStart reclaimerID="4.11" time="873.971867" pos="432.50" stockpileID="KCT38.4"/>
+    <RecStart reclaimerID="4.11" time="873.971867" pos="432.50" stockpileID="KCT38.4"/>
+    <RecComp reclaimerID="4.11" time="876.324809" pos="432.50" stockpileID="KCT38.4" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.11" time="876.513028" pos="432.50" stockpileID="KCT38.4" amount="20000.00"/>
+    <RecOnMove reclaimerID="4.11" time="876.513305" pos="432.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="876.594972" pos="285.50"/>
+    <RecOpStart reclaimerID="4.11" time="876.594972" pos="285.50" stockpileID="KCT38.2"/>
+    <RecStart reclaimerID="4.11" time="876.594972" pos="285.50" stockpileID="KCT38.2"/>
+    <RecComp reclaimerID="4.11" time="879.089090" pos="285.50" stockpileID="KCT38.2" amount="21200.00"/>
+    <RecOpComp reclaimerID="4.11" time="879.269884" pos="285.50" stockpileID="KCT38.2" amount="21200.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="879.503496" pos="285.50" stockpileID="KCT38.2"/>
+    <RecStart reclaimerID="4.11" time="879.503496" pos="285.50" stockpileID="KCT38.2"/>
+    <RecComp reclaimerID="4.11" time="880.185848" pos="285.50" stockpileID="KCT38.2" amount="5800.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="880.375646" pos="285.50" stockpileID="KCT38.2" amount="5800.00"/>
+    <RecOnMove reclaimerID="4.11" time="881.613717" pos="285.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="881.695384" pos="432.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="881.847050" pos="432.50" stockpileID="KCT38.4"/>
+    <RecStart reclaimerID="4.11" time="881.847050" pos="432.50" stockpileID="KCT38.4"/>
+    <RecComp reclaimerID="4.11" time="882.294109" pos="432.50" stockpileID="KCT38.4" amount="3800.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="882.491331" pos="432.50" stockpileID="KCT38.4" amount="3800.00"/>
+    <RecOnMove reclaimerID="4.11" time="882.491609" pos="432.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="882.532165" pos="359.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="882.532165" pos="359.50" stockpileID="KCT38.3"/>
+    <RecStart reclaimerID="4.11" time="882.532165" pos="359.50" stockpileID="KCT38.3"/>
+    <RecFail reclaimerID="4.11" time="882.812855" pos="359.50" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.11" time="882.939175" pos="359.50" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.11" time="883.270249" pos="359.50" stockpileID="KCT38.3" amount="5200.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="883.463784" pos="359.50" stockpileID="KCT38.3" amount="5200.00"/>
+    <RecOnMove reclaimerID="4.11" time="883.464062" pos="359.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="883.581006" pos="149.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="883.581006" pos="149.00" stockpileID="KCT38.1"/>
+    <RecStart reclaimerID="4.11" time="883.581006" pos="149.00" stockpileID="KCT38.1"/>
+    <RecComp reclaimerID="4.60" time="883.615752" pos="1848.50" stockpileID="KCT37.2" amount="112300.00"/>
+    <RecOpComp reclaimerID="4.60" time="883.841765" pos="1848.50" stockpileID="KCT37.2" amount="112300.00"/>
+    <RecOnMove reclaimerID="4.60" time="883.842042" pos="1848.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="883.930376" pos="1689.50"/>
+    <RecOpStart reclaimerID="4.60" time="883.930376" pos="1689.50" stockpileID="KCT37.1"/>
+    <RecStart reclaimerID="4.60" time="883.930376" pos="1689.50" stockpileID="KCT37.1"/>
+    <RecComp reclaimerID="4.11" time="884.228065" pos="149.00" stockpileID="KCT38.1" amount="5500.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="884.410969" pos="149.00" stockpileID="KCT38.1" amount="5500.00"/>
+    <RecOnMove reclaimerID="4.11" time="884.411247" pos="149.00"/>
+    <RecOnStopMove reclaimerID="4.11" time="884.675691" pos="625.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="884.675691" pos="625.00" stockpileID="KCT20.1"/>
+    <RecStart reclaimerID="4.11" time="884.675691" pos="625.00" stockpileID="KCT20.1"/>
+    <RecFail reclaimerID="4.60" time="886.084091" pos="1689.50" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.60" time="886.116572" pos="1689.50" stockpileID="Stockpile ID"/>
+    <RecOnMove reclaimerID="4.12" time="886.275011" pos="1640.00"/>
+    <RecComp reclaimerID="4.60" time="886.315798" pos="1689.50" stockpileID="KCT37.1" amount="20000.00"/>
+    <RecOnStopMove reclaimerID="4.12" time="886.348345" pos="1508.00"/>
+    <RecOpStart reclaimerID="4.12" time="886.348345" pos="1508.00" stockpileID="KCT28.1"/>
+    <RecStart reclaimerID="4.12" time="886.348345" pos="1508.00" stockpileID="KCT28.1"/>
+    <RecOpComp reclaimerID="4.60" time="886.533780" pos="1689.50" stockpileID="KCT37.1" amount="20000.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="886.901280" pos="1689.50" stockpileID="KCT37.1"/>
+    <RecStart reclaimerID="4.60" time="886.901280" pos="1689.50" stockpileID="KCT37.1"/>
+    <RecComp reclaimerID="4.60" time="887.360104" pos="1689.50" stockpileID="KCT37.1" amount="3900.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="887.620053" pos="1689.50" stockpileID="KCT37.1" amount="3900.00"/>
+    <RecOnMove reclaimerID="4.60" time="887.620331" pos="1689.50"/>
+    <RecComp reclaimerID="4.11" time="887.640397" pos="625.00" stockpileID="KCT20.1" amount="25200.00"/>
+    <RecOnStopMove reclaimerID="4.60" time="887.708664" pos="1848.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="887.708664" pos="1848.50" stockpileID="KCT37.2"/>
+    <RecStart reclaimerID="4.60" time="887.708664" pos="1848.50" stockpileID="KCT37.2"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="887.847342" pos="625.00" stockpileID="KCT20.1" amount="25200.00"/>
+    <RecOnMove reclaimerID="4.11" time="887.847620" pos="625.00"/>
+    <RecOnStopMove reclaimerID="4.11" time="887.935120" pos="782.50"/>
+    <RecOpStart reclaimerID="4.11" time="887.994311" pos="782.50" stockpileID="KCT33.1"/>
+    <RecStart reclaimerID="4.11" time="887.994311" pos="782.50" stockpileID="KCT33.1"/>
+    <RecComp reclaimerID="4.11" time="890.347252" pos="782.50" stockpileID="KCT33.1" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.11" time="890.532762" pos="782.50" stockpileID="KCT33.1" amount="20000.00"/>
+    <RecOnMove reclaimerID="4.11" time="890.533040" pos="782.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="890.607484" pos="916.50"/>
+    <RecOpStart reclaimerID="4.11" time="890.607484" pos="916.50" stockpileID="KCT33.2"/>
+    <RecStart reclaimerID="4.11" time="890.607484" pos="916.50" stockpileID="KCT33.2"/>
+    <RecComp reclaimerID="4.60" time="890.943958" pos="1848.50" stockpileID="KCT37.2" amount="27500.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="891.211938" pos="1848.50" stockpileID="KCT37.2" amount="27500.00"/>
+    <RecFail reclaimerID="4.11" time="897.760237" pos="916.50" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.11" time="897.961043" pos="916.50" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.11" time="900.831819" pos="916.50" stockpileID="KCT33.2" amount="85200.00"/>
+    <RecComp reclaimerID="4.12" time="900.889521" pos="1508.00" stockpileID="KCT28.1" amount="123600.00"/>
+    <RecOpComp reclaimerID="4.11" time="901.024097" pos="916.50" stockpileID="KCT33.2" amount="85200.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="901.024374" pos="916.50" stockpileID="KCT33.2"/>
+    <RecStart reclaimerID="4.11" time="901.024374" pos="916.50" stockpileID="KCT33.2"/>
+    <RecOpComp reclaimerID="4.12" time="901.126526" pos="1508.00" stockpileID="KCT28.1" amount="123600.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.12" time="901.666526" pos="1508.00" stockpileID="KCT28.1"/>
+    <RecStart reclaimerID="4.12" time="901.666526" pos="1508.00" stockpileID="KCT28.1"/>
+    <RecComp reclaimerID="4.11" time="901.812610" pos="916.50" stockpileID="KCT33.2" amount="6700.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="902.034276" pos="916.50" stockpileID="KCT33.2" amount="6700.00"/>
+    <RecOnMove reclaimerID="4.11" time="902.034554" pos="916.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="902.108999" pos="782.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="902.108999" pos="782.50" stockpileID="KCT33.1"/>
+    <RecStart reclaimerID="4.11" time="902.108999" pos="782.50" stockpileID="KCT33.1"/>
+    <RecComp reclaimerID="4.11" time="902.650175" pos="782.50" stockpileID="KCT33.1" amount="4600.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="902.865074" pos="782.50" stockpileID="KCT33.1" amount="4600.00"/>
+    <RecComp reclaimerID="4.12" time="904.548878" pos="1508.00" stockpileID="KCT28.1" amount="24500.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.12" time="904.796378" pos="1508.00" stockpileID="KCT28.1" amount="24500.00"/>
+    <RecOnMove reclaimerID="4.59" time="909.824566" pos="553.50"/>
+    <RecOnStopMove reclaimerID="4.59" time="909.972066" pos="819.00"/>
+    <RecOpStart reclaimerID="4.59" time="909.972066" pos="819.00" stockpileID="KCT26.1"/>
+    <RecStart reclaimerID="4.59" time="909.972066" pos="819.00" stockpileID="KCT26.1"/>
+    <RecSyncedFail reclaimerID="4.59" time="915.877101" pos="819.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.59" time="916.142589" pos="819.00" stockpileID="Stockpile ID"/>
+    <RecOnMove reclaimerID="4.60" time="920.094961" pos="1848.50"/>
+    <RecOnStopMove reclaimerID="4.60" time="920.231350" pos="2094.00"/>
+    <RecOpStart reclaimerID="4.60" time="920.231350" pos="2094.00" stockpileID="KCT36.1"/>
+    <RecStart reclaimerID="4.60" time="920.231350" pos="2094.00" stockpileID="KCT36.1"/>
+    <RecFail reclaimerID="4.59" time="922.621887" pos="819.00" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.59" time="922.782588" pos="819.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.59" time="924.327667" pos="819.00" stockpileID="KCT26.1" amount="118400.00"/>
+    <RecOpComp reclaimerID="4.59" time="924.502685" pos="819.00" stockpileID="KCT26.1" amount="118400.00"/>
+    <RecOnMove reclaimerID="4.11" time="924.502963" pos="782.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="924.725741" pos="381.50"/>
+    <RecOpStart reclaimerID="4.11" time="924.725741" pos="381.50" stockpileID="KCT29.3"/>
+    <RecStart reclaimerID="4.11" time="924.725741" pos="381.50" stockpileID="KCT29.3"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="924.921852" pos="819.00" stockpileID="KCT26.1"/>
+    <RecStart reclaimerID="4.59" time="924.921852" pos="819.00" stockpileID="KCT26.1"/>
+    <RecComp reclaimerID="4.59" time="926.027734" pos="819.00" stockpileID="KCT26.1" amount="9400.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="926.241068" pos="819.00" stockpileID="KCT26.1" amount="9400.00"/>
+    <RecComp reclaimerID="4.11" time="927.078682" pos="381.50" stockpileID="KCT29.3" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.11" time="927.243914" pos="381.50" stockpileID="KCT29.3" amount="20000.00"/>
+    <RecOnMove reclaimerID="4.11" time="927.244192" pos="381.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="927.408081" pos="86.50"/>
+    <RecOpStart reclaimerID="4.11" time="927.408081" pos="86.50" stockpileID="KCT29.1"/>
+    <RecStart reclaimerID="4.11" time="927.408081" pos="86.50" stockpileID="KCT29.1"/>
+    <RecFail reclaimerID="4.11" time="928.048681" pos="86.50" stockpileID="Stockpile ID"/>
+    <RecFail reclaimerID="4.60" time="928.505874" pos="2094.00" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.11" time="928.767760" pos="86.50" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.60" time="928.852920" pos="2094.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.11" time="930.480101" pos="86.50" stockpileID="KCT29.1" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.11" time="930.630434" pos="86.50" stockpileID="KCT29.1" amount="20000.00"/>
+    <RecOnMove reclaimerID="4.11" time="930.630712" pos="86.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="930.712656" pos="234.00"/>
+    <RecOpStart reclaimerID="4.11" time="930.712656" pos="234.00" stockpileID="KCT29.2"/>
+    <RecStart reclaimerID="4.11" time="930.712656" pos="234.00" stockpileID="KCT29.2"/>
+    <RecComp reclaimerID="4.60" time="935.484277" pos="2094.00" stockpileID="KCT36.1" amount="126700.00"/>
+    <RecOpComp reclaimerID="4.60" time="935.749472" pos="2094.00" stockpileID="KCT36.1" amount="126700.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.60" time="936.282527" pos="2094.00" stockpileID="KCT36.1"/>
+    <RecStart reclaimerID="4.60" time="936.282527" pos="2094.00" stockpileID="KCT36.1"/>
+    <RecFail reclaimerID="4.60" time="936.491280" pos="2094.00" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.60" time="936.541946" pos="2094.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.60" time="937.203782" pos="2094.00" stockpileID="KCT36.1" amount="7400.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.60" time="937.481509" pos="2094.00" stockpileID="KCT36.1" amount="7400.00"/>
+    <RecComp reclaimerID="4.11" time="942.489127" pos="234.00" stockpileID="KCT29.2" amount="100100.00"/>
+    <RecOpComp reclaimerID="4.11" time="942.646910" pos="234.00" stockpileID="KCT29.2" amount="100100.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="943.778806" pos="234.00" stockpileID="KCT29.2"/>
+    <RecStart reclaimerID="4.11" time="943.778806" pos="234.00" stockpileID="KCT29.2"/>
+    <RecComp reclaimerID="4.11" time="944.825865" pos="234.00" stockpileID="KCT29.2" amount="8900.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="945.009022" pos="234.00" stockpileID="KCT29.2" amount="8900.00"/>
+    <RecOnMove reclaimerID="4.11" time="945.009299" pos="234.00"/>
+    <RecOnStopMove reclaimerID="4.11" time="945.091244" pos="86.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="945.091244" pos="86.50" stockpileID="KCT29.1"/>
+    <RecStart reclaimerID="4.11" time="945.091244" pos="86.50" stockpileID="KCT29.1"/>
+    <RecComp reclaimerID="4.11" time="945.891244" pos="86.50" stockpileID="KCT29.1" amount="6800.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="946.066951" pos="86.50" stockpileID="KCT29.1" amount="6800.00"/>
+    <RecOnMove reclaimerID="4.11" time="947.523307" pos="86.50"/>
+    <RecOnStopMove reclaimerID="4.11" time="947.687196" pos="381.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.11" time="948.014140" pos="381.50" stockpileID="KCT29.3"/>
+    <RecStart reclaimerID="4.11" time="948.014140" pos="381.50" stockpileID="KCT29.3"/>
+    <RecComp reclaimerID="4.11" time="948.590611" pos="381.50" stockpileID="KCT29.3" amount="4900.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.11" time="948.781217" pos="381.50" stockpileID="KCT29.3" amount="4900.00"/>
+    <RecOnMove reclaimerID="4.59" time="956.464596" pos="819.00"/>
+    <RecOnStopMove reclaimerID="4.59" time="956.786818" pos="239.00"/>
+    <RecOpStart reclaimerID="4.59" time="956.786818" pos="239.00" stockpileID="KCT31.2"/>
+    <RecStart reclaimerID="4.59" time="956.786818" pos="239.00" stockpileID="KCT31.2"/>
+    <RecFail reclaimerID="4.59" time="960.306567" pos="239.00" stockpileID="Stockpile ID"/>
+    <RecFix reclaimerID="4.59" time="960.770096" pos="239.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFail reclaimerID="4.59" time="964.148300" pos="239.00" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.59" time="964.286216" pos="239.00" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.59" time="969.752968" pos="239.00" stockpileID="KCT31.2" amount="105100.00"/>
+    <RecOpComp reclaimerID="4.59" time="969.899194" pos="239.00" stockpileID="KCT31.2" amount="105100.00"/>
+    <RecOnMove reclaimerID="4.59" time="969.899472" pos="239.00"/>
+    <RecOnStopMove reclaimerID="4.59" time="969.984194" pos="86.50"/>
+    <RecOpStart reclaimerID="4.59" time="969.984194" pos="86.50" stockpileID="KCT31.1"/>
+    <RecStart reclaimerID="4.59" time="969.984194" pos="86.50" stockpileID="KCT31.1"/>
+    <RecComp reclaimerID="4.59" time="972.337135" pos="86.50" stockpileID="KCT31.1" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.59" time="972.475659" pos="86.50" stockpileID="KCT31.1" amount="20000.00"/>
+    <RecOnMove reclaimerID="4.59" time="972.475937" pos="86.50"/>
+    <RecOnStopMove reclaimerID="4.59" time="972.645382" pos="391.50"/>
+    <RecOpStart reclaimerID="4.59" time="972.645382" pos="391.50" stockpileID="KCT31.3"/>
+    <RecStart reclaimerID="4.59" time="972.645382" pos="391.50" stockpileID="KCT31.3"/>
+    <RecComp reclaimerID="4.59" time="974.998323" pos="391.50" stockpileID="KCT31.3" amount="20000.00"/>
+    <RecOpComp reclaimerID="4.59" time="975.152251" pos="391.50" stockpileID="KCT31.3" amount="20000.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="975.159473" pos="391.50" stockpileID="KCT31.3"/>
+    <RecStart reclaimerID="4.59" time="975.159473" pos="391.50" stockpileID="KCT31.3"/>
+    <RecComp reclaimerID="4.59" time="975.465356" pos="391.50" stockpileID="KCT31.3" amount="2600.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="975.657098" pos="391.50" stockpileID="KCT31.3" amount="2600.00"/>
+    <RecOnMove reclaimerID="4.59" time="975.657376" pos="391.50"/>
+    <RecOnStopMove reclaimerID="4.59" time="975.826820" pos="86.50"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="975.826820" pos="86.50" stockpileID="KCT31.1"/>
+    <RecStart reclaimerID="4.59" time="975.826820" pos="86.50" stockpileID="KCT31.1"/>
+    <RecComp reclaimerID="4.59" time="977.203291" pos="86.50" stockpileID="KCT31.1" amount="11700.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="977.379629" pos="86.50" stockpileID="KCT31.1" amount="11700.00"/>
+    <RecOnMove reclaimerID="4.59" time="977.379907" pos="86.50"/>
+    <RecOnStopMove reclaimerID="4.59" time="977.464629" pos="239.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="977.464629" pos="239.00" stockpileID="KCT31.2"/>
+    <RecStart reclaimerID="4.59" time="977.464629" pos="239.00" stockpileID="KCT31.2"/>
+    <RecComp reclaimerID="4.59" time="980.158747" pos="239.00" stockpileID="KCT31.2" amount="22900.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="980.342787" pos="239.00" stockpileID="KCT31.2" amount="22900.00"/>
+    <RecOnMove reclaimerID="4.59" time="1021.969002" pos="239.00"/>
+    <RecOnStopMove reclaimerID="4.59" time="1022.330391" pos="889.50"/>
+    <RecOpStart reclaimerID="4.59" time="1022.330391" pos="889.50" stockpileID="KCT23.1"/>
+    <RecStart reclaimerID="4.59" time="1022.330391" pos="889.50" stockpileID="KCT23.1"/>
+    <RecSyncedFail reclaimerID="4.59" time="1028.231769" pos="889.50" stockpileID="Stockpile ID"/>
+    <RecSyncedFix reclaimerID="4.59" time="1028.762305" pos="889.50" stockpileID="Stockpile ID"/>
+    <RecComp reclaimerID="4.59" time="1034.178574" pos="889.50" stockpileID="KCT23.1" amount="96200.00"/>
+    <RecOpComp reclaimerID="4.59" time="1034.355337" pos="889.50" stockpileID="KCT23.1" amount="96200.00"/>
+    <RecDoubleHandleOpStart reclaimerID="4.59" time="1034.521170" pos="889.50" stockpileID="KCT23.1"/>
+    <RecStart reclaimerID="4.59" time="1034.521170" pos="889.50" stockpileID="KCT23.1"/>
+    <RecComp reclaimerID="4.59" time="1034.921170" pos="889.50" stockpileID="KCT23.1" amount="3400.00"/>
+    <RecDoubleHandleOpComp reclaimerID="4.59" time="1035.139705" pos="889.50" stockpileID="KCT23.1" amount="3400.00"/>
+    <RecWrapUp reclaimerID="4.59" time="1091.317791" pos="889.50"/>
+    <RecWrapUp reclaimerID="4.60" time="1091.317791" pos="2094.00"/>
+    <RecWrapUp reclaimerID="4.11" time="1091.317791" pos="381.50"/>
+    <RecWrapUp reclaimerID="4.12" time="1091.317791" pos="1508.00"/>
+</events>

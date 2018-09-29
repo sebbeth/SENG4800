@@ -1,0 +1,7 @@
+<events>
+    <SpDedicatedStockpileCreated stockpileID="PadA remnant" vesselID="null" time="0.000000" padID="PadA" pos="417.000000" length="212.000000"/>
+    <SpDedicatedStockpileCreated stockpileID="PadBC remnant" vesselID="null" time="0.000000" padID="PadBC" pos="500.000000" length="90.000000"/>
+    <SpDedicatedStockpileCreated stockpileID="PadDE remnant" vesselID="null" time="0.000000" padID="PadDE" pos="507.000000" length="90.000000"/>
+    <SpDedicatedStockpileCreated stockpileID="PadFG remnant" vesselID="null" time="0.000000" padID="PadFG" pos="530.000000" length="90.000000"/>
+    <SpDedicatedStockpileCreated stockpileID="PadH remnant" vesselID="null" time="0.000000" padID="PadH" pos="476.000000" length="212.000000"/>
+</events>
