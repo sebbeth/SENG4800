@@ -8,9 +8,12 @@
 #include "GameFramework/Actor.h"
 #include "data/serialization.h"
 #include "data/extraction/implementedEntities.h"
-#include "SimulationData.h"
-
+#include "data/simulation/SimulationData.h"
+#include "data/simulation/StockpileData.h"
+#include "data/extraction/TerminalId.h"
 #include "StackerReclaimer.h"
+
+
 
 #include "LevelController.generated.h"
 
@@ -88,7 +91,7 @@ struct FindSimTimeBoundsFunctor {
 struct ClearDataFunctor {
 	ALevelController* context;
 	/**
-	 * Clears the existing entities from a givn
+	 * Clears the existing entities for the data in the msp
 	 */
 	template<typename Each>
 	void operator()(Each& eachDataMap);
@@ -100,6 +103,26 @@ struct ClearDataFunctor {
 
 	ClearDataFunctor(); //set context to a nullptr because unreal wants a default constructor
 	ClearDataFunctor(ALevelController* context);
+};
+
+//Note/TODO: cheating by using the states instead of events for now
+struct StringifyEventsFunctor {
+	ALevelController* context;
+	std::vector<std::pair<float, std::string>> interimResult;
+
+	/**
+	 * Gets a string describing each of the events/states in the map
+	 */
+	template<typename Each>
+	void operator()(Each& eachDataMap);
+
+	/**
+	 * Gets a string describing each of the events/states in the context's current data
+	 */
+	TArray<FString> operator()();
+
+	StringifyEventsFunctor(); //set context to a nullptr because unreal wants a default constructor
+	StringifyEventsFunctor(ALevelController* context);
 };
 
 template<>
@@ -117,13 +140,14 @@ class HVCCC2_API ALevelController : public AActor
 	friend struct AnimateEntitiesFunctor;
 	friend struct FindSimTimeBoundsFunctor;
 	friend struct ClearDataFunctor;
+	friend struct StringifyEventsFunctor;
 
 	AddToSimFunctor addToSimFunctor;
 	UpdateWindowsFunctor updateWindowsFunctor;
 	AnimateEntitiesFunctor animateEntitiesFunctor;
 	FindSimTimeBoundsFunctor findSimTimeBoundsFunctor;
 	ClearDataFunctor clearDataFunctor;
-	
+	StringifyEventsFunctor stringifyEventsFunctor;
 	/*double xMin, xMax;*/
 
 	double simTime;
@@ -199,6 +223,9 @@ protected:
 		TArray<ATrain*> trains;
 	UPROPERTY(EditAnywhere)
 	TArray<AConveyorBelt*> conveyorBelts;
+	//UPROPERTY(EditAnywhere)
+	//	TArray<ATrackSpline*> trainTracks;
+
 
 	//Conveyor Belt position markers
 	UPROPERTY(EditAnywhere)
@@ -216,6 +243,9 @@ public:
 	 */
 	UFUNCTION(BlueprintCallable, Category = "data")
 	bool loadXMLData(const FString& srcPath);
+
+	UFUNCTION(BlueprintCallable, Category = "data")
+	TArray<FString> getEventMessages();
 
 	//time controls
 	UFUNCTION(BlueprintCallable, Category = "time")
@@ -252,20 +282,24 @@ private:
 
 
 	template<typename Id>
-	UActorType<typename Id::Entity>* getOrSpawnActor(const typename Id& id) {
-		/*default implementation for entities that aren't spawned/animated yet*/
-		return nullptr;
-	}
+	UActorType<typename Id::Entity>* getOrSpawnActor(const typename Id& id);
 
 	AStackerReclaimer* getOrSpawnActor(const StackerReclaimer::Id& id);
 
 	/**
+	 * Exposes all the information about an entity for animation; defaults to calling a function exposing less information for backward compatability;
+	 * interpolationScale is how far towards nextState the current time is from previousState. The scale is from 0.0 to 1.0; at 0.0 the current time is exactly that of previousState; at 1.0 the current time is exactly that of nextState
+	 * Note: it is not neccessary to add inline when overloading this yourself
+	 */
+	template<typename Entity>
+	inline void animateEntity(const SimulationData<Entity>& data, float interpolationScale);
+
+	/**
+	 * Uses only the ends of the window and the interpolationScale to animate an entity
 	 * interpolationScale is how far towards nextState the current time is from previousState. The scale is from 0.0 to 1.0; at 0.0 the current time is exactly that of previousState; at 1.0 the current time is exactly that of nextState
 	 */
 	template<typename Actor, typename State>
-	void animateEntity(Actor* actorPointer, const typename State& previousState, const typename State& nextState, float interpolationScale) {
-		/*default implementation for entities that aren't spawned/animated yet*/
-	}
+	void animateEntity(Actor* actorPointer, const typename State& previousState, const typename State& nextState, float interpolationScale);
 	
 	void animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale);
 
@@ -280,9 +314,37 @@ private:
 	void setCoalStackingState(int stackerId, int state);
 	void setCoalReclaimingState(int stackerId,int loaderId, int state);
 
+	// Pad lengths
+	int getPadLength(TerminalId TerminalId, const int& padId);
+	int getTrackLength(TerminalId TerminalId, const int& trackID);
+
 	int testTime; // Just being used for testing
 
 };
+
+template<typename Id>
+UActorType<typename Id::Entity>* ALevelController::getOrSpawnActor(const typename Id& id) {
+	/*default implementation for entities that aren't spawned/animated yet*/
+	return nullptr;
+}
+
+template<typename Entity>
+inline void ALevelController::animateEntity(const SimulationData<Entity>& data, float interpolationScale) {
+	//Commented out code provides hinting on types, and an example of how to get the variables used in the simpler animateEntity
+	using Actor = UActorType<Entity>;
+	//using State = typename Entity::State;
+	Actor* actorPointer = data.actorPointer;
+	//const State& beforeState = (*data.stateWindow.first);
+	//const State& afterState = (*data.stateWindow.second);
+
+	//note that the pointer stored in data is a const pointer to a non-const actor 
+	animateEntity(data.actorPointer, (*data.stateWindow.first), (*data.stateWindow.second), interpolationScale);
+}
+
+template<typename Actor, typename State>
+void ALevelController::animateEntity(Actor* actorPointer, const typename State& previousState, const typename State& nextState, float interpolationScale) {
+	/*default implementation for entities that aren't spawned/animated yet*/
+}
 
 template<typename Each>
 void AddToSimFunctor::operator()(const Each& eachStateMap) {
@@ -390,7 +452,7 @@ void AnimateEntitiesFunctor::operator()(Each& eachDataMap) {
 			auto eachStates = eachSimulationData.states;
 			//UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f, state a: %d, state b: %d, typea: %d, typeb: %d, interpolationScale: %f"), UTF8_TO_TCHAR(eachEntry.first.nameForBinaryFile().c_str()), float(context->simTime), std::distance(eachStates.cbegin(), eachWindow.first), std::distance(eachStates.cbegin(), eachWindow.second), previousState.type, nextState.type, interpolationScale);
 
-			context->animateEntity(eachSimulationData.actorPointer, previousState, nextState, interpolationScale);
+			context->animateEntity(eachSimulationData, interpolationScale);
 		}
 	}
 }
@@ -403,14 +465,30 @@ void FindSimTimeBoundsFunctor::operator()(const Each& eachDataMap) {
 				context->simStartTime = eachState.time;
 			}
 			if (eachState.time > context->simEndTime) {
-				context->simStartTime = eachState.time;
+				context->simEndTime = eachState.time;
 			}
 		}
 	}
 }
 
-
 template<typename Each>
 void ClearDataFunctor::operator()(Each& eachStateMap) {
 	eachStateMap.clear();
+}
+
+template<typename Each>
+inline void StringifyEventsFunctor::operator()(Each & eachDataMap)
+{
+	std::stringstream eachResultBuilder;
+	for (auto& eachEntry : eachDataMap) {
+		auto& eachId = eachEntry.first;
+		for (auto& eachState : eachEntry.second.states) {
+
+			//TODO: REPLACE WITH SOMETHING LIKE StateTraits<typename Each::key_type::Entity>::displayFriendlyStringFor(eachState) (note: this method is not yet implemented or even declared)
+			eachResultBuilder.str("");
+			//TODO: IMPLEMENT A TYPEDEF OR SIMILAR THAT CAN GET FROM Entity CLASSES TO THE STATETYPEDECODER e.g. std::function<std::string(StackerStateType)>Stacker::stateTypeDecoder(StackerStateType type)
+			eachResultBuilder << "Entity " << eachId.nameForBinaryFile() << ": Current State: " << int(eachState.type);
+			interimResult.emplace_back(eachState.time, eachResultBuilder.str());
+		}
+	}
 }

@@ -1,17 +1,17 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
  **/
 #include "DumpstationEventType.h"
         
 DumpstationEventType decodeDumpstationEventType(const std::string& enumeratorString) {
     if (enumeratorString == "DumpComp") {
         return DumpstationEventType::DumpComplete;
-    } else if (enumeratorString == "DumpFail") {
-        return DumpstationEventType::DumpFail;
     } else if (enumeratorString == "DumpOpComp") {
         return DumpstationEventType::DumpOperationComplete;
     } else if (enumeratorString == "DumpOpStart") {
         return DumpstationEventType::DumpOperationStart;
+    } else if (enumeratorString == "DumpStart") {
+        return DumpstationEventType::DumpStart;
     } else if (enumeratorString == "Fail") {
         return DumpstationEventType::Fail;
     } else if (enumeratorString == "Fix") {
@@ -50,8 +50,8 @@ std::string encodeDumpstationEventType(const DumpstationEventType& value) {
             return "SyncedFail";
             break;
 
-        case DumpstationEventType::DumpFail:
-            return "DumpFail";
+        case DumpstationEventType::DumpStart:
+            return "DumpStart";
             break;
 
         case DumpstationEventType::Fix:

@@ -39,18 +39,6 @@
     <ClCompile Include="..\Source\HVCCC2\data\TinyXML2Testing.cpp">
       <Filter>files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\Vessel.cpp">
-      <Filter>files\extraction</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEvent.cpp">
-      <Filter>files\extraction</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEventType.cpp">
-      <Filter>files\extraction</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\VesselState.cpp">
-      <Filter>files\extraction</Filter>
-    </ClCompile>
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Dumpstation\Dumpstation.cpp">
       <Filter>files\extraction</Filter>
     </ClCompile>
@@ -102,18 +90,6 @@
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderState.cpp">
       <Filter>files\extraction</Filter>
     </ClCompile>
-    <ClCompile Include="..\Source\HVCCC2\data\extraction\Signal\Signal.cpp">
-      <Filter>files\extraction</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Source\HVCCC2\data\extraction\Signal\SignalEvent.cpp">
-      <Filter>files\extraction</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Source\HVCCC2\data\extraction\Signal\SignalEventType.cpp">
-      <Filter>files\extraction</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Source\HVCCC2\data\extraction\Signal\SignalStateType.cpp">
-      <Filter>files\extraction</Filter>
-    </ClCompile>
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Stacker\Stacker.cpp">
       <Filter>files\extraction</Filter>
     </ClCompile>
@@ -123,13 +99,13 @@
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Stacker\StackerEventType.cpp">
       <Filter>files\extraction</Filter>
     </ClCompile>
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Stacker\StackerState.cpp">
+      <Filter>files\extraction</Filter>
+    </ClCompile>
     <ClCompile Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimer.cpp">
       <Filter>files\extraction</Filter>
     </ClCompile>
     <ClCompile Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimerState.cpp">
-      <Filter>files\extraction</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Source\HVCCC2\data\extraction\Stacker\StackerState.cpp">
       <Filter>files\extraction</Filter>
     </ClCompile>
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Stockpile\Stockpile.cpp">
@@ -145,6 +121,30 @@
       <Filter>files\extraction</Filter>
     </ClCompile>
     <ClCompile Include="..\Source\HVCCC2\data\extraction\TerminalId.cpp">
+      <Filter>files\extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovement.cpp">
+      <Filter>files\extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementEvent.cpp">
+      <Filter>files\extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementEventType.cpp">
+      <Filter>files\extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementState.cpp">
+      <Filter>files\extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\Vessel.cpp">
+      <Filter>files\extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEvent.cpp">
+      <Filter>files\extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEventType.cpp">
+      <Filter>files\extraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\VesselState.cpp">
       <Filter>files\extraction</Filter>
     </ClCompile>
   </ItemGroup>
@@ -404,24 +404,6 @@
     <ClInclude Include="..\Source\HVCCC2\data\util.h">
       <Filter>files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\Vessel.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEvent.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEventType.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselState.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselStateTraits.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselStateType.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Dumpstation\Dumpstation.h">
       <Filter>files\extraction</Filter>
     </ClInclude>
@@ -503,24 +485,6 @@
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderStateType.h">
       <Filter>files\extraction</Filter>
     </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\Signal.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalEvent.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalEventType.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalState.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalStateTraits.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalStateType.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Stacker\Stacker.h">
       <Filter>files\extraction</Filter>
     </ClInclude>
@@ -530,15 +494,6 @@
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Stacker\StackerEventType.h">
       <Filter>files\extraction</Filter>
     </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimer.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimerState.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimerStateType.h">
-      <Filter>files\extraction</Filter>
-    </ClInclude>
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Stacker\StackerState.h">
       <Filter>files\extraction</Filter>
     </ClInclude>
@@ -546,6 +501,15 @@
       <Filter>files\extraction</Filter>
     </ClInclude>
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Stacker\StackerStateType.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimer.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimerState.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimerStateType.h">
       <Filter>files\extraction</Filter>
     </ClInclude>
     <ClInclude Include="..\Source\HVCCC2\data\extraction\StateTraits.h">
@@ -570,6 +534,42 @@
       <Filter>files\extraction</Filter>
     </ClInclude>
     <ClInclude Include="..\Source\HVCCC2\data\extraction\TerminalId.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovement.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementEvent.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementEventType.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementState.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementStateTraits.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementStateType.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\Vessel.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEvent.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEventType.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselState.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselStateTraits.h">
+      <Filter>files\extraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselStateType.h">
       <Filter>files\extraction</Filter>
     </ClInclude>
   </ItemGroup>

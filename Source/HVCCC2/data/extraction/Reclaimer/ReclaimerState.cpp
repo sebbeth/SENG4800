@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
  **/
 #include "ReclaimerState.h"
 
@@ -15,6 +15,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
                     return ReclaimerStateType::Moving;
                 case ReclaimerEventType::MaintenanceStart:
                     return ReclaimerStateType::Maintenance;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -26,6 +28,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
                     return ReclaimerStateType::PreReclaimReservedFail;
                 case ReclaimerEventType::SyncedFail:
                     return ReclaimerStateType::PreReclaimReservedSyncFail;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -37,6 +41,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
                     return ReclaimerStateType::PreDoubleHandleReservedSyncFail;
                 case ReclaimerEventType::DoubleHandleStart:
                     return ReclaimerStateType::WorkingDoubleHandle;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -44,6 +50,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
             switch(eventType) {
                 case ReclaimerEventType::OnStopMove:
                     return ReclaimerStateType::Idle;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -51,9 +59,13 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
             switch(eventType) {
                 case ReclaimerEventType::MaintenanceComplete:
                     return ReclaimerStateType::Idle;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
+        case ReclaimerStateType::WrappedUp:
+            return ReclaimerStateType::Invalid;
         case ReclaimerStateType::WorkingReclaim:
             switch(eventType) {
                 case ReclaimerEventType::Complete:
@@ -62,6 +74,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
                     return ReclaimerStateType::WorkingReclaimFail;
                 case ReclaimerEventType::SyncedFail:
                     return ReclaimerStateType::WorkingReclaimSyncFail;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -69,6 +83,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
             switch(eventType) {
                 case ReclaimerEventType::Fix:
                     return ReclaimerStateType::PreReclaimReserved;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -76,6 +92,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
             switch(eventType) {
                 case ReclaimerEventType::SyncedFix:
                     return ReclaimerStateType::PreReclaimReserved;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -87,6 +105,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
                     return ReclaimerStateType::PostReclaimReservedSyncFail;
                 case ReclaimerEventType::OperationComplete:
                     return ReclaimerStateType::Idle;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -94,6 +114,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
             switch(eventType) {
                 case ReclaimerEventType::Fix:
                     return ReclaimerStateType::WorkingReclaim;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -101,6 +123,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
             switch(eventType) {
                 case ReclaimerEventType::SyncedFix:
                     return ReclaimerStateType::WorkingReclaim;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -108,6 +132,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
             switch(eventType) {
                 case ReclaimerEventType::Fix:
                     return ReclaimerStateType::PostReclaimReserved;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -115,6 +141,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
             switch(eventType) {
                 case ReclaimerEventType::SyncedFix:
                     return ReclaimerStateType::PostReclaimReserved;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -122,6 +150,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
             switch(eventType) {
                 case ReclaimerEventType::Fix:
                     return ReclaimerStateType::PreDoubleHandleReserved;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -129,6 +159,8 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
             switch(eventType) {
                 case ReclaimerEventType::SyncedFix:
                     return ReclaimerStateType::PreDoubleHandleReserved;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -140,15 +172,28 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
                     return ReclaimerStateType::WorkingDoubleHandleFail;
                 case ReclaimerEventType::SyncedFail:
                     return ReclaimerStateType::WorkingDoubleHandleSyncFail;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
         case ReclaimerStateType::PostDoubleHandleReserved:
-            return ReclaimerStateType::Invalid;
+            switch(eventType) {
+                case ReclaimerEventType::Fail:
+                    return ReclaimerStateType::PostDoubleHandleReservedFail;
+                case ReclaimerEventType::SyncedFail:
+                    return ReclaimerStateType::PostDoubleHandleReservedSyncFail;
+                case ReclaimerEventType::DoubleHandleOperationComplete:
+                    return ReclaimerStateType::Idle;
+                default:
+                    return ReclaimerStateType::Invalid;
+            }
         case ReclaimerStateType::WorkingDoubleHandleFail:
             switch(eventType) {
                 case ReclaimerEventType::Fix:
                     return ReclaimerStateType::WorkingDoubleHandle;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
                 default:
                     return ReclaimerStateType::Invalid;
             }
@@ -156,6 +201,22 @@ ReclaimerStateType ReclaimerState::determineNextType(ReclaimerStateType stateTyp
             switch(eventType) {
                 case ReclaimerEventType::SyncedFix:
                     return ReclaimerStateType::WorkingDoubleHandle;
+                case ReclaimerEventType::WrapUp:
+                    return ReclaimerStateType::WrappedUp;
+                default:
+                    return ReclaimerStateType::Invalid;
+            }
+        case ReclaimerStateType::PostDoubleHandleReservedFail:
+            switch(eventType) {
+                case ReclaimerEventType::Fix:
+                    return ReclaimerStateType::PostDoubleHandleReserved;
+                default:
+                    return ReclaimerStateType::Invalid;
+            }
+        case ReclaimerStateType::PostDoubleHandleReservedSyncFail:
+            switch(eventType) {
+                case ReclaimerEventType::SyncedFix:
+                    return ReclaimerStateType::PostDoubleHandleReserved;
                 default:
                     return ReclaimerStateType::Invalid;
             }
