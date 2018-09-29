@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
  **/
 #include "DumpstationEvent.h"
 
@@ -7,9 +7,9 @@ bool DumpstationEvent::hasAmount() const {
     switch (type) {
         case DumpstationEventType::DumpComplete:
             return true;
+        case DumpstationEventType::DumpFail:
         case DumpstationEventType::DumpOperationComplete:
         case DumpstationEventType::DumpOperationStart:
-        case DumpstationEventType::DumpStart:
         case DumpstationEventType::Fail:
         case DumpstationEventType::Fix:
         case DumpstationEventType::MaintenanceComplete:
@@ -26,8 +26,8 @@ bool DumpstationEvent::hasCycleID() const {
         case DumpstationEventType::DumpComplete:
         case DumpstationEventType::DumpOperationComplete:
         case DumpstationEventType::DumpOperationStart:
-        case DumpstationEventType::DumpStart:
             return true;
+        case DumpstationEventType::DumpFail:
         case DumpstationEventType::Fail:
         case DumpstationEventType::Fix:
         case DumpstationEventType::MaintenanceComplete:
@@ -43,9 +43,9 @@ bool DumpstationEvent::hasStockpileID() const {
     switch (type) {
         case DumpstationEventType::DumpOperationComplete:
         case DumpstationEventType::DumpOperationStart:
-        case DumpstationEventType::DumpStart:
             return true;
         case DumpstationEventType::DumpComplete:
+        case DumpstationEventType::DumpFail:
         case DumpstationEventType::Fail:
         case DumpstationEventType::Fix:
         case DumpstationEventType::MaintenanceComplete:
@@ -62,8 +62,8 @@ bool DumpstationEvent::hasTime() const {
         case DumpstationEventType::DumpComplete:
         case DumpstationEventType::DumpOperationComplete:
         case DumpstationEventType::DumpOperationStart:
-        case DumpstationEventType::DumpStart:
             return true;
+        case DumpstationEventType::DumpFail:
         case DumpstationEventType::Fail:
         case DumpstationEventType::Fix:
         case DumpstationEventType::MaintenanceComplete:

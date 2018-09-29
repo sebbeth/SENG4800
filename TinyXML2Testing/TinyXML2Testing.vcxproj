@@ -36,6 +36,10 @@
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderEvent.cpp" />
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderEventType.cpp" />
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderState.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Signal\Signal.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Signal\SignalEvent.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Signal\SignalEventType.cpp" />
+    <ClCompile Include="..\Source\HVCCC2\data\extraction\Signal\SignalStateType.cpp" />
     <ClCompile Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimer.cpp" />
     <ClCompile Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimerState.cpp" />
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Stacker\Stacker.cpp" />
@@ -47,10 +51,6 @@
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Stockpile\StockpileEventType.cpp" />
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Stockpile\StockpileState.cpp" />
     <ClCompile Include="..\Source\HVCCC2\data\extraction\TerminalId.cpp" />
-    <ClCompile Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovement.cpp" />
-    <ClCompile Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementEvent.cpp" />
-    <ClCompile Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementEventType.cpp" />
-    <ClCompile Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementState.cpp" />
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\Vessel.cpp" />
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEvent.cpp" />
     <ClCompile Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEventType.cpp" />
@@ -169,6 +169,12 @@
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderState.h" />
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderStateTraits.h" />
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Shiploader\ShiploaderStateType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\Signal.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalEvent.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalEventType.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalState.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalStateTraits.h" />
+    <ClInclude Include="..\Source\HVCCC2\data\extraction\Signal\SignalStateType.h" />
     <ClInclude Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimer.h" />
     <ClInclude Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimerState.h" />
     <ClInclude Include="..\Source\HVCCC2\data\extraction\StackerReclaimer\StackerReclaimerStateType.h" />
@@ -186,12 +192,6 @@
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Stockpile\StockpileStateTraits.h" />
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Stockpile\StockpileStateType.h" />
     <ClInclude Include="..\Source\HVCCC2\data\extraction\TerminalId.h" />
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovement.h" />
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementEvent.h" />
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementEventType.h" />
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementState.h" />
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementStateTraits.h" />
-    <ClInclude Include="..\Source\HVCCC2\data\extraction\TrainMovement\TrainMovementStateType.h" />
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\Vessel.h" />
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEvent.h" />
     <ClInclude Include="..\Source\HVCCC2\data\extraction\Vessel\VesselEventType.h" />

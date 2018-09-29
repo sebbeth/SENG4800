@@ -76,7 +76,7 @@ void merge(Source& source, StateMap<StackerReclaimer>& destination) {
 		}
 
 		//if matching, extract the states from the merge sources and put them into the merge destination, in-order
-		if (stackerEntryIt != stackerMap.end() && reclaimerEntryIt != reclaimerMap.end() && (*reclaimerEntryIt).first == (*stackerEntryIt).first) {
+		if ((*reclaimerEntryIt).first == (*stackerEntryIt).first) {
 
 			auto eachDestinationEntry = destination.emplace(std::piecewise_construct, std::make_tuple((*reclaimerEntryIt).first), std::make_tuple()).first;
 			auto stackerStateIt = (*stackerEntryIt).second.begin();

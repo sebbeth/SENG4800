@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
  **/
 #include "LoadpointsEventType.h"
         
@@ -26,8 +26,6 @@ LoadpointsEventType decodeLoadpointsEventType(const std::string& enumeratorStrin
         return LoadpointsEventType::StartPreload;
     } else if (enumeratorString == "StartRecharge") {
         return LoadpointsEventType::StartRecharge;
-    } else if (enumeratorString == "WrapUp") {
-        return LoadpointsEventType::WrapUp;
     } else {
         return LoadpointsEventType::Invalid;
     }
@@ -48,10 +46,6 @@ std::string encodeLoadpointsEventType(const LoadpointsEventType& value) {
 
         case LoadpointsEventType::StartIdle:
             return "StartIdle";
-            break;
-
-        case LoadpointsEventType::WrapUp:
-            return "WrapUp";
             break;
 
         case LoadpointsEventType::OnFix:

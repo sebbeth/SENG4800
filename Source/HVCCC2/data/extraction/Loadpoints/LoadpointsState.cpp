@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
  **/
 #include "LoadpointsState.h"
 
@@ -15,8 +15,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
                     return LoadpointsStateType::Maintenance;
                 case LoadpointsEventType::StartIdle:
                     return LoadpointsStateType::Idle;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -26,8 +24,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
                     return LoadpointsStateType::PreloadFail;
                 case LoadpointsEventType::StartLoad:
                     return LoadpointsStateType::Loading;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -35,8 +31,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
             switch(eventType) {
                 case LoadpointsEventType::OnFix:
                     return LoadpointsStateType::IdleFix;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -44,19 +38,13 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
             switch(eventType) {
                 case LoadpointsEventType::MaintenanceComplete:
                     return LoadpointsStateType::Idle;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
-        case LoadpointsStateType::WrappedUp:
-            return LoadpointsStateType::Invalid;
         case LoadpointsStateType::IdleFix:
             switch(eventType) {
                 case LoadpointsEventType::StartIdle:
                     return LoadpointsStateType::Idle;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -64,8 +52,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
             switch(eventType) {
                 case LoadpointsEventType::OnFix:
                     return LoadpointsStateType::PreloadFix;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -73,8 +59,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
             switch(eventType) {
                 case LoadpointsEventType::FinishLoad:
                     return LoadpointsStateType::IdleLoading;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -82,8 +66,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
             switch(eventType) {
                 case LoadpointsEventType::StartPreload:
                     return LoadpointsStateType::Preload;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -95,8 +77,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
                     return LoadpointsStateType::Loading;
                 case LoadpointsEventType::StartPostLoad:
                     return LoadpointsStateType::Postload;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -104,8 +84,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
             switch(eventType) {
                 case LoadpointsEventType::OnFix:
                     return LoadpointsStateType::IdleLoadingFix;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -115,8 +93,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
                     return LoadpointsStateType::PostloadFail;
                 case LoadpointsEventType::StartRecharge:
                     return LoadpointsStateType::Recharging;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -124,8 +100,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
             switch(eventType) {
                 case LoadpointsEventType::StartLoad:
                     return LoadpointsStateType::Loading;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -133,8 +107,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
             switch(eventType) {
                 case LoadpointsEventType::OnFix:
                     return LoadpointsStateType::PostloadFix;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -144,8 +116,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
                     return LoadpointsStateType::RechargingFail;
                 case LoadpointsEventType::StartIdle:
                     return LoadpointsStateType::Idle;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -153,8 +123,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
             switch(eventType) {
                 case LoadpointsEventType::StartPostload:
                     return LoadpointsStateType::Postload;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -162,8 +130,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
             switch(eventType) {
                 case LoadpointsEventType::OnFix:
                     return LoadpointsStateType::RechargingFix;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }
@@ -173,8 +139,6 @@ LoadpointsStateType LoadpointsState::determineNextType(LoadpointsStateType state
             switch(eventType) {
                 case LoadpointsEventType::StartRecharge:
                     return LoadpointsStateType::Recharging;
-                case LoadpointsEventType::WrapUp:
-                    return LoadpointsStateType::WrappedUp;
                 default:
                     return LoadpointsStateType::Invalid;
             }

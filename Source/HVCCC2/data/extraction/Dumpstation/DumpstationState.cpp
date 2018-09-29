@@ -1,102 +1,102 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
  **/
 #include "DumpstationState.h"
 
 DumpstationStateType DumpstationState::determineNextType(DumpstationStateType stateType, DumpstationEventType eventType) {
     switch(stateType) {
-        case DumpstationStateType::Idle:
+        case DumpstationStateType::idle:
             switch(eventType) {
                 case DumpstationEventType::MaintenanceStart:
-                    return DumpstationStateType::Maintenance;
+                    return DumpstationStateType::maintenance;
                 case DumpstationEventType::DumpOperationStart:
-                    return DumpstationStateType::PreDumpReserved;
+                    return DumpstationStateType::preDumpReserved;
                 default:
                     return DumpstationStateType::Invalid;
             }
-        case DumpstationStateType::Maintenance:
+        case DumpstationStateType::maintenance:
             switch(eventType) {
                 case DumpstationEventType::MaintenanceComplete:
-                    return DumpstationStateType::Idle;
+                    return DumpstationStateType::idle;
                 default:
                     return DumpstationStateType::Invalid;
             }
-        case DumpstationStateType::PreDumpReserved:
+        case DumpstationStateType::preDumpReserved:
             switch(eventType) {
                 case DumpstationEventType::Fail:
-                    return DumpstationStateType::PreDumpReservedFail;
+                    return DumpstationStateType::preDumpReservedFail;
                 case DumpstationEventType::SyncedFail:
-                    return DumpstationStateType::PreDumpReservedSyncedFail;
-                case DumpstationEventType::DumpStart:
-                    return DumpstationStateType::Working;
+                    return DumpstationStateType::preDumpReservedSyncedFail;
+                case DumpstationEventType::DumpFail:
+                    return DumpstationStateType::working;
                 default:
                     return DumpstationStateType::Invalid;
             }
-        case DumpstationStateType::PreDumpReservedFail:
+        case DumpstationStateType::preDumpReservedFail:
             switch(eventType) {
                 case DumpstationEventType::Fix:
-                    return DumpstationStateType::PreDumpReserved;
+                    return DumpstationStateType::preDumpReserved;
                 default:
                     return DumpstationStateType::Invalid;
             }
-        case DumpstationStateType::PreDumpReservedSyncedFail:
+        case DumpstationStateType::preDumpReservedSyncedFail:
             switch(eventType) {
                 case DumpstationEventType::SyncedFix:
-                    return DumpstationStateType::PreDumpReserved;
+                    return DumpstationStateType::preDumpReserved;
                 default:
                     return DumpstationStateType::Invalid;
             }
-        case DumpstationStateType::Working:
+        case DumpstationStateType::working:
             switch(eventType) {
                 case DumpstationEventType::Fail:
-                    return DumpstationStateType::WorkingFail;
+                    return DumpstationStateType::workingFail;
                 case DumpstationEventType::SyncedFail:
-                    return DumpstationStateType::WorkingSyncedFail;
+                    return DumpstationStateType::workingSyncedFail;
                 case DumpstationEventType::DumpComplete:
-                    return DumpstationStateType::PostDumpReserved;
+                    return DumpstationStateType::postDumpReserved;
                 default:
                     return DumpstationStateType::Invalid;
             }
-        case DumpstationStateType::WorkingFail:
+        case DumpstationStateType::workingFail:
             switch(eventType) {
                 case DumpstationEventType::Fix:
-                    return DumpstationStateType::Working;
+                    return DumpstationStateType::working;
                 default:
                     return DumpstationStateType::Invalid;
             }
-        case DumpstationStateType::WorkingSyncedFail:
+        case DumpstationStateType::workingSyncedFail:
             switch(eventType) {
                 case DumpstationEventType::SyncedFix:
-                    return DumpstationStateType::Working;
+                    return DumpstationStateType::working;
                 default:
                     return DumpstationStateType::Invalid;
             }
-        case DumpstationStateType::PostDumpReserved:
+        case DumpstationStateType::postDumpReserved:
             switch(eventType) {
                 case DumpstationEventType::Fail:
-                    return DumpstationStateType::PostReservedDumpFail;
+                    return DumpstationStateType::postReservedDumpFail;
                 case DumpstationEventType::SyncedFail:
-                    return DumpstationStateType::PostDumpReservedSyncedFail;
+                    return DumpstationStateType::postDumpReservedSyncedFail;
                 case DumpstationEventType::DumpOperationComplete:
-                    return DumpstationStateType::Idle;
+                    return DumpstationStateType::idle;
                 default:
                     return DumpstationStateType::Invalid;
             }
-        case DumpstationStateType::PostReservedDumpFail:
+        case DumpstationStateType::postReservedDumpFail:
             return DumpstationStateType::Invalid;
-        case DumpstationStateType::PostDumpReservedSyncedFail:
+        case DumpstationStateType::postDumpReservedSyncedFail:
             return DumpstationStateType::Invalid;
-        case DumpstationStateType::PostDumpReservedFail:
+        case DumpstationStateType::postDumpReservedFail:
             switch(eventType) {
                 case DumpstationEventType::Fix:
-                    return DumpstationStateType::PostDumpReserved;
+                    return DumpstationStateType::postDumpReserved;
                 default:
                     return DumpstationStateType::Invalid;
             }
-        case DumpstationStateType::PostDumpReservedSyncedFix:
+        case DumpstationStateType::postDumpReservedSyncedFix:
             switch(eventType) {
                 case DumpstationEventType::SyncedFix:
-                    return DumpstationStateType::PostDumpReserved;
+                    return DumpstationStateType::postDumpReserved;
                 default:
                     return DumpstationStateType::Invalid;
             }
