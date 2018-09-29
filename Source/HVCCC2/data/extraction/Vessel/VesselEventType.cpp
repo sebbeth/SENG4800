@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
  **/
 #include "VesselEventType.h"
         
@@ -8,6 +8,8 @@ VesselEventType decodeVesselEventType(const std::string& enumeratorString) {
         return VesselEventType::ArriveTerminal;
     } else if (enumeratorString == "AtEA") {
         return VesselEventType::AtAnchorage;
+    } else if (enumeratorString == "BallastTankEmpty") {
+        return VesselEventType::BallastTankEmpty;
     } else if (enumeratorString == "Created") {
         return VesselEventType::Created;
     } else if (enumeratorString == "DepTerminal") {
@@ -20,8 +22,12 @@ VesselEventType decodeVesselEventType(const std::string& enumeratorString) {
         return VesselEventType::EnterChannel;
     } else if (enumeratorString == "ExitChannel") {
         return VesselEventType::ExitChannel;
+    } else if (enumeratorString == "FullyLoaded") {
+        return VesselEventType::FullyLoaded;
     } else if (enumeratorString == "HatchChangeComplete") {
         return VesselEventType::HatchChangeComplete;
+    } else if (enumeratorString == "HatchChangeStart") {
+        return VesselEventType::HatchChangeStart;
     } else if (enumeratorString == "StartLoading") {
         return VesselEventType::StartLoading;
     } else if (enumeratorString == "StopForDeballasting") {
@@ -34,6 +40,8 @@ VesselEventType decodeVesselEventType(const std::string& enumeratorString) {
         return VesselEventType::WaitEnter;
     } else if (enumeratorString == "WaitSail") {
         return VesselEventType::WaitSail;
+    } else if (enumeratorString == "YardSpaceAllocated") {
+        return VesselEventType::YardSpaceAllocated;
     } else {
         return VesselEventType::Invalid;
     }
@@ -46,6 +54,10 @@ std::string encodeVesselEventType(const VesselEventType& value) {
 
         case VesselEventType::Created:
             return "Created";
+            break;
+
+        case VesselEventType::YardSpaceAllocated:
+            return "YardSpaceAllocated";
             break;
 
         case VesselEventType::WaitBerth:
@@ -68,8 +80,8 @@ std::string encodeVesselEventType(const VesselEventType& value) {
             return "StartLoading";
             break;
 
-        case VesselEventType::HatchChangeComplete:
-            return "HatchChangeComplete";
+        case VesselEventType::HatchChangeStart:
+            return "HatchChangeStart";
             break;
 
         case VesselEventType::DraftSurveyStart:
@@ -80,8 +92,20 @@ std::string encodeVesselEventType(const VesselEventType& value) {
             return "StopForDeballasting";
             break;
 
+        case VesselEventType::FullyLoaded:
+            return "FullyLoaded";
+            break;
+
+        case VesselEventType::HatchChangeComplete:
+            return "HatchChangeComplete";
+            break;
+
         case VesselEventType::DraftSurveyComplete:
             return "DraftSurveyComplete";
+            break;
+
+        case VesselEventType::BallastTankEmpty:
+            return "BallastTankEmpty";
             break;
 
         case VesselEventType::StopForDeballastingComplete:

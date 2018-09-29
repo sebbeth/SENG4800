@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-11 14:36:15.744470
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
  **/
 #pragma once
 #include "../StateTraits.h"
@@ -9,7 +9,8 @@ class StateTraits<DumpstationState> {
 public:
     static DumpstationState initializeFromEvent(const DumpstationEvent& src) {
         /* STUB: REPLACE WITH LOGIC FOR GUESSING THE INITIAL STATE FROM THE EVENT */
-        return {src.id, DumpstationStateType::idle, src.amount, src.cycleID, src.stockpileID, src.time};
+        auto tentativeState = DumpstationState::determineNextType(DumpstationStateType::Idle, src.type);//see if the initial event is something that leaves the initial state; (addresses issue where some entities don't have their own creation event in the xml); still just a quickfix stub though
+        return {src.id, tentativeState != DumpstationStateType::Invalid ? tentativeState : DumpstationStateType::Idle, src.amount, src.cycleID, src.stockpileID, src.time};
     }
 
     static DumpstationState generateNextState(const DumpstationState& current, const DumpstationEvent& event) {

@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
  **/
 #include "StackerState.h"
 
@@ -15,6 +15,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
                     return StackerStateType::Moving;
                 case StackerEventType::MaintenanceStart:
                     return StackerStateType::Maintenance;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -26,6 +28,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
                     return StackerStateType::PreStackReservedFail;
                 case StackerEventType::SyncedFail:
                     return StackerStateType::PreStackReservedSyncFail;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -37,6 +41,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
                     return StackerStateType::PreDoubleHandleReservedSyncFail;
                 case StackerEventType::DoubleHandleStart:
                     return StackerStateType::WorkingDoubleHandle;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -44,6 +50,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
             switch(eventType) {
                 case StackerEventType::OnStopMove:
                     return StackerStateType::Idle;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -51,9 +59,13 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
             switch(eventType) {
                 case StackerEventType::MaintenanceComplete:
                     return StackerStateType::Idle;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
+        case StackerStateType::WrappedUp:
+            return StackerStateType::Invalid;
         case StackerStateType::WorkingStack:
             switch(eventType) {
                 case StackerEventType::Complete:
@@ -62,6 +74,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
                     return StackerStateType::WorkingStackFail;
                 case StackerEventType::SyncedFail:
                     return StackerStateType::WorkingStackSyncFail;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -69,6 +83,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
             switch(eventType) {
                 case StackerEventType::Fix:
                     return StackerStateType::PreStackReserved;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -76,6 +92,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
             switch(eventType) {
                 case StackerEventType::SyncedFix:
                     return StackerStateType::PreStackReserved;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -87,6 +105,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
                     return StackerStateType::PostStackReservedSyncFail;
                 case StackerEventType::OperationComplete:
                     return StackerStateType::Idle;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -94,6 +114,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
             switch(eventType) {
                 case StackerEventType::Fix:
                     return StackerStateType::WorkingStack;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -101,6 +123,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
             switch(eventType) {
                 case StackerEventType::SyncedFix:
                     return StackerStateType::WorkingStack;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -108,6 +132,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
             switch(eventType) {
                 case StackerEventType::Fix:
                     return StackerStateType::PostStackReserved;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -115,6 +141,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
             switch(eventType) {
                 case StackerEventType::SyncedFix:
                     return StackerStateType::PostStackReserved;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -122,6 +150,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
             switch(eventType) {
                 case StackerEventType::Fix:
                     return StackerStateType::PreDoubleHandleReserved;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -129,6 +159,8 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
             switch(eventType) {
                 case StackerEventType::SyncedFix:
                     return StackerStateType::PreDoubleHandleReserved;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -140,15 +172,28 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
                     return StackerStateType::WorkingDoubleHandleFail;
                 case StackerEventType::SyncedFail:
                     return StackerStateType::WorkingDoubleHandleSyncFail;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
         case StackerStateType::PostDoubleHandleReserved:
-            return StackerStateType::Invalid;
+            switch(eventType) {
+                case StackerEventType::Fail:
+                    return StackerStateType::PostDoubleHandleReservedFail;
+                case StackerEventType::SyncedFail:
+                    return StackerStateType::PostDoubleHandleReservedSyncFail;
+                case StackerEventType::DoubleHandleOperationComplete:
+                    return StackerStateType::Idle;
+                default:
+                    return StackerStateType::Invalid;
+            }
         case StackerStateType::WorkingDoubleHandleFail:
             switch(eventType) {
                 case StackerEventType::Fix:
                     return StackerStateType::WorkingDoubleHandle;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
                 default:
                     return StackerStateType::Invalid;
             }
@@ -156,6 +201,22 @@ StackerStateType StackerState::determineNextType(StackerStateType stateType, Sta
             switch(eventType) {
                 case StackerEventType::SyncedFix:
                     return StackerStateType::WorkingDoubleHandle;
+                case StackerEventType::WrapUp:
+                    return StackerStateType::WrappedUp;
+                default:
+                    return StackerStateType::Invalid;
+            }
+        case StackerStateType::PostDoubleHandleReservedFail:
+            switch(eventType) {
+                case StackerEventType::Fix:
+                    return StackerStateType::PostDoubleHandleReserved;
+                default:
+                    return StackerStateType::Invalid;
+            }
+        case StackerStateType::PostDoubleHandleReservedSyncFail:
+            switch(eventType) {
+                case StackerEventType::SyncedFix:
+                    return StackerStateType::PostDoubleHandleReserved;
                 default:
                     return StackerStateType::Invalid;
             }

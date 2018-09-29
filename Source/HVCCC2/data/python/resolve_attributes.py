@@ -64,7 +64,7 @@ def pick_between_two_types(a, b):
 """
 Adds type info to entities, determining it from xml files
 """
-def resolve_attributes(entities, encodable_entities, filenames):
+def resolve_attributes(entities, encodable_entities, filenames, should_only_print_warnings):
 
     entity_code_map = {each.prefix.capitalize() : each for each in entities.values()}
 
@@ -144,16 +144,18 @@ def resolve_attributes(entities, encodable_entities, filenames):
 
                     if not attribute_recognised:
                         if each_clean_name not in target_entity.attributes:
-                            print("[Info]: For entity {2} - for event {1} - found new attribute ({0}).".format(each_clean_name, each_event_code, target_entity.name),
+                            if not should_only_print_warnings:
+                                print("[Info]: For entity {2} - for event {1} - found new attribute ({0}).".format(each_clean_name, each_event_code, target_entity.name),
                             file=sys.stderr)
                             target_entity.attribute_types[each_clean_name] = None
                             target_entity.attribute_codes[each_clean_name] = each_name
                         else:
-                            print(
-                                "[Info]: For entity {2} - for event {1} - found recognised attribute ({0}).".format(each_clean_name,
-                                                                                                        each_event_code,
-                                                                                                        target_entity.name),
-                                file=sys.stderr)
+                            if not should_only_print_warnings:
+                                print(
+                                    "[Info]: For entity {2} - for event {1} - found recognised attribute ({0}).".format(each_clean_name,
+                                                                                                            each_event_code,
+                                                                                                            target_entity.name),
+                                    file=sys.stderr)
                         target_event.attributes.append(each_clean_name)
 
                     each_type, each_header = guess_type(entities, each_clean_name, each_value)

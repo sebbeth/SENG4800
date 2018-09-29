@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
  **/
 #pragma once
 #include <string>
@@ -9,6 +9,8 @@ enum class StackerStateType {
     Maintenance,
     Moving,
     PostDoubleHandleReserved,
+    PostDoubleHandleReservedFail,
+    PostDoubleHandleReservedSyncFail,
     PostStackReserved,
     PostStackReservedFail,
     PostStackReservedSyncFail,
@@ -24,5 +26,6 @@ enum class StackerStateType {
     WorkingStack,
     WorkingStackFail,
     WorkingStackSyncFail,
+    WrappedUp,
     Invalid
 };

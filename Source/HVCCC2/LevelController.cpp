@@ -19,6 +19,24 @@
 
 using namespace std;
 
+int mock_state;
+float mock_level;
+std::tuple<TerminalId, std::string, int> padLengths;
+std::tuple<TerminalId, std::string, int> trackLengths;
+
+// Sets default values
+ALevelController::ALevelController() : addToSimFunctor(this), updateWindowsFunctor(this), animateEntitiesFunctor(this), findSimTimeBoundsFunctor(this), clearDataFunctor(this), stringifyEventsFunctor(this), simTime(0), simStartTime(0), simEndTime(0), speed(1), isPlaying(false) {
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+}
+
+// Called when the game starts or when spawned
+void ALevelController::BeginPlay()
+{
+	Super::BeginPlay();
+	loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
+}
+
 // Called every frame; not very interesting; see template<typename Each> void AnimateEntitiesFunctor::operator()(const Each& eachDataMap) in the header file
 void ALevelController::Tick(float DeltaTime)
 {
@@ -27,48 +45,28 @@ void ALevelController::Tick(float DeltaTime)
 		moveSimTime(DeltaTime * speed);
 		forEachInTuple(data, animateEntitiesFunctor);
 	}
+	forEachInTuple(data, animateEntitiesFunctor);
+}
 
-	//// DATA STUFF
-	//if (isPlaying) {
-	//	moveSimTime(DeltaTime * speed);
-	//}
-	//auto watchIt = windows.begin();
-	//auto entIt = std::get<std::map<Stacker::Id, std::vector<StackerState>>>(states).begin();
-	//auto actorIt = stackerReclaimers.CreateConstIterator();
-	//for (; watchIt != windows.end() && actorIt; (++watchIt, ++entIt, ++actorIt)) {
-	//	auto& eachWindow = (*watchIt);
-	//	auto& eachEntity = (*entIt);
-	//	auto& eachActor = (*actorIt);
-	//	int indexA = eachWindow.first;
-	//	int indexB = eachWindow.second;
+AddToSimFunctor::AddToSimFunctor(): context(nullptr) {
+}
 
+AddToSimFunctor::AddToSimFunctor(ALevelController* context): context(context) {
+}
 
-	//	double timeA = eachEntity.second[indexA].time;
-	//	double timeB = eachEntity.second[indexB].time;
+UpdateWindowsFunctor::UpdateWindowsFunctor() : context(nullptr) {
+}
 
-	//	//the length of time available between the states
-	//	double aToBTimeDist = timeB - timeA;
+UpdateWindowsFunctor::UpdateWindowsFunctor(ALevelController* context): context(context) {
+}
 
-	//	//we have to limit the target time in case the worldTime is beyond the current frame
-	//	double targetTime = std::max(timeA, std::min(timeB, simTime));
+AnimateEntitiesFunctor::AnimateEntitiesFunctor() : context(nullptr) {
+}
 
-	//	//determine the scale as a 
-	//	double scale = aToBTimeDist > 0 ? (targetTime - timeA) / aToBTimeDist : 0;
+AnimateEntitiesFunctor::AnimateEntitiesFunctor(ALevelController* context) : context(context) {
+}
 
-
-	//	double positionA = eachEntity.second[indexA].position;
-	//	double positionB = eachEntity.second[indexB].position;
-
-	//	double positionInterpolated = positionA + (positionB - positionA)*(scale);
-
-	//	double positionDelta = (positionInterpolated - xMin) / (xMax - xMin);
-
-	//	UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f; state a: %d, state b: %d, typea: %d, typeb: %d"), UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str()), float(simTime), indexA, indexB, (int)eachEntity.second[indexA].type, (int)eachEntity.second[indexB].type);
-	//	UE_LOG(LogTemp, Warning, TEXT("scale: %f, timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position delta: %f"), float(scale), float(timeA), float(timeB), float(positionA), float(positionB), float(positionInterpolated), float(positionDelta));
-
-	//	// TEST INPUT
-	//	eachActor->setPosition(positionDelta);
-	//}
+FindSimTimeBoundsFunctor::FindSimTimeBoundsFunctor() : context(nullptr) {
 }
 
 AddToSimFunctor::AddToSimFunctor(): context(nullptr) {
@@ -114,15 +112,16 @@ void ClearDataFunctor::operator()() {
 	context->actorPointers.Empty();
 }
 
-int mock_state;
-float mock_level;
-
-// Sets default values
-ALevelController::ALevelController(): addToSimFunctor(this), updateWindowsFunctor(this), animateEntitiesFunctor(this), findSimTimeBoundsFunctor(this), clearDataFunctor(this), simTime(0), simStartTime(0), simEndTime(0), speed(1), isPlaying(false) {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+TArray<FString> StringifyEventsFunctor::operator()() {
+	interimResult.clear();
+	forEachInTuple(context->data, (*this));
+	std::sort(interimResult.begin(), interimResult.end());
+	TArray<FString> result;
+	for (auto eachPair : interimResult) {
+		result.Add(UTF8_TO_TCHAR(eachPair.second.c_str()));
+	}
+	return result;
 }
-
 
 bool ALevelController::loadXMLData(const  FString& srcPath) {
 	auto stateResultPair = ::loadXMLData(TCHAR_TO_UTF8(*srcPath));
@@ -135,80 +134,13 @@ bool ALevelController::loadXMLData(const  FString& srcPath) {
 		auto& states = stateResultPair.first;
 		forEachInTuple(states, addToSimFunctor);
 		findSimTimeBoundsFunctor();
-
-		//FString fstr = UTF8_TO_TCHAR(XML_PATH.c_str());
-		//UE_LOG(LogTemp, Warning, TEXT("test '%s' blah "), *fstr);
-		//auto& srStates = std::get<StateMap<Stacker>>(states);
-		//for (auto eachEntity : srStates) {
-		//	FString fstr = UTF8_TO_TCHAR(eachEntity.first.nameForBinaryFile().c_str());
-		//	UE_LOG(LogTemp, Warning, TEXT("Stacker name: %s"), *fstr);
-		//	for (auto eachState : eachEntity.second) {
-		//		/*UE_LOG(LogTemp, Warning, TEXT("index: %d, Time: %f; Stacker Position: %f"), i++, eachState.time, eachState.position);*/
-		//		if (eachState.position < xMin) {
-		//			xMin = eachState.position;
-		//		}
-		//		if (eachState.position > xMax) {
-		//			xMax = eachState.position;
-		//		}
-		//	}
-		//	windows.emplace_back(0, std::min(std::size_t(1), eachEntity.second.size()));
-		//}
-
-		///* Train test */
-		//spawnATrain("t_0", NCT_pads[1]->GetActorLocation(), train_locomotive_blueprint);
-
-
-		////conveyorBelts[6]->setMaterial(0);
-		////conveyorBelts[11]->setMaterial(0);
-		////stackerReclaimers[0]->setMaterial(0);
-
-		////conveyorBelts[5]->setMaterial(2);
-		////conveyorBelts[10]->setMaterial(2);
-		////stackerReclaimers[1]->setMaterial(2);
-
-		////stackerReclaimers[1]->setRotation(-120);
-
-		////stackCoal(3);
-
-		////reclaimCoal(1, 1);
-
-
-		////testTime = 0;
-		////mock_state = 1;
-		////mock_level = 0.2;
-		//// Spawn in reclaimers
-		////TODO: SUGGEST TO DO THE APPLICATION OF THESE IN THE BLUEPRINT FLOW GRAPHS INSTEAD OF IN THE DETAILS VIEW FOR CLARITY?
-
-
-		//////Spawn in ship loaders
-		//spawnAShipLoader("NCT_ShipLoader_01", NCT_loader_rails_start[0]->GetActorLocation(), NCT_loader_rails_end[0]->GetActorLocation(), ship_loader_blueprint);
-		//spawnAShipLoader("NCT_ShipLoader_02", NCT_loader_rails_start[1]->GetActorLocation(), NCT_loader_rails_end[1]->GetActorLocation(), ship_loader_blueprint);
-
-		//spawnAShip("NCT_Ship_01", NCT_berths[0]->GetActorLocation(), NCT_berths[0]->GetActorRotation(), ship_blueprint);
-		//spawnAShip("NCT_Ship_02", NCT_berths[1]->GetActorLocation(), NCT_berths[1]->GetActorRotation(), ship_blueprint);
-
-		////// Spawn coal stacks
-		//spawnACoalStack("NCT_CS_1", NCT_pads[0]->GetActorLocation(), NCT_pads[0]->GetActorRotation(), coal_stack_blueprint);
-		//spawnACoalStack("NCT_CS_2", NCT_pads[1]->GetActorLocation(), NCT_pads[1]->GetActorRotation(), coal_stack_blueprint);
-		//spawnACoalStack("NCT_CS_3", NCT_pads[2]->GetActorLocation(), NCT_pads[2]->GetActorRotation(), coal_stack_blueprint);
-
-
-		////UE_LOG(LogTemp, Warning, TEXT("stackCount: %d"), coalStacks.size());
-		////UE_LOG(LogTemp, Warning, TEXT("stack1: %d, stack2: %d, stack3: %d"), coalStacks.at(0), coalStacks.at(1), coalStacks.at(2));
-		//coalStacks[0]->setQuantity(0.8);
-		//coalStacks[1]->setQuantity(0.2);
-		//coalStacks[2]->setQuantity(0.5);
-
 	}
 
 	return stateResultPair.second;
 }
 
-// Called when the game starts or when spawned
-void ALevelController::BeginPlay()
-{
-	Super::BeginPlay();
-	loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
+TArray<FString> ALevelController::getEventMessages() {
+	return stringifyEventsFunctor();
 }
 
 float ALevelController::getSimTime() {
@@ -304,6 +236,89 @@ void ALevelController::setCoalStackingState(int stackerId, int state) {
 	}
 }
 
+
+/*
+	Terminal ID - the ids will link to a terminal (KCT, NCIG, CCT), the pad will also have an ID value.
+*/
+int ALevelController::getPadLength(TerminalId terminal, const int& padId) {
+	// KCT Terminal Pads.
+	
+	switch (terminal) {
+		case TerminalId::KCT:
+			switch(padId) {
+				case 0: // Pad a
+					return 2285;
+				case 1: // pad b
+					return 2180;
+				case 2: //pad c
+					return 2155;
+				case 3: //pad d
+					return 2315;
+					
+			}
+		case TerminalId::NCT:
+			switch (padId) {
+				case 0: // Pad a
+					return 1055;
+				case 1: // pad bc
+					return 1100;
+				case 2: //pad de
+					return 1113;
+				case 3: //pad fg
+					return 1160;
+				case 4: // pad H
+					return 1173;
+			}
+		case TerminalId::CCT:
+			switch (padId) { // alls pads are defined the same length
+				case 0:
+				case 1:
+				case 2:
+				case 3:
+					return 770;
+			}
+		default: 
+			return -1;
+	}
+}
+/*
+*/
+int ALevelController::getTrackLength(TerminalId terminal, const int& trackId) {
+
+	switch (terminal) {
+	case TerminalId::KCT:
+		switch (trackId) {
+		case 0: // Track a
+		case 1: // Track b
+		case 2: // Track c
+		case 3: // Track d
+		case 4: // Track e
+			return 2315;
+		}
+	case TerminalId::NCT:
+		switch (trackId) {
+		case 0: // Track a
+			return 1100;
+		case 1: // Track b
+			return 1113;
+		case 2: // Track c
+			return 1160;
+		case 3: // Track d
+			return 1173;
+		}
+	case TerminalId::CCT:
+		switch (trackId) { // alls Track are defined the same length
+		case 0:
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+			return 770;
+		}
+	default:
+		return -1;
+	}
+}
 /*
 
 */
@@ -514,3 +529,9 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 
 	UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
 }
+FindSimTimeBoundsFunctor::FindSimTimeBoundsFunctor(ALevelController* context): context(context) {
+ClearDataFunctor::ClearDataFunctor() : context(nullptr) {
+ClearDataFunctor::ClearDataFunctor(ALevelController* context): context(context) {
+StringifyEventsFunctor::StringifyEventsFunctor()
+{
+StringifyEventsFunctor::StringifyEventsFunctor(ALevelController * context) : context(context) {

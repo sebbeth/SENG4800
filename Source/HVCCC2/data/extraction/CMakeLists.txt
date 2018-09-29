@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
  **/
 set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Dumpstation/Dumpstation.h
@@ -62,6 +62,16 @@ set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stockpile/StockpileState.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stockpile/StockpileState.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stockpile/StockpileStateTraits.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovement.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovement.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementEventType.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementEventType.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementEvent.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementEvent.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementStateType.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementState.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementState.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementStateTraits.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Vessel/Vessel.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Vessel/Vessel.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Vessel/VesselEventType.h
