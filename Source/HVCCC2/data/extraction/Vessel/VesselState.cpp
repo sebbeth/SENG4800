@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
  **/
 #include "VesselState.h"
 
@@ -10,8 +10,6 @@ VesselStateType VesselState::determineNextType(VesselStateType stateType, Vessel
                 case VesselEventType::AtAnchorage:
                     return VesselStateType::WaitingForCoal;
                 case VesselEventType::Created:
-                    return VesselStateType::Idle;
-                case VesselEventType::YardSpaceAllocated:
                     return VesselStateType::Idle;
                 default:
                     return VesselStateType::Invalid;
@@ -53,14 +51,12 @@ VesselStateType VesselState::determineNextType(VesselStateType stateType, Vessel
             }
         case VesselStateType::Loading:
             switch(eventType) {
-                case VesselEventType::HatchChangeStart:
+                case VesselEventType::HatchChangeComplete:
                     return VesselStateType::ChangingHatches;
                 case VesselEventType::DraftSurveyStart:
                     return VesselStateType::InterimDraftSurvey;
                 case VesselEventType::StopForDeballasting:
                     return VesselStateType::StoppedForDeballasting;
-                case VesselEventType::FullyLoaded:
-                    return VesselStateType::Loaded;
                 default:
                     return VesselStateType::Invalid;
             }
@@ -80,8 +76,6 @@ VesselStateType VesselState::determineNextType(VesselStateType stateType, Vessel
             }
         case VesselStateType::StoppedForDeballasting:
             switch(eventType) {
-                case VesselEventType::BallastTankEmpty:
-                    return VesselStateType::StoppedForDeballasting;
                 case VesselEventType::StopForDeballastingComplete:
                     return VesselStateType::Loading;
                 default:

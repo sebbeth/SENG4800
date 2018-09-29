@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
  **/
 #pragma once
 #include <string>
@@ -14,13 +14,11 @@ public:
 
     int ballast;
     int cargo;
-    int numcargoes;
     std::string terminalID;
     double time;
 
     bool hasBallast() const;
     bool hasCargo() const;
-    bool hasNumcargoes() const;
     bool hasTerminalID() const;
     bool hasTime() const;
 
@@ -30,5 +28,5 @@ public:
 
 template<class Archive>
 void VesselEvent::serialize(Archive & archive) {
-    archive(id, type, ballast, cargo, numcargoes, terminalID, time);
+    archive(id, type, ballast, cargo, terminalID, time);
 }

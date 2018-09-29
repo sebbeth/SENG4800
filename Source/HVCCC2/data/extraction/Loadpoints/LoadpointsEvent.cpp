@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-16 23:45:48.882521
  **/
 #include "LoadpointsEvent.h"
 
@@ -17,7 +17,6 @@ bool LoadpointsEvent::hasAmount() const {
         case LoadpointsEventType::StartPostload:
         case LoadpointsEventType::StartPreload:
         case LoadpointsEventType::StartRecharge:
-        case LoadpointsEventType::WrapUp:
         default:
             return false;
     }
@@ -37,7 +36,6 @@ bool LoadpointsEvent::hasCycleID() const {
         case LoadpointsEventType::StartPostload:
         case LoadpointsEventType::StartPreload:
         case LoadpointsEventType::StartRecharge:
-        case LoadpointsEventType::WrapUp:
         default:
             return false;
     }
@@ -55,7 +53,6 @@ bool LoadpointsEvent::hasLoadpointName() const {
         case LoadpointsEventType::StartPostload:
         case LoadpointsEventType::StartPreload:
         case LoadpointsEventType::StartRecharge:
-        case LoadpointsEventType::WrapUp:
             return true;
         case LoadpointsEventType::StartPostLoad:
         default:
@@ -75,7 +72,6 @@ bool LoadpointsEvent::hasTime() const {
         case LoadpointsEventType::StartPostload:
         case LoadpointsEventType::StartPreload:
         case LoadpointsEventType::StartRecharge:
-        case LoadpointsEventType::WrapUp:
             return true;
         case LoadpointsEventType::StartPostLoad:
         default:
