@@ -144,7 +144,7 @@ float ALevelController::getSimEndTime()
 }
 
 void ALevelController::setSimTime(float absoluteTime) {
-	simTime = absoluteTime;
+	simTime = std::max(0.0, std::min(simEndTime, (double)absoluteTime));
 	forEachInTuple(data, updateWindowsFunctor);
 }
 
