@@ -28,5 +28,7 @@ public:
 		class USplineComponent* Spline;
 
 	UPROPERTY(EditAnywhere, Category = "Track")
-	FString id;
+		FString id;
+	
+	
 };

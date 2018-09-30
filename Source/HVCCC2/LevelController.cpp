@@ -209,9 +209,7 @@ void ALevelController::setPlayState(bool isPlaying) {
 	this->isPlaying = isPlaying;
 }
 
-/*
 
-*/
 void ALevelController::stackCoal(int stackerId) {
 	setCoalStackingState(stackerId, 2);
 }
@@ -410,23 +408,27 @@ AConveyorBelt * ALevelController::spawnAConveyorBelt(FString id, FVector positio
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		AConveyorBelt *actor = world->SpawnActor<AConveyorBelt>(blueprint, position, rotator, spawnParams);
+		actor->id = id;
 		conveyorBelts.Add(actor);
 		return actor;
 	}
 	return NULL;
 }
 
-ATrain * ALevelController::spawnATrain(FString id, FVector position, TSubclassOf<class ATrain> blueprint) {
+ATrain * ALevelController::spawnATrain(FString id, FVector position, FRotator rotation,TSubclassOf<class ATrain> blueprint) 
+// need position and rotation for spawning on train tracks (splines) or weird positions in respect of rotation could occour in the trains location on the spline
+{
 	UWorld* world = GetWorld();
 	if (world) {
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
-		ATrain *actor = world->SpawnActor<ATrain>(blueprint, position, FRotator(0,0,0), spawnParams);
+		ATrain *actor = world->SpawnActor<ATrain>(blueprint, position, rotation, spawnParams);
 		trains.Add(actor);
 		return actor;
 	}
 	return NULL;
 }
+
 
 AStackerReclaimer* ALevelController::getOrSpawnActor(const StackerReclaimer::Id& id) {
 	static std::string nct_names[4] = { "SR01", "SR02", "SR03", "SR04" };
@@ -440,10 +442,12 @@ AStackerReclaimer* ALevelController::getOrSpawnActor(const StackerReclaimer::Id&
 	return nullptr;
 }
 
+
 void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale) {
 
 	//TODO: ENCODE THE LENGTH OF THE RAILS AS FAR AS THE INPUT DATA IS CONCERNED SOMEWHERE
 	//start temporary hack: assume the end is the max value in the current set of states
+	
 	StackerReclaimer::Id targetId = previousState.id;
 	float minPosition = 0;
 	float maxPosition = 0;
@@ -471,5 +475,155 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 	//TODO: ADD TURNING CONSIDERATIONS
 
 
-	UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
+	//UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
 }
+
+void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale) 
+{
+	UE_LOG(LogTemp, Warning, TEXT("animateEntity TRAINS"));
+
+	//std::string nct_IdNames[6] = { "70","72","71","73","74","91" };
+	int32 splineStartPoint = 0;
+
+	TrainMovement::Id targetId = previousState.id;
+	auto& theMap = std::get<DataMap<TrainMovement>>(data);
+	auto targetIterator = theMap.find(targetId);
+	if (targetIterator != theMap.end()) {
+		for (auto eachState : (*targetIterator).second.states) //all train movement states
+		{
+			if (eachState.type == TrainMovementStateType::EnteringTrack) //state seen after train enter track event
+			{ 
+				//for each enter track state we look for the spcific track id's of the known tracks (at the moment only have NCT terminal train tracks )
+
+				for (auto eachTrack : (trainTracks))
+				{
+					// std::string trackId;= std::string(TCHAR_TO_UTF8(*eachTrack->id));
+					
+					if (eachState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)) )
+					{
+						//if any trackID exists in this list from the entertrack state/event
+						//need to check if the train id already exists in our train array
+						//if it doesnt we need to spawn a train on this track
+
+						// need to setup the time it is now in this state, to compaire later with another time thats for THIS TrainId leaving THIS TrackId
+						
+						UE_LOG(LogTemp, Warning, TEXT("timeA: %s "), eachState.trackID.c_str());
+
+						if (trains.Num() == 0) // should only run into a "true" once as the array's length will no longer be "0" 
+						{
+							//we dont have any trains at all
+							//add a new train to the list
+							//spawn it somewhere? not sure as i dont want X trains to spawn ontop of each other on the same tracks
+							spawnATrain(eachState.trainID.c_str(), eachTrack->Spline->GetLocationAtSplinePoint(splineStartPoint, ESplineCoordinateSpace::Local), 
+								eachTrack->Spline->GetRotationAtSplinePoint(splineStartPoint, ESplineCoordinateSpace::Local), train_locomotive_blueprint);
+
+							trains[0]->trackId.Add(eachState.trackID.c_str());
+							trains[0]->startTime.Add(eachState.time);
+							
+							
+						}
+						else
+						{
+							//its NOT empty
+							for (auto eachTrain : (trains))
+							{
+
+								if (eachState.trainID == std::string(TCHAR_TO_UTF8(*eachTrain->id)))
+								{
+									//check which track its on ?
+
+									//make sure the start time is correct for this train, 
+								}
+								else
+								{
+									// train doesnt exist need to spawn it on the track and add it to train list 
+									spawnATrain(eachState.trainID.c_str(), eachTrack->Spline->GetLocationAtSplinePoint(splineStartPoint, ESplineCoordinateSpace::Local),
+										eachTrack->Spline->GetRotationAtSplinePoint(splineStartPoint, ESplineCoordinateSpace::Local), train_locomotive_blueprint);
+									
+									eachTrain->trackId.Add(eachState.trackID.c_str());
+									eachTrain->startTime.Add(eachState.time);
+
+
+								}
+							}
+						}
+						
+
+					}
+				
+				}
+			
+			}
+			else if (eachState.type == TrainMovementStateType::InJunction)//state seen after head leave track event
+			{
+				for (auto eachTrack : (trainTracks))
+				{
+					if (eachState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
+					{
+						//make sure the trains exist in the list of trains
+
+						for (auto eachTrain : (trains))
+						{
+							if (eachState.trainID == std::string(TCHAR_TO_UTF8(*eachTrain->id)))
+							{
+								//update expected finish time for each train in this track
+								eachTrain->endTime.Add(eachState.time);//time of the train leaving the track
+							}
+							else
+							{
+								//first occurance of the trains on implemented tracks this case does not occur HOWEVER, 
+								//in the file XML the first event i accutally saw was a Train Head Leave Track, NOT a Train Enter Track.
+								//This means this case is highly likely to occur in the xml files
+								//train never saw an enter track event might just need to spawn at end?? OR assume a travel from start to end on this track?? 
+
+							}
+						}
+
+					}
+
+				}
+			}//more events carry off this bracket
+			
+		}//eachstate loop
+	}
+
+	//do nice movement stuff here
+	UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f ") // positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f")
+		, float(previousState.time), float(nextState.time) ); //, float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
+}
+
+/*train tracks are strored in the array trainTracks
+
+ATrain* ALevelController::getOrSpawnActor(const TrainMovement::Id& id)
+{
+	std::string nct_IdNames[6] = { "70","72","71","73","74",
+								  "91" }; //cycle ids, trains are reused in different cycles.....
+	//temparay train id holder for testing   
+	static std::string nct_trainIdNames[6] = { "train5", "train16", "train9", "train19","train20" //trk_NCIG_AR1 
+												
+											  ,"train16" }; //trk_NCIG_AR2 
+															//trk_NCIG_AR3 contains no entries 
+	//id.name
+
+	//get list of all CycleIds in data
+	//get list of states
+	//	using list states find first TrackEnter States
+	//	with TrackEnter State get the trackId, TrainId and time (startTime)
+		//Create a TrackEnterList of trackId's trainId's and the time 3 seprate arrays same index values 
+		//for each trackEnter State store the required data 
+		 
+	//Iterate though states for HeadLeaveTrack
+		//repeate above this is classed as front of train leaving track (location of the train will spawn on the spline using the front of model as its "center point" )
+		
+	//repeat agian for TailLeaveTrack as this will more likely affect the carriage(s), (the amount carriages on trains is determined from?)
+
+	//iterate though traintrack array (holds references to all ATrainTrackSpline)
+	//to find each track location to be able to setup the startlocation spawning for each train
+	//spawn TrackEnter train id at TrackEnter track id at start location of the track(spline)
+	//	animation will involve knowing the HeadLeaveTrack id
+	// doing maths to intoplate the time differences between the end and start of the track
+	//train will despawn at end of HeadLeaveTrack event but will be respawned at the next TrackEnter event 
+
+	 
+}
+*/

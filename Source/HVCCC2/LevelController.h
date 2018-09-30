@@ -11,6 +11,7 @@
 #include "data/simulation/SimulationData.h"
 #include "data/simulation/StockpileData.h"
 
+
 #include "TrainTrackSpline.h"
 
 #include "StackerReclaimer.h"
@@ -130,6 +131,13 @@ struct u_actor_type<StackerReclaimer> {
 	using type = AStackerReclaimer;
 };
 
+/*is this needed for all data types?
+template<>
+struct u_actor_type<TrainMovement> {
+	using type = ATrain;
+};
+*/
+
 UCLASS()
 class HVCCC2_API ALevelController : public AActor
 {
@@ -223,6 +231,7 @@ protected:
 		TArray<ATrain*> trains;
 	UPROPERTY(EditAnywhere)
 	TArray<AConveyorBelt*> conveyorBelts;
+
 	UPROPERTY(EditAnywhere)
 	TArray<ATrainTrackSpline*> trainTracks;
 
@@ -278,13 +287,16 @@ private:
 	AShip * spawnAShip(FString id, FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint);
 	AConveyorBelt * spawnAConveyorBelt(FString id, FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint);
 	ACoalStack * spawnACoalStack(FString id, FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint);
-	ATrain * spawnATrain(FString id, FVector position, TSubclassOf<class ATrain> blueprint);
+	ATrain * spawnATrain(FString id, FVector position,FRotator rotation, TSubclassOf<class ATrain> blueprint);
 
 
 	template<typename Id>
 	UActorType<typename Id::Entity>* getOrSpawnActor(const typename Id& id);
 
 	AStackerReclaimer* getOrSpawnActor(const StackerReclaimer::Id& id);
+
+	//
+	//ATrain* getOrSpawnActor(const TrainMovement::Id& id);
 
 	/**
 	 * Exposes all the information about an entity for animation; defaults to calling a function exposing less information for backward compatability;
@@ -302,6 +314,8 @@ private:
 	void animateEntity(Actor* actorPointer, const typename State& previousState, const typename State& nextState, float interpolationScale);
 	
 	void animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale);
+
+	void animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale);
 
 	void stackCoal(int stackerId);
 	void stopStackingCoal(int stackerId);
