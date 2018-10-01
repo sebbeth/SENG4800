@@ -287,6 +287,8 @@ private:
 	int getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> array, AStackerReclaimer* actor);
 
 	AStackerReclaimer* getOrSpawnActor(const StackerReclaimer::Id& id);
+	AShip* getOrSpawnActor(const Vessel::Id& id);
+	ACoalStack* getOrSpawnActor(const Stockpile::Id& id);
 
 	/**
 	 * Exposes all the information about an entity for animation; defaults to calling a function exposing less information for backward compatability;
@@ -304,6 +306,8 @@ private:
 	void animateEntity(Actor* actorPointer, const typename State& previousState, const typename State& nextState, float interpolationScale);
 	
 	void animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale);
+	void animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale);
+	void animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale);
 
 	void stackCoal(int stackerId);
 	void stopStackingCoal(int stackerId);

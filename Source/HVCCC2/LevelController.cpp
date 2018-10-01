@@ -14,6 +14,7 @@
 #include <algorithm>
 #include <cstdlib>
 #include <fstream>
+#include <string>
 
 #include "data/loadData.h"
 
@@ -482,70 +483,78 @@ AStackerReclaimer* ALevelController::getOrSpawnActor(const StackerReclaimer::Id&
 	return nullptr;
 }
 
+
+
+AShip* ALevelController::getOrSpawnActor(const Vessel::Id& id) {
+	static std::string nct_names[4] = { "SR01", "SR02", "SR03", "SR04" };
+	UE_LOG(LogTemp, Warning, TEXT("SHIP SPAWNED"));
+	//if (id.terminal == TerminalId::NCT) {
+		for (int i = 0; i < 4; ++i) {
+			//if (id.name == nct_names[i]) {
+				return spawnAShip(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), NCT_berths[0]->GetActorLocation(), NCT_berths[0]->GetActorRotation(), ship_blueprint);
+			//}
+		}
+	//}
+	return nullptr;
+}
+
+
+ACoalStack* ALevelController::getOrSpawnActor(const Stockpile::Id& id) {
+	static std::string nct_names[4] = { "SR01", "SR02", "SR03", "SR04" };
+	UE_LOG(LogTemp, Warning, TEXT("Stockpile"));
+	if (id.terminal == TerminalId::NCT) {
+	for (int i = 0; i < 3; ++i) {
+		//if (id.name == nct_names[i]) {
+		return spawnACoalStack(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()),NCT_pads[i]->GetActorLocation(), NCT_pads[i]->GetActorRotation(),coal_stack_blueprint);
+		//}
+	}
+	}
+	return nullptr;
+}
+
 void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale) {
 
 	//TODO: ENCODE THE LENGTH OF THE RAILS AS FAR AS THE INPUT DATA IS CONCERNED SOMEWHERE
 	//start temporary hack: assume the end is the max value in the current set of states
 	StackerReclaimer::Id targetId = previousState.id;
 	float minPosition = 0;
-	float maxPosition = 0;
-	auto& theMap = std::get<DataMap<StackerReclaimer>>(data);
-	auto targetIterator = theMap.find(targetId);
-	if (targetIterator != theMap.end()) {
-		for (auto eachState : (*targetIterator).second.states) {
-			if (eachState.position > maxPosition) {
-				maxPosition = eachState.position;
-			}
-		}
-	}
-	//end of temporary hack
-	
+	//TODO, assign the correct track length, not just the 0'th one
+	float maxPosition = (float)getTrackLength(targetId.terminal, 0); 
 	//calculate the absolute position of the machine (along it's rail) by interpolating the previous and next positions
 	//this idea came from vector mathmemathics, with 1d vectors (efficively scalars) is this case; the formula is: previous+(next - previous)*scale;
 	float positionInterpolated = previousState.position + (nextState.position - previousState.position)*interpolationScale;
-
 	//convert the absolute position to a scale between 0.0 and 1.0 which can then be used with the vectors placed manually in the editor.
 	float positionScale = (positionInterpolated - minPosition) / (maxPosition - minPosition);
-
 	//update the actor position
 	actorPointer->setPosition(positionScale);
-	
 	//TODO: ADD TURNING CONSIDERATIONS
-
-	
-	
-	
+		
 	switch (previousState.type)
 	{
 	case StackerReclaimerStateType::Moving:
 		actorPointer->setRotation(0.0f); // If the SR is moving, set it's arm to forward
 		break;
-	case StackerReclaimerStateType::WorkingStack: // If the SR is Stacking, set it's colour and rotate it over the appropriate pile
-		UE_LOG(LogTemp, Warning, TEXT("Stacking")); 
-	//	stackerReclaimers.get
-		
+	case StackerReclaimerStateType::WorkingStack: 
+		// If the SR is Stacking, set it's colour and rotate it over the appropriate pile
 		stackCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer));
 		actorPointer->setRotation(90.0f);
 		break;
-	case StackerReclaimerStateType::WorkingReclaim: // If the SR is Reclaiming, set it's colour and rotate it over the appropriate pile
-		UE_LOG(LogTemp, Warning, TEXT("Reclaim")); 
+	case StackerReclaimerStateType::WorkingReclaim: 
+		// If the SR is Reclaiming, set it's colour and rotate it over the appropriate pile
 		reclaimCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer),0);
-
 		actorPointer->setRotation(-90.0f);
 		break;
 	default:
 		// TODO put both these functions somewhere more sensible where they won't get called every tick.
 		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer));
 		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer),0);
-
 		break;
 	}
-
 
 	//UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
 }
 
-
+ // HELPER FUNCTION FOR  S-R animateEntity
 int ALevelController::getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> array, AStackerReclaimer* actor) {
 
 	for (int i = 0; i < array.Num(); i++) {
@@ -554,4 +563,20 @@ int ALevelController::getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> arra
 		}
 	}
 	return 0;
-} 
+}
+
+
+void ALevelController::animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale) {
+
+	UE_LOG(LogTemp, Warning, TEXT("Vessel animate"));
+
+}
+
+void ALevelController::animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale) {
+	UE_LOG(LogTemp, Warning, TEXT("Coal animate"));
+
+}
+
+
+
+
