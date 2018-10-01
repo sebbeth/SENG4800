@@ -15,6 +15,7 @@
 #include "TrainTrackSpline.h"
 
 #include "StackerReclaimer.h"
+#include "Train.h"
 
 #include "LevelController.generated.h"
 
@@ -131,12 +132,12 @@ struct u_actor_type<StackerReclaimer> {
 	using type = AStackerReclaimer;
 };
 
-/*is this needed for all data types?
+//is this needed for all data types?
 template<>
 struct u_actor_type<TrainMovement> {
 	using type = ATrain;
 };
-*/
+
 
 UCLASS()
 class HVCCC2_API ALevelController : public AActor
@@ -296,7 +297,7 @@ private:
 	AStackerReclaimer* getOrSpawnActor(const StackerReclaimer::Id& id);
 
 	//
-	//ATrain* getOrSpawnActor(const TrainMovement::Id& id);
+	ATrain* getOrSpawnActor(const TrainMovement::Id& id);
 
 	/**
 	 * Exposes all the information about an entity for animation; defaults to calling a function exposing less information for backward compatability;

@@ -9,7 +9,9 @@ class StateTraits<TrainMovementState> {
 public:
     static TrainMovementState initializeFromEvent(const TrainMovementEvent& src) {
         /* STUB: REPLACE WITH LOGIC FOR GUESSING THE INITIAL STATE FROM THE EVENT */
-        return {src.id, TrainMovementStateType::Idle, src.direction, src.sectionID, src.signalID, src.signalState, src.speed, src.time, src.trackID, src.trainID};
+       // return {src.id, TrainMovementStateType::Idle, src.direction, src.sectionID, src.signalID, src.signalState, src.speed, src.time, src.trackID, src.trainID};
+		auto tentativeState = TrainMovementState::determineNextType(TrainMovementStateType::Idle, src.type);//see if the initial event is something that leaves the initial state; (addresses issue where some entities don't have their own creation event in the xml); still just a quickfix stub though 
+		return { src.id, tentativeState != TrainMovementStateType::Invalid ? tentativeState : TrainMovementStateType::Idle, src.direction, src.sectionID, src.signalID, src.signalState, src.speed, src.time, src.trackID, src.trainID };
     }
 
     static TrainMovementState generateNextState(const TrainMovementState& current, const TrainMovementEvent& event) {

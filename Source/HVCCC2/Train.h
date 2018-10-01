@@ -25,8 +25,10 @@ public:
 
 	void setPosition(float position);
 
-	FString id;
-	FString cycleId; //maybe, maybe not somthing else not sure what to do with that xml data
+	FString id; // by logic this is acctually the cycleId not the train's id .....
+	//FString cycleId; //maybe, maybe not somthing else not sure what to do with that xml data
+	FString trainId;
+
 	TArray<FString> trackId; //id of the track this train is currently on
 	//time values represent start and end time of the train on the specified track
 	TArray<double> startTime;
