@@ -353,7 +353,7 @@ void ALevelController::setCoalReclaimingState(int stackerId, int loaderId, int s
 	{
 	case 0:
 		conveyorBelts[12]->setMaterial(state);
-		conveyorBelts[15]->setMaterial(state);\
+		conveyorBelts[15]->setMaterial(state);
 		break;
 	case 1:
 		conveyorBelts[13]->setMaterial(state);
@@ -512,6 +512,46 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 	
 	//TODO: ADD TURNING CONSIDERATIONS
 
+	
+	
+	
+	switch (previousState.type)
+	{
+	case StackerReclaimerStateType::Moving:
+		actorPointer->setRotation(0.0f); // If the SR is moving, set it's arm to forward
+		break;
+	case StackerReclaimerStateType::WorkingStack: // If the SR is Stacking, set it's colour and rotate it over the appropriate pile
+		UE_LOG(LogTemp, Warning, TEXT("Stacking")); 
+	//	stackerReclaimers.get
+		
+		stackCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer));
+		actorPointer->setRotation(90.0f);
+		break;
+	case StackerReclaimerStateType::WorkingReclaim: // If the SR is Reclaiming, set it's colour and rotate it over the appropriate pile
+		UE_LOG(LogTemp, Warning, TEXT("Reclaim")); 
+		reclaimCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer),0);
 
-	UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
+		actorPointer->setRotation(-90.0f);
+		break;
+	default:
+		// TODO put both these functions somewhere more sensible where they won't get called every tick.
+		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer));
+		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer),0);
+
+		break;
+	}
+
+
+	//UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
 }
+
+
+int ALevelController::getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> array, AStackerReclaimer* actor) {
+
+	for (int i = 0; i < array.Num(); i++) {
+		if (array[i] == actor) {
+			return i;
+		}
+	}
+	return 0;
+} 

@@ -284,6 +284,8 @@ private:
 	template<typename Id>
 	UActorType<typename Id::Entity>* getOrSpawnActor(const typename Id& id);
 
+	int getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> array, AStackerReclaimer* actor);
+
 	AStackerReclaimer* getOrSpawnActor(const StackerReclaimer::Id& id);
 
 	/**
