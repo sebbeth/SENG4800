@@ -423,6 +423,7 @@ ATrain * ALevelController::spawnATrain(FString id, FVector position, FRotator ro
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		ATrain *actor = world->SpawnActor<ATrain>(blueprint, position, rotation, spawnParams);
+		actor->id = id;
 		trains.Add(actor);
 		return actor;
 	}
@@ -544,13 +545,14 @@ void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementSt
 					//if we have a matching track id we then check for the appropriate train cycle id
 					if (eachState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
 					{
-						UE_LOG(LogTemp, Warning, TEXT("found a track id %s "), UTF8_TO_TCHAR(eachState.trackID.c_str()) );
+						//UE_LOG(LogTemp, Warning, TEXT("found a track id %s "), UTF8_TO_TCHAR(eachState.trackID.c_str()) );
 						for (auto eachTrain : (trains))
 						{
+							//UE_LOG(LogTemp, Warning, TEXT("cycle id %s trainId is : %s"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(*eachTrain->id));
 							//check the cycle id matches meaning the train is spawned setup additional information
 							if (eachState.id.name == std::string(TCHAR_TO_UTF8(*eachTrain->id))) // match the cycle id's
 							{
-								UE_LOG(LogTemp, Warning, TEXT("found a cycle id %s trainId is : %s"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(eachState.trainID.c_str()) );
+								//UE_LOG(LogTemp, Warning, TEXT("FOUND a cycle id %s trainId is : %s"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(eachState.trainID.c_str()) );
 								//check which track its on ?
 								eachTrain->trainId = UTF8_TO_TCHAR(eachState.trainID.c_str());
 								eachTrain->trackId.Add(UTF8_TO_TCHAR(eachState.trackID.c_str()));
