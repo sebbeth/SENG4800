@@ -14,7 +14,6 @@
 
 
 #include "TrainTrackSpline.h"
-#include "data/extraction/TrainMovement/TrainMovement.h"
 #include "StackerReclaimer.h"
 #include "Train.h"
 
@@ -147,7 +146,7 @@ class HVCCC2_API ALevelController : public AActor
 {
 	GENERATED_BODY()
 
-	friend struct AddToSimFunctor;
+		friend struct AddToSimFunctor;
 	friend struct UpdateWindowsFunctor;
 	friend struct AnimateEntitiesFunctor;
 	friend struct FindSimTimeBoundsFunctor;
@@ -172,8 +171,8 @@ class HVCCC2_API ALevelController : public AActor
 
 	//garbage collection point for the unreal engine actors; stored here instead of instead the main data tuple as it's the easiest way to ensure garbage collection is done safely
 	TArray<AActor*> actorPointers;
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	ALevelController();
 
@@ -224,21 +223,19 @@ protected:
 
 	//actors
 	UPROPERTY(EditAnywhere)
-	TArray<ACoalStack*> coalStacks;
+		TArray<ACoalStack*> coalStacks;
 	UPROPERTY(EditAnywhere)
-	TArray<AStackerReclaimer*> stackerReclaimers;
+		TArray<AStackerReclaimer*> stackerReclaimers;
 	UPROPERTY(EditAnywhere)
-	TArray<AShipLoader*> shipLoaders;
+		TArray<AShipLoader*> shipLoaders;
 	UPROPERTY(EditAnywhere)
-	TArray<AShip*> ships;
+		TArray<AShip*> ships;
 	UPROPERTY(EditAnywhere)
 		TArray<ATrain*> trains;
 	UPROPERTY(EditAnywhere)
-	TArray<AConveyorBelt*> conveyorBelts;
-
+		TArray<AConveyorBelt*> conveyorBelts;
 	UPROPERTY(EditAnywhere)
 	TArray<ATrainTrackSpline*> trainTracks;
-
 
 	//Conveyor Belt position markers
 	UPROPERTY(EditAnywhere)
@@ -255,43 +252,43 @@ public:
 	 * the return type indicates whether or not it succeeds
 	 */
 	UFUNCTION(BlueprintCallable, Category = "data")
-	bool loadXMLData(const FString& srcPath);
+		bool loadXMLData(const FString& srcPath);
 
 	UFUNCTION(BlueprintCallable, Category = "data")
-	TArray<FString> getEventMessages();
+		TArray<FString> getEventMessages();
 
 	//time controls
 	UFUNCTION(BlueprintCallable, Category = "time")
-	float getSimTime();
+		float getSimTime();
 	UFUNCTION(BlueprintCallable, Category = "time")
-	float getSimStart();
+		float getSimStart();
 	UFUNCTION(BlueprintCallable, Category = "time")
-	float getSimEndTime();
+		float getSimEndTime();
 	UFUNCTION(BlueprintCallable, Category = "time")
-	void setSimTime(float absoluteTime);
+		void setSimTime(float absoluteTime);
 	UFUNCTION(BlueprintCallable, Category = "time")
-	void moveSimTime(float deltaTime);
+		void moveSimTime(float deltaTime);
 	UFUNCTION(BlueprintCallable, Category = "time")
-	float getPlaySpeed();
+		float getPlaySpeed();
 	UFUNCTION(BlueprintCallable, Category = "time")
-	void setPlaySpeed(float speed);
+		void setPlaySpeed(float speed);
 
 	//true if playing, false if paused
 	UFUNCTION(BlueprintCallable, Category = "time")
-	bool getPlayState();
+		bool getPlayState();
 
 	//true if playing, false if paused
 	UFUNCTION(BlueprintCallable, Category = "time")
-	void setPlayState(bool isPlaying);
+		void setPlayState(bool isPlaying);
 
 private:
-	
+
 	AStackerReclaimer * spawnAStackerReclaimer(FString id, FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint);
 	AShipLoader * spawnAShipLoader(FString id, FVector railStart, FVector railEnd, TSubclassOf<class AShipLoader> blueprint);
 	AShip * spawnAShip(FString id, FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint);
 	AConveyorBelt * spawnAConveyorBelt(FString id, FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint);
 	ACoalStack * spawnACoalStack(FString id, FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint);
-	ATrain * spawnATrain(FString id, FVector position,FRotator rotation, TSubclassOf<class ATrain> blueprint);
+	ATrain * spawnATrain(FString id, FVector position, FRotator rotation, TSubclassOf<class ATrain> blueprint);
 
 
 	template<typename Id>
@@ -316,11 +313,11 @@ private:
 	 */
 	template<typename Actor, typename State>
 	void animateEntity(Actor* actorPointer, const typename State& previousState, const typename State& nextState, float interpolationScale);
-	
+
 	void animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale);
-
+	
 	void animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale);
-
+	
 	void stackCoal(int stackerId);
 	void stopStackingCoal(int stackerId);
 
@@ -330,7 +327,7 @@ private:
 
 	// Helper functions, don't call these directy
 	void setCoalStackingState(int stackerId, int state);
-	void setCoalReclaimingState(int stackerId,int loaderId, int state);
+	void setCoalReclaimingState(int stackerId, int loaderId, int state);
 
 	// Pad lengths
 	int getPadLength(TerminalId TerminalId, const int& padId);
@@ -492,4 +489,21 @@ void FindSimTimeBoundsFunctor::operator()(const Each& eachDataMap) {
 template<typename Each>
 void ClearDataFunctor::operator()(Each& eachStateMap) {
 	eachStateMap.clear();
+}
+
+template<typename Each>
+inline void StringifyEventsFunctor::operator()(Each & eachDataMap)
+{
+	std::stringstream eachResultBuilder;
+	for (auto& eachEntry : eachDataMap) {
+		auto& eachId = eachEntry.first;
+		for (auto& eachState : eachEntry.second.states) {
+
+			//TODO: REPLACE WITH SOMETHING LIKE StateTraits<typename Each::key_type::Entity>::displayFriendlyStringFor(eachState) (note: this method is not yet implemented or even declared)
+			eachResultBuilder.str("");
+			//TODO: IMPLEMENT A TYPEDEF OR SIMILAR THAT CAN GET FROM Entity CLASSES TO THE STATETYPEDECODER e.g. std::function<std::string(StackerStateType)>Stacker::stateTypeDecoder(StackerStateType type)
+			eachResultBuilder << "Entity " << eachId.nameForBinaryFile() << ": Current State: " << int(eachState.type);
+			interimResult.emplace_back(eachState.time, eachResultBuilder.str());
+		}
+	}
 }
