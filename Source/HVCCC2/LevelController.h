@@ -14,7 +14,7 @@
 
 
 #include "TrainTrackSpline.h"
-
+#include "data/extraction/TrainMovement/TrainMovement.h"
 #include "StackerReclaimer.h"
 #include "Train.h"
 

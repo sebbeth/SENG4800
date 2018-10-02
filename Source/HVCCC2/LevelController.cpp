@@ -542,7 +542,9 @@ ATrain* ALevelController::getOrSpawnActor(const TrainMovement::Id& id)
 		}
 		
 	}
-	*/
+	
+	
+	OLD CODE TO SPAWN ONLY THE CYCLE ID's OF KNOWN TRAINS CHANGING TO SPAWNING ALL TRAINS IN XML FILE
 	std::string nct_IdNames[6] = { "70","72","71","73","74","91" };
 	for (int i = 0; i < 6; i++)
 	{
@@ -550,16 +552,18 @@ ATrain* ALevelController::getOrSpawnActor(const TrainMovement::Id& id)
 		{
 			//UE_LOG(LogTemp, Warning, TEXT("found a cycle id %s thenameforbinaryfile: %s "), UTF8_TO_TCHAR(nct_IdNames[i].c_str()), UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()));
 			//spawn location is a hidden track
-			return spawnATrain(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), trainTracks[0]->Spline->GetLocationAtSplinePoint(i, ESplineCoordinateSpace::World),
-				trainTracks[0]->Spline->GetRotationAtSplinePoint(i, ESplineCoordinateSpace::World), train_locomotive_blueprint); 
+			
 		}
 
 	}
 	return nullptr;
+	*/
 
+	return spawnATrain(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
+		trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World), train_locomotive_blueprint);
 }
 
-void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale) 
+void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale)
 {
 	//UE_LOG(LogTemp, Warning, TEXT("animateEntity TRAINS"));
 
@@ -568,7 +572,8 @@ void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementSt
 	TrainMovement::Id targetId = previousState.id;
 	auto& theMap = std::get<DataMap<TrainMovement>>(data);
 	auto targetIterator = theMap.find(targetId);
-	if (targetIterator != theMap.end()) {
+	if (targetIterator != theMap.end())
+	{
 		for (auto eachState : (*targetIterator).second.states) //all train movement states
 		{
 			//UE_LOG(LogTemp, Warning, TEXT("animateEntity TRAINS"));
@@ -580,7 +585,7 @@ void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementSt
 			}
 
 			if (eachState.type == TrainMovementStateType::EnteringTrack) //state seen after train enter track event
-			{ 
+			{
 				//UE_LOG(LogTemp, Warning, TEXT("EnteringTrack state")); // never reaches here.......................................
 
 				//for each enter trainmovmentstate state we look for the specific track id's of the known tracks (at the moment only have NCT terminal train tracks 
@@ -591,16 +596,15 @@ void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementSt
 					//if we have a matching track id we then check for the appropriate train cycle id
 					if (eachState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
 					{
-						//UE_LOG(LogTemp, Warning, TEXT("found a track id %s "), UTF8_TO_TCHAR(eachState.trackID.c_str()) );
+						UE_LOG(LogTemp, Warning, TEXT("found a track id %s "), UTF8_TO_TCHAR(eachState.trackID.c_str()));
 						for (auto eachTrain : (trains))
 						{
-							//UE_LOG(LogTemp, Warning, TEXT("cycle id %s trainId is : %s"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(*eachTrain->id));
+							UE_LOG(LogTemp, Warning, TEXT("cycle id %s trainId is : %s"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(*eachTrain->id));
 							//check the cycle id matches meaning the train is spawned setup additional information
-							if (eachState.id.name == std::string(TCHAR_TO_UTF8(*eachTrain->id))) // match the cycle id's
+							if (eachState.id.name == std::string(TCHAR_TO_UTF8(*eachTrain->id))) // match the train id's
 							{
 								//UE_LOG(LogTemp, Warning, TEXT("FOUND a cycle id %s trainId is : %s"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(eachState.trainID.c_str()) );
 								//check which track its on ?
-								eachTrain->trainId = UTF8_TO_TCHAR(eachState.trainID.c_str());
 								eachTrain->trackId.Add(UTF8_TO_TCHAR(eachState.trackID.c_str()));
 								eachTrain->startTime.Add(eachState.time); // i believe ill need this to calculate the maths later for the smoothing of animation
 
@@ -616,12 +620,12 @@ void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementSt
 					{
 						// not an implemented track yet
 					}
-							
-				
+
+
 				}
-			
+
 			}
-			
+
 			else if (eachState.type == TrainMovementStateType::InJunction)//state seen after head leave track event
 			{
 				for (auto eachTrack : (trainTracks))
@@ -651,9 +655,10 @@ void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementSt
 
 				}
 			}//more events carry off this bracket
-			
+
 		}//eachstate loop
-		
+
+		/*
 		if (trains[0]->trackId.Num() != 0) // confirms no events are getting fired......
 		{
 
@@ -668,7 +673,7 @@ void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementSt
 		//do nice movement stuff here
 	}
 
-	
+
 }
 
 	/*
@@ -714,23 +719,23 @@ void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementSt
 	train tracks are stored in the array trainTracks
 	std::string nct_IdNames[6] = { "70","72","71","73","74",
 								  "91" }; //cycle ids, trains are reused in different cycles.....
-	//temporary train id holder for testing   
-	static std::string nct_trainIdNames[6] = { "train5", "train16", "train9", "train19","train20" //trk_NCIG_AR1 
-												
-											  ,"train16" }; //trk_NCIG_AR2 
-															//trk_NCIG_AR3 contains no entries 
+	//temporary train id holder for testing
+	static std::string nct_trainIdNames[6] = { "train5", "train16", "train9", "train19","train20" //trk_NCIG_AR1
+
+											  ,"train16" }; //trk_NCIG_AR2
+															//trk_NCIG_AR3 contains no entries
 	//id.name
 
 	//get list of all CycleIds in data
 	//get list of states
 	//	using list states find first TrackEnter States
 	//	with TrackEnter State get the trackId, TrainId and time (startTime)
-		//Create a TrackEnterList of trackId's trainId's and the time 3 separate arrays same index values 
-		//for each trackEnter State store the required data 
-		 
+		//Create a TrackEnterList of trackId's trainId's and the time 3 separate arrays same index values
+		//for each trackEnter State store the required data
+
 	//Iterate though states for HeadLeaveTrack
 		//repeat above this is classed as front of train leaving track (location of the train will spawn on the spline using the front of model as its "center point" )
-		
+
 	//repeat again for TailLeaveTrack as this will more likely affect the carriage(s), (the amount carriages on trains is determined from?)
 
 	//iterate though traintrack array (holds references to all ATrainTrackSpline)
@@ -738,8 +743,9 @@ void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementSt
 	//spawn TrackEnter train id at TrackEnter track id at start location of the track(spline)
 	//	animation will involve knowing the HeadLeaveTrack id
 	// doing maths to interpolate the time differences between the end and start of the track
-	//train will despawn at end of HeadLeaveTrack event but will be re-spawned at the next TrackEnter event 
+	//train will despawn at end of HeadLeaveTrack event but will be re-spawned at the next TrackEnter event
 
-	 
+
+	*/
+	}
 }
-*/
