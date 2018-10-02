@@ -12,8 +12,8 @@
 #include "data/simulation/StockpileData.h"
 #include "data/extraction/TerminalId.h"
 #include "StackerReclaimer.h"
-
-
+#include "CoalStack.h"
+#include "Ship.h"
 
 #include "LevelController.generated.h"
 
@@ -128,6 +128,11 @@ struct StringifyEventsFunctor {
 template<>
 struct u_actor_type<StackerReclaimer> {
 	using type = AStackerReclaimer;
+};
+
+template<>
+struct u_actor_type<Vessel> {
+	using type = AShip;
 };
 
 UCLASS()

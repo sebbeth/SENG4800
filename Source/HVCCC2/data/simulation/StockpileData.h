@@ -2,6 +2,13 @@
 #include <vector>
 #include "SimulationData.h"
 #include "../extraction/Stockpile/Stockpile.h"
+#include "../../CoalStack.h"
+
+template<>
+struct u_actor_type<Stockpile> {
+	using type = ACoalStack;
+};
+
 
 template<>
 class SimulationData<Stockpile>
