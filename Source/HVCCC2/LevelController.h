@@ -10,12 +10,15 @@
 #include "data/extraction/implementedEntities.h"
 #include "data/simulation/SimulationData.h"
 #include "data/simulation/StockpileData.h"
+#include "data/extraction/TerminalId.h"
 
 
 #include "TrainTrackSpline.h"
 
 #include "StackerReclaimer.h"
 #include "Train.h"
+
+
 
 #include "LevelController.generated.h"
 
@@ -329,6 +332,10 @@ private:
 	void setCoalStackingState(int stackerId, int state);
 	void setCoalReclaimingState(int stackerId,int loaderId, int state);
 
+	// Pad lengths
+	int getPadLength(TerminalId TerminalId, const int& padId);
+	int getTrackLength(TerminalId TerminalId, const int& trackID);
+
 	int testTime; // Just being used for testing
 
 };
@@ -476,7 +483,7 @@ void FindSimTimeBoundsFunctor::operator()(const Each& eachDataMap) {
 				context->simStartTime = eachState.time;
 			}
 			if (eachState.time > context->simEndTime) {
-				context->simStartTime = eachState.time;
+				context->simEndTime = eachState.time;
 			}
 		}
 	}
@@ -486,21 +493,3 @@ template<typename Each>
 void ClearDataFunctor::operator()(Each& eachStateMap) {
 	eachStateMap.clear();
 }
-
-template<typename Each>
-inline void StringifyEventsFunctor::operator()(Each & eachDataMap)
-{
-	std::stringstream eachResultBuilder;
-	for (auto& eachEntry : eachDataMap) {
-		auto& eachId = eachEntry.first;
-		for (auto& eachState : eachEntry.second.states) {
-
-			//TODO: REPLACE WITH SOMETHING LIKE StateTraits<typename Each::key_type::Entity>::displayFriendlyStringFor(eachState) (note: this method is not yet implemented or even declared)
-			eachResultBuilder.str("");
-			//TODO: IMPLEMENT A TYPEDEF OR SIMILAR THAT CAN GET FROM Entity CLASSES TO THE STATETYPEDECODER e.g. std::function<std::string(StackerStateType)>Stacker::stateTypeDecoder(StackerStateType type)
-			eachResultBuilder << "Entity " << eachId.nameForBinaryFile() << ": Current State: " << int(eachState.type);
-			interimResult.emplace_back(eachState.time, eachResultBuilder.str());
-		}
-	}
-}
-

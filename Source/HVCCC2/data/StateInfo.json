@@ -266,49 +266,49 @@
     },
     "Dumpstation": {
       "tagPrefix": "ds",
-      "initial": "idle",
+      "initial": "Idle",
       "hasTerminal": true,
       "identifier": "dumpstationID",
       "transitions": {
-        "idle": {
-          "MaintStart": "maintenance",
-          "DumpOpStart": "preDumpReserved"
+        "Idle": {
+          "MaintStart": "Maintenance",
+          "DumpOpStart": "PreDumpReserved"
         },
-        "maintenance": {
-          "MaintComp": "idle"
+        "Maintenance": {
+          "MaintComp": "Idle"
         },
-        "preDumpReserved": {
-          "Fail": "preDumpReservedFail",
-          "SyncedFail": "preDumpReservedSyncedFail",
-          "DumpStart": "working"
+        "PreDumpReserved": {
+          "Fail": "PreDumpReservedFail",
+          "SyncedFail": "PreDumpReservedSyncedFail",
+          "DumpStart": "Working"
         },
-        "preDumpReservedFail": {
-          "Fix": "preDumpReserved"
+        "PreDumpReservedFail": {
+          "Fix": "PreDumpReserved"
         },
-        "preDumpReservedSyncedFail": {
-          "SyncedFix": "preDumpReserved"
+        "PreDumpReservedSyncedFail": {
+          "SyncedFix": "PreDumpReserved"
         },
-        "working": {
-          "Fail": "workingFail",
-          "SyncedFail": "workingSyncedFail",
-          "DumpComp": "postDumpReserved"
+        "Working": {
+          "Fail": "WorkingFail",
+          "SyncedFail": "WorkingSyncedFail",
+          "DumpComp": "PostDumpReserved"
         },
-        "workingFail": {
-          "Fix": "working"
+        "WorkingFail": {
+          "Fix": "Working"
         },
-        "workingSyncedFail": {
-          "SyncedFix": "working"
+        "WorkingSyncedFail": {
+          "SyncedFix": "Working"
         },
-        "postDumpReserved": {
-          "Fail": "postReservedDumpFail",
-          "SyncedFail": "postDumpReservedSyncedFail",
-          "DumpOpComp": "idle"
+        "PostDumpReserved": {
+          "Fail": "PostReservedDumpFail",
+          "SyncedFail": "PostDumpReservedSyncedFail",
+          "DumpOpComp": "Idle"
         },
-        "postDumpReservedFail": {
-          "Fix": "postDumpReserved"
+        "PostDumpReservedFail": {
+          "Fix": "PostDumpReserved"
         },
-        "postDumpReservedSyncedFix": {
-          "SyncedFix": "postDumpReserved"
+        "PostDumpReservedSyncedFix": {
+          "SyncedFix": "PostDumpReserved"
         }
       }
     },
@@ -548,7 +548,7 @@
       "tagPrefix": "train",
       "initial": "Idle",
       "hasTerminal": false,
-      "identifier": "cycleID",
+      "identifier": "trainID",
       "transitions": {
         "Idle": {
           "HeadLeaveTrack": "InJunction"
@@ -579,7 +579,7 @@
       }
     }
   },
-  "terminals": ["CCT", "KTC", "NCT"],
+  "terminals": ["CCT", "KCT", "NCT"],
   "merges": {
     "StackerReclaimer": ["Stacker", "Reclaimer"]
   }

@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-19 13:51:09.974486
+ * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
  **/
 #pragma once
 #include "../StateTraits.h"
@@ -9,7 +9,8 @@ class StateTraits<StackerState> {
 public:
     static StackerState initializeFromEvent(const StackerEvent& src) {
         /* STUB: REPLACE WITH LOGIC FOR GUESSING THE INITIAL STATE FROM THE EVENT */
-        return {src.id, StackerStateType::Idle, src.amount, src.position, src.stockpileID, src.time};
+        auto tentativeState = StackerState::determineNextType(StackerStateType::Idle, src.type);//see if the initial event is something that leaves the initial state; (addresses issue where some entities don't have their own creation event in the xml); still just a quickfix stub though
+        return {src.id, tentativeState != StackerStateType::Invalid ? tentativeState : StackerStateType::Idle, src.amount, src.position, src.stockpileID, src.time};
     }
 
     static StackerState generateNextState(const StackerState& current, const StackerEvent& event) {

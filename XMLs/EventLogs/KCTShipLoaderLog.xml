@@ -1,0 +1,103 @@
+<events>
+    <SlOnMove shiploaderID="7.08" time="89.559911" pos="50.00"/>
+    <SlOnStopMove shiploaderID="7.08" time="89.640786" pos="195.58"/>
+    <SlStartVesselLoad shiploaderID="7.08" time="89.640786" pos="195.58" vesselID="1"/>
+    <SlLoadOpStart shiploaderID="7.08" time="89.640786" pos="195.58" stockpileID="KCT1.1"/>
+    <SlLoadStart shiploaderID="7.08" time="89.777001" pos="195.58" stockpileID="KCT1.1"/>
+    <SlLoadComp shiploaderID="7.08" time="90.223744" pos="195.58" stockpileID="KCT1.1" amount="3797.31"/>
+    <SlLoadOpComp shiploaderID="7.08" time="90.223744" pos="195.58" stockpileID="KCT1.1" amount="3797.31"/>
+    <SlLoadOpStart shiploaderID="7.08" time="92.264577" pos="195.58" stockpileID="KCT1.2"/>
+    <SlLoadStart shiploaderID="7.08" time="92.404480" pos="195.58" stockpileID="KCT1.2"/>
+    <SlLoadComp shiploaderID="7.08" time="94.757421" pos="195.58" stockpileID="KCT1.2" amount="20000.00"/>
+    <SlLoadOpComp shiploaderID="7.08" time="94.757421" pos="195.58" stockpileID="KCT1.2" amount="20000.00"/>
+    <SlLoadOpStart shiploaderID="7.08" time="94.868255" pos="195.58" stockpileID="KCT1.4"/>
+    <SlLoadStart shiploaderID="7.08" time="95.018208" pos="195.58" stockpileID="KCT1.4"/>
+    <SlLoadComp shiploaderID="7.08" time="96.166894" pos="195.58" stockpileID="KCT1.4" amount="9763.83"/>
+    <SlLoadOpComp shiploaderID="7.08" time="96.166894" pos="195.58" stockpileID="KCT1.4" amount="9763.83"/>
+    <SlLoadOpStart shiploaderID="7.08" time="98.277727" pos="195.58" stockpileID="KCT1.4"/>
+    <SlLoadStart shiploaderID="7.08" time="98.427680" pos="195.58" stockpileID="KCT1.4"/>
+    <SlLoadComp shiploaderID="7.08" time="101.657376" pos="195.58" stockpileID="KCT1.4" amount="27452.41"/>
+    <SlLoadOpComp shiploaderID="7.08" time="101.657376" pos="195.58" stockpileID="KCT1.4" amount="37216.24"/>
+    <SlLoadOpStart shiploaderID="7.08" time="103.727098" pos="195.58" stockpileID="KCT1.3"/>
+    <SlLoadStart shiploaderID="7.08" time="103.870738" pos="195.58" stockpileID="KCT1.3"/>
+    <SlLoadComp shiploaderID="7.08" time="106.341326" pos="195.58" stockpileID="KCT1.3" amount="21000.00"/>
+    <SlLoadOpComp shiploaderID="7.08" time="106.341326" pos="195.58" stockpileID="KCT1.3" amount="21000.00"/>
+    <SlLoadOpStart shiploaderID="7.08" time="106.423271" pos="195.58" stockpileID="KCT1.1"/>
+    <SlLoadStart shiploaderID="7.08" time="106.559487" pos="195.58" stockpileID="KCT1.1"/>
+    <SlLoadComp shiploaderID="7.08" time="107.548765" pos="195.58" stockpileID="KCT1.1" amount="8408.87"/>
+    <SlLoadOpComp shiploaderID="7.08" time="107.548765" pos="195.58" stockpileID="KCT1.1" amount="12206.18"/>
+    <SlLoadOpStart shiploaderID="7.08" time="109.618487" pos="195.58" stockpileID="KCT1.4"/>
+    <SlLoadStart shiploaderID="7.08" time="109.768440" pos="195.58" stockpileID="KCT1.4"/>
+    <SlLoadComp shiploaderID="7.08" time="112.953143" pos="195.58" stockpileID="KCT1.4" amount="27069.97"/>
+    <SlLoadOpComp shiploaderID="7.08" time="112.953143" pos="195.58" stockpileID="KCT1.4" amount="64286.21"/>
+    <SlLoadOpStart shiploaderID="7.08" time="115.104532" pos="195.58" stockpileID="KCT1.1"/>
+    <SlLoadStart shiploaderID="7.08" time="115.240747" pos="195.58" stockpileID="KCT1.1"/>
+    <SlStartVesselDraftSurvey shiploaderID="7.08" time="115.792428" pos="195.58" stockpileID="1"/>
+    <SlFinishVesselDraftSurvey shiploaderID="7.08" time="116.292428" pos="195.58" stockpileID="1"/>
+    <SlLoadComp shiploaderID="7.08" time="117.092933" pos="195.58" stockpileID="KCT1.1" amount="7793.82"/>
+    <SlLoadOpComp shiploaderID="7.08" time="117.092933" pos="195.58" stockpileID="KCT1.1" amount="20000.00"/>
+    <SlLoadOpStart shiploaderID="7.08" time="117.244321" pos="195.58" stockpileID="KCT1.4"/>
+    <SlLoadStart shiploaderID="7.08" time="117.394275" pos="195.58" stockpileID="KCT1.4"/>
+    <SlLoadComp shiploaderID="7.08" time="118.607662" pos="195.58" stockpileID="KCT1.4" amount="10313.79"/>
+    <SlLoadOpComp shiploaderID="7.08" time="118.607662" pos="195.58" stockpileID="KCT1.4" amount="74600.00"/>
+    <SlOnMove shiploaderID="7.08" time="118.607940" pos="195.58"/>
+    <SlOnStopMove shiploaderID="7.08" time="118.763865" pos="476.24"/>
+    <SlStartVesselLoad shiploaderID="7.08" time="118.763865" pos="476.24" vesselID="3"/>
+    <SlLoadOpStart shiploaderID="7.08" time="118.763865" pos="476.24" stockpileID="KCT3.1"/>
+    <SlLoadStart shiploaderID="7.08" time="119.024382" pos="476.24" stockpileID="KCT3.1"/>
+    <SlLoadComp shiploaderID="7.08" time="124.518429" pos="476.24" stockpileID="KCT3.1" amount="46699.40"/>
+    <SlLoadOpComp shiploaderID="7.08" time="124.518429" pos="476.24" stockpileID="KCT3.1" amount="46699.40"/>
+    <SlOnMove shiploaderID="7.09" time="124.520459" pos="760.00"/>
+    <SlOnStopMove shiploaderID="7.09" time="124.528090" pos="773.74"/>
+    <SlStartVesselLoad shiploaderID="7.09" time="124.623793" pos="773.74" vesselID="1836"/>
+    <SlLoadOpStart shiploaderID="7.09" time="124.623793" pos="773.74" stockpileID="KCT1836.1"/>
+    <SlLoadStart shiploaderID="7.09" time="124.891456" pos="773.74" stockpileID="KCT1836.1"/>
+    <SlLoadComp shiploaderID="7.09" time="125.689512" pos="773.74" stockpileID="KCT1836.1" amount="6783.47"/>
+    <SlLoadOpComp shiploaderID="7.09" time="125.689512" pos="773.74" stockpileID="KCT1836.1" amount="6783.47"/>
+    <SlLoadOpStart shiploaderID="7.08" time="126.622041" pos="476.24" stockpileID="KCT3.1"/>
+    <SlLoadStart shiploaderID="7.08" time="126.882558" pos="476.24" stockpileID="KCT3.1"/>
+    <SlLoadComp shiploaderID="7.08" time="130.259884" pos="476.24" stockpileID="KCT3.1" amount="28707.27"/>
+    <SlLoadOpComp shiploaderID="7.08" time="130.259884" pos="476.24" stockpileID="KCT3.1" amount="75406.68"/>
+    <SlLoadOpStart shiploaderID="7.09" time="130.363495" pos="773.74" stockpileID="KCT1836.1"/>
+    <SlLoadStart shiploaderID="7.09" time="130.631158" pos="773.74" stockpileID="KCT1836.1"/>
+    <SlLoadComp shiploaderID="7.09" time="137.690653" pos="773.74" stockpileID="KCT1836.1" amount="60005.71"/>
+    <SlLoadOpComp shiploaderID="7.09" time="137.690653" pos="773.74" stockpileID="KCT1836.1" amount="66789.18"/>
+    <SlLoadOpStart shiploaderID="7.08" time="137.794265" pos="476.24" stockpileID="KCT3.1"/>
+    <SlLoadStart shiploaderID="7.08" time="138.054782" pos="476.24" stockpileID="KCT3.1"/>
+    <SlStartVesselDraftSurvey shiploaderID="7.08" time="138.295369" pos="476.24" stockpileID="3"/>
+    <SlFinishVesselDraftSurvey shiploaderID="7.08" time="138.795369" pos="476.24" stockpileID="3"/>
+    <SlLoadComp shiploaderID="7.08" time="139.595874" pos="476.24" stockpileID="KCT3.1" amount="10493.32"/>
+    <SlLoadOpComp shiploaderID="7.08" time="139.595874" pos="476.24" stockpileID="KCT3.1" amount="85900.00"/>
+    <SlLoadOpStart shiploaderID="7.09" time="142.473903" pos="773.74" stockpileID="KCT1836.1"/>
+    <SlLoadStart shiploaderID="7.09" time="142.741566" pos="773.74" stockpileID="KCT1836.1"/>
+    <SlStartVesselDraftSurvey shiploaderID="7.09" time="146.981859" pos="773.74" stockpileID="1836"/>
+    <SlFinishVesselDraftSurvey shiploaderID="7.09" time="147.481859" pos="773.74" stockpileID="1836"/>
+    <SlLoadComp shiploaderID="7.09" time="148.572251" pos="773.74" stockpileID="KCT1836.1" amount="47310.82"/>
+    <SlLoadOpComp shiploaderID="7.09" time="148.572251" pos="773.74" stockpileID="KCT1836.1" amount="114100.00"/>
+    <SlOnMove shiploaderID="7.08" time="165.020080" pos="476.24"/>
+    <SlOnStopMove shiploaderID="7.08" time="165.177283" pos="193.28"/>
+    <SlStartVesselLoad shiploaderID="7.08" time="165.177283" pos="193.28" vesselID="2"/>
+    <SlLoadOpStart shiploaderID="7.08" time="165.177283" pos="193.28" stockpileID="KCT2.1"/>
+    <SlLoadStart shiploaderID="7.08" time="165.316842" pos="193.28" stockpileID="KCT2.1"/>
+    <SlLoadComp shiploaderID="7.08" time="165.880744" pos="193.28" stockpileID="KCT2.1" amount="4793.17"/>
+    <SlLoadOpComp shiploaderID="7.08" time="165.880744" pos="193.28" stockpileID="KCT2.1" amount="4793.17"/>
+    <SlLoadOpStart shiploaderID="7.08" time="167.881022" pos="193.28" stockpileID="KCT2.1"/>
+    <SlLoadStart shiploaderID="7.08" time="168.020581" pos="193.28" stockpileID="KCT2.1"/>
+    <SlLoadComp shiploaderID="7.08" time="171.077491" pos="193.28" stockpileID="KCT2.1" amount="25983.74"/>
+    <SlLoadOpComp shiploaderID="7.08" time="171.077491" pos="193.28" stockpileID="KCT2.1" amount="30776.90"/>
+    <SlLoadOpStart shiploaderID="7.08" time="173.077769" pos="193.28" stockpileID="KCT2.1"/>
+    <SlLoadStart shiploaderID="7.08" time="173.217329" pos="193.28" stockpileID="KCT2.1"/>
+    <SlFail shiploaderID="7.08" time="174.913118" pos="193.28" stockpileID="Stockpile ID"/>
+    <SlFix shiploaderID="7.08" time="174.935430" pos="193.28" stockpileID="Stockpile ID"/>
+    <SlLoadComp shiploaderID="7.08" time="176.328426" pos="193.28" stockpileID="KCT2.1" amount="26254.67"/>
+    <SlLoadOpComp shiploaderID="7.08" time="176.328426" pos="193.28" stockpileID="KCT2.1" amount="57031.58"/>
+    <SlLoadOpStart shiploaderID="7.08" time="178.328704" pos="193.28" stockpileID="KCT2.1"/>
+    <SlLoadStart shiploaderID="7.08" time="178.468263" pos="193.28" stockpileID="KCT2.1"/>
+    <SlStartVesselDraftSurvey shiploaderID="7.08" time="179.377685" pos="193.28" stockpileID="2"/>
+    <SlFinishVesselDraftSurvey shiploaderID="7.08" time="179.877685" pos="193.28" stockpileID="2"/>
+    <SlLoadComp shiploaderID="7.08" time="180.678190" pos="193.28" stockpileID="KCT2.1" amount="14768.42"/>
+    <SlLoadOpComp shiploaderID="7.08" time="180.678190" pos="193.28" stockpileID="KCT2.1" amount="71800.00"/>
+    <SlWrapUp shiploaderID="7.08" time="181.877553" pos="193.28"/>
+    <SlWrapUp shiploaderID="7.09" time="181.877553" pos="773.74"/>
+    <SlWrapUp shiploaderID="7.10" time="181.877553" pos="1480.00"/>
+</events>
