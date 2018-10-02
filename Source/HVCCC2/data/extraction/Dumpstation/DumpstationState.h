@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-02 12:43:09.061192
  **/
 #pragma once
 #include <string>
@@ -8,7 +8,6 @@
 #include "DumpstationStateType.h"
 #include "../Dumpstation/Dumpstation.h"
 #include "../Stockpile/Stockpile.h"
-#include "../TrainMovement/TrainMovement.h"
 class DumpstationState {
 public:
     using Entity = Dumpstation;
@@ -17,7 +16,7 @@ public:
     
 
     double amount;
-    TrainMovement::Id cycleID;
+    int cycleID;
     Stockpile::Id stockpileID;
     double time;
     

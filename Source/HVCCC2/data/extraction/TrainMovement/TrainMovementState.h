@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-02 12:43:09.061192
  **/
 #pragma once
 #include <string>
@@ -14,6 +14,7 @@ public:
     TrainMovementStateType type;
     
 
+    int cycleID;
     std::string direction;
     std::string sectionID;
     std::string signalID;
@@ -21,7 +22,6 @@ public:
     double speed;
     double time;
     std::string trackID;
-    std::string trainID;
     
     TrainMovementState() = default;
 
@@ -32,5 +32,5 @@ public:
 
 template<class Archive>
 void TrainMovementState::serialize(Archive & archive) {
-    archive(id, type, direction, sectionID, signalID, signalState, speed, time, trackID, trainID);
+    archive(id, type, cycleID, direction, sectionID, signalID, signalState, speed, time, trackID);
 }

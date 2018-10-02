@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-02 12:43:09.061192
  **/
 #include "extractData.h"
 #include <regex>
@@ -17,13 +17,13 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, DumpstationE
     switch(destination.type) {
         case DumpstationEventType::DumpComplete:
             XMLCheckResult(extractAttribute(source, destination.amount, "amount"), 0);
-            XMLCheckResult(extractAttribute(source, destination.cycleID.name, "cycleID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
         case DumpstationEventType::DumpOperationComplete:
         case DumpstationEventType::DumpOperationStart:
         case DumpstationEventType::DumpStart:
-            XMLCheckResult(extractAttribute(source, destination.cycleID.name, "cycleID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
             XMLCheckResult(extractAttribute(source, destination.stockpileID.name, "stockpileID"), 0);
             destination.stockpileID.terminal = theTerminal;
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
@@ -55,13 +55,13 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, LoadpointsEv
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
         case LoadpointsEventType::StartLoad:
-            XMLCheckResult(extractAttribute(source, destination.cycleID.name, "cycleID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
             XMLCheckResult(extractAttribute(source, destination.loadpointName, "loadpointName"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
         case LoadpointsEventType::FinishLoad:
             XMLCheckResult(extractAttribute(source, destination.amount, "amount"), 0);
-            XMLCheckResult(extractAttribute(source, destination.cycleID.name, "cycleID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
             XMLCheckResult(extractAttribute(source, destination.loadpointName, "loadpointName"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
@@ -256,28 +256,28 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, TrainMovemen
         XMLCheckResult(tinyxml2::XML_ERROR_PARSING_ELEMENT, 0);
     }
     //extract the identifying name
-    XMLCheckResult(extractAttribute(source, destination.id.name, "cycleID"), 0);
+    XMLCheckResult(extractAttribute(source, destination.id.name, "trainID"), 0);
 
     switch(destination.type) {
         case TrainMovementEventType::WaitForTracks:
+            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
-            XMLCheckResult(extractAttribute(source, destination.trainID, "trainID"), 0);
             break;
         case TrainMovementEventType::EnterTrack:
         case TrainMovementEventType::HeadLeaveTrack:
         case TrainMovementEventType::TailLeaveTrack:
+            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
             XMLCheckResult(extractAttribute(source, destination.direction, "direction"), 0);
             XMLCheckResult(extractAttribute(source, destination.sectionID, "sectionID"), 0);
             XMLCheckResult(extractAttribute(source, destination.speed, "speed"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             XMLCheckResult(extractAttribute(source, destination.trackID, "trackID"), 0);
-            XMLCheckResult(extractAttribute(source, destination.trainID, "trainID"), 0);
             break;
         case TrainMovementEventType::ReachedSignal:
+            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
             XMLCheckResult(extractAttribute(source, destination.signalID, "signalID"), 0);
             XMLCheckResult(extractAttribute(source, destination.signalState, "signalState"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
-            XMLCheckResult(extractAttribute(source, destination.trainID, "trainID"), 0);
             break;
     }
     return tinyxml2::XML_SUCCESS;
