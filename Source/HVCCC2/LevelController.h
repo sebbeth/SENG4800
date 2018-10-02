@@ -222,16 +222,12 @@ protected:
 	UPROPERTY(EditAnywhere)
 		TArray<ATrain*> trains;
 	UPROPERTY(EditAnywhere)
-	TArray<AConveyorBelt*> conveyorBelts;
+	TArray<AConveyorBelt*> conveyorBelts; //NCT Conveyor Belts
 	//UPROPERTY(EditAnywhere)
 	//	TArray<ATrackSpline*> trainTracks;
-
-
-	//Conveyor Belt position markers
 	UPROPERTY(EditAnywhere)
-		AActor *conv1_position;
-	UPROPERTY(EditAnywhere)
-		AActor *conv2_position;
+		TArray<AConveyorBelt*> conveyorBeltsKCT;
+
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
