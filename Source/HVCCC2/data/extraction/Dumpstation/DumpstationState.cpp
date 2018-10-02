@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-02 12:43:09.061192
  **/
 #include "DumpstationState.h"
 
