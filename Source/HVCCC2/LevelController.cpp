@@ -90,6 +90,10 @@ void FindSimTimeBoundsFunctor::operator()() {
 	context->simEndTime = -std::numeric_limits<float>::infinity();
 	auto& thisRef = *this;
 	forEachInTuple(context->data, thisRef);
+	if (std::isinf(context->simStartTime) || std::isinf(context->simEndTime)) {
+		context->simStartTime = 0;
+		context->simEndTime = 0;
+	}
 }
 
 void ClearDataFunctor::operator()() {
