@@ -1,7 +1,25 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-02 12:43:09.061192
  **/
 #include "TrainMovementEvent.h"
+
+bool TrainMovementEvent::hasCycleID() const {
+    switch (type) {
+        case TrainMovementEventType::EnterTrack:
+        case TrainMovementEventType::HeadLeaveTrack:
+        case TrainMovementEventType::ReachedSignal:
+        case TrainMovementEventType::TailLeaveTrack:
+        case TrainMovementEventType::WaitForTracks:
+            return true;
+        case TrainMovementEventType::MaintenanceAttempted:
+        case TrainMovementEventType::MaintenanceCompleted:
+        case TrainMovementEventType::MaintenanceStart:
+        case TrainMovementEventType::WaitingComplete:
+        case TrainMovementEventType::WaitingStart:
+        default:
+            return false;
+    }
+}
 
 bool TrainMovementEvent::hasDirection() const {
     switch (type) {
@@ -122,24 +140,6 @@ bool TrainMovementEvent::hasTrackID() const {
         case TrainMovementEventType::MaintenanceStart:
         case TrainMovementEventType::ReachedSignal:
         case TrainMovementEventType::WaitForTracks:
-        case TrainMovementEventType::WaitingComplete:
-        case TrainMovementEventType::WaitingStart:
-        default:
-            return false;
-    }
-}
-
-bool TrainMovementEvent::hasTrainID() const {
-    switch (type) {
-        case TrainMovementEventType::EnterTrack:
-        case TrainMovementEventType::HeadLeaveTrack:
-        case TrainMovementEventType::ReachedSignal:
-        case TrainMovementEventType::TailLeaveTrack:
-        case TrainMovementEventType::WaitForTracks:
-            return true;
-        case TrainMovementEventType::MaintenanceAttempted:
-        case TrainMovementEventType::MaintenanceCompleted:
-        case TrainMovementEventType::MaintenanceStart:
         case TrainMovementEventType::WaitingComplete:
         case TrainMovementEventType::WaitingStart:
         default:

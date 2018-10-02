@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-09-27 20:19:00.043450
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-02 12:43:09.061192
  **/
 #pragma once
 #include <string>
@@ -12,6 +12,7 @@ public:
     Entity::Id id;
     TrainMovementEventType type;
 
+    int cycleID;
     std::string direction;
     std::string sectionID;
     std::string signalID;
@@ -19,8 +20,8 @@ public:
     double speed;
     double time;
     std::string trackID;
-    std::string trainID;
 
+    bool hasCycleID() const;
     bool hasDirection() const;
     bool hasSectionID() const;
     bool hasSignalID() const;
@@ -28,7 +29,6 @@ public:
     bool hasSpeed() const;
     bool hasTime() const;
     bool hasTrackID() const;
-    bool hasTrainID() const;
 
     template<class Archive>
     void serialize(Archive & archive);
@@ -36,5 +36,5 @@ public:
 
 template<class Archive>
 void TrainMovementEvent::serialize(Archive & archive) {
-    archive(id, type, direction, sectionID, signalID, signalState, speed, time, trackID, trainID);
+    archive(id, type, cycleID, direction, sectionID, signalID, signalState, speed, time, trackID);
 }
