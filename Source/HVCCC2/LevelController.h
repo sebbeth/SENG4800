@@ -14,6 +14,9 @@
 #include "StackerReclaimer.h"
 #include "CoalStack.h"
 #include "Ship.h"
+#include "ShipLoader.h"
+//#include "TrainMovement.h"
+
 
 #include "LevelController.generated.h"
 
@@ -131,9 +134,20 @@ struct u_actor_type<StackerReclaimer> {
 };
 
 template<>
+struct u_actor_type<Shiploader> {
+	using type = AShipLoader;
+};
+
+template<>
 struct u_actor_type<Vessel> {
 	using type = AShip;
 };
+
+/*
+template<>
+struct u_actor_type<TrainMovement> {
+	using type = ATrain;
+};*/
 
 UCLASS()
 class HVCCC2_API ALevelController : public AActor
@@ -294,6 +308,8 @@ private:
 	AStackerReclaimer* getOrSpawnActor(const StackerReclaimer::Id& id);
 	AShip* getOrSpawnActor(const Vessel::Id& id);
 	ACoalStack* getOrSpawnActor(const Stockpile::Id& id);
+	AShipLoader* getOrSpawnActor(const Shiploader::Id& id);
+	ATrain* getOrSpawnActor(const TrainMovement::Id& id);
 
 	/**
 	 * Exposes all the information about an entity for animation; defaults to calling a function exposing less information for backward compatability;
@@ -313,6 +329,8 @@ private:
 	void animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale);
 	void animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale);
 	void animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale);
+	void animateEntity(AShipLoader* actorPointer, const ShiploaderState& previousState, const ShiploaderState& nextState, float interpolationScale);
+	void animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale);
 
 	void stackCoal(int stackerId);
 	void stopStackingCoal(int stackerId);
