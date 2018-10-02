@@ -227,6 +227,14 @@ protected:
 	//	TArray<ATrackSpline*> trainTracks;
 	UPROPERTY(EditAnywhere)
 		TArray<AConveyorBelt*> conveyorBeltsKCT;
+	UPROPERTY(EditAnywhere)
+		TArray<ACoalStack*> coalStacksKCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AStackerReclaimer*> stackerReclaimersKCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AShipLoader*> shipLoadersKCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AShip*> shipsKCT;
 
 
 	// Called every frame
