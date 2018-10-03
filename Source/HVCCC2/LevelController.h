@@ -206,33 +206,17 @@ protected:
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class AConveyorBelt> conveyor_belt_blueprint;
 
-	// Koorigang Stacker Reclaimer track markers
+	
+
+	//Train and track actors
 	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_SR_rails_start;
-	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_SR_rails_end;
-
-
-	// Koorigang ship loader track markers
-	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_loader_rails_start;
-	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_loader_rails_end;
-
-	// Ship berth position markers
-	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_berths;
+		TArray<ATrain*> trains;
+	//UPROPERTY(EditAnywhere)
+	//	TArray<ATrackSpline*> trainTracks;
 
 
 
-	//Coal Pad position markers
-	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_pads_start;
-
-	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_pads_end;
-
-	//actors
+	// NCT Actor Arrays
 	UPROPERTY(EditAnywhere)
 	TArray<ACoalStack*> coalStacks;
 	UPROPERTY(EditAnywhere)
@@ -242,18 +226,57 @@ protected:
 	UPROPERTY(EditAnywhere)
 	TArray<AShip*> ships;
 	UPROPERTY(EditAnywhere)
-		TArray<ATrain*> trains;
+	TArray<AConveyorBelt*> conveyorBelts; 
+	// Koorigang Stacker Reclaimer track markers
 	UPROPERTY(EditAnywhere)
-	TArray<AConveyorBelt*> conveyorBelts;
-	//UPROPERTY(EditAnywhere)
-	//	TArray<ATrackSpline*> trainTracks;
+		TArray<AActor*> NCT_SR_rails_start;
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> NCT_SR_rails_end;
+	// Koorigang ship loader track markers
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> NCT_loader_rails_start;
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> NCT_loader_rails_end;
+	// Ship berth position markers
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> NCT_berths;
+	//Coal Pad position markers
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> NCT_pads_start;
+
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> NCT_pads_end;
 
 
-	//Conveyor Belt position markers
+
+	//KCT Actor Arrays
 	UPROPERTY(EditAnywhere)
-		AActor *conv1_position;
+		TArray<AConveyorBelt*> conveyorBeltsKCT;
 	UPROPERTY(EditAnywhere)
-		AActor *conv2_position;
+		TArray<ACoalStack*> coalStacksKCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AStackerReclaimer*> stackerReclaimersKCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AShipLoader*> shipLoadersKCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AShip*> shipsKCT;
+
+
+
+
+	//CCT Actor Arrays
+	UPROPERTY(EditAnywhere)
+		TArray<AConveyorBelt*> conveyorBeltsCCT;
+	UPROPERTY(EditAnywhere)
+		TArray<ACoalStack*> coalStacksCCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AStackerReclaimer*> stackerReclaimersCCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AShipLoader*> shipLoadersCCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AShip*> shipsCCT;
+
+	
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
