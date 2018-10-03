@@ -7,21 +7,24 @@
 AShip::AShip()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 }
 
 // Called when the game starts or when spawned
 void AShip::BeginPlay()
 {
+	atSea();
 	Super::BeginPlay();
-	
 }
 
-// Called every frame
-void AShip::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
+
+void AShip::berthed() {
+	SetActorHiddenInGame(false);
+
+}
+void AShip::atSea() {
+	SetActorHiddenInGame(true);
 
 }
 

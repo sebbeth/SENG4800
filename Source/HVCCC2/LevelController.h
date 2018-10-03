@@ -295,11 +295,11 @@ public:
 
 private:
 	
-	AStackerReclaimer * spawnAStackerReclaimer(FString id, FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint);
+	AStackerReclaimer * spawnAStackerReclaimer(FString id, int trackId, FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint);
 	AShipLoader * spawnAShipLoader(FString id, FVector railStart, FVector railEnd, TSubclassOf<class AShipLoader> blueprint);
 	AShip * spawnAShip(FString id, FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint);
 	AConveyorBelt * spawnAConveyorBelt(FString id, FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint);
-	ACoalStack * spawnACoalStack(FString id, FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint);
+	ACoalStack * spawnACoalStack(FString id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint);
 	ATrain * spawnATrain(FString id, FVector position, TSubclassOf<class ATrain> blueprint);
 
 
@@ -347,7 +347,7 @@ private:
 	// Pad lengths
 	int getPadLength(TerminalId TerminalId, const int& padId);
 	int getTrackLength(TerminalId TerminalId, const int& trackID);
-
+	int getShipLoaderTrackLength(TerminalId terminal);
 
 	// Pad location
 	void setStockPileLocation(ACoalStack* actorPointer, const Stockpile::Id& id, std::string padId, double position);

@@ -309,6 +309,23 @@ int ALevelController::getTrackLength(TerminalId terminal, const int& trackId) {
 
 
 
+int ALevelController::getShipLoaderTrackLength(TerminalId terminal) {
+
+	switch (terminal) {
+	case TerminalId::KCT:
+		return 1040;
+	case TerminalId::NCT:
+		return 1040;
+	case TerminalId::CCT:
+		return 750;
+	default:
+		return -1;
+	}
+}
+
+
+
+
 
 
 /*
@@ -393,7 +410,7 @@ example usage:
 */
 
 
-AStackerReclaimer * ALevelController::spawnAStackerReclaimer(FString id, FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint) {
+AStackerReclaimer * ALevelController::spawnAStackerReclaimer(FString id, int trackId, FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint) {
 	
 	UWorld* world = GetWorld();
 	if (world) {
@@ -403,6 +420,7 @@ AStackerReclaimer * ALevelController::spawnAStackerReclaimer(FString id, FVector
 		actor->trackNodeA = railStart;
 		actor->trackNodeB = railEnd;
 		actor->id = id;
+		actor->trackId = trackId;
 		stackerReclaimers.Add(actor);
 		return actor;
 	}
@@ -443,7 +461,9 @@ AShip * ALevelController::spawnAShip(FString id, FVector position, FRotator rota
 
 
 
-ACoalStack * ALevelController::spawnACoalStack(FString id, FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint) {
+
+
+ACoalStack * ALevelController::spawnACoalStack(FString id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint) {
 	UWorld* world = GetWorld();
 	if (world) {
 		FActorSpawnParameters spawnParams;
@@ -451,6 +471,7 @@ ACoalStack * ALevelController::spawnACoalStack(FString id, FVector position, FRo
 		ACoalStack *actor = world->SpawnActor<ACoalStack>(blueprint, position, rotator, spawnParams);
 		UE_LOG(LogTemp, Warning, TEXT("%s"), *id);
 		actor->id = id;
+		actor->setWidth(width);
 		coalStacks.Add(actor);
 		return actor;
 	}
@@ -489,7 +510,7 @@ AStackerReclaimer* ALevelController::getOrSpawnActor(const StackerReclaimer::Id&
 	if (id.terminal == TerminalId::NCT) {
 		for (int i = 0; i < 4; ++i) {
 			if (id.name == nct_names[i]) {
-				return spawnAStackerReclaimer(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), NCT_SR_rails_start[i]->GetActorLocation(), NCT_SR_rails_end[i]->GetActorLocation(), largeSR_blueprint);
+				return spawnAStackerReclaimer(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()),i, NCT_SR_rails_start[i]->GetActorLocation(), NCT_SR_rails_end[i]->GetActorLocation(), largeSR_blueprint);
 			}
 		}
 	}
@@ -499,39 +520,37 @@ AStackerReclaimer* ALevelController::getOrSpawnActor(const StackerReclaimer::Id&
 
 
 AShip* ALevelController::getOrSpawnActor(const Vessel::Id& id) {
-	static std::string nct_names[4] = { "SR01", "SR02", "SR03", "SR04" };
-	UE_LOG(LogTemp, Warning, TEXT("SHIP SPAWNED"));
+	static std::string nct_names[4] = { "SHIP:1", "SHIP:2", "SHIP:3", "SHIP:4" };
+	FString ff = UTF8_TO_TCHAR(id.name.c_str());
+	UE_LOG(LogTemp, Warning, TEXT("SHIP:%s"), *ff);
 	//if (id.terminal == TerminalId::NCT) {
-		for (int i = 0; i < 4; ++i) {
-			//if (id.name == nct_names[i]) {
+		//for (int i = 0; i < 4; ++i) {
+		//	if (id.name == nct_names[i]) {
 				return spawnAShip(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), NCT_berths[0]->GetActorLocation(), NCT_berths[0]->GetActorRotation(), ship_blueprint);
-			//}
-		}
+		//	}
+		//}
 	//}
 	return nullptr;
 }
 
 
 ACoalStack* ALevelController::getOrSpawnActor(const Stockpile::Id& id) {
-	static std::string nct_names[5] = { "NCT1836.1", "NCT1837.1", "NCT1838.1", "NCT1839.1", "NCT1840.1" };
 	if (id.terminal == TerminalId::NCT) {
 	for (int i = 0; i < 4; ++i) {
-		//if (id.name == nct_names[i]) {
-			return spawnACoalStack(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), NCT_pads_start[i]->GetActorLocation(), NCT_pads_start[i]->GetActorRotation(), coal_stack_blueprint);
-		//}
-
+		// NOTE actors are being spawned to 0,0,0 rather then being spawned and then made invisible
+			return spawnACoalStack(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), FVector(0,0,0), NCT_pads_start[i]->GetActorRotation(), NCT_pads_start[i]->GetActorScale3D().X, coal_stack_blueprint);
 	}
 	}
 	return nullptr;
 }
 
 AShipLoader* ALevelController::getOrSpawnActor(const Shiploader::Id& id) {
-	static std::string nct_names[4] = { "SR01", "SR02", "SR03", "SR04" };
+	static std::string nct_names[2] = { "SL01", "SL02"};
 	if (id.terminal == TerminalId::NCT) {
 		for (int i = 0; i < 2; ++i) {
-			//if (id.name == nct_names[i]) {
+			if (id.name == nct_names[i]) {
 				return spawnAShipLoader(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), NCT_loader_rails_start[i]->GetActorLocation(), NCT_loader_rails_end[i]->GetActorLocation(), ship_loader_blueprint);
-			//}
+			}
 		}
 	}
 	return nullptr;
@@ -540,12 +559,10 @@ AShipLoader* ALevelController::getOrSpawnActor(const Shiploader::Id& id) {
 
 void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale) {
 
-	//TODO: ENCODE THE LENGTH OF THE RAILS AS FAR AS THE INPUT DATA IS CONCERNED SOMEWHERE
-	//start temporary hack: assume the end is the max value in the current set of states
 	StackerReclaimer::Id targetId = previousState.id;
 	float minPosition = 0;
 	//TODO, assign the correct track length, not just the 0'th one
-	float maxPosition = (float)getTrackLength(targetId.terminal, 0); 
+	float maxPosition = (float)getTrackLength(targetId.terminal, actorPointer->trackId);
 	//calculate the absolute position of the machine (along it's rail) by interpolating the previous and next positions
 	//this idea came from vector mathmemathics, with 1d vectors (efficively scalars) is this case; the formula is: previous+(next - previous)*scale;
 	float positionInterpolated = previousState.position + (nextState.position - previousState.position)*interpolationScale;
@@ -594,29 +611,22 @@ int ALevelController::getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> arra
 
 void ALevelController::animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale) {
 
-	//UE_LOG(LogTemp, Warning, TEXT("Shiploader animate"));
 	Vessel::Id targetId = previousState.id;
 
-	switch (previousState.type)
-	{
-	case VesselStateType::Berthed:
-		//UE_LOG(LogTemp, Warning, TEXT("Berthed"));
-		break;
-	case VesselStateType::Exited:
-		//UE_LOG(LogTemp, Warning, TEXT("Exited"));
+	if (previousState.type != nextState.type) {
+		switch (previousState.type)
+		{
+		case VesselStateType::Berthed:
+			actorPointer->berthed();
+			break;
+		case VesselStateType::Idle:
+		case VesselStateType::Invalid:
+			actorPointer->atSea();
+			break;
+		default:
 
-		break;
-	case VesselStateType::TravellingToTerminal:
-		//UE_LOG(LogTemp, Warning, TEXT("Coming"));
-
-		break;
-	case VesselStateType::TravellingFromTerminal:
-		//UE_LOG(LogTemp, Warning, TEXT("Going"));
-
-		break;
-	default:
-
-		break;
+			break;
+		}
 	}
 
 }
@@ -628,7 +638,6 @@ void ALevelController::setStockPileLocation(ACoalStack* actorPointer, const Stoc
 
 	if (id.terminal == TerminalId::NCT) {
 		//UE_LOG(LogTemp, Warning, TEXT("%f"), float(position));
-
 		int padIdentifier = -1;
 		if (padId == "Pad A") {
 			padIdentifier = 0;
@@ -647,15 +656,13 @@ void ALevelController::setStockPileLocation(ACoalStack* actorPointer, const Stoc
 		}
 
 		if (padIdentifier != -1) { // Now that we have determined  which pad we are using, determine the position along the pad
-			
-			
+				
 			actorPointer->setPosition(position,
 				getPadLength(TerminalId::NCT, padIdentifier),
 				NCT_pads_start[padIdentifier]->GetActorLocation(),
 				NCT_pads_end[padIdentifier]->GetActorLocation());
+			actorPointer->setWidth(NCT_pads_start[padIdentifier]->GetActorScale3D().X); // Also set the width
 		}
-
-
 	}
 }
 
@@ -667,32 +674,27 @@ void ALevelController::animateEntity(ACoalStack* actorPointer, const StockpileSt
 	//UE_LOG(LogTemp, Warning, TEXT("Length: %f"), float(nextState.length));
 
 	// If the Stockpile is currently visible, set it's position in the world
-	if (previousState.position != nextState.position) {
+	//if (previousState.position != nextState.position) {
 		setStockPileLocation(actorPointer, nextState.id, nextState.padID, nextState.position);
-	}
+	//}
 	// Then set it's quantity
-	if (previousState.length != nextState.length) {
+	//if (previousState.length != nextState.length) {
 		actorPointer->setQuantity(float(nextState.length));
-	}
+	//}
 
 	Stockpile::Id targetId = nextState.id;
 
 	switch (nextState.type)
 	{
 	case StockpileStateType::Created:
-		//UE_LOG(LogTemp, Warning, TEXT("Created"));
 		break;
 	case StockpileStateType::Reclaiming:
-		//UE_LOG(LogTemp, Warning, TEXT("Reclaiming"));
-
+		actorPointer->setQuantity(float(nextState.length));
 		break;
 	case StockpileStateType::Stacking:
-		//UE_LOG(LogTemp, Warning, TEXT("Stacking"));
-
+		actorPointer->setQuantity(float(nextState.length));
 		break;
 	case StockpileStateType::Built:
-		//UE_LOG(LogTemp, Warning, TEXT("Built"));
-
 		break;
 	default:
 
@@ -702,6 +704,18 @@ void ALevelController::animateEntity(ACoalStack* actorPointer, const StockpileSt
 
 void ALevelController::animateEntity(AShipLoader* actorPointer, const ShiploaderState& previousState, const ShiploaderState& nextState, float interpolationScale) {
 	
+	Shiploader::Id targetId = previousState.id;
+	float minPosition = 0;
+	//TODO, assign the correct track length, not just the 0'th one
+	float maxPosition = (float)getShipLoaderTrackLength(targetId.terminal);
+	//calculate the absolute position of the machine (along it's rail) by interpolating the previous and next positions
+	//this idea came from vector mathmemathics, with 1d vectors (efficively scalars) is this case; the formula is: previous+(next - previous)*scale;
+	float positionInterpolated = previousState.position + (nextState.position - previousState.position)*interpolationScale;
+	//convert the absolute position to a scale between 0.0 and 1.0 which can then be used with the vectors placed manually in the editor.
+	float positionScale = (positionInterpolated - minPosition) / (maxPosition - minPosition);
+	//update the actor position
+	actorPointer->setPosition(positionScale);
+
 }
 
 
