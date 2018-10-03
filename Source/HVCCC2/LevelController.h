@@ -227,7 +227,10 @@ protected:
 
 	//Coal Pad position markers
 	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_pads;
+		TArray<AActor*> NCT_pads_start;
+
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> NCT_pads_end;
 
 	//actors
 	UPROPERTY(EditAnywhere)
@@ -309,7 +312,6 @@ private:
 	AShip* getOrSpawnActor(const Vessel::Id& id);
 	ACoalStack* getOrSpawnActor(const Stockpile::Id& id);
 	AShipLoader* getOrSpawnActor(const Shiploader::Id& id);
-	ATrain* getOrSpawnActor(const TrainMovement::Id& id);
 
 	/**
 	 * Exposes all the information about an entity for animation; defaults to calling a function exposing less information for backward compatability;
@@ -330,7 +332,6 @@ private:
 	void animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale);
 	void animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale);
 	void animateEntity(AShipLoader* actorPointer, const ShiploaderState& previousState, const ShiploaderState& nextState, float interpolationScale);
-	void animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale);
 
 	void stackCoal(int stackerId);
 	void stopStackingCoal(int stackerId);
@@ -346,6 +347,10 @@ private:
 	// Pad lengths
 	int getPadLength(TerminalId TerminalId, const int& padId);
 	int getTrackLength(TerminalId TerminalId, const int& trackID);
+
+
+	// Pad location
+	void setStockPileLocation(ACoalStack* actorPointer, const Stockpile::Id& id, std::string padId, double position);
 
 	int testTime; // Just being used for testing
 

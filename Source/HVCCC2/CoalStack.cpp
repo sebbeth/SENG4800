@@ -2,6 +2,7 @@
 
 #include "CoalStack.h"
 
+using namespace std;
 
 // Sets default values
 ACoalStack::ACoalStack()
@@ -25,10 +26,25 @@ void ACoalStack::Tick(float DeltaTime)
 
 }
 
-// Set the coal stack to being a certian percent filled, 0 = invisible, 1.0 = max length
-void ACoalStack::setQuantity(float quantity) {
+void ACoalStack::setPosition(float position, float trackLength, FVector trackStart, FVector trackEnd) {
 
-	SetActorScale3D(FVector(1.0f, quantity, 1.0f));
+
+	FVector directionVector = (trackEnd - trackStart);
+	double targetDistance = (position/ trackLength) * directionVector.Size(); // Get the distance we will be moving between the two vectors
+	directionVector.Normalize();
+	directionVector = directionVector * targetDistance;
+	SetActorLocation(trackStart + directionVector);
 }
+
+// Set the coal stack to being a certian percent filled, 0 = invisible, 1.0 = max length
+void ACoalStack::setQuantity(float length) {
+
+	// length is in meters, we need to generate a value between 0 and 1.0 based on this length.
+
+	const float meshLength = 400.0f;
+
+	SetActorScale3D(FVector(1.0f, length/meshLength, 1.0f));
+}
+
 
 

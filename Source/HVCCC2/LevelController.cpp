@@ -306,6 +306,11 @@ int ALevelController::getTrackLength(TerminalId terminal, const int& trackId) {
 		return -1;
 	}
 }
+
+
+
+
+
 /*
 
 */
@@ -370,6 +375,8 @@ void ALevelController::setCoalReclaimingState(int stackerId, int loaderId, int s
 
 
 
+
+
 /*  *** Actor spawn functions *** 
 
 Each function
@@ -382,7 +389,7 @@ Each function
 NOTE: there is no need to add the returned actor to an array manually, it is added to the appropriate array here.
 
 example usage: 
-	spawnACoalStack("CS_1", NCT_pads[0]->GetActorLocation(), NCT_pads[0]->GetActorRotation(), coal_stack_blueprint);
+	spawnACoalStack("CS_1", NCT_pads_start[0]->GetActorLocation(), NCT_pads_start[0]->GetActorRotation(), coal_stack_blueprint);
 */
 
 
@@ -442,7 +449,7 @@ ACoalStack * ALevelController::spawnACoalStack(FString id, FVector position, FRo
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		ACoalStack *actor = world->SpawnActor<ACoalStack>(blueprint, position, rotator, spawnParams);
-		UE_LOG(LogTemp, Warning, TEXT("__%s"), *id);
+		UE_LOG(LogTemp, Warning, TEXT("%s"), *id);
 		actor->id = id;
 		coalStacks.Add(actor);
 		return actor;
@@ -506,13 +513,13 @@ AShip* ALevelController::getOrSpawnActor(const Vessel::Id& id) {
 
 
 ACoalStack* ALevelController::getOrSpawnActor(const Stockpile::Id& id) {
-	static std::string nct_names[4] = { "SR01", "SR02", "SR03", "SR04" };
-	UE_LOG(LogTemp, Warning, TEXT("Stockpile"));
+	static std::string nct_names[5] = { "NCT1836.1", "NCT1837.1", "NCT1838.1", "NCT1839.1", "NCT1840.1" };
 	if (id.terminal == TerminalId::NCT) {
-	for (int i = 0; i < 3; ++i) {
+	for (int i = 0; i < 4; ++i) {
 		//if (id.name == nct_names[i]) {
-		return spawnACoalStack(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()),NCT_pads[i]->GetActorLocation(), NCT_pads[i]->GetActorRotation(),coal_stack_blueprint);
+			return spawnACoalStack(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), NCT_pads_start[i]->GetActorLocation(), NCT_pads_start[i]->GetActorRotation(), coal_stack_blueprint);
 		//}
+
 	}
 	}
 	return nullptr;
@@ -530,18 +537,6 @@ AShipLoader* ALevelController::getOrSpawnActor(const Shiploader::Id& id) {
 	return nullptr;
 }
 
-ATrain* ALevelController::getOrSpawnActor(const TrainMovement::Id& id) { // TODO REPLACE THIS
-	static std::string nct_names[4] = { "SR01", "SR02", "SR03", "SR04" };
-	UE_LOG(LogTemp, Warning, TEXT("TRAIN SPAWNED"));
-	//if (id.terminal == TerminalId::NCT) {
-	for (int i = 0; i < 1; ++i) { // TODO complete this
-		//if (id.name == nct_names[i]) {
-		return spawnATrain(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), NCT_pads[1]->GetActorLocation(), train_locomotive_blueprint);
-		//}
-	}
-	//}
-	return nullptr;
-}
 
 void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale) {
 
@@ -602,22 +597,21 @@ void ALevelController::animateEntity(AShip* actorPointer, const VesselState& pre
 	//UE_LOG(LogTemp, Warning, TEXT("Shiploader animate"));
 	Vessel::Id targetId = previousState.id;
 
-	//TODO: ADD TURNING CONSIDERATIONS
 	switch (previousState.type)
 	{
 	case VesselStateType::Berthed:
 		//UE_LOG(LogTemp, Warning, TEXT("Berthed"));
 		break;
 	case VesselStateType::Exited:
-		UE_LOG(LogTemp, Warning, TEXT("Exited"));
+		//UE_LOG(LogTemp, Warning, TEXT("Exited"));
 
 		break;
 	case VesselStateType::TravellingToTerminal:
-		UE_LOG(LogTemp, Warning, TEXT("Coming"));
+		//UE_LOG(LogTemp, Warning, TEXT("Coming"));
 
 		break;
 	case VesselStateType::TravellingFromTerminal:
-		UE_LOG(LogTemp, Warning, TEXT("Going"));
+		//UE_LOG(LogTemp, Warning, TEXT("Going"));
 
 		break;
 	default:
@@ -627,19 +621,89 @@ void ALevelController::animateEntity(AShip* actorPointer, const VesselState& pre
 
 }
 
+/*
+// TODO move this somewhere else in file
+*/
+void ALevelController::setStockPileLocation(ACoalStack* actorPointer, const Stockpile::Id& id, std::string padId, double position) {
+
+	if (id.terminal == TerminalId::NCT) {
+		//UE_LOG(LogTemp, Warning, TEXT("%f"), float(position));
+
+		int padIdentifier = -1;
+		if (padId == "Pad A") {
+			padIdentifier = 0;
+		}
+		else if (padId == "Pad BC") {
+			padIdentifier = 1;
+		}
+		else if (padId == "Pad DE") {
+			padIdentifier = 2;
+		}
+		else if (padId == "Pad FG") {
+			padIdentifier = 3;
+		}
+		else if (padId == "Pad H") {
+			padIdentifier = 4;
+		}
+
+		if (padIdentifier != -1) { // Now that we have determined  which pad we are using, determine the position along the pad
+			
+			
+			actorPointer->setPosition(position,
+				getPadLength(TerminalId::NCT, padIdentifier),
+				NCT_pads_start[padIdentifier]->GetActorLocation(),
+				NCT_pads_end[padIdentifier]->GetActorLocation());
+		}
+
+
+	}
+}
+
+
 void ALevelController::animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale) {
 	//UE_LOG(LogTemp, Warning, TEXT("Coal animate"));
 
+	//FString pad = UTF8_TO_TCHAR(previousState.padID.c_str());
+	//UE_LOG(LogTemp, Warning, TEXT("Length: %f"), float(nextState.length));
+
+	// If the Stockpile is currently visible, set it's position in the world
+	if (previousState.position != nextState.position) {
+		setStockPileLocation(actorPointer, nextState.id, nextState.padID, nextState.position);
+	}
+	// Then set it's quantity
+	if (previousState.length != nextState.length) {
+		actorPointer->setQuantity(float(nextState.length));
+	}
+
+	Stockpile::Id targetId = nextState.id;
+
+	switch (nextState.type)
+	{
+	case StockpileStateType::Created:
+		//UE_LOG(LogTemp, Warning, TEXT("Created"));
+		break;
+	case StockpileStateType::Reclaiming:
+		//UE_LOG(LogTemp, Warning, TEXT("Reclaiming"));
+
+		break;
+	case StockpileStateType::Stacking:
+		//UE_LOG(LogTemp, Warning, TEXT("Stacking"));
+
+		break;
+	case StockpileStateType::Built:
+		//UE_LOG(LogTemp, Warning, TEXT("Built"));
+
+		break;
+	default:
+
+		break;
+	}
 }
 
 void ALevelController::animateEntity(AShipLoader* actorPointer, const ShiploaderState& previousState, const ShiploaderState& nextState, float interpolationScale) {
 	
 }
 
-void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale) {
-	UE_LOG(LogTemp, Warning, TEXT("Train animate"));
-
-}
 
 
 

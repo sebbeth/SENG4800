@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
-
+#include <string>
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "CoalStack.generated.h"
@@ -23,8 +23,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void setQuantity(float quantity);
-	
+	void setQuantity(float length);
+	void setPosition(float position, float trackLength, FVector trackStart, FVector trackEnd);
+
 	FString id;
 
 };
