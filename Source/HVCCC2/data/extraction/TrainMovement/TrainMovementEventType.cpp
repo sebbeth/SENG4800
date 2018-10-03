@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-02 12:43:09.061192
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-03 22:59:09.760513
  **/
 #include "TrainMovementEventType.h"
         
@@ -34,8 +34,16 @@ std::string encodeTrainMovementEventType(const TrainMovementEventType& value) {
             return "HeadLeaveTrack";
             break;
 
+        case TrainMovementEventType::WaitForTracks:
+            return "WaitForTracks";
+            break;
+
         case TrainMovementEventType::EnterTrack:
             return "EnterTrack";
+            break;
+
+        case TrainMovementEventType::TailLeaveTrack:
+            return "TailLeaveTrack";
             break;
 
         case TrainMovementEventType::ReachedSignal:
@@ -48,14 +56,6 @@ std::string encodeTrainMovementEventType(const TrainMovementEventType& value) {
 
         case TrainMovementEventType::MaintenanceAttempted:
             return "MaintAttempted";
-            break;
-
-        case TrainMovementEventType::WaitForTracks:
-            return "WaitForTracks";
-            break;
-
-        case TrainMovementEventType::TailLeaveTrack:
-            return "TailLeaveTrack";
             break;
 
         case TrainMovementEventType::WaitingComplete:

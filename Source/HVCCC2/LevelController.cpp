@@ -23,7 +23,9 @@ int mock_state;
 float mock_level;
 std::tuple<TerminalId, std::string, int> padLengths;
 std::tuple<TerminalId, std::string, int> trackLengths;
-
+bool setupTrainData = false;
+int32 trainsCount = 0;
+TrainMovement::Id firstEverSeenId;
 // Sets default values
 ALevelController::ALevelController() : addToSimFunctor(this), updateWindowsFunctor(this), animateEntitiesFunctor(this), findSimTimeBoundsFunctor(this), clearDataFunctor(this), stringifyEventsFunctor(this), simTime(0), simStartTime(0), simEndTime(0), speed(1), isPlaying(false) {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -524,7 +526,7 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 ATrain* ALevelController::getOrSpawnActor(const TrainMovement::Id& id)
 {
 	//stub
-	UE_LOG(LogTemp, Warning, TEXT("found a train id %s "), UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()));
+	//UE_LOG(LogTemp, Warning, TEXT("found a train id %s "), UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()));
    return spawnATrain(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
 		trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World), train_locomotive_blueprint);
 	
@@ -533,5 +535,174 @@ ATrain* ALevelController::getOrSpawnActor(const TrainMovement::Id& id)
 
 void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale)
 {
-	//stub
-}
+	//previous and next seem to be both pointing to the same state , tested with output  ln: 538
+	//UE_LOG(LogTemp, Warning, TEXT("previousState id %s , nextState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(nextState.id.name.c_str()));
+	
+
+	/*
+	this shows the state is stuck as "InJunction"
+	if (previousState.type == TrainMovementStateType::EnteringTrack)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Entering Track state on previousState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()) );
+	}
+	else if (previousState.type == TrainMovementStateType::Invalid)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Invalid state on previousState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()) );
+	}
+	else if (previousState.type == TrainMovementStateType::InJunction)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("InJunction state on previousState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()) );
+	}
+	*/
+
+	//doesn't work =/
+	//UE_LOG(LogTemp, Warning, TEXT("firstEverSeenId: %s , previousState Id: %s"), UTF8_TO_TCHAR(firstEverSeenId.name.c_str()), UTF8_TO_TCHAR(targetId.name.c_str()));
+
+
+	if(!setupTrainData)
+	{
+		TrainMovement::Id targetId = previousState.id;
+		auto& theMap = std::get<DataMap<TrainMovement>>(data);
+		auto targetIterator = theMap.find(targetId);
+		if (targetIterator != theMap.end())
+		{
+			//UE_LOG(LogTemp, Warning, TEXT("previousState track id %s previousState section id %s  "), UTF8_TO_TCHAR(previousState.trackID.c_str()), UTF8_TO_TCHAR(previousState.sectionID.c_str()));
+		  //UE_LOG(LogTemp, Warning, TEXT("nextState track id %s nextState section id %s  "), UTF8_TO_TCHAR(nextState.trackID.c_str()), UTF8_TO_TCHAR(nextState.sectionID.c_str()));
+			for (auto eachState : (*targetIterator).second.states)//all train movement states
+			{
+
+				//UE_LOG(LogTemp, Warning, TEXT("eachState id %s  "), UTF8_TO_TCHAR(eachState.id.name.c_str()) );
+
+				if (eachState.type == TrainMovementStateType::EnteringTrack)
+				{
+
+					//UE_LOG(LogTemp, Warning, TEXT("Entering Track state on eachState id %s , trackId %s"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(eachState.trackID.c_str()));
+					for (auto eachTrack : (trainTracks))
+					{
+						if (eachState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
+						{
+							UE_LOG(LogTemp, Warning, TEXT("train id: %s , track id from data: %s , my Track id: %s"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(eachState.trackID.c_str()), *FString(eachTrack->id));
+
+						}
+					}
+
+				}
+				else if (eachState.type == TrainMovementStateType::InJunction)
+				{
+					//UE_LOG(LogTemp, Warning, TEXT("InJunction state on eachState id %s , trackId %s "), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(eachState.trackID.c_str()) );
+				}
+				/* // should no longer be any, use take that with a grain of salt but the state transitions have been modified
+				else if (eachState.type == TrainMovementStateType::Invalid)
+				{
+					UE_LOG(LogTemp, Warning, TEXT("Invalid state on eachState id %s , trackId %s"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(eachState.trackID.c_str()) );
+				}
+				*/
+			}
+
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("END OF MAP? "))
+		}
+
+	}
+	else
+	{
+		//animate trains
+	}
+
+	if (trainsCount == trains.Num())
+	{
+		//STOP we reached the first ever seen id so we have looked at every train's event states at least once!
+		setupTrainData = true;
+	}
+	trainsCount++;
+	/*
+	for (auto eachState : (*targetIterator).second.states) //all train movement states
+	{
+		//UE_LOG(LogTemp, Warning, TEXT("animateEntity TRAINS"));
+		if (eachState.type == TrainMovementStateType::Invalid)
+		{
+			//this WAS always true its always in an invalid state
+
+			//UE_LOG(LogTemp, Warning, TEXT("invalid states "));// , float(previousState.time), float(nextState.time));
+		}
+
+		if (eachState.type == TrainMovementStateType::EnteringTrack) //state seen after train enter track event
+		{
+			//UE_LOG(LogTemp, Warning, TEXT("EnteringTrack state")); 
+
+			//for each enter trainmovmentstate state we look for the specific track id's of the known tracks (at the moment only have NCT terminal train tracks 
+			for (auto eachTrack : (trainTracks))
+			{
+				//UE_LOG(LogTemp, Warning, TEXT("EnteringTrack traintrackloop"));
+
+				UE_LOG(LogTemp, Warning, TEXT("found a track id %s section id %s list of trackid's %s "), UTF8_TO_TCHAR(eachState.trackID.c_str()), UTF8_TO_TCHAR(eachState.sectionID.c_str()), *FString(eachTrack->id) );
+
+				//if we have a matching track id we then check for the appropriate train cycle id
+				if (eachState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
+				{
+					UE_LOG(LogTemp, Warning, TEXT("found a track id %s "), UTF8_TO_TCHAR(eachState.trackID.c_str()));
+					for (auto eachTrain : (trains))
+					{
+						UE_LOG(LogTemp, Warning, TEXT("train id %s trainId is : %s"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(*eachTrain->id));
+						//check the cycle id matches meaning the train is spawned setup additional information
+						if (eachState.id.name == std::string(TCHAR_TO_UTF8(*eachTrain->id))) // match the train id's
+						{
+							//UE_LOG(LogTemp, Warning, TEXT("FOUND a cycle id %s trainId is : %s"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(eachState.trainID.c_str()) );
+							//check which track its on ?
+							eachTrain->trackId.Add(UTF8_TO_TCHAR(eachState.trackID.c_str()));
+							eachTrain->startTime.Add(eachState.time); // i believe ill need this to calculate the maths later for the smoothing of animation
+
+							//make sure the start time is correct for this train, 
+						}
+						else
+						{
+							// train doesn't exist, so it was never spawned on the hidden track.
+						}
+					}
+				}
+				else
+				{
+					// not an implemented track yet
+				}
+
+
+			}
+
+		}
+
+		else if (eachState.type == TrainMovementStateType::InJunction)//state seen after head leave track event
+		{
+			for (auto eachTrack : (trainTracks))
+			{
+				if (eachState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
+				{
+					//make sure the trains exist in the list of trains
+
+					for (auto eachTrain : (trains))
+					{
+						if (eachState.id.name == std::string(TCHAR_TO_UTF8(*eachTrain->id)))
+						{
+							//update expected finish time for each train in this track
+							eachTrain->endTime.Add(eachState.time);//time of the train leaving the track
+						}
+						else
+						{
+							//first occurrence of the trains on implemented tracks this case does not occur HOWEVER, 
+							//in the file XML the first event i actually saw was a Train Head Leave Track, NOT a Train Enter Track.
+							//This means this case is highly likely to occur in the xml files
+							//train never saw an enter track event might just need to spawn at end?? OR assume a travel from start to end on this track?? 
+
+						}
+					}
+
+				}
+
+			}
+		}//more events carry off this bracket
+
+	}//eachstate loop
+	} //end of if
+	*/
+}// end of method

@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-02 12:43:09.061192
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-03 22:59:09.760513
  **/
 #include "TrainMovementState.h"
 
@@ -9,6 +9,10 @@ TrainMovementStateType TrainMovementState::determineNextType(TrainMovementStateT
             switch(eventType) {
                 case TrainMovementEventType::HeadLeaveTrack:
                     return TrainMovementStateType::InJunction;
+                case TrainMovementEventType::WaitForTracks:
+                    return TrainMovementStateType::Waiting;
+                case TrainMovementEventType::EnterTrack:
+                    return TrainMovementStateType::EnteringTrack;
                 default:
                     return TrainMovementStateType::Invalid;
             }
@@ -16,6 +20,21 @@ TrainMovementStateType TrainMovementState::determineNextType(TrainMovementStateT
             switch(eventType) {
                 case TrainMovementEventType::EnterTrack:
                     return TrainMovementStateType::EnteringTrack;
+                case TrainMovementEventType::TailLeaveTrack:
+                    return TrainMovementStateType::InTrack;
+                default:
+                    return TrainMovementStateType::Invalid;
+            }
+        case TrainMovementStateType::Waiting:
+            switch(eventType) {
+                case TrainMovementEventType::WaitingComplete:
+                    return TrainMovementStateType::InTrack;
+                case TrainMovementEventType::WaitForTracks:
+                    return TrainMovementStateType::Waiting;
+                case TrainMovementEventType::HeadLeaveTrack:
+                    return TrainMovementStateType::InJunction;
+                case TrainMovementEventType::TailLeaveTrack:
+                    return TrainMovementStateType::InTrack;
                 default:
                     return TrainMovementStateType::Invalid;
             }
@@ -28,6 +47,8 @@ TrainMovementStateType TrainMovementState::determineNextType(TrainMovementStateT
             }
         case TrainMovementStateType::InTrack:
             switch(eventType) {
+                case TrainMovementEventType::EnterTrack:
+                    return TrainMovementStateType::EnteringTrack;
                 case TrainMovementEventType::HeadLeaveTrack:
                     return TrainMovementStateType::InJunction;
                 case TrainMovementEventType::ReachedSignal:
@@ -39,13 +60,6 @@ TrainMovementStateType TrainMovementState::determineNextType(TrainMovementStateT
                 case TrainMovementEventType::WaitForTracks:
                     return TrainMovementStateType::InTrack;
                 case TrainMovementEventType::TailLeaveTrack:
-                    return TrainMovementStateType::InTrack;
-                default:
-                    return TrainMovementStateType::Invalid;
-            }
-        case TrainMovementStateType::Waiting:
-            switch(eventType) {
-                case TrainMovementEventType::WaitingComplete:
                     return TrainMovementStateType::InTrack;
                 default:
                     return TrainMovementStateType::Invalid;

@@ -551,15 +551,19 @@
       "identifier": "trainID",
       "transitions": {
         "Idle": {
-          "HeadLeaveTrack": "InJunction"
+          "HeadLeaveTrack": "InJunction",
+          "WaitForTracks": "Waiting",
+          "EnterTrack": "EnteringTrack"
         },
         "InJunction": {
-          "EnterTrack": "EnteringTrack"
+          "EnterTrack": "EnteringTrack",
+          "TailLeaveTrack": "InTrack"
         },
         "EnteringTrack": {
           "ReachedSignal": "InTrack"
         },
         "InTrack": {
+          "EnterTrack": "EnteringTrack",
           "HeadLeaveTrack": "InJunction",
           "ReachedSignal": "InTrack",
           "WaitingStart": "Waiting",
@@ -568,7 +572,10 @@
           "TailLeaveTrack": "InTrack"
         },
         "Waiting": {
-          "WaitingComp": "InTrack"
+          "WaitingComp": "InTrack",
+          "WaitForTracks": "Waiting",
+          "HeadLeaveTrack": "InJunction",
+          "TailLeaveTrack": "InTrack"
         },
         "RequestedMaintenance": {
           "MaintStart": "Maintenance"
