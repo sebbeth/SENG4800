@@ -11,8 +11,10 @@
 #include "data/simulation/SimulationData.h"
 #include "data/simulation/StockpileData.h"
 #include "data/extraction/TerminalId.h"
+#include "data/extraction/TrainMovement/TrainMovement.h"
 #include "StackerReclaimer.h"
-
+#include "TrainTrackSpline.h"
+#include "Train.h"
 
 
 #include "LevelController.generated.h"
@@ -125,10 +127,17 @@ struct StringifyEventsFunctor {
 	StringifyEventsFunctor(ALevelController* context);
 };
 
+//tis struct this needed for all data types being spawned and animated, as well as a getorspawnactor and anamiteenity method
 template<>
 struct u_actor_type<StackerReclaimer> {
 	using type = AStackerReclaimer;
 };
+
+template<>
+struct u_actor_type<TrainMovement> {
+	using type = ATrain;
+};
+
 
 UCLASS()
 class HVCCC2_API ALevelController : public AActor
@@ -223,8 +232,9 @@ protected:
 		TArray<ATrain*> trains;
 	UPROPERTY(EditAnywhere)
 	TArray<AConveyorBelt*> conveyorBelts;
-	//UPROPERTY(EditAnywhere)
-	//	TArray<ATrackSpline*> trainTracks;
+
+	UPROPERTY(EditAnywhere)
+		TArray<ATrainTrackSpline*> trainTracks;
 
 
 	//Conveyor Belt position markers
@@ -278,7 +288,8 @@ private:
 	AShip * spawnAShip(FString id, FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint);
 	AConveyorBelt * spawnAConveyorBelt(FString id, FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint);
 	ACoalStack * spawnACoalStack(FString id, FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint);
-	ATrain * spawnATrain(FString id, FVector position, TSubclassOf<class ATrain> blueprint);
+
+	ATrain * spawnATrain(FString id, FVector position, FRotator rotator,TSubclassOf<class ATrain> blueprint);
 
 
 	template<typename Id>
@@ -286,10 +297,13 @@ private:
 
 	AStackerReclaimer* getOrSpawnActor(const StackerReclaimer::Id& id);
 
+	ATrain* getOrSpawnActor(const TrainMovement::Id& id);
+
+
 	/**
-	 * Exposes all the information about an entity for animation; defaults to calling a function exposing less information for backward compatability;
+	 * Exposes all the information about an entity for animation; defaults to calling a function exposing less information for backward compatibility;
 	 * interpolationScale is how far towards nextState the current time is from previousState. The scale is from 0.0 to 1.0; at 0.0 the current time is exactly that of previousState; at 1.0 the current time is exactly that of nextState
-	 * Note: it is not neccessary to add inline when overloading this yourself
+	 * Note: it is not necessary to add inline when overloading this yourself
 	 */
 	template<typename Entity>
 	inline void animateEntity(const SimulationData<Entity>& data, float interpolationScale);
@@ -302,6 +316,8 @@ private:
 	void animateEntity(Actor* actorPointer, const typename State& previousState, const typename State& nextState, float interpolationScale);
 	
 	void animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale);
+
+	void animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale);
 
 	void stackCoal(int stackerId);
 	void stopStackingCoal(int stackerId);

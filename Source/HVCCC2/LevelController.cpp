@@ -462,12 +462,13 @@ AConveyorBelt * ALevelController::spawnAConveyorBelt(FString id, FVector positio
 	return NULL;
 }
 
-ATrain * ALevelController::spawnATrain(FString id, FVector position, TSubclassOf<class ATrain> blueprint) {
+ATrain * ALevelController::spawnATrain(FString id, FVector position, FRotator rotator, TSubclassOf<class ATrain> blueprint) {
 	UWorld* world = GetWorld();
 	if (world) {
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
-		ATrain *actor = world->SpawnActor<ATrain>(blueprint, position, FRotator(0,0,0), spawnParams);
+		ATrain *actor = world->SpawnActor<ATrain>(blueprint, position, rotator, spawnParams);
+		actor->id = id;
 		trains.Add(actor);
 		return actor;
 	}
@@ -517,5 +518,20 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 	//TODO: ADD TURNING CONSIDERATIONS
 
 
-	UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
+	//UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
+}
+
+ATrain* ALevelController::getOrSpawnActor(const TrainMovement::Id& id)
+{
+	//stub
+	UE_LOG(LogTemp, Warning, TEXT("found a train id %s "), UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()));
+   return spawnATrain(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
+		trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World), train_locomotive_blueprint);
+	
+}
+
+
+void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale)
+{
+	//stub
 }

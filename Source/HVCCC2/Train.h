@@ -25,7 +25,10 @@ public:
 
 	void setPosition(float position);
 
-	FString id;
-
-	
+	FString id; // trainId
+	FString cycleId;
+	TArray<FString> trackId; //id of the track this train is currently on
+//time values represent start and end time of the train on the specified track
+	TArray<double> startTime;
+	TArray<double> endTime;
 };
