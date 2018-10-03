@@ -43,6 +43,7 @@ public:
 
 	FVector trackNodeA;
 	FVector trackNodeB;
+	int trackId;
 	FString id;
 	
 };

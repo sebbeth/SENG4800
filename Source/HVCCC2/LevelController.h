@@ -12,7 +12,10 @@
 #include "data/simulation/StockpileData.h"
 #include "data/extraction/TerminalId.h"
 #include "StackerReclaimer.h"
-
+#include "CoalStack.h"
+#include "Ship.h"
+#include "ShipLoader.h"
+//#include "TrainMovement.h"
 
 
 #include "LevelController.generated.h"
@@ -130,6 +133,22 @@ struct u_actor_type<StackerReclaimer> {
 	using type = AStackerReclaimer;
 };
 
+template<>
+struct u_actor_type<Shiploader> {
+	using type = AShipLoader;
+};
+
+template<>
+struct u_actor_type<Vessel> {
+	using type = AShip;
+};
+
+/*
+template<>
+struct u_actor_type<TrainMovement> {
+	using type = ATrain;
+};*/
+
 UCLASS()
 class HVCCC2_API ALevelController : public AActor
 {
@@ -187,30 +206,17 @@ protected:
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class AConveyorBelt> conveyor_belt_blueprint;
 
-	// Koorigang Stacker Reclaimer track markers
+	
+
+	//Train and track actors
 	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_SR_rails_start;
-	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_SR_rails_end;
-
-
-	// Koorigang ship loader track markers
-	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_loader_rails_start;
-	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_loader_rails_end;
-
-	// Ship berth position markers
-	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_berths;
+		TArray<ATrain*> trains;
+	//UPROPERTY(EditAnywhere)
+	//	TArray<ATrackSpline*> trainTracks;
 
 
 
-	//Coal Pad position markers
-	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_pads;
-
-	//actors
+	// NCT Actor Arrays
 	UPROPERTY(EditAnywhere)
 	TArray<ACoalStack*> coalStacks;
 	UPROPERTY(EditAnywhere)
@@ -220,18 +226,57 @@ protected:
 	UPROPERTY(EditAnywhere)
 	TArray<AShip*> ships;
 	UPROPERTY(EditAnywhere)
-		TArray<ATrain*> trains;
+	TArray<AConveyorBelt*> conveyorBelts; 
+	// Koorigang Stacker Reclaimer track markers
 	UPROPERTY(EditAnywhere)
-	TArray<AConveyorBelt*> conveyorBelts;
-	//UPROPERTY(EditAnywhere)
-	//	TArray<ATrackSpline*> trainTracks;
+		TArray<AActor*> NCT_SR_rails_start;
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> NCT_SR_rails_end;
+	// Koorigang ship loader track markers
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> NCT_loader_rails_start;
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> NCT_loader_rails_end;
+	// Ship berth position markers
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> NCT_berths;
+	//Coal Pad position markers
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> NCT_pads_start;
+
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> NCT_pads_end;
 
 
-	//Conveyor Belt position markers
+
+	//KCT Actor Arrays
 	UPROPERTY(EditAnywhere)
-		AActor *conv1_position;
+		TArray<AConveyorBelt*> conveyorBeltsKCT;
 	UPROPERTY(EditAnywhere)
-		AActor *conv2_position;
+		TArray<ACoalStack*> coalStacksKCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AStackerReclaimer*> stackerReclaimersKCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AShipLoader*> shipLoadersKCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AShip*> shipsKCT;
+
+
+
+
+	//CCT Actor Arrays
+	UPROPERTY(EditAnywhere)
+		TArray<AConveyorBelt*> conveyorBeltsCCT;
+	UPROPERTY(EditAnywhere)
+		TArray<ACoalStack*> coalStacksCCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AStackerReclaimer*> stackerReclaimersCCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AShipLoader*> shipLoadersCCT;
+	UPROPERTY(EditAnywhere)
+		TArray<AShip*> shipsCCT;
+
+	
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -273,18 +318,23 @@ public:
 
 private:
 	
-	AStackerReclaimer * spawnAStackerReclaimer(FString id, FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint);
+	AStackerReclaimer * spawnAStackerReclaimer(FString id, int trackId, FVector railStart, FVector railEnd, TSubclassOf<class AStackerReclaimer> blueprint);
 	AShipLoader * spawnAShipLoader(FString id, FVector railStart, FVector railEnd, TSubclassOf<class AShipLoader> blueprint);
 	AShip * spawnAShip(FString id, FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint);
 	AConveyorBelt * spawnAConveyorBelt(FString id, FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint);
-	ACoalStack * spawnACoalStack(FString id, FVector position, FRotator rotator, TSubclassOf<class ACoalStack> blueprint);
+	ACoalStack * spawnACoalStack(FString id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint);
 	ATrain * spawnATrain(FString id, FVector position, TSubclassOf<class ATrain> blueprint);
 
 
 	template<typename Id>
 	UActorType<typename Id::Entity>* getOrSpawnActor(const typename Id& id);
 
+	int getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> array, AStackerReclaimer* actor);
+
 	AStackerReclaimer* getOrSpawnActor(const StackerReclaimer::Id& id);
+	AShip* getOrSpawnActor(const Vessel::Id& id);
+	ACoalStack* getOrSpawnActor(const Stockpile::Id& id);
+	AShipLoader* getOrSpawnActor(const Shiploader::Id& id);
 
 	/**
 	 * Exposes all the information about an entity for animation; defaults to calling a function exposing less information for backward compatability;
@@ -302,6 +352,9 @@ private:
 	void animateEntity(Actor* actorPointer, const typename State& previousState, const typename State& nextState, float interpolationScale);
 	
 	void animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale);
+	void animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale);
+	void animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale);
+	void animateEntity(AShipLoader* actorPointer, const ShiploaderState& previousState, const ShiploaderState& nextState, float interpolationScale);
 
 	void stackCoal(int stackerId);
 	void stopStackingCoal(int stackerId);
@@ -317,6 +370,10 @@ private:
 	// Pad lengths
 	int getPadLength(TerminalId TerminalId, const int& padId);
 	int getTrackLength(TerminalId TerminalId, const int& trackID);
+	int getShipLoaderTrackLength(TerminalId terminal);
+
+	// Pad location
+	void setStockPileLocation(ACoalStack* actorPointer, const Stockpile::Id& id, std::string padId, double position);
 
 	int testTime; // Just being used for testing
 
