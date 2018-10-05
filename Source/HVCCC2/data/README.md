@@ -54,7 +54,6 @@ Then you will need to supply 3 points of data when running the python command:
 e.g. python python/generate_code.py -j  StateInfo.json -x SENG4800\XML -o SENG4800\Source\HVCCC2\data\extraction
 
 
-
 Explanation of StateInfo.json:
 The general format of json file is something like:
 ```

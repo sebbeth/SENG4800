@@ -308,6 +308,7 @@ private:
 	template<typename Entity>
 	inline void animateEntity(const SimulationData<Entity>& data, float interpolationScale);
 
+	//void animateEntity(const SimulationData<TrainMovement>& data, float interpolationScale);
 	/**
 	 * Uses only the ends of the window and the interpolationScale to animate an entity
 	 * interpolationScale is how far towards nextState the current time is from previousState. The scale is from 0.0 to 1.0; at 0.0 the current time is exactly that of previousState; at 1.0 the current time is exactly that of nextState
@@ -402,6 +403,7 @@ void UpdateWindowsFunctor::operator()(Each& eachDataMap) {
 				//while: the time in state at the end of each window is in the past AND there are states remaining ahead of it (the containing if is the same)
 				do {
 					//debugging
+					
 					UE_LOG(LogTemp, Warning, TEXT("Entity %s: moving window to the states %d and %d"), UTF8_TO_TCHAR(eachId.nameForBinaryFile().c_str()), std::distance(eachStates.cbegin(), eachWindow.first), std::distance(eachStates.cbegin(), eachWindow.second));
 
 					//if the ends of the window are the same, instead of sliding both indices forward, want to expand the window by incrementing only the second

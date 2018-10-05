@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-03 22:59:09.760513
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-05 16:57:21.303565
  **/
 #include "TrainMovementState.h"
 
@@ -42,6 +42,10 @@ TrainMovementStateType TrainMovementState::determineNextType(TrainMovementStateT
             switch(eventType) {
                 case TrainMovementEventType::ReachedSignal:
                     return TrainMovementStateType::InTrack;
+                case TrainMovementEventType::HeadLeaveTrack:
+                    return TrainMovementStateType::InJunction;
+                case TrainMovementEventType::TailLeaveTrack:
+                    return TrainMovementStateType::InTrack;
                 default:
                     return TrainMovementStateType::Invalid;
             }
@@ -58,7 +62,7 @@ TrainMovementStateType TrainMovementState::determineNextType(TrainMovementStateT
                 case TrainMovementEventType::MaintenanceAttempted:
                     return TrainMovementStateType::RequestedMaintenance;
                 case TrainMovementEventType::WaitForTracks:
-                    return TrainMovementStateType::InTrack;
+                    return TrainMovementStateType::Waiting;
                 case TrainMovementEventType::TailLeaveTrack:
                     return TrainMovementStateType::InTrack;
                 default:
