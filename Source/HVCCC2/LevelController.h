@@ -11,11 +11,14 @@
 #include "data/simulation/SimulationData.h"
 #include "data/simulation/StockpileData.h"
 #include "data/extraction/TerminalId.h"
+#include "data/extraction/TrainMovement/TrainMovement.h"
 #include "StackerReclaimer.h"
 #include "CoalStack.h"
 #include "Ship.h"
 #include "ShipLoader.h"
 //#include "TrainMovement.h"
+#include "TrainTrackSpline.h"
+#include "Train.h"
 
 
 #include "LevelController.generated.h"
@@ -128,6 +131,7 @@ struct StringifyEventsFunctor {
 	StringifyEventsFunctor(ALevelController* context);
 };
 
+//tis struct this needed for all data types being spawned and animated, as well as a getorspawnactor and anamiteenity method
 template<>
 struct u_actor_type<StackerReclaimer> {
 	using type = AStackerReclaimer;
@@ -148,6 +152,12 @@ template<>
 struct u_actor_type<TrainMovement> {
 	using type = ATrain;
 };*/
+
+template<>
+struct u_actor_type<TrainMovement> {
+	using type = ATrain;
+};
+
 
 UCLASS()
 class HVCCC2_API ALevelController : public AActor
@@ -259,12 +269,19 @@ protected:
 	UPROPERTY(EditAnywhere)
 		TArray<AShipLoader*> shipLoadersKCT;
 	UPROPERTY(EditAnywhere)
+		TArray<ATrain*> trains;
+	UPROPERTY(EditAnywhere)
+	TArray<AConveyorBelt*> conveyorBelts;
 		TArray<AShip*> shipsKCT;
 
+	UPROPERTY(EditAnywhere)
+		TArray<ATrainTrackSpline*> trainTracks;
 
 
 
 	//CCT Actor Arrays
+
+	//Conveyor Belt position markers
 	UPROPERTY(EditAnywhere)
 		TArray<AConveyorBelt*> conveyorBeltsCCT;
 	UPROPERTY(EditAnywhere)
@@ -325,6 +342,8 @@ private:
 	ACoalStack * spawnACoalStack(FString id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint);
 	ATrain * spawnATrain(FString id, FVector position, TSubclassOf<class ATrain> blueprint);
 
+	ATrain * spawnATrain(FString id, FVector position, FRotator rotator,TSubclassOf<class ATrain> blueprint);
+
 
 	template<typename Id>
 	UActorType<typename Id::Entity>* getOrSpawnActor(const typename Id& id);
@@ -336,14 +355,18 @@ private:
 	ACoalStack* getOrSpawnActor(const Stockpile::Id& id);
 	AShipLoader* getOrSpawnActor(const Shiploader::Id& id);
 
+	ATrain* getOrSpawnActor(const TrainMovement::Id& id);
+
+
 	/**
-	 * Exposes all the information about an entity for animation; defaults to calling a function exposing less information for backward compatability;
+	 * Exposes all the information about an entity for animation; defaults to calling a function exposing less information for backward compatibility;
 	 * interpolationScale is how far towards nextState the current time is from previousState. The scale is from 0.0 to 1.0; at 0.0 the current time is exactly that of previousState; at 1.0 the current time is exactly that of nextState
-	 * Note: it is not neccessary to add inline when overloading this yourself
+	 * Note: it is not necessary to add inline when overloading this yourself
 	 */
 	template<typename Entity>
 	inline void animateEntity(const SimulationData<Entity>& data, float interpolationScale);
 
+	//void animateEntity(const SimulationData<TrainMovement>& data, float interpolationScale);
 	/**
 	 * Uses only the ends of the window and the interpolationScale to animate an entity
 	 * interpolationScale is how far towards nextState the current time is from previousState. The scale is from 0.0 to 1.0; at 0.0 the current time is exactly that of previousState; at 1.0 the current time is exactly that of nextState
@@ -355,6 +378,8 @@ private:
 	void animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale);
 	void animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale);
 	void animateEntity(AShipLoader* actorPointer, const ShiploaderState& previousState, const ShiploaderState& nextState, float interpolationScale);
+
+	void animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale);
 
 	void stackCoal(int stackerId);
 	void stopStackingCoal(int stackerId);
@@ -443,6 +468,7 @@ void UpdateWindowsFunctor::operator()(Each& eachDataMap) {
 				//while: the time in state at the end of each window is in the past AND there are states remaining ahead of it (the containing if is the same)
 				do {
 					//debugging
+					
 					UE_LOG(LogTemp, Warning, TEXT("Entity %s: moving window to the states %d and %d"), UTF8_TO_TCHAR(eachId.nameForBinaryFile().c_str()), std::distance(eachStates.cbegin(), eachWindow.first), std::distance(eachStates.cbegin(), eachWindow.second));
 
 					//if the ends of the window are the same, instead of sliding both indices forward, want to expand the window by incrementing only the second
