@@ -26,4 +26,23 @@ with open('../../../../XMLs/CCTDumpLog.xml') as fd:
             j = j + 1
 
     print(xmltodict.unparse(doc, pretty=True))
+
+    orderedDictForAllEvents = OrderedDict()
+
+    # eventListIterator = iter(events)
+
+    keys = list(events.keys())
+
+    for i in range(len(keys)):
+        eventList = events[keys[i]]
+
+        # eventListItemsIterator = iter(eventList)
+
+        for j in range(len(eventList)):
+            temp = events[keys[i]][j]
+
+            # orderedDictForAllEvents.update({keys[i], events[keys[i]][j]})
+            orderedDictForAllEvents[keys[i]] = events[keys[i]][j]
+
+
     print()
