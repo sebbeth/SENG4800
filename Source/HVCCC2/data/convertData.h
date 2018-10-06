@@ -38,12 +38,18 @@ using ConvertFunctor = convert_data_detail::convert_functor<Entities...>;
 template<typename Each, typename Event = typename Each::mapped_type::value_type>
 StateMap<typename Event::Entity> convert(const Each& source) {
 	StateMap<typename Event::Entity> result;
+
 	//Iterate through every single event which is of the currently examined type (eg. stockpiles):
 	for (auto& eachSourceEntry : source) {
 		auto eachDestinationEntry = result.emplace(std::piecewise_construct, std::make_tuple(eachSourceEntry.first), std::make_tuple()).first;
+
+		//Uses the first event to generated the first state:
 		auto eachState = StateTraits<typename Event::Entity::AssociatedState>::initializeFromEvent(eachSourceEntry.second.front());
+
 		(*eachDestinationEntry).second.reserve(eachSourceEntry.second.size());
 		(*eachDestinationEntry).second.push_back(eachState);
+
+		//Uses all the events from the second event onwards to create the other states:
 		for (auto eachIt = ++(eachSourceEntry.second.begin()); eachIt != eachSourceEntry.second.end(); ++eachIt) {
 			eachState = StateTraits<typename Event::Entity::AssociatedState>::generateNextState(eachState, *eachIt);
 			(*eachDestinationEntry).second.push_back(eachState);
