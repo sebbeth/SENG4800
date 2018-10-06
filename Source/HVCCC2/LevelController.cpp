@@ -727,8 +727,6 @@ void ALevelController::animateEntity(AShipLoader* actorPointer, const Shiploader
 
 }
 
-	//UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
-}
 
 ATrain* ALevelController::getOrSpawnActor(const TrainMovement::Id& id)
 {

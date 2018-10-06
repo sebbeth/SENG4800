@@ -268,10 +268,7 @@ protected:
 		TArray<AStackerReclaimer*> stackerReclaimersKCT;
 	UPROPERTY(EditAnywhere)
 		TArray<AShipLoader*> shipLoadersKCT;
-	UPROPERTY(EditAnywhere)
-		TArray<ATrain*> trains;
-	UPROPERTY(EditAnywhere)
-	TArray<AConveyorBelt*> conveyorBelts;
+
 		TArray<AShip*> shipsKCT;
 
 	UPROPERTY(EditAnywhere)
