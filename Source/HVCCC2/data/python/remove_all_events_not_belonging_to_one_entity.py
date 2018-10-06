@@ -1,8 +1,14 @@
-xmlFilesLocation = '../../../../XMLs/'
+xmlFilesDirectory = '../../../../XMLs/'
+xmlFileName = 'CCTDumpLog.xml'
 rootElement = 'events'
+idName = 'dumpstationID'
+entityID = 'CCT.RR1'
+outputFilesDirectory = '../../../../XMLs/'
 
-with open(xmlFilesLocation + 'CCTDumpLog.xml') as fd:
+with open(xmlFilesDirectory + xmlFileName) as fd:
     firstLine = True
+
+    newFileName = xmlFileName[:len(xmlFileName) - 4] + "_Only" + entityID + "Events.xml"
 
     for line in fd:
         modeUsed = 'a'
@@ -11,6 +17,6 @@ with open(xmlFilesLocation + 'CCTDumpLog.xml') as fd:
             modeUsed = 'w'
             firstLine = False
 
-        with open('testing.xml', modeUsed) as newFile:
-            if line == ("<" + rootElement + ">\n") or line == ("</" + rootElement + ">") or "CCT.RR1" in line:
+        with open(outputFilesDirectory + newFileName, modeUsed) as newFile:
+            if line == ("<" + rootElement + ">\n") or line == ("</" + rootElement + ">") or (idName + "=\"" + entityID + "\"") in line:
                 newFile.write(line)
