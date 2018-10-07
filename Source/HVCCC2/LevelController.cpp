@@ -790,9 +790,9 @@ ATrain* ALevelController::getOrSpawnActor(const TrainMovement::Id& id)
 {
 	//stub
 	//UE_LOG(LogTemp, Warning, TEXT("Added a Train found a train id %s "), UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()));
-  // return spawnATrain(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
-		//trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World), train_locomotive_blueprint);
-	return nullptr;
+	return spawnATrain(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
+		trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World), train_locomotive_blueprint);
+	//return nullptr;
 }
 
 
