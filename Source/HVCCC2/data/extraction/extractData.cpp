@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-03 22:59:09.760513
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-07 18:18:44.676555
  **/
 #include "extractData.h"
 #include <regex>
@@ -258,28 +258,12 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, TrainMovemen
     //extract the identifying name
     XMLCheckResult(extractAttribute(source, destination.id.name, "trainID"), 0);
 
-    switch(destination.type) {
-        case TrainMovementEventType::WaitForTracks:
-            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
-            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
-            break;
-        case TrainMovementEventType::EnterTrack:
-        case TrainMovementEventType::HeadLeaveTrack:
-        case TrainMovementEventType::TailLeaveTrack:
-            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
-            XMLCheckResult(extractAttribute(source, destination.direction, "direction"), 0);
-            XMLCheckResult(extractAttribute(source, destination.sectionID, "sectionID"), 0);
-            XMLCheckResult(extractAttribute(source, destination.speed, "speed"), 0);
-            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
-            XMLCheckResult(extractAttribute(source, destination.trackID, "trackID"), 0);
-            break;
-        case TrainMovementEventType::ReachedSignal:
-            XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
-            XMLCheckResult(extractAttribute(source, destination.signalID, "signalID"), 0);
-            XMLCheckResult(extractAttribute(source, destination.signalState, "signalState"), 0);
-            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
-            break;
-    }
+    XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
+    XMLCheckResult(extractAttribute(source, destination.direction, "direction"), 0);
+    XMLCheckResult(extractAttribute(source, destination.sectionID, "sectionID"), 0);
+    XMLCheckResult(extractAttribute(source, destination.speed, "speed"), 0);
+    XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
+    XMLCheckResult(extractAttribute(source, destination.trackID, "trackID"), 0);
     return tinyxml2::XML_SUCCESS;
 }
 

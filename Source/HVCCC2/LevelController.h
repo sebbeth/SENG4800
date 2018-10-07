@@ -377,7 +377,8 @@ private:
 	void animateEntity(const SimulationData<Stockpile>& data, float interpolationScale);
 	void animateEntity(AShipLoader* actorPointer, const ShiploaderState& previousState, const ShiploaderState& nextState, float interpolationScale);
 
-	void animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale);
+	//void animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale);
+	void animateEntity(const SimulationData<TrainMovement>& data, float interpolationScale);
 
 	void stackCoal(int stackerId);
 	void stopStackingCoal(int stackerId);
@@ -519,9 +520,9 @@ void AnimateEntitiesFunctor::operator()(Each& eachDataMap) {
 
 			//we have to limit the target time in case simTime is outside of the current window (note: this is especially true at the beginning of the simulation/when creation events aren't neccessarily at time 0)
 			//TODO: possibly implement consider non-existing that can be used to not render items that don't exist at the current time in the simulation?
-			float targetTime = std::max(previousState.time, std::min(nextState.time, context->simTime));
+			double targetTime = std::max(previousState.time, std::min(nextState.time, context->simTime));
 
-			float interpolationScale;
+			double interpolationScale;
 			if (previousState.time == nextState.time) {
 				//if the states are the same, all values between 0 and 1 for the scale would be effectively the same, but the formula would be unable to divide by 0
 				interpolationScale = 0;
