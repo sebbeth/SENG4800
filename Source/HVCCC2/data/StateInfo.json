@@ -551,43 +551,18 @@
       "identifier": "trainID",
       "transitions": {
         "Idle": {
-          "HeadLeaveTrack": "InJunction",
-          "WaitForTracks": "Waiting",
+          "HeadLeaveTrack": "LeavingTrack",
           "EnterTrack": "EnteringTrack"
         },
-        "InJunction": {
-          "EnterTrack": "EnteringTrack",
-          "TailLeaveTrack": "InTrack"
+        "LeavingTrack": {
+          "EnterTrack": "EnteringTrack"
         },
         "EnteringTrack": {
-          "ReachedSignal": "InTrack",
-          "HeadLeaveTrack": "InJunction",
-          "TailLeaveTrack": "InTrack"
-        },
-        "InTrack": {
-          "EnterTrack": "EnteringTrack",
-          "HeadLeaveTrack": "InJunction",
-          "ReachedSignal": "InTrack",
-          "WaitingStart": "Waiting",
-          "MaintAttempted": "RequestedMaintenance",
-          "WaitForTracks": "Waiting",
-          "TailLeaveTrack": "InTrack"
-        },
-        "Waiting": {
-          "WaitingComp": "InTrack",
-          "WaitForTracks": "Waiting",
-          "HeadLeaveTrack": "InJunction",
-          "TailLeaveTrack": "InTrack"
-        },
-        "RequestedMaintenance": {
-          "MaintStart": "Maintenance"
-        },
-        "Maintenance": {
-          "MaintCompleted": "InTrack"
+          "HeadLeaveTrack": "LeavingTrack"
         }
       }
     }
-  },
+  },  
   "terminals": ["CCT", "KCT", "NCT"],
   "merges": {
     "StackerReclaimer": ["Stacker", "Reclaimer"]

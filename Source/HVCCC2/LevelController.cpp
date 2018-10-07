@@ -24,7 +24,7 @@ float mock_level;
 std::tuple<TerminalId, std::string, int> padLengths;
 std::tuple<TerminalId, std::string, int> trackLengths;
 
-std::string lastActorId;
+//std::string lastActorId;
 bool playHasBeenClickedTrains = false;
 
 
@@ -556,11 +556,11 @@ void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, 
 			{
 
 				//UE_LOG(LogTemp, Warning, TEXT("Entering Track state on eachState id %s , trackId %s"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(eachState.trackID.c_str()));
-				for (auto eachTrack : (trainTracks))
+				for (auto eachTrackPtr : (trainTracks))
 				{
-					if (eachState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
+					if (eachState.trackID == std::string(TCHAR_TO_UTF8(*eachTrackPtr->id)))
 					{
-						UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(eachState.trackID.c_str()), *FString(eachTrack->id), float(interpolationScale) );
+						UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(eachState.trackID.c_str()), *FString(eachTrackPtr->id), float(interpolationScale) );
 
 					}
 				}
@@ -568,11 +568,11 @@ void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, 
 			}
 			else if (eachState.type == TrainMovementStateType::InJunction)
 			{
-				for (auto eachTrack : (trainTracks))
+				for (auto eachTrackPtr : (trainTracks))
 				{
-					if (eachState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
+					if (eachState.trackID == std::string(TCHAR_TO_UTF8(*eachTrackPtr->id)))
 					{
-						UE_LOG(LogTemp, Warning, TEXT("INJUNCTION train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(eachState.trackID.c_str()), *FString(eachTrack->id), float(interpolationScale) );
+						UE_LOG(LogTemp, Warning, TEXT("INJUNCTION train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f"), UTF8_TO_TCHAR(eachState.id.name.c_str()), UTF8_TO_TCHAR(eachState.trackID.c_str()), *FString(eachTrackPtr->id), float(interpolationScale) );
 
 					}
 				}
@@ -610,217 +610,309 @@ void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, 
 }
 */
 
-		// old code
-void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale)
-{
-	//previous and next seem to be both pointing to the same state , tested with output  ln: 538
-	//UE_LOG(LogTemp, Warning, TEXT("previousState id %s , nextState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(nextState.id.name.c_str()));
-	
-	
-	if (isPlaying)
-	{
-		playHasBeenClickedTrains = true;
-	//ps = previousState
-	//ns = nextState
-	//et = EnteringTrack 
-	//ijn = InJunction
+void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, float interpolationScale) {
+	//in theory, this logic searches for the state pairs that get the moment of entry for the current track and the next track, ignoring irrelevant states like in junction; additional cases will be needed to handle maintenance etc, but otherwise this should work I think?
+	//in future, the xml data should possibly be modified to only provide entering track states maybe for movement (plus maintenance or whatever)?
+	auto enterIterator = data.stateWindow.first;
+	auto exitIterator = data.stateWindow.second;
+	auto& targetTrackId = (*enterIterator).trackID;
 
-	//ps et ns et
-	//ps et ns ijn  
-	//ps jn ns ijn
-	//ps jn ns et
-
-
-
-		if (previousState.type == TrainMovementStateType::EnteringTrack)
-		{
-			if (nextState.type == TrainMovementStateType::EnteringTrack)
-			{
-				//both point to the same state
-				UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK previousState, ENTERINGTRACK nextState, train id : %s, track id from data : %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), float(interpolationScale));
-			}
-			else if (nextState.type == TrainMovementStateType::InJunction)
-			{
-				// next state the train is leaving this track iterate for the track in previous state as we haven't left the track until interpolationScale == 1.0
-				for (auto eachTrack : trainTracks)
-				{
-	
-					if (previousState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
-					{
-						//UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK train id: %s , track id from data: %s , my Track id: %s"), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id) );
-	
-						//train is at start of this track?
-						lastActorId = previousState.id.name;
-						UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK previousState, INJUNCTION nextState, train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id), float(interpolationScale));
-						
-						lastActorId = previousState.id.name;
-						
-						float distance = eachTrack->Spline->GetSplineLength() * interpolationScale;
-						auto makeTransform = FTransform(eachTrack->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
-							eachTrack->Spline->GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
-							FVector(1.0f, 1.0f, 1.0f));
-	
-						actorPointer->SetActorTransform(makeTransform);
-					}
-				}
-	
-			}
-			//UE_LOG(LogTemp, Warning, TEXT("Entering Track state on previousState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()) );
-	
+	ATrainTrackSpline* targetTrackPtr = nullptr;
+	//first try and find the track we want;
+	// next state the train is leaving this track iterate for the track in previous state as we haven't left the track until interpolationScale == 1.0
+	for (auto& eachTrackPtr : trainTracks) {
+		if (targetTrackId == std::string(TCHAR_TO_UTF8(*eachTrackPtr->id))) {
+			targetTrackPtr = eachTrackPtr;
+			break;
 		}
-		else if (previousState.type == TrainMovementStateType::InJunction) //current trains head left the track
-		{
-			if (nextState.type == TrainMovementStateType::InJunction)
-			{
-				//both point to the same state
-			   // UE_LOG(LogTemp, Warning, TEXT("INJUNCTION nextState, INJUNCTION previousState, train id : %s, track id from data : %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), float(interpolationScale));
-				// INJUNCTION nextState, INJUNCTION previousState, train id : train40, track id from data : trk_KCT_Initial , interpolationScale 0.000000  for every train id why?
-				
-			}
-			else if (nextState.type == TrainMovementStateType::EnteringTrack)
-			{
-				// next state the train is entering nextState's track iterate for the track in previousState as we haven't left into interpolationScale ==  1.0 therefore we must be in previousState's track
-				for (auto eachTrack : trainTracks)
-				{
-					//UE_LOG(LogTemp, Warning, TEXT("InJunction previousState train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id), float(interpolationScale));
-					if (previousState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
-					{
-						//UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK train id: %s , track id from data: %s , my Track id: %s"), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id) );
-						UE_LOG(LogTemp, Warning, TEXT("INJUNCTION previousState, ENTERINGTRACK nextState, train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id), float(interpolationScale));
-						
-						lastActorId = previousState.id.name;
-						
-						float distance = eachTrack->Spline->GetSplineLength() * interpolationScale;
-						auto makeTransform = FTransform(eachTrack->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
-							eachTrack->Spline->GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
-							FVector(1.0f, 1.0f, 1.0f));
-	
-						actorPointer->SetActorTransform(makeTransform);
-	
-						//train moves to end of current traintrack?
-					}
-				}
-			}
-			//UE_LOG(LogTemp, Warning, TEXT("InJunction state on previousState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()) );
-	
-	
+	}
+
+	bool shouldShow = targetTrackPtr != nullptr;
+
+	// only bother animating fully if we recognise the track
+	if (shouldShow) {
+		while (enterIterator != data.states.begin() && (*(enterIterator-1)).trackID == targetTrackId) {
+			--enterIterator;
 		}
-		else
-		{
-			if (nextState.type == TrainMovementStateType::EnteringTrack)
-			{
-				if (previousState.type == TrainMovementStateType::EnteringTrack)
-				{
-					//both point to the same state
-					UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK nextState, ENTERINGTRACK previousState, train id : %s, track id from data : %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), float(interpolationScale));
-				}
-				else if (previousState.type == TrainMovementStateType::InJunction)
-				{
-					// next state the train is leaving this track iterate for the track in previous state as we haven't left the track until interpolationScale == 1.0
-					for (auto eachTrack : trainTracks)
-					{
-	
-						if (previousState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
-						{
-							//UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK train id: %s , track id from data: %s , my Track id: %s"), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id) );
-	
-							//train is at start of this track?
-							UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK nextState, INJUNCTION previousState, train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id), float(interpolationScale));
-							
-							lastActorId = previousState.id.name;
-							
-							float distance = eachTrack->Spline->GetSplineLength() * interpolationScale;
-	
-							auto makeTransform = FTransform(eachTrack->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
-								eachTrack->Spline->GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
-								FVector(1.0f, 1.0f, 1.0f));
-	
-							actorPointer->SetActorTransform(makeTransform);
-						}
-					}
-	
-				}
-				//UE_LOG(LogTemp, Warning, TEXT("Entering Track state on previousState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()) );
-	
-	
-			}
-			else if (nextState.type == TrainMovementStateType::InJunction) //current trains head left the track
-			{
-				if (previousState.type == TrainMovementStateType::InJunction)
-				{
-					//both point to the same state
-				   // UE_LOG(LogTemp, Warning, TEXT("INJUNCTION nextState, INJUNCTION previousState, train id : %s, track id from data : %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), float(interpolationScale));
-					// INJUNCTION nextState, INJUNCTION previousState, train id : train40, track id from data : trk_KCT_Initial , interpolationScale 0.000000  for every train id why?
-				}
-				else if (previousState.type == TrainMovementStateType::EnteringTrack)
-				{
-					// next state the train is entering nextState's track iterate for the track in previousState as we haven't left into interpolationScale ==  1.0 therefore we must be in previousState's track
-					for (auto eachTrack : trainTracks)
-					{
-						//UE_LOG(LogTemp, Warning, TEXT("InJunction previousState train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id), float(interpolationScale));
-						if (previousState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
-						{
-							//UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK train id: %s , track id from data: %s , my Track id: %s"), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id) );
-							UE_LOG(LogTemp, Warning, TEXT("INJUNCTION nextState, ENTERINGTRACK previousState, train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id), float(interpolationScale));
-							float distance = eachTrack->Spline->GetSplineLength() * interpolationScale;
-	
-							lastActorId = previousState.id.name;
-
-							auto makeTransform = FTransform(eachTrack->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
-								eachTrack->Spline->GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
-								FVector(1.0f, 1.0f, 1.0f));
-	
-							actorPointer->SetActorTransform(makeTransform);
-	
-							//train moves to end of current traintrack?
-						}
-					}
-				}
-				//UE_LOG(LogTemp, Warning, TEXT("InJunction state on previousState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()) );
-			}
+		if ((*enterIterator).trackID != (*data.stateWindow.first).trackID) {
+			//panic this was unexpected
+			shouldShow = false;
 		}
-	 
-
-		if (lastActorId == std::string(TCHAR_TO_UTF8(*actorPointer->id))) //this may fire when simulation is left to run, not sure why as "isPlaying" should be false
-																		  //from that point however it appears it continues to tick until stop or pause is clicked
-		{
-			for (auto eachTrack : trainTracks)
-			{
-
-				if (previousState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
-				{
-					//UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK train id: %s , track id from data: %s , my Track id: %s"), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id) );
-
-					//train is at start of this track?
-					lastActorId = previousState.id.name;
-					UE_LOG(LogTemp, Warning, TEXT("INJUNCTION previousState, INJUNCTION nextState, train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id), float(interpolationScale));
-
-					lastActorId = previousState.id.name;
-
-					float distance = eachTrack->Spline->GetSplineLength() * interpolationScale;
-					auto makeTransform = FTransform(eachTrack->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
-						eachTrack->Spline->GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
-						FVector(1.0f, 1.0f, 1.0f));
-
-					actorPointer->SetActorTransform(makeTransform);
-				}
-			}
+		while (exitIterator+1 != data.states.end() && (*(exitIterator+1)).trackID == targetTrackId) {
+			++exitIterator;
 		}
-	}//end of isPlaying check
-	else if (simTime == 0.0f && playHasBeenClickedTrains == true)//if stopped (i don't think i can check for this though?????)
-	{
-		// reset actors to hidden track
-		UE_LOG(LogTemp, Warning, TEXT("simTime is 0.0f : %f "), float(simTime) );
+		if ((*exitIterator).trackID != (*data.stateWindow.first).trackID) {
+			//panic this was unexpected
+			shouldShow = false;
+		}
+	}
+
+	auto actorPointer = data.actorPointer;
+	if (shouldShow) {
+		//override interpolation scale with a value that actually indicates how far along the track we are
+		float targetTime = std::max(enterIterator->time, std::min(exitIterator->time, this->simTime));
+
+		float splineScale;
+		if (enterIterator == exitIterator) {
+			//if the states are the same, all values between 0 and 1 for the scale would be effectively the same, but the formula would be unable to divide by 0
+			splineScale = 0;
+		} else {
+			//determine the interpolation scale using the the formula |current - previous|/|next - previous|
+			splineScale = (targetTime - enterIterator->time) / (exitIterator->time - enterIterator->time);
+		}
+		//do whatever with an interpolation scale that estimates how far along the track we are
+		//actorPointer->SetActorHiddenInGame(false);
+		//actorPointer->SetActorEnableCollision(true);
+		
+		float distance = targetTrackPtr->Spline->GetSplineLength() * splineScale;
+		auto makeTransform = FTransform(targetTrackPtr->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
+			targetTrackPtr->Spline->GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
+			FVector(5.0f, 5.0f, 5.0f));
+
+		actorPointer->SetActorTransform(makeTransform);
+	} else {
+		//do whatever to hide the train
+		//actorPointer->SetActorHiddenInGame(true);
+		//actorPointer->SetActorEnableCollision(false);
 
 		auto makeTransform = FTransform(trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World),
 			trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
-			FVector(1.0f, 1.0f, 1.0f));
+			FVector(5.0f, 5.0f, 5.0f));
 
-		for (auto eachTrain : trains)
-		{
-			eachTrain->SetActorTransform(makeTransform);
-		}
-		playHasBeenClickedTrains = false;
-		
-	 }
+		actorPointer->SetActorTransform(makeTransform);
+	}
+
 }
+
+//		// old code
+//void ALevelController::animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale)
+//{
+//	//previous and next seem to be both pointing to the same state , tested with output  ln: 538
+//	//UE_LOG(LogTemp, Warning, TEXT("previousState id %s , nextState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(nextState.id.name.c_str()));
+//	
+//	
+//	//if (isPlaying)
+//	//{
+//		//playHasBeenClickedTrains = true;
+//	//ps = previousState
+//	//ns = nextState
+//	//et = EnteringTrack 
+//	//ijn = InJunction
+//
+//	//ps et ns et
+//	//ps et ns ijn  
+//	//ps jn ns ijn
+//	//ps jn ns et
+//
+//
+//
+//	if (previousState.type == TrainMovementStateType::EnteringTrack)
+//	{
+//		if (nextState.type == TrainMovementStateType::EnteringTrack)
+//		{
+//			//both point to the same state; //this is a real, valid occurance at the beginning and end of simulations
+//			UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK previousState, ENTERINGTRACK nextState, train id : %s, track id from data : %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), float(interpolationScale));
+//		}
+//		else if (nextState.type == TrainMovementStateType::InJunction)
+//		{
+//			// next state the train is leaving this track iterate for the track in previous state as we haven't left the track until interpolationScale == 1.0
+//			for (auto eachTrack : trainTracks)
+//			{
+//	
+//				if (previousState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
+//				{
+//					actorPointer->SetActorHiddenInGame(false);
+//					actorPointer->SetActorEnableCollision(true);
+//					//UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK train id: %s , track id from data: %s , my Track id: %s"), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrackPtr->id) );
+//	
+//					//train is at start of this track?
+//					//lastActorId = previousState.id.name;
+//					UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK previousState, INJUNCTION nextState, train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id), float(interpolationScale));
+//						
+//					//lastActorId = previousState.id.name;
+//						
+//					float distance = eachTrack->Spline->GetSplineLength() * interpolationScale;
+//					auto makeTransform = FTransform(eachTrack->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
+//						eachTrack->Spline->GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
+//						FVector(3.0f, 3.0f, 3.0f));
+//	
+//					actorPointer->SetActorTransform(makeTransform);
+//					return;
+//				}
+//			}
+//	
+//		}
+//		//UE_LOG(LogTemp, Warning, TEXT("Entering Track state on previousState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()) );
+//	
+//	}
+//	else if (previousState.type == TrainMovementStateType::InJunction) //current trains head left the track
+//	{
+//		if (nextState.type == TrainMovementStateType::InJunction)
+//		{
+//			//both point to the same state
+//			// UE_LOG(LogTemp, Warning, TEXT("INJUNCTION nextState, INJUNCTION previousState, train id : %s, track id from data : %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), float(interpolationScale));
+//			// INJUNCTION nextState, INJUNCTION previousState, train id : train40, track id from data : trk_KCT_Initial , interpolationScale 0.000000  for every train id why?
+//				
+//		}
+//		else if (nextState.type == TrainMovementStateType::EnteringTrack)
+//		{
+//			// next state the train is entering nextState's track iterate for the track in previousState as we haven't left into interpolationScale ==  1.0 therefore we must be in previousState's track
+//			for (auto eachTrack : trainTracks)
+//			{
+//				//UE_LOG(LogTemp, Warning, TEXT("InJunction previousState train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrackPtr->id), float(interpolationScale));
+//				if (previousState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
+//				{
+//					actorPointer->SetActorHiddenInGame(false);
+//					actorPointer->SetActorEnableCollision(true);
+//					//UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK train id: %s , track id from data: %s , my Track id: %s"), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrackPtr->id) );
+//					UE_LOG(LogTemp, Warning, TEXT("INJUNCTION previousState, ENTERINGTRACK nextState, train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id), float(interpolationScale));
+//						
+//					//lastActorId = previousState.id.name;
+//						
+//					float distance = eachTrack->Spline->GetSplineLength() * interpolationScale;
+//					auto makeTransform = FTransform(eachTrack->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
+//						eachTrack->Spline->GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
+//						FVector(3.0f, 3.0f, 3.0f));
+//	
+//					actorPointer->SetActorTransform(makeTransform);
+//					return;
+//	
+//					//train moves to end of current traintrack?
+//				}
+//			}
+//		}
+//		//UE_LOG(LogTemp, Warning, TEXT("InJunction state on previousState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()) );
+//	
+//	
+//	}
+//	else
+//	{
+//		if (nextState.type == TrainMovementStateType::EnteringTrack)
+//		{
+//			if (previousState.type == TrainMovementStateType::EnteringTrack)
+//			{
+//				//both point to the same state
+//				UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK nextState, ENTERINGTRACK previousState, train id : %s, track id from data : %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), float(interpolationScale));
+//			}
+//			else if (previousState.type == TrainMovementStateType::InJunction)
+//			{
+//				// next state the train is leaving this track iterate for the track in previous state as we haven't left the track until interpolationScale == 1.0
+//				for (auto eachTrack : trainTracks)
+//				{
+//	
+//					if (previousState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
+//					{
+//						actorPointer->SetActorHiddenInGame(false);
+//						actorPointer->SetActorEnableCollision(true);
+//						//UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK train id: %s , track id from data: %s , my Track id: %s"), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrackPtr->id) );
+//	
+//						//train is at start of this track?
+//						UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK nextState, INJUNCTION previousState, train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id), float(interpolationScale));
+//							
+//						//lastActorId = previousState.id.name;
+//							
+//						float distance = eachTrack->Spline->GetSplineLength() * interpolationScale;
+//	
+//						auto makeTransform = FTransform(eachTrack->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
+//							eachTrack->Spline->GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
+//							FVector(3.0f, 3.0f, 3.0f));
+//	
+//						actorPointer->SetActorTransform(makeTransform);
+//						return;
+//					}
+//				}
+//	
+//			}
+//			//UE_LOG(LogTemp, Warning, TEXT("Entering Track state on previousState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()) );
+//	
+//	
+//		}
+//		else if (nextState.type == TrainMovementStateType::InJunction) //current trains head left the track
+//		{
+//			if (previousState.type == TrainMovementStateType::InJunction)
+//			{
+//				//both point to the same state
+//				// UE_LOG(LogTemp, Warning, TEXT("INJUNCTION nextState, INJUNCTION previousState, train id : %s, track id from data : %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), float(interpolationScale));
+//				// INJUNCTION nextState, INJUNCTION previousState, train id : train40, track id from data : trk_KCT_Initial , interpolationScale 0.000000  for every train id why?
+//			}
+//			else if (previousState.type == TrainMovementStateType::EnteringTrack)
+//			{
+//				// next state the train is entering nextState's track iterate for the track in previousState as we haven't left into interpolationScale ==  1.0 therefore we must be in previousState's track
+//				for (auto eachTrack : trainTracks)
+//				{
+//					//UE_LOG(LogTemp, Warning, TEXT("InJunction previousState train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrackPtr->id), float(interpolationScale));
+//					if (previousState.trackID == std::string(TCHAR_TO_UTF8(*eachTrack->id)))
+//					{
+//						actorPointer->SetActorHiddenInGame(false);
+//						actorPointer->SetActorEnableCollision(true);
+//						//UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK train id: %s , track id from data: %s , my Track id: %s"), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrackPtr->id) );
+//						UE_LOG(LogTemp, Warning, TEXT("INJUNCTION nextState, ENTERINGTRACK previousState, train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrack->id), float(interpolationScale));
+//						float distance = eachTrack->Spline->GetSplineLength() * interpolationScale;
+//	
+//						//lastActorId = previousState.id.name;
+//
+//						auto makeTransform = FTransform(eachTrack->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
+//							eachTrack->Spline->GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
+//							FVector(3.0f, 3.0f, 3.0f));
+//	
+//						actorPointer->SetActorTransform(makeTransform);
+//						return;
+//						//train moves to end of current traintrack?
+//					}
+//				}
+//			}
+//			//UE_LOG(LogTemp, Warning, TEXT("InJunction state on previousState id %s "), UTF8_TO_TCHAR(previousState.id.name.c_str()) );
+//		}
+//	}
+//	 
+//
+//	//if (lastActorId == std::string(TCHAR_TO_UTF8(*actorPointer->id))) //this may fire when simulation is left to run, not sure why as "isPlaying" should be false
+//	//																	//from that point however it appears it continues to tick until stop or pause is clicked
+//	//{
+//	//	for (auto eachTrackPtr : trainTracks)
+//	//	{
+//
+//	//		if (previousState.trackID == std::string(TCHAR_TO_UTF8(*eachTrackPtr->id)))
+//	//		{
+//	//			//UE_LOG(LogTemp, Warning, TEXT("ENTERINGTRACK train id: %s , track id from data: %s , my Track id: %s"), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrackPtr->id) );
+//
+//	//			//train is at start of this track?
+//	//			lastActorId = previousState.id.name;
+//	//			UE_LOG(LogTemp, Warning, TEXT("INJUNCTION previousState, INJUNCTION nextState, train id: %s , track id from data: %s , my Track id: %s , interpolationScale %f "), UTF8_TO_TCHAR(previousState.id.name.c_str()), UTF8_TO_TCHAR(previousState.trackID.c_str()), *FString(eachTrackPtr->id), float(interpolationScale));
+//
+//	//			lastActorId = previousState.id.name;
+//
+//	//			float distance = eachTrackPtr->Spline->GetSplineLength() * interpolationScale;
+//	//			auto makeTransform = FTransform(eachTrackPtr->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
+//	//				eachTrackPtr->Spline->GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
+//	//				FVector(3.0f, 3.0f, 3.0f));
+//
+//	//			actorPointer->SetActorTransform(makeTransform);
+//	//		}
+//	//	}
+//	//}
+//	//}//end of isPlaying check
+//	//else if (simTime == 0.0f && playHasBeenClickedTrains == true)//if stopped (i don't think i can check for this though?????)
+//	//{
+//		// reset actors to hidden track
+//		//UE_LOG(LogTemp, Warning, TEXT("simTime is 0.0f : %f "), float(simTime) );
+//
+//		//auto makeTransform = FTransform(trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World),
+//		//	trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
+//		//	FVector(3.0f, 3.0f, 3.0f));
+//
+//		//for (auto eachTrain : trains)
+//		//{
+//		//	eachTrain->SetActorTransform(makeTransform);
+//		//}
+//		//playHasBeenClickedTrains = false;
+//		//
+//	 //}
+//	
+//	//if nothing we expected to see was reached, hide the train
+//	//auto makeTransform = FTransform(trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World),
+//		//	trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
+//		//	FVector(3.0f, 3.0f, 3.0f));
+//	//actorPointer->SetActorHiddenInGame(true);
+//	//actorPointer->SetActorEnableCollision(false);
+//}

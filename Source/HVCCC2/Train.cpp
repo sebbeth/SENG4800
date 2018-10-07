@@ -6,8 +6,9 @@
 // Sets default values
 ATrain::ATrain()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+ 	 //Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	//Our actors shouldn't tick
+	PrimaryActorTick.bCanEverTick = false;
 
 }
 
