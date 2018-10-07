@@ -27,7 +27,7 @@ public:
 
 	void setQuantity(float length);
 	void setWidth(float width);
-	void setPosition(float position, float trackLength, FVector trackStart, FVector trackEnd);
+	void setPosition(float position, float pileLength, float padLength, FVector padStart, FVector padEnd);
 
 	FString id;
 

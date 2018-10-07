@@ -232,8 +232,29 @@ void ALevelController::setCoalStackingState(int stackerId, int state) {
 }
 
 
+int ALevelController::getPadLength(TerminalId terminalId, const std::string & padId)
+{
+	int padIdentifier = -1;
+	if (padId == "PadA") {
+		padIdentifier = 0;
+	}
+	else if (padId == "PadBC") {
+		padIdentifier = 1;
+	}
+	else if (padId == "PadDE") {
+		padIdentifier = 2;
+	}
+	else if (padId == "PadFG") {
+		padIdentifier = 3;
+	}
+	else if (padId == "PadH") {
+		padIdentifier = 4;
+	}
+	return getPadLength(terminalId, padIdentifier);
+}
+
 /*
-	Terminal ID - the ids will link to a terminal (KCT, NCIG, CCT), the pad will also have an ID value.
+	Terminal ID - the ids will link to a terminal (KCT, NCIG, CCT), the Padwill also have an ID value.
 */
 int ALevelController::getPadLength(TerminalId terminal, const int& padId) {
 	// KCT Terminal Pads.
@@ -241,27 +262,27 @@ int ALevelController::getPadLength(TerminalId terminal, const int& padId) {
 	switch (terminal) {
 		case TerminalId::KCT:
 			switch(padId) {
-				case 0: // Pad a
+				case 0: // Pada
 					return 2285;
-				case 1: // pad b
+				case 1: // Padb
 					return 2180;
-				case 2: //pad c
+				case 2: //Padc
 					return 2155;
-				case 3: //pad d
+				case 3: //Padd
 					return 2315;
 					
 			}
 		case TerminalId::NCT:
 			switch (padId) {
-				case 0: // Pad a
+				case 0: // Pada
 					return 1055;
-				case 1: // pad bc
+				case 1: // Padbc
 					return 1100;
-				case 2: //pad de
+				case 2: //Padde
 					return 1113;
-				case 3: //pad fg
+				case 3: //Padfg
 					return 1160;
-				case 4: // pad H
+				case 4: // PadH
 					return 1173;
 			}
 		case TerminalId::CCT:
@@ -544,10 +565,8 @@ AShip* ALevelController::getOrSpawnActor(const Vessel::Id& id) {
 
 ACoalStack* ALevelController::getOrSpawnActor(const Stockpile::Id& id) {
 	if (id.terminal == TerminalId::NCT) {
-	for (int i = 0; i < 4; ++i) {
 		// NOTE actors are being spawned to 0,0,0 rather then being spawned and then made invisible
-			return spawnACoalStack(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), FVector(0,0,0), NCT_pads_start[i]->GetActorRotation(), NCT_pads_start[i]->GetActorScale3D().X, coal_stack_blueprint);
-	}
+		return spawnACoalStack(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), FVector(0, 0, 0), NCT_pads_start[0]->GetActorRotation(), 0, coal_stack_blueprint);
 	}
 	return nullptr;
 }
@@ -593,7 +612,7 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 	case StackerReclaimerStateType::WorkingReclaim: 
 		// If the SR is Reclaiming, set it's colour and rotate it over the appropriate pile
 		reclaimCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer),0);
-		actorPointer->setRotation(-90.0f);
+		actorPointer->setRotation(90.0f);
 		break;
 	default:
 		// TODO put both these functions somewhere more sensible where they won't get called every tick.
@@ -642,72 +661,111 @@ void ALevelController::animateEntity(AShip* actorPointer, const VesselState& pre
 /*
 // TODO move this somewhere else in file
 */
-void ALevelController::setStockPileLocation(ACoalStack* actorPointer, const Stockpile::Id& id, std::string padId, double position) {
+//void ALevelController::setStockPileLocation(ACoalStack* actorPointer, const Stockpile::Id& id, std::string padId, double position) {
+//
+//	if (id.terminal == TerminalId::NCT) {
+//		//UE_LOG(LogTemp, Warning, TEXT("%f"), float(position));
+//		int padIdentifier = -1;
+//		if (padId == "PadA") {
+//			padIdentifier = 0;
+//		}
+//		else if (padId == "PadBC") {
+//			padIdentifier = 1;
+//		}
+//		else if (padId == "PadDE") {
+//			padIdentifier = 2;
+//		}
+//		else if (padId == "PadFG") {
+//			padIdentifier = 3;
+//		}
+//		else if (padId == "PadH") {
+//			padIdentifier = 4;
+//		}
+//
+//		if (padIdentifier != -1) { // Now that we have determined  which Padwe are using, determine the position along the pad
+//				
+//			actorPointer->setPosition(position,
+//				getPadLength(TerminalId::NCT, padIdentifier),
+//				NCT_pads_start[padIdentifier]->GetActorLocation(),
+//				NCT_pads_end[padIdentifier]->GetActorLocation());
+//			actorPointer->setWidth(NCT_pads_start[padIdentifier]->GetActorScale3D().X); // Also set the width
+//		}
+//	}
+//}
 
-	if (id.terminal == TerminalId::NCT) {
-		//UE_LOG(LogTemp, Warning, TEXT("%f"), float(position));
-		int padIdentifier = -1;
-		if (padId == "Pad A") {
-			padIdentifier = 0;
-		}
-		else if (padId == "Pad BC") {
-			padIdentifier = 1;
-		}
-		else if (padId == "Pad DE") {
-			padIdentifier = 2;
-		}
-		else if (padId == "Pad FG") {
-			padIdentifier = 3;
-		}
-		else if (padId == "Pad H") {
-			padIdentifier = 4;
-		}
 
-		if (padIdentifier != -1) { // Now that we have determined  which pad we are using, determine the position along the pad
-				
-			actorPointer->setPosition(position,
-				getPadLength(TerminalId::NCT, padIdentifier),
-				NCT_pads_start[padIdentifier]->GetActorLocation(),
-				NCT_pads_end[padIdentifier]->GetActorLocation());
-			actorPointer->setWidth(NCT_pads_start[padIdentifier]->GetActorScale3D().X); // Also set the width
-		}
-	}
-}
-
-
-void ALevelController::animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale) {
-	//UE_LOG(LogTemp, Warning, TEXT("Coal animate"));
-
-	//FString pad = UTF8_TO_TCHAR(previousState.padID.c_str());
-	//UE_LOG(LogTemp, Warning, TEXT("Length: %f"), float(nextState.length));
-
-	// If the Stockpile is currently visible, set it's position in the world
-	//if (previousState.position != nextState.position) {
-		setStockPileLocation(actorPointer, nextState.id, nextState.padID, nextState.position);
-	//}
-	// Then set it's quantity
-	//if (previousState.length != nextState.length) {
-		actorPointer->setQuantity(float(nextState.length));
-	//}
+void ALevelController::animateEntity(const SimulationData<Stockpile>& data, float interpolationScale) {
+	//Commented out code provides hinting on types, and an example of how to get the variables used in the simpler animateEntity
+	//using State = typename Entity::State;
+	ACoalStack* actorPointer = data.actorPointer;
+	const StockpileState& previousState = (*data.stateWindow.first);
+	const StockpileState& nextState = (*data.stateWindow.second);
 
 	Stockpile::Id targetId = nextState.id;
 
-	switch (nextState.type)
-	{
-	case StockpileStateType::Created:
-		break;
-	case StockpileStateType::Reclaiming:
-		actorPointer->setQuantity(float(nextState.length));
-		break;
-	case StockpileStateType::Stacking:
-		actorPointer->setQuantity(float(nextState.length));
-		break;
-	case StockpileStateType::Built:
-		break;
-	default:
-
-		break;
+	//get Padinfo
+	int padIdentifier = -1;
+	if (targetId.terminal == TerminalId::NCT) {
+		//UE_LOG(LogTemp, Warning, TEXT("%f"), float(position));
+		if (previousState.padID == "PadA" || previousState.padID == "Pad A") {
+			padIdentifier = 0;
+		}
+		else if (previousState.padID == "PadBC" || previousState.padID == "Pad BC") {
+			padIdentifier = 1;
+		}
+		else if (previousState.padID == "PadDE" || previousState.padID == "Pad DE") {
+			padIdentifier = 2;
+		}
+		else if (previousState.padID == "PadFG" || previousState.padID == "Pad FG") {
+			padIdentifier = 3;
+		}
+		else if (previousState.padID == "PadH" || previousState.padID == "Pad H") {
+			padIdentifier = 4;
+		}
 	}
+	
+
+	if (padIdentifier != -1) { // Now that we have determined  which Padwe are using, determine the position along the pad
+		UE_LOG(LogTemp, Warning, TEXT("PAD IDENT IS %d"), padIdentifier);
+		auto padStart = NCT_pads_start[padIdentifier]->GetActorLocation();
+		auto padEnd = NCT_pads_end[padIdentifier]->GetActorLocation();
+
+		int padLength = getPadLength(TerminalId::NCT, padIdentifier);
+		double padLengthScale = FVector::Dist(padEnd, padStart)/padLength;
+		actorPointer->setPosition(previousState.position, previousState.length,
+			padLength,
+			NCT_pads_start[padIdentifier]->GetActorLocation(),
+			NCT_pads_end[padIdentifier]->GetActorLocation());
+		actorPointer->setWidth(NCT_pads_start[padIdentifier]->GetActorScale3D().X); // Also set the width
+
+		//also set the rotation
+		actorPointer->SetActorRotation(NCT_pads_start[padIdentifier]->GetActorRotation());
+
+		double instantaneousAmount = previousState.amount + (nextState.amount - previousState.amount)*interpolationScale;
+
+		double pileProportion = instantaneousAmount/data.maximumAmount;
+		double pileScale = (pileProportion*previousState.length*padLengthScale);
+
+		actorPointer->setQuantity(float(pileScale));
+		//switch (nextState.type)
+		//{
+		//case StockpileStateType::Created:
+		//	break;
+		//case StockpileStateType::Reclaiming:
+		//	actorPointer->setQuantity(float(nextState.length));
+		//	break;
+		//case StockpileStateType::Stacking:
+		//	actorPointer->setQuantity(float(nextState.length));
+		//	break;
+		//case StockpileStateType::Built:
+		//	break;
+		//default:
+
+		//	break;
+		//}
+	}
+
+
 }
 
 void ALevelController::animateEntity(AShipLoader* actorPointer, const ShiploaderState& previousState, const ShiploaderState& nextState, float interpolationScale) {
@@ -732,9 +790,9 @@ ATrain* ALevelController::getOrSpawnActor(const TrainMovement::Id& id)
 {
 	//stub
 	//UE_LOG(LogTemp, Warning, TEXT("Added a Train found a train id %s "), UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()));
-   return spawnATrain(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
-		trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World), train_locomotive_blueprint);
-	
+  // return spawnATrain(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
+		//trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World), train_locomotive_blueprint);
+	return nullptr;
 }
 
 

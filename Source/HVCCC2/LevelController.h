@@ -373,7 +373,8 @@ private:
 	
 	void animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale);
 	void animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale);
-	void animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale);
+	//void animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale);
+	void animateEntity(const SimulationData<Stockpile>& data, float interpolationScale);
 	void animateEntity(AShipLoader* actorPointer, const ShiploaderState& previousState, const ShiploaderState& nextState, float interpolationScale);
 
 	void animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale);
@@ -390,12 +391,13 @@ private:
 	void setCoalReclaimingState(int stackerId,int loaderId, int state);
 
 	// Pad lengths
+	int getPadLength(TerminalId terminalId, const std::string& padId);
 	int getPadLength(TerminalId TerminalId, const int& padId);
 	int getTrackLength(TerminalId TerminalId, const int& trackID);
 	int getShipLoaderTrackLength(TerminalId terminal);
 
 	// Pad location
-	void setStockPileLocation(ACoalStack* actorPointer, const Stockpile::Id& id, std::string padId, double position);
+	//void setStockPileLocation(ACoalStack* actorPointer, const Stockpile::Id& id, std::string padId, double position);
 
 	int testTime; // Just being used for testing
 
