@@ -10,7 +10,7 @@ public:
     static StockpileState initializeFromEvent(const StockpileEvent& src) {
         /* STUB: REPLACE WITH LOGIC FOR GUESSING THE INITIAL STATE FROM THE EVENT */
         auto tentativeState = StockpileState::determineNextType(StockpileStateType::Idle, src.type);//see if the initial event is something that leaves the initial state; (addresses issue where some entities don't have their own creation event in the xml); still just a quickfix stub though
-        return {src.id, tentativeState != StockpileStateType::Invalid ? tentativeState : StockpileStateType::Idle, src.amount, src.length, src.machineID, src.padID, src.position, src.time, src.vesselID};
+        return {src.id, tentativeState != StockpileStateType::Invalid ? tentativeState : StockpileStateType::Idle, src.hasAmount() ? src.amount : 0, src.length, src.machineID, src.padID, src.position, src.time, src.vesselID};
     }
 
     static StockpileState generateNextState(const StockpileState& current, const StockpileEvent& event) {
@@ -19,11 +19,26 @@ public:
         StockpileState result = initializeFromEvent(event);//remove this line if/when you do
         result.id = event.id;        result.type = StockpileState::determineNextType(current.type, event.type);
         if(event.hasAmount()) {
-        result.amount = event.amount;
-        }
+			switch(event.type) {
+				case StockpileEventType::StackComplete:
+					result.amount += event.amount;
+					break;
+				case StockpileEventType::ReclaimComplete:
+					result.amount -= event.amount;
+					break;
+				default:
+					result.amount = current.amount;
+			}
+		}
+		else {
+			result.amount = current.amount;
+		}
         if(event.hasLength()) {
         result.length = event.length;
-        }
+		}
+		else {
+			result.length = current.length;
+		}
         if(event.hasMachineID()) {
         result.machineID = event.machineID;
         }
