@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-07 18:18:44.676555
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-08 19:15:43.572274
  **/
 #pragma once
 #include "../StateTraits.h"
@@ -16,8 +16,9 @@ public:
     static TrainMovementState generateNextState(const TrainMovementState& current, const TrainMovementEvent& event) {
 
         /* STUB: FILL IN WITH LOGIC FOR UPDATING ALL THE ATTRIBUTES */
-        TrainMovementState result = initializeFromEvent(event);//remove this line if/when you do
-        result.id = event.id;        result.type = TrainMovementState::determineNextType(current.type, event.type);
+        TrainMovementState result = current;
+        result.type = TrainMovementState::determineNextType(current.type, event.type);
+
         if(event.hasCycleID()) {
         result.cycleID = event.cycleID;
         }

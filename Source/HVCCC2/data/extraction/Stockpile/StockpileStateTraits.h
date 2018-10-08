@@ -16,18 +16,18 @@ public:
     static StockpileState generateNextState(const StockpileState& current, const StockpileEvent& event) {
 
         /* STUB: FILL IN WITH LOGIC FOR UPDATING ALL THE ATTRIBUTES */
-        StockpileState result = initializeFromEvent(event);//remove this line if/when you do
-        result.id = event.id;        result.type = StockpileState::determineNextType(current.type, event.type);
+		StockpileState result = current;
+		result.type = StockpileState::determineNextType(current.type, event.type);
         if(event.hasAmount()) {
 			switch(event.type) {
 				case StockpileEventType::StackComplete:
+				case StockpileEventType::StackTransferComplete:
 					result.amount += event.amount;
 					break;
 				case StockpileEventType::ReclaimComplete:
+				case StockpileEventType::ReclaimTransferComplete:
 					result.amount -= event.amount;
 					break;
-				default:
-					result.amount = current.amount;
 			}
 		}
 		else {

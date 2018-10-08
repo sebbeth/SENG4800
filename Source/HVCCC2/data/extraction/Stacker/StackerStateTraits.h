@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-07 18:18:44.676555
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-08 19:15:43.572274
  **/
 #pragma once
 #include "../StateTraits.h"
@@ -16,8 +16,9 @@ public:
     static StackerState generateNextState(const StackerState& current, const StackerEvent& event) {
 
         /* STUB: FILL IN WITH LOGIC FOR UPDATING ALL THE ATTRIBUTES */
-        StackerState result = initializeFromEvent(event);//remove this line if/when you do
-        result.id = event.id;        result.type = StackerState::determineNextType(current.type, event.type);
+        StackerState result = current;
+        result.type = StackerState::determineNextType(current.type, event.type);
+
         if(event.hasAmount()) {
         result.amount = event.amount;
         }

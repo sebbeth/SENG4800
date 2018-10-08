@@ -1,28 +1,28 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-07 18:18:44.676555
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-08 19:15:43.572274
  **/
 #include "VesselEvent.h"
 
-bool VesselEvent::hasBallast() const {
+bool VesselEvent::hasIsTidal() const {
     switch (type) {
-        case VesselEventType::DraftSurveyComplete:
-        case VesselEventType::DraftSurveyStart:
-        case VesselEventType::StartLoading:
+        case VesselEventType::WaitEnter:
             return true;
         case VesselEventType::ArriveTerminal:
         case VesselEventType::AtAnchorage:
         case VesselEventType::BallastTankEmpty:
         case VesselEventType::Created:
         case VesselEventType::DepartTerminal:
+        case VesselEventType::DraftSurveyComplete:
+        case VesselEventType::DraftSurveyStart:
         case VesselEventType::EnterChannel:
         case VesselEventType::ExitChannel:
         case VesselEventType::FullyLoaded:
         case VesselEventType::HatchChangeComplete:
         case VesselEventType::HatchChangeStart:
+        case VesselEventType::StartLoading:
         case VesselEventType::StopForDeballasting:
         case VesselEventType::StopForDeballastingComplete:
         case VesselEventType::WaitBerth:
-        case VesselEventType::WaitEnter:
         case VesselEventType::WaitSail:
         case VesselEventType::YardSpaceAllocated:
         default:
@@ -30,38 +30,10 @@ bool VesselEvent::hasBallast() const {
     }
 }
 
-bool VesselEvent::hasCargo() const {
+bool VesselEvent::hasMetermark() const {
     switch (type) {
-        case VesselEventType::DraftSurveyComplete:
-        case VesselEventType::DraftSurveyStart:
-        case VesselEventType::FullyLoaded:
-        case VesselEventType::StartLoading:
-            return true;
         case VesselEventType::ArriveTerminal:
-        case VesselEventType::AtAnchorage:
-        case VesselEventType::BallastTankEmpty:
-        case VesselEventType::Created:
-        case VesselEventType::DepartTerminal:
-        case VesselEventType::EnterChannel:
-        case VesselEventType::ExitChannel:
-        case VesselEventType::HatchChangeComplete:
-        case VesselEventType::HatchChangeStart:
-        case VesselEventType::StopForDeballasting:
-        case VesselEventType::StopForDeballastingComplete:
-        case VesselEventType::WaitBerth:
-        case VesselEventType::WaitEnter:
-        case VesselEventType::WaitSail:
-        case VesselEventType::YardSpaceAllocated:
-        default:
-            return false;
-    }
-}
-
-bool VesselEvent::hasNumcargoes() const {
-    switch (type) {
-        case VesselEventType::FullyLoaded:
             return true;
-        case VesselEventType::ArriveTerminal:
         case VesselEventType::AtAnchorage:
         case VesselEventType::BallastTankEmpty:
         case VesselEventType::Created:
@@ -70,6 +42,7 @@ bool VesselEvent::hasNumcargoes() const {
         case VesselEventType::DraftSurveyStart:
         case VesselEventType::EnterChannel:
         case VesselEventType::ExitChannel:
+        case VesselEventType::FullyLoaded:
         case VesselEventType::HatchChangeComplete:
         case VesselEventType::HatchChangeStart:
         case VesselEventType::StartLoading:
@@ -86,20 +59,20 @@ bool VesselEvent::hasNumcargoes() const {
 
 bool VesselEvent::hasTerminalID() const {
     switch (type) {
-        case VesselEventType::DraftSurveyComplete:
-        case VesselEventType::DraftSurveyStart:
-        case VesselEventType::FullyLoaded:
-        case VesselEventType::StartLoading:
+        case VesselEventType::AtAnchorage:
             return true;
         case VesselEventType::ArriveTerminal:
-        case VesselEventType::AtAnchorage:
         case VesselEventType::BallastTankEmpty:
         case VesselEventType::Created:
         case VesselEventType::DepartTerminal:
+        case VesselEventType::DraftSurveyComplete:
+        case VesselEventType::DraftSurveyStart:
         case VesselEventType::EnterChannel:
         case VesselEventType::ExitChannel:
+        case VesselEventType::FullyLoaded:
         case VesselEventType::HatchChangeComplete:
         case VesselEventType::HatchChangeStart:
+        case VesselEventType::StartLoading:
         case VesselEventType::StopForDeballasting:
         case VesselEventType::StopForDeballastingComplete:
         case VesselEventType::WaitBerth:
@@ -113,6 +86,16 @@ bool VesselEvent::hasTerminalID() const {
 
 bool VesselEvent::hasTime() const {
     switch (type) {
+        case VesselEventType::ArriveTerminal:
+        case VesselEventType::AtAnchorage:
+        case VesselEventType::DepartTerminal:
+        case VesselEventType::EnterChannel:
+        case VesselEventType::ExitChannel:
+        case VesselEventType::WaitBerth:
+        case VesselEventType::WaitEnter:
+        case VesselEventType::WaitSail:
+        case VesselEventType::YardSpaceAllocated:
+            return true;
         case VesselEventType::BallastTankEmpty:
         case VesselEventType::Created:
         case VesselEventType::DraftSurveyComplete:
@@ -123,16 +106,33 @@ bool VesselEvent::hasTime() const {
         case VesselEventType::StartLoading:
         case VesselEventType::StopForDeballasting:
         case VesselEventType::StopForDeballastingComplete:
-        case VesselEventType::YardSpaceAllocated:
+        default:
+            return false;
+    }
+}
+
+bool VesselEvent::hasTugs() const {
+    switch (type) {
+        case VesselEventType::DepartTerminal:
+        case VesselEventType::EnterChannel:
             return true;
         case VesselEventType::ArriveTerminal:
         case VesselEventType::AtAnchorage:
-        case VesselEventType::DepartTerminal:
-        case VesselEventType::EnterChannel:
+        case VesselEventType::BallastTankEmpty:
+        case VesselEventType::Created:
+        case VesselEventType::DraftSurveyComplete:
+        case VesselEventType::DraftSurveyStart:
         case VesselEventType::ExitChannel:
+        case VesselEventType::FullyLoaded:
+        case VesselEventType::HatchChangeComplete:
+        case VesselEventType::HatchChangeStart:
+        case VesselEventType::StartLoading:
+        case VesselEventType::StopForDeballasting:
+        case VesselEventType::StopForDeballastingComplete:
         case VesselEventType::WaitBerth:
         case VesselEventType::WaitEnter:
         case VesselEventType::WaitSail:
+        case VesselEventType::YardSpaceAllocated:
         default:
             return false;
     }

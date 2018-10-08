@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-07 18:18:44.676555
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-08 19:15:43.572274
  **/
 #include "extractData.h"
 #include <regex>
@@ -15,6 +15,12 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, DumpstationE
     destination.id.terminal = theTerminal;
 
     switch(destination.type) {
+        case DumpstationEventType::MaintenanceComplete:
+        case DumpstationEventType::MaintenanceStart:
+        case DumpstationEventType::SyncedFail:
+        case DumpstationEventType::SyncedFix:
+            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
+            break;
         case DumpstationEventType::DumpComplete:
             XMLCheckResult(extractAttribute(source, destination.amount, "amount"), 0);
             XMLCheckResult(extractAttribute(source, destination.cycleID, "cycleID"), 0);
@@ -42,8 +48,6 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, LoadpointsEv
     XMLCheckResult(extractAttribute(source, destination.id.name, "loadpointID"), 0);
 
     switch(destination.type) {
-        case LoadpointsEventType::MaintenanceComplete:
-        case LoadpointsEventType::MaintenanceStart:
         case LoadpointsEventType::OnFail:
         case LoadpointsEventType::OnFix:
         case LoadpointsEventType::StartIdle:
@@ -80,6 +84,8 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ReclaimerEve
     destination.id.terminal = theTerminal;
 
     switch(destination.type) {
+        case ReclaimerEventType::MaintenanceComplete:
+        case ReclaimerEventType::MaintenanceStart:
         case ReclaimerEventType::OnMove:
         case ReclaimerEventType::OnStopMove:
         case ReclaimerEventType::WrapUp:
@@ -87,7 +93,8 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ReclaimerEve
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
         case ReclaimerEventType::DoubleHandleOperationStart:
-        case ReclaimerEventType::DoubleHandleStart:
+        case ReclaimerEventType::Fail:
+        case ReclaimerEventType::Fix:
         case ReclaimerEventType::OperationStart:
         case ReclaimerEventType::Start:
         case ReclaimerEventType::SyncedFail:
@@ -98,7 +105,6 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ReclaimerEve
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
         case ReclaimerEventType::Complete:
-        case ReclaimerEventType::DoubleHandleComplete:
         case ReclaimerEventType::DoubleHandleOperationComplete:
         case ReclaimerEventType::OperationComplete:
             XMLCheckResult(extractAttribute(source, destination.amount, "amount"), 0);
@@ -122,18 +128,20 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, ShiploaderEv
     destination.id.terminal = theTerminal;
 
     switch(destination.type) {
-        case ShiploaderEventType::HatchChangeStart:
-        case ShiploaderEventType::OnHatchChangeComplete:
+        case ShiploaderEventType::MaintenanceComplete:
+        case ShiploaderEventType::MaintenanceStart:
         case ShiploaderEventType::OnMove:
         case ShiploaderEventType::OnStopMove:
         case ShiploaderEventType::WrapUp:
             XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
-        case ShiploaderEventType::FinishVesselDraftSurvey:
+        case ShiploaderEventType::Fail:
+        case ShiploaderEventType::Fix:
         case ShiploaderEventType::LoadOperationStart:
         case ShiploaderEventType::LoadStart:
-        case ShiploaderEventType::StartVesselDraftSurvey:
+        case ShiploaderEventType::SyncedFail:
+        case ShiploaderEventType::SyncedFix:
             XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
             XMLCheckResult(extractAttribute(source, destination.stockpileID.name, "stockpileID"), 0);
             destination.stockpileID.terminal = theTerminal;
@@ -166,33 +174,27 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StackerEvent
     XMLCheckResult(extractAttribute(source, destination.id.name, "stackerID"), 0);
     destination.id.terminal = theTerminal;
 
+    XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
+    XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
     switch(destination.type) {
-        case StackerEventType::OnMove:
-        case StackerEventType::OnStopMove:
-        case StackerEventType::WrapUp:
-            XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
-            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
-            break;
         case StackerEventType::DoubleHandleOperationStart:
         case StackerEventType::DoubleHandleStart:
         case StackerEventType::Fail:
         case StackerEventType::Fix:
         case StackerEventType::OperationStart:
         case StackerEventType::Start:
-            XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
+        case StackerEventType::SyncedFail:
+        case StackerEventType::SyncedFix:
             XMLCheckResult(extractAttribute(source, destination.stockpileID.name, "stockpileID"), 0);
             destination.stockpileID.terminal = theTerminal;
-            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
         case StackerEventType::Complete:
         case StackerEventType::DoubleHandleComplete:
         case StackerEventType::DoubleHandleOperationComplete:
         case StackerEventType::OperationComplete:
             XMLCheckResult(extractAttribute(source, destination.amount, "amount"), 0);
-            XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
             XMLCheckResult(extractAttribute(source, destination.stockpileID.name, "stockpileID"), 0);
             destination.stockpileID.terminal = theTerminal;
-            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
     }
     return tinyxml2::XML_SUCCESS;
@@ -214,16 +216,7 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StockpileEve
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             XMLCheckResult(extractAttribute(source, destination.vesselID.name, "vesselID"), 0);
             break;
-        case StockpileEventType::DedicatedStockpileCreated:
-        case StockpileEventType::StockpileCreated:
-            XMLCheckResult(extractAttribute(source, destination.length, "length"), 0);
-            XMLCheckResult(extractAttribute(source, destination.padID, "padID"), 0);
-            XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
-            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
-            XMLCheckResult(extractAttribute(source, destination.vesselID.name, "vesselID"), 0);
-            break;
         case StockpileEventType::ReclaimStart:
-        case StockpileEventType::ReclaimTransferStart:
         case StockpileEventType::StackStart:
         case StockpileEventType::StackTransferStart:
             XMLCheckResult(extractAttribute(source, destination.machineID.name, "machineID"), 0);
@@ -233,7 +226,6 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StockpileEve
             XMLCheckResult(extractAttribute(source, destination.vesselID.name, "vesselID"), 0);
             break;
         case StockpileEventType::ReclaimComplete:
-        case StockpileEventType::ReclaimTransferComplete:
         case StockpileEventType::RemnantRemoved:
         case StockpileEventType::StackComplete:
         case StockpileEventType::StackTransferComplete:
@@ -242,6 +234,13 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, StockpileEve
             XMLCheckResult(extractAttribute(source, destination.machineID.name, "machineID"), 0);
             destination.machineID.terminal = theTerminal;
             XMLCheckResult(extractAttribute(source, destination.padID, "padID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
+            XMLCheckResult(extractAttribute(source, destination.vesselID.name, "vesselID"), 0);
+            break;
+        case StockpileEventType::StockpileCreated:
+            XMLCheckResult(extractAttribute(source, destination.length, "length"), 0);
+            XMLCheckResult(extractAttribute(source, destination.padID, "padID"), 0);
+            XMLCheckResult(extractAttribute(source, destination.position, "pos"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             XMLCheckResult(extractAttribute(source, destination.vesselID.name, "vesselID"), 0);
             break;
@@ -277,27 +276,27 @@ tinyxml2::XMLError extractEvent(const tinyxml2::XMLElement& source, VesselEvent&
     XMLCheckResult(extractAttribute(source, destination.id.name, "vesselID"), 0);
 
     switch(destination.type) {
-        case VesselEventType::BallastTankEmpty:
-        case VesselEventType::Created:
-        case VesselEventType::HatchChangeComplete:
-        case VesselEventType::HatchChangeStart:
-        case VesselEventType::StopForDeballasting:
-        case VesselEventType::StopForDeballastingComplete:
+        case VesselEventType::ExitChannel:
+        case VesselEventType::WaitBerth:
+        case VesselEventType::WaitSail:
         case VesselEventType::YardSpaceAllocated:
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
-        case VesselEventType::DraftSurveyComplete:
-        case VesselEventType::DraftSurveyStart:
-        case VesselEventType::StartLoading:
-            XMLCheckResult(extractAttribute(source, destination.ballast, "ballast"), 0);
-            XMLCheckResult(extractAttribute(source, destination.cargo, "cargo"), 0);
+        case VesselEventType::ArriveTerminal:
+            XMLCheckResult(extractAttribute(source, destination.metermark, "meterMark"), 0);
+            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
+            break;
+        case VesselEventType::AtAnchorage:
             XMLCheckResult(extractAttribute(source, destination.terminalID, "terminalID"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
-        case VesselEventType::FullyLoaded:
-            XMLCheckResult(extractAttribute(source, destination.cargo, "cargo"), 0);
-            XMLCheckResult(extractAttribute(source, destination.numcargoes, "numCargoes"), 0);
-            XMLCheckResult(extractAttribute(source, destination.terminalID, "terminalID"), 0);
+        case VesselEventType::DepartTerminal:
+        case VesselEventType::EnterChannel:
+            XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
+            XMLCheckResult(extractAttribute(source, destination.tugs, "tugs"), 0);
+            break;
+        case VesselEventType::WaitEnter:
+            XMLCheckResult(extractAttribute(source, destination.isTidal, "isTidal"), 0);
             XMLCheckResult(extractAttribute(source, destination.time, "time"), 0);
             break;
     }

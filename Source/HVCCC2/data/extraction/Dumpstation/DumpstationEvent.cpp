@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-07 18:18:44.676555
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-08 19:15:43.572274
  **/
 #include "DumpstationEvent.h"
 
@@ -63,13 +63,13 @@ bool DumpstationEvent::hasTime() const {
         case DumpstationEventType::DumpOperationComplete:
         case DumpstationEventType::DumpOperationStart:
         case DumpstationEventType::DumpStart:
-            return true;
-        case DumpstationEventType::Fail:
-        case DumpstationEventType::Fix:
         case DumpstationEventType::MaintenanceComplete:
         case DumpstationEventType::MaintenanceStart:
         case DumpstationEventType::SyncedFail:
         case DumpstationEventType::SyncedFix:
+            return true;
+        case DumpstationEventType::Fail:
+        case DumpstationEventType::Fix:
         default:
             return false;
     }
