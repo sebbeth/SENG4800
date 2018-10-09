@@ -35,7 +35,6 @@
     <SpStackStart stockpileID="CCT1392.1" vesselID="1392" time="88.556661" padID="Pad A" machineID="ST1"/>
     <SpStackComp stockpileID="CCT1393.1" vesselID="1393" time="89.310591" padID="Pad B" machineID="ST2" amount="9100.000000"/>
     <SpStackComp stockpileID="CCT1392.1" vesselID="1392" time="89.639014" padID="Pad A" machineID="ST1" amount="9200.000000"/>
-    <SpStockpileBuilt stockpileID="CCT1392.1" vesselID="1392" time="89.639014" padID="Pad A"/>
     <SpStackStart stockpileID="CCT1393.1" vesselID="1393" time="90.010740" padID="Pad B" machineID="ST2"/>
     <SpStackComp stockpileID="CCT1393.1" vesselID="1393" time="90.269564" padID="Pad B" machineID="ST2" amount="2200.000000"/>
     <SpStackStart stockpileID="CCT1394.1" vesselID="1394" time="97.059325" padID="Pad B" machineID="ST4"/>

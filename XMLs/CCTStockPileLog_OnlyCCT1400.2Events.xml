@@ -18,7 +18,7 @@
     <SpReclaimStart stockpileID="CCT1400.2" vesselID="1400" time="492.485578" padID="Pad B" machineID="RE1"/>
     <SpReclaimComp stockpileID="CCT1400.2" vesselID="1400" time="514.710370" padID="Pad B" machineID="RE1" amount="52800.000000"/>
     <SpStockpileRemnant stockpileID="CCT1400.2" vesselID="1400" time="515.029127" padID="Pad B" machineID="null" amount="8500.000000"/>
-    <SpReclaimStart stockpileID="CCT1400.2" vesselID="1400" time="521.817370" padID="Pad B" machineID="RE1"/>
-    <SpReclaimComp stockpileID="CCT1400.2" vesselID="1400" time="522.817370" padID="Pad B" machineID="RE1" amount="8500.000000"/>
+    <SpReclaimTransStart stockpileID="CCT1400.2" vesselID="1400" time="521.817370" padID="Pad B" machineID="RE1"/>
+    <SpReclaimTransComp stockpileID="CCT1400.2" vesselID="1400" time="522.817370" padID="Pad B" machineID="RE1" amount="8500.000000"/>
     <SpRemnantRemoved stockpileID="CCT1400.2" vesselID="1400" time="522.885602" padID="Pad B" machineID="null" amount="0.000000"/>
 </events>
