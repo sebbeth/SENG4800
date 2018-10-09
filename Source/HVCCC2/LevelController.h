@@ -223,6 +223,9 @@ protected:
 		TArray<ATrain*> trains;
 	//UPROPERTY(EditAnywhere)
 	//	TArray<ATrackSpline*> trainTracks;
+	UPROPERTY(EditAnywhere)
+		TArray<ATrainTrackSpline*> trainTracks;
+
 
 
 
@@ -253,7 +256,6 @@ protected:
 	//Coal Pad position markers
 	UPROPERTY(EditAnywhere)
 		TArray<AActor*> NCT_pads_start;
-
 	UPROPERTY(EditAnywhere)
 		TArray<AActor*> NCT_pads_end;
 
@@ -262,23 +264,39 @@ protected:
 	//KCT Actor Arrays
 	UPROPERTY(EditAnywhere)
 		TArray<AConveyorBelt*> conveyorBeltsKCT;
+	/*
 	UPROPERTY(EditAnywhere)
 		TArray<ACoalStack*> coalStacksKCT;
 	UPROPERTY(EditAnywhere)
 		TArray<AStackerReclaimer*> stackerReclaimersKCT;
 	UPROPERTY(EditAnywhere)
 		TArray<AShipLoader*> shipLoadersKCT;
-
-		TArray<AShip*> shipsKCT;
-
 	UPROPERTY(EditAnywhere)
-		TArray<ATrainTrackSpline*> trainTracks;
-
+		TArray<AShip*> shipsKCT;
+		*/
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> KCT_SR_rails_start;
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> KCT_SR_rails_end;
+	// Koorigang ship loader track markers
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> KCT_loader_rails_start;
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> KCT_loader_rails_end;
+	// Ship berth position markers
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> KCT_berths;
+	//Coal Pad position markers
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> KCT_pads_start;
+	UPROPERTY(EditAnywhere)
+		TArray<AActor*> KCT_pads_end;
 
 
 	//CCT Actor Arrays
 
 	//Conveyor Belt position markers
+	/*
 	UPROPERTY(EditAnywhere)
 		TArray<AConveyorBelt*> conveyorBeltsCCT;
 	UPROPERTY(EditAnywhere)
@@ -289,6 +307,8 @@ protected:
 		TArray<AShipLoader*> shipLoadersCCT;
 	UPROPERTY(EditAnywhere)
 		TArray<AShip*> shipsCCT;
+
+	*/
 
 	
 
