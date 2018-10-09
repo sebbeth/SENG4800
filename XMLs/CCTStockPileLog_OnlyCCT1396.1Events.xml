@@ -1,0 +1,35 @@
+<events>
+    <SpStockpileCreated stockpileID="CCT1396.1" vesselID="1396" time="167.000000" padID="Pad D" pos="572.000000" length="193.000000"/>
+    <SpStackStart stockpileID="CCT1396.1" vesselID="1396" time="184.199639" padID="Pad D" machineID="ST3"/>
+    <SpStackComp stockpileID="CCT1396.1" vesselID="1396" time="185.211403" padID="Pad D" machineID="ST3" amount="8600.000000"/>
+    <SpStackStart stockpileID="CCT1396.1" vesselID="1396" time="186.016436" padID="Pad D" machineID="ST3"/>
+    <SpStackComp stockpileID="CCT1396.1" vesselID="1396" time="187.028201" padID="Pad D" machineID="ST3" amount="8600.000000"/>
+    <SpStackStart stockpileID="CCT1396.1" vesselID="1396" time="196.832009" padID="Pad D" machineID="ST3"/>
+    <SpStackComp stockpileID="CCT1396.1" vesselID="1396" time="197.902597" padID="Pad D" machineID="ST3" amount="9100.000000"/>
+    <SpStackStart stockpileID="CCT1396.1" vesselID="1396" time="198.486182" padID="Pad D" machineID="ST3"/>
+    <SpStackComp stockpileID="CCT1396.1" vesselID="1396" time="199.497947" padID="Pad D" machineID="ST3" amount="8600.000000"/>
+    <SpStackStart stockpileID="CCT1396.1" vesselID="1396" time="200.586573" padID="Pad D" machineID="ST3"/>
+    <SpStackComp stockpileID="CCT1396.1" vesselID="1396" time="201.657161" padID="Pad D" machineID="ST3" amount="9100.000000"/>
+    <SpStackStart stockpileID="CCT1396.1" vesselID="1396" time="201.737058" padID="Pad D" machineID="ST3"/>
+    <SpStackComp stockpileID="CCT1396.1" vesselID="1396" time="202.807646" padID="Pad D" machineID="ST3" amount="9100.000000"/>
+    <SpStackStart stockpileID="CCT1396.1" vesselID="1396" time="204.712803" padID="Pad D" machineID="ST3"/>
+    <SpStackComp stockpileID="CCT1396.1" vesselID="1396" time="205.724568" padID="Pad D" machineID="ST3" amount="8600.000000"/>
+    <SpStackStart stockpileID="CCT1396.1" vesselID="1396" time="208.027357" padID="Pad D" machineID="ST3"/>
+    <SpStackComp stockpileID="CCT1396.1" vesselID="1396" time="209.039122" padID="Pad D" machineID="ST3" amount="8600.000000"/>
+    <SpStackStart stockpileID="CCT1396.1" vesselID="1396" time="210.808324" padID="Pad D" machineID="ST3"/>
+    <SpStackComp stockpileID="CCT1396.1" vesselID="1396" time="211.820089" padID="Pad D" machineID="ST3" amount="8600.000000"/>
+    <SpStackStart stockpileID="CCT1396.1" vesselID="1396" time="223.015573" padID="Pad D" machineID="ST3"/>
+    <SpStackComp stockpileID="CCT1396.1" vesselID="1396" time="224.086161" padID="Pad D" machineID="ST3" amount="9100.000000"/>
+    <SpStackStart stockpileID="CCT1396.1" vesselID="1396" time="239.958767" padID="Pad D" machineID="ST3"/>
+    <SpStackComp stockpileID="CCT1396.1" vesselID="1396" time="240.970531" padID="Pad D" machineID="ST3" amount="8600.000000"/>
+    <SpStockpileBuilt stockpileID="CCT1396.1" vesselID="1396" time="240.970531" padID="Pad D"/>
+    <SpStackStart stockpileID="CCT1396.1" vesselID="1396" time="261.994231" padID="Pad D" machineID="ST3"/>
+    <SpStackComp stockpileID="CCT1396.1" vesselID="1396" time="263.064820" padID="Pad D" machineID="ST3" amount="9100.000000"/>
+    <SpStockpileBuilt stockpileID="CCT1396.1" vesselID="1396" time="263.064820" padID="Pad D"/>
+    <SpReclaimStart stockpileID="CCT1396.1" vesselID="1396" time="416.264199" padID="Pad D" machineID="RE4"/>
+    <SpReclaimComp stockpileID="CCT1396.1" vesselID="1396" time="454.203688" padID="Pad D" machineID="RE4" amount="89700.000000"/>
+    <SpStockpileRemnant stockpileID="CCT1396.1" vesselID="1396" time="454.517265" padID="Pad D" machineID="null" amount="16000.000000"/>
+    <SpReclaimStart stockpileID="CCT1396.1" vesselID="1396" time="454.517543" padID="Pad D" machineID="RE4"/>
+    <SpReclaimComp stockpileID="CCT1396.1" vesselID="1396" time="456.399896" padID="Pad D" machineID="RE4" amount="16000.000000"/>
+    <SpRemnantRemoved stockpileID="CCT1396.1" vesselID="1396" time="456.493254" padID="Pad D" machineID="null" amount="0.000000"/>
+</events>
