@@ -16,7 +16,7 @@ class HVCCC2_API UTimeConverter : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 	
 	UFUNCTION(BlueprintCallable, Category = "File Ops")
-	static bool ConvertTime(bool totalTime, float hoursIn, int& hoursOut, int& daysOut, int& weeksOut, FString& outputWD, FString& outputHM);
+	static bool ConvertTime(bool totalTime, float hoursIn, float timeOffset, int& hoursOut, int& daysOut, int& weeksOut, FString& outputWD, FString& outputHM);
 
 	static FString prepend(FString input);
 	
