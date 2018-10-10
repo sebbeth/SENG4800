@@ -25,17 +25,6 @@ public:
 
 	void setPosition(float position);
 
-	void setMaterial(int choice);
-
-	UFUNCTION(BlueprintImplementableEvent, Category = "ShipLoader")
-		void ResetMaterial();
-
-	UFUNCTION(BlueprintImplementableEvent, Category = "ShipLoader")
-		void StackMaterial();
-
-	UFUNCTION(BlueprintImplementableEvent, Category = "ShipLoader")
-		void ReclaimMaterial();
-
 	FVector trackNodeA;
 	FVector trackNodeB;
 	FString id;
