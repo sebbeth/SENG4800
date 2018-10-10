@@ -25,6 +25,17 @@ public:
 
 	void setPosition(float position);
 
+	void setMaterial(int choice);
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
+		void ResetMaterial();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
+		void StackMaterial();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
+		void ReclaimMaterial();
+
 	FVector trackNodeA;
 	FVector trackNodeB;
 	FString id;
