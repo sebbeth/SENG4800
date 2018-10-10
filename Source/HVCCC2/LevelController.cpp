@@ -781,8 +781,15 @@ void ALevelController::animateEntity(AShipLoader* actorPointer, const Shiploader
 	float positionScale = (positionInterpolated - minPosition) / (maxPosition - minPosition);
 	//update the actor position
 	actorPointer->setPosition(positionScale);
-	//TODO: ADD TURNING CONSIDERATIONS
-
+	switch (previousState.type)
+	{
+	case ShiploaderStateType::Working:
+		actorPointer->ReclaimMaterial();
+		break;
+	default:
+		actorPointer->ResetMaterial();
+		break;
+	}
 }
 
 
