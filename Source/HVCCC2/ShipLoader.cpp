@@ -38,21 +38,3 @@ void AShipLoader::setPosition(float position) {
 	directionVector = directionVector * targetDistance;
 	SetActorLocation(trackNodeA + directionVector);
 }
-
-void AShipLoader::setMaterial(int choice) {
-
-	//IF 0 -> RED -> Conveyor Reclaiming
-	//IF 1 -> RESET Material -> Grey
-	//IF 2 -> BLUE -> Conveyor Stacking
-	if (choice == 0) {
-		ReclaimMaterial();
-	}
-	else if (choice == 1) {
-		ResetMaterial();
-	}
-	else if (choice == 2) {
-		StackMaterial();
-	}
-
-}
-
