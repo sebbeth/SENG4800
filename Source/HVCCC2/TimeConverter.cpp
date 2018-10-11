@@ -8,12 +8,14 @@
 
 using namespace std;
 
-bool UTimeConverter::ConvertTime(bool totalTime, float hoursIn, int& hoursOut, int& daysOut, int& weeksOut, FString& outputWD, FString& outputHM) {
+bool UTimeConverter::ConvertTime(bool totalTime, float hoursIn, float timeOffset, int& hoursOut, int& daysOut, int& weeksOut, FString& outputWD, FString& outputHM) {
 	hoursOut = 0;
 	daysOut = 0;
 	weeksOut = 0;
 
-	//e.g 50 hours
+	float hvcccTime = hoursIn; //for debug purposes only.
+
+	hoursIn = hoursIn + timeOffset;
 	
 	//Convert hoursIn to the corresponding variables
 	if (hoursIn > 24.0) {
@@ -61,7 +63,7 @@ bool UTimeConverter::ConvertTime(bool totalTime, float hoursIn, int& hoursOut, i
 	outputWD.Append("Day: ");
 	outputWD.AppendInt(daysOut);
 
-	string hoursInString = to_string(hoursIn);
+	string hoursInString = to_string(hvcccTime);
 
 	FString hoursInStr = "";
 	hoursInStr.Append(FString(hoursInString.c_str()));
