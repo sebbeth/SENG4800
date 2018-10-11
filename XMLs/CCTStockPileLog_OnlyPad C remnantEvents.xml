@@ -1,7 +1,0 @@
-<events>
-	<SpStockpileCreated stockpileID="Pad C remnant" vesselID="null" time="0.000000" padID="Pad C" pos="274.000000" length="212.000000"/>
-    <SpStackTransStart stockpileID="Pad C remnant" vesselID="" time="491.176246" padID="Pad C" machineID="ST2"/>
-    <SpStackTransComp stockpileID="Pad C remnant" vesselID="" time="492.717422" padID="Pad C" machineID="ST2" amount="13100.000000"/>
-    <SpStackTransStart stockpileID="Pad C remnant" vesselID="" time="517.481230" padID="Pad C" machineID="ST4"/>
-    <SpStackTransComp stockpileID="Pad C remnant" vesselID="" time="518.398878" padID="Pad C" machineID="ST4" amount="7800.000000"/>
-</events>
