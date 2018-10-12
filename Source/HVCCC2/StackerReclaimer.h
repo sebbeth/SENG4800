@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CoalStack.h"
 #include "GameFramework/Actor.h"
 #include "StackerReclaimer.generated.h"
 
@@ -39,7 +40,8 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
 		void ReclaimMaterial();
-
+	
+	void rotateMastToCoalStack(ACoalStack* coalStack);
 
 	FVector trackNodeA;
 	FVector trackNodeB;

@@ -14,7 +14,14 @@ AStackerReclaimer::AStackerReclaimer()
 void AStackerReclaimer::BeginPlay()
 {
 	Super::BeginPlay();
-	this->setBaseRotation(124.0f);
+	FVector endOfTrack = trackNodeB - GetActorLocation();
+
+	//float foo = (FVector::DotProduct(coal, stackerReclaimer)) / (coal.Size() * stackerReclaimer.Size());
+	float foo =  FMath::Atan2(endOfTrack.Y, endOfTrack.X);
+	float baseRotaton = 180 - FMath::RadiansToDegrees(FMath::Acos(foo));
+	UE_LOG(LogTemp, Warning, TEXT("Base %f"), float(baseRotaton));
+
+	this->setBaseRotation(baseRotaton); //124
 }
 
 
@@ -38,6 +45,22 @@ void AStackerReclaimer::setBaseRotation(float degrees) {
 	FRotator rotator(0.0f, degrees, 0.0f);
 	SetActorRotation(rotator, ETeleportType::None);
 }
+
+
+void AStackerReclaimer::rotateMastToCoalStack(ACoalStack* coalStack) {
+	
+	FVector coal = coalStack->GetActorLocation() - GetActorLocation();
+	FVector origin = FVector(0,0,1);
+	
+	//float foo = (FVector::DotProduct(coal, stackerReclaimer)) / (coal.Size() * stackerReclaimer.Size());
+	float foo = FMath::Atan2(coal.Y, coal.X);
+	float output = 180 - FMath::RadiansToDegrees(FMath::Acos(foo));
+	UE_LOG(LogTemp, Warning, TEXT("Theta %f, N %f, A %f"), float(output), float(foo), float(coal.Size()));
+
+	setRotation(output);
+
+}
+
 
 void AStackerReclaimer::setMaterial(int choice) {
 

@@ -346,6 +346,7 @@ private:
 	UActorType<typename Id::Entity>* getOrSpawnActor(const typename Id& id);
 
 	int getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> array, AStackerReclaimer* actor);
+	ACoalStack* getCoalStackWithId(TArray<ACoalStack*> array, FString id);
 
 	AStackerReclaimer* getOrSpawnActor(const StackerReclaimer::Id& id);
 	AShip* getOrSpawnActor(const Vessel::Id& id);
