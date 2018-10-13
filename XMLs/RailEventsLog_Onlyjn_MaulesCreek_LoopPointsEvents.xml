@@ -1,9 +1,0 @@
-    <railEvents>
-        <TrainWaitJunction cycleID="270" junctionID="jn_MaulesCreek_LoopPoints" time="192.32736200648753" trainID="train14"/>
-        <TrainWaitJunction cycleID="333" junctionID="jn_MaulesCreek_LoopPoints" time="223.07315438169397" trainID="train51"/>
-        <TrainWaitJunction cycleID="443" junctionID="jn_MaulesCreek_LoopPoints" time="309.61752083170785" trainID="train39"/>
-        <TrainWaitJunction cycleID="468" junctionID="jn_MaulesCreek_LoopPoints" time="358.0263995912045" trainID="train44"/>
-        <TrainWaitJunction cycleID="685" junctionID="jn_MaulesCreek_LoopPoints" time="537.3330372712021" trainID="train7"/>
-        <TrainWaitJunction cycleID="772" junctionID="jn_MaulesCreek_LoopPoints" time="602.4445683503892" trainID="train38"/>
-        <TrainWaitJunction cycleID="814" junctionID="jn_MaulesCreek_LoopPoints" time="639.2098366819247" trainID="train7"/>
-    </railEvents>
