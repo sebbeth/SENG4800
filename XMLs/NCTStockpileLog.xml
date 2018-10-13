@@ -1,9 +1,9 @@
 <events>
-	<SpStockpileCreated stockpileID="Pad H remnant" vesselID="null" time="0.000000" padID="Pad H" pos="475.500000" length="212.000000"/>
-	<SpStockpileCreated stockpileID="Pad FG remnant" vesselID="null" time="0.000000" padID="Pad FG" pos="530.000000" length="90.000000"/>
-	<SpStockpileCreated stockpileID="Pad DE remnant" vesselID="null" time="0.000000" padID="Pad DE" pos="506.500000" length="90.000000"/>
-	<SpStockpileCreated stockpileID="Pad BC remnant" vesselID="null" time="0.000000" padID="Pad BC" pos="500.000000" length="90.000000"/>
-	<SpStockpileCreated stockpileID="Pad A remnant" vesselID="null" time="0.000000" padID="Pad A" pos="416.500000" length="212.000000"/>
+	<SpDedicatedStockpileCreated stockpileID="Pad H remnant" vesselID="null" time="0.000000" padID="Pad H" pos="475.500000" length="212.000000"/>
+	<SpDedicatedStockpileCreated stockpileID="Pad FG remnant" vesselID="null" time="0.000000" padID="Pad FG" pos="530.000000" length="90.000000"/>
+	<SpDedicatedStockpileCreated stockpileID="Pad DE remnant" vesselID="null" time="0.000000" padID="Pad DE" pos="506.500000" length="90.000000"/>
+	<SpDedicatedStockpileCreated stockpileID="Pad BC remnant" vesselID="null" time="0.000000" padID="Pad BC" pos="500.000000" length="90.000000"/>
+	<SpDedicatedStockpileCreated stockpileID="Pad A remnant" vesselID="null" time="0.000000" padID="Pad A" pos="416.500000" length="212.000000"/>
     <SpStockpileCreated stockpileID="NCT1836.1" vesselID="1836" time="5.000000" padID="Pad H" pos="5.000000" length="238.000000"/>
     <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="14.894688" padID="Pad H" machineID="SR04"/>
     <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="15.835865" padID="Pad H" machineID="SR04" amount="8000.000000"/>
