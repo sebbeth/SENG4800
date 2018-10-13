@@ -1,6 +1,0 @@
-    <railEvents>
-        <TrainWaitJunction cycleID="82" junctionID="jn_Mangoola_LoopPoints" time="28.400408025873126" trainID="train11"/>
-        <TrainWaitJunction cycleID="101" junctionID="jn_Mangoola_LoopPoints" time="43.94914991693147" trainID="train47"/>
-        <TrainWaitJunction cycleID="370" junctionID="jn_Mangoola_LoopPoints" time="261.10786376762275" trainID="train2"/>
-        <TrainWaitJunction cycleID="470" junctionID="jn_Mangoola_LoopPoints" time="344.50211329875503" trainID="train27"/>
-    </railEvents>

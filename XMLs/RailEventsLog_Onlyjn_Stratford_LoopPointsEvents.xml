@@ -1,5 +1,0 @@
-    <railEvents>
-        <TrainWaitJunction cycleID="797" junctionID="jn_Stratford_LoopPoints" time="621.3435780034345" trainID="train6"/>
-        <TrainWaitJunction cycleID="872" junctionID="jn_Stratford_LoopPoints" time="695.6338454505982" trainID="train6"/>
-        <TrainWaitJunction cycleID="1092" junctionID="jn_Stratford_LoopPoints" time="982.0085710496813" trainID="train6"/>
-    </railEvents>

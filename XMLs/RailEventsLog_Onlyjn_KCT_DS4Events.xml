@@ -1,9 +1,0 @@
-    <railEvents>
-        <TrainWaitJunction cycleID="184" junctionID="jn_KCT_DS4" time="99.22545918565362" trainID="train54"/>
-        <TrainWaitJunction cycleID="146" junctionID="jn_KCT_DS4" time="102.93229087033771" trainID="train51"/>
-        <TrainWaitJunction cycleID="285" junctionID="jn_KCT_DS4" time="213.35712368247403" trainID="train6"/>
-        <TrainWaitJunction cycleID="510" junctionID="jn_KCT_DS4" time="359.7476522217549" trainID="train17"/>
-        <TrainWaitJunction cycleID="524" junctionID="jn_KCT_DS4" time="394.567194621761" trainID="train16"/>
-        <TrainWaitJunction cycleID="838" junctionID="jn_KCT_DS4" time="671.2778277598097" trainID="train23"/>
-        <TrainWaitJunction cycleID="895" junctionID="jn_KCT_DS4" time="736.6530970813623" trainID="train3"/>
-    </railEvents>

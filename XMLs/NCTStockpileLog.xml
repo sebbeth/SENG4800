@@ -1,0 +1,1015 @@
+<events>
+	<SpStockpileCreated stockpileID="Pad H remnant" vesselID="null" time="0.000000" padID="Pad H" pos="475.500000" length="212.000000"/>
+	<SpStockpileCreated stockpileID="Pad FG remnant" vesselID="null" time="0.000000" padID="Pad FG" pos="530.000000" length="90.000000"/>
+	<SpStockpileCreated stockpileID="Pad DE remnant" vesselID="null" time="0.000000" padID="Pad DE" pos="506.500000" length="90.000000"/>
+	<SpStockpileCreated stockpileID="Pad BC remnant" vesselID="null" time="0.000000" padID="Pad BC" pos="500.000000" length="90.000000"/>
+	<SpStockpileCreated stockpileID="Pad A remnant" vesselID="null" time="0.000000" padID="Pad A" pos="416.500000" length="212.000000"/>
+    <SpStockpileCreated stockpileID="NCT1836.1" vesselID="1836" time="5.000000" padID="Pad H" pos="5.000000" length="238.000000"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="14.894688" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="15.835865" padID="Pad H" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="22.378986" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="23.390750" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStockpileCreated stockpileID="NCT1837.1" vesselID="1837" time="24.000000" padID="Pad DE" pos="5.000000" length="118.000000"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="25.539786" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="26.551551" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="28.702386" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="29.714151" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="34.517156" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="35.587745" padID="Pad DE" machineID="SR03" amount="9100.000000"/>
+    <SpStockpileCreated stockpileID="NCT1838.1" vesselID="1838" time="38.000000" padID="Pad A" pos="5.000000" length="224.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="38.463341" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="39.533929" padID="Pad DE" machineID="SR03" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="42.735765" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="43.747530" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="43.753313" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="44.682725" padID="Pad DE" machineID="SR03" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="44.792285" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="45.804050" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="46.742704" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="47.001527" padID="Pad DE" machineID="SR03" amount="2200.000000"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="47.058368" padID="Pad H" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="47.817547" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="48.070132" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="48.829311" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="48.835094" padID="Pad DE" machineID="SR03"/>
+    <SpStockpileCreated stockpileID="NCT1839.1" vesselID="1839" time="49.000000" padID="Pad A" pos="874.000000" length="176.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="49.592129" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="49.776271" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="50.521541" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="50.561163" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="50.819986" padID="Pad DE" machineID="SR03" amount="2200.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="50.943018" padID="Pad DE" machineID="SR03"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="51.179331" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="51.954782" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="52.120507" padID="Pad H" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="53.647077" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="54.447077" padID="Pad DE" machineID="SR03" amount="6800.000000"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="54.840049" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="55.851814" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStockpileCreated stockpileID="NCT1840.1" vesselID="1840" time="59.000000" padID="Pad DE" pos="1033.000000" length="75.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="61.387854" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="62.399618" padID="Pad A" machineID="SR01" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="70.364097" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="71.375862" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1840.1" vesselID="1840" time="72.491011" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1840.1" vesselID="1840" time="73.502775" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="73.534308" padID="Pad H" machineID="SR04"/>
+    <SpStockpileCreated stockpileID="NCT1841.1" vesselID="1841" time="74.000000" padID="Pad FG" pos="5.000000" length="99.000000"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="74.546073" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="74.588018" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="75.388018" padID="Pad A" machineID="SR01" amount="6800.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="77.688171" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="78.617583" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1840.1" vesselID="1840" time="78.708038" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1840.1" vesselID="1840" time="79.649214" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="82.937942" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="83.867354" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="85.887001" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="86.957589" padID="Pad DE" machineID="SR03" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="87.038019" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="88.049783" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStockpileCreated stockpileID="NCT1842.1" vesselID="1842" time="89.000000" padID="Pad H" pos="923.000000" length="245.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="90.084391" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="91.013803" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1839.1" vesselID="1839" time="91.648502" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1839.1" vesselID="1839" time="92.577913" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="92.782649" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="93.794413" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="94.400322" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="94.859146" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="94.969322" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="95.357557" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="98.637360" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="99.566772" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStockpileCreated stockpileID="NCT1843.1" vesselID="1843" time="100.000000" padID="Pad H" pos="253.000000" length="181.000000"/>
+    <SpStockpileCreated stockpileID="NCT1844.1" vesselID="1844" time="113.000000" padID="Pad DE" pos="133.000000" length="92.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="115.642890" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="116.572302" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1839.1" vesselID="1839" time="122.747065" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1839.1" vesselID="1839" time="123.688242" padID="Pad A" machineID="SR01" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="124.309531" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="125.109531" padID="Pad DE" machineID="SR03" amount="6800.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="126.903028" padID="Pad A" machineID="SR01"/>
+    <SpStackStart stockpileID="NCT1840.1" vesselID="1840" time="127.192229" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="127.703028" padID="Pad A" machineID="SR01" amount="6800.000000"/>
+    <SpStackComp stockpileID="NCT1840.1" vesselID="1840" time="128.203993" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1840.1" vesselID="1840" time="128.730964" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1840.1" vesselID="1840" time="129.742728" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStockpileCreated stockpileID="NCT1845.1" vesselID="1845" time="131.000000" padID="Pad FG" pos="1040.000000" length="115.000000"/>
+    <SpStackStart stockpileID="NCT1843.1" vesselID="1843" time="132.016091" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1843.1" vesselID="1843" time="133.086679" padID="Pad H" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="133.532033" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="133.990856" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="138.870673" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="139.258908" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpStockpileCreated stockpileID="NCT1846.1" vesselID="1846" time="146.000000" padID="Pad FG" pos="114.000000" length="102.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="147.502315" padID="Pad DE" machineID="SR03"/>
+    <SpStackStart stockpileID="NCT1839.1" vesselID="1839" time="147.588383" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="147.761138" padID="Pad DE" machineID="SR03" amount="2200.000000"/>
+    <SpStackComp stockpileID="NCT1839.1" vesselID="1839" time="148.517795" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="149.022021" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="149.951432" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="159.794927" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="160.253751" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStockpileCreated stockpileID="NCT1847.1" vesselID="1847" time="162.000000" padID="Pad FG" pos="923.000000" length="107.000000"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="164.507635" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="165.519400" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="166.086698" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="166.545522" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1839.1" vesselID="1839" time="167.654904" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1839.1" vesselID="1839" time="168.584316" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1843.1" vesselID="1843" time="175.888662" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1843.1" vesselID="1843" time="176.900427" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStockpileCreated stockpileID="NCT1848.1" vesselID="1848" time="177.000000" padID="Pad BC" pos="5.000000" length="99.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="177.345780" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="177.734016" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1839.1" vesselID="1839" time="183.384939" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1839.1" vesselID="1839" time="184.326115" padID="Pad A" machineID="SR01" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1843.1" vesselID="1843" time="184.433060" padID="Pad H" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1839.1" vesselID="1839" time="185.226506" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1843.1" vesselID="1843" time="185.444825" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStackComp stockpileID="NCT1839.1" vesselID="1839" time="186.155918" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1839.1" vesselID="1839" time="186.207054" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1839.1" vesselID="1839" time="187.148231" padID="Pad A" machineID="SR01" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1843.1" vesselID="1843" time="187.194452" padID="Pad H" machineID="SR04"/>
+    <SpStockpileCreated stockpileID="NCT1849.1" vesselID="1849" time="188.000000" padID="Pad H" pos="726.000000" length="187.000000"/>
+    <SpStackComp stockpileID="NCT1843.1" vesselID="1843" time="188.206217" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1839.1" vesselID="1839" time="191.926023" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1839.1" vesselID="1839" time="192.867200" padID="Pad A" machineID="SR01" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1839.1" vesselID="1839" time="195.926548" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1839.1" vesselID="1839" time="196.855960" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1843.1" vesselID="1843" time="197.140132" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1843.1" vesselID="1843" time="198.151896" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStockpileCreated stockpileID="NCT1850.1" vesselID="1850" time="199.000000" padID="Pad BC" pos="1016.000000" length="79.000000"/>
+    <SpStackStart stockpileID="NCT1840.1" vesselID="1840" time="200.574740" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1840.1" vesselID="1840" time="201.586505" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="203.065588" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="204.077353" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="205.144941" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="205.603765" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1843.1" vesselID="1843" time="207.524252" padID="Pad H" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="208.253484" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1843.1" vesselID="1843" time="208.594840" padID="Pad H" machineID="SR04" amount="9100.000000"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="209.182896" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="209.185943" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="210.197707" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="215.534261" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="215.922496" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpStockpileCreated stockpileID="NCT1851.1" vesselID="1851" time="217.000000" padID="Pad DE" pos="907.000000" length="116.000000"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="217.489101" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="218.500866" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="219.093720" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="220.105485" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1843.1" vesselID="1843" time="220.322935" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1843.1" vesselID="1843" time="221.393523" padID="Pad H" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1839.1" vesselID="1839" time="224.044642" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1839.1" vesselID="1839" time="224.844642" padID="Pad A" machineID="SR01" amount="6800.000000"/>
+    <SpStackStart stockpileID="NCT1843.1" vesselID="1843" time="225.968406" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1843.1" vesselID="1843" time="227.038994" padID="Pad H" machineID="SR04" amount="9100.000000"/>
+    <SpStockpileCreated stockpileID="NCT1852.1" vesselID="1852" time="228.000000" padID="Pad BC" pos="114.000000" length="82.000000"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="228.930951" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="229.942716" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1843.1" vesselID="1843" time="230.583813" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1843.1" vesselID="1843" time="231.654402" padID="Pad H" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="231.863786" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="232.793197" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1839.1" vesselID="1839" time="233.313778" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1839.1" vesselID="1839" time="234.243190" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1839.1" vesselID="1839" time="234.243190" padID="Pad A"/>
+    <SpStockpileCreated stockpileID="NCT1853.1" vesselID="1853" time="245.000000" padID="Pad DE" pos="235.000000" length="112.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="248.286933" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="248.745757" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="252.080710" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="253.092475" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStockpileCreated stockpileID="NCT1854.1" vesselID="1854" time="256.000000" padID="Pad FG" pos="226.000000" length="81.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="258.334903" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="258.793727" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="263.686446" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="264.615858" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1843.1" vesselID="1843" time="264.769155" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1843.1" vesselID="1843" time="265.780920" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1843.1" vesselID="1843" time="265.780920" padID="Pad H"/>
+    <SpStockpileCreated stockpileID="NCT1855.1" vesselID="1855" time="266.000000" padID="Pad BC" pos="929.000000" length="77.000000"/>
+    <SpStackStart stockpileID="NCT1839.1" vesselID="1839" time="266.032046" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1839.1" vesselID="1839" time="266.961458" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="267.153639" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="268.224227" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="271.732044" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="272.120280" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="272.169372" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="273.181137" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="273.555215" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="274.014038" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="278.551777" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="279.481188" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1838.1" vesselID="1838" time="279.481188" padID="Pad A"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="279.520330" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="280.532095" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStockpileCreated stockpileID="NCT1856.1" vesselID="1856" time="281.000000" padID="Pad FG" pos="813.000000" length="100.000000"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="282.181496" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="283.122672" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1838.1" vesselID="1838" time="283.379123" padID="Pad A" machineID="SR01"/>
+    <SpStackComp stockpileID="NCT1838.1" vesselID="1838" time="284.308534" padID="Pad A" machineID="SR01" amount="7900.000000"/>
+    <SpReclaimStart stockpileID="NCT1838.1" vesselID="1838" time="285.926434" padID="Pad A" machineID="SR01"/>
+    <SpStackStart stockpileID="NCT1849.1" vesselID="1849" time="289.787509" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1849.1" vesselID="1849" time="290.728686" padID="Pad H" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1849.1" vesselID="1849" time="291.816222" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1849.1" vesselID="1849" time="292.745633" padID="Pad H" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="293.800142" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="294.811906" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStockpileCreated stockpileID="NCT1857.1" vesselID="1857" time="298.000000" padID="Pad FG" pos="317.000000" length="110.000000"/>
+    <SpReclaimComp stockpileID="NCT1838.1" vesselID="1838" time="298.444081" padID="Pad A" machineID="SR01" amount="106400.000000"/>
+    <SpStockpileRemnant stockpileID="NCT1838.1" vesselID="1838" time="298.522891" padID="Pad A" machineID="null" amount="10600.000000"/>
+    <SpStackStart stockpileID="NCT1836.1" vesselID="1836" time="298.661414" padID="Pad H" machineID="SR04"/>
+    <SpReclaimStart stockpileID="NCT1839.1" vesselID="1839" time="298.992613" padID="Pad A" machineID="SR01"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="299.606326" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1836.1" vesselID="1836" time="299.673179" padID="Pad H" machineID="SR04" amount="8600.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1836.1" vesselID="1836" time="299.673179" padID="Pad H"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="300.273962" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="300.406326" padID="Pad DE" machineID="SR03" amount="6800.000000"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="300.662198" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="303.229803" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="304.241568" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="304.837200" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="305.296023" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1840.1" vesselID="1840" time="307.468354" padID="Pad DE" machineID="SR03"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="308.229300" padID="Pad H" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1839.1" vesselID="1839" time="308.474966" padID="Pad A" machineID="SR01" amount="80600.000000"/>
+    <SpStackComp stockpileID="NCT1840.1" vesselID="1840" time="308.480119" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStockpileRemnant stockpileID="NCT1839.1" vesselID="1839" time="308.609762" padID="Pad A" machineID="null" amount="13500.000000"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="308.688124" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="308.953141" padID="Pad DE" machineID="SR03"/>
+    <SpStockpileCreated stockpileID="NCT1858.1" vesselID="1858" time="309.000000" padID="Pad BC" pos="206.000000" length="80.000000"/>
+    <SpReclaimStart stockpileID="NCT1836.1" vesselID="1836" time="309.200346" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="309.964906" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1840.1" vesselID="1840" time="310.479629" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1840.1" vesselID="1840" time="311.491394" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="314.837403" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="315.849168" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="316.049178" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="316.308002" padID="Pad DE" machineID="SR03" amount="2200.000000"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="318.242245" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="319.254010" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1844.1" vesselID="1844" time="319.327823" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1844.1" vesselID="1844" time="320.398411" padID="Pad DE" machineID="SR03" amount="9100.000000"/>
+    <SpReclaimComp stockpileID="NCT1836.1" vesselID="1836" time="322.623876" padID="Pad H" machineID="SR04" amount="114100.000000"/>
+    <SpStockpileRemnant stockpileID="NCT1836.1" vesselID="1836" time="322.732398" padID="Pad H" machineID="null" amount="5100.000000"/>
+    <SpReclaimStart stockpileID="NCT1836.1" vesselID="1836" time="322.976842" padID="Pad H" machineID="SR04"/>
+    <SpStackTransStart stockpileID="Pad A remnant" vesselID="" time="323.071110" padID="Pad A" machineID="SR01"/>
+    <SpReclaimComp stockpileID="NCT1836.1" vesselID="1836" time="323.576842" padID="Pad H" machineID="SR04" amount="5100.000000"/>
+    <SpStackTransComp stockpileID="Pad A remnant" vesselID="" time="323.671110" padID="Pad A" machineID="SR01" amount="5100.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1836.1" vesselID="1836" time="323.671110" padID="Pad H" machineID="null" amount="0.000000"/>
+    <SpStockpileCreated stockpileID="NCT1859.1" vesselID="1859" time="324.000000" padID="Pad FG" pos="701.000000" length="102.000000"/>
+    <SpStackStart stockpileID="NCT1849.1" vesselID="1849" time="324.101438" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1849.1" vesselID="1849" time="325.042614" padID="Pad H" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="325.417109" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="326.487698" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpReclaimStart stockpileID="NCT1839.1" vesselID="1839" time="326.732142" padID="Pad A" machineID="SR01"/>
+    <SpStackTransStart stockpileID="Pad H remnant" vesselID="" time="326.868177" padID="Pad H" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1839.1" vesselID="1839" time="328.320377" padID="Pad A" machineID="SR01" amount="13500.000000"/>
+    <SpStackTransComp stockpileID="Pad H remnant" vesselID="" time="328.456413" padID="Pad H" machineID="SR04" amount="13500.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1839.1" vesselID="1839" time="328.456413" padID="Pad A" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1849.1" vesselID="1849" time="328.632574" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1849.1" vesselID="1849" time="329.432574" padID="Pad H" machineID="SR04" amount="6800.000000"/>
+    <SpReclaimStart stockpileID="NCT1838.1" vesselID="1838" time="329.902297" padID="Pad A" machineID="SR01"/>
+    <SpStackTransStart stockpileID="Pad H remnant" vesselID="" time="329.995655" padID="Pad H" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1838.1" vesselID="1838" time="331.149355" padID="Pad A" machineID="SR01" amount="10600.000000"/>
+    <SpStackTransComp stockpileID="Pad H remnant" vesselID="" time="331.242714" padID="Pad H" machineID="SR04" amount="10600.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1838.1" vesselID="1838" time="331.242714" padID="Pad A" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1849.1" vesselID="1849" time="336.573869" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1849.1" vesselID="1849" time="337.503281" padID="Pad H" machineID="SR04" amount="7900.000000"/>
+    <SpReclaimStart stockpileID="NCT1843.1" vesselID="1843" time="341.559252" padID="Pad H" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1840.1" vesselID="1840" time="348.329116" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1840.1" vesselID="1840" time="349.340880" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="349.415014" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="349.873838" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpReclaimComp stockpileID="NCT1843.1" vesselID="1843" time="351.347487" padID="Pad H" machineID="SR04" amount="83200.000000"/>
+    <SpStockpileRemnant stockpileID="NCT1843.1" vesselID="1843" time="351.441217" padID="Pad H" machineID="null" amount="5300.000000"/>
+    <SpReclaimStart stockpileID="NCT1843.1" vesselID="1843" time="351.666773" padID="Pad H" machineID="SR04"/>
+    <SpStackTransStart stockpileID="Pad A remnant" vesselID="" time="351.772126" padID="Pad A" machineID="SR01"/>
+    <SpReclaimComp stockpileID="NCT1843.1" vesselID="1843" time="352.290302" padID="Pad H" machineID="SR04" amount="5300.000000"/>
+    <SpStackTransComp stockpileID="Pad A remnant" vesselID="" time="352.395656" padID="Pad A" machineID="SR01" amount="5300.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1843.1" vesselID="1843" time="352.395656" padID="Pad H" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="354.322111" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="355.392699" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1840.1" vesselID="1840" time="357.194188" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1840.1" vesselID="1840" time="358.205953" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1840.1" vesselID="1840" time="358.205953" padID="Pad DE"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="358.481120" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="359.551708" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1844.1" vesselID="1844" time="362.271159" padID="Pad DE" machineID="SR03"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="363.027080" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1844.1" vesselID="1844" time="363.282924" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="364.097668" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1849.1" vesselID="1849" time="364.566608" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1849.1" vesselID="1849" time="365.507784" padID="Pad H" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="365.688693" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="366.076929" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="368.940778" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="369.881954" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="374.013091" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="374.954268" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1849.1" vesselID="1849" time="378.018055" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1849.1" vesselID="1849" time="378.947467" padID="Pad H" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="380.373708" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="381.385472" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="381.680473" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="382.609885" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1849.1" vesselID="1849" time="382.902435" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1849.1" vesselID="1849" time="383.831847" padID="Pad H" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="384.012756" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="384.471580" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="384.526933" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="384.915169" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1849.1" vesselID="1849" time="386.112763" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1849.1" vesselID="1849" time="387.042175" padID="Pad H" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1849.1" vesselID="1849" time="387.664463" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1849.1" vesselID="1849" time="388.593875" padID="Pad H" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="395.636059" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="396.647823" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="406.859453" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="407.118276" padID="Pad DE" machineID="SR03" amount="2200.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="410.128766" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="410.587589" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1844.1" vesselID="1844" time="410.974382" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1844.1" vesselID="1844" time="411.986146" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="413.448486" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="414.460251" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="416.130142" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimStart stockpileID="NCT1840.1" vesselID="1840" time="416.371354" padID="Pad DE" machineID="SR03"/>
+    <SpStackStart stockpileID="NCT1852.1" vesselID="1852" time="416.796886" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="417.141907" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="417.383036" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1852.1" vesselID="1852" time="417.808651" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="417.841859" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1849.1" vesselID="1849" time="419.166970" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1849.1" vesselID="1849" time="419.966970" padID="Pad H" machineID="SR04" amount="6800.000000"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="420.373757" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="421.385522" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="424.134481" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="425.146245" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimComp stockpileID="NCT1840.1" vesselID="1840" time="425.359589" padID="Pad DE" machineID="SR03" amount="76400.000000"/>
+    <SpStockpileRemnant stockpileID="NCT1840.1" vesselID="1840" time="425.490708" padID="Pad DE" machineID="null" amount="400.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="425.722281" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimStart stockpileID="NCT1840.1" vesselID="1840" time="425.999597" padID="Pad DE" machineID="SR02"/>
+    <SpReclaimComp stockpileID="NCT1840.1" vesselID="1840" time="426.046656" padID="Pad DE" machineID="SR02" amount="400.000000"/>
+    <SpStackTransStart stockpileID="Pad DE remnant" vesselID="" time="426.140102" padID="Pad DE" machineID="SR03"/>
+    <SpStackTransComp stockpileID="Pad DE remnant" vesselID="" time="426.187161" padID="Pad DE" machineID="SR03" amount="400.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1840.1" vesselID="1840" time="426.187161" padID="Pad DE" machineID="null" amount="0.000000"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="426.663457" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="427.087851" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="428.029028" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="428.050366" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="428.979778" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1852.1" vesselID="1852" time="429.692304" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1852.1" vesselID="1852" time="430.704068" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="440.932165" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="441.320400" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="442.033461" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="442.962873" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="443.888120" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="444.829297" padID="Pad BC" machineID="SR02" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="444.904102" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="445.845279" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="446.306314" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="447.318079" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="447.869738" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="448.810914" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="450.036256" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="451.048021" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="454.513220" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="454.972044" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1849.1" vesselID="1849" time="455.110536" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1849.1" vesselID="1849" time="456.039947" padID="Pad H" machineID="SR04" amount="7900.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1849.1" vesselID="1849" time="456.039947" padID="Pad H"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="456.574861" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="457.645449" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1849.1" vesselID="1849" time="463.437465" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1849.1" vesselID="1849" time="464.366876" padID="Pad H" machineID="SR04" amount="7900.000000"/>
+    <SpReclaimStart stockpileID="NCT1849.1" vesselID="1849" time="465.669940" padID="Pad H" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1849.1" vesselID="1849" time="465.870119" padID="Pad H" machineID="SR04" amount="1701.522717"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="466.363626" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="467.434214" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpReclaimStart stockpileID="NCT1849.1" vesselID="1849" time="467.798103" padID="Pad H" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1849.1" vesselID="1849" time="477.774395" padID="Pad H" machineID="SR04" amount="84798.477283"/>
+    <SpStockpileRemnant stockpileID="NCT1849.1" vesselID="1849" time="477.893407" padID="Pad H" machineID="null" amount="14300.000000"/>
+    <SpReclaimStart stockpileID="NCT1849.1" vesselID="1849" time="477.893685" padID="Pad H" machineID="SR04"/>
+    <SpStackTransStart stockpileID="Pad A remnant" vesselID="" time="478.023079" padID="Pad A" machineID="SR01"/>
+    <SpReclaimComp stockpileID="NCT1849.1" vesselID="1849" time="479.576038" padID="Pad H" machineID="SR04" amount="14300.000000"/>
+    <SpStackTransComp stockpileID="Pad A remnant" vesselID="" time="479.705431" padID="Pad A" machineID="SR01" amount="14300.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1849.1" vesselID="1849" time="479.705431" padID="Pad H" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="480.433265" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="481.445030" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="484.592516" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="484.980751" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="485.420045" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="486.220045" padID="Pad FG" machineID="SR04" amount="6800.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="487.519289" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="487.978113" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1844.1" vesselID="1844" time="489.872492" padID="Pad DE" machineID="SR03"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="490.363692" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1844.1" vesselID="1844" time="490.943080" padID="Pad DE" machineID="SR03" amount="9100.000000"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="491.293103" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="492.561405" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="493.490816" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="493.978174" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="494.989939" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="498.148872" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="499.078284" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="503.388806" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="504.318218" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="505.583411" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="506.595176" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="511.854549" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="512.313372" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="517.501858" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="518.513623" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="527.155262" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="528.167026" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="528.251269" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="528.639504" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="529.139555" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="530.151319" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="530.727355" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="531.739119" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="532.290778" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="533.302543" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="533.339261" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="534.351026" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1846.1" vesselID="1846" time="534.398905" padID="Pad FG" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1852.1" vesselID="1852" time="535.216442" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1846.1" vesselID="1846" time="535.410670" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1846.1" vesselID="1846" time="535.410670" padID="Pad FG"/>
+    <SpStackComp stockpileID="NCT1852.1" vesselID="1852" time="536.157619" padID="Pad BC" machineID="SR02" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="536.261054" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="536.519878" padID="Pad DE" machineID="SR03" amount="2200.000000"/>
+    <SpReclaimStart stockpileID="NCT1846.1" vesselID="1846" time="536.743203" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1846.1" vesselID="1846" time="537.377259" padID="Pad FG" machineID="SR04" amount="5389.471390"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="537.598440" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="538.539616" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpReclaimStart stockpileID="NCT1846.1" vesselID="1846" time="538.654894" padID="Pad FG" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="538.847344" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="539.647344" padID="Pad DE" machineID="SR03" amount="6800.000000"/>
+    <SpReclaimComp stockpileID="NCT1846.1" vesselID="1846" time="539.684138" padID="Pad FG" machineID="SR04" amount="8748.571537"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="539.790703" padID="Pad DE" machineID="SR03"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="540.313500" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="540.772324" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="540.802467" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="541.168107" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="542.097519" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="542.279211" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="543.290975" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1846.1" vesselID="1846" time="543.352642" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1846.1" vesselID="1846" time="550.015715" padID="Pad FG" machineID="SR04" amount="56636.117530"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="550.645077" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="551.033313" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpReclaimStart stockpileID="NCT1846.1" vesselID="1846" time="551.522757" padID="Pad FG" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1852.1" vesselID="1852" time="552.630126" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1852.1" vesselID="1852" time="553.700714" padID="Pad BC" machineID="SR02" amount="9100.000000"/>
+    <SpReclaimComp stockpileID="NCT1846.1" vesselID="1846" time="557.043444" padID="Pad FG" machineID="SR04" amount="46925.839542"/>
+    <SpStockpileRemnant stockpileID="NCT1846.1" vesselID="1846" time="557.128287" padID="Pad FG" machineID="null" amount="2400.000000"/>
+    <SpReclaimStart stockpileID="NCT1846.1" vesselID="1846" time="557.356342" padID="Pad FG" machineID="SR03"/>
+    <SpStackTransStart stockpileID="Pad FG remnant" vesselID="" time="557.454827" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1846.1" vesselID="1846" time="557.638695" padID="Pad FG" machineID="SR03" amount="2400.000000"/>
+    <SpStackTransComp stockpileID="Pad FG remnant" vesselID="" time="557.737180" padID="Pad FG" machineID="SR04" amount="2400.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1846.1" vesselID="1846" time="557.737180" padID="Pad FG" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="576.119326" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="576.378149" padID="Pad DE" machineID="SR03" amount="2200.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="577.630192" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="578.089015" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="580.234097" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="581.304686" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1844.1" vesselID="1844" time="582.502724" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1844.1" vesselID="1844" time="583.514489" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="584.405075" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="584.863899" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="584.992438" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="586.004203" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1852.1" vesselID="1852" time="586.037301" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1852.1" vesselID="1852" time="586.978477" padID="Pad BC" machineID="SR02" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="587.919241" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="588.848653" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1852.1" vesselID="1852" time="588.885354" padID="Pad BC" machineID="SR02"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="589.030345" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1852.1" vesselID="1852" time="589.955942" padID="Pad BC" machineID="SR02" amount="9100.000000"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="589.959757" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="590.625286" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="591.637051" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1858.1" vesselID="1858" time="591.725301" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1858.1" vesselID="1858" time="592.795889" padID="Pad BC" machineID="SR02" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="593.346457" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="594.358222" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1852.1" vesselID="1852" time="596.688611" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1852.1" vesselID="1852" time="597.700376" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="601.766332" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="602.707508" padID="Pad BC" machineID="SR02" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1852.1" vesselID="1852" time="602.773720" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1852.1" vesselID="1852" time="603.785485" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="606.642659" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="607.572070" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="610.529341" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="611.458752" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="619.700391" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="620.088627" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1844.1" vesselID="1844" time="620.144007" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1844.1" vesselID="1844" time="621.155771" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="622.033272" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="622.292095" padID="Pad DE" machineID="SR03" amount="2200.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="623.640271" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="624.099095" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="624.204547" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="625.004547" padID="Pad DE" machineID="SR03" amount="6800.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="626.935107" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="627.946872" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="628.123286" padID="Pad FG" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="628.804124" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="629.062948" padID="Pad DE" machineID="SR03" amount="2200.000000"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="629.193874" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="629.218981" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="630.018981" padID="Pad DE" machineID="SR03" amount="6800.000000"/>
+    <SpStackStart stockpileID="NCT1852.1" vesselID="1852" time="630.499006" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1852.1" vesselID="1852" time="631.510771" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="634.429743" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="634.817978" padID="Pad H" machineID="SR04" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1844.1" vesselID="1844" time="634.868579" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1844.1" vesselID="1844" time="635.880344" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1852.1" vesselID="1852" time="636.158711" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1852.1" vesselID="1852" time="637.170476" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1852.1" vesselID="1852" time="638.457939" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1852.1" vesselID="1852" time="639.469704" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1852.1" vesselID="1852" time="639.469704" padID="Pad BC"/>
+    <SpReclaimStart stockpileID="NCT1852.1" vesselID="1852" time="640.780657" padID="Pad BC" machineID="SR02"/>
+    <SpReclaimComp stockpileID="NCT1852.1" vesselID="1852" time="651.063010" padID="Pad BC" machineID="SR02" amount="87400.000000"/>
+    <SpStockpileRemnant stockpileID="NCT1852.1" vesselID="1852" time="651.144280" padID="Pad BC" machineID="null" amount="7000.000000"/>
+    <SpReclaimStart stockpileID="NCT1852.1" vesselID="1852" time="651.361225" padID="Pad BC" machineID="SR01"/>
+    <SpStackTransStart stockpileID="Pad BC remnant" vesselID="" time="651.454659" padID="Pad BC" machineID="SR02"/>
+    <SpReclaimComp stockpileID="NCT1852.1" vesselID="1852" time="652.184754" padID="Pad BC" machineID="SR01" amount="7000.000000"/>
+    <SpStackTransComp stockpileID="Pad BC remnant" vesselID="" time="652.278188" padID="Pad BC" machineID="SR02" amount="7000.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1852.1" vesselID="1852" time="652.278188" padID="Pad BC" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="652.560572" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="653.572337" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1842.1" vesselID="1842" time="660.785386" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1842.1" vesselID="1842" time="661.244210" padID="Pad H" machineID="SR04" amount="3900.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1842.1" vesselID="1842" time="661.244210" padID="Pad H"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="661.681385" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="662.610797" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="663.926590" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="664.385414" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="668.658543" padID="Pad BC" machineID="SR02"/>
+    <SpReclaimStart stockpileID="NCT1842.1" vesselID="1842" time="668.837093" padID="Pad H" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="669.670308" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1844.1" vesselID="1844" time="669.718894" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1844.1" vesselID="1844" time="670.660071" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpReclaimComp stockpileID="NCT1842.1" vesselID="1842" time="670.978505" padID="Pad H" machineID="SR04" amount="18201.998692"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="671.503587" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="672.432999" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1857.1" vesselID="1857" time="672.432999" padID="Pad FG"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="672.894312" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="673.906077" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1842.1" vesselID="1842" time="673.935244" padID="Pad H" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1842.1" vesselID="1842" time="674.525433" padID="Pad H" machineID="SR04" amount="5016.609585"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="674.802536" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="675.814300" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1842.1" vesselID="1842" time="675.915967" padID="Pad H" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1842.1" vesselID="1842" time="677.813881" padID="Pad H" machineID="SR04" amount="16132.265517"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="678.090983" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="679.161572" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1857.1" vesselID="1857" time="679.455688" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1857.1" vesselID="1857" time="680.385100" padID="Pad FG" machineID="SR04" amount="7900.000000"/>
+    <SpReclaimStart stockpileID="NCT1842.1" vesselID="1842" time="680.759544" padID="Pad H" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1842.1" vesselID="1842" time="680.958048" padID="Pad H" machineID="SR04" amount="1687.287939"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="681.235151" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="682.176328" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpReclaimStart stockpileID="NCT1842.1" vesselID="1842" time="682.277994" padID="Pad H" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1842.1" vesselID="1842" time="683.377316" padID="Pad H" machineID="SR04" amount="9344.237799"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="683.593763" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="684.534939" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpReclaimStart stockpileID="NCT1842.1" vesselID="1842" time="684.564106" padID="Pad H" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="688.610523" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="688.869347" padID="Pad DE" machineID="SR03" amount="2200.000000"/>
+    <SpReclaimComp stockpileID="NCT1842.1" vesselID="1842" time="692.460294" padID="Pad H" machineID="SR04" amount="67117.600468"/>
+    <SpStockpileRemnant stockpileID="NCT1842.1" vesselID="1842" time="692.589872" padID="Pad H" machineID="null" amount="2800.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="692.700111" padID="Pad BC" machineID="SR02"/>
+    <SpReclaimStart stockpileID="NCT1857.1" vesselID="1857" time="692.964316" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="693.158935" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="694.259901" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="694.648137" padID="Pad BC" machineID="SR02" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="696.424527" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="696.683351" padID="Pad DE" machineID="SR03" amount="2200.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="698.494814" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="699.294814" padID="Pad DE" machineID="SR03" amount="6800.000000"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="699.438173" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="700.449937" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="703.190712" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="703.578948" padID="Pad BC" machineID="SR02" amount="3300.000000"/>
+    <SpReclaimComp stockpileID="NCT1857.1" vesselID="1857" time="705.615514" padID="Pad FG" machineID="SR04" amount="107535.186389"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="706.044365" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="707.056130" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="707.510600" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="708.581188" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="709.076491" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="710.088256" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1857.1" vesselID="1857" time="710.361311" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1857.1" vesselID="1857" time="713.015995" padID="Pad FG" machineID="SR04" amount="22564.813611"/>
+    <SpStockpileRemnant stockpileID="NCT1857.1" vesselID="1857" time="713.125932" padID="Pad FG" machineID="null" amount="11300.000000"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="713.444846" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="714.456611" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1857.1" vesselID="1857" time="714.616888" padID="Pad FG" machineID="SR03"/>
+    <SpStackTransStart stockpileID="Pad FG remnant" vesselID="" time="714.725828" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1857.1" vesselID="1857" time="715.946300" padID="Pad FG" machineID="SR03" amount="11300.000000"/>
+    <SpStackTransComp stockpileID="Pad FG remnant" vesselID="" time="716.055240" padID="Pad FG" machineID="SR04" amount="11300.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1857.1" vesselID="1857" time="716.055240" padID="Pad FG" machineID="null" amount="0.000000"/>
+    <SpReclaimStart stockpileID="NCT1842.1" vesselID="1842" time="716.316906" padID="Pad H" machineID="SR04"/>
+    <SpStackTransStart stockpileID="Pad A remnant" vesselID="" time="716.457714" padID="Pad A" machineID="SR01"/>
+    <SpReclaimComp stockpileID="NCT1842.1" vesselID="1842" time="716.646318" padID="Pad H" machineID="SR04" amount="2800.000000"/>
+    <SpStackTransComp stockpileID="Pad A remnant" vesselID="" time="716.787126" padID="Pad A" machineID="SR01" amount="2800.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1842.1" vesselID="1842" time="716.787126" padID="Pad H" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="719.516488" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="719.975312" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1844.1" vesselID="1844" time="728.453737" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1844.1" vesselID="1844" time="729.465502" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="729.760214" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="730.830802" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="735.992151" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="736.450975" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1844.1" vesselID="1844" time="737.121090" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1844.1" vesselID="1844" time="738.132854" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="738.800986" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="739.742163" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="741.324514" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="742.265690" padID="Pad BC" machineID="SR02" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1848.1" vesselID="1848" time="743.335774" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1848.1" vesselID="1848" time="744.347539" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1848.1" vesselID="1848" time="744.347539" padID="Pad BC"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="745.790296" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="746.249120" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="746.467204" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="747.537792" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpReclaimStart stockpileID="NCT1848.1" vesselID="1848" time="748.122920" padID="Pad BC" machineID="SR02"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="748.780713" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="749.851301" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="751.485291" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="752.497056" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="753.781016" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="754.792780" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="757.035816" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="758.047581" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimComp stockpileID="NCT1848.1" vesselID="1848" time="761.452332" padID="Pad BC" machineID="SR02" amount="113300.000000"/>
+    <SpStockpileRemnant stockpileID="NCT1848.1" vesselID="1848" time="761.527688" padID="Pad BC" machineID="null" amount="5300.000000"/>
+    <SpReclaimStart stockpileID="NCT1848.1" vesselID="1848" time="761.800466" padID="Pad BC" machineID="SR01"/>
+    <SpStackTransStart stockpileID="Pad BC remnant" vesselID="" time="761.888825" padID="Pad BC" machineID="SR02"/>
+    <SpReclaimComp stockpileID="NCT1848.1" vesselID="1848" time="762.423996" padID="Pad BC" machineID="SR01" amount="5300.000000"/>
+    <SpStackTransComp stockpileID="Pad BC remnant" vesselID="" time="762.512354" padID="Pad BC" machineID="SR02" amount="5300.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1848.1" vesselID="1848" time="762.512354" padID="Pad BC" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="763.262448" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="764.274213" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="765.572923" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="765.961158" padID="Pad BC" machineID="SR02" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="769.236215" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="770.247980" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="770.598104" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="770.986340" padID="Pad BC" machineID="SR02" amount="3300.000000"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="775.360545" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="776.431133" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1841.1" vesselID="1841" time="776.431133" padID="Pad FG"/>
+    <SpStackStart stockpileID="NCT1856.1" vesselID="1856" time="777.430212" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1856.1" vesselID="1856" time="778.441977" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1856.1" vesselID="1856" time="778.441977" padID="Pad FG"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="778.708293" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="779.167116" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="783.412611" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="783.871435" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1841.1" vesselID="1841" time="789.154907" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1841.1" vesselID="1841" time="790.225496" padID="Pad FG" machineID="SR04" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="793.787739" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="794.799504" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="795.461980" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="796.403156" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1844.1" vesselID="1844" time="796.503291" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1844.1" vesselID="1844" time="797.444468" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="798.070355" padID="Pad DE" machineID="SR03"/>
+    <SpReclaimStart stockpileID="NCT1856.1" vesselID="1856" time="798.421887" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="799.082120" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpReclaimComp stockpileID="NCT1856.1" vesselID="1856" time="799.992809" padID="Pad FG" machineID="SR04" amount="13352.837186"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="800.301204" padID="Pad FG" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1850.1" vesselID="1850" time="801.200627" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="801.312968" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1856.1" vesselID="1856" time="801.443524" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1850.1" vesselID="1850" time="802.271215" padID="Pad BC" machineID="SR02" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="802.371518" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="802.830341" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="804.261906" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="804.650141" padID="Pad BC" machineID="SR02" amount="3300.000000"/>
+    <SpReclaimComp stockpileID="NCT1856.1" vesselID="1856" time="813.366720" padID="Pad FG" machineID="SR04" amount="101347.162814"/>
+    <SpStockpileRemnant stockpileID="NCT1856.1" vesselID="1856" time="813.486856" padID="Pad FG" machineID="null" amount="7100.000000"/>
+    <SpReclaimStart stockpileID="NCT1841.1" vesselID="1841" time="813.936301" padID="Pad FG" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1850.1" vesselID="1850" time="814.671157" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1850.1" vesselID="1850" time="815.741745" padID="Pad BC" machineID="SR02" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1850.1" vesselID="1850" time="819.816247" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1850.1" vesselID="1850" time="820.886835" padID="Pad BC" machineID="SR02" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="823.195182" padID="Pad BC" machineID="SR02"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="823.375374" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="823.654006" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="824.316550" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1844.1" vesselID="1844" time="825.079405" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1844.1" vesselID="1844" time="826.008816" padID="Pad DE" machineID="SR03" amount="7900.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1844.1" vesselID="1844" time="826.008816" padID="Pad DE"/>
+    <SpReclaimComp stockpileID="NCT1841.1" vesselID="1841" time="827.359830" padID="Pad FG" machineID="SR04" amount="114100.000000"/>
+    <SpStockpileRemnant stockpileID="NCT1841.1" vesselID="1841" time="827.452067" padID="Pad FG" machineID="null" amount="10100.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="828.089491" padID="Pad FG" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="828.873190" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="829.101256" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1845.1" vesselID="1845" time="829.181955" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="829.884955" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="829.961420" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1845.1" vesselID="1845" time="830.193720" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1845.1" vesselID="1845" time="830.193720" padID="Pad FG"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="830.349655" padID="Pad BC" machineID="SR02" amount="3300.000000"/>
+    <SpReclaimStart stockpileID="NCT1841.1" vesselID="1841" time="830.484275" padID="Pad FG" machineID="SR03"/>
+    <SpStackTransStart stockpileID="Pad FG remnant" vesselID="" time="830.577180" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1841.1" vesselID="1841" time="831.672511" padID="Pad FG" machineID="SR03" amount="10100.000000"/>
+    <SpStackTransComp stockpileID="Pad FG remnant" vesselID="" time="831.765415" padID="Pad FG" machineID="SR04" amount="10100.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1841.1" vesselID="1841" time="831.765415" padID="Pad FG" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="831.776475" padID="Pad DE" machineID="SR03"/>
+    <SpReclaimStart stockpileID="NCT1845.1" vesselID="1845" time="832.056248" padID="Pad FG" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="832.364406" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="832.576475" padID="Pad DE" machineID="SR03" amount="6800.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1837.1" vesselID="1837" time="832.576475" padID="Pad DE"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="832.823230" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1837.1" vesselID="1837" time="832.844331" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1837.1" vesselID="1837" time="833.644331" padID="Pad DE" machineID="SR03" amount="6800.000000"/>
+    <SpReclaimStart stockpileID="NCT1844.1" vesselID="1844" time="836.637608" padID="Pad DE" machineID="SR03"/>
+    <SpReclaimComp stockpileID="NCT1845.1" vesselID="1845" time="838.350983" padID="Pad FG" machineID="SR04" amount="53505.242240"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="838.601758" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="839.613522" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1845.1" vesselID="1845" time="839.681022" padID="Pad FG" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1850.1" vesselID="1850" time="841.438628" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1850.1" vesselID="1850" time="842.509216" padID="Pad BC" machineID="SR02" amount="9100.000000"/>
+    <SpReclaimComp stockpileID="NCT1844.1" vesselID="1844" time="842.528818" padID="Pad DE" machineID="SR03" amount="50075.285627"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="842.717862" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="843.659038" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpReclaimStart stockpileID="NCT1844.1" vesselID="1844" time="843.721538" padID="Pad DE" machineID="SR03"/>
+    <SpReclaimComp stockpileID="NCT1845.1" vesselID="1845" time="845.142223" padID="Pad FG" machineID="SR04" amount="46420.202484"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="845.392998" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="846.404763" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1845.1" vesselID="1845" time="846.472263" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1844.1" vesselID="1844" time="849.853858" padID="Pad DE" machineID="SR03" amount="52124.714373"/>
+    <SpStockpileRemnant stockpileID="NCT1844.1" vesselID="1844" time="849.963432" padID="Pad DE" machineID="null" amount="100.000000"/>
+    <SpReclaimStart stockpileID="NCT1844.1" vesselID="1844" time="850.450654" padID="Pad DE" machineID="SR02"/>
+    <SpReclaimComp stockpileID="NCT1844.1" vesselID="1844" time="850.462419" padID="Pad DE" machineID="SR02" amount="100.000000"/>
+    <SpStackTransStart stockpileID="Pad DE remnant" vesselID="" time="850.546134" padID="Pad DE" machineID="SR03"/>
+    <SpStackTransComp stockpileID="Pad DE remnant" vesselID="" time="850.557899" padID="Pad DE" machineID="SR03" amount="100.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1844.1" vesselID="1844" time="850.557899" padID="Pad DE" machineID="null" amount="0.000000"/>
+    <SpReclaimComp stockpileID="NCT1845.1" vesselID="1845" time="850.963387" padID="Pad FG" machineID="SR04" amount="38174.555275"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="850.986735" padID="Pad DE" machineID="SR03"/>
+    <SpStockpileRemnant stockpileID="NCT1845.1" vesselID="1845" time="851.095071" padID="Pad FG" machineID="null" amount="5700.000000"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="851.927912" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpReclaimStart stockpileID="NCT1837.1" vesselID="1837" time="852.063912" padID="Pad DE" machineID="SR03"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="852.148316" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="852.607139" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStackStart stockpileID="NCT1850.1" vesselID="1850" time="854.443555" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1850.1" vesselID="1850" time="855.455320" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="861.813660" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="862.201895" padID="Pad BC" machineID="SR02" amount="3300.000000"/>
+    <SpReclaimComp stockpileID="NCT1837.1" vesselID="1837" time="868.922735" padID="Pad DE" machineID="SR03" amount="143300.000000"/>
+    <SpStockpileRemnant stockpileID="NCT1837.1" vesselID="1837" time="869.014056" padID="Pad DE" machineID="null" amount="11100.000000"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="869.157414" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="870.169179" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1837.1" vesselID="1837" time="870.671401" padID="Pad DE" machineID="SR02"/>
+    <SpStackTransStart stockpileID="Pad DE remnant" vesselID="" time="870.761073" padID="Pad DE" machineID="SR03"/>
+    <SpReclaimComp stockpileID="NCT1837.1" vesselID="1837" time="871.977284" padID="Pad DE" machineID="SR02" amount="11100.000000"/>
+    <SpStackTransComp stockpileID="Pad DE remnant" vesselID="" time="872.066955" padID="Pad DE" machineID="SR03" amount="11100.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1837.1" vesselID="1837" time="872.066955" padID="Pad DE" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="872.160581" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="873.101757" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpReclaimStart stockpileID="NCT1845.1" vesselID="1845" time="873.405368" padID="Pad FG" machineID="SR03"/>
+    <SpStackTransStart stockpileID="Pad FG remnant" vesselID="" time="873.550949" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1845.1" vesselID="1845" time="874.075957" padID="Pad FG" machineID="SR03" amount="5700.000000"/>
+    <SpStackStart stockpileID="NCT1855.1" vesselID="1855" time="874.110659" padID="Pad BC" machineID="SR02"/>
+    <SpStackTransComp stockpileID="Pad FG remnant" vesselID="" time="874.221537" padID="Pad FG" machineID="SR04" amount="5700.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1845.1" vesselID="1845" time="874.221537" padID="Pad FG" machineID="null" amount="0.000000"/>
+    <SpReclaimStart stockpileID="NCT1856.1" vesselID="1856" time="874.352093" padID="Pad FG" machineID="SR03"/>
+    <SpStackTransStart stockpileID="Pad FG remnant" vesselID="" time="874.485830" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1855.1" vesselID="1855" time="874.569483" padID="Pad BC" machineID="SR02" amount="3900.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1855.1" vesselID="1855" time="874.569483" padID="Pad BC"/>
+    <SpStackStart stockpileID="NCT1850.1" vesselID="1850" time="874.715900" padID="Pad BC" machineID="SR02"/>
+    <SpReclaimComp stockpileID="NCT1856.1" vesselID="1856" time="875.187387" padID="Pad FG" machineID="SR03" amount="7100.000000"/>
+    <SpStackTransComp stockpileID="Pad FG remnant" vesselID="" time="875.321124" padID="Pad FG" machineID="SR04" amount="7100.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1856.1" vesselID="1856" time="875.321124" padID="Pad FG" machineID="null" amount="0.000000"/>
+    <SpStackComp stockpileID="NCT1850.1" vesselID="1850" time="875.786489" padID="Pad BC" machineID="SR02" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1853.1" vesselID="1853" time="878.196065" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1853.1" vesselID="1853" time="879.207830" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1853.1" vesselID="1853" time="879.207830" padID="Pad DE"/>
+    <SpStackStart stockpileID="NCT1850.1" vesselID="1850" time="880.786126" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1850.1" vesselID="1850" time="881.715538" padID="Pad BC" machineID="SR02" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="882.964534" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="883.905711" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1850.1" vesselID="1850" time="883.987892" padID="Pad BC" machineID="SR02"/>
+    <SpReclaimStart stockpileID="NCT1853.1" vesselID="1853" time="884.753770" padID="Pad DE" machineID="SR03"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="884.769736" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1850.1" vesselID="1850" time="885.058480" padID="Pad BC" machineID="SR02" amount="9100.000000"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="885.710913" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1850.1" vesselID="1850" time="893.826423" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1850.1" vesselID="1850" time="894.755835" padID="Pad BC" machineID="SR02" amount="7900.000000"/>
+    <SpReclaimComp stockpileID="NCT1853.1" vesselID="1853" time="900.447888" padID="Pad DE" machineID="SR03" amount="133400.000000"/>
+    <SpStockpileRemnant stockpileID="NCT1853.1" vesselID="1853" time="900.552310" padID="Pad DE" machineID="null" amount="1800.000000"/>
+    <SpReclaimStart stockpileID="NCT1855.1" vesselID="1855" time="900.700718" padID="Pad BC" machineID="SR02"/>
+    <SpReclaimComp stockpileID="NCT1855.1" vesselID="1855" time="901.230545" padID="Pad BC" machineID="SR02" amount="4503.531114"/>
+    <SpStackStart stockpileID="NCT1850.1" vesselID="1850" time="901.457889" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1850.1" vesselID="1850" time="902.387301" padID="Pad BC" machineID="SR02" amount="7900.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1850.1" vesselID="1850" time="902.387301" padID="Pad BC"/>
+    <SpReclaimStart stockpileID="NCT1855.1" vesselID="1855" time="902.436467" padID="Pad BC" machineID="SR02"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="905.499742" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="906.511507" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="907.795569" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="908.807334" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimComp stockpileID="NCT1855.1" vesselID="1855" time="911.259581" padID="Pad BC" machineID="SR02" amount="74996.468886"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="911.371712" padID="Pad FG" machineID="SR04"/>
+    <SpStockpileRemnant stockpileID="NCT1855.1" vesselID="1855" time="911.382178" padID="Pad BC" machineID="null" amount="2100.000000"/>
+    <SpReclaimStart stockpileID="NCT1850.1" vesselID="1850" time="911.541564" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="912.312888" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpReclaimComp stockpileID="NCT1850.1" vesselID="1850" time="912.601685" padID="Pad BC" machineID="SR02" amount="9011.031407"/>
+    <SpStackStart stockpileID="NCT1858.1" vesselID="1858" time="913.207888" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1858.1" vesselID="1858" time="914.137299" padID="Pad BC" machineID="SR02" amount="7900.000000"/>
+    <SpReclaimStart stockpileID="NCT1850.1" vesselID="1850" time="914.587299" padID="Pad BC" machineID="SR02"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="918.954501" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="919.895678" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="921.261083" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="922.272848" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimComp stockpileID="NCT1850.1" vesselID="1850" time="923.138943" padID="Pad BC" machineID="SR02" amount="72688.968593"/>
+    <SpStockpileRemnant stockpileID="NCT1850.1" vesselID="1850" time="923.280448" padID="Pad BC" machineID="null" amount="5200.000000"/>
+    <SpStackStart stockpileID="NCT1858.1" vesselID="1858" time="923.745145" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1858.1" vesselID="1858" time="924.756910" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1850.1" vesselID="1850" time="925.313299" padID="Pad BC" machineID="SR01"/>
+    <SpStackTransStart stockpileID="Pad BC remnant" vesselID="" time="925.452213" padID="Pad BC" machineID="SR02"/>
+    <SpReclaimComp stockpileID="NCT1850.1" vesselID="1850" time="925.925063" padID="Pad BC" machineID="SR01" amount="5200.000000"/>
+    <SpStackTransComp stockpileID="Pad BC remnant" vesselID="" time="926.063977" padID="Pad BC" machineID="SR02" amount="5200.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1850.1" vesselID="1850" time="926.063977" padID="Pad BC" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1858.1" vesselID="1858" time="926.245063" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1858.1" vesselID="1858" time="927.315652" padID="Pad BC" machineID="SR02" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1858.1" vesselID="1858" time="927.330626" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1858.1" vesselID="1858" time="928.260038" padID="Pad BC" machineID="SR02" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="928.339231" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimStart stockpileID="NCT1855.1" vesselID="1855" time="928.426427" padID="Pad BC" machineID="SR01"/>
+    <SpStackTransStart stockpileID="Pad BC remnant" vesselID="" time="928.560897" padID="Pad BC" machineID="SR02"/>
+    <SpReclaimComp stockpileID="NCT1855.1" vesselID="1855" time="928.673486" padID="Pad BC" machineID="SR01" amount="2100.000000"/>
+    <SpStackTransComp stockpileID="Pad BC remnant" vesselID="" time="928.807955" padID="Pad BC" machineID="SR02" amount="2100.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1855.1" vesselID="1855" time="928.807955" padID="Pad BC" machineID="null" amount="0.000000"/>
+    <SpReclaimStart stockpileID="NCT1853.1" vesselID="1853" time="928.952955" padID="Pad DE" machineID="SR02"/>
+    <SpStackTransStart stockpileID="Pad DE remnant" vesselID="" time="929.054092" padID="Pad DE" machineID="SR03"/>
+    <SpReclaimComp stockpileID="NCT1853.1" vesselID="1853" time="929.164720" padID="Pad DE" machineID="SR02" amount="1800.000000"/>
+    <SpStackTransComp stockpileID="Pad DE remnant" vesselID="" time="929.265857" padID="Pad DE" machineID="SR03" amount="1800.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1853.1" vesselID="1853" time="929.265857" padID="Pad DE" machineID="null" amount="0.000000"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="929.350995" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="929.654725" padID="Pad DE" machineID="SR03"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="930.613570" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="930.666490" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="931.625335" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1847.1" vesselID="1847" time="935.404441" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1847.1" vesselID="1847" time="936.416206" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1847.1" vesselID="1847" time="936.416206" padID="Pad FG"/>
+    <SpReclaimStart stockpileID="NCT1847.1" vesselID="1847" time="937.891538" padID="Pad FG" machineID="SR04"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="942.438953" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="943.450717" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="948.088164" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="949.029341" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1858.1" vesselID="1858" time="949.095638" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1858.1" vesselID="1858" time="950.025050" padID="Pad BC" machineID="SR02" amount="7900.000000"/>
+    <SpReclaimComp stockpileID="NCT1847.1" vesselID="1847" time="950.225133" padID="Pad FG" machineID="SR04" amount="104835.556816"/>
+    <SpStackStart stockpileID="NCT1854.1" vesselID="1854" time="950.761418" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1854.1" vesselID="1854" time="951.702594" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1858.1" vesselID="1858" time="951.743891" padID="Pad BC" machineID="SR02"/>
+    <SpReclaimStart stockpileID="NCT1847.1" vesselID="1847" time="952.097316" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1858.1" vesselID="1858" time="952.673303" padID="Pad BC" machineID="SR02" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="953.815740" padID="Pad DE" machineID="SR03"/>
+    <SpReclaimComp stockpileID="NCT1847.1" vesselID="1847" time="954.563722" padID="Pad FG" machineID="SR04" amount="20964.443184"/>
+    <SpStockpileRemnant stockpileID="NCT1847.1" vesselID="1847" time="954.689552" padID="Pad FG" machineID="null" amount="200.000000"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="954.756917" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpReclaimStart stockpileID="NCT1847.1" vesselID="1847" time="954.980250" padID="Pad FG" machineID="SR03"/>
+    <SpReclaimComp stockpileID="NCT1847.1" vesselID="1847" time="955.003780" padID="Pad FG" machineID="SR03" amount="200.000000"/>
+    <SpStackTransStart stockpileID="Pad FG remnant" vesselID="" time="955.119720" padID="Pad FG" machineID="SR04"/>
+    <SpStackTransComp stockpileID="Pad FG remnant" vesselID="" time="955.143249" padID="Pad FG" machineID="SR04" amount="200.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1847.1" vesselID="1847" time="955.143249" padID="Pad FG" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1858.1" vesselID="1858" time="956.382079" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1858.1" vesselID="1858" time="957.452667" padID="Pad BC" machineID="SR02" amount="9100.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="960.911353" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="961.852529" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1858.1" vesselID="1858" time="964.578575" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1858.1" vesselID="1858" time="965.507987" padID="Pad BC" machineID="SR02" amount="7900.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="967.795528" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="968.807293" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1858.1" vesselID="1858" time="971.275225" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1858.1" vesselID="1858" time="972.286990" padID="Pad BC" machineID="SR02" amount="8600.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1858.1" vesselID="1858" time="972.286990" padID="Pad BC"/>
+    <SpStackStart stockpileID="NCT1854.1" vesselID="1854" time="974.338499" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1854.1" vesselID="1854" time="975.350264" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1858.1" vesselID="1858" time="978.045937" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1858.1" vesselID="1858" time="978.975348" padID="Pad BC" machineID="SR02" amount="7900.000000"/>
+    <SpReclaimStart stockpileID="NCT1858.1" vesselID="1858" time="980.302069" padID="Pad BC" machineID="SR02"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="982.307836" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="983.319600" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="985.954516" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="986.966281" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="988.146370" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="989.087547" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpReclaimComp stockpileID="NCT1858.1" vesselID="1858" time="990.149128" padID="Pad BC" machineID="SR02" amount="83700.000000"/>
+    <SpStockpileRemnant stockpileID="NCT1858.1" vesselID="1858" time="990.233904" padID="Pad BC" machineID="null" amount="8200.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="990.388960" padID="Pad DE" machineID="SR03"/>
+    <SpReclaimStart stockpileID="NCT1858.1" vesselID="1858" time="990.635015" padID="Pad BC" machineID="SR01"/>
+    <SpStackTransStart stockpileID="Pad BC remnant" vesselID="" time="990.733046" padID="Pad BC" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="991.330136" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpReclaimComp stockpileID="NCT1858.1" vesselID="1858" time="991.599721" padID="Pad BC" machineID="SR01" amount="8200.000000"/>
+    <SpStackTransComp stockpileID="Pad BC remnant" vesselID="" time="991.697752" padID="Pad BC" machineID="SR02" amount="8200.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1858.1" vesselID="1858" time="991.697752" padID="Pad BC" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="992.626300" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="993.638065" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="994.922127" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="995.933892" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="998.927169" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="999.938934" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="1001.980798" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="1002.992563" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="1005.026333" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="1006.038098" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="1008.071869" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="1009.083633" padID="Pad DE" machineID="SR03" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1851.1" vesselID="1851" time="1009.962644" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1851.1" vesselID="1851" time="1010.903820" padID="Pad DE" machineID="SR03" amount="8000.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1851.1" vesselID="1851" time="1010.903820" padID="Pad DE"/>
+    <SpStackStart stockpileID="NCT1854.1" vesselID="1854" time="1012.115345" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimStart stockpileID="NCT1851.1" vesselID="1851" time="1012.247573" padID="Pad DE" machineID="SR03"/>
+    <SpStackComp stockpileID="NCT1854.1" vesselID="1854" time="1013.056521" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1854.1" vesselID="1854" time="1015.758914" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1854.1" vesselID="1854" time="1016.770679" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1854.1" vesselID="1854" time="1018.708272" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1854.1" vesselID="1854" time="1019.649449" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1854.1" vesselID="1854" time="1020.891891" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1854.1" vesselID="1854" time="1021.903656" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1854.1" vesselID="1854" time="1022.991970" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1854.1" vesselID="1854" time="1024.003735" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1854.1" vesselID="1854" time="1025.287797" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1854.1" vesselID="1854" time="1026.299562" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimComp stockpileID="NCT1851.1" vesselID="1851" time="1028.776985" padID="Pad DE" machineID="SR03" amount="140500.000000"/>
+    <SpStockpileRemnant stockpileID="NCT1851.1" vesselID="1851" time="1028.902192" padID="Pad DE" machineID="null" amount="2100.000000"/>
+    <SpStackStart stockpileID="NCT1854.1" vesselID="1854" time="1028.959254" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimStart stockpileID="NCT1851.1" vesselID="1851" time="1029.135803" padID="Pad DE" machineID="SR02"/>
+    <SpStackTransStart stockpileID="Pad DE remnant" vesselID="" time="1029.270980" padID="Pad DE" machineID="SR03"/>
+    <SpReclaimComp stockpileID="NCT1851.1" vesselID="1851" time="1029.382862" padID="Pad DE" machineID="SR02" amount="2100.000000"/>
+    <SpStackTransComp stockpileID="Pad DE remnant" vesselID="" time="1029.518039" padID="Pad DE" machineID="SR03" amount="2100.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1851.1" vesselID="1851" time="1029.518039" padID="Pad DE" machineID="null" amount="0.000000"/>
+    <SpStackComp stockpileID="NCT1854.1" vesselID="1854" time="1029.900430" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1854.1" vesselID="1854" time="1031.472721" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1854.1" vesselID="1854" time="1032.413898" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1854.1" vesselID="1854" time="1033.432925" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1854.1" vesselID="1854" time="1034.444689" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1854.1" vesselID="1854" time="1034.444689" padID="Pad FG"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="1036.022994" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="1037.034759" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1854.1" vesselID="1854" time="1037.304759" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1854.1" vesselID="1854" time="1041.542826" padID="Pad FG" machineID="SR04" amount="36023.568428"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="1041.943643" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="1042.955408" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1854.1" vesselID="1854" time="1043.225408" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1854.1" vesselID="1854" time="1043.537573" padID="Pad FG" machineID="SR04" amount="2653.404309"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="1043.938391" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="1044.950156" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1854.1" vesselID="1854" time="1045.220156" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1854.1" vesselID="1854" time="1048.683816" padID="Pad FG" machineID="SR04" amount="29441.114726"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="1049.084634" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="1050.096399" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpReclaimStart stockpileID="NCT1854.1" vesselID="1854" time="1050.366399" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1854.1" vesselID="1854" time="1052.364271" padID="Pad FG" machineID="SR04" amount="16981.912536"/>
+    <SpStockpileRemnant stockpileID="NCT1854.1" vesselID="1854" time="1052.454836" padID="Pad FG" machineID="null" amount="6500.000000"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="1052.765088" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="1053.706265" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpReclaimStart stockpileID="NCT1854.1" vesselID="1854" time="1053.864876" padID="Pad FG" machineID="SR03"/>
+    <SpStackTransStart stockpileID="Pad FG remnant" vesselID="" time="1053.968487" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1854.1" vesselID="1854" time="1054.629582" padID="Pad FG" machineID="SR03" amount="6500.000000"/>
+    <SpStackTransComp stockpileID="Pad FG remnant" vesselID="" time="1054.733193" padID="Pad FG" machineID="SR04" amount="6500.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1854.1" vesselID="1854" time="1054.733193" padID="Pad FG" machineID="null" amount="0.000000"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="1054.872057" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="1055.883821" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="1057.646195" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="1058.587371" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="1060.585099" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="1061.526275" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="1063.631852" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="1064.643616" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="1066.685481" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="1067.697245" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="1069.731016" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="1070.742781" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="1071.725764" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="1072.737528" padID="Pad FG" machineID="SR04" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT1859.1" vesselID="1859" time="1073.917618" padID="Pad FG" machineID="SR04"/>
+    <SpStackComp stockpileID="NCT1859.1" vesselID="1859" time="1074.858795" padID="Pad FG" machineID="SR04" amount="8000.000000"/>
+    <SpStockpileBuilt stockpileID="NCT1859.1" vesselID="1859" time="1074.858795" padID="Pad FG"/>
+    <SpReclaimStart stockpileID="NCT1859.1" vesselID="1859" time="1076.738643" padID="Pad FG" machineID="SR04"/>
+    <SpReclaimComp stockpileID="NCT1859.1" vesselID="1859" time="1090.597467" padID="Pad FG" machineID="SR04" amount="117800.000000"/>
+    <SpStockpileRemnant stockpileID="NCT1859.1" vesselID="1859" time="1090.712623" padID="Pad FG" machineID="null" amount="200.000000"/>
+    <SpReclaimStart stockpileID="NCT1859.1" vesselID="1859" time="1090.982623" padID="Pad FG" machineID="SR03"/>
+    <SpReclaimComp stockpileID="NCT1859.1" vesselID="1859" time="1091.006152" padID="Pad FG" machineID="SR03" amount="200.000000"/>
+    <SpStackTransStart stockpileID="Pad FG remnant" vesselID="" time="1091.110754" padID="Pad FG" machineID="SR04"/>
+    <SpStackTransComp stockpileID="Pad FG remnant" vesselID="" time="1091.134284" padID="Pad FG" machineID="SR04" amount="200.000000"/>
+    <SpRemnantRemoved stockpileID="NCT1859.1" vesselID="1859" time="1091.134284" padID="Pad FG" machineID="null" amount="0.000000"/>
+</events>

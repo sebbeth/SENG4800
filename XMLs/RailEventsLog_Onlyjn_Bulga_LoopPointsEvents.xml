@@ -1,8 +1,0 @@
-    <railEvents>
-        <TrainWaitJunction cycleID="135" junctionID="jn_Bulga_LoopPoints" time="64.69953120520073" trainID="train0"/>
-        <TrainWaitJunction cycleID="385" junctionID="jn_Bulga_LoopPoints" time="264.0419448452645" trainID="train27"/>
-        <TrainWaitJunction cycleID="534" junctionID="jn_Bulga_LoopPoints" time="403.2056394316633" trainID="train27"/>
-        <TrainWaitJunction cycleID="588" junctionID="jn_Bulga_LoopPoints" time="436.8934894345072" trainID="train0"/>
-        <TrainWaitJunction cycleID="615" junctionID="jn_Bulga_LoopPoints" time="471.1098595457126" trainID="train0"/>
-        <TrainWaitJunction cycleID="933" junctionID="jn_Bulga_LoopPoints" time="752.9079617643279" trainID="train33"/>
-    </railEvents>
