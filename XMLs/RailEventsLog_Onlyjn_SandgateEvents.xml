@@ -1,0 +1,12 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="85" junctionID="jn_Sandgate" time="49.362961045709184" trainID="train31"/>
+        <TrainWaitJunction cycleID="217" junctionID="jn_Sandgate" time="119.30832743837377" trainID="train5"/>
+        <TrainWaitJunction cycleID="272" junctionID="jn_Sandgate" time="164.53288222456072" trainID="train5"/>
+        <TrainWaitJunction cycleID="359" junctionID="jn_Sandgate" time="253.02481522687208" trainID="train11"/>
+        <TrainWaitJunction cycleID="480" junctionID="jn_Sandgate" time="340.7948283958348" trainID="train46"/>
+        <TrainWaitJunction cycleID="549" junctionID="jn_Sandgate" time="410.1564581539272" trainID="train2"/>
+        <TrainWaitJunction cycleID="676" junctionID="jn_Sandgate" time="518.384760228889" trainID="train34"/>
+        <TrainWaitJunction cycleID="680" junctionID="jn_Sandgate" time="523.9968110324795" trainID="train10"/>
+        <TrainWaitJunction cycleID="727" junctionID="jn_Sandgate" time="556.6085894492107" trainID="train6"/>
+        <TrainWaitJunction cycleID="809" junctionID="jn_Sandgate" time="630.8395171649752" trainID="train21"/>
+    </railEvents>

@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-07 18:18:44.676555
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-08 19:15:43.572274
  **/
 #include "ShiploaderEvent.h"
 
@@ -31,25 +31,25 @@ bool ShiploaderEvent::hasAmount() const {
 
 bool ShiploaderEvent::hasPosition() const {
     switch (type) {
-        case ShiploaderEventType::FinishVesselDraftSurvey:
-        case ShiploaderEventType::HatchChangeStart:
+        case ShiploaderEventType::Fail:
+        case ShiploaderEventType::Fix:
         case ShiploaderEventType::LoadComplete:
         case ShiploaderEventType::LoadOperationComplete:
         case ShiploaderEventType::LoadOperationStart:
         case ShiploaderEventType::LoadStart:
-        case ShiploaderEventType::OnHatchChangeComplete:
-        case ShiploaderEventType::OnMove:
-        case ShiploaderEventType::OnStopMove:
-        case ShiploaderEventType::StartVesselDraftSurvey:
-        case ShiploaderEventType::StartVesselLoad:
-        case ShiploaderEventType::WrapUp:
-            return true;
-        case ShiploaderEventType::Fail:
-        case ShiploaderEventType::Fix:
         case ShiploaderEventType::MaintenanceComplete:
         case ShiploaderEventType::MaintenanceStart:
+        case ShiploaderEventType::OnMove:
+        case ShiploaderEventType::OnStopMove:
+        case ShiploaderEventType::StartVesselLoad:
         case ShiploaderEventType::SyncedFail:
         case ShiploaderEventType::SyncedFix:
+        case ShiploaderEventType::WrapUp:
+            return true;
+        case ShiploaderEventType::FinishVesselDraftSurvey:
+        case ShiploaderEventType::HatchChangeStart:
+        case ShiploaderEventType::OnHatchChangeComplete:
+        case ShiploaderEventType::StartVesselDraftSurvey:
         default:
             return false;
     }
@@ -57,24 +57,24 @@ bool ShiploaderEvent::hasPosition() const {
 
 bool ShiploaderEvent::hasStockpileID() const {
     switch (type) {
-        case ShiploaderEventType::FinishVesselDraftSurvey:
+        case ShiploaderEventType::Fail:
+        case ShiploaderEventType::Fix:
         case ShiploaderEventType::LoadComplete:
         case ShiploaderEventType::LoadOperationComplete:
         case ShiploaderEventType::LoadOperationStart:
         case ShiploaderEventType::LoadStart:
-        case ShiploaderEventType::StartVesselDraftSurvey:
+        case ShiploaderEventType::SyncedFail:
+        case ShiploaderEventType::SyncedFix:
             return true;
-        case ShiploaderEventType::Fail:
-        case ShiploaderEventType::Fix:
+        case ShiploaderEventType::FinishVesselDraftSurvey:
         case ShiploaderEventType::HatchChangeStart:
         case ShiploaderEventType::MaintenanceComplete:
         case ShiploaderEventType::MaintenanceStart:
         case ShiploaderEventType::OnHatchChangeComplete:
         case ShiploaderEventType::OnMove:
         case ShiploaderEventType::OnStopMove:
+        case ShiploaderEventType::StartVesselDraftSurvey:
         case ShiploaderEventType::StartVesselLoad:
-        case ShiploaderEventType::SyncedFail:
-        case ShiploaderEventType::SyncedFix:
         case ShiploaderEventType::WrapUp:
         default:
             return false;
@@ -83,25 +83,25 @@ bool ShiploaderEvent::hasStockpileID() const {
 
 bool ShiploaderEvent::hasTime() const {
     switch (type) {
-        case ShiploaderEventType::FinishVesselDraftSurvey:
-        case ShiploaderEventType::HatchChangeStart:
+        case ShiploaderEventType::Fail:
+        case ShiploaderEventType::Fix:
         case ShiploaderEventType::LoadComplete:
         case ShiploaderEventType::LoadOperationComplete:
         case ShiploaderEventType::LoadOperationStart:
         case ShiploaderEventType::LoadStart:
-        case ShiploaderEventType::OnHatchChangeComplete:
-        case ShiploaderEventType::OnMove:
-        case ShiploaderEventType::OnStopMove:
-        case ShiploaderEventType::StartVesselDraftSurvey:
-        case ShiploaderEventType::StartVesselLoad:
-        case ShiploaderEventType::WrapUp:
-            return true;
-        case ShiploaderEventType::Fail:
-        case ShiploaderEventType::Fix:
         case ShiploaderEventType::MaintenanceComplete:
         case ShiploaderEventType::MaintenanceStart:
+        case ShiploaderEventType::OnMove:
+        case ShiploaderEventType::OnStopMove:
+        case ShiploaderEventType::StartVesselLoad:
         case ShiploaderEventType::SyncedFail:
         case ShiploaderEventType::SyncedFix:
+        case ShiploaderEventType::WrapUp:
+            return true;
+        case ShiploaderEventType::FinishVesselDraftSurvey:
+        case ShiploaderEventType::HatchChangeStart:
+        case ShiploaderEventType::OnHatchChangeComplete:
+        case ShiploaderEventType::StartVesselDraftSurvey:
         default:
             return false;
     }

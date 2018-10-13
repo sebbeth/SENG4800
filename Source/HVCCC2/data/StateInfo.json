@@ -37,11 +37,11 @@
           "ReclaimComp": "Reclaimed"
         },
         "Remnant": {
-          "ReclaimTransStart": "RemnantReclaiming",
+          "ReclaimStart": "RemnantReclaiming",
           "RemnantRemoved": "Idle"
         },
         "RemnantReclaiming": {
-          "ReclaimTransComp": "Remnant"
+          "ReclaimComp": "Remnant"
         },
         "RemnantStacking": {
           "StackTransComp": "DedicatedCreated"

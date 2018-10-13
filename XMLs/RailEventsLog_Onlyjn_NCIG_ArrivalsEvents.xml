@@ -1,0 +1,33 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="114" junctionID="jn_NCIG_Arrivals" time="47.23008665134323" trainID="train2"/>
+        <TrainWaitJunction cycleID="99" junctionID="jn_NCIG_Arrivals" time="48.06159708433293" trainID="train45"/>
+        <TrainWaitJunction cycleID="109" junctionID="jn_NCIG_Arrivals" time="48.82380619770648" trainID="train55"/>
+        <TrainWaitJunction cycleID="183" junctionID="jn_NCIG_Arrivals" time="92.83762829598713" trainID="train4"/>
+        <TrainWaitJunction cycleID="223" junctionID="jn_NCIG_Arrivals" time="132.03875209928623" trainID="train15"/>
+        <TrainWaitJunction cycleID="267" junctionID="jn_NCIG_Arrivals" time="183.69620331226727" trainID="train52"/>
+        <TrainWaitJunction cycleID="242" junctionID="jn_NCIG_Arrivals" time="184.54795277468017" trainID="train35"/>
+        <TrainWaitJunction cycleID="326" junctionID="jn_NCIG_Arrivals" time="230.92213005031377" trainID="train3"/>
+        <TrainWaitJunction cycleID="354" junctionID="jn_NCIG_Arrivals" time="263.7888952414865" trainID="train13"/>
+        <TrainWaitJunction cycleID="353" junctionID="jn_NCIG_Arrivals" time="264.6905455354474" trainID="train50"/>
+        <TrainWaitJunction cycleID="455" junctionID="jn_NCIG_Arrivals" time="307.0385725200711" trainID="train4"/>
+        <TrainWaitJunction cycleID="442" junctionID="jn_NCIG_Arrivals" time="323.4668826308986" trainID="train12"/>
+        <TrainWaitJunction cycleID="487" junctionID="jn_NCIG_Arrivals" time="362.77883030845436" trainID="train37"/>
+        <TrainWaitJunction cycleID="484" junctionID="jn_NCIG_Arrivals" time="363.27161040908504" trainID="train39"/>
+        <TrainWaitJunction cycleID="496" junctionID="jn_NCIG_Arrivals" time="364.63270352500894" trainID="train10"/>
+        <TrainWaitJunction cycleID="520" junctionID="jn_NCIG_Arrivals" time="382.58882419781804" trainID="train26"/>
+        <TrainWaitJunction cycleID="517" junctionID="jn_NCIG_Arrivals" time="384.00897483689783" trainID="train21"/>
+        <TrainWaitJunction cycleID="667" junctionID="jn_NCIG_Arrivals" time="528.1093243331649" trainID="train54"/>
+        <TrainWaitJunction cycleID="692" junctionID="jn_NCIG_Arrivals" time="528.7726027281889" trainID="train58"/>
+        <TrainWaitJunction cycleID="682" junctionID="jn_NCIG_Arrivals" time="534.3519377188042" trainID="train48"/>
+        <TrainWaitJunction cycleID="711" junctionID="jn_NCIG_Arrivals" time="539.1117591622237" trainID="train8"/>
+        <TrainWaitJunction cycleID="751" junctionID="jn_NCIG_Arrivals" time="587.612459384013" trainID="train25"/>
+        <TrainWaitJunction cycleID="763" junctionID="jn_NCIG_Arrivals" time="601.8965628869626" trainID="train24"/>
+        <TrainWaitJunction cycleID="789" junctionID="jn_NCIG_Arrivals" time="627.118645556062" trainID="train1"/>
+        <TrainWaitJunction cycleID="832" junctionID="jn_NCIG_Arrivals" time="678.0087321175731" trainID="train44"/>
+        <TrainWaitJunction cycleID="875" junctionID="jn_NCIG_Arrivals" time="705.9007422222919" trainID="train1"/>
+        <TrainWaitJunction cycleID="887" junctionID="jn_NCIG_Arrivals" time="728.6080935865359" trainID="train43"/>
+        <TrainWaitJunction cycleID="991" junctionID="jn_NCIG_Arrivals" time="823.2730776175994" trainID="train18"/>
+        <TrainWaitJunction cycleID="998" junctionID="jn_NCIG_Arrivals" time="826.8466357425901" trainID="train19"/>
+        <TrainWaitJunction cycleID="1006" junctionID="jn_NCIG_Arrivals" time="832.0195562564451" trainID="train15"/>
+        <TrainWaitJunction cycleID="1016" junctionID="jn_NCIG_Arrivals" time="851.5750249543102" trainID="train26"/>
+    </railEvents>

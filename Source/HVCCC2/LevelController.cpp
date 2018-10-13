@@ -129,6 +129,35 @@ bool ALevelController::loadXMLData(const  FString& srcPath) {
 		auto& states = stateResultPair.first;
 		forEachInTuple(states, addToSimFunctor);
 		findSimTimeBoundsFunctor();
+
+		////get some debug outputs for demonstrating issues with train data
+		//auto& trainEntities = std::get<DataMap<TrainMovement>>(this->data);
+		//for (auto& eachEntity : trainEntities) {
+		//	auto targetPath = "C:/Users/marcos/Documents/tmp/" + eachEntity.first.nameForBinaryFile() + ".txt";
+		//	std::ofstream file(targetPath);
+		//	for (auto& eachState : eachEntity.second.states) {
+
+		//		file << "time: " << eachState.time << "; track: " << eachState.trackID << "; type: ";
+		//		switch (eachState.type) {
+		//		case TrainMovementStateType::EnteringTrack:
+		//			file << "EnteringTrack";
+		//			break;
+		//		case TrainMovementStateType::Idle:
+		//			file << "Idle";
+		//			break;
+		//		case TrainMovementStateType::LeavingTrack:
+		//			file << "LeavingTrack";
+		//			break;
+		//		case TrainMovementStateType::Invalid:
+		//			file << "Invalid";
+		//			break;
+		//		}
+		//		file << ";\n";
+ 	//		}
+		//	bool test = file.good();
+		//	file.flush();
+		//	file.close();
+		//}
 	}
 
 	return stateResultPair.second;
@@ -498,7 +527,7 @@ ACoalStack * ALevelController::spawnACoalStack(FString id, FVector position, FRo
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		ACoalStack *actor = world->SpawnActor<ACoalStack>(blueprint, position, rotator, spawnParams);
-		UE_LOG(LogTemp, Warning, TEXT("%s"), *id);
+		//UE_LOG(LogTemp, Warning, TEXT("%s"), *id);
 		actor->id = id;
 		actor->setWidth(width);
 		coalStacks.Add(actor);
@@ -551,7 +580,7 @@ AStackerReclaimer* ALevelController::getOrSpawnActor(const StackerReclaimer::Id&
 AShip* ALevelController::getOrSpawnActor(const Vessel::Id& id) {
 	static std::string nct_names[4] = { "SHIP:1", "SHIP:2", "SHIP:3", "SHIP:4" };
 	FString ff = UTF8_TO_TCHAR(id.name.c_str());
-	UE_LOG(LogTemp, Warning, TEXT("SHIP:%s"), *ff);
+	//UE_LOG(LogTemp, Warning, TEXT("SHIP:%s"), *ff);
 	//if (id.terminal == TerminalId::NCT) {
 		//for (int i = 0; i < 4; ++i) {
 		//	if (id.name == nct_names[i]) {
@@ -726,7 +755,7 @@ void ALevelController::animateEntity(const SimulationData<Stockpile>& data, floa
 	
 
 	if (padIdentifier != -1) { // Now that we have determined  which Padwe are using, determine the position along the pad
-		UE_LOG(LogTemp, Warning, TEXT("PAD IDENT IS %d"), padIdentifier);
+		//UE_LOG(LogTemp, Warning, TEXT("PAD IDENT IS %d"), padIdentifier);
 		auto padStart = NCT_pads_start[padIdentifier]->GetActorLocation();
 		auto padEnd = NCT_pads_end[padIdentifier]->GetActorLocation();
 
@@ -860,7 +889,7 @@ void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, 
 			splineScale = (targetTime - enterIterator->time) / (exitIterator->time - enterIterator->time);
 		}
 		//do whatever with an interpolation scale that estimates how far along the track we are
-		//actorPointer->SetActorHiddenInGame(false);
+		actorPointer->SetActorHiddenInGame(false);
 		//actorPointer->SetActorEnableCollision(true);
 
 		//double sinedScale = std::atan(splineScale);
@@ -873,13 +902,13 @@ void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, 
 		actorPointer->SetActorTransform(makeTransform);
 	} else {
 		//do whatever to hide the train
-		//actorPointer->SetActorHiddenInGame(true);
+		actorPointer->SetActorHiddenInGame(true);
 		//actorPointer->SetActorEnableCollision(false);
 
-		auto makeTransform = FTransform(trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World),
-			trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
-			FVector(5.0f, 5.0f, 5.0f));
+		//auto makeTransform = FTransform(trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World),
+		//	trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
+		//	FVector(5.0f, 5.0f, 5.0f));
 
-		actorPointer->SetActorTransform(makeTransform);
+		//actorPointer->SetActorTransform(makeTransform);
 	}
 }

@@ -489,7 +489,7 @@ void UpdateWindowsFunctor::operator()(Each& eachDataMap) {
 				do {
 					//debugging
 					
-					UE_LOG(LogTemp, Warning, TEXT("Entity %s: moving window to the states %d and %d"), UTF8_TO_TCHAR(eachId.nameForBinaryFile().c_str()), std::distance(eachStates.cbegin(), eachWindow.first), std::distance(eachStates.cbegin(), eachWindow.second));
+					//UE_LOG(LogTemp, Warning, TEXT("Entity %s: moving window to the states %d and %d"), UTF8_TO_TCHAR(eachId.nameForBinaryFile().c_str()), std::distance(eachStates.cbegin(), eachWindow.first), std::distance(eachStates.cbegin(), eachWindow.second));
 
 					//if the ends of the window are the same, instead of sliding both indices forward, want to expand the window by incrementing only the second
 					//note that both ends of the window are the same at initialisation ansd as the result of compression once the simulation reaches the end of the alloted time (or, if in reverse, once it reaches the beginning) (see the next comment for an example)
@@ -509,7 +509,7 @@ void UpdateWindowsFunctor::operator()(Each& eachDataMap) {
 				//while: the time in state at the beginning of each window in the future AND there are states remaining behind it (the containing if is the same)
 				do {
 					//debugging
-					UE_LOG(LogTemp, Warning, TEXT("Entity %s: moving window to the states %d and %d"), UTF8_TO_TCHAR(eachId.nameForBinaryFile().c_str()), std::distance(eachStates.cbegin(), eachWindow.first), std::distance(eachStates.cbegin(), eachWindow.second));
+					//UE_LOG(LogTemp, Warning, TEXT("Entity %s: moving window to the states %d and %d"), UTF8_TO_TCHAR(eachId.nameForBinaryFile().c_str()), std::distance(eachStates.cbegin(), eachWindow.first), std::distance(eachStates.cbegin(), eachWindow.second));
 
 					//if the ends of the window are the same, instead of sliding both indices backward, want to expand the window by incrementing only the second
 					//note that both ends of the window are the same at initialisation ansd as the result of compression once the simulation reaches the end of the alloted time (or, if in reverse, once it reaches the beginning) (see the next comment for an example)

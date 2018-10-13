@@ -1,0 +1,29 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="85" junctionID="jn_Muswellbrook" time="31.385737726414817" trainID="train31"/>
+        <TrainWaitJunction cycleID="90" junctionID="jn_Muswellbrook" time="36.823905346709154" trainID="train36"/>
+        <TrainWaitJunction cycleID="123" junctionID="jn_Muswellbrook" time="54.1021599532398" trainID="train13"/>
+        <TrainWaitJunction cycleID="130" junctionID="jn_Muswellbrook" time="58.41484948401261" trainID="train29"/>
+        <TrainWaitJunction cycleID="177" junctionID="jn_Muswellbrook" time="94.13976490660926" trainID="train38"/>
+        <TrainWaitJunction cycleID="274" junctionID="jn_Muswellbrook" time="182.85569036044234" trainID="train24"/>
+        <TrainWaitJunction cycleID="296" junctionID="jn_Muswellbrook" time="191.88859188463857" trainID="train23"/>
+        <TrainWaitJunction cycleID="307" junctionID="jn_Muswellbrook" time="193.50452381777023" trainID="train0"/>
+        <TrainWaitJunction cycleID="309" junctionID="jn_Muswellbrook" time="203.91594313273842" trainID="train41"/>
+        <TrainWaitJunction cycleID="317" junctionID="jn_Muswellbrook" time="206.47149434592174" trainID="train17"/>
+        <TrainWaitJunction cycleID="332" junctionID="jn_Muswellbrook" time="211.99024615657393" trainID="train32"/>
+        <TrainWaitJunction cycleID="386" junctionID="jn_Muswellbrook" time="260.1799468111369" trainID="train33"/>
+        <TrainWaitJunction cycleID="353" junctionID="jn_Muswellbrook" time="261.0215592355875" trainID="train50"/>
+        <TrainWaitJunction cycleID="388" junctionID="jn_Muswellbrook" time="268.4676512340168" trainID="train7"/>
+        <TrainWaitJunction cycleID="408" junctionID="jn_Muswellbrook" time="279.73537847605047" trainID="train20"/>
+        <TrainWaitJunction cycleID="497" junctionID="jn_Muswellbrook" time="352.27006688925326" trainID="train54"/>
+        <TrainWaitJunction cycleID="508" junctionID="jn_Muswellbrook" time="366.9442823562911" trainID="train20"/>
+        <TrainWaitJunction cycleID="572" junctionID="jn_Muswellbrook" time="415.84341585110354" trainID="train46"/>
+        <TrainWaitJunction cycleID="547" junctionID="jn_Muswellbrook" time="428.0832010718689" trainID="train3"/>
+        <TrainWaitJunction cycleID="664" junctionID="jn_Muswellbrook" time="513.293271922867" trainID="train52"/>
+        <TrainWaitJunction cycleID="687" junctionID="jn_Muswellbrook" time="528.6761838678758" trainID="train35"/>
+        <TrainWaitJunction cycleID="700" junctionID="jn_Muswellbrook" time="533.7874084769271" trainID="train9"/>
+        <TrainWaitJunction cycleID="748" junctionID="jn_Muswellbrook" time="594.3261135024516" trainID="train7"/>
+        <TrainWaitJunction cycleID="789" junctionID="jn_Muswellbrook" time="612.5882810105858" trainID="train1"/>
+        <TrainWaitJunction cycleID="822" junctionID="jn_Muswellbrook" time="641.9018392517764" trainID="train47"/>
+        <TrainWaitJunction cycleID="896" junctionID="jn_Muswellbrook" time="732.1046020348031" trainID="train12"/>
+        <TrainWaitJunction cycleID="899" junctionID="jn_Muswellbrook" time="733.8438625112739" trainID="train34"/>
+    </railEvents>

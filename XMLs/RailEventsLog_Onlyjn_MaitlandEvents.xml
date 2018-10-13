@@ -1,0 +1,7 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="701" junctionID="jn_Maitland" time="548.3932849609037" trainID="train24"/>
+        <TrainWaitJunction cycleID="794" junctionID="jn_Maitland" time="618.6397897212532" trainID="train58"/>
+        <TrainWaitJunction cycleID="997" junctionID="jn_Maitland" time="820.0414135620474" trainID="train17"/>
+        <TrainWaitJunction cycleID="1057" junctionID="jn_Maitland" time="914.9879218817177" trainID="train51"/>
+        <TrainWaitJunction cycleID="1109" junctionID="jn_Maitland" time="1011.3719648733303" trainID="train6"/>
+    </railEvents>

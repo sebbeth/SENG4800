@@ -1,0 +1,17 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="271" junctionID="jn_Bylong_West" time="185.03532132776513" trainID="train29"/>
+        <TrainWaitJunction cycleID="289" junctionID="jn_Bylong_West" time="190.97795280178514" trainID="train34"/>
+        <TrainWaitJunction cycleID="307" junctionID="jn_Bylong_West" time="197.82885602227773" trainID="train0"/>
+        <TrainWaitJunction cycleID="379" junctionID="jn_Bylong_West" time="264.8610105454869" trainID="train43"/>
+        <TrainWaitJunction cycleID="395" junctionID="jn_Bylong_West" time="272.3044141556083" trainID="train24"/>
+        <TrainWaitJunction cycleID="412" junctionID="jn_Bylong_West" time="282.74718204676884" trainID="train0"/>
+        <TrainWaitJunction cycleID="432" junctionID="jn_Bylong_West" time="295.42208014318817" trainID="train40"/>
+        <TrainWaitJunction cycleID="419" junctionID="jn_Bylong_West" time="300.02728945684" trainID="train41"/>
+        <TrainWaitJunction cycleID="423" junctionID="jn_Bylong_West" time="302.55615884190894" trainID="train32"/>
+        <TrainWaitJunction cycleID="442" junctionID="jn_Bylong_West" time="311.8387729040466" trainID="train12"/>
+        <TrainWaitJunction cycleID="667" junctionID="jn_Bylong_West" time="514.4504796084708" trainID="train54"/>
+        <TrainWaitJunction cycleID="763" junctionID="jn_Bylong_West" time="590.1433050763629" trainID="train24"/>
+        <TrainWaitJunction cycleID="796" junctionID="jn_Bylong_West" time="624.5294668127534" trainID="train19"/>
+        <TrainWaitJunction cycleID="815" junctionID="jn_Bylong_West" time="632.4883991966805" trainID="train27"/>
+        <TrainWaitJunction cycleID="910" junctionID="jn_Bylong_West" time="742.713516124927" trainID="train57"/>
+    </railEvents>
