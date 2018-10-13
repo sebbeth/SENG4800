@@ -1,0 +1,7 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="67" junctionID="jn_Thornton" time="5.486940473645353" trainID="train5"/>
+        <TrainWaitJunction cycleID="86" junctionID="jn_Thornton" time="33.97723149348013" trainID="train32"/>
+        <TrainWaitJunction cycleID="107" junctionID="jn_Thornton" time="38.00921844154217" trainID="train53"/>
+        <TrainWaitJunction cycleID="327" junctionID="jn_Thornton" time="200.04425598817832" trainID="train56"/>
+        <TrainWaitJunction cycleID="676" junctionID="jn_Thornton" time="517.9718605636134" trainID="train34"/>
+    </railEvents>

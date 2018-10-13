@@ -1,0 +1,12 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="118" junctionID="jn_BoggabriEast_LoopPoints" time="63.27460343246211" trainID="train6"/>
+        <TrainWaitJunction cycleID="188" junctionID="jn_BoggabriEast_LoopPoints" time="113.1545621952716" trainID="train55"/>
+        <TrainWaitJunction cycleID="252" junctionID="jn_BoggabriEast_LoopPoints" time="186.29343509444803" trainID="train3"/>
+        <TrainWaitJunction cycleID="377" junctionID="jn_BoggabriEast_LoopPoints" time="273.1194964585383" trainID="train51"/>
+        <TrainWaitJunction cycleID="488" junctionID="jn_BoggabriEast_LoopPoints" time="370.7433472851896" trainID="train3"/>
+        <TrainWaitJunction cycleID="495" junctionID="jn_BoggabriEast_LoopPoints" time="374.9522047603375" trainID="train50"/>
+        <TrainWaitJunction cycleID="557" junctionID="jn_BoggabriEast_LoopPoints" time="430.03169656027524" trainID="train51"/>
+        <TrainWaitJunction cycleID="904" junctionID="jn_BoggabriEast_LoopPoints" time="747.8780935682336" trainID="train51"/>
+        <TrainWaitJunction cycleID="984" junctionID="jn_BoggabriEast_LoopPoints" time="831.2376109918367" trainID="train53"/>
+        <TrainWaitJunction cycleID="992" junctionID="jn_BoggabriEast_LoopPoints" time="835.4464684670149" trainID="train30"/>
+    </railEvents>

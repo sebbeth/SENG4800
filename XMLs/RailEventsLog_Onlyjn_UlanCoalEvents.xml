@@ -1,0 +1,24 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="81" junctionID="jn_UlanCoal" time="32.99361408928417" trainID="train0"/>
+        <TrainWaitJunction cycleID="83" junctionID="jn_UlanCoal" time="37.14674827330737" trainID="train22"/>
+        <TrainWaitJunction cycleID="85" junctionID="jn_UlanCoal" time="41.299882454814636" trainID="train31"/>
+        <TrainWaitJunction cycleID="116" junctionID="jn_UlanCoal" time="60.09677369358218" trainID="train1"/>
+        <TrainWaitJunction cycleID="123" junctionID="jn_UlanCoal" time="64.05219522687169" trainID="train13"/>
+        <TrainWaitJunction cycleID="133" junctionID="jn_UlanCoal" time="68.19522917980747" trainID="train27"/>
+        <TrainWaitJunction cycleID="130" junctionID="jn_UlanCoal" time="72.1506504948717" trainID="train29"/>
+        <TrainWaitJunction cycleID="139" junctionID="jn_UlanCoal" time="76.30378545633808" trainID="train22"/>
+        <TrainWaitJunction cycleID="148" junctionID="jn_UlanCoal" time="80.7502824425654" trainID="train36"/>
+        <TrainWaitJunction cycleID="155" junctionID="jn_UlanCoal" time="84.90341662303223" trainID="train11"/>
+        <TrainWaitJunction cycleID="244" junctionID="jn_UlanCoal" time="182.58602931068268" trainID="train11"/>
+        <TrainWaitJunction cycleID="253" junctionID="jn_UlanCoal" time="187.58694598118302" trainID="train43"/>
+        <TrainWaitJunction cycleID="279" junctionID="jn_UlanCoal" time="191.5395596332855" trainID="train22"/>
+        <TrainWaitJunction cycleID="261" junctionID="jn_UlanCoal" time="196.3446218237205" trainID="train28"/>
+        <TrainWaitJunction cycleID="271" junctionID="jn_UlanCoal" time="200.0894215977021" trainID="train29"/>
+        <TrainWaitJunction cycleID="289" junctionID="jn_UlanCoal" time="204.3920191826201" trainID="train34"/>
+        <TrainWaitJunction cycleID="307" junctionID="jn_UlanCoal" time="212.69626756694402" trainID="train0"/>
+        <TrainWaitJunction cycleID="324" junctionID="jn_UlanCoal" time="216.8167862153592" trainID="train12"/>
+        <TrainWaitJunction cycleID="395" junctionID="jn_UlanCoal" time="277.5855181170688" trainID="train24"/>
+        <TrainWaitJunction cycleID="409" junctionID="jn_UlanCoal" time="286.29317222113286" trainID="train33"/>
+        <TrainWaitJunction cycleID="412" junctionID="jn_UlanCoal" time="290.3972483016027" trainID="train0"/>
+        <TrainWaitJunction cycleID="423" junctionID="jn_UlanCoal" time="307.9583548484869" trainID="train32"/>
+    </railEvents>

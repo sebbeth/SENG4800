@@ -1,0 +1,15 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="102" junctionID="jn_BowmansCreek" time="40.543303892988675" trainID="train48"/>
+        <TrainWaitJunction cycleID="131" junctionID="jn_BowmansCreek" time="57.06026905695253" trainID="train11"/>
+        <TrainWaitJunction cycleID="158" junctionID="jn_BowmansCreek" time="82.61921092725214" trainID="train8"/>
+        <TrainWaitJunction cycleID="332" junctionID="jn_BowmansCreek" time="210.89923190963503" trainID="train32"/>
+        <TrainWaitJunction cycleID="365" junctionID="jn_BowmansCreek" time="254.72597936177522" trainID="train29"/>
+        <TrainWaitJunction cycleID="354" junctionID="jn_BowmansCreek" time="261.262591450409" trainID="train13"/>
+        <TrainWaitJunction cycleID="373" junctionID="jn_BowmansCreek" time="262.703853345059" trainID="train37"/>
+        <TrainWaitJunction cycleID="403" junctionID="jn_BowmansCreek" time="266.57042731782155" trainID="train0"/>
+        <TrainWaitJunction cycleID="411" junctionID="jn_BowmansCreek" time="280.38729523051865" trainID="train22"/>
+        <TrainWaitJunction cycleID="420" junctionID="jn_BowmansCreek" time="305.0296753017085" trainID="train58"/>
+        <TrainWaitJunction cycleID="566" junctionID="jn_BowmansCreek" time="416.4904857058971" trainID="train11"/>
+        <TrainWaitJunction cycleID="600" junctionID="jn_BowmansCreek" time="442.35301241810714" trainID="train58"/>
+        <TrainWaitJunction cycleID="754" junctionID="jn_BowmansCreek" time="581.8180628382742" trainID="train2"/>
+    </railEvents>

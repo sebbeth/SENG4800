@@ -1,0 +1,8 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="67" junctionID="jn_Austar_LoopPoints" time="8.697121246628484" trainID="train5"/>
+        <TrainWaitJunction cycleID="117" junctionID="jn_Austar_LoopPoints" time="45.54178666507784" trainID="train5"/>
+        <TrainWaitJunction cycleID="217" junctionID="jn_Austar_LoopPoints" time="118.25925159814685" trainID="train5"/>
+        <TrainWaitJunction cycleID="226" junctionID="jn_Austar_LoopPoints" time="142.7716054046521" trainID="train5"/>
+        <TrainWaitJunction cycleID="231" junctionID="jn_Austar_LoopPoints" time="145.74223102302906" trainID="train16"/>
+        <TrainWaitJunction cycleID="384" junctionID="jn_Austar_LoopPoints" time="259.24835491566654" trainID="train16"/>
+    </railEvents>

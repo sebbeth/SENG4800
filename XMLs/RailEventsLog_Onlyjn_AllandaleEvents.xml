@@ -1,0 +1,11 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="303" junctionID="jn_Allandale" time="197.29225725277254" trainID="train56"/>
+        <TrainWaitJunction cycleID="320" junctionID="jn_Allandale" time="204.77159157483297" trainID="train11"/>
+        <TrainWaitJunction cycleID="469" junctionID="jn_Allandale" time="356.90153016691113" trainID="train42"/>
+        <TrainWaitJunction cycleID="554" junctionID="jn_Allandale" time="417.7447007906872" trainID="train40"/>
+        <TrainWaitJunction cycleID="601" junctionID="jn_Allandale" time="464.7712664140421" trainID="train12"/>
+        <TrainWaitJunction cycleID="716" junctionID="jn_Allandale" time="563.9581299572463" trainID="train14"/>
+        <TrainWaitJunction cycleID="737" junctionID="jn_Allandale" time="583.7348635002443" trainID="train39"/>
+        <TrainWaitJunction cycleID="914" junctionID="jn_Allandale" time="755.8893771136261" trainID="train49"/>
+        <TrainWaitJunction cycleID="932" junctionID="jn_Allandale" time="758.8154681807084" trainID="train53"/>
+    </railEvents>

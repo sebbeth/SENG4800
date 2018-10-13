@@ -1,0 +1,9 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="6" junctionID="jn_Bengalla_LoopPoints" time="6.501089515314617" trainID="train3"/>
+        <TrainWaitJunction cycleID="287" junctionID="jn_Bengalla_LoopPoints" time="178.8629064458267" trainID="train56"/>
+        <TrainWaitJunction cycleID="502" junctionID="jn_Bengalla_LoopPoints" time="362.79052116590645" trainID="train57"/>
+        <TrainWaitJunction cycleID="776" junctionID="jn_Bengalla_LoopPoints" time="596.777744626937" trainID="train29"/>
+        <TrainWaitJunction cycleID="941" junctionID="jn_Bengalla_LoopPoints" time="768.6225012516102" trainID="train3"/>
+        <TrainWaitJunction cycleID="976" junctionID="jn_Bengalla_LoopPoints" time="806.5416222954327" trainID="train45"/>
+        <TrainWaitJunction cycleID="1003" junctionID="jn_Bengalla_LoopPoints" time="836.935036621037" trainID="train56"/>
+    </railEvents>

@@ -1,0 +1,25 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="306" junctionID="jn_MtArthur_LoopPoints" time="195.55783495295648" trainID="train19"/>
+        <TrainWaitJunction cycleID="903" junctionID="jn_MtArthur_LoopPoints" time="733.1198147114432" trainID="train7"/>
+        <TrainWaitJunction cycleID="1036" junctionID="jn_MtArthur_LoopPoints" time="878.5087085223355" trainID="train18"/>
+        <TrainWaitJunction cycleID="1058" junctionID="jn_MtArthur_LoopPoints" time="915.1220209033647" trainID="train48"/>
+        <TrainWaitJunction cycleID="1065" junctionID="jn_MtArthur_LoopPoints" time="917.4286030616229" trainID="train49"/>
+        <TrainWaitJunction cycleID="1096" junctionID="jn_MtArthur_LoopPoints" time="986.5570601263466" trainID="train48"/>
+        <TrainWaitJunction cycleID="1100" junctionID="jn_MtArthur_LoopPoints" time="995.0952697282896" trainID="train52"/>
+        <TrainWaitJunction cycleID="1099" junctionID="jn_MtArthur_LoopPoints" time="998.1488987395342" trainID="train46"/>
+        <TrainWaitJunction cycleID="1101" junctionID="jn_MtArthur_LoopPoints" time="1001.1944340182849" trainID="train58"/>
+        <TrainWaitJunction cycleID="1102" junctionID="jn_MtArthur_LoopPoints" time="1004.2399692972872" trainID="train54"/>
+        <TrainWaitJunction cycleID="1105" junctionID="jn_MtArthur_LoopPoints" time="1014.9116504781753" trainID="train18"/>
+        <TrainWaitJunction cycleID="1108" junctionID="jn_MtArthur_LoopPoints" time="1017.0952697282896" trainID="train56"/>
+        <TrainWaitJunction cycleID="1111" junctionID="jn_MtArthur_LoopPoints" time="1025.1626322551379" trainID="train39"/>
+        <TrainWaitJunction cycleID="1112" junctionID="jn_MtArthur_LoopPoints" time="1027.6484319021083" trainID="train48"/>
+        <TrainWaitJunction cycleID="1116" junctionID="jn_MtArthur_LoopPoints" time="1037.7619363949568" trainID="train46"/>
+        <TrainWaitJunction cycleID="1117" junctionID="jn_MtArthur_LoopPoints" time="1044.9029269291607" trainID="train58"/>
+        <TrainWaitJunction cycleID="1119" junctionID="jn_MtArthur_LoopPoints" time="1047.8406136659378" trainID="train7"/>
+        <TrainWaitJunction cycleID="1118" junctionID="jn_MtArthur_LoopPoints" time="1050.8792726032025" trainID="train54"/>
+        <TrainWaitJunction cycleID="1120" junctionID="jn_MtArthur_LoopPoints" time="1053.8250530681996" trainID="train45"/>
+        <TrainWaitJunction cycleID="1122" junctionID="jn_MtArthur_LoopPoints" time="1056.7639571910493" trainID="train18"/>
+        <TrainWaitJunction cycleID="1121" junctionID="jn_MtArthur_LoopPoints" time="1059.8107098534683" trainID="train8"/>
+        <TrainWaitJunction cycleID="1124" junctionID="jn_MtArthur_LoopPoints" time="1062.8643388589078" trainID="train19"/>
+        <TrainWaitJunction cycleID="1123" junctionID="jn_MtArthur_LoopPoints" time="1065.9098741373512" trainID="train56"/>
+    </railEvents>
