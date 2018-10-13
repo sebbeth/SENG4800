@@ -26,39 +26,75 @@ outputFilesDirectory = args.source_directory
 if args.output_directory:
     outputFilesDirectory = args.output_directory
 
-uniqueEntityIDs = []
-numUniqueEntityIDs = 0
+# uniqueEntityIDs = []
+# numUniqueEntityIDs = 0
+#
+# # Find out all of the individual entities in the file:
+# with open(args.source_directory + args.file_name) as fd:
+#     for line in fd:
+#         matchedString = re.search('(.*)(' + args.id_name + '=\")([^\"]*)(.*)', line)
+#
+#         if matchedString:
+#             entityIDAlreadyInArray = False
+#
+#             for index in uniqueEntityIDs:
+#                 if index == matchedString.group(3):
+#                     entityIDAlreadyInArray = True
+#
+#             if not entityIDAlreadyInArray:
+#                 uniqueEntityIDs.append(matchedString.group(3))
+#
+# for entityID in uniqueEntityIDs:
 
-# Find out all of the individual entities in the file:
+
+entityLines = {}
+
+# Iterate through the entire file, separating lines with different entity ID values into their own separate list:
 with open(args.source_directory + args.file_name) as fd:
+    # firstLine = True
+
+    # newFileName = args.file_name[:len(args.file_name) - 4] + "_Only" + args.entity_id + "Events.xml"
+    # newFileName = args.file_name[:len(args.file_name) - 4] + "_Only" + entityID + "Events.xml"
+
     for line in fd:
-        matchedString = re.search('(.*)(' + args.id_name + '=\")([^\"]*)(.*)', line)
+        matchedString = re.search('(.*)(' + args.id_name + '=")([^"]*)(")(.*)', line)
 
         if matchedString:
-            entityIDAlreadyInArray = False
+            entityID = matchedString.group(3)
 
-            for index in uniqueEntityIDs:
-                if index == matchedString.group(3):
-                    entityIDAlreadyInArray = True
+            # entityLines.update({entityID: line})
 
-            if not entityIDAlreadyInArray:
-                uniqueEntityIDs.append(matchedString.group(3))
+            if entityID in entityLines:
+                listForKey = entityLines.get(entityID)
+                listForKey.append(line)
+                entityLines.update({entityID:listForKey})
+                # print(matchedString.group(3))
+            else:
+                listForKey = [line]
+                entityLines.update({entityID:listForKey})
 
-for entityID in uniqueEntityIDs:
-    with open(args.source_directory + args.file_name) as fd:
-        firstLine = True
 
-        # newFileName = args.file_name[:len(args.file_name) - 4] + "_Only" + args.entity_id + "Events.xml"
-        newFileName = args.file_name[:len(args.file_name) - 4] + "_Only" + entityID + "Events.xml"
+        # modeUsed = 'a'
 
-        for line in fd:
-            modeUsed = 'a'
+        # if firstLine:
+        #     modeUsed = 'w'
+        #     firstLine = False
 
-            if firstLine:
-                modeUsed = 'w'
-                firstLine = False
-
-            with open(outputFilesDirectory + newFileName, modeUsed) as newFile:
+            # with open(outputFilesDirectory + newFileName, modeUsed) as newFile:
                 # if ("<" + args.root_element + ">\n") in line or ("</" + args.root_element + ">") in line or ("</" + args.root_element + ">\n") in line or (args.id_name + "=\"" + args.entity_id + "\"") in line:
-                if ("<" + args.root_element + ">\n") in line or ("</" + args.root_element + ">") in line or ("</" + args.root_element + ">\n") in line or (args.id_name + "=\"" + entityID + "\"") in line:
-                    newFile.write(line)
+                # if ("<" + args.root_element + ">\n") in line or ("</" + args.root_element + ">") in line or ("</" + args.root_element + ">\n") in line or (args.id_name + "=\"" + entityID + "\"") in line:
+                #     newFile.write(line)
+
+# Creates a new XML file for each unique entity ID value, making sure to print out all of the lines in its list inside the file:
+for entityID in entityLines:
+    print(entityID)
+
+    newFileName = args.file_name[:len(args.file_name) - 4] + "_Only" + entityID + "Events.xml"
+
+    with open(args.source_directory + newFileName, 'w') as newFile:
+        newFile.write('\t<' + args.root_element + '>\n')
+
+    with open(args.source_directory + newFileName, 'a') as newFile:
+        for line in entityLines.get(entityID):
+            newFile.write(line)
+        newFile.write('\t</' + args.root_element + '>')
