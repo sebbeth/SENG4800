@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-07 18:18:44.676555
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-08 19:15:43.572274
  **/
 #pragma once
 #include <string>
@@ -12,17 +12,17 @@ public:
     Entity::Id id;
     VesselEventType type;
 
-    int ballast;
-    int cargo;
-    int numcargoes;
+    bool isTidal;
+    double metermark;
     std::string terminalID;
     double time;
+    int tugs;
 
-    bool hasBallast() const;
-    bool hasCargo() const;
-    bool hasNumcargoes() const;
+    bool hasIsTidal() const;
+    bool hasMetermark() const;
     bool hasTerminalID() const;
     bool hasTime() const;
+    bool hasTugs() const;
 
     template<class Archive>
     void serialize(Archive & archive);
@@ -30,5 +30,5 @@ public:
 
 template<class Archive>
 void VesselEvent::serialize(Archive & archive) {
-    archive(id, type, ballast, cargo, numcargoes, terminalID, time);
+    archive(id, type, isTidal, metermark, terminalID, time, tugs);
 }

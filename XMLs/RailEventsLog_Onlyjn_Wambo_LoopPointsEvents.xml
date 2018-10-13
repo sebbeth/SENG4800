@@ -1,0 +1,6 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="100" junctionID="jn_Wambo_LoopPoints" time="41.879054444872565" trainID="train46"/>
+        <TrainWaitJunction cycleID="145" junctionID="jn_Wambo_LoopPoints" time="67.87668080918723" trainID="train49"/>
+        <TrainWaitJunction cycleID="315" junctionID="jn_Wambo_LoopPoints" time="200.3939481143065" trainID="train8"/>
+        <TrainWaitJunction cycleID="621" junctionID="jn_Wambo_LoopPoints" time="474.43060489006035" trainID="train33"/>
+    </railEvents>

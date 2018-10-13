@@ -1,0 +1,6 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="86" junctionID="jn_Bloomfield_LoopPoints" time="33.63528604903569" trainID="train32"/>
+        <TrainWaitJunction cycleID="107" junctionID="jn_Bloomfield_LoopPoints" time="42.64449236230562" trainID="train53"/>
+        <TrainWaitJunction cycleID="311" junctionID="jn_Bloomfield_LoopPoints" time="199.65774895351134" trainID="train32"/>
+        <TrainWaitJunction cycleID="697" junctionID="jn_Bloomfield_LoopPoints" time="524.3772270066341" trainID="train28"/>
+    </railEvents>

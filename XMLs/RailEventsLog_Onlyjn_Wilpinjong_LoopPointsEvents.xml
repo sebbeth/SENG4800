@@ -1,0 +1,9 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="68" junctionID="jn_Wilpinjong_LoopPoints" time="15.162973827504137" trainID="train9"/>
+        <TrainWaitJunction cycleID="73" junctionID="jn_Wilpinjong_LoopPoints" time="18.46937280784413" trainID="train19"/>
+        <TrainWaitJunction cycleID="93" junctionID="jn_Wilpinjong_LoopPoints" time="43.915317599859506" trainID="train39"/>
+        <TrainWaitJunction cycleID="106" junctionID="jn_Wilpinjong_LoopPoints" time="51.794254361981366" trainID="train52"/>
+        <TrainWaitJunction cycleID="419" junctionID="jn_Wilpinjong_LoopPoints" time="307.10931262174364" trainID="train41"/>
+        <TrainWaitJunction cycleID="693" junctionID="jn_Wilpinjong_LoopPoints" time="538.3615571967772" trainID="train41"/>
+        <TrainWaitJunction cycleID="747" junctionID="jn_Wilpinjong_LoopPoints" time="584.9778477391719" trainID="train41"/>
+    </railEvents>

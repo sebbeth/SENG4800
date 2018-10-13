@@ -1,0 +1,10 @@
+    <railEvents>
+        <TrainWaitJunction cycleID="92" junctionID="jn_WerrisCreek_South" time="50.07885223845481" trainID="train38"/>
+        <TrainWaitJunction cycleID="132" junctionID="jn_WerrisCreek_South" time="75.04582268093415" trainID="train25"/>
+        <TrainWaitJunction cycleID="252" junctionID="jn_WerrisCreek_South" time="189.68115527351904" trainID="train3"/>
+        <TrainWaitJunction cycleID="417" junctionID="jn_WerrisCreek_South" time="307.11192130524" trainID="train25"/>
+        <TrainWaitJunction cycleID="441" junctionID="jn_WerrisCreek_South" time="319.69800308931605" trainID="train6"/>
+        <TrainWaitJunction cycleID="476" junctionID="jn_WerrisCreek_South" time="363.4275076764281" trainID="train25"/>
+        <TrainWaitJunction cycleID="489" junctionID="jn_WerrisCreek_South" time="370.4391301262311" trainID="train53"/>
+        <TrainWaitJunction cycleID="762" junctionID="jn_WerrisCreek_South" time="599.5831063312716" trainID="train14"/>
+    </railEvents>
