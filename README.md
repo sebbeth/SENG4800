@@ -22,11 +22,25 @@ When VS is installed, add the following packages to it using Visual Studio Insta
 
 After all these packages are installed, open the project and you will be prompted to recompile the project. If you have installed the required packages successfully, it will work from here and you will be able to edit the project. If there were errors it will probably fail to compile.
 
-If you are getting over 100 compilation errors in Visual Studio, you can try opening a file explorer outside of UE Editor and Visual Studio, right click on "HVCCC2.uproject" and click on "Generate Visual Studio project files".
-
-If you are getting the getting the error "Unable to start program '...\UE4.exe'. The system cannot find the file specified.", you have to right click on "HVCCC2" in the Solution Explorer inside Visual Studio. After that, you need to select "Set as StartUp Project", then recompile.
-
 Once the project is open you can access the C++ files in VS and modify them there.
+
+# Reasons why your project may not be running:
+1. If you are getting over 100 compilation errors in Visual Studio, you can try opening a file explorer outside of UE Editor and Visual Studio, right click on "HVCCC2.uproject" and click on "Generate Visual Studio project files".
+2. If you are getting the getting the error "Unable to start program '...\UE4.exe'. The system cannot find the file specified.", you have to right click on "HVCCC2" in the Solution Explorer inside Visual Studio. After that, you need to select "Set as StartUp Project", then recompile.
+3. If you are debugging using Visual Studio code and you are getting errors related to not having Unreal Engine .pdb files loaded, you can try:
+- Downloading the editor symbols for debugging:
+
+  - Open up the Unreal Engine program
+  - Go to Unreal Engine>Library>right click the dropdown next to "Launch" for whichever version of the engine you have installed>Options>check "Editor symbols for debugging"
+- Making sure these debugging symbols are being searched for:
+
+  - Launch the project in Visual Studio
+  - Tools>Options>Debugging>Symbols
+  - In the top section, add the root Unreal Engine folder (eg. C:\Program Files\Epic Games\UE_4.19)
+  - Click "OK" to close the window
+4. You may have to force shader re-compilation:
+- Delete the DerivedDataCache folder in AppData\Local\UnrealEngine\Common
+- Relaunch the project in the UE editor and wait for the shaders to be recompiled
 
 # Blender model import procedure:
 
