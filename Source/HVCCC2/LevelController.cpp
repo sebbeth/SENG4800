@@ -39,6 +39,45 @@ ALevelController::ALevelController() : addToSimFunctor(this), updateWindowsFunct
 void ALevelController::BeginPlay()
 {
 	Super::BeginPlay();
+	
+	spawnACoalStack("TEST", NCT_pads_start[0]->GetActorLocation(), NCT_pads_start[0]->GetActorRotation(), 100, coal_stack_blueprint);
+	spawnACoalStack("TEST", NCT_pads_start[1]->GetActorLocation(), NCT_pads_start[1]->GetActorRotation(), 100, coal_stack_blueprint);
+	spawnACoalStack("TEST", NCT_pads_start[2]->GetActorLocation(), NCT_pads_start[2]->GetActorRotation(), 100, coal_stack_blueprint);
+	spawnACoalStack("TEST", NCT_pads_start[3]->GetActorLocation(), NCT_pads_start[3]->GetActorRotation(), 100, coal_stack_blueprint);
+	spawnACoalStack("TEST", NCT_pads_start[4]->GetActorLocation(), NCT_pads_start[4]->GetActorRotation(), 100, coal_stack_blueprint);
+
+
+	spawnAStackerReclaimer("TEST", 0, NCT_SR_rails_start[0]->GetActorLocation(), NCT_SR_rails_end[0]->GetActorLocation(), largeSR_blueprint);
+	spawnAStackerReclaimer("TEST", 1, NCT_SR_rails_start[1]->GetActorLocation(), NCT_SR_rails_end[1]->GetActorLocation(), largeSR_blueprint);
+	spawnAStackerReclaimer("TEST", 2, NCT_SR_rails_start[2]->GetActorLocation(), NCT_SR_rails_end[2]->GetActorLocation(), largeSR_blueprint);
+	spawnAStackerReclaimer("TEST", 3, NCT_SR_rails_start[3]->GetActorLocation(), NCT_SR_rails_end[3]->GetActorLocation(), largeSR_blueprint);
+
+
+	int i = 0;
+	coalStacks[i]->setPosition(0, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
+	stackerReclaimers[i]->setPosition(0);
+
+	i++;
+	coalStacks[i]->setPosition(getPadLength(TerminalId::NCT, i), 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
+	stackerReclaimers[i]->setPosition(1.0);
+
+	i++;
+	coalStacks[i]->setPosition(500, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
+	float position = 500.0f / float(getPadLength(TerminalId::NCT, i));
+	stackerReclaimers[i]->setPosition(position);
+
+	i++;
+	coalStacks[i]->setPosition(900, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
+	position = 900.0f / float(getPadLength(TerminalId::NCT, i));
+
+	stackerReclaimers[i]->setPosition(position);
+
+	i++;
+	coalStacks[i]->setPosition(700, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
+	
+
+
+
 	//loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
 }
 
@@ -754,7 +793,7 @@ void ALevelController::animateEntity(const SimulationData<Stockpile>& data, floa
 	}
 	
 
-	if (padIdentifier != -1) { // Now that we have determined  which Padwe are using, determine the position along the pad
+	if (padIdentifier != -1) { // Now that we have determined  which Pad we are using, determine the position along the pad
 		//UE_LOG(LogTemp, Warning, TEXT("PAD IDENT IS %d"), padIdentifier);
 		auto padStart = NCT_pads_start[padIdentifier]->GetActorLocation();
 		auto padEnd = NCT_pads_end[padIdentifier]->GetActorLocation();
