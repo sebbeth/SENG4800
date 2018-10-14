@@ -4,7 +4,9 @@
 #include <string>
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "data/extraction/Stockpile/Stockpile.h"
 #include "CoalStack.generated.h"
+
 
 UCLASS()
 class HVCCC2_API ACoalStack : public AActor
@@ -30,9 +32,9 @@ public:
 
 	//void setQuantity(float length);
 	void setWidth(float width);
-	//the position in unreal's space is centered on the middle of the object where in the data it's the start end of the pile, so the location and scale must be set together
 	void setGeometry(float position, float proportionFilled, float pileLength, float padLength, FVector padStart, FVector padEnd);
+	Stockpile::Id getID();
 
-	FString id;
+	Stockpile::Id id;
 
 };

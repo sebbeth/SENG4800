@@ -308,6 +308,11 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "data")
 	TArray<FString> getEventMessages();
+	
+	// Selection Box
+	UFUNCTION(BlueprintCallable, Category = "data")
+	TArray<FString> getStateInfo(ACoalStack* actor);
+
 
 	//time controls
 	UFUNCTION(BlueprintCallable, Category = "time")
@@ -339,7 +344,7 @@ private:
 	AShipLoader * spawnAShipLoader(FString id, FVector railStart, FVector railEnd, TSubclassOf<class AShipLoader> blueprint);
 	AShip * spawnAShip(FString id, FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint);
 	AConveyorBelt * spawnAConveyorBelt(FString id, FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint);
-	ACoalStack * spawnACoalStack(FString id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint);
+	ACoalStack * spawnACoalStack(Stockpile::Id id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint);
 	ATrain * spawnATrain(FString id, FVector position, TSubclassOf<class ATrain> blueprint);
 
 	ATrain * spawnATrain(FString id, FVector position, FRotator rotator,TSubclassOf<class ATrain> blueprint);
@@ -349,7 +354,7 @@ private:
 	UActorType<typename Id::Entity>* getOrSpawnActor(const typename Id& id);
 
 	int getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> array, AStackerReclaimer* actor);
-	ACoalStack* getCoalStackWithId(TArray<ACoalStack*> array, FString id);
+	ACoalStack* getCoalStackWithId(Stockpile::Id id);
 
 	AStackerReclaimer* getOrSpawnActor(const StackerReclaimer::Id& id);
 	AShip* getOrSpawnActor(const Vessel::Id& id);

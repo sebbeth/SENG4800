@@ -73,5 +73,8 @@ void ACoalStack::setWidth(float width) {
 //	SetActorScale3D(FVector(GetActorScale3D().X, absoluteUELength/rawSize.Y, 1.0f));
 //}
 
+Stockpile::Id ACoalStack::getID() {
+	return id;
+}
 
 

@@ -491,17 +491,32 @@ AShip * ALevelController::spawnAShip(FString id, FVector position, FRotator rota
 	return NULL;
 }
 
+//Returns the amount of the stockpile for use in the object selection box
+TArray<FString> ALevelController::getStateInfo(ACoalStack* actor) {
+	const SimulationData<Stockpile>& simData = std::get<DataMap<Stockpile>>(this->data).at(actor->getID());
+	const StockpileState& previous = *simData.stateWindow.first;
+	const StockpileState& next = *simData.stateWindow.second;
 
+	const double maxAmount = simData.maximumAmount;
+	const double current = previous.amount;
+	const double change = next.amount - previous.amount;
+	
+	TArray<FString> stateInfo;
 
+	stateInfo.Add(FString::SanitizeFloat(current));
+	stateInfo.Add(FString::SanitizeFloat(maxAmount));
+	stateInfo.Add(FString::SanitizeFloat(change));
 
+	return stateInfo;
+}
 
-ACoalStack * ALevelController::spawnACoalStack(FString id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint) {
+ACoalStack * ALevelController::spawnACoalStack(Stockpile::Id id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint) {
 	UWorld* world = GetWorld();
 	if (world) {
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		ACoalStack *actor = world->SpawnActor<ACoalStack>(blueprint, position, rotator, spawnParams);
-		//UE_LOG(LogTemp, Warning, TEXT("%s"), *id);
+		// UE_LOG(LogTemp, Warning, TEXT("%s"), *id);
 		actor->id = id;
 		actor->setWidth(width);
 		coalStacks.Add(actor);
@@ -569,7 +584,7 @@ AShip* ALevelController::getOrSpawnActor(const Vessel::Id& id) {
 ACoalStack* ALevelController::getOrSpawnActor(const Stockpile::Id& id) {
 	if (id.terminal == TerminalId::NCT) {
 		// NOTE actors are being spawned to 0,0,0 rather then being spawned and then made invisible
-		return spawnACoalStack(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), FVector(0, 0, 0), NCT_pads_start[0]->GetActorRotation(), 0, coal_stack_blueprint);
+		return spawnACoalStack(id, FVector(0, 0, 0), NCT_pads_start[0]->GetActorRotation(), 0, coal_stack_blueprint);
 	}
 	return nullptr;
 }
@@ -613,21 +628,13 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 
 		// If the SR is Stacking, set it's colour and rotate it over the appropriate pile
 		stackCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer));
-
-		if (!previousState.stockpileID.name.empty()) {
-			FString stockpileId = UTF8_TO_TCHAR(previousState.stockpileID.nameForBinaryFile().c_str()); // The string id of the stockpile being worked on
-			actorPointer->rotateMastToCoalStack(getCoalStackWithId(coalStacks, stockpileId)); // The SR needs to point at this coalStack
-		}
+		actorPointer->rotateMastToCoalStack(getCoalStackWithId(previousState.stockpileID)); // The SR needs to point at this coalStack
 		break;
 	case StackerReclaimerStateType::WorkingReclaim: 
 
 		// If the SR is Reclaiming, set it's colour and rotate it over the appropriate pile
 		reclaimCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer),0);
-
-		if (!previousState.stockpileID.name.empty()) {
-			FString stockpileId = UTF8_TO_TCHAR(previousState.stockpileID.nameForBinaryFile().c_str()); // The string id of the stockpile being worked on
-			actorPointer->rotateMastToCoalStack(getCoalStackWithId(coalStacks, stockpileId)); // The SR needs to point at this coalStack
-		}
+		actorPointer->rotateMastToCoalStack(getCoalStackWithId(previousState.stockpileID));
 		break;
 	default:
 		// TODO put both these functions somewhere more sensible where they won't get called every tick.
@@ -648,6 +655,11 @@ int ALevelController::getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> arra
 		}
 	}
 	return 0;
+}
+
+ACoalStack * ALevelController::getCoalStackWithId(Stockpile::Id id)
+{
+	return std::get<DataMap<Stockpile>>(data).at(id).actorPointer;
 }
 
 void ALevelController::animateEntity(const SimulationData<Vessel>& data, float interpolationScale) {
