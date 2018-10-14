@@ -709,7 +709,7 @@ void ALevelController::animateEntity(const SimulationData<Vessel>& data, float i
 			berthVector.Normalize();
 			data.actorPointer->SetActorRotation(NCT_berth_start->GetActorRotation());
 			data.actorPointer->SetActorLocation(berthStart - 100 + berthVector * unrealBerthSize * positionScale);
-			data.actorPointer->SetActorScale3D(FVector (0.9f, 0.9f, 0.9f));
+			data.actorPointer->SetActorScale3D(FVector (0.7f, 0.7f, 0.7f));
 
 			break;
 		default:
