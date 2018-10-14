@@ -129,35 +129,9 @@ bool ALevelController::loadXMLData(const  FString& srcPath) {
 		auto& states = stateResultPair.first;
 		forEachInTuple(states, addToSimFunctor);
 		findSimTimeBoundsFunctor();
-
-		////get some debug outputs for demonstrating issues with train data
-		//auto& trainEntities = std::get<DataMap<TrainMovement>>(this->data);
-		//for (auto& eachEntity : trainEntities) {
-		//	auto targetPath = "C:/Users/marcos/Documents/tmp/" + eachEntity.first.nameForBinaryFile() + ".txt";
-		//	std::ofstream file(targetPath);
-		//	for (auto& eachState : eachEntity.second.states) {
-
-		//		file << "time: " << eachState.time << "; track: " << eachState.trackID << "; type: ";
-		//		switch (eachState.type) {
-		//		case TrainMovementStateType::EnteringTrack:
-		//			file << "EnteringTrack";
-		//			break;
-		//		case TrainMovementStateType::Idle:
-		//			file << "Idle";
-		//			break;
-		//		case TrainMovementStateType::LeavingTrack:
-		//			file << "LeavingTrack";
-		//			break;
-		//		case TrainMovementStateType::Invalid:
-		//			file << "Invalid";
-		//			break;
-		//		}
-		//		file << ";\n";
- 	//		}
-		//	bool test = file.good();
-		//	file.flush();
-		//	file.close();
-		//}
+		for (auto& eachVessel : std::get<DataMap<Vessel>>(data)) {
+			eachVessel.second.determineArrivalLocation(data);
+		}
 	}
 
 	return stateResultPair.second;
@@ -584,7 +558,7 @@ AShip* ALevelController::getOrSpawnActor(const Vessel::Id& id) {
 	//if (id.terminal == TerminalId::NCT) {
 		//for (int i = 0; i < 4; ++i) {
 		//	if (id.name == nct_names[i]) {
-				return spawnAShip(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), NCT_berths[0]->GetActorLocation(), NCT_berths[0]->GetActorRotation(), ship_blueprint);
+				return spawnAShip(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), FVector(), FRotator(), ship_blueprint);
 		//	}
 		//}
 	//}
@@ -664,25 +638,47 @@ int ALevelController::getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> arra
 	return 0;
 }
 
+void ALevelController::animateEntity(const SimulationData<Vessel>& data, float interpolationScale) {
+	auto& previousState = *data.stateWindow.first;
+	auto& nextState = *data.stateWindow.second;
 
-void ALevelController::animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale) {
-
-	Vessel::Id targetId = previousState.id;
-
-	if (previousState.type != nextState.type) {
-		switch (previousState.type)
-		{
-		case VesselStateType::Berthed:
-			actorPointer->berthed();
-			break;
-		case VesselStateType::Idle:
-		case VesselStateType::Invalid:
-			actorPointer->atSea();
+	
+	FVector berthStart;
+	FVector berthEnd;
+	FVector berthVector;
+	double berthLength;
+	double positionScale;
+	double unrealBerthSize;
+	switch (previousState.type) {
+	case VesselStateType::Berthed:
+		
+		switch (data.terminal) {
+		case TerminalId::NCT:
+			berthStart = NCT_berth_start->GetActorLocation();
+			berthEnd = NCT_berth_end->GetActorLocation();//do stuff
+			data.actorPointer->berthed();
+			berthVector = berthEnd - berthStart;
+			//TODO, assign the correct track length, not just the 0'th one
+			berthLength = getShipLoaderTrackLength(data.terminal);
+			positionScale = data.berthPosition / berthLength;
+			unrealBerthSize = berthVector.Size();
+			berthVector.Normalize();
+			data.actorPointer->SetActorRotation(NCT_berth_start->GetActorRotation());
+			data.actorPointer->SetActorLocation(berthStart + berthVector * unrealBerthSize * positionScale);
 			break;
 		default:
-
-			break;
+			return; //don't bother showing
 		}
+		
+		
+		break;
+	case VesselStateType::Idle:
+	case VesselStateType::Invalid:
+		data.actorPointer->atSea();
+		break;
+	default:
+
+		break;
 	}
 
 }
@@ -731,7 +727,7 @@ void ALevelController::animateEntity(const SimulationData<Stockpile>& data, floa
 	const StockpileState& nextState = (*data.stateWindow.second);
 
 	Stockpile::Id targetId = nextState.id;
-
+	
 	//get Padinfo
 	int padIdentifier = -1;
 	if (targetId.terminal == TerminalId::NCT) {
@@ -902,6 +898,7 @@ void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, 
 		actorPointer->SetActorTransform(makeTransform);
 	} else {
 		//do whatever to hide the train
+
 		actorPointer->SetActorHiddenInGame(true);
 		//actorPointer->SetActorEnableCollision(false);
 
