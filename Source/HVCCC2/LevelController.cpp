@@ -497,15 +497,28 @@ TArray<FString> ALevelController::getStateInfo(ACoalStack* actor) {
 	const StockpileState& previous = *simData.stateWindow.first;
 	const StockpileState& next = *simData.stateWindow.second;
 
-	const double maxAmount = simData.maximumAmount;
+	const FString id = UTF8_TO_TCHAR(actor->getID().name.c_str());
+	const double coverage = (previous.amount/simData.maximumAmount) * 100;
 	const double current = previous.amount;
 	const double change = next.amount - previous.amount;
 	
 	TArray<FString> stateInfo;
-
+	
+	// If you change the order of the TArray you will need to change the logic in the FlyingGameMode Blueprint
+	stateInfo.Add(id);
 	stateInfo.Add(FString::SanitizeFloat(current));
-	stateInfo.Add(FString::SanitizeFloat(maxAmount));
-	stateInfo.Add(FString::SanitizeFloat(change));
+	stateInfo.Add(FString::SanitizeFloat(coverage) + "%");
+	
+	if (change != 0) {
+		if (change > 0)
+			stateInfo.Add("+" + FString::SanitizeFloat(change));
+		else
+			stateInfo.Add(FString::SanitizeFloat(change));
+	} 
+	else
+		stateInfo.Add("");
+	
+	stateInfo.Add(id);
 
 	return stateInfo;
 }
