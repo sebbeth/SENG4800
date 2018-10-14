@@ -487,16 +487,24 @@ AShip * ALevelController::spawnAShip(FString id, FVector position, FRotator rota
 	}
 	return NULL;
 }
+
 //Returns the amount of the stockpile for use in the object selection box
-FString ALevelController::getStateInfo(ACoalStack* actor) {
+TArray<FString> ALevelController::getStateInfo(ACoalStack* actor) {
 	const SimulationData<Stockpile>& simData = std::get<DataMap<Stockpile>>(this->data).at(actor->getID());
 	const StockpileState& previous = *simData.stateWindow.first;
 	const StockpileState& next = *simData.stateWindow.second;
 
-	const FString stateInfo = FString::SanitizeFloat(previous.amount);
+	const double maxAmount = simData.maximumAmount;
+	const double current = previous.amount;
+	const double change = next.amount - previous.amount;
+	
+	TArray<FString> stateInfo;
+
+	stateInfo.Add(FString::SanitizeFloat(current));
+	stateInfo.Add(FString::SanitizeFloat(maxAmount));
+	stateInfo.Add(FString::SanitizeFloat(change));
 
 	return stateInfo;
-	// make a new fstring from whatever contents of previous and/or next
 }
 
 ACoalStack * ALevelController::spawnACoalStack(Stockpile::Id id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint) {

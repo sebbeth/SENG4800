@@ -328,7 +328,7 @@ public:
 	
 	// Selection Box
 	UFUNCTION(BlueprintCallable, Category = "data")
-	FString getStateInfo(ACoalStack* actor);
+	TArray<FString> getStateInfo(ACoalStack* actor);
 
 
 	//time controls
