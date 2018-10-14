@@ -1,0 +1,9 @@
+<events>
+    <StkOnMove stackerID="SR01" time="9.776373" pos="50.00"/>
+	<StkOnStopMove stackerID="SR01" time="9.799150" pos="55.00"/>
+	<StkOpStart stackerID="SR01" time="9.799150" pos="55.00" stockpileID="NCT2.1"/>
+    <StkStart stackerID="SR01" time="9.803494" pos="55.00" stockpileID="NCT2.1"/>
+    <StkComp stackerID="SR01" time="10.062317" pos="55.00" stockpileID="NCT2.1" amount="2200.00"/>
+	
+	<StkWrapUp stackerID="SR01" time="101.692166" pos="50.00"/>
+</events>
