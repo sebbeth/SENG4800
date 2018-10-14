@@ -1,0 +1,21 @@
+<events>
+	<SpStockpileCreated stockpileID="NCT2.1" vesselID="2" time="0.0" padID="PadA" pos="5.000000" length="100.000000"/>
+    <SpStackStart stockpileID="NCT2.1" vesselID="2" time="9.803494" padID="PadA" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT2.1" vesselID="2" time="10.062317" padID="PadA" machineID="SR02" amount="2200.000000"/>
+    <SpStackStart stockpileID="NCT2.1" vesselID="2" time="12.345959" padID="PadA" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT2.1" vesselID="2" time="12.604783" padID="PadA" machineID="SR02" amount="2200.000000"/>
+    <SpStackStart stockpileID="NCT2.1" vesselID="2" time="22.462855" padID="PadA" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT2.1" vesselID="2" time="23.474619" padID="PadA" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT2.1" vesselID="2" time="25.787764" padID="PadA" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT2.1" vesselID="2" time="26.799529" padID="PadA" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT2.1" vesselID="2" time="29.149248" padID="PadA" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT2.1" vesselID="2" time="30.161013" padID="PadA" machineID="SR02" amount="8600.000000"/>
+    <SpStackStart stockpileID="NCT2.1" vesselID="2" time="44.702700" padID="PadA" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT2.1" vesselID="2" time="44.961523" padID="PadA" machineID="SR02" amount="2200.000000"/>
+    <SpStackStart stockpileID="NCT2.1" vesselID="2" time="47.596907" padID="PadA" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT2.1" vesselID="2" time="47.855730" padID="PadA" machineID="SR02" amount="2200.000000"/>
+    <SpStackStart stockpileID="NCT2.1" vesselID="2" time="50.491114" padID="PadA" machineID="SR02"/>
+    <SpStackComp stockpileID="NCT2.1" vesselID="2" time="50.749937" padID="PadA" machineID="SR02" amount="2200.000000"/>
+    <SpStackStart stockpileID="NCT2.1" vesselID="2" time="53.385320" padID="PadA" machineID="SR02"/>
+    <SpStockpileBuilt stockpileID="NCT2.1" vesselID="2" time="83.675689" padID="PadA"/>
+</events>
