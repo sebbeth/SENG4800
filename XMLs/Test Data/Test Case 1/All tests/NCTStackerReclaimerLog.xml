@@ -63,12 +63,7 @@
     <RecComp reclaimerID="SR01" 	time="95.692166" pos="55.00" stockpileID="NCT2.1" amount="36800.00"/>
     <RecOpComp reclaimerID="SR01" 	time="95.692166" pos="55.00" stockpileID="NCT2.1" amount="36800.00"/>
 	
-	<StkOnMove stackerID="SR01" 	time="98.342501" pos="555.00"/>
-	<StkOnStopMove stackerID="SR01" time="98.442501" pos="165.00"/>
-	<RecOpStart reclaimerID="SR01" 	time="98.542501" pos="165.00" stockpileID="NCT2.2"/>
-    <RecStart reclaimerID="SR01" 	time="98.542501" pos="165.00" stockpileID="NCT2.2"/>
-    <RecComp reclaimerID="SR01" 	time="100.692166" pos="165.00" stockpileID="NCT2.2" amount="22000.00"/>
-    <RecOpComp reclaimerID="SR01" 	time="100.692166" pos="165.00" stockpileID="NCT2.2" amount="22000.00"/>
+	
 	
 	<StkWrapUp stackerID="SR01" time="101.692166" pos="50.00"/>
 	
