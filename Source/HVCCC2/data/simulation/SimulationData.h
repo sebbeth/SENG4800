@@ -33,6 +33,16 @@ public:
 	SimulationData(const std::vector<typename Entity::AssociatedState>& states, Actor* actorPointer, bool isBeingRendered);
 };
 
+template<typename Entity>
+using DataMap = std::map<
+	typename Entity::Id,
+	SimulationData<Entity>
+>;
+
+template<typename... Entities>
+using DataMapTuple = std::tuple<DataMap<Entities>...>;
+
 template<typename _Entity>
 SimulationData<_Entity>::SimulationData(const std::vector<typename Entity::AssociatedState>& states, Actor* actorPointer, bool isBeingRendered) : states(states), stateWindow(this->states.begin(), this->states.begin()), actorPointer(actorPointer), isBeingRendered(isBeingRendered) {
 }
+

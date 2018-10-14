@@ -10,6 +10,7 @@
 #include "data/extraction/implementedEntities.h"
 #include "data/simulation/SimulationData.h"
 #include "data/simulation/StockpileData.h"
+#include "data/simulation/VesselData.h"
 #include "data/extraction/TerminalId.h"
 #include "data/extraction/TrainMovement/TrainMovement.h"
 #include "StackerReclaimer.h"
@@ -22,15 +23,6 @@
 
 
 #include "LevelController.generated.h"
-
-template<typename Entity>
-using DataMap = std::map<
-	typename Entity::Id,
-	SimulationData<Entity>
->;
-
-template<typename... Entities>
-using DataMapTuple = std::tuple<DataMap<Entities>...>;
 
 class ALevelController;
 
@@ -250,9 +242,10 @@ protected:
 		TArray<AActor*> NCT_loader_rails_start;
 	UPROPERTY(EditAnywhere)
 		TArray<AActor*> NCT_loader_rails_end;
-	// Ship berth position markers
 	UPROPERTY(EditAnywhere)
-		TArray<AActor*> NCT_berths;
+		AActor* NCT_berth_start;
+	UPROPERTY(EditAnywhere)
+		AActor* NCT_berth_end;
 	//Coal Pad position markers
 	UPROPERTY(EditAnywhere)
 		TArray<AActor*> NCT_pads_start;
@@ -392,7 +385,7 @@ private:
 	void animateEntity(Actor* actorPointer, const typename State& previousState, const typename State& nextState, float interpolationScale);
 	
 	void animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale);
-	void animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale);
+	void animateEntity(const SimulationData<Vessel>& data, float interpolationScale);
 	//void animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale);
 	void animateEntity(const SimulationData<Stockpile>& data, float interpolationScale);
 	

@@ -129,35 +129,9 @@ bool ALevelController::loadXMLData(const  FString& srcPath) {
 		auto& states = stateResultPair.first;
 		forEachInTuple(states, addToSimFunctor);
 		findSimTimeBoundsFunctor();
-
-		////get some debug outputs for demonstrating issues with train data
-		//auto& trainEntities = std::get<DataMap<TrainMovement>>(this->data);
-		//for (auto& eachEntity : trainEntities) {
-		//	auto targetPath = "C:/Users/marcos/Documents/tmp/" + eachEntity.first.nameForBinaryFile() + ".txt";
-		//	std::ofstream file(targetPath);
-		//	for (auto& eachState : eachEntity.second.states) {
-
-		//		file << "time: " << eachState.time << "; track: " << eachState.trackID << "; type: ";
-		//		switch (eachState.type) {
-		//		case TrainMovementStateType::EnteringTrack:
-		//			file << "EnteringTrack";
-		//			break;
-		//		case TrainMovementStateType::Idle:
-		//			file << "Idle";
-		//			break;
-		//		case TrainMovementStateType::LeavingTrack:
-		//			file << "LeavingTrack";
-		//			break;
-		//		case TrainMovementStateType::Invalid:
-		//			file << "Invalid";
-		//			break;
-		//		}
-		//		file << ";\n";
- 	//		}
-		//	bool test = file.good();
-		//	file.flush();
-		//	file.close();
-		//}
+		for (auto& eachVessel : std::get<DataMap<Vessel>>(data)) {
+			eachVessel.second.determineArrivalLocation(data);
+		}
 	}
 
 	return stateResultPair.second;
@@ -664,71 +638,43 @@ int ALevelController::getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> arra
 	return 0;
 }
 
-
-void ALevelController::animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale) {
-	auto& theMap = std::get<DataMap<Shiploader>>(data);
-	
-	auto targetIterator = theMap.begin();
-	/*
-	Shiploader::Id targetId;
-	for (int i = 0; i < 2; ++i) 
-	{
-		targetId.name = nct_names[i];
-	}
-	
-	
-	
-	auto targetIterator = theMap.find(targetId);
-	*/
+void ALevelController::animateEntity(const SimulationData<Vessel>& data, float interpolationScale) {
+	auto& previousState = *data.stateWindow.first;
+	auto& nextState = *data.stateWindow.second;
 
 	
-	for (; targetIterator != theMap.end(); ++targetIterator)
-	{
-		auto& eachState = *targetIterator;
 
-		if (eachState.second.stateWindow.first->vesselID == previousState.id)
-		{
-			//auto& eachState = *targetIterator;
-			if (eachState.first.terminal == TerminalId::NCT)
-			{
-				if (eachState.first.name == "SL01")
-				{//pos 0 on NCT_berths
-
-					auto makeTransform = FTransform(NCT_berths[0]->GetActorRotation(), NCT_berths[0]->GetActorLocation(), FVector(1.0f, 1.0f, 1.0f));
-					actorPointer->SetActorTransform(makeTransform);
-				}
-				else if (eachState.first.name == "SL02")
-				{// pos 1 on NCT_berths 
-					auto makeTransform = FTransform(NCT_berths[1]->GetActorRotation(), NCT_berths[1]->GetActorLocation(), FVector(1.0f, 1.0f, 1.0f));
-					actorPointer->SetActorTransform(makeTransform);
-				}
-				//update actor pos
-
-
-			}
-	
-			break;
-		}
-
-	
-	}
-	
-
-
-	if (previousState.type != nextState.type) {
-		switch (previousState.type)
-		{
-		case VesselStateType::Berthed:
-			actorPointer->berthed();
-			break;
-		case VesselStateType::Idle:
-		case VesselStateType::Invalid:
-			actorPointer->atSea();
+	switch (previousState.type) {
+	case VesselStateType::Berthed:
+		FVector berthStart;
+		FVector berthEnd;
+		switch (data.terminal) {
+		case TerminalId::NCT:
+			berthStart = NCT_berth_start->GetActorLocation();
+			berthEnd = NCT_berth_end->GetActorLocation();
 			break;
 		default:
-
-			break;
+			return; //don't bother showing
 		}
+		
+		//do stuff
+		data.actorPointer->berthed();
+		FVector berthVector = berthStart - berthEnd;
+		//TODO, assign the correct track length, not just the 0'th one
+		double berthLength = getShipLoaderTrackLength(data.terminal);
+		double positionScale = data.berthPosition / berthLength;
+		double unrealBerthSize = berthVector.Size();
+		berthVector.Normalize();
+		data.actorPointer->SetActorRotation(NCT_berth_start->GetActorRotation());
+		data.actorPointer->SetActorLocation(berthStart + berthVector * unrealBerthSize * positionScale);
+		break;
+	case VesselStateType::Idle:
+	case VesselStateType::Invalid:
+		data.actorPointer->atSea();
+		break;
+	default:
+
+		break;
 	}
 
 }
