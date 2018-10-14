@@ -4,7 +4,9 @@
 #include <string>
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "data/extraction/Stockpile/Stockpile.h"
 #include "CoalStack.generated.h"
+
 
 UCLASS()
 class HVCCC2_API ACoalStack : public AActor
@@ -28,7 +30,8 @@ public:
 	void setQuantity(float length);
 	void setWidth(float width);
 	void setPosition(float position, float pileLength, float padLength, FVector padStart, FVector padEnd);
+	Stockpile::Id getID();
 
-	FString id;
+	Stockpile::Id id;
 
 };

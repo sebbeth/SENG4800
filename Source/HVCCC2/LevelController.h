@@ -325,6 +325,11 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "data")
 	TArray<FString> getEventMessages();
+	
+	// Selection Box
+	UFUNCTION(BlueprintCallable, Category = "data")
+	FString getStateInfo(ACoalStack* actor);
+
 
 	//time controls
 	UFUNCTION(BlueprintCallable, Category = "time")
@@ -356,7 +361,7 @@ private:
 	AShipLoader * spawnAShipLoader(FString id, FVector railStart, FVector railEnd, TSubclassOf<class AShipLoader> blueprint);
 	AShip * spawnAShip(FString id, FVector position, FRotator rotator, TSubclassOf<class AShip> blueprint);
 	AConveyorBelt * spawnAConveyorBelt(FString id, FVector position, FRotator rotator, TSubclassOf<class AConveyorBelt> blueprint);
-	ACoalStack * spawnACoalStack(FString id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint);
+	ACoalStack * spawnACoalStack(Stockpile::Id id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint);
 	ATrain * spawnATrain(FString id, FVector position, TSubclassOf<class ATrain> blueprint);
 
 	ATrain * spawnATrain(FString id, FVector position, FRotator rotator,TSubclassOf<class ATrain> blueprint);

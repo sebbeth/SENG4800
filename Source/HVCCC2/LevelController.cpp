@@ -487,18 +487,25 @@ AShip * ALevelController::spawnAShip(FString id, FVector position, FRotator rota
 	}
 	return NULL;
 }
+//Returns the amount of the stockpile for use in the object selection box
+FString ALevelController::getStateInfo(ACoalStack* actor) {
+	const SimulationData<Stockpile>& simData = std::get<DataMap<Stockpile>>(this->data).at(actor->getID());
+	const StockpileState& previous = *simData.stateWindow.first;
+	const StockpileState& next = *simData.stateWindow.second;
 
+	const FString stateInfo = FString::SanitizeFloat(previous.amount);
 
+	return stateInfo;
+	// make a new fstring from whatever contents of previous and/or next
+}
 
-
-
-ACoalStack * ALevelController::spawnACoalStack(FString id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint) {
+ACoalStack * ALevelController::spawnACoalStack(Stockpile::Id id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint) {
 	UWorld* world = GetWorld();
 	if (world) {
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		ACoalStack *actor = world->SpawnActor<ACoalStack>(blueprint, position, rotator, spawnParams);
-		UE_LOG(LogTemp, Warning, TEXT("%s"), *id);
+		// UE_LOG(LogTemp, Warning, TEXT("%s"), *id);
 		actor->id = id;
 		actor->setWidth(width);
 		coalStacks.Add(actor);
@@ -566,7 +573,7 @@ AShip* ALevelController::getOrSpawnActor(const Vessel::Id& id) {
 ACoalStack* ALevelController::getOrSpawnActor(const Stockpile::Id& id) {
 	if (id.terminal == TerminalId::NCT) {
 		// NOTE actors are being spawned to 0,0,0 rather then being spawned and then made invisible
-		return spawnACoalStack(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), FVector(0, 0, 0), NCT_pads_start[0]->GetActorRotation(), 0, coal_stack_blueprint);
+		return spawnACoalStack(id, FVector(0, 0, 0), NCT_pads_start[0]->GetActorRotation(), 0, coal_stack_blueprint);
 	}
 	return nullptr;
 }
