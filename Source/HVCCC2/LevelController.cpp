@@ -660,11 +660,11 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 	float maxPosition = (float)getTrackLength(targetId.terminal, actorPointer->trackId);
 	//calculate the absolute position of the machine (along it's rail) by interpolating the previous and next positions
 	//this idea came from vector mathmemathics, with 1d vectors (efficively scalars) is this case; the formula is: previous+(next - previous)*scale;
-	float positionInterpolated = previousState.position + (nextState.position - previousState.position)*interpolationScale;
+	float positionInterpolated = previousState.position + (nextState.position - previousState.position)*interpolationScale - 50;
 	//convert the absolute position to a scale between 0.0 and 1.0 which can then be used with the vectors placed manually in the editor.
 	float positionScale = (positionInterpolated - minPosition) / (maxPosition - minPosition);
 	//update the actor position
-	actorPointer->setGeometry(positionScale);
+	actorPointer->setPosition(positionScale);
 	//TODO: ADD TURNING CONSIDERATIONS
 		
 	switch (previousState.type)
@@ -848,7 +848,7 @@ void ALevelController::animateEntity(AShipLoader* actorPointer, const Shiploader
 	//convert the absolute position to a scale between 0.0 and 1.0 which can then be used with the vectors placed manually in the editor.
 	float positionScale = (positionInterpolated - minPosition) / (maxPosition - minPosition);
 	//update the actor position
-	actorPointer->setGeometry(positionScale);
+	actorPointer->setPosition(positionScale);
 	switch (previousState.type)
 	{
 	case ShiploaderStateType::Working:
