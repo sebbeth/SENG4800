@@ -666,8 +666,54 @@ int ALevelController::getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> arra
 
 
 void ALevelController::animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale) {
+	auto& theMap = std::get<DataMap<Shiploader>>(data);
+	
+	auto targetIterator = theMap.begin();
+	/*
+	Shiploader::Id targetId;
+	for (int i = 0; i < 2; ++i) 
+	{
+		targetId.name = nct_names[i];
+	}
+	
+	
+	
+	auto targetIterator = theMap.find(targetId);
+	*/
 
-	Vessel::Id targetId = previousState.id;
+	
+	for (; targetIterator != theMap.end(); ++targetIterator)
+	{
+		auto& eachState = *targetIterator;
+
+		if (eachState.second.stateWindow.first->vesselID == previousState.id)
+		{
+			//auto& eachState = *targetIterator;
+			if (eachState.first.terminal == TerminalId::NCT)
+			{
+				if (eachState.first.name == "SL01")
+				{//pos 0 on NCT_berths
+
+					auto makeTransform = FTransform(NCT_berths[0]->GetActorRotation(), NCT_berths[0]->GetActorLocation(), FVector(1.0f, 1.0f, 1.0f));
+					actorPointer->SetActorTransform(makeTransform);
+				}
+				else if (eachState.first.name == "SL02")
+				{// pos 1 on NCT_berths 
+					auto makeTransform = FTransform(NCT_berths[1]->GetActorRotation(), NCT_berths[1]->GetActorLocation(), FVector(1.0f, 1.0f, 1.0f));
+					actorPointer->SetActorTransform(makeTransform);
+				}
+				//update actor pos
+
+
+			}
+	
+			break;
+		}
+
+	
+	}
+	
+
 
 	if (previousState.type != nextState.type) {
 		switch (previousState.type)
@@ -731,7 +777,7 @@ void ALevelController::animateEntity(const SimulationData<Stockpile>& data, floa
 	const StockpileState& nextState = (*data.stateWindow.second);
 
 	Stockpile::Id targetId = nextState.id;
-
+	
 	//get Padinfo
 	int padIdentifier = -1;
 	if (targetId.terminal == TerminalId::NCT) {
@@ -902,6 +948,7 @@ void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, 
 		actorPointer->SetActorTransform(makeTransform);
 	} else {
 		//do whatever to hide the train
+
 		actorPointer->SetActorHiddenInGame(true);
 		//actorPointer->SetActorEnableCollision(false);
 

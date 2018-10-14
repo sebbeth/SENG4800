@@ -186,7 +186,7 @@ class HVCCC2_API ALevelController : public AActor
 	bool isPlaying;
 
 	DataMapTuple<AllEntities> data;
-
+	
 	//garbage collection point for the unreal engine actors; stored here instead of instead the main data tuple as it's the easiest way to ensure garbage collection is done safely
 	TArray<AActor*> actorPointers;
 	
@@ -395,6 +395,7 @@ private:
 	void animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale);
 	//void animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale);
 	void animateEntity(const SimulationData<Stockpile>& data, float interpolationScale);
+	
 	void animateEntity(AShipLoader* actorPointer, const ShiploaderState& previousState, const ShiploaderState& nextState, float interpolationScale);
 
 	//void animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale);
