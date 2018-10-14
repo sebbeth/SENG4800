@@ -35,6 +35,7 @@ public:
 };
 
 #include "../../ShipLoader.h"
+#include "../extraction/ShipLoader/Shiploader.h"
 
 template<>
 struct u_actor_type<Shiploader> {
