@@ -9,11 +9,10 @@
 		<TrainHeadLeaveTrack cycleID="6" direction="UP" sectionID="" speed="0.2" 	time="9" 		trackID="trk_NCIG_LoopRd1" trainID="train1"/>
 		<TrainEnterTrack cycleID="7" direction="UP" sectionID="" speed="0.2" 		time="9.00005" 	trackID="trk_NCIG_DR1" trainID="train1"/>
 		<TrainHeadLeaveTrack cycleID="8" direction="UP" sectionID="" speed="0.2" 	time="12" 		trackID="trk_NCIG_DR1" trainID="train1"/>
-		
 		<TrainEnterTrack cycleID="1" direction="UP" sectionID="" speed="0.2" 		time="5.5" 		trackID="trk_NCIG_AR2" trainID="train0"/>
 		<TrainHeadLeaveTrack cycleID="2" direction="UP" sectionID="" speed="0.2" 	time="6.6" 		trackID="trk_NCIG_AR2" trainID="train0"/>
 		<TrainEnterTrack cycleID="3" direction="UP" sectionID="" speed="0.2" 		time="6.60005" 	trackID="trk_NCIG_DS2" trainID="train0"/>
-		<TrainHeadLeaveTrack cycleID="4" direction="UP" sectionID="" speed="0.2" 	time="7.5" 		trackID="trk_NCIG_DS2" trainID="train0/>
+		<TrainHeadLeaveTrack cycleID="4" direction="UP" sectionID="" speed="0.2" 	time="7.5" 		trackID="trk_NCIG_DS2" trainID="train0"/>
 		<TrainEnterTrack cycleID="5" direction="UP" sectionID="" speed="0.2" 		time="7.50005" 	trackID="trk_NCIG_LoopRd2" trainID="train0"/>
 		<TrainHeadLeaveTrack cycleID="6" direction="UP" sectionID="" speed="0.2" 	time="9.5" 		trackID="trk_NCIG_LoopRd2" trainID="train0"/>
 		<TrainEnterTrack cycleID="7" direction="UP" sectionID="" speed="0.2" 		time="9.50005" 	trackID="trk_NCIG_DR2" trainID="train0"/>

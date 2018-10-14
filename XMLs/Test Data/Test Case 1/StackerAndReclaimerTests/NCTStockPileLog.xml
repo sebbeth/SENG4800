@@ -1,0 +1,5 @@
+	<events>
+		<SpStockpileCreated stockpileID="NCT2.1" vesselID="2" time="0.0" padID="PadA" pos="5.000000" length="100.000000"/>
+		<SpStockpileCreated stockpileID="NCT2.2" vesselID="3" 	time="0.0" padID="PadA" pos="105.000000" length="100.000000"/>
+
+	</events>

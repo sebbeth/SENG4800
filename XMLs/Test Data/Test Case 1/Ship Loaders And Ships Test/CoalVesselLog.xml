@@ -1,0 +1,9 @@
+<events>
+    <VesselYardSpaceAllocated vesselID="1" time="5.000000"/>
+	<VesselArriveTerminal vesselID="1" time="89.442501" meterMark="5.000000"/>
+	<VesselDepTerminal vesselID="1" time="96.792166" tugs="1"/>
+	
+	<VesselYardSpaceAllocated vesselID="1" time="5.000000"/>
+	<VesselArriveTerminal vesselID="1" time="98.242501" meterMark="5.000000"/>
+	<VesselDepTerminal vesselID="1" time="100.692166" tugs="1"/>
+</events>

@@ -31,7 +31,7 @@ void ACoalStack::setGeometry(float position, float proportionFilled, float pileL
 		double unrealStartPoint = (position*padLengthScale); // The position along the pad of the start end of the pile in unreal
 		double fullSize = pileLength * padLengthScale;
 		double currentSize = (proportionFilled*fullSize); //The size of the pile in unreal units
-		double unrealCenterPosition = unrealStartPoint + (currentSize/2);
+		double unrealCenterPosition = unrealStartPoint + (fullSize /2);
 		SetActorLocation(padStart + directionVector * unrealCenterPosition);
 		SetActorHiddenInGame(false);
 		SetActorScale3D(FVector(GetActorScale3D().X, currentSize / rawSize.Y, 1.0f));

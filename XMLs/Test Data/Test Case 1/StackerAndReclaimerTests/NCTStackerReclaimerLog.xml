@@ -1,0 +1,77 @@
+<events>
+    <StkOnMove stackerID="SR01" 	time="9.776373" pos="50.00"/>
+	<StkOnStopMove stackerID="SR01" time="9.799150" pos="55.00"/>
+	<StkOpStart stackerID="SR01" 	time="9.799150" pos="55.00" stockpileID="NCT2.1"/>
+    <StkStart stackerID="SR01" 		time="9.803494" pos="55.00" stockpileID="NCT2.1"/>
+    <StkComp stackerID="SR01" 		time="10.062317" pos="55.00" stockpileID="NCT2.1" amount="2200.00"/>
+	<StkOpStart stackerID="SR01" 	time="12.345959" pos="55.00" stockpileID="NCT2.1"/>
+    <StkStart stackerID="SR01" 		time="12.345959" pos="55.00" stockpileID="NCT2.1"/>
+    <StkComp stackerID="SR01" 		time="12.604783" pos="55.00" stockpileID="NCT2.1" amount="2200.00"/>
+	<StkOpStart stackerID="SR01" 	time="22.462855" pos="55.00" stockpileID="NCT2.1"/>
+    <StkStart stackerID="SR01" 		time="22.462855" pos="55.00" stockpileID="NCT2.1"/>
+    <StkComp stackerID="SR01" 		time="23.474619" pos="55.00" stockpileID="NCT2.1" amount="8600.00"/>
+	<StkOpStart stackerID="SR01" 	time="25.787764" pos="55.00" stockpileID="NCT2.1"/>
+    <StkStart stackerID="SR01" 		time="25.787764" pos="55.00" stockpileID="NCT2.1"/>
+    <StkComp stackerID="SR01" 		time="26.799529" pos="55.00" stockpileID="NCT2.1" amount="8600.00"/>
+	<StkOpStart stackerID="SR01" 	time="29.149248" pos="55.00" stockpileID="NCT2.1"/>
+    <StkStart stackerID="SR01" 		time="29.149248" pos="55.00" stockpileID="NCT2.1"/>
+    <StkComp stackerID="SR01" 		time="30.161013" pos="55.00" stockpileID="NCT2.1" amount="8600.00"/>
+	<StkOnMove stackerID="SR01" 	time="34.71013" pos="55.00"/>
+	<StkOnStopMove stackerID="SR01" time="34.803494" pos="165.00"/>
+	<StkOpStart stackerID="SR01" 	time="35.003494" pos="165.00" stockpileID="NCT2.2"/>
+    <StkStart stackerID="SR01" 		time="35.003494" pos="165.00" stockpileID="NCT2.2"/>
+    <StkComp stackerID="SR01" 		time="35.203494" pos="165.00" stockpileID="NCT2.2" amount="2200.00"/>
+	<StkOpStart stackerID="SR01" 	time="35.303494" pos="165.00" stockpileID="NCT2.2"/>
+    <StkStart stackerID="SR01" 		time="35.303494" pos="165.00" stockpileID="NCT2.2"/>
+    <StkComp stackerID="SR01" 		time="35.503494" pos="165.00" stockpileID="NCT2.2" amount="2200.00"/>
+	<StkOpStart stackerID="SR01" 	time="35.703494" pos="165.00" stockpileID="NCT2.2"/>
+    <StkStart stackerID="SR01" 		time="35.703494" pos="165.00" stockpileID="NCT2.2"/>
+    <StkComp stackerID="SR01" 		time="35.903494" pos="165.00" stockpileID="NCT2.2" amount="8600.00"/>
+	<StkOpStart stackerID="SR01" 	time="36.003494" pos="165.00" stockpileID="NCT2.2"/>
+    <StkStart stackerID="SR01" 		time="36.003494" pos="165.00" stockpileID="NCT2.2"/>
+    <StkComp stackerID="SR01" 		time="36.203494" pos="165.00" stockpileID="NCT2.2" amount="8600.00"/>
+	<StkOpStart stackerID="SR01" 	time="36.603494" pos="165.00" stockpileID="NCT2.2"/>
+    <StkStart stackerID="SR01" 		time="36.603494" pos="165.00" stockpileID="NCT2.2"/>
+    <StkComp stackerID="SR01" 		time="36.603494" pos="165.00" stockpileID="NCT2.2" amount="8600.00"/>
+	<StkOnMove stackerID="SR01" 	time="44.502700" pos="165.00"/>
+	<StkOnStopMove stackerID="SR01" time="44.602700" pos="55.00"/>
+	<StkOpStart stackerID="SR01" 	time="44.702700" pos="55.00" stockpileID="NCT2.1"/>
+	<StkStart stackerID="SR01" 		time="44.702700" pos="55.00" stockpileID="NCT2.1"/>
+    <StkComp stackerID="SR01" 		time="44.961523" pos="55.00" stockpileID="NCT2.1" amount="2200.00"/>
+	<StkOpStart stackerID="SR01" 	time="47.596907" pos="55.00" stockpileID="NCT2.1"/>
+    <StkStart stackerID="SR01" 		time="47.596907" pos="55.00" stockpileID="NCT2.1"/>
+    <StkComp stackerID="SR01" 		time="47.855730" pos="55.00" stockpileID="NCT2.1" amount="2200.00"/>
+	<StkOpStart stackerID="SR01" 	time="50.491114" pos="55.00" stockpileID="NCT2.1"/>
+    <StkStart stackerID="SR01" 		time="50.491114" pos="55.00" stockpileID="NCT2.1"/>
+    <StkComp stackerID="SR01" 		time="50.749937" pos="55.00" stockpileID="NCT2.1" amount="2200.00"/>
+	<StkOnMove stackerID="SR01" 	time="44.502700" pos="55.00"/>
+	<StkOnStopMove stackerID="SR01" time="44.602700" pos="165.00"/>
+	<StkOpStart stackerID="SR01" 	time="83.975689" pos="165.00" stockpileID="NCT2.2"/>
+	<StkStart stackerID="SR01" 		time="83.975689" pos="165.00" stockpileID="NCT2.2"/>
+    <StkComp stackerID="SR01" 		time="84.075689" pos="165.00" stockpileID="NCT2.2" amount="2200.00"/>
+	<StkOpStart stackerID="SR01" 	time="84.775689" pos="165.00" stockpileID="NCT2.2"/>
+    <StkStart stackerID="SR01" 		time="84.775689" pos="165.00" stockpileID="NCT2.2"/>
+    <StkComp stackerID="SR01" 		time="84.875689" pos="165.00" stockpileID="NCT2.2" amount="2200.00"/>
+	<StkOpStart stackerID="SR01" 	time="85.475689" pos="165.00" stockpileID="NCT2.2"/>
+    <StkStart stackerID="SR01" 		time="85.475689" pos="165.00" stockpileID="NCT2.2"/>
+    <StkComp stackerID="SR01" 		time="85.675689" pos="165.00" stockpileID="NCT2.2" amount="2200.00"/>
+	
+	<StkOnMove stackerID="SR01" 	time="88.875689" pos="165.00"/>
+	<StkOnStopMove stackerID="SR01" time="88.975689" pos="55.00"/>
+	<RecOpStart reclaimerID="SR01" 	time="89.542501" pos="55.00" stockpileID="NCT2.1"/>
+    <RecStart reclaimerID="SR01" 	time="89.542501" pos="55.00" stockpileID="NCT2.1"/>
+    <RecComp reclaimerID="SR01" 	time="95.692166" pos="55.00" stockpileID="NCT2.1" amount="36800.00"/>
+    <RecOpComp reclaimerID="SR01" 	time="95.692166" pos="55.00" stockpileID="NCT2.1" amount="36800.00"/>
+	
+	<StkOnMove stackerID="SR01" 	time="98.342501" pos="555.00"/>
+	<StkOnStopMove stackerID="SR01" time="98.442501" pos="165.00"/>
+	<RecOpStart reclaimerID="SR01" 	time="98.542501" pos="165.00" stockpileID="NCT2.2"/>
+    <RecStart reclaimerID="SR01" 	time="98.542501" pos="165.00" stockpileID="NCT2.2"/>
+    <RecComp reclaimerID="SR01" 	time="100.692166" pos="165.00" stockpileID="NCT2.2" amount="22000.00"/>
+    <RecOpComp reclaimerID="SR01" 	time="100.692166" pos="165.00" stockpileID="NCT2.2" amount="22000.00"/>
+	
+	<StkWrapUp stackerID="SR01" time="101.692166" pos="50.00"/>
+	
+	
+	
+</events>
