@@ -670,7 +670,7 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 	switch (previousState.type)
 	{
 	case StackerReclaimerStateType::Moving:
-		actorPointer->setRotation(0.0f); // If the SR is moving, set it's arm to forward
+		//actorPointer->setRotation(0.0f); // If the SR is moving, set it's arm to forward
 		break;
 	case StackerReclaimerStateType::WorkingStack: 
 		// If the SR is Stacking, set it's colour and rotate it over the appropriate pile
@@ -679,9 +679,9 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 
 			FString stockpileId = UTF8_TO_TCHAR(previousState.stockpileID.nameForBinaryFile().c_str()); // The string id of the stockpile being worked on
 			ACoalStack* coalStack = getCoalStackWithId(coalStacks, stockpileId); // The SR needs to point at this coalStack
-			UE_LOG(LogTemp, Warning, TEXT("x location %f"), float(coalStack->GetActorLocation().X));
+		//	UE_LOG(LogTemp, Warning, TEXT("x location %f"), float(coalStack->GetActorLocation().X));
 
-			UE_LOG(LogTemp, Warning, TEXT("Cx %f Cy %f SRx %f SRy%f "), float(coalStack->GetActorLocation().X), float(coalStack->GetActorLocation().Y), float(actorPointer->GetActorLocation().X), float(actorPointer->GetActorLocation().Y));
+		//	UE_LOG(LogTemp, Warning, TEXT("Cx %f Cy %f SRx %f SRy%f "), float(coalStack->GetActorLocation().X), float(coalStack->GetActorLocation().Y), float(actorPointer->GetActorLocation().X), float(actorPointer->GetActorLocation().Y));
 			actorPointer->rotateMastToCoalStack(coalStack);
 			/*if (getCoalStackArrayIndexWithId(coalStacks, stockpileId) > getIndexOfStackerReclaimer(stackerReclaimers, actorPointer)) {
 				actorPointer->setRotation(20.0f);
@@ -695,7 +695,7 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 	case StackerReclaimerStateType::WorkingReclaim: 
 		// If the SR is Reclaiming, set it's colour and rotate it over the appropriate pile
 		reclaimCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer),0);
-		actorPointer->setRotation(90.0f);
+		//actorPointer->setRotation(90.0f);
 		break;
 	default:
 		// TODO put both these functions somewhere more sensible where they won't get called every tick.
