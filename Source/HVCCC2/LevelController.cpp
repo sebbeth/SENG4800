@@ -39,45 +39,6 @@ ALevelController::ALevelController() : addToSimFunctor(this), updateWindowsFunct
 void ALevelController::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	//spawnACoalStack("TEST", NCT_pads_start[0]->GetActorLocation(), NCT_pads_start[0]->GetActorRotation(), 100, coal_stack_blueprint);
-	//spawnACoalStack("TEST", NCT_pads_start[1]->GetActorLocation(), NCT_pads_start[1]->GetActorRotation(), 100, coal_stack_blueprint);
-	//spawnACoalStack("TEST", NCT_pads_start[2]->GetActorLocation(), NCT_pads_start[2]->GetActorRotation(), 100, coal_stack_blueprint);
-	//spawnACoalStack("TEST", NCT_pads_start[3]->GetActorLocation(), NCT_pads_start[3]->GetActorRotation(), 100, coal_stack_blueprint);
-	//spawnACoalStack("TEST", NCT_pads_start[4]->GetActorLocation(), NCT_pads_start[4]->GetActorRotation(), 100, coal_stack_blueprint);
-
-
-	//spawnAStackerReclaimer("TEST", 0, NCT_SR_rails_start[0]->GetActorLocation(), NCT_SR_rails_end[0]->GetActorLocation(), largeSR_blueprint);
-	//spawnAStackerReclaimer("TEST", 1, NCT_SR_rails_start[1]->GetActorLocation(), NCT_SR_rails_end[1]->GetActorLocation(), largeSR_blueprint);
-	//spawnAStackerReclaimer("TEST", 2, NCT_SR_rails_start[2]->GetActorLocation(), NCT_SR_rails_end[2]->GetActorLocation(), largeSR_blueprint);
-	//spawnAStackerReclaimer("TEST", 3, NCT_SR_rails_start[3]->GetActorLocation(), NCT_SR_rails_end[3]->GetActorLocation(), largeSR_blueprint);
-
-
-	//int i = 0;
-	//coalStacks[i]->setGeometry(0, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
-	//stackerReclaimers[i]->setGeometry(0);
-
-	//i++;
-	//coalStacks[i]->setGeometry(getPadLength(TerminalId::NCT, i), 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
-	//stackerReclaimers[i]->setGeometry(1.0);
-
-	//i++;
-	//coalStacks[i]->setGeometry(500, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
-	//float position = 500.0f / float(getPadLength(TerminalId::NCT, i));
-	//stackerReclaimers[i]->setGeometry(position);
-
-	//i++;
-	//coalStacks[i]->setGeometry(900, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
-	//position = 900.0f / float(getPadLength(TerminalId::NCT, i));
-
-	//stackerReclaimers[i]->setGeometry(position);
-
-	//i++;
-	//coalStacks[i]->setGeometry(700, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
-	
-
-
-
 	loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
 }
 
@@ -670,32 +631,29 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 	switch (previousState.type)
 	{
 	case StackerReclaimerStateType::Moving:
-		//actorPointer->setRotation(0.0f); // If the SR is moving, set it's arm to forward
+		 // If the SR is moving, set it's arm to forward
+		actorPointer->resetRotation(); // The SR needs to point at this coalStack
+	
 		break;
 	case StackerReclaimerStateType::WorkingStack: 
+
 		// If the SR is Stacking, set it's colour and rotate it over the appropriate pile
 		stackCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer));
+
 		if (!previousState.stockpileID.name.empty()) {
-
 			FString stockpileId = UTF8_TO_TCHAR(previousState.stockpileID.nameForBinaryFile().c_str()); // The string id of the stockpile being worked on
-			ACoalStack* coalStack = getCoalStackWithId(coalStacks, stockpileId); // The SR needs to point at this coalStack
-		//	UE_LOG(LogTemp, Warning, TEXT("x location %f"), float(coalStack->GetActorLocation().X));
-
-		//	UE_LOG(LogTemp, Warning, TEXT("Cx %f Cy %f SRx %f SRy%f "), float(coalStack->GetActorLocation().X), float(coalStack->GetActorLocation().Y), float(actorPointer->GetActorLocation().X), float(actorPointer->GetActorLocation().Y));
-			actorPointer->rotateMastToCoalStack(coalStack);
-			/*if (getCoalStackArrayIndexWithId(coalStacks, stockpileId) > getIndexOfStackerReclaimer(stackerReclaimers, actorPointer)) {
-				actorPointer->setRotation(20.0f);
-			}
-			else {
-				actorPointer->setRotation(-45.0f);
-			}*/
-
+			actorPointer->rotateMastToCoalStack(getCoalStackWithId(coalStacks, stockpileId)); // The SR needs to point at this coalStack
 		}
 		break;
 	case StackerReclaimerStateType::WorkingReclaim: 
+
 		// If the SR is Reclaiming, set it's colour and rotate it over the appropriate pile
 		reclaimCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer),0);
-		//actorPointer->setRotation(90.0f);
+
+		if (!previousState.stockpileID.name.empty()) {
+			FString stockpileId = UTF8_TO_TCHAR(previousState.stockpileID.nameForBinaryFile().c_str()); // The string id of the stockpile being worked on
+			actorPointer->rotateMastToCoalStack(getCoalStackWithId(coalStacks, stockpileId)); // The SR needs to point at this coalStack
+		}
 		break;
 	default:
 		// TODO put both these functions somewhere more sensible where they won't get called every tick.

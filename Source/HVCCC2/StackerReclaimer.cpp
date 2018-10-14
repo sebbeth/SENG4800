@@ -16,11 +16,8 @@ void AStackerReclaimer::BeginPlay()
 	Super::BeginPlay();
 	FVector endOfTrack = trackNodeB - GetActorLocation();
 
-	//float foo = (FVector::DotProduct(coal, stackerReclaimer)) / (coal.Size() * stackerReclaimer.Size());
 	float foo =  FMath::Atan2(endOfTrack.Y, endOfTrack.X);
 	float baseRotaton = 180 - FMath::RadiansToDegrees(FMath::Acos(foo));
-	UE_LOG(LogTemp, Warning, TEXT("Base %f"), float(baseRotaton));
-
 	this->setBaseRotation(baseRotaton); //124
 }
 
@@ -32,12 +29,17 @@ and position 1.0 at the end.
 */
 void AStackerReclaimer::setPosition(float position) {
 
-	
 	FVector directionVector = (trackNodeB - trackNodeA); 
 	double targetDistance = position * directionVector.Size(); // Get the distance we will be moving between the two vectors
 	directionVector.Normalize();
 	directionVector = directionVector * targetDistance; 
 	SetActorLocation(trackNodeA + directionVector);
+}
+
+
+void AStackerReclaimer::resetRotation() {
+	FRotator rotator = UKismetMathLibrary::FindLookAtRotation(this->GetActorLocation(), trackNodeB);
+	setRotation(0);
 }
 
 
@@ -58,18 +60,21 @@ void AStackerReclaimer::rotateMastToCoalStack(ACoalStack* coalStack) {
 	//float foo = FMath::Atan2(coal.X, coal.Y);
 	//float output = 180 - FMath::RadiansToDegrees(FMath::Acos(foo));
 
+	int sign = -1;
+	if (coalStack->GetActorLocation().Y > GetActorLocation().Y) {
+		sign = 1;
+	}
+
+	if (coalStack->GetActorLocation().X > GetActorLocation().X) {
+		setRotation(sign * 45);
+	} else {
+		setRotation(sign * 125);
+	}
 	
 
-	//UE_LOG(LogTemp, Warning, TEXT("Theta %f, Cx %f Cy %f Sx %f Sy %f"), float(output), float(coal.X), float(coal.Y), float(GetActorLocation().X), float(GetActorLocation().Y) );
-
-
-
-
-	FRotator PlayerRot = UKismetMathLibrary::FindLookAtRotation(this->GetActorLocation(), coalStack->GetActorLocation());
-	//PlayerRot = PlayerRot + FRotator(0, 180, 0);
-
-	//SetActorRotation(PlayerRot);
-	setRotation(PlayerRot);
+	//FRotator rotator = UKismetMathLibrary::FindLookAtRotation(this->GetActorLocation(), coalStack->GetActorLocation());
+	
+	//rotator.Add(0, -90.0f, 0);
 
 }
 

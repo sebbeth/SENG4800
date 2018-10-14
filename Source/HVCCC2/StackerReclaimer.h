@@ -26,12 +26,12 @@ public:
 
 	void setPosition(float position);
 	void setBaseRotation(float degrees);
+	void resetRotation();
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
-		void setRotation(FRotator rotator);
+		void setRotation(float rotation);
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
-		void rotateMast(FRotator rotator);
+
 
 	void setMaterial(int choice);
 
