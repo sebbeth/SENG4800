@@ -40,45 +40,45 @@ void ALevelController::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	spawnACoalStack("TEST", NCT_pads_start[0]->GetActorLocation(), NCT_pads_start[0]->GetActorRotation(), 100, coal_stack_blueprint);
-	spawnACoalStack("TEST", NCT_pads_start[1]->GetActorLocation(), NCT_pads_start[1]->GetActorRotation(), 100, coal_stack_blueprint);
-	spawnACoalStack("TEST", NCT_pads_start[2]->GetActorLocation(), NCT_pads_start[2]->GetActorRotation(), 100, coal_stack_blueprint);
-	spawnACoalStack("TEST", NCT_pads_start[3]->GetActorLocation(), NCT_pads_start[3]->GetActorRotation(), 100, coal_stack_blueprint);
-	spawnACoalStack("TEST", NCT_pads_start[4]->GetActorLocation(), NCT_pads_start[4]->GetActorRotation(), 100, coal_stack_blueprint);
+	//spawnACoalStack("TEST", NCT_pads_start[0]->GetActorLocation(), NCT_pads_start[0]->GetActorRotation(), 100, coal_stack_blueprint);
+	//spawnACoalStack("TEST", NCT_pads_start[1]->GetActorLocation(), NCT_pads_start[1]->GetActorRotation(), 100, coal_stack_blueprint);
+	//spawnACoalStack("TEST", NCT_pads_start[2]->GetActorLocation(), NCT_pads_start[2]->GetActorRotation(), 100, coal_stack_blueprint);
+	//spawnACoalStack("TEST", NCT_pads_start[3]->GetActorLocation(), NCT_pads_start[3]->GetActorRotation(), 100, coal_stack_blueprint);
+	//spawnACoalStack("TEST", NCT_pads_start[4]->GetActorLocation(), NCT_pads_start[4]->GetActorRotation(), 100, coal_stack_blueprint);
 
 
-	spawnAStackerReclaimer("TEST", 0, NCT_SR_rails_start[0]->GetActorLocation(), NCT_SR_rails_end[0]->GetActorLocation(), largeSR_blueprint);
-	spawnAStackerReclaimer("TEST", 1, NCT_SR_rails_start[1]->GetActorLocation(), NCT_SR_rails_end[1]->GetActorLocation(), largeSR_blueprint);
-	spawnAStackerReclaimer("TEST", 2, NCT_SR_rails_start[2]->GetActorLocation(), NCT_SR_rails_end[2]->GetActorLocation(), largeSR_blueprint);
-	spawnAStackerReclaimer("TEST", 3, NCT_SR_rails_start[3]->GetActorLocation(), NCT_SR_rails_end[3]->GetActorLocation(), largeSR_blueprint);
+	//spawnAStackerReclaimer("TEST", 0, NCT_SR_rails_start[0]->GetActorLocation(), NCT_SR_rails_end[0]->GetActorLocation(), largeSR_blueprint);
+	//spawnAStackerReclaimer("TEST", 1, NCT_SR_rails_start[1]->GetActorLocation(), NCT_SR_rails_end[1]->GetActorLocation(), largeSR_blueprint);
+	//spawnAStackerReclaimer("TEST", 2, NCT_SR_rails_start[2]->GetActorLocation(), NCT_SR_rails_end[2]->GetActorLocation(), largeSR_blueprint);
+	//spawnAStackerReclaimer("TEST", 3, NCT_SR_rails_start[3]->GetActorLocation(), NCT_SR_rails_end[3]->GetActorLocation(), largeSR_blueprint);
 
 
-	int i = 0;
-	coalStacks[i]->setPosition(0, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
-	stackerReclaimers[i]->setPosition(0);
+	//int i = 0;
+	//coalStacks[i]->setGeometry(0, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
+	//stackerReclaimers[i]->setGeometry(0);
 
-	i++;
-	coalStacks[i]->setPosition(getPadLength(TerminalId::NCT, i), 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
-	stackerReclaimers[i]->setPosition(1.0);
+	//i++;
+	//coalStacks[i]->setGeometry(getPadLength(TerminalId::NCT, i), 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
+	//stackerReclaimers[i]->setGeometry(1.0);
 
-	i++;
-	coalStacks[i]->setPosition(500, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
-	float position = 500.0f / float(getPadLength(TerminalId::NCT, i));
-	stackerReclaimers[i]->setPosition(position);
+	//i++;
+	//coalStacks[i]->setGeometry(500, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
+	//float position = 500.0f / float(getPadLength(TerminalId::NCT, i));
+	//stackerReclaimers[i]->setGeometry(position);
 
-	i++;
-	coalStacks[i]->setPosition(900, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
-	position = 900.0f / float(getPadLength(TerminalId::NCT, i));
+	//i++;
+	//coalStacks[i]->setGeometry(900, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
+	//position = 900.0f / float(getPadLength(TerminalId::NCT, i));
 
-	stackerReclaimers[i]->setPosition(position);
+	//stackerReclaimers[i]->setGeometry(position);
 
-	i++;
-	coalStacks[i]->setPosition(700, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
+	//i++;
+	//coalStacks[i]->setGeometry(700, 10, getPadLength(TerminalId::NCT, i), NCT_pads_start[i]->GetActorLocation(), NCT_pads_end[i]->GetActorLocation());
 	
 
 
 
-	//loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
+	loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
 }
 
 // Called every frame; not very interesting; see template<typename Each> void AnimateEntitiesFunctor::operator()(const Each& eachDataMap) in the header file
@@ -664,7 +664,7 @@ void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const Stac
 	//convert the absolute position to a scale between 0.0 and 1.0 which can then be used with the vectors placed manually in the editor.
 	float positionScale = (positionInterpolated - minPosition) / (maxPosition - minPosition);
 	//update the actor position
-	actorPointer->setPosition(positionScale);
+	actorPointer->setGeometry(positionScale);
 	//TODO: ADD TURNING CONSIDERATIONS
 		
 	switch (previousState.type)
@@ -752,7 +752,7 @@ void ALevelController::animateEntity(AShip* actorPointer, const VesselState& pre
 //
 //		if (padIdentifier != -1) { // Now that we have determined  which Padwe are using, determine the position along the pad
 //				
-//			actorPointer->setPosition(position,
+//			actorPointer->setGeometry(position,
 //				getPadLength(TerminalId::NCT, padIdentifier),
 //				NCT_pads_start[padIdentifier]->GetActorLocation(),
 //				NCT_pads_end[padIdentifier]->GetActorLocation());
@@ -799,8 +799,13 @@ void ALevelController::animateEntity(const SimulationData<Stockpile>& data, floa
 		auto padEnd = NCT_pads_end[padIdentifier]->GetActorLocation();
 
 		int padLength = getPadLength(TerminalId::NCT, padIdentifier);
+		double instantaneousAmount = previousState.amount + (nextState.amount - previousState.amount)*interpolationScale;
+		double pileProportion = instantaneousAmount / data.maximumAmount;
+
 		double padLengthScale = FVector::Dist(padEnd, padStart)/padLength;
-		actorPointer->setPosition(previousState.position, previousState.length,
+
+		double pileScale = (pileProportion*previousState.length*padLengthScale);
+		actorPointer->setGeometry(previousState.position, pileProportion, previousState.length,
 			padLength,
 			NCT_pads_start[padIdentifier]->GetActorLocation(),
 			NCT_pads_end[padIdentifier]->GetActorLocation());
@@ -809,12 +814,7 @@ void ALevelController::animateEntity(const SimulationData<Stockpile>& data, floa
 		//also set the rotation
 		actorPointer->SetActorRotation(NCT_pads_start[padIdentifier]->GetActorRotation());
 
-		double instantaneousAmount = previousState.amount + (nextState.amount - previousState.amount)*interpolationScale;
-
-		double pileProportion = instantaneousAmount/data.maximumAmount;
-		double pileScale = (pileProportion*previousState.length*padLengthScale);
-
-		actorPointer->setQuantity(float(pileScale));
+		//actorPointer->setQuantity(float(pileScale));
 		//switch (nextState.type)
 		//{
 		//case StockpileStateType::Created:
@@ -848,7 +848,7 @@ void ALevelController::animateEntity(AShipLoader* actorPointer, const Shiploader
 	//convert the absolute position to a scale between 0.0 and 1.0 which can then be used with the vectors placed manually in the editor.
 	float positionScale = (positionInterpolated - minPosition) / (maxPosition - minPosition);
 	//update the actor position
-	actorPointer->setPosition(positionScale);
+	actorPointer->setGeometry(positionScale);
 	switch (previousState.type)
 	{
 	case ShiploaderStateType::Working:
