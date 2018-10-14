@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "GameFramework/Actor.h"
+#include <map>
 //specialise this for each entity, specifying the associated actor type
 template<typename Entity>
 struct u_actor_type {

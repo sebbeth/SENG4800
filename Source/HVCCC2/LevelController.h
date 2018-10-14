@@ -129,16 +129,6 @@ struct u_actor_type<StackerReclaimer> {
 	using type = AStackerReclaimer;
 };
 
-template<>
-struct u_actor_type<Shiploader> {
-	using type = AShipLoader;
-};
-
-template<>
-struct u_actor_type<Vessel> {
-	using type = AShip;
-};
-
 /*
 template<>
 struct u_actor_type<TrainMovement> {

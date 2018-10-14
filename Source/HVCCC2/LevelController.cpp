@@ -558,7 +558,7 @@ AShip* ALevelController::getOrSpawnActor(const Vessel::Id& id) {
 	//if (id.terminal == TerminalId::NCT) {
 		//for (int i = 0; i < 4; ++i) {
 		//	if (id.name == nct_names[i]) {
-				return spawnAShip(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), NCT_berths[0]->GetActorLocation(), NCT_berths[0]->GetActorRotation(), ship_blueprint);
+				return spawnAShip(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), FVector(), FRotator(), ship_blueprint);
 		//	}
 		//}
 	//}
@@ -643,30 +643,34 @@ void ALevelController::animateEntity(const SimulationData<Vessel>& data, float i
 	auto& nextState = *data.stateWindow.second;
 
 	
-
+	FVector berthStart;
+	FVector berthEnd;
+	FVector berthVector;
+	double berthLength;
+	double positionScale;
+	double unrealBerthSize;
 	switch (previousState.type) {
 	case VesselStateType::Berthed:
-		FVector berthStart;
-		FVector berthEnd;
+		
 		switch (data.terminal) {
 		case TerminalId::NCT:
 			berthStart = NCT_berth_start->GetActorLocation();
-			berthEnd = NCT_berth_end->GetActorLocation();
+			berthEnd = NCT_berth_end->GetActorLocation();//do stuff
+			data.actorPointer->berthed();
+			berthVector = berthEnd - berthStart;
+			//TODO, assign the correct track length, not just the 0'th one
+			berthLength = getShipLoaderTrackLength(data.terminal);
+			positionScale = data.berthPosition / berthLength;
+			unrealBerthSize = berthVector.Size();
+			berthVector.Normalize();
+			data.actorPointer->SetActorRotation(NCT_berth_start->GetActorRotation());
+			data.actorPointer->SetActorLocation(berthStart + berthVector * unrealBerthSize * positionScale);
 			break;
 		default:
 			return; //don't bother showing
 		}
 		
-		//do stuff
-		data.actorPointer->berthed();
-		FVector berthVector = berthStart - berthEnd;
-		//TODO, assign the correct track length, not just the 0'th one
-		double berthLength = getShipLoaderTrackLength(data.terminal);
-		double positionScale = data.berthPosition / berthLength;
-		double unrealBerthSize = berthVector.Size();
-		berthVector.Normalize();
-		data.actorPointer->SetActorRotation(NCT_berth_start->GetActorRotation());
-		data.actorPointer->SetActorLocation(berthStart + berthVector * unrealBerthSize * positionScale);
+		
 		break;
 	case VesselStateType::Idle:
 	case VesselStateType::Invalid:
