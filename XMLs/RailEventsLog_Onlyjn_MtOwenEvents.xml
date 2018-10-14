@@ -1,9 +1,0 @@
-    <railEvents>
-        <TrainWaitJunction cycleID="87" junctionID="jn_MtOwen" time="32.52988892931596" trainID="train33"/>
-        <TrainWaitJunction cycleID="291" junctionID="jn_MtOwen" time="182.97049930653898" trainID="train49"/>
-        <TrainWaitJunction cycleID="378" junctionID="jn_MtOwen" time="260.8505808666325" trainID="train14"/>
-        <TrainWaitJunction cycleID="463" junctionID="jn_MtOwen" time="314.3583715568557" trainID="train33"/>
-        <TrainWaitJunction cycleID="747" junctionID="jn_MtOwen" time="589.5400804905815" trainID="train41"/>
-        <TrainWaitJunction cycleID="785" junctionID="jn_MtOwen" time="592.8399037846365" trainID="train33"/>
-        <TrainWaitJunction cycleID="808" junctionID="jn_MtOwen" time="649.4568302551969" trainID="train30"/>
-    </railEvents>

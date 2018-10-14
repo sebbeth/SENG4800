@@ -1,4 +1,0 @@
-    <railEvents>
-        <TrainWaitJunction cycleID="99" junctionID="jn_Ashton_LoopPoints" time="44.014425364746664" trainID="train45"/>
-        <TrainWaitJunction cycleID="322" junctionID="jn_Ashton_LoopPoints" time="206.30910912290747" trainID="train40"/>
-    </railEvents>

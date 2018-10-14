@@ -93,6 +93,8 @@ StockpileStateType StockpileState::determineNextType(StockpileStateType stateTyp
                     return StockpileStateType::Remnant;
                 case StockpileEventType::StockpileRemoved:
                     return StockpileStateType::Idle;
+				case StockpileEventType::ReclaimStart:
+					return StockpileStateType::Reclaiming;
                 default:
                     return StockpileStateType::Invalid;
             }

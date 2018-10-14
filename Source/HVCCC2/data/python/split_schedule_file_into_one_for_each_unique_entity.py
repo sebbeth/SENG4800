@@ -87,8 +87,6 @@ with open(args.source_directory + args.file_name) as fd:
 
 # Creates a new XML file for each unique entity ID value, making sure to print out all of the lines in its list inside the file:
 for entityID in entityLines:
-    print(entityID)
-
     newFileName = args.file_name[:len(args.file_name) - 4] + "_Only" + entityID + "Events.xml"
 
     with open(args.source_directory + newFileName, 'w') as newFile:

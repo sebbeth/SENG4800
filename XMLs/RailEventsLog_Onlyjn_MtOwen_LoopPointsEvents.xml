@@ -1,6 +1,0 @@
-    <railEvents>
-        <TrainWaitJunction cycleID="215" junctionID="jn_MtOwen_LoopPoints" time="131.69030200589873" trainID="train47"/>
-        <TrainWaitJunction cycleID="292" junctionID="jn_MtOwen_LoopPoints" time="179.7814136162496" trainID="train42"/>
-        <TrainWaitJunction cycleID="636" junctionID="jn_MtOwen_LoopPoints" time="481.6364976401342" trainID="train11"/>
-        <TrainWaitJunction cycleID="695" junctionID="jn_MtOwen_LoopPoints" time="525.5632285256047" trainID="train27"/>
-    </railEvents>
