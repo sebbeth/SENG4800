@@ -2,33 +2,14 @@
 	<SlOnMove shiploaderID="SL01" 					time="89.442501" pos="50.00"/>
     <SlOnStopMove shiploaderID="SL01" 				time="89.442501" pos="193.28"/>
     <SlStartVesselLoad shiploaderID="SL01" 			time="89.542501" pos="193.28" vesselID="1"/>
-
     <SlLoadStart shiploaderID="SL01" 				time="89.542501" pos="193.28" stockpileID="NCT2.1"/>
     <SlLoadComp shiploaderID="SL01" 				time="96.692166" pos="193.28" stockpileID="NCT2.1" amount="36800.00"/>
     <SlLoadOpComp shiploaderID="SL01" 				time="96.692166" pos="193.28" stockpileID="NCT2.1" amount="36800.00"/>	
-
-	
 	<SlOnMove shiploaderID="SL01" 					time="98.142501" pos="193.28"/>
     <SlOnStopMove shiploaderID="SL01" 				time="98.242501" pos="230.14"/>
     <SlStartVesselLoad shiploaderID="SL01" 			time="98.342501" pos="230.14" vesselID="2"/>
-
     <SlLoadStart shiploaderID="SL01" 				time="98.342501" pos="230.14" stockpileID="NCT2.1"/>
     <SlLoadComp shiploaderID="SL01" 				time="100.692166" pos="230.14" stockpileID="NCT2.1" amount="36800.00"/>
     <SlLoadOpComp shiploaderID="SL01" 				time="100.692166" pos="230.14" stockpileID="NCT2.1" amount="36800.00"/>	
-
-	
-	
-	
-	
-	
-	
     <SlWrapUp shiploaderID="SL01" 					time="101.692166" pos="50.00"/>
-    <SlWrapUp shiploaderID="SL02" 					time="101.771676" pos="1040.00"/>
-
-
-
-	<StkWrapUp stackerID="SR01" time="101.692166" pos="50.00"/>
-	
-	
-	
 </events>
