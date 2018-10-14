@@ -140,12 +140,6 @@ struct u_actor_type<TrainMovement> {
 	using type = ATrain;
 };
 
-template<>
-struct u_actor_type<Shiploader> {
-	using type = AShipLoader;
-};
-
-
 UCLASS()
 class HVCCC2_API ALevelController : public AActor
 {
