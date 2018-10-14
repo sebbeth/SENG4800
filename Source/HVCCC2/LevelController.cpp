@@ -602,45 +602,65 @@ AShipLoader* ALevelController::getOrSpawnActor(const Shiploader::Id& id) {
 }
 
 
-void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale) {
-
+void ALevelController::animateEntity(const SimulationData<StackerReclaimer>& data, float interpolationScale) {
+	auto& previousState = *data.stateWindow.first;
+	auto& nextState = *data.stateWindow.second;
 	StackerReclaimer::Id targetId = previousState.id;
 	float minPosition = 0;
 	//TODO, assign the correct track length, not just the 0'th one
-	float maxPosition = (float)getTrackLength(targetId.terminal, actorPointer->trackId);
+	float maxPosition = (float)getTrackLength(targetId.terminal, data.actorPointer->trackId);
 	//calculate the absolute position of the machine (along it's rail) by interpolating the previous and next positions
 	//this idea came from vector mathmemathics, with 1d vectors (efficively scalars) is this case; the formula is: previous+(next - previous)*scale;
 	float positionInterpolated = previousState.position + (nextState.position - previousState.position)*interpolationScale - 50;
 	//convert the absolute position to a scale between 0.0 and 1.0 which can then be used with the vectors placed manually in the editor.
 	float positionScale = (positionInterpolated - minPosition) / (maxPosition - minPosition);
 	//update the actor position
-	actorPointer->setPosition(positionScale);
+	data.actorPointer->setPosition(positionScale);
 	//TODO: ADD TURNING CONSIDERATIONS
+
+	auto rotationIdentifierIt = data.stateWindow.first;
+	bool foundState = false;
+	while (rotationIdentifierIt != data.states.begin() && !foundState) {
+		switch (rotationIdentifierIt->type)
+		{
+		case StackerReclaimerStateType::Moving:
+		case StackerReclaimerStateType::WorkingStack:
+		case StackerReclaimerStateType::WorkingReclaim:
+			foundState = true;
+			break;
+		default:
+			--rotationIdentifierIt;
+		}
+	}
 		
-	switch (previousState.type)
+	switch (rotationIdentifierIt->type)
 	{
 	case StackerReclaimerStateType::Moving:
 		 // If the SR is moving, set it's arm to forward
-		actorPointer->resetRotation(); // The SR needs to point at this coalStack
-	
+		data.actorPointer->resetRotation(); // The SR needs to point at this coalStack
+		// TODO put both these functions somewhere more sensible where they won't get called every tick.
+		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
+		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer), 0);
 		break;
-	case StackerReclaimerStateType::WorkingStack: 
-
+	case StackerReclaimerStateType::WorkingStack:
 		// If the SR is Stacking, set it's colour and rotate it over the appropriate pile
-		stackCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer));
-		actorPointer->rotateMastToCoalStack(getCoalStackWithId(previousState.stockpileID)); // The SR needs to point at this coalStack
+		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer), 0);
+		stackCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
+		data.actorPointer->rotateMastToCoalStack(getCoalStackWithId(previousState.stockpileID)); // The SR needs to point at this coalStack
 		break;
-	case StackerReclaimerStateType::WorkingReclaim: 
-
+	case StackerReclaimerStateType::WorkingReclaim:
 		// If the SR is Reclaiming, set it's colour and rotate it over the appropriate pile
-		reclaimCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer),0);
-		actorPointer->rotateMastToCoalStack(getCoalStackWithId(previousState.stockpileID));
+		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
+		reclaimCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer),0);
+		data.actorPointer->rotateMastToCoalStack(getCoalStackWithId(previousState.stockpileID));
 		break;
+	case StackerReclaimerStateType::PostStackReserved:
+	case StackerReclaimerStateType::PostReclaimReserved:
 	default:
 		// TODO put both these functions somewhere more sensible where they won't get called every tick.
-		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer));
-		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer),0);
-		break;
+		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
+		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer),0);
+		data.actorPointer->resetRotation();
 	}
 
 	//UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));

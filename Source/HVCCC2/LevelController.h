@@ -140,6 +140,11 @@ struct u_actor_type<TrainMovement> {
 	using type = ATrain;
 };
 
+template<>
+struct u_actor_type<Shiploader> {
+	using type = AShipLoader;
+};
+
 
 UCLASS()
 class HVCCC2_API ALevelController : public AActor
@@ -380,7 +385,7 @@ private:
 	template<typename Actor, typename State>
 	void animateEntity(Actor* actorPointer, const typename State& previousState, const typename State& nextState, float interpolationScale);
 	
-	void animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale);
+	void animateEntity(const SimulationData<StackerReclaimer>& data, float interpolationScale);
 	void animateEntity(const SimulationData<Vessel>& data, float interpolationScale);
 	//void animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale);
 	void animateEntity(const SimulationData<Stockpile>& data, float interpolationScale);
