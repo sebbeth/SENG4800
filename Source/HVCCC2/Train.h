@@ -4,6 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+
+#include "Runtime/Engine/Classes/Engine/World.h"
+#include "Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h"
+#include "Runtime/Engine/Classes/Components/SplineComponent.h"
+#include "Runtime/Core/Public/Misc/Paths.h"
 #include "Train.generated.h"
 
 UCLASS()
@@ -21,11 +26,15 @@ protected:
 
 public:	
 	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
-	void setPosition(float position);
+	void setPosition(float position, USplineComponent* trackSpline);
+
+	void spawnCarriages(TSubclassOf<class AActor> blueprint,int count);
 
 	FString id; // trainId
+	int carriageCount;
+	TArray<AActor*> carriages;
+	TSubclassOf<class AActor> train_carriage_full_blueprint;
 	FString cycleId;
 	TArray<FString> trackId; //id of the track this train is currently on
 //time values represent start and end time of the train on the specified track
