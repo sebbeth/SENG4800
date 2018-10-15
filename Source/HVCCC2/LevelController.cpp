@@ -586,7 +586,7 @@ AShip* ALevelController::getOrSpawnActor(const Vessel::Id& id) {
 	//if (id.terminal == TerminalId::NCT) {
 		//for (int i = 0; i < 4; ++i) {
 		//	if (id.name == nct_names[i]) {
-				return spawnAShip(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), FVector(), FRotator(), ship_blueprint);
+				return spawnAShip(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), FVector(0,0,0), FRotator(0,0,0), ship_blueprint);
 		//	}
 		//}
 	//}
