@@ -7,7 +7,7 @@ void SimulationData<Vessel>::determineArrivalLocation(const DataMapTuple<AllEnti
 		for (auto& eachState : eachEntity.second.states) {
 			if (eachState.vesselID == states[0].id) {
 				terminal = eachState.id.terminal;
-				berthPosition = eachState.position;
+				berthPosition = eachState.position - 100;
 				break;
 			}
 

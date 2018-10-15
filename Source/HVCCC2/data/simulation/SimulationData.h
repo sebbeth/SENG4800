@@ -34,6 +34,14 @@ public:
 	SimulationData(const std::vector<typename Entity::AssociatedState>& states, Actor* actorPointer, bool isBeingRendered);
 };
 
+#include "../../ShipLoader.h"
+#include "../extraction/ShipLoader/Shiploader.h"
+
+template<>
+struct u_actor_type<Shiploader> {
+	using type = AShipLoader;
+};
+
 template<typename Entity>
 using DataMap = std::map<
 	typename Entity::Id,

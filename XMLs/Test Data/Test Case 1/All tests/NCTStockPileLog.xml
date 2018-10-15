@@ -1,6 +1,6 @@
 <events>
 	<SpStockpileCreated stockpileID="NCT2.1" vesselID="2" time="0.0" padID="PadA" pos="5.000000" length="100.000000"/>
-	<SpStockpileCreated stockpileID="NCT2.2" vesselID="3" 	time="0.0" padID="PadA" pos="115.000000" length="100.000000"/>
+	<SpStockpileCreated stockpileID="NCT2.2" vesselID="3" 	time="0.0" padID="PadA" pos="105.000000" length="100.000000"/>
 	
     <SpStackStart stockpileID="NCT2.1" vesselID="2" 	time="9.803494" padID="PadA" machineID="SR01"/>
     <SpStackComp stockpileID="NCT2.1" vesselID="2" 		time="10.062317" padID="PadA" machineID="SR01" amount="2200.000000"/>
@@ -37,7 +37,7 @@
     <SpStackComp stockpileID="NCT2.2" vesselID="2" 			time="84.875689" padID="PadA" machineID="SR01" amount="2200.000000"/>
     <SpStackStart stockpileID="NCT2.2" vesselID="2" 		time="85.475689" padID="PadA" machineID="SR01"/>
     <SpStackComp stockpileID="NCT2.2" vesselID="2" 			time="85.675689" padID="PadA" machineID="SR01" amount="2200.000000"/>
-    <SpStockpileBuilt stockpileID="NCT2.2" vesselID="2" 	time="85.675689" padID="PadA"/>
+    <SpStockpileBuilt stockpileID="NCT2.2" vesselID="2" 	time="85.875689" padID="PadA"/>
 	
 	
 	<SpReclaimStart stockpileID="NCT2.1" vesselID="2" time="89.542501" padID="PadA" machineID="SR01"/>
