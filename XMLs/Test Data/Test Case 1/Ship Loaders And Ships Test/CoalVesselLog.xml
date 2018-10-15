@@ -1,0 +1,22 @@
+<events>
+	<VesselYardSpaceAllocated vesselID="1" time="5.000000"/>
+	<VesselAtEA vesselID="1" time="86.442501" terminalID="NCT"/>
+    <VesselWaitBerth vesselID="1" time="86.442501"/>
+	<VesselWaitEnter vesselID="1" time="86.442501" isTidal="true"/>
+	<VesselEnterChannel vesselID="1" time="87.442501" tugs="4"/>
+    <VesselMoveToSwingBasin vesselID="1" time="88.442501"/>
+	<VesselArriveTerminal vesselID="1" time="89.442501" meterMark="5.000000"/>
+	<VesselWaitSail vesselID="1" time="95.000000"/>
+	<VesselDepTerminal vesselID="1" time="96.792166" tugs="1"/>
+	<VesselExitChannel vesselID="1" time="97.00000"/>
+	<VesselYardSpaceAllocated vesselID="2" time="5.000000"/>
+	<VesselAtEA vesselID="2" time="97.242501" terminalID="NCT"/>
+    <VesselWaitBerth vesselID="2" time="97.242501"/>
+	<VesselWaitEnter vesselID="2" time="97.242501" isTidal="true"/>
+	<VesselEnterChannel vesselID="2" time="97.242501" tugs="4"/>
+    <VesselMoveToSwingBasin vesselID="2" time="97.242501"/>
+	<VesselArriveTerminal vesselID="2" time="98.242501" meterMark="5.000000"/>
+	<VesselWaitSail vesselID="2" time="99.000000"/>
+	<VesselDepTerminal vesselID="2" time="100.692166" tugs="1"/>
+	<VesselExitChannel vesselID="2" time="100.692166"/>
+</events>

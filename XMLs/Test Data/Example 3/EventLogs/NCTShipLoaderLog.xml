@@ -1,0 +1,43 @@
+<events>
+    <SlOnMove shiploaderID="SL01" time="86.614281" pos="50.00"/>
+    <SlOnStopMove shiploaderID="SL01" time="86.693878" pos="193.28"/>
+    <SlStartVesselLoad shiploaderID="SL01" time="86.693878" pos="193.28" vesselID="2"/>
+    <SlLoadOpStart shiploaderID="SL01" time="86.693878" pos="193.28" stockpileID="NCT2.1"/>
+    <SlLoadStart shiploaderID="SL01" time="86.769094" pos="193.28" stockpileID="NCT2.1"/>
+    <SlLoadComp shiploaderID="SL01" time="87.216528" pos="193.28" stockpileID="NCT2.1" amount="3803.19"/>
+    <SlLoadOpComp shiploaderID="SL01" time="87.216528" pos="193.28" stockpileID="NCT2.1" amount="3803.19"/>
+    <SlLoadOpStart shiploaderID="SL01" time="89.216806" pos="193.28" stockpileID="NCT2.1"/>
+    <SlLoadStart shiploaderID="SL01" time="89.292022" pos="193.28" stockpileID="NCT2.1"/>
+    <SlHatchChangeStart shiploaderID="SL01" time="89.494361" pos="193.28"/>
+    <SlOnHatchChangeComplete shiploaderID="SL01" time="89.694361" pos="193.28"/>
+    <SlHatchChangeStart shiploaderID="SL01" time="90.196574" pos="193.28"/>
+    <SlOnHatchChangeComplete shiploaderID="SL01" time="90.396574" pos="193.28"/>
+    <SlHatchChangeStart shiploaderID="SL01" time="90.898672" pos="193.28"/>
+    <SlOnHatchChangeComplete shiploaderID="SL01" time="91.098672" pos="193.28"/>
+    <SlHatchChangeStart shiploaderID="SL01" time="91.600770" pos="193.28"/>
+    <SlOnHatchChangeComplete shiploaderID="SL01" time="91.800770" pos="193.28"/>
+    <SlHatchChangeStart shiploaderID="SL01" time="92.302868" pos="193.28"/>
+    <SlOnHatchChangeComplete shiploaderID="SL01" time="92.502868" pos="193.28"/>
+    <SlHatchChangeStart shiploaderID="SL01" time="93.004966" pos="193.28"/>
+    <SlOnHatchChangeComplete shiploaderID="SL01" time="93.204966" pos="193.28"/>
+    <SlHatchChangeStart shiploaderID="SL01" time="93.707064" pos="193.28"/>
+    <SlOnHatchChangeComplete shiploaderID="SL01" time="93.907064" pos="193.28"/>
+    <SlHatchChangeStart shiploaderID="SL01" time="94.409162" pos="193.28"/>
+    <SlOnHatchChangeComplete shiploaderID="SL01" time="94.609162" pos="193.28"/>
+    <SlHatchChangeStart shiploaderID="SL01" time="95.111259" pos="193.28"/>
+    <SlOnHatchChangeComplete shiploaderID="SL01" time="95.311259" pos="193.28"/>
+    <SlHatchChangeStart shiploaderID="SL01" time="95.813357" pos="193.28"/>
+    <SlOnHatchChangeComplete shiploaderID="SL01" time="96.013357" pos="193.28"/>
+    <SlLoadComp shiploaderID="SL01" time="96.542224" pos="193.28" stockpileID="NCT2.1" amount="52754.04"/>
+    <SlLoadOpComp shiploaderID="SL01" time="96.542224" pos="193.28" stockpileID="NCT2.1" amount="56557.23"/>
+    <SlLoadOpStart shiploaderID="SL01" time="98.542501" pos="193.28" stockpileID="NCT2.1"/>
+    <SlLoadStart shiploaderID="SL01" time="98.617717" pos="193.28" stockpileID="NCT2.1"/>
+    <SlHatchChangeStart shiploaderID="SL01" time="99.111437" pos="193.28"/>
+    <SlOnHatchChangeComplete shiploaderID="SL01" time="99.311437" pos="193.28"/>
+    <SlStartVesselDraftSurvey shiploaderID="SL01" time="99.679687" pos="193.28" stockpileID="2"/>
+    <SlFinishVesselDraftSurvey shiploaderID="SL01" time="100.179687" pos="193.28" stockpileID="2"/>
+    <SlLoadComp shiploaderID="SL01" time="100.980192" pos="193.28" stockpileID="NCT2.1" amount="15242.77"/>
+    <SlLoadOpComp shiploaderID="SL01" time="100.980192" pos="193.28" stockpileID="NCT2.1" amount="71800.00"/>
+    <SlWrapUp shiploaderID="SL01" time="101.771676" pos="193.28"/>
+    <SlWrapUp shiploaderID="SL02" time="101.771676" pos="1040.00"/>
+</events>

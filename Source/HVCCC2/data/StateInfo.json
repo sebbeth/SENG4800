@@ -31,7 +31,8 @@
         },
         "Reclaimed": {
           "StockpileRemnant": "Remnant",
-          "StockpileRemoved": "Idle"
+          "StockpileRemoved": "Idle",
+          "ReclaimStart": "Reclaiming"
         },
         "Reclaiming": {
           "ReclaimComp": "Reclaimed"
@@ -562,7 +563,7 @@
         }
       }
     }
-  },  
+  },
   "terminals": ["CCT", "KCT", "NCT"],
   "merges": {
     "StackerReclaimer": ["Stacker", "Reclaimer"]

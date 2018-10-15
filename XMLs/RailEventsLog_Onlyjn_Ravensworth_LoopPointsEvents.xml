@@ -1,7 +1,0 @@
-    <railEvents>
-        <TrainWaitJunction cycleID="360" junctionID="jn_Ravensworth_LoopPoints" time="251.06669391554158" trainID="train33"/>
-        <TrainWaitJunction cycleID="473" junctionID="jn_Ravensworth_LoopPoints" time="345.8951382493111" trainID="train11"/>
-        <TrainWaitJunction cycleID="689" junctionID="jn_Ravensworth_LoopPoints" time="523.8851508378051" trainID="train22"/>
-        <TrainWaitJunction cycleID="755" junctionID="jn_Ravensworth_LoopPoints" time="578.1478543935036" trainID="train31"/>
-        <TrainWaitJunction cycleID="969" junctionID="jn_Ravensworth_LoopPoints" time="805.4093777251946" trainID="train27"/>
-    </railEvents>

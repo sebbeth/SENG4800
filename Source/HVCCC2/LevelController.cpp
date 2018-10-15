@@ -39,7 +39,7 @@ ALevelController::ALevelController() : addToSimFunctor(this), updateWindowsFunct
 void ALevelController::BeginPlay()
 {
 	Super::BeginPlay();
-	//loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
+	loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
 }
 
 // Called every frame; not very interesting; see template<typename Each> void AnimateEntitiesFunctor::operator()(const Each& eachDataMap) in the header file
@@ -129,35 +129,9 @@ bool ALevelController::loadXMLData(const  FString& srcPath) {
 		auto& states = stateResultPair.first;
 		forEachInTuple(states, addToSimFunctor);
 		findSimTimeBoundsFunctor();
-
-		////get some debug outputs for demonstrating issues with train data
-		//auto& trainEntities = std::get<DataMap<TrainMovement>>(this->data);
-		//for (auto& eachEntity : trainEntities) {
-		//	auto targetPath = "C:/Users/marcos/Documents/tmp/" + eachEntity.first.nameForBinaryFile() + ".txt";
-		//	std::ofstream file(targetPath);
-		//	for (auto& eachState : eachEntity.second.states) {
-
-		//		file << "time: " << eachState.time << "; track: " << eachState.trackID << "; type: ";
-		//		switch (eachState.type) {
-		//		case TrainMovementStateType::EnteringTrack:
-		//			file << "EnteringTrack";
-		//			break;
-		//		case TrainMovementStateType::Idle:
-		//			file << "Idle";
-		//			break;
-		//		case TrainMovementStateType::LeavingTrack:
-		//			file << "LeavingTrack";
-		//			break;
-		//		case TrainMovementStateType::Invalid:
-		//			file << "Invalid";
-		//			break;
-		//		}
-		//		file << ";\n";
- 	//		}
-		//	bool test = file.good();
-		//	file.flush();
-		//	file.close();
-		//}
+		for (auto& eachVessel : std::get<DataMap<Vessel>>(data)) {
+			eachVessel.second.determineArrivalLocation(data);
+		}
 	}
 
 	return stateResultPair.second;
@@ -517,17 +491,45 @@ AShip * ALevelController::spawnAShip(FString id, FVector position, FRotator rota
 	return NULL;
 }
 
+//Returns the amount of the stockpile for use in the object selection box
+TArray<FString> ALevelController::getStateInfo(ACoalStack* actor) {
+	const SimulationData<Stockpile>& simData = std::get<DataMap<Stockpile>>(this->data).at(actor->getID());
+	const StockpileState& previous = *simData.stateWindow.first;
+	const StockpileState& next = *simData.stateWindow.second;
 
+	const FString id = UTF8_TO_TCHAR(actor->getID().name.c_str());
+	const double coverage = (previous.amount/simData.maximumAmount) * 100;
+	const double current = previous.amount;
+	const double change = next.amount - previous.amount;
+	
+	TArray<FString> stateInfo;
+	
+	// If you change the order of the TArray you will need to change the logic in the FlyingGameMode Blueprint
+	stateInfo.Add(id);
+	stateInfo.Add(FString::SanitizeFloat(current));
+	stateInfo.Add(FString::SanitizeFloat(coverage) + "%");
+	
+	if (change != 0) {
+		if (change > 0)
+			stateInfo.Add("+" + FString::SanitizeFloat(change));
+		else
+			stateInfo.Add(FString::SanitizeFloat(change));
+	} 
+	else
+		stateInfo.Add("");
+	
+	stateInfo.Add(id);
 
+	return stateInfo;
+}
 
-
-ACoalStack * ALevelController::spawnACoalStack(FString id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint) {
+ACoalStack * ALevelController::spawnACoalStack(Stockpile::Id id, FVector position, FRotator rotator, float width, TSubclassOf<class ACoalStack> blueprint) {
 	UWorld* world = GetWorld();
 	if (world) {
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		ACoalStack *actor = world->SpawnActor<ACoalStack>(blueprint, position, rotator, spawnParams);
-		//UE_LOG(LogTemp, Warning, TEXT("%s"), *id);
+		// UE_LOG(LogTemp, Warning, TEXT("%s"), *id);
 		actor->id = id;
 		actor->setWidth(width);
 		coalStacks.Add(actor);
@@ -584,7 +586,7 @@ AShip* ALevelController::getOrSpawnActor(const Vessel::Id& id) {
 	//if (id.terminal == TerminalId::NCT) {
 		//for (int i = 0; i < 4; ++i) {
 		//	if (id.name == nct_names[i]) {
-				return spawnAShip(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), NCT_berths[0]->GetActorLocation(), NCT_berths[0]->GetActorRotation(), ship_blueprint);
+				return spawnAShip(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), FVector(0,0,0), FRotator(0,0,0), ship_blueprint);
 		//	}
 		//}
 	//}
@@ -595,7 +597,7 @@ AShip* ALevelController::getOrSpawnActor(const Vessel::Id& id) {
 ACoalStack* ALevelController::getOrSpawnActor(const Stockpile::Id& id) {
 	if (id.terminal == TerminalId::NCT) {
 		// NOTE actors are being spawned to 0,0,0 rather then being spawned and then made invisible
-		return spawnACoalStack(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), FVector(0, 0, 0), NCT_pads_start[0]->GetActorRotation(), 0, coal_stack_blueprint);
+		return spawnACoalStack(id, FVector(0, 0, 0), NCT_pads_start[0]->GetActorRotation(), 0, coal_stack_blueprint);
 	}
 	return nullptr;
 }
@@ -613,41 +615,65 @@ AShipLoader* ALevelController::getOrSpawnActor(const Shiploader::Id& id) {
 }
 
 
-void ALevelController::animateEntity(AStackerReclaimer* actorPointer, const StackerReclaimerState& previousState, const StackerReclaimerState& nextState, float interpolationScale) {
-
+void ALevelController::animateEntity(const SimulationData<StackerReclaimer>& data, float interpolationScale) {
+	auto& previousState = *data.stateWindow.first;
+	auto& nextState = *data.stateWindow.second;
 	StackerReclaimer::Id targetId = previousState.id;
 	float minPosition = 0;
 	//TODO, assign the correct track length, not just the 0'th one
-	float maxPosition = (float)getTrackLength(targetId.terminal, actorPointer->trackId);
+	float maxPosition = (float)getTrackLength(targetId.terminal, data.actorPointer->trackId);
 	//calculate the absolute position of the machine (along it's rail) by interpolating the previous and next positions
 	//this idea came from vector mathmemathics, with 1d vectors (efficively scalars) is this case; the formula is: previous+(next - previous)*scale;
-	float positionInterpolated = previousState.position + (nextState.position - previousState.position)*interpolationScale;
+	float positionInterpolated = previousState.position + (nextState.position - previousState.position)*interpolationScale - 50;
 	//convert the absolute position to a scale between 0.0 and 1.0 which can then be used with the vectors placed manually in the editor.
 	float positionScale = (positionInterpolated - minPosition) / (maxPosition - minPosition);
 	//update the actor position
-	actorPointer->setPosition(positionScale);
+	data.actorPointer->setPosition(positionScale);
 	//TODO: ADD TURNING CONSIDERATIONS
+
+	auto rotationIdentifierIt = data.stateWindow.first;
+	bool foundState = false;
+	while (rotationIdentifierIt != data.states.begin() && !foundState) {
+		switch (rotationIdentifierIt->type)
+		{
+		case StackerReclaimerStateType::Moving:
+		case StackerReclaimerStateType::WorkingStack:
+		case StackerReclaimerStateType::WorkingReclaim:
+			foundState = true;
+			break;
+		default:
+			--rotationIdentifierIt;
+		}
+	}
 		
-	switch (previousState.type)
+	switch (rotationIdentifierIt->type)
 	{
 	case StackerReclaimerStateType::Moving:
-		actorPointer->setRotation(0.0f); // If the SR is moving, set it's arm to forward
+		 // If the SR is moving, set it's arm to forward
+		data.actorPointer->resetRotation(); // The SR needs to point at this coalStack
+		// TODO put both these functions somewhere more sensible where they won't get called every tick.
+		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
+		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer), 0);
 		break;
-	case StackerReclaimerStateType::WorkingStack: 
+	case StackerReclaimerStateType::WorkingStack:
 		// If the SR is Stacking, set it's colour and rotate it over the appropriate pile
-		stackCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer));
-		actorPointer->setRotation(90.0f);
+		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer), 0);
+		stackCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
+		data.actorPointer->rotateMastToCoalStack(getCoalStackWithId(previousState.stockpileID)); // The SR needs to point at this coalStack
 		break;
-	case StackerReclaimerStateType::WorkingReclaim: 
+	case StackerReclaimerStateType::WorkingReclaim:
 		// If the SR is Reclaiming, set it's colour and rotate it over the appropriate pile
-		reclaimCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer),0);
-		actorPointer->setRotation(90.0f);
+		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
+		reclaimCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer),0);
+		data.actorPointer->rotateMastToCoalStack(getCoalStackWithId(previousState.stockpileID));
 		break;
+	case StackerReclaimerStateType::PostStackReserved:
+	case StackerReclaimerStateType::PostReclaimReserved:
 	default:
 		// TODO put both these functions somewhere more sensible where they won't get called every tick.
-		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer));
-		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, actorPointer),0);
-		break;
+		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
+		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer),0);
+		data.actorPointer->resetRotation();
 	}
 
 	//UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
@@ -664,25 +690,54 @@ int ALevelController::getIndexOfStackerReclaimer(TArray<AStackerReclaimer*> arra
 	return 0;
 }
 
+ACoalStack * ALevelController::getCoalStackWithId(Stockpile::Id id)
+{
+	return std::get<DataMap<Stockpile>>(data).at(id).actorPointer;
+}
 
-void ALevelController::animateEntity(AShip* actorPointer, const VesselState& previousState, const VesselState& nextState, float interpolationScale) {
+void ALevelController::animateEntity(const SimulationData<Vessel>& data, float interpolationScale) {
+	auto& previousState = *data.stateWindow.first;
+	auto& nextState = *data.stateWindow.second;
 
-	Vessel::Id targetId = previousState.id;
+	
+	FVector berthStart;
+	FVector berthEnd;
+	FVector berthVector;
+	double berthLength;
+	double positionScale;
+	double unrealBerthSize;
+	switch (previousState.type) {
+	case VesselStateType::Berthed:
+		
+		switch (data.terminal) {
+		case TerminalId::NCT:
+			berthStart = NCT_berth_start->GetActorLocation();
+			berthEnd = NCT_berth_end->GetActorLocation();//do stuff
+			data.actorPointer->berthed();
+			berthVector = berthEnd - berthStart;
+			//TODO, assign the correct track length, not just the 0'th one
+			berthLength = getShipLoaderTrackLength(data.terminal);
+			positionScale = data.berthPosition / berthLength;
+			unrealBerthSize = berthVector.Size();
+			berthVector.Normalize();
+			data.actorPointer->SetActorRotation(NCT_berth_start->GetActorRotation());
+			data.actorPointer->SetActorLocation(berthStart - 100 + berthVector * unrealBerthSize * positionScale);
+			data.actorPointer->SetActorScale3D(FVector (0.7f, 0.7f, 0.7f));
 
-	if (previousState.type != nextState.type) {
-		switch (previousState.type)
-		{
-		case VesselStateType::Berthed:
-			actorPointer->berthed();
-			break;
-		case VesselStateType::Idle:
-		case VesselStateType::Invalid:
-			actorPointer->atSea();
 			break;
 		default:
-
-			break;
+			return; //don't bother showing
 		}
+		
+		
+		break;
+	case VesselStateType::Idle:
+	case VesselStateType::Invalid:
+		data.actorPointer->atSea();
+		break;
+	default:
+
+		break;
 	}
 
 }
@@ -713,7 +768,7 @@ void ALevelController::animateEntity(AShip* actorPointer, const VesselState& pre
 //
 //		if (padIdentifier != -1) { // Now that we have determined  which Padwe are using, determine the position along the pad
 //				
-//			actorPointer->setPosition(position,
+//			actorPointer->setGeometry(position,
 //				getPadLength(TerminalId::NCT, padIdentifier),
 //				NCT_pads_start[padIdentifier]->GetActorLocation(),
 //				NCT_pads_end[padIdentifier]->GetActorLocation());
@@ -731,7 +786,7 @@ void ALevelController::animateEntity(const SimulationData<Stockpile>& data, floa
 	const StockpileState& nextState = (*data.stateWindow.second);
 
 	Stockpile::Id targetId = nextState.id;
-
+	
 	//get Padinfo
 	int padIdentifier = -1;
 	if (targetId.terminal == TerminalId::NCT) {
@@ -754,14 +809,19 @@ void ALevelController::animateEntity(const SimulationData<Stockpile>& data, floa
 	}
 	
 
-	if (padIdentifier != -1) { // Now that we have determined  which Padwe are using, determine the position along the pad
+	if (padIdentifier != -1) { // Now that we have determined  which Pad we are using, determine the position along the pad
 		//UE_LOG(LogTemp, Warning, TEXT("PAD IDENT IS %d"), padIdentifier);
 		auto padStart = NCT_pads_start[padIdentifier]->GetActorLocation();
 		auto padEnd = NCT_pads_end[padIdentifier]->GetActorLocation();
 
 		int padLength = getPadLength(TerminalId::NCT, padIdentifier);
+		double instantaneousAmount = previousState.amount + (nextState.amount - previousState.amount)*interpolationScale;
+		double pileProportion = instantaneousAmount / data.maximumAmount;
+
 		double padLengthScale = FVector::Dist(padEnd, padStart)/padLength;
-		actorPointer->setPosition(previousState.position, previousState.length,
+
+		double pileScale = (pileProportion*previousState.length*padLengthScale);
+		actorPointer->setGeometry(previousState.position, pileProportion, previousState.length,
 			padLength,
 			NCT_pads_start[padIdentifier]->GetActorLocation(),
 			NCT_pads_end[padIdentifier]->GetActorLocation());
@@ -770,12 +830,7 @@ void ALevelController::animateEntity(const SimulationData<Stockpile>& data, floa
 		//also set the rotation
 		actorPointer->SetActorRotation(NCT_pads_start[padIdentifier]->GetActorRotation());
 
-		double instantaneousAmount = previousState.amount + (nextState.amount - previousState.amount)*interpolationScale;
-
-		double pileProportion = instantaneousAmount/data.maximumAmount;
-		double pileScale = (pileProportion*previousState.length*padLengthScale);
-
-		actorPointer->setQuantity(float(pileScale));
+		//actorPointer->setQuantity(float(pileScale));
 		//switch (nextState.type)
 		//{
 		//case StockpileStateType::Created:
@@ -902,6 +957,7 @@ void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, 
 		actorPointer->SetActorTransform(makeTransform);
 	} else {
 		//do whatever to hide the train
+
 		actorPointer->SetActorHiddenInGame(true);
 		//actorPointer->SetActorEnableCollision(false);
 

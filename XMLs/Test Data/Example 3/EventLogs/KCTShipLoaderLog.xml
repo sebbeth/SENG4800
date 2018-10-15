@@ -1,0 +1,58 @@
+<events>
+    <SlOnMove shiploaderID="7.08" time="52.384181" pos="50.00"/>
+    <SlOnStopMove shiploaderID="7.08" time="52.465056" pos="195.58"/>
+    <SlStartVesselLoad shiploaderID="7.08" time="52.465056" pos="195.58" vesselID="1"/>
+    <SlLoadOpStart shiploaderID="7.08" time="52.465056" pos="195.58" stockpileID="KCT1.1"/>
+    <SlLoadStart shiploaderID="7.08" time="52.601272" pos="195.58" stockpileID="KCT1.1"/>
+    <SlLoadComp shiploaderID="7.08" time="53.259173" pos="195.58" stockpileID="KCT1.1" amount="5592.16"/>
+    <SlLoadOpComp shiploaderID="7.08" time="53.259173" pos="195.58" stockpileID="KCT1.1" amount="5592.16"/>
+    <SlLoadOpStart shiploaderID="7.08" time="55.300006" pos="195.58" stockpileID="KCT1.2"/>
+    <SlLoadStart shiploaderID="7.08" time="55.439909" pos="195.58" stockpileID="KCT1.2"/>
+    <SlHatchChangeStart shiploaderID="7.08" time="55.779067" pos="195.58"/>
+    <SlOnHatchChangeComplete shiploaderID="7.08" time="55.979067" pos="195.58"/>
+    <SlHatchChangeStart shiploaderID="7.08" time="56.776126" pos="195.58"/>
+    <SlOnHatchChangeComplete shiploaderID="7.08" time="56.976126" pos="195.58"/>
+    <SlHatchChangeStart shiploaderID="7.08" time="57.773185" pos="195.58"/>
+    <SlOnHatchChangeComplete shiploaderID="7.08" time="57.973185" pos="195.58"/>
+    <SlLoadComp shiploaderID="7.08" time="58.038835" pos="195.58" stockpileID="KCT1.2" amount="20000.00"/>
+    <SlLoadOpComp shiploaderID="7.08" time="58.038835" pos="195.58" stockpileID="KCT1.2" amount="20000.00"/>
+    <SlLoadOpStart shiploaderID="7.08" time="58.149669" pos="195.58" stockpileID="KCT1.4"/>
+    <SlLoadStart shiploaderID="7.08" time="58.299622" pos="195.58" stockpileID="KCT1.4"/>
+    <SlHatchChangeStart shiploaderID="7.08" time="59.277015" pos="195.58"/>
+    <SlOnHatchChangeComplete shiploaderID="7.08" time="59.477015" pos="195.58"/>
+    <SlHatchChangeStart shiploaderID="7.08" time="60.274074" pos="195.58"/>
+    <SlOnHatchChangeComplete shiploaderID="7.08" time="60.474074" pos="195.58"/>
+    <SlHatchChangeStart shiploaderID="7.08" time="61.271133" pos="195.58"/>
+    <SlOnHatchChangeComplete shiploaderID="7.08" time="61.471133" pos="195.58"/>
+    <SlHatchChangeStart shiploaderID="7.08" time="62.268192" pos="195.58"/>
+    <SlOnHatchChangeComplete shiploaderID="7.08" time="62.468192" pos="195.58"/>
+    <SlLoadComp shiploaderID="7.08" time="62.950612" pos="195.58" stockpileID="KCT1.4" amount="34941.93"/>
+    <SlLoadOpComp shiploaderID="7.08" time="62.950612" pos="195.58" stockpileID="KCT1.4" amount="34941.93"/>
+    <SlLoadOpStart shiploaderID="7.08" time="64.992001" pos="195.58" stockpileID="KCT1.3"/>
+    <SlLoadStart shiploaderID="7.08" time="65.135641" pos="195.58" stockpileID="KCT1.3"/>
+    <SlHatchChangeStart shiploaderID="7.08" time="65.990455" pos="195.58"/>
+    <SlOnHatchChangeComplete shiploaderID="7.08" time="66.190455" pos="195.58"/>
+    <SlHatchChangeStart shiploaderID="7.08" time="66.987514" pos="195.58"/>
+    <SlOnHatchChangeComplete shiploaderID="7.08" time="67.187514" pos="195.58"/>
+    <SlLoadComp shiploaderID="7.08" time="67.868019" pos="195.58" stockpileID="KCT1.3" amount="21000.00"/>
+    <SlLoadOpComp shiploaderID="7.08" time="67.868019" pos="195.58" stockpileID="KCT1.3" amount="21000.00"/>
+    <SlLoadOpStart shiploaderID="7.08" time="67.949964" pos="195.58" stockpileID="KCT1.1"/>
+    <SlLoadStart shiploaderID="7.08" time="68.086180" pos="195.58" stockpileID="KCT1.1"/>
+    <SlHatchChangeStart shiploaderID="7.08" time="68.464523" pos="195.58"/>
+    <SlOnHatchChangeComplete shiploaderID="7.08" time="68.664523" pos="195.58"/>
+    <SlHatchChangeStart shiploaderID="7.08" time="69.461582" pos="195.58"/>
+    <SlOnHatchChangeComplete shiploaderID="7.08" time="69.661582" pos="195.58"/>
+    <SlLoadComp shiploaderID="7.08" time="70.342087" pos="195.58" stockpileID="KCT1.1" amount="14407.84"/>
+    <SlLoadOpComp shiploaderID="7.08" time="70.342087" pos="195.58" stockpileID="KCT1.1" amount="20000.00"/>
+    <SlLoadOpStart shiploaderID="7.08" time="70.493476" pos="195.58" stockpileID="KCT1.4"/>
+    <SlLoadStart shiploaderID="7.08" time="70.643429" pos="195.58" stockpileID="KCT1.4"/>
+    <SlHatchChangeStart shiploaderID="7.08" time="71.320850" pos="195.58"/>
+    <SlOnHatchChangeComplete shiploaderID="7.08" time="71.520850" pos="195.58"/>
+    <SlStartVesselDraftSurvey shiploaderID="7.08" time="73.730457" pos="195.58" stockpileID="1"/>
+    <SlFinishVesselDraftSurvey shiploaderID="7.08" time="74.230457" pos="195.58" stockpileID="1"/>
+    <SlLoadComp shiploaderID="7.08" time="75.573791" pos="195.58" stockpileID="KCT1.4" amount="39658.07"/>
+    <SlLoadOpComp shiploaderID="7.08" time="75.573791" pos="195.58" stockpileID="KCT1.4" amount="74600.00"/>
+    <SlWrapUp shiploaderID="7.08" time="101.771676" pos="195.58"/>
+    <SlWrapUp shiploaderID="7.09" time="101.771676" pos="760.00"/>
+    <SlWrapUp shiploaderID="7.10" time="101.771676" pos="1480.00"/>
+</events>

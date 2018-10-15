@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "GameFramework/Actor.h"
+#include <map>
 //specialise this for each entity, specifying the associated actor type
 template<typename Entity>
 struct u_actor_type {
@@ -33,6 +34,24 @@ public:
 	SimulationData(const std::vector<typename Entity::AssociatedState>& states, Actor* actorPointer, bool isBeingRendered);
 };
 
+#include "../../ShipLoader.h"
+#include "../extraction/ShipLoader/Shiploader.h"
+
+template<>
+struct u_actor_type<Shiploader> {
+	using type = AShipLoader;
+};
+
+template<typename Entity>
+using DataMap = std::map<
+	typename Entity::Id,
+	SimulationData<Entity>
+>;
+
+template<typename... Entities>
+using DataMapTuple = std::tuple<DataMap<Entities>...>;
+
 template<typename _Entity>
 SimulationData<_Entity>::SimulationData(const std::vector<typename Entity::AssociatedState>& states, Actor* actorPointer, bool isBeingRendered) : states(states), stateWindow(this->states.begin(), this->states.begin()), actorPointer(actorPointer), isBeingRendered(isBeingRendered) {
 }
+

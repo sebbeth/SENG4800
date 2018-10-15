@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CoalStack.h"
 #include "GameFramework/Actor.h"
 #include "StackerReclaimer.generated.h"
 
@@ -25,9 +26,12 @@ public:
 
 	void setPosition(float position);
 	void setBaseRotation(float degrees);
+	void resetRotation();
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
-		void setRotation(int rotation);
+		void setRotation(float rotation);
+
+
 
 	void setMaterial(int choice);
 
@@ -39,7 +43,8 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "ConveyorBelt")
 		void ReclaimMaterial();
-
+	
+	void rotateMastToCoalStack(ACoalStack* coalStack);
 
 	FVector trackNodeA;
 	FVector trackNodeB;
