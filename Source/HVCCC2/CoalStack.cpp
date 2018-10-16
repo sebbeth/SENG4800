@@ -20,7 +20,7 @@ void ACoalStack::BeginPlay()
 
 
 void ACoalStack::setGeometry(float position, float proportionFilled, float pileLength, float padLength, FVector padStart, FVector padEnd) {
-	if (proportionFilled == 0.0f) {
+	if (proportionFilled < 0.01f) {
 		SetActorHiddenInGame(true);
 	} else {
 		FVector padVector = padEnd - padStart;
