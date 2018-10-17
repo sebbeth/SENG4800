@@ -1,0 +1,17 @@
+<railLog>
+	<railEvents>
+        <Track direction="DOWN" sectionID="sec_ScholeyIslington" trackID="trk_ScholeyIslington_Down"/>
+        <TrainEnterTrack cycleID="475" direction="DOWN" sectionID="sec_ScholeyIslington" speed="17340.0" time="352.9471831046467" trackID="trk_ScholeyIslington_Down" trainID="train2"/>
+        <TrainHeadLeaveTrack cycleID="475" direction="UP" sectionID="sec_ScholeyIslington" speed="18628.35829843455" time="352.96384977131333" trackID="trk_ScholeyIslington_Down" trainID="train2"/>
+        <TrainTailLeaveTrack cycleID="475" direction="UP" sectionID="sec_ScholeyIslington" speed="51397.96390263041" time="352.9898271134695" trackID="trk_ScholeyIslington_Down" trainID="train2"/>
+        <TrainEnterTrack cycleID="514" direction="DOWN" sectionID="sec_ScholeyIslington" speed="17340.0" time="372.48911161123317" trackID="trk_ScholeyIslington_Down" trainID="train2"/>
+        <TrainHeadLeaveTrack cycleID="514" direction="UP" sectionID="sec_ScholeyIslington" speed="18628.35829843455" time="372.5057782778998" trackID="trk_ScholeyIslington_Down" trainID="train2"/>
+        <TrainTailLeaveTrack cycleID="514" direction="UP" sectionID="sec_ScholeyIslington" speed="51397.96390263041" time="372.531755620056" trackID="trk_ScholeyIslington_Down" trainID="train2"/>
+        <TrainEnterTrack cycleID="539" direction="DOWN" sectionID="sec_ScholeyIslington" speed="17340.0" time="409.17598142682255" trackID="trk_ScholeyIslington_Down" trainID="train13"/>
+        <TrainHeadLeaveTrack cycleID="539" direction="UP" sectionID="sec_ScholeyIslington" speed="18628.35829843455" time="409.1926480934892" trackID="trk_ScholeyIslington_Down" trainID="train13"/>
+        <TrainTailLeaveTrack cycleID="539" direction="UP" sectionID="sec_ScholeyIslington" speed="51397.96390263041" time="409.2186254356454" trackID="trk_ScholeyIslington_Down" trainID="train13"/>
+        <TrainEnterTrack cycleID="549" direction="DOWN" sectionID="sec_ScholeyIslington" speed="17340.0" time="414.96615226215107" trackID="trk_ScholeyIslington_Down" trainID="train2"/>
+        <TrainHeadLeaveTrack cycleID="549" direction="UP" sectionID="sec_ScholeyIslington" speed="18628.35829843455" time="414.9828189288177" trackID="trk_ScholeyIslington_Down" trainID="train2"/>
+        <TrainTailLeaveTrack cycleID="549" direction="UP" sectionID="sec_ScholeyIslington" speed="51397.96390263041" time="415.0087962709739" trackID="trk_ScholeyIslington_Down" trainID="train2"/>
+	</railEvents>
+</railLog>

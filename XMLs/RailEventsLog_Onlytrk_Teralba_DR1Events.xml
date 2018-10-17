@@ -1,0 +1,47 @@
+<railLog>
+	<railEvents>
+        <Track direction="UP" sectionID="sec_Teralba_DepartureRd" trackID="trk_Teralba_DR1"/>
+        <TrainEnterTrack cycleID="475" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.23999599900395" time="349.76526363961835" trackID="trk_Teralba_DR1" trainID="train2"/>
+        <TrainHeadLeaveTrack cycleID="475" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="352.39801617515894" trackID="trk_Teralba_DR1" trainID="train2"/>
+        <TrainTailLeaveTrack cycleID="475" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="352.5078178043186" trackID="trk_Teralba_DR1" trainID="train2"/>
+        <TrainEnterTrack cycleID="514" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.179309041954" time="368.8251674684161" trackID="trk_Teralba_DR1" trainID="train2"/>
+        <TrainHeadLeaveTrack cycleID="514" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="371.93994468174543" trackID="trk_Teralba_DR1" trainID="train2"/>
+        <TrainTailLeaveTrack cycleID="514" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="372.0497463109051" trackID="trk_Teralba_DR1" trainID="train2"/>
+        <TrainEnterTrack cycleID="539" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.3789719901036" time="405.99478086645433" trackID="trk_Teralba_DR1" trainID="train13"/>
+        <TrainHeadLeaveTrack cycleID="539" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="408.6268144973348" trackID="trk_Teralba_DR1" trainID="train13"/>
+        <TrainTailLeaveTrack cycleID="539" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="408.7366161264945" trackID="trk_Teralba_DR1" trainID="train13"/>
+        <TrainEnterTrack cycleID="549" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.16381265689904" time="411.10517448016645" trackID="trk_Teralba_DR1" trainID="train2"/>
+        <TrainHeadLeaveTrack cycleID="549" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="414.41698533266333" trackID="trk_Teralba_DR1" trainID="train2"/>
+        <TrainTailLeaveTrack cycleID="549" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="414.526786961823" trackID="trk_Teralba_DR1" trainID="train2"/>
+        <TrainEnterTrack cycleID="608" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.1715504784742" time="455.0889628751778" trackID="trk_Teralba_DR1" trainID="train29"/>
+        <TrainHeadLeaveTrack cycleID="608" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="457.72206961699703" trackID="trk_Teralba_DR1" trainID="train29"/>
+        <TrainTailLeaveTrack cycleID="608" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="457.8318712461567" trackID="trk_Teralba_DR1" trainID="train29"/>
+        <TrainEnterTrack cycleID="852" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.2079088423018" time="672.8177401681701" trackID="trk_Teralba_DR1" trainID="train24"/>
+        <TrainHeadLeaveTrack cycleID="852" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="675.4506587430338" trackID="trk_Teralba_DR1" trainID="train24"/>
+        <TrainTailLeaveTrack cycleID="852" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="675.5604603721936" trackID="trk_Teralba_DR1" trainID="train24"/>
+        <TrainEnterTrack cycleID="884" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.25109851813846" time="704.2777212139931" trackID="trk_Teralba_DR1" trainID="train29"/>
+        <TrainHeadLeaveTrack cycleID="884" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="706.9104163030003" trackID="trk_Teralba_DR1" trainID="train29"/>
+        <TrainTailLeaveTrack cycleID="884" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="707.02021793216" trackID="trk_Teralba_DR1" trainID="train29"/>
+        <TrainEnterTrack cycleID="897" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.34989108200506" time="731.9775376495397" trackID="trk_Teralba_DR1" trainID="train24"/>
+        <TrainHeadLeaveTrack cycleID="897" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="734.6097216791871" trackID="trk_Teralba_DR1" trainID="train24"/>
+        <TrainTailLeaveTrack cycleID="897" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="734.7195233083469" trackID="trk_Teralba_DR1" trainID="train24"/>
+        <TrainEnterTrack cycleID="988" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.18806014014774" time="821.4767003838919" trackID="trk_Teralba_DR1" trainID="train29"/>
+        <TrainHeadLeaveTrack cycleID="988" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="824.1097216791871" trackID="trk_Teralba_DR1" trainID="train29"/>
+        <TrainTailLeaveTrack cycleID="988" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="824.2195233083469" trackID="trk_Teralba_DR1" trainID="train29"/>
+        <TrainEnterTrack cycleID="1000" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.21309607891885" time="829.7876123292885" trackID="trk_Teralba_DR1" trainID="train24"/>
+        <TrainHeadLeaveTrack cycleID="1000" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="832.4205040606556" trackID="trk_Teralba_DR1" trainID="train24"/>
+        <TrainTailLeaveTrack cycleID="1000" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="832.5303056898153" trackID="trk_Teralba_DR1" trainID="train24"/>
+        <TrainEnterTrack cycleID="1041" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.1643993634212" time="886.713204829299" trackID="trk_Teralba_DR1" trainID="train29"/>
+        <TrainHeadLeaveTrack cycleID="1041" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="889.346348583795" trackID="trk_Teralba_DR1" trainID="train29"/>
+        <TrainTailLeaveTrack cycleID="1041" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="889.4561502129548" trackID="trk_Teralba_DR1" trainID="train29"/>
+        <TrainEnterTrack cycleID="1046" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.22280399636156" time="891.1640864725532" trackID="trk_Teralba_DR1" trainID="train24"/>
+        <TrainHeadLeaveTrack cycleID="1046" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="893.9593078721907" trackID="trk_Teralba_DR1" trainID="train24"/>
+        <TrainTailLeaveTrack cycleID="1046" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="894.0691095013505" trackID="trk_Teralba_DR1" trainID="train24"/>
+        <TrainEnterTrack cycleID="1048" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.1849534881568" time="895.2242244890189" trackID="trk_Teralba_DR1" trainID="train13"/>
+        <TrainHeadLeaveTrack cycleID="1048" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="897.8572618625066" trackID="trk_Teralba_DR1" trainID="train13"/>
+        <TrainTailLeaveTrack cycleID="1048" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="897.9670634916663" trackID="trk_Teralba_DR1" trainID="train13"/>
+        <TrainEnterTrack cycleID="1060" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="501.25746733039034" time="913.0584050445009" trackID="trk_Teralba_DR1" trainID="train2"/>
+        <TrainHeadLeaveTrack cycleID="1060" direction="UP" sectionID="sec_Teralba_DepartureRd" speed="4521.076193431142" time="915.6910671812176" trackID="trk_Teralba_DR1" trainID="train2"/>
+        <TrainTailLeaveTrack cycleID="1060" direction="DOWN" sectionID="sec_Teralba_DepartureRd" speed="36054.2645766857" time="915.8008688103773" trackID="trk_Teralba_DR1" trainID="train2"/>
+	</railEvents>
+</railLog>

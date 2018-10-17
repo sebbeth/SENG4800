@@ -1,0 +1,29 @@
+<railLog>
+	<railEvents>
+        <Track direction="DOWN" sectionID="sec_Drayton" trackID="trk_Drayton_Down"/>
+        <TrainEnterTrack cycleID="120" direction="DOWN" sectionID="sec_Drayton" speed="32147.368421052637" time="52.163184249279965" trackID="trk_Drayton_Down" trainID="train12"/>
+        <TrainHeadLeaveTrack cycleID="120" direction="UP" sectionID="sec_Drayton" speed="17249.453633769157" time="52.56035459514469" trackID="trk_Drayton_Down" trainID="train12"/>
+        <TrainTailLeaveTrack cycleID="120" direction="DOWN" sectionID="sec_Drayton" speed="21276.0" time="52.62964891127554" trackID="trk_Drayton_Down" trainID="train12"/>
+        <TrainEnterTrack cycleID="140" direction="DOWN" sectionID="sec_Drayton" speed="32147.368421052637" time="68.76220968813601" trackID="trk_Drayton_Down" trainID="train44"/>
+        <TrainHeadLeaveTrack cycleID="140" direction="UP" sectionID="sec_Drayton" speed="17249.453633769157" time="68.90340380990297" trackID="trk_Drayton_Down" trainID="train44"/>
+        <TrainTailLeaveTrack cycleID="140" direction="DOWN" sectionID="sec_Drayton" speed="21276.0" time="68.96423788914719" trackID="trk_Drayton_Down" trainID="train44"/>
+        <TrainEnterTrack cycleID="279" direction="DOWN" sectionID="sec_Drayton" speed="32147.368421052637" time="174.84264835220415" trackID="trk_Drayton_Down" trainID="train22"/>
+        <TrainHeadLeaveTrack cycleID="279" direction="UP" sectionID="sec_Drayton" speed="17249.453633769157" time="177.06018341793947" trackID="trk_Drayton_Down" trainID="train22"/>
+        <TrainTailLeaveTrack cycleID="279" direction="DOWN" sectionID="sec_Drayton" speed="21276.0" time="177.13041776039105" trackID="trk_Drayton_Down" trainID="train22"/>
+        <TrainEnterTrack cycleID="412" direction="DOWN" sectionID="sec_Drayton" speed="32147.368421052637" time="279.0763406721185" trackID="trk_Drayton_Down" trainID="train0"/>
+        <TrainHeadLeaveTrack cycleID="412" direction="UP" sectionID="sec_Drayton" speed="17249.453633769157" time="279.53271820005875" trackID="trk_Drayton_Down" trainID="train0"/>
+        <TrainTailLeaveTrack cycleID="412" direction="DOWN" sectionID="sec_Drayton" speed="21276.0" time="279.60295254251037" trackID="trk_Drayton_Down" trainID="train0"/>
+        <TrainEnterTrack cycleID="425" direction="DOWN" sectionID="sec_Drayton" speed="32147.368421052637" time="301.0231482295112" trackID="trk_Drayton_Down" trainID="train28"/>
+        <TrainHeadLeaveTrack cycleID="425" direction="UP" sectionID="sec_Drayton" speed="21276.0" time="301.08648156284454" trackID="trk_Drayton_Down" trainID="train28"/>
+        <TrainTailLeaveTrack cycleID="425" direction="DOWN" sectionID="sec_Drayton" speed="21276.0" time="301.1513433789754" trackID="trk_Drayton_Down" trainID="train28"/>
+        <TrainEnterTrack cycleID="426" direction="DOWN" sectionID="sec_Drayton" speed="32147.368421052637" time="301.31713211509475" trackID="trk_Drayton_Down" trainID="train3"/>
+        <TrainHeadLeaveTrack cycleID="426" direction="UP" sectionID="sec_Drayton" speed="21276.0" time="301.3804654484281" trackID="trk_Drayton_Down" trainID="train3"/>
+        <TrainTailLeaveTrack cycleID="426" direction="DOWN" sectionID="sec_Drayton" speed="21276.0" time="301.4368670276723" trackID="trk_Drayton_Down" trainID="train3"/>
+        <TrainEnterTrack cycleID="489" direction="DOWN" sectionID="sec_Drayton" speed="32147.368421052637" time="359.72115076702835" trackID="trk_Drayton_Down" trainID="train53"/>
+        <TrainHeadLeaveTrack cycleID="489" direction="UP" sectionID="sec_Drayton" speed="17249.453633769157" time="361.24747027055867" trackID="trk_Drayton_Down" trainID="train53"/>
+        <TrainTailLeaveTrack cycleID="489" direction="DOWN" sectionID="sec_Drayton" speed="21276.0" time="361.3083043498029" trackID="trk_Drayton_Down" trainID="train53"/>
+        <TrainEnterTrack cycleID="1125" direction="DOWN" sectionID="sec_Drayton" speed="32147.368421052637" time="1056.6267863460905" trackID="trk_Drayton_Down" trainID="train57"/>
+        <TrainHeadLeaveTrack cycleID="1125" direction="UP" sectionID="sec_Drayton" speed="14311.5054332343" time="1061.7633882728755" trackID="trk_Drayton_Down" trainID="train57"/>
+        <TrainTailLeaveTrack cycleID="1125" direction="UP" sectionID="sec_Drayton" speed="14850.0" time="1061.8540241104176" trackID="trk_Drayton_Down" trainID="train57"/>
+	</railEvents>
+</railLog>

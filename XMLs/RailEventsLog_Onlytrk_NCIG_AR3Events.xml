@@ -1,0 +1,50 @@
+<railLog>
+	<railEvents>
+        <Track direction="UP" sectionID="sec_NCIG_ArrivalRds" trackID="trk_NCIG_AR3"/>
+        <TrainEnterTrack cycleID="99" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="47.33032149364716" trackID="trk_NCIG_AR3" trainID="train45"/>
+        <TrainHeadLeaveTrack cycleID="99" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="4898.979485566357" time="48.53195199408657" trackID="trk_NCIG_AR3" trainID="train45"/>
+        <TrainTailLeaveTrack cycleID="99" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1274.9999999999968" time="49.46096157500893" trackID="trk_NCIG_AR3" trainID="train45"/>
+        <TrainEnterTrack cycleID="328" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="231.19678044559623" trackID="trk_NCIG_AR3" trainID="train53"/>
+        <TrainHeadLeaveTrack cycleID="328" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="4898.979485566357" time="231.63478034938032" trackID="trk_NCIG_AR3" trainID="train53"/>
+        <TrainTailLeaveTrack cycleID="328" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1291.1392405063332" time="233.88639988609006" trackID="trk_NCIG_AR3" trainID="train53"/>
+        <TrainEnterTrack cycleID="373" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="265.22246029529344" trackID="trk_NCIG_AR3" trainID="train37"/>
+        <TrainHeadLeaveTrack cycleID="373" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="4898.979485566357" time="266.91059947831195" trackID="trk_NCIG_AR3" trainID="train37"/>
+        <TrainTailLeaveTrack cycleID="373" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1289.010989010991" time="267.9127652782548" trackID="trk_NCIG_AR3" trainID="train37"/>
+        <TrainEnterTrack cycleID="422" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="299.39828707957" trackID="trk_NCIG_AR3" trainID="train17"/>
+        <TrainHeadLeaveTrack cycleID="422" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="11250.0" time="299.4347549586297" trackID="trk_NCIG_AR3" trainID="train17"/>
+        <TrainTailLeaveTrack cycleID="422" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1250.000000000006" time="300.08482093085183" trackID="trk_NCIG_AR3" trainID="train17"/>
+        <TrainEnterTrack cycleID="432" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="307.8787965239082" trackID="trk_NCIG_AR3" trainID="train40"/>
+        <TrainHeadLeaveTrack cycleID="432" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="4898.979485566357" time="308.42378030451533" trackID="trk_NCIG_AR3" trainID="train40"/>
+        <TrainTailLeaveTrack cycleID="432" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1284.883720930223" time="309.64051553098625" trackID="trk_NCIG_AR3" trainID="train40"/>
+        <TrainEnterTrack cycleID="535" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="416.2589737316455" trackID="trk_NCIG_AR3" trainID="train52"/>
+        <TrainHeadLeaveTrack cycleID="535" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="11250.0" time="416.29544161070515" trackID="trk_NCIG_AR3" trainID="train52"/>
+        <TrainTailLeaveTrack cycleID="535" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1284.8837209302117" time="417.4911292521078" trackID="trk_NCIG_AR3" trainID="train52"/>
+        <TrainEnterTrack cycleID="552" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="426.20554845387534" trackID="trk_NCIG_AR3" trainID="train18"/>
+        <TrainHeadLeaveTrack cycleID="552" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="11250.0" time="426.242016332935" trackID="trk_NCIG_AR3" trainID="train18"/>
+        <TrainTailLeaveTrack cycleID="552" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1274.9999999999845" time="427.69816314216644" trackID="trk_NCIG_AR3" trainID="train18"/>
+        <TrainEnterTrack cycleID="667" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="527.3852513525958" trackID="trk_NCIG_AR3" trainID="train54"/>
+        <TrainHeadLeaveTrack cycleID="667" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="4898.979485566357" time="528.2932528435632" trackID="trk_NCIG_AR3" trainID="train54"/>
+        <TrainTailLeaveTrack cycleID="667" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1284.8837209302117" time="529.8332924075744" trackID="trk_NCIG_AR3" trainID="train54"/>
+        <TrainEnterTrack cycleID="705" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="529.912060981558" trackID="trk_NCIG_AR3" trainID="train19"/>
+        <TrainHeadLeaveTrack cycleID="705" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="4898.979485566357" time="533.2919369991896" trackID="trk_NCIG_AR3" trainID="train19"/>
+        <TrainTailLeaveTrack cycleID="705" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1284.8837209302621" time="534.0385795017038" trackID="trk_NCIG_AR3" trainID="train19"/>
+        <TrainEnterTrack cycleID="713" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="539.176321760644" trackID="trk_NCIG_AR3" trainID="train26"/>
+        <TrainHeadLeaveTrack cycleID="713" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="4898.979485566357" time="539.6418390032189" trackID="trk_NCIG_AR3" trainID="train26"/>
+        <TrainTailLeaveTrack cycleID="713" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1307.692307692354" time="540.4151894414249" trackID="trk_NCIG_AR3" trainID="train26"/>
+        <TrainEnterTrack cycleID="736" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="584.2228651495633" trackID="trk_NCIG_AR3" trainID="train45"/>
+        <TrainHeadLeaveTrack cycleID="736" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="4898.979485566357" time="585.9465005257563" trackID="trk_NCIG_AR3" trainID="train45"/>
+        <TrainTailLeaveTrack cycleID="736" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1275.0000000000289" time="586.6585724906525" trackID="trk_NCIG_AR3" trainID="train45"/>
+        <TrainEnterTrack cycleID="742" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="587.8071388158723" trackID="trk_NCIG_AR3" trainID="train34"/>
+        <TrainHeadLeaveTrack cycleID="742" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="4898.979485566357" time="588.8275926530694" trackID="trk_NCIG_AR3" trainID="train34"/>
+        <TrainTailLeaveTrack cycleID="742" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1289.0109890110014" time="589.6394049176591" trackID="trk_NCIG_AR3" trainID="train34"/>
+        <TrainEnterTrack cycleID="811" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="628.7221962322915" trackID="trk_NCIG_AR3" trainID="train5"/>
+        <TrainHeadLeaveTrack cycleID="811" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="11250.0" time="628.7586641113512" trackID="trk_NCIG_AR3" trainID="train5"/>
+        <TrainTailLeaveTrack cycleID="811" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="11250.0" time="628.7853307780179" trackID="trk_NCIG_AR3" trainID="train5"/>
+        <TrainEnterTrack cycleID="993" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="828.0660032512301" trackID="trk_NCIG_AR3" trainID="train46"/>
+        <TrainHeadLeaveTrack cycleID="993" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="4898.979485566357" time="829.0435537899721" trackID="trk_NCIG_AR3" trainID="train46"/>
+        <TrainTailLeaveTrack cycleID="993" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1284.883720930204" time="829.8285970972514" trackID="trk_NCIG_AR3" trainID="train46"/>
+        <TrainEnterTrack cycleID="1062" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="30311.771603261175" time="923.127817223149" trackID="trk_NCIG_AR3" trainID="train40"/>
+        <TrainHeadLeaveTrack cycleID="1062" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="4898.979485566357" time="928.2453411086709" trackID="trk_NCIG_AR3" trainID="train40"/>
+        <TrainTailLeaveTrack cycleID="1062" direction="UP" sectionID="sec_NCIG_ArrivalRds" speed="1284.883720930204" time="928.9919836111851" trackID="trk_NCIG_AR3" trainID="train40"/>
+	</railEvents>
+</railLog>

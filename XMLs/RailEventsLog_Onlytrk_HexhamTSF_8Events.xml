@@ -1,0 +1,50 @@
+<railLog>
+	<railEvents>
+        <Track direction="DOWN" sectionID="sec_HexhamTSF" trackID="trk_HexhamTSF_8"/>
+        <TrainEnterTrack cycleID="250" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="160.6373754784685" trackID="trk_HexhamTSF_8" trainID="train33"/>
+        <TrainHeadLeaveTrack cycleID="250" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="164.72070881180184" trackID="trk_HexhamTSF_8" trainID="train33"/>
+        <TrainTailLeaveTrack cycleID="250" direction="DOWN" sectionID="sec_HexhamTSF" speed="44144.26574736108" time="164.8033929895133" trackID="trk_HexhamTSF_8" trainID="train33"/>
+        <TrainEnterTrack cycleID="280" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="174.8560449583511" trackID="trk_HexhamTSF_8" trainID="train36"/>
+        <TrainHeadLeaveTrack cycleID="280" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="178.93937829168445" trackID="trk_HexhamTSF_8" trainID="train36"/>
+        <TrainTailLeaveTrack cycleID="280" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="178.98909979237246" trackID="trk_HexhamTSF_8" trainID="train36"/>
+        <TrainEnterTrack cycleID="304" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="187.69622007345544" trackID="trk_HexhamTSF_8" trainID="train49"/>
+        <TrainHeadLeaveTrack cycleID="304" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="191.77955340678878" trackID="trk_HexhamTSF_8" trainID="train49"/>
+        <TrainTailLeaveTrack cycleID="304" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="191.82701661640894" trackID="trk_HexhamTSF_8" trainID="train49"/>
+        <TrainEnterTrack cycleID="369" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="247.83487266612977" trackID="trk_HexhamTSF_8" trainID="train39"/>
+        <TrainHeadLeaveTrack cycleID="369" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="251.9182059994631" trackID="trk_HexhamTSF_8" trainID="train39"/>
+        <TrainTailLeaveTrack cycleID="369" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="251.96341091801546" trackID="trk_HexhamTSF_8" trainID="train39"/>
+        <TrainEnterTrack cycleID="400" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="260.3177164247214" trackID="trk_HexhamTSF_8" trainID="train22"/>
+        <TrainHeadLeaveTrack cycleID="400" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="264.40104975805474" trackID="trk_HexhamTSF_8" trainID="train22"/>
+        <TrainTailLeaveTrack cycleID="400" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="264.4507712587427" trackID="trk_HexhamTSF_8" trainID="train22"/>
+        <TrainEnterTrack cycleID="443" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="291.7701673167246" trackID="trk_HexhamTSF_8" trainID="train39"/>
+        <TrainHeadLeaveTrack cycleID="443" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="295.8535006500579" trackID="trk_HexhamTSF_8" trainID="train39"/>
+        <TrainTailLeaveTrack cycleID="443" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="295.8987055686102" trackID="trk_HexhamTSF_8" trainID="train39"/>
+        <TrainEnterTrack cycleID="486" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="340.62664487607736" trackID="trk_HexhamTSF_8" trainID="train48"/>
+        <TrainHeadLeaveTrack cycleID="486" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="344.7099782094107" trackID="trk_HexhamTSF_8" trainID="train48"/>
+        <TrainTailLeaveTrack cycleID="486" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="344.75518312796294" trackID="trk_HexhamTSF_8" trainID="train48"/>
+        <TrainEnterTrack cycleID="503" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="348.62113157388455" trackID="trk_HexhamTSF_8" trainID="train7"/>
+        <TrainHeadLeaveTrack cycleID="503" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="352.70446490721787" trackID="trk_HexhamTSF_8" trainID="train7"/>
+        <TrainTailLeaveTrack cycleID="503" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="352.7496698257701" trackID="trk_HexhamTSF_8" trainID="train7"/>
+        <TrainEnterTrack cycleID="565" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="410.7530360987888" trackID="trk_HexhamTSF_8" trainID="train58"/>
+        <TrainHeadLeaveTrack cycleID="565" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="414.8363694321221" trackID="trk_HexhamTSF_8" trainID="train58"/>
+        <TrainTailLeaveTrack cycleID="565" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="414.88383264174223" trackID="trk_HexhamTSF_8" trainID="train58"/>
+        <TrainEnterTrack cycleID="621" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="462.70992380978436" trackID="trk_HexhamTSF_8" trainID="train33"/>
+        <TrainHeadLeaveTrack cycleID="621" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="466.79325714311767" trackID="trk_HexhamTSF_8" trainID="train33"/>
+        <TrainTailLeaveTrack cycleID="621" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="466.8429786438056" trackID="trk_HexhamTSF_8" trainID="train33"/>
+        <TrainEnterTrack cycleID="685" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="518.8541321498474" trackID="trk_HexhamTSF_8" trainID="train7"/>
+        <TrainHeadLeaveTrack cycleID="685" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="522.9374654831807" trackID="trk_HexhamTSF_8" trainID="train7"/>
+        <TrainTailLeaveTrack cycleID="685" direction="DOWN" sectionID="sec_HexhamTSF" speed="44144.26574736108" time="523.0331693411464" trackID="trk_HexhamTSF_8" trainID="train7"/>
+        <TrainEnterTrack cycleID="855" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="670.4787573132918" trackID="trk_HexhamTSF_8" trainID="train27"/>
+        <TrainHeadLeaveTrack cycleID="855" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="674.5620906466252" trackID="trk_HexhamTSF_8" trainID="train27"/>
+        <TrainTailLeaveTrack cycleID="855" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="674.6118121473131" trackID="trk_HexhamTSF_8" trainID="train27"/>
+        <TrainEnterTrack cycleID="919" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="735.7960923983283" trackID="trk_HexhamTSF_8" trainID="train45"/>
+        <TrainHeadLeaveTrack cycleID="919" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="739.8794257316616" trackID="trk_HexhamTSF_8" trainID="train45"/>
+        <TrainTailLeaveTrack cycleID="919" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="739.924630650214" trackID="trk_HexhamTSF_8" trainID="train45"/>
+        <TrainEnterTrack cycleID="962" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="786.613362701396" trackID="trk_HexhamTSF_8" trainID="train54"/>
+        <TrainHeadLeaveTrack cycleID="962" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="790.6966960347294" trackID="trk_HexhamTSF_8" trainID="train54"/>
+        <TrainTailLeaveTrack cycleID="962" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="790.7441592443496" trackID="trk_HexhamTSF_8" trainID="train54"/>
+        <TrainEnterTrack cycleID="974" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="797.2336548487887" trackID="trk_HexhamTSF_8" trainID="train52"/>
+        <TrainHeadLeaveTrack cycleID="974" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="801.316988182122" trackID="trk_HexhamTSF_8" trainID="train52"/>
+        <TrainTailLeaveTrack cycleID="974" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="801.3644513917423" trackID="trk_HexhamTSF_8" trainID="train52"/>
+	</railEvents>
+</railLog>

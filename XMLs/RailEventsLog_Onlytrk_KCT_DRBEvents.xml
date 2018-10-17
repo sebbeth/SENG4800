@@ -1,0 +1,8 @@
+<railLog>
+	<railEvents>
+        <Track direction="UP" sectionID="sec_KCT_DRA_B" trackID="trk_KCT_DRB"/>
+        <TrainEnterTrack cycleID="416" direction="UP" sectionID="sec_KCT_DRA_B" speed="1159.0909090908858" time="290.5238965424317" trackID="trk_KCT_DRB" trainID="train16"/>
+        <TrainHeadLeaveTrack cycleID="450" direction="UP" sectionID="sec_KCT_DRA_B" speed="0.2" time="293.39772898910394" trackID="trk_KCT_DRB" trainID="train16"/>
+        <TrainTailLeaveTrack cycleID="450" direction="UP" sectionID="sec_KCT_DRA_B" speed="38326.99619771863" time="293.40555637005633" trackID="trk_KCT_DRB" trainID="train16"/>
+	</railEvents>
+</railLog>

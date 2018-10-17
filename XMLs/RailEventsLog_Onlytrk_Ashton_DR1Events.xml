@@ -1,0 +1,44 @@
+<railLog>
+	<railEvents>
+        <Track direction="UP" sectionID="sec_Ashton_DepartureRd" trackID="trk_Ashton_DR1"/>
+        <TrainEnterTrack cycleID="94" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="455.41586070703164" time="37.11684677946129" trackID="trk_Ashton_DR1" trainID="train40"/>
+        <TrainHeadLeaveTrack cycleID="94" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="4898.979485566357" time="40.18833081154376" trackID="trk_Ashton_DR1" trainID="train40"/>
+        <TrainTailLeaveTrack cycleID="94" direction="DOWN" sectionID="sec_Ashton_DepartureRd" speed="42217.13748326919" time="40.22273273523253" trackID="trk_Ashton_DR1" trainID="train40"/>
+        <TrainEnterTrack cycleID="99" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="451.9941929528618" time="41.188437967964234" trackID="trk_Ashton_DR1" trainID="train45"/>
+        <TrainHeadLeaveTrack cycleID="99" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="4898.979485566357" time="44.016387149060385" trackID="trk_Ashton_DR1" trainID="train45"/>
+        <TrainTailLeaveTrack cycleID="99" direction="DOWN" sectionID="sec_Ashton_DepartureRd" speed="42217.13748326919" time="44.0484203664379" trackID="trk_Ashton_DR1" trainID="train45"/>
+        <TrainEnterTrack cycleID="113" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="455.4131446495749" time="45.059894021096035" trackID="trk_Ashton_DR1" trainID="train58"/>
+        <TrainHeadLeaveTrack cycleID="113" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="4898.979485566357" time="48.01212405601235" trackID="trk_Ashton_DR1" trainID="train58"/>
+        <TrainTailLeaveTrack cycleID="113" direction="DOWN" sectionID="sec_Ashton_DepartureRd" speed="42217.13748326919" time="48.04652597970112" trackID="trk_Ashton_DR1" trainID="train58"/>
+        <TrainEnterTrack cycleID="180" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="455.45214338693404" time="88.02702438858162" trackID="trk_Ashton_DR1" trainID="train46"/>
+        <TrainHeadLeaveTrack cycleID="180" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="4898.979485566357" time="90.90910679099704" trackID="trk_Ashton_DR1" trainID="train46"/>
+        <TrainTailLeaveTrack cycleID="180" direction="DOWN" sectionID="sec_Ashton_DepartureRd" speed="42217.13748326919" time="90.94350871468582" trackID="trk_Ashton_DR1" trainID="train46"/>
+        <TrainEnterTrack cycleID="184" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="455.3931133462933" time="92.23924093525257" trackID="trk_Ashton_DR1" trainID="train54"/>
+        <TrainHeadLeaveTrack cycleID="184" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="4898.979485566357" time="95.12169332531609" trackID="trk_Ashton_DR1" trainID="train54"/>
+        <TrainTailLeaveTrack cycleID="184" direction="DOWN" sectionID="sec_Ashton_DepartureRd" speed="42217.13748326919" time="95.15609524900486" trackID="trk_Ashton_DR1" trainID="train54"/>
+        <TrainEnterTrack cycleID="257" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="455.398752968711" time="160.6788056771295" trackID="trk_Ashton_DR1" trainID="train58"/>
+        <TrainHeadLeaveTrack cycleID="257" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="4898.979485566357" time="163.5612227151038" trackID="trk_Ashton_DR1" trainID="train58"/>
+        <TrainTailLeaveTrack cycleID="257" direction="DOWN" sectionID="sec_Ashton_DepartureRd" speed="42217.13748326919" time="163.5956246387926" trackID="trk_Ashton_DR1" trainID="train58"/>
+        <TrainEnterTrack cycleID="277" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="455.40999130356676" time="174.3765423892093" trackID="trk_Ashton_DR1" trainID="train58"/>
+        <TrainHeadLeaveTrack cycleID="277" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="4898.979485566357" time="177.25888898206105" trackID="trk_Ashton_DR1" trainID="train58"/>
+        <TrainTailLeaveTrack cycleID="277" direction="DOWN" sectionID="sec_Ashton_DepartureRd" speed="42217.13748326919" time="177.29329090574984" trackID="trk_Ashton_DR1" trainID="train58"/>
+        <TrainEnterTrack cycleID="322" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="455.48850627070334" time="203.28225302309716" trackID="trk_Ashton_DR1" trainID="train40"/>
+        <TrainHeadLeaveTrack cycleID="322" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="4898.979485566357" time="206.3110709072212" trackID="trk_Ashton_DR1" trainID="train40"/>
+        <TrainTailLeaveTrack cycleID="322" direction="DOWN" sectionID="sec_Ashton_DepartureRd" speed="42217.13748326919" time="206.34547283090998" trackID="trk_Ashton_DR1" trainID="train40"/>
+        <TrainEnterTrack cycleID="335" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="455.4712951866999" time="207.3532507583802" trackID="trk_Ashton_DR1" trainID="train49"/>
+        <TrainHeadLeaveTrack cycleID="335" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="4898.979485566357" time="210.2352131420226" trackID="trk_Ashton_DR1" trainID="train49"/>
+        <TrainTailLeaveTrack cycleID="335" direction="DOWN" sectionID="sec_Ashton_DepartureRd" speed="42217.13748326919" time="210.26961506571138" trackID="trk_Ashton_DR1" trainID="train49"/>
+        <TrainEnterTrack cycleID="518" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="455.3848520764581" time="376.4309307117042" trackID="trk_Ashton_DR1" trainID="train8"/>
+        <TrainHeadLeaveTrack cycleID="518" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="4898.979485566357" time="379.50289495622513" trackID="trk_Ashton_DR1" trainID="train8"/>
+        <TrainTailLeaveTrack cycleID="518" direction="DOWN" sectionID="sec_Ashton_DepartureRd" speed="42217.13748326919" time="379.5372968799139" trackID="trk_Ashton_DR1" trainID="train8"/>
+        <TrainEnterTrack cycleID="531" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="451.91678624757145" time="395.843320335738" trackID="trk_Ashton_DR1" trainID="train18"/>
+        <TrainHeadLeaveTrack cycleID="531" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="4898.979485566357" time="398.5313543391001" trackID="trk_Ashton_DR1" trainID="train18"/>
+        <TrainTailLeaveTrack cycleID="531" direction="DOWN" sectionID="sec_Ashton_DepartureRd" speed="42217.13748326919" time="398.56338755647766" trackID="trk_Ashton_DR1" trainID="train18"/>
+        <TrainEnterTrack cycleID="554" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="455.4125618668509" time="413.4240580699884" trackID="trk_Ashton_DR1" trainID="train40"/>
+        <TrainHeadLeaveTrack cycleID="554" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="4898.979485566357" time="416.3272754974383" trackID="trk_Ashton_DR1" trainID="train40"/>
+        <TrainTailLeaveTrack cycleID="554" direction="DOWN" sectionID="sec_Ashton_DepartureRd" speed="42217.13748326919" time="416.36167742112707" trackID="trk_Ashton_DR1" trainID="train40"/>
+        <TrainEnterTrack cycleID="565" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="455.5172688074964" time="417.52023849317095" trackID="trk_Ashton_DR1" trainID="train58"/>
+        <TrainHeadLeaveTrack cycleID="565" direction="UP" sectionID="sec_Ashton_DepartureRd" speed="4898.979485566357" time="420.47428182568007" trackID="trk_Ashton_DR1" trainID="train58"/>
+        <TrainTailLeaveTrack cycleID="565" direction="DOWN" sectionID="sec_Ashton_DepartureRd" speed="42217.13748326919" time="420.50868374936886" trackID="trk_Ashton_DR1" trainID="train58"/>
+	</railEvents>
+</railLog>

@@ -1,0 +1,47 @@
+<railLog>
+	<railEvents>
+        <Track direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" trackID="trk_WerrisCreek_AR1"/>
+        <TrainEnterTrack cycleID="140" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="73.44916458804158" trackID="trk_WerrisCreek_AR1" trainID="train44"/>
+        <TrainHeadLeaveTrack cycleID="140" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="73.70083125470825" trackID="trk_WerrisCreek_AR1" trainID="train44"/>
+        <TrainTailLeaveTrack cycleID="140" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6671.463143436457" time="76.66988742339743" trackID="trk_WerrisCreek_AR1" trainID="train44"/>
+        <TrainEnterTrack cycleID="149" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="77.26014557049314" trackID="trk_WerrisCreek_AR1" trainID="train35"/>
+        <TrainHeadLeaveTrack cycleID="149" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="77.8031979901824" trackID="trk_WerrisCreek_AR1" trainID="train35"/>
+        <TrainTailLeaveTrack cycleID="149" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6671.463143436457" time="80.77225415827824" trackID="trk_WerrisCreek_AR1" trainID="train35"/>
+        <TrainEnterTrack cycleID="179" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="92.60495832164476" trackID="trk_WerrisCreek_AR1" trainID="train53"/>
+        <TrainHeadLeaveTrack cycleID="179" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="92.85662498831142" trackID="trk_WerrisCreek_AR1" trainID="train53"/>
+        <TrainTailLeaveTrack cycleID="179" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6671.463143436457" time="96.45680054189273" trackID="trk_WerrisCreek_AR1" trainID="train53"/>
+        <TrainEnterTrack cycleID="242" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="173.68755468704393" trackID="trk_WerrisCreek_AR1" trainID="train35"/>
+        <TrainHeadLeaveTrack cycleID="242" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="173.9392213537106" trackID="trk_WerrisCreek_AR1" trainID="train35"/>
+        <TrainTailLeaveTrack cycleID="242" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6671.463143436457" time="176.9082775221765" trackID="trk_WerrisCreek_AR1" trainID="train35"/>
+        <TrainEnterTrack cycleID="265" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="185.04744982213242" trackID="trk_WerrisCreek_AR1" trainID="train55"/>
+        <TrainHeadLeaveTrack cycleID="265" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="185.2991164887991" trackID="trk_WerrisCreek_AR1" trainID="train55"/>
+        <TrainTailLeaveTrack cycleID="265" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6671.463143436457" time="188.2681726572591" trackID="trk_WerrisCreek_AR1" trainID="train55"/>
+        <TrainEnterTrack cycleID="353" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="251.0516168406638" trackID="trk_WerrisCreek_AR1" trainID="train50"/>
+        <TrainHeadLeaveTrack cycleID="353" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="251.30328350733046" trackID="trk_WerrisCreek_AR1" trainID="train50"/>
+        <TrainTailLeaveTrack cycleID="353" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6671.463143436457" time="257.4327056474733" trackID="trk_WerrisCreek_AR1" trainID="train50"/>
+        <TrainEnterTrack cycleID="366" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="261.2838321098334" trackID="trk_WerrisCreek_AR1" trainID="train6"/>
+        <TrainHeadLeaveTrack cycleID="366" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="261.53549877650005" trackID="trk_WerrisCreek_AR1" trainID="train6"/>
+        <TrainTailLeaveTrack cycleID="366" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6707.689417069849" time="264.10274776129125" trackID="trk_WerrisCreek_AR1" trainID="train6"/>
+        <TrainEnterTrack cycleID="489" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="366.4159333307712" trackID="trk_WerrisCreek_AR1" trainID="train53"/>
+        <TrainHeadLeaveTrack cycleID="489" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="366.6675999974379" trackID="trk_WerrisCreek_AR1" trainID="train53"/>
+        <TrainTailLeaveTrack cycleID="489" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6671.463143436457" time="369.63665616974873" trackID="trk_WerrisCreek_AR1" trainID="train53"/>
+        <TrainEnterTrack cycleID="498" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="370.2916301262311" trackID="trk_WerrisCreek_AR1" trainID="train55"/>
+        <TrainHeadLeaveTrack cycleID="498" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="370.769966732912" trackID="trk_WerrisCreek_AR1" trainID="train55"/>
+        <TrainTailLeaveTrack cycleID="498" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6671.463143436457" time="373.73902290461626" trackID="trk_WerrisCreek_AR1" trainID="train55"/>
+        <TrainEnterTrack cycleID="586" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="444.16509177278283" trackID="trk_WerrisCreek_AR1" trainID="train55"/>
+        <TrainHeadLeaveTrack cycleID="586" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="444.4167584394495" trackID="trk_WerrisCreek_AR1" trainID="train55"/>
+        <TrainTailLeaveTrack cycleID="586" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6671.463143436457" time="447.3858146107717" trackID="trk_WerrisCreek_AR1" trainID="train55"/>
+        <TrainEnterTrack cycleID="599" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="452.12169032551765" trackID="trk_WerrisCreek_AR1" trainID="train14"/>
+        <TrainHeadLeaveTrack cycleID="599" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="452.3733569921843" trackID="trk_WerrisCreek_AR1" trainID="train14"/>
+        <TrainTailLeaveTrack cycleID="599" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6671.463143436457" time="455.3424131610792" trackID="trk_WerrisCreek_AR1" trainID="train14"/>
+        <TrainEnterTrack cycleID="741" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="576.4603088238796" trackID="trk_WerrisCreek_AR1" trainID="train3"/>
+        <TrainHeadLeaveTrack cycleID="741" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="576.7119754905463" trackID="trk_WerrisCreek_AR1" trainID="train3"/>
+        <TrainTailLeaveTrack cycleID="741" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6671.463143436457" time="579.6810316618444" trackID="trk_WerrisCreek_AR1" trainID="train3"/>
+        <TrainEnterTrack cycleID="771" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="595.3753562516974" trackID="trk_WerrisCreek_AR1" trainID="train53"/>
+        <TrainHeadLeaveTrack cycleID="771" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="595.6270229183641" trackID="trk_WerrisCreek_AR1" trainID="train53"/>
+        <TrainTailLeaveTrack cycleID="771" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6671.463143436457" time="598.5960790864378" trackID="trk_WerrisCreek_AR1" trainID="train53"/>
+        <TrainEnterTrack cycleID="830" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="8000.0" time="659.2915060344436" trackID="trk_WerrisCreek_AR1" trainID="train35"/>
+        <TrainHeadLeaveTrack cycleID="830" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="0.2" time="659.5431727011103" trackID="trk_WerrisCreek_AR1" trainID="train35"/>
+        <TrainTailLeaveTrack cycleID="830" direction="UP" sectionID="sec_WerrisCreek_ArrivalRd" speed="6671.463143436457" time="662.6116080487596" trackID="trk_WerrisCreek_AR1" trainID="train35"/>
+	</railEvents>
+</railLog>
