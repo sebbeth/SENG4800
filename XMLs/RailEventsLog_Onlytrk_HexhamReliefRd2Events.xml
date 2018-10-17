@@ -1,8 +1,0 @@
-<railLog>
-	<railEvents>
-        <Track direction="UP" sectionID="sec_Hexham_reliefs" trackID="trk_HexhamReliefRd2"/>
-        <TrainEnterTrack cycleID="322" direction="UP" sectionID="sec_Hexham_reliefs" speed="24600.0" time="208.64822840703255" trackID="trk_HexhamReliefRd2" trainID="train40"/>
-        <TrainHeadLeaveTrack cycleID="322" direction="UP" sectionID="sec_Hexham_reliefs" speed="0.2" time="209.15911727124544" trackID="trk_HexhamReliefRd2" trainID="train40"/>
-        <TrainTailLeaveTrack cycleID="322" direction="UP" sectionID="sec_Hexham_reliefs" speed="28916.34199346085" time="209.20407454835518" trackID="trk_HexhamReliefRd2" trainID="train40"/>
-	</railEvents>
-</railLog>

@@ -1,8 +1,0 @@
-<railLog>
-	<railEvents>
-        <Track direction="DOWN" sectionID="sec_HexhamTSF" trackID="trk_HexhamTSF_3"/>
-        <TrainEnterTrack cycleID="447" direction="DOWN" sectionID="sec_HexhamTSF" speed="0.2" time="293.5930205088508" trackID="trk_HexhamTSF_3" trainID="train45"/>
-        <TrainHeadLeaveTrack cycleID="447" direction="UP" sectionID="sec_HexhamTSF" speed="0.2" time="297.67635384218414" trackID="trk_HexhamTSF_3" trainID="train45"/>
-        <TrainTailLeaveTrack cycleID="447" direction="DOWN" sectionID="sec_HexhamTSF" speed="44281.271543982395" time="297.7215587607364" trackID="trk_HexhamTSF_3" trainID="train45"/>
-	</railEvents>
-</railLog>
