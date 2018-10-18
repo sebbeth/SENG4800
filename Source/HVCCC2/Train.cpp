@@ -19,18 +19,57 @@ void ATrain::BeginPlay()
 	
 }
 
-// Called every frame
-void ATrain::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
+void ATrain::spawnCarriages(TSubclassOf<class AActor> blueprint, int count) {
 
+	this->train_carriage_full_blueprint = blueprint;
+	carriageCount = count;
+
+	UWorld* world = GetWorld();
+	if (world) {
+		FActorSpawnParameters spawnParams;
+		spawnParams.Owner = this;
+
+
+		for (int i = 0; i < carriageCount; i++)
+		{
+			AActor *actor = world->SpawnActor<AActor>(train_carriage_full_blueprint, GetActorLocation(), GetActorRotation(), spawnParams);
+			carriages.Add(actor);
+			actor->SetActorHiddenInGame(true);
+
+		}
+	}
 }
 
 
-void ATrain::setPosition(float position) {
+
+void ATrain::setPosition(float position, USplineComponent* trackSpline) {
+
+	// trainTracks[6]->Spline->GetLocationAtSplinePoint(6, ESplineCoordinateSpace::World),
+	//trainTracks[6]->Spline->GetRotationAtSplinePoint(6, ESplineCoordinateSpace::World)
 
 
+	auto makeTransform = FTransform(trackSpline->GetRotationAtDistanceAlongSpline(position, ESplineCoordinateSpace::World),
+		trackSpline->GetLocationAtDistanceAlongSpline(position, ESplineCoordinateSpace::World),
+		FVector(5.0f, 5.0f, 5.0f));
 
+	SetActorTransform(makeTransform);
+
+	for (int i = 0; i < carriages.Num(); i++) {
+
+		float carraigePosition = position - (3500.0f * float(i+1));
+		if (carraigePosition > 0) {
+			carriages[i]->SetActorHiddenInGame(false);
+
+			auto carriageTransform = FTransform(trackSpline->GetRotationAtDistanceAlongSpline(carraigePosition, ESplineCoordinateSpace::World),
+				trackSpline->GetLocationAtDistanceAlongSpline(carraigePosition, ESplineCoordinateSpace::World),
+				FVector(5.0f, 5.0f, 5.0f));
+
+			carriages[i]->SetActorTransform(carriageTransform);
+		}
+		else {
+			carriages[i]->SetActorHiddenInGame(true);
+		}
+	}
 }
 
 
