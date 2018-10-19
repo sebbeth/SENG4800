@@ -950,7 +950,7 @@ void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, 
 			splineScale = (targetTime - enterIterator->time) / (exitIterator->time - enterIterator->time);
 		}
 		//do whatever with an interpolation scale that estimates how far along the track we are
-		actorPointer->SetActorHiddenInGame(false);
+		actorPointer->showTrain();
 		//actorPointer->SetActorEnableCollision(true);
 
 		//double sinedScale = std::atan(splineScale);
@@ -967,7 +967,7 @@ void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, 
 	} else {
 		//do whatever to hide the train
 
-		actorPointer->SetActorHiddenInGame(true);
+		actorPointer->hideTrain();
 		//actorPointer->SetActorEnableCollision(false);
 
 		//auto makeTransform = FTransform(trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World),

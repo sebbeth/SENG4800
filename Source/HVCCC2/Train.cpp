@@ -44,21 +44,37 @@ void ATrain::spawnCarriages(TSubclassOf<class AActor> blueprint, int count) {
 
 void ATrain::setPosition(float position, USplineComponent* trackSpline) {
 
-	// trainTracks[6]->Spline->GetLocationAtSplinePoint(6, ESplineCoordinateSpace::World),
-	//trainTracks[6]->Spline->GetRotationAtSplinePoint(6, ESplineCoordinateSpace::World)
-
-
 	auto makeTransform = FTransform(trackSpline->GetRotationAtDistanceAlongSpline(position, ESplineCoordinateSpace::World),
 		trackSpline->GetLocationAtDistanceAlongSpline(position, ESplineCoordinateSpace::World),
 		FVector(5.0f, 5.0f, 5.0f));
+
+
+	if (currentTrackSpline == NULL) {
+		currentTrackSpline = trackSpline;
+	}
+	if (trackSpline == previousTrackSpline) {
+		currentTrackSpline = trackSpline;
+		previousTrackSpline = NULL;
+	}
+	else {
+		if (trackSpline != currentTrackSpline) {
+			previousTrackSpline = currentTrackSpline;
+			currentTrackSpline = trackSpline;
+		}
+	}
+
+
+	
 
 	SetActorTransform(makeTransform);
 
 	for (int i = 0; i < carriages.Num(); i++) {
 
-		float carraigePosition = position - (3500.0f * float(i+1));
+		float carraigePosition = position - (3400.0f * float(i + 1));
 		if (carraigePosition > 0) {
 			carriages[i]->SetActorHiddenInGame(false);
+			
+			
 
 			auto carriageTransform = FTransform(trackSpline->GetRotationAtDistanceAlongSpline(carraigePosition, ESplineCoordinateSpace::World),
 				trackSpline->GetLocationAtDistanceAlongSpline(carraigePosition, ESplineCoordinateSpace::World),
@@ -67,8 +83,41 @@ void ATrain::setPosition(float position, USplineComponent* trackSpline) {
 			carriages[i]->SetActorTransform(carriageTransform);
 		}
 		else {
-			carriages[i]->SetActorHiddenInGame(true);
+			if (previousTrackSpline == NULL) {
+				carriages[i]->SetActorHiddenInGame(true);
+			}
+			else {
+			
+			//carriages[i]->SetActorHiddenInGame(true);
+
+			// Put the carriage on the previous spline
+			carraigePosition = previousTrackSpline->GetSplineLength() + position - (3400.0f * float(i + 1));
+			
+			auto carriageTransform = FTransform(previousTrackSpline->GetRotationAtDistanceAlongSpline(carraigePosition, ESplineCoordinateSpace::World),
+				previousTrackSpline->GetLocationAtDistanceAlongSpline(carraigePosition, ESplineCoordinateSpace::World),
+				FVector(5.0f, 5.0f, 5.0f));
+
+			carriages[i]->SetActorTransform(carriageTransform);
+			}
 		}
+	}	
+
+
+	
+}
+
+
+void ATrain::hideTrain() {
+	SetActorHiddenInGame(true);
+	for (int i = 0; i < carriages.Num(); i++) {
+		carriages[i]->SetActorHiddenInGame(true);
+	}
+}
+
+void ATrain::showTrain() {
+	SetActorHiddenInGame(false);
+	for (int i = 0; i < carriages.Num(); i++) {
+		carriages[i]->SetActorHiddenInGame(false);
 	}
 }
 

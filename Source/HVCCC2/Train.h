@@ -31,10 +31,15 @@ public:
 
 	void spawnCarriages(TSubclassOf<class AActor> blueprint,int count);
 
+	void hideTrain();
+	void showTrain();
+
 	FString id; // trainId
 	int carriageCount;
 	TArray<AActor*> carriages;
 	TSubclassOf<class AActor> train_carriage_full_blueprint;
+	USplineComponent* currentTrackSpline;
+	USplineComponent* previousTrackSpline;
 	FString cycleId;
 	TArray<FString> trackId; //id of the track this train is currently on
 //time values represent start and end time of the train on the specified track
