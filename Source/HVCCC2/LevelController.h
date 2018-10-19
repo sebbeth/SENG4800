@@ -26,7 +26,6 @@
 
 class ALevelController;
 
-//TODO: These functors might actually benifit from using a common base class and virtualised overloading of the each-operator (if that exists?)
 struct AddToSimFunctor {
 	ALevelController* context;
 	template<typename Each>
@@ -103,7 +102,6 @@ struct ClearDataFunctor {
 	ClearDataFunctor(ALevelController* context);
 };
 
-//Note/TODO: cheating by using the states instead of events for now
 struct StringifyEventsFunctor {
 	ALevelController* context;
 	std::vector<std::pair<float, std::string>> interimResult;
@@ -505,7 +503,6 @@ void AnimateEntitiesFunctor::operator()(Each& eachDataMap) {
 			auto& nextState = *(eachWindow.second);
 
 			//we have to limit the target time in case simTime is outside of the current window (note: this is especially true at the beginning of the simulation/when creation events aren't neccessarily at time 0)
-			//TODO: possibly implement consider non-existing that can be used to not render items that don't exist at the current time in the simulation?
 			double targetTime = std::max(previousState.time, std::min(nextState.time, context->simTime));
 
 			double interpolationScale;

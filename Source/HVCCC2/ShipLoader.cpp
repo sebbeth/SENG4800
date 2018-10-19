@@ -14,7 +14,6 @@ AShipLoader::AShipLoader()
 // Called when the game starts or when spawned
 void AShipLoader::BeginPlay()
 {
-	//TODO
 	// On init, rotate the actor to be perpendicular to the rail
 	FRotator rotator(0.0f, 35.0f, 0.0f);
 	SetActorRotation(rotator, ETeleportType::None);

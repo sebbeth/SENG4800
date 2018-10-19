@@ -38,7 +38,6 @@ std::pair<EventVectorTuple, bool> getEventsFromXMLFolder(const std::string& xmlF
 std::pair<StateMapTuple<AllEntities>, bool> loadXMLData(const std::string& srcPath) {
 	StateMapTuple<AllEntities> result;
 
-	//TODO: REFACTOR THIS TO ALSO RETURN A TUPLE WITH A SUCCESS VALUE
 	auto xmlResultPair = getEventsFromXMLFolder(srcPath);
 	if (xmlResultPair.second) {
 		EventVectorTuple& allEvents = xmlResultPair.first;

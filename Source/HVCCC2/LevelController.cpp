@@ -381,7 +381,6 @@ void ALevelController::setCoalReclaimingState(int stackerId, int loaderId, int s
 	//}
 
 	stackerReclaimers[stackerId]->setMaterial(state); // Set the material of the stacker
-	//TODO loaders able to change material
 
 	// Now set the material for the terminal conveyor belts
 	switch (stackerId)
@@ -614,7 +613,7 @@ void ALevelController::animateEntity(const SimulationData<StackerReclaimer>& dat
 	auto& nextState = *data.stateWindow.second;
 	StackerReclaimer::Id targetId = previousState.id;
 	float minPosition = 0;
-	//TODO, assign the correct track length, not just the 0'th one
+
 	float maxPosition = (float)getTrackLength(targetId.terminal, data.actorPointer->trackId);
 	//calculate the absolute position of the machine (along it's rail) by interpolating the previous and next positions
 	//this idea came from vector mathmemathics, with 1d vectors (efficively scalars) is this case; the formula is: previous+(next - previous)*scale;
@@ -623,7 +622,6 @@ void ALevelController::animateEntity(const SimulationData<StackerReclaimer>& dat
 	float positionScale = (positionInterpolated - minPosition) / (maxPosition - minPosition);
 	//update the actor position
 	data.actorPointer->setPosition(positionScale);
-	//TODO: ADD TURNING CONSIDERATIONS
 
 	auto rotationIdentifierIt = data.stateWindow.first;
 	bool foundState = false;
@@ -645,7 +643,6 @@ void ALevelController::animateEntity(const SimulationData<StackerReclaimer>& dat
 	case StackerReclaimerStateType::Moving:
 		 // If the SR is moving, set it's arm to forward
 		data.actorPointer->resetRotation(); // The SR needs to point at this coalStack
-		// TODO put both these functions somewhere more sensible where they won't get called every tick.
 		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
 		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer), 0);
 		break;
@@ -664,7 +661,6 @@ void ALevelController::animateEntity(const SimulationData<StackerReclaimer>& dat
 	case StackerReclaimerStateType::PostStackReserved:
 	case StackerReclaimerStateType::PostReclaimReserved:
 	default:
-		// TODO put both these functions somewhere more sensible where they won't get called every tick.
 		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
 		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer),0);
 		data.actorPointer->resetRotation();
@@ -707,7 +703,7 @@ void ALevelController::animateEntity(const SimulationData<Vessel>& data, float i
 			berthEnd = NCT_berth_end->GetActorLocation();//do stuff
 			data.actorPointer->berthed();
 			berthVector = berthEnd - berthStart;
-			//TODO, assign the correct track length, not just the 0'th one
+
 			berthLength = getShipLoaderTrackLength(data.terminal);
 			positionScale = data.berthPosition / berthLength;
 			unrealBerthSize = berthVector.Size();
@@ -792,7 +788,7 @@ void ALevelController::animateEntity(AShipLoader* actorPointer, const Shiploader
 	
 	Shiploader::Id targetId = previousState.id;
 	float minPosition = 0;
-	//TODO, assign the correct track length, not just the 0'th one
+
 	float maxPosition = (float)getShipLoaderTrackLength(targetId.terminal);
 	//calculate the absolute position of the machine (along it's rail) by interpolating the previous and next positions
 	//this idea came from vector mathmemathics, with 1d vectors (efficively scalars) is this case; the formula is: previous+(next - previous)*scale;

@@ -3,7 +3,6 @@ import xml.etree.ElementTree as ET
 import re
 from data_structures import *
 
-#TODO: THIS/FUNCTION FOR TURNING FIELD NAMES INTO THEIR ASSOCIATED XML PROPS
 attribute_code_map = {
     'tugs': ['numberOfTugs'],
     'position': ['startPosition'],

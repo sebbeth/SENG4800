@@ -42,9 +42,7 @@ distribution.
 #endif
 #include <stdint.h>
 
-/*
-   TODO: intern strings instead of allocation.
-*/
+
 /*
 	gcc:
         g++ -Wall -DTINYXML2_DEBUG tinyxml2.cpp xmltest.cpp -o gccxmltest.exe

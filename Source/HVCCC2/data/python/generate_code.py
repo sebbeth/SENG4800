@@ -17,9 +17,6 @@ parser.add_argument('-w', '--only_warnings', action='store_true')
 
 args = parser.parse_args()
 
-# todo: generate entity and event-name mappings for the parser, and possibly the parser?
-# todo: test things
-# note: must be a csv
 
 json_src_path = args.json_file
 xml_src_path = args.xml_directory

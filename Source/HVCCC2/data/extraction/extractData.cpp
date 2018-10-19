@@ -354,7 +354,7 @@ tinyxml2::XMLError extractAll(const std::string& srcFilePath, EventVectorTuple& 
                 extractEvent(*eachElement, std::get<std::vector<VesselEvent>>(destination), eventTypeCode); //note: no longer cancelling when an individual event fails to extract so that some tags can be skipped
             } else {
                 //state that we had a problem, but continue parsing since it may just be an event we haven't coded for yet
-                std::printf("Warning: unrecognised tag '%s'\n", tagName.c_str()); //todo: should probably print a better warning, etc
+                std::printf("Warning: unrecognised tag '%s'\n", tagName.c_str()); 
             }
         } else {
             //if it's an element that we know might have children we want, check those instead of assuming it's wrong
@@ -363,7 +363,7 @@ tinyxml2::XMLError extractAll(const std::string& srcFilePath, EventVectorTuple& 
                 continue;
             } else {
                 //state that we had a problem, but continue parsing since it may just be an event we haven't coded for yet
-                std::printf("Warning: unrecognised tag '%s'\n", tagName.c_str()); //todo: should probably print a better warning, etc
+                std::printf("Warning: unrecognised tag '%s'\n", tagName.c_str()); 
             }
         }
         //Moves the element pointer to the next event element:
