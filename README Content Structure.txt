@@ -22,16 +22,23 @@ PACKAGED (Use this to run the simulation without setting up Unreal Engine)
 	- Source (link to the C++ files)
 	
 2. Source (Main classes and brief description)
-	- Coal Stack (Used to change the size of the coal stack)
-	- Conveyer Belt (Used to set the material based on what the state is)
-	- File Dialog (Used to generate a file dialog)
-	- Level Controller (MAIN CLASS OF THE SYSTEM)
-	- Open Dialog (Used to open a dialog and set the path chosen by the user)
-	- Ship (Used to set a ship hidden if the ship is not at the terminal)
-	- Ship loader (Used to change the direction and the material colour based on the state)
-	- Stacker reclaimer (Moves the stacker /reclaimer to the certain position, rotates model, sets material based on state)
-	- Time converter (Used to convert the provided float value into a time value)
-	- Train (used to set position of trains, spawn them in, spawn carriages)
-	- Train Track Spline (creates the railway)
-	
-	
+	Source/HVCCC2:
+		- Coal Stack (Used to change the size of the coal stack)
+		- Conveyer Belt (Used to set the material based on what the state is)
+		- File Dialog (Used to generate a file dialog)
+		- Level Controller (MAIN CLASS OF THE SYSTEM)
+		- Open Dialog (Used to open a dialog and set the path chosen by the user)
+		- Ship (Used to set a ship hidden if the ship is not at the terminal)
+		- Ship loader (Used to change the direction and the material colour based on the state)
+		- Stacker reclaimer (Moves the stacker /reclaimer to the certain position, rotates model, sets material based on state)
+		- Time converter (Used to convert the provided float value into a time value)
+		- Train (used to set position of trains, spawn them in, spawn carriages)
+		- Train Track Spline (creates the railway)
+		/data:
+			- convertData (Converts the events from the XML schedule files to their state equivalents)
+			- loadData (The class which acts as a controller class for extracting the data from the XML files)
+			- serialization (Use the third party Cereal library to serialise and deserialse to and from a binary data format)
+			/extraction:
+				- extractData (The class which uses the TinyXML2 third party library to extract the scheduling data held within the XML files)
+			/python:
+				- This folder holds all of the Python sctipts used to generate C++ classes/manipulate XML scheduling files
