@@ -39,6 +39,11 @@ ALevelController::ALevelController() : addToSimFunctor(this), updateWindowsFunct
 void ALevelController::BeginPlay()
 {
 	Super::BeginPlay();
+
+	//Debug
+	/*spawnATrain("TEST", trainTracks[6]->Spline->GetLocationAtSplinePoint(6, ESplineCoordinateSpace::World),
+		trainTracks[6]->Spline->GetRotationAtSplinePoint(6, ESplineCoordinateSpace::World), train_locomotive_blueprint);
+	trains[0]->setPosition(10000, trainTracks[6]->Spline);*/
 	loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
 }
 
@@ -558,6 +563,7 @@ ATrain * ALevelController::spawnATrain(FString id, FVector position, FRotator ro
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		ATrain *actor = world->SpawnActor<ATrain>(blueprint, position, rotator, spawnParams);
+		actor->spawnCarriages(train_carriage_full_blueprint,30); // Comment out this line to disable carriages
 		actor->id = id;
 		trains.Add(actor);
 		return actor;
@@ -944,21 +950,24 @@ void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, 
 			splineScale = (targetTime - enterIterator->time) / (exitIterator->time - enterIterator->time);
 		}
 		//do whatever with an interpolation scale that estimates how far along the track we are
-		actorPointer->SetActorHiddenInGame(false);
+		actorPointer->showTrain();
 		//actorPointer->SetActorEnableCollision(true);
 
 		//double sinedScale = std::atan(splineScale);
 		
-		double distance = targetTrackPtr->Spline->GetSplineLength() * splineScale;
-		auto makeTransform = FTransform(targetTrackPtr->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
+		float distance = targetTrackPtr->Spline->GetSplineLength() * splineScale;
+	/*	auto makeTransform = FTransform(targetTrackPtr->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
 			targetTrackPtr->Spline->GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
 			FVector(5.0f, 5.0f, 5.0f));
 
-		actorPointer->SetActorTransform(makeTransform);
+		actorPointer->SetActorTransform(makeTransform);*/
+		actorPointer->setPosition(distance, targetTrackPtr->Spline);
+
+
 	} else {
 		//do whatever to hide the train
 
-		actorPointer->SetActorHiddenInGame(true);
+		actorPointer->hideTrain();
 		//actorPointer->SetActorEnableCollision(false);
 
 		//auto makeTransform = FTransform(trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World),

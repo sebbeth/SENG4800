@@ -193,6 +193,8 @@ protected:
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class ATrain> train_locomotive_blueprint;
 	UPROPERTY(EditAnywhere)
+		TSubclassOf<class AActor> train_carriage_full_blueprint;
+	UPROPERTY(EditAnywhere)
 		TSubclassOf<class ACoalStack> coal_stack_blueprint;
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class AConveyorBelt> conveyor_belt_blueprint;
