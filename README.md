@@ -65,9 +65,6 @@ Once the project is open you can access the C++ files in VS and modify them ther
 
 ---------------------
 # TinyXML2Testing Information
-========================================================================
-    CONSOLE APPLICATION : TinyXML2Testing Project Overview
-========================================================================
 
 ## Instructions for generating cpp code from Python
 Assumming you have python3 installed, run the generate_python.py script located at python/generate_python.py.
