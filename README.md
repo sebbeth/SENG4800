@@ -3,13 +3,13 @@ Repository for SENG4800 HVCCC Group 2018
 
 This is the Unreal Engine project that is set up to be the base of our project.
 
-This is a C++ project setup for version 1.19.3 of Unreal Engine 4
+This is a C++ project setup for version 4.19.2 of Unreal Engine 4
 
 Visual Studio must be installed for this project to compile.
 
 # Project Setup:
 
-Pull the project down from GitHub.
+Pull the project down from GitHub, or access using the provided USB
 
 Install Unreal Engine version 4.19.* preferably 4.19.2 (https://docs.unrealengine.com/en-US/GettingStarted/Installation)
 
@@ -20,7 +20,21 @@ When VS is installed, add the following packages to it using Visual Studio Insta
 - https://drive.google.com/file/d/1hrIddU0KsTgE-sJ6vBuA4Z0bfNSqkNvy/view?usp=sharing
 - https://drive.google.com/open?id=1e2UrahadnAju7gm7VgEZvP-PO4ovVQ0P 
 
-After all these packages are installed, open the project and you will be prompted to recompile the project. If you have installed the required packages successfully, it will work from here and you will be able to edit the project. If there were errors it will probably fail to compile.
+- Text Version
+	- In the Windows section, ensure that '.NET desktop development' and 'Desktop development with C++' is enabled.
+	- Scroll down to Mobile and Gaming and enable 'Game development with C++'
+		- Ensure you enable the following optional packages within the 'Game development with c++' packages	
+			- C++ profiling tools
+			- Windows 10 SDK (10.0.17134.0)
+			- Windows 8.1 SDK and UCRT SDK
+
+	
+
+After all these packages are installed, right click on the project (HVCCC2.uproject) and then select 'Generate Visual Studio Project Files'
+This will generate the solution required to compile the game.
+Once you have generated the project files you can now open HVCCC2.uproject and you will be prompted to recompile the project. If you have installed the required packages successfully, it will work from here and you will be able to edit the project. If there were errors it will probably fail to compile.
+
+Before running the game in the engine, ensure you compile once again (using the editors compile button) to ensure that everything is compiled.
 
 Once the project is open you can access the C++ files in VS and modify them there.
 
@@ -51,9 +65,6 @@ Once the project is open you can access the C++ files in VS and modify them ther
 
 ---------------------
 # TinyXML2Testing Information
-========================================================================
-    CONSOLE APPLICATION : TinyXML2Testing Project Overview
-========================================================================
 
 ## Instructions for generating cpp code from Python
 Assumming you have python3 installed, run the generate_python.py script located at python/generate_python.py.
