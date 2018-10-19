@@ -88,8 +88,6 @@ void ATrain::setPosition(float position, USplineComponent* trackSpline) {
 			}
 			else {
 			
-			//carriages[i]->SetActorHiddenInGame(true);
-
 			// Put the carriage on the previous spline
 			carraigePosition = previousTrackSpline->GetSplineLength() + position - (3400.0f * float(i + 1));
 			

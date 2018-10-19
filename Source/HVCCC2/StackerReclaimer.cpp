@@ -51,14 +51,7 @@ void AStackerReclaimer::setBaseRotation(float degrees) {
 
 void AStackerReclaimer::rotateMastToCoalStack(ACoalStack* coalStack) {
 	
-	//FVector coal = FVector(coalStack->GetActorLocation().X - GetActorLocation().X, coalStack->GetActorLocation().Y - GetActorLocation().Y, -950.0);
-	//FVector origin = FVector(0,0,1);
-	
-	//LogTemp: Warning: Theta 61.667076, Cx -29710.062500 Cy 57828.734375 Sx -354789.937500 Sy -211678.734375
 
-	//float foo = (FVector::DotProduct(coal, stackerReclaimer)) / (coal.Size() * stackerReclaimer.Size());
-	//float foo = FMath::Atan2(coal.X, coal.Y);
-	//float output = 180 - FMath::RadiansToDegrees(FMath::Acos(foo));
 
 	int sign = -1;
 	if (coalStack->GetActorLocation().Y > GetActorLocation().Y) {
@@ -70,11 +63,7 @@ void AStackerReclaimer::rotateMastToCoalStack(ACoalStack* coalStack) {
 	} else {
 		setRotation(sign * 125);
 	}
-	
 
-	//FRotator rotator = UKismetMathLibrary::FindLookAtRotation(this->GetActorLocation(), coalStack->GetActorLocation());
-	
-	//rotator.Add(0, -90.0f, 0);
 
 }
 

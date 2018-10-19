@@ -40,10 +40,6 @@ void ALevelController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//Debug
-	/*spawnATrain("TEST", trainTracks[6]->Spline->GetLocationAtSplinePoint(6, ESplineCoordinateSpace::World),
-		trainTracks[6]->Spline->GetRotationAtSplinePoint(6, ESplineCoordinateSpace::World), train_locomotive_blueprint);
-	trains[0]->setPosition(10000, trainTracks[6]->Spline);*/
 	loadXMLData(UTF8_TO_TCHAR(XML_PATH.c_str()));
 }
 
@@ -588,15 +584,7 @@ AStackerReclaimer* ALevelController::getOrSpawnActor(const StackerReclaimer::Id&
 AShip* ALevelController::getOrSpawnActor(const Vessel::Id& id) {
 	static std::string nct_names[4] = { "SHIP:1", "SHIP:2", "SHIP:3", "SHIP:4" };
 	FString ff = UTF8_TO_TCHAR(id.name.c_str());
-	//UE_LOG(LogTemp, Warning, TEXT("SHIP:%s"), *ff);
-	//if (id.terminal == TerminalId::NCT) {
-		//for (int i = 0; i < 4; ++i) {
-		//	if (id.name == nct_names[i]) {
-				return spawnAShip(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), FVector(0,0,0), FRotator(0,0,0), ship_blueprint);
-		//	}
-		//}
-	//}
-	return nullptr;
+	return spawnAShip(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), FVector(0,0,0), FRotator(0,0,0), ship_blueprint);
 }
 
 
@@ -681,8 +669,6 @@ void ALevelController::animateEntity(const SimulationData<StackerReclaimer>& dat
 		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer),0);
 		data.actorPointer->resetRotation();
 	}
-
-	//UE_LOG(LogTemp, Warning, TEXT("timeA: %f, timeb: %f positiona: %f, positionb: %f, positionInterpolated: %f Position scale: %f"), float(previousState.time), float(nextState.time), float(previousState.position), float(nextState.position), float(positionInterpolated), float(positionScale));
 }
 
  // HELPER FUNCTION FOR  S-R animateEntity
@@ -748,45 +734,9 @@ void ALevelController::animateEntity(const SimulationData<Vessel>& data, float i
 
 }
 
-/*
-// TODO move this somewhere else in file
-*/
-//void ALevelController::setStockPileLocation(ACoalStack* actorPointer, const Stockpile::Id& id, std::string padId, double position) {
-//
-//	if (id.terminal == TerminalId::NCT) {
-//		//UE_LOG(LogTemp, Warning, TEXT("%f"), float(position));
-//		int padIdentifier = -1;
-//		if (padId == "PadA") {
-//			padIdentifier = 0;
-//		}
-//		else if (padId == "PadBC") {
-//			padIdentifier = 1;
-//		}
-//		else if (padId == "PadDE") {
-//			padIdentifier = 2;
-//		}
-//		else if (padId == "PadFG") {
-//			padIdentifier = 3;
-//		}
-//		else if (padId == "PadH") {
-//			padIdentifier = 4;
-//		}
-//
-//		if (padIdentifier != -1) { // Now that we have determined  which Padwe are using, determine the position along the pad
-//				
-//			actorPointer->setGeometry(position,
-//				getPadLength(TerminalId::NCT, padIdentifier),
-//				NCT_pads_start[padIdentifier]->GetActorLocation(),
-//				NCT_pads_end[padIdentifier]->GetActorLocation());
-//			actorPointer->setWidth(NCT_pads_start[padIdentifier]->GetActorScale3D().X); // Also set the width
-//		}
-//	}
-//}
-
 
 void ALevelController::animateEntity(const SimulationData<Stockpile>& data, float interpolationScale) {
 	//Commented out code provides hinting on types, and an example of how to get the variables used in the simpler animateEntity
-	//using State = typename Entity::State;
 	ACoalStack* actorPointer = data.actorPointer;
 	const StockpileState& previousState = (*data.stateWindow.first);
 	const StockpileState& nextState = (*data.stateWindow.second);
@@ -796,7 +746,6 @@ void ALevelController::animateEntity(const SimulationData<Stockpile>& data, floa
 	//get Padinfo
 	int padIdentifier = -1;
 	if (targetId.terminal == TerminalId::NCT) {
-		//UE_LOG(LogTemp, Warning, TEXT("%f"), float(position));
 		if (previousState.padID == "PadA" || previousState.padID == "Pad A") {
 			padIdentifier = 0;
 		}
@@ -816,7 +765,6 @@ void ALevelController::animateEntity(const SimulationData<Stockpile>& data, floa
 	
 
 	if (padIdentifier != -1) { // Now that we have determined  which Pad we are using, determine the position along the pad
-		//UE_LOG(LogTemp, Warning, TEXT("PAD IDENT IS %d"), padIdentifier);
 		auto padStart = NCT_pads_start[padIdentifier]->GetActorLocation();
 		auto padEnd = NCT_pads_end[padIdentifier]->GetActorLocation();
 
@@ -835,24 +783,6 @@ void ALevelController::animateEntity(const SimulationData<Stockpile>& data, floa
 
 		//also set the rotation
 		actorPointer->SetActorRotation(NCT_pads_start[padIdentifier]->GetActorRotation());
-
-		//actorPointer->setQuantity(float(pileScale));
-		//switch (nextState.type)
-		//{
-		//case StockpileStateType::Created:
-		//	break;
-		//case StockpileStateType::Reclaiming:
-		//	actorPointer->setQuantity(float(nextState.length));
-		//	break;
-		//case StockpileStateType::Stacking:
-		//	actorPointer->setQuantity(float(nextState.length));
-		//	break;
-		//case StockpileStateType::Built:
-		//	break;
-		//default:
-
-		//	break;
-		//}
 	}
 
 
@@ -886,10 +816,8 @@ void ALevelController::animateEntity(AShipLoader* actorPointer, const Shiploader
 ATrain* ALevelController::getOrSpawnActor(const TrainMovement::Id& id)
 {
 	//stub
-	//UE_LOG(LogTemp, Warning, TEXT("Added a Train found a train id %s "), UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()));
 	return spawnATrain(UTF8_TO_TCHAR(id.nameForBinaryFile().c_str()), trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
 		trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World), train_locomotive_blueprint);
-	//return nullptr;
 }
 
 
@@ -951,16 +879,10 @@ void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, 
 		}
 		//do whatever with an interpolation scale that estimates how far along the track we are
 		actorPointer->showTrain();
-		//actorPointer->SetActorEnableCollision(true);
 
-		//double sinedScale = std::atan(splineScale);
 		
 		float distance = targetTrackPtr->Spline->GetSplineLength() * splineScale;
-	/*	auto makeTransform = FTransform(targetTrackPtr->Spline->GetRotationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
-			targetTrackPtr->Spline->GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace::World),
-			FVector(5.0f, 5.0f, 5.0f));
-
-		actorPointer->SetActorTransform(makeTransform);*/
+	
 		actorPointer->setPosition(distance, targetTrackPtr->Spline);
 
 
@@ -968,12 +890,5 @@ void ALevelController::animateEntity(const SimulationData<TrainMovement>& data, 
 		//do whatever to hide the train
 
 		actorPointer->hideTrain();
-		//actorPointer->SetActorEnableCollision(false);
-
-		//auto makeTransform = FTransform(trainTracks[0]->Spline->GetRotationAtSplinePoint(0, ESplineCoordinateSpace::World),
-		//	trainTracks[0]->Spline->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World),
-		//	FVector(5.0f, 5.0f, 5.0f));
-
-		//actorPointer->SetActorTransform(makeTransform);
 	}
 }

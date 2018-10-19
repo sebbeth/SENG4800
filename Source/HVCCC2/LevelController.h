@@ -129,11 +129,7 @@ struct u_actor_type<StackerReclaimer> {
 	using type = AStackerReclaimer;
 };
 
-/*
-template<>
-struct u_actor_type<TrainMovement> {
-	using type = ATrain;
-};*/
+
 
 template<>
 struct u_actor_type<TrainMovement> {
@@ -204,8 +200,6 @@ protected:
 	//Train and track actors
 	UPROPERTY(EditAnywhere)
 		TArray<ATrain*> trains;
-	//UPROPERTY(EditAnywhere)
-	//	TArray<ATrackSpline*> trainTracks;
 	UPROPERTY(EditAnywhere)
 		TArray<ATrainTrackSpline*> trainTracks;
 
@@ -248,16 +242,6 @@ protected:
 	//KCT Actor Arrays
 	UPROPERTY(EditAnywhere)
 		TArray<AConveyorBelt*> conveyorBeltsKCT;
-	/*
-	UPROPERTY(EditAnywhere)
-		TArray<ACoalStack*> coalStacksKCT;
-	UPROPERTY(EditAnywhere)
-		TArray<AStackerReclaimer*> stackerReclaimersKCT;
-	UPROPERTY(EditAnywhere)
-		TArray<AShipLoader*> shipLoadersKCT;
-	UPROPERTY(EditAnywhere)
-		TArray<AShip*> shipsKCT;
-		*/
 	UPROPERTY(EditAnywhere)
 		TArray<AActor*> KCT_SR_rails_start;
 	UPROPERTY(EditAnywhere)
@@ -383,12 +367,10 @@ private:
 	
 	void animateEntity(const SimulationData<StackerReclaimer>& data, float interpolationScale);
 	void animateEntity(const SimulationData<Vessel>& data, float interpolationScale);
-	//void animateEntity(ACoalStack* actorPointer, const StockpileState& previousState, const StockpileState& nextState, float interpolationScale);
 	void animateEntity(const SimulationData<Stockpile>& data, float interpolationScale);
 	
 	void animateEntity(AShipLoader* actorPointer, const ShiploaderState& previousState, const ShiploaderState& nextState, float interpolationScale);
 
-	//void animateEntity(ATrain* actorPointer, const TrainMovementState& previousState, const TrainMovementState& nextState, float interpolationScale);
 	void animateEntity(const SimulationData<TrainMovement>& data, float interpolationScale);
 
 	void stackCoal(int stackerId);
@@ -409,7 +391,6 @@ private:
 	int getShipLoaderTrackLength(TerminalId terminal);
 
 	// Pad location
-	//void setStockPileLocation(ACoalStack* actorPointer, const Stockpile::Id& id, std::string padId, double position);
 
 	int testTime; // Just being used for testing
 
@@ -427,8 +408,7 @@ inline void ALevelController::animateEntity(const SimulationData<Entity>& data, 
 	using Actor = UActorType<Entity>;
 	//using State = typename Entity::State;
 	Actor* actorPointer = data.actorPointer;
-	//const State& beforeState = (*data.stateWindow.first);
-	//const State& afterState = (*data.stateWindow.second);
+
 
 	//note that the pointer stored in data is a const pointer to a non-const actor 
 	animateEntity(data.actorPointer, (*data.stateWindow.first), (*data.stateWindow.second), interpolationScale);
@@ -477,10 +457,7 @@ void UpdateWindowsFunctor::operator()(Each& eachDataMap) {
 				//this codesegment updates towards a time in the future compared to the current state for the entity
 
 				//while: the time in state at the end of each window is in the past AND there are states remaining ahead of it (the containing if is the same)
-				do {
-					//debugging
-					
-					//UE_LOG(LogTemp, Warning, TEXT("Entity %s: moving window to the states %d and %d"), UTF8_TO_TCHAR(eachId.nameForBinaryFile().c_str()), std::distance(eachStates.cbegin(), eachWindow.first), std::distance(eachStates.cbegin(), eachWindow.second));
+				do {					
 
 					//if the ends of the window are the same, instead of sliding both indices forward, want to expand the window by incrementing only the second
 					//note that both ends of the window are the same at initialisation ansd as the result of compression once the simulation reaches the end of the alloted time (or, if in reverse, once it reaches the beginning) (see the next comment for an example)
@@ -499,9 +476,7 @@ void UpdateWindowsFunctor::operator()(Each& eachDataMap) {
 
 				//while: the time in state at the beginning of each window in the future AND there are states remaining behind it (the containing if is the same)
 				do {
-					//debugging
-					//UE_LOG(LogTemp, Warning, TEXT("Entity %s: moving window to the states %d and %d"), UTF8_TO_TCHAR(eachId.nameForBinaryFile().c_str()), std::distance(eachStates.cbegin(), eachWindow.first), std::distance(eachStates.cbegin(), eachWindow.second));
-
+			
 					//if the ends of the window are the same, instead of sliding both indices backward, want to expand the window by incrementing only the second
 					//note that both ends of the window are the same at initialisation ansd as the result of compression once the simulation reaches the end of the alloted time (or, if in reverse, once it reaches the beginning) (see the next comment for an example)
 					if (eachWindow.second != eachWindow.first) {
@@ -542,9 +517,7 @@ void AnimateEntitiesFunctor::operator()(Each& eachDataMap) {
 				interpolationScale = (targetTime - previousState.time) / (nextState.time - previousState.time);
 			}
 
-			//debug
 			auto eachStates = eachSimulationData.states;
-			//UE_LOG(LogTemp, Warning, TEXT("Name: %s, Time: %f, state a: %d, state b: %d, typea: %d, typeb: %d, interpolationScale: %f"), UTF8_TO_TCHAR(eachEntry.first.nameForBinaryFile().c_str()), float(context->simTime), std::distance(eachStates.cbegin(), eachWindow.first), std::distance(eachStates.cbegin(), eachWindow.second), previousState.type, nextState.type, interpolationScale);
 
 			context->animateEntity(eachSimulationData, interpolationScale);
 		}
@@ -578,9 +551,7 @@ inline void StringifyEventsFunctor::operator()(Each & eachDataMap)
 		auto& eachId = eachEntry.first;
 		for (auto& eachState : eachEntry.second.states) {
 
-			//TODO: REPLACE WITH SOMETHING LIKE StateTraits<typename Each::key_type::Entity>::displayFriendlyStringFor(eachState) (note: this method is not yet implemented or even declared)
 			eachResultBuilder.str("");
-			//TODO: IMPLEMENT A TYPEDEF OR SIMILAR THAT CAN GET FROM Entity CLASSES TO THE STATETYPEDECODER e.g. std::function<std::string(StackerStateType)>Stacker::stateTypeDecoder(StackerStateType type)
 			eachResultBuilder << "Entity " << eachId.nameForBinaryFile() << ": Current State: " << int(eachState.type);
 			interimResult.emplace_back(eachState.time, eachResultBuilder.str());
 		}

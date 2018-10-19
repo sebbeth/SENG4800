@@ -38,40 +38,13 @@ void ACoalStack::setGeometry(float position, float proportionFilled, float pileL
 	}
 }
 
-//void ACoalStack::setGeometry(float position, float padLength, FVector padStart, FVector padEnd) {
-//
-//
-//	FVector directionVector = (padEnd - padStart);
-//	double targetDistance = (position/ padLength) * directionVector.Size(); // Get the distance we will be moving between the two vectors
-//	directionVector.Normalize();
-//	directionVector = directionVector * targetDistance;
-//	SetActorLocation(padStart + directionVector);
-//}
+
 
 void ACoalStack::setWidth(float width) {
 	SetActorScale3D(FVector(width/100.0f, GetActorScale3D().Y, 1.0f));
 }
 
 
-//// Set the coal stack to being a certian length by scaling relative to the length of the mesh
-//void ACoalStack::setQuantity(float absoluteUELength) {
-//
-//	// input is in meters, we need to generate a value between 0 and 1.0 based on this absoluteUELength.
-//
-//	//const float meshLength = 400.0f;
-//
-//	//FVector origin;
-//	//FVector extent;
-//
-//	//absoluteUELength / meshLength
-//	if (absoluteUELength == 0.0f) {
-//		SetActorHiddenInGame(true);
-//	}
-//	else {
-//		SetActorHiddenInGame(false);
-//	}
-//	SetActorScale3D(FVector(GetActorScale3D().X, absoluteUELength/rawSize.Y, 1.0f));
-//}
 
 Stockpile::Id ACoalStack::getID() {
 	return id;
