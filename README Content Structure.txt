@@ -3,6 +3,7 @@ Key Folders to focus on
 CONTENT (Contains all the engine assets and blueprints which have be added to create the project)
 SOURCE (All the C++ and Python code)
 XMLS (data to run the simulation)
+PACKAGED (Use this to run the simulation without setting up Unreal Engine)
 
 1. Content
 	- The project was created from a template project, hence why some of the folder names are not fitting to the project
@@ -20,11 +21,17 @@ XMLS (data to run the simulation)
 	- Materials (Various materials and textures for the project)
 	- Source (link to the C++ files)
 	
-2. Source
-	- Coal Stack
-	- Conveyer Belt
-	- File Dialog
-	- Game Base
-	- HVCCC2
-	- HVCCC2 Game Mode
-	- HVCCC
+2. Source (Main classes and brief description)
+	- Coal Stack (Used to change the size of the coal stack)
+	- Conveyer Belt (Used to set the material based on what the state is)
+	- File Dialog (Used to generate a file dialog)
+	- Level Controller (MAIN CLASS OF THE SYSTEM)
+	- Open Dialog (Used to open a dialog and set the path chosen by the user)
+	- Ship (Used to set a ship hidden if the ship is not at the terminal)
+	- Ship loader (Used to change the direction and the material colour based on the state)
+	- Stacker reclaimer (Moves the stacker /reclaimer to the certain position, rotates model, sets material based on state)
+	- Time converter (Used to convert the provided float value into a time value)
+	- Train (used to set position of trains, spawn them in, spawn carriages)
+	- Train Track Spline (creates the railway)
+	
+	
