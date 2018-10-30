@@ -1,0 +1,214 @@
+StateType         	amount            	position          	stockpileID       	time              	Moving            	0.000000          	50.000000         	Invalid_          	49.518947         	
+Idle              	0.000000          	167.000000        	Invalid_          	49.583947         	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	49.583947         	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	49.592129         	
+PostStackReserved 	7900.000000       	167.000000        	NCT_NCT1838.1     	50.521541         	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	50.521541         	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	61.379672         	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	61.387854         	
+PostStackReserved 	8600.000000       	167.000000        	NCT_NCT1838.1     	62.399618         	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	62.399618         	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	74.579836         	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	74.588018         	
+PostStackReserved 	6800.000000       	167.000000        	NCT_NCT1838.1     	75.388018         	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	75.388018         	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	77.679989         	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	77.688171         	
+PostStackReserved 	7900.000000       	167.000000        	NCT_NCT1838.1     	78.617583         	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	78.617583         	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	82.929760         	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	82.937942         	
+PostStackReserved 	7900.000000       	167.000000        	NCT_NCT1838.1     	83.867354         	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	83.867354         	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	90.076209         	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	90.084391         	
+PostStackReserved 	7900.000000       	167.000000        	NCT_NCT1838.1     	91.013803         	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	91.013803         	
+Moving            	0.000000          	167.000000        	NCT_NCT1838.1     	91.128199         	
+Idle              	0.000000          	1012.000000       	NCT_NCT1838.1     	91.597643         	
+PreStackReserved  	0.000000          	1012.000000       	NCT_NCT1839.1     	91.597643         	
+WorkingStack      	0.000000          	1012.000000       	NCT_NCT1839.1     	91.648502         	
+PostStackReserved 	7900.000000       	1012.000000       	NCT_NCT1839.1     	92.577913         	
+Idle              	0.000000          	1012.000000       	NCT_NCT1839.1     	92.577913         	
+Moving            	0.000000          	1012.000000       	NCT_NCT1839.1     	98.159734         	
+Idle              	0.000000          	167.000000        	NCT_NCT1839.1     	98.629179         	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	98.629179         	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	98.637360         	
+PostStackReserved 	7900.000000       	167.000000        	NCT_NCT1838.1     	99.566772         	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	99.566772         	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	115.634708        	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	115.642890        	
+PostStackReserved 	7900.000000       	167.000000        	NCT_NCT1838.1     	116.572302        	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	116.572302        	
+Moving            	0.000000          	167.000000        	NCT_NCT1838.1     	122.226762        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1838.1     	122.696206        	
+PreStackReserved  	0.000000          	1012.000000       	NCT_NCT1839.1     	122.696206        	
+WorkingStack      	0.000000          	1012.000000       	NCT_NCT1839.1     	122.747065        	
+PostStackReserved 	8000.000000       	1012.000000       	NCT_NCT1839.1     	123.688242        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1839.1     	123.688242        	
+Moving            	0.000000          	1012.000000       	NCT_NCT1839.1     	126.425402        	
+Idle              	0.000000          	167.000000        	NCT_NCT1839.1     	126.894846        	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	126.894846        	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	126.903028        	
+PostStackReserved 	6800.000000       	167.000000        	NCT_NCT1838.1     	127.703028        	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	127.703028        	
+Moving            	0.000000          	167.000000        	NCT_NCT1838.1     	147.068080        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1838.1     	147.537524        	
+PreStackReserved  	0.000000          	1012.000000       	NCT_NCT1839.1     	147.537524        	
+WorkingStack      	0.000000          	1012.000000       	NCT_NCT1839.1     	147.588383        	
+PostStackReserved 	7900.000000       	1012.000000       	NCT_NCT1839.1     	148.517795        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1839.1     	148.517795        	
+Moving            	0.000000          	1012.000000       	NCT_NCT1839.1     	148.544394        	
+Idle              	0.000000          	167.000000        	NCT_NCT1839.1     	149.013839        	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	149.013839        	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	149.022021        	
+PostStackReserved 	7900.000000       	167.000000        	NCT_NCT1838.1     	149.951432        	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	149.951432        	
+Moving            	0.000000          	167.000000        	NCT_NCT1838.1     	167.134601        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1838.1     	167.604046        	
+PreStackReserved  	0.000000          	1012.000000       	NCT_NCT1839.1     	167.604046        	
+WorkingStack      	0.000000          	1012.000000       	NCT_NCT1839.1     	167.654904        	
+PostStackReserved 	7900.000000       	1012.000000       	NCT_NCT1839.1     	168.584316        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1839.1     	168.584316        	
+PreStackReserved  	0.000000          	1012.000000       	NCT_NCT1839.1     	183.334080        	
+WorkingStack      	0.000000          	1012.000000       	NCT_NCT1839.1     	183.384939        	
+PostStackReserved 	8000.000000       	1012.000000       	NCT_NCT1839.1     	184.326115        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1839.1     	184.326115        	
+PreStackReserved  	0.000000          	1012.000000       	NCT_NCT1839.1     	185.175648        	
+WorkingStack      	0.000000          	1012.000000       	NCT_NCT1839.1     	185.226506        	
+PostStackReserved 	7900.000000       	1012.000000       	NCT_NCT1839.1     	186.155918        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1839.1     	186.155918        	
+PreStackReserved  	0.000000          	1012.000000       	NCT_NCT1839.1     	186.156196        	
+WorkingStack      	0.000000          	1012.000000       	NCT_NCT1839.1     	186.207054        	
+PostStackReserved 	8000.000000       	1012.000000       	NCT_NCT1839.1     	187.148231        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1839.1     	187.148231        	
+PreStackReserved  	0.000000          	1012.000000       	NCT_NCT1839.1     	191.875165        	
+WorkingStack      	0.000000          	1012.000000       	NCT_NCT1839.1     	191.926023        	
+PostStackReserved 	8000.000000       	1012.000000       	NCT_NCT1839.1     	192.867200        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1839.1     	192.867200        	
+PreStackReserved  	0.000000          	1012.000000       	NCT_NCT1839.1     	195.875689        	
+WorkingStack      	0.000000          	1012.000000       	NCT_NCT1839.1     	195.926548        	
+PostStackReserved 	7900.000000       	1012.000000       	NCT_NCT1839.1     	196.855960        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1839.1     	196.855960        	
+Moving            	0.000000          	1012.000000       	NCT_NCT1839.1     	207.775858        	
+Idle              	0.000000          	167.000000        	NCT_NCT1839.1     	208.245302        	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	208.245302        	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	208.253484        	
+PostStackReserved 	7900.000000       	167.000000        	NCT_NCT1838.1     	209.182896        	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	209.182896        	
+Moving            	0.000000          	167.000000        	NCT_NCT1838.1     	223.524339        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1838.1     	223.993783        	
+PreStackReserved  	0.000000          	1012.000000       	NCT_NCT1839.1     	223.993783        	
+WorkingStack      	0.000000          	1012.000000       	NCT_NCT1839.1     	224.044642        	
+PostStackReserved 	6800.000000       	1012.000000       	NCT_NCT1839.1     	224.844642        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1839.1     	224.844642        	
+Moving            	0.000000          	1012.000000       	NCT_NCT1839.1     	231.386159        	
+Idle              	0.000000          	167.000000        	NCT_NCT1839.1     	231.855604        	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	231.855604        	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	231.863786        	
+PostStackReserved 	7900.000000       	167.000000        	NCT_NCT1838.1     	232.793197        	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	232.793197        	
+Moving            	0.000000          	167.000000        	NCT_NCT1838.1     	232.793475        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1838.1     	233.262919        	
+PreStackReserved  	0.000000          	1012.000000       	NCT_NCT1839.1     	233.262919        	
+WorkingStack      	0.000000          	1012.000000       	NCT_NCT1839.1     	233.313778        	
+PostStackReserved 	7900.000000       	1012.000000       	NCT_NCT1839.1     	234.243190        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1839.1     	234.243190        	
+Moving            	0.000000          	1012.000000       	NCT_NCT1839.1     	263.208820        	
+Idle              	0.000000          	167.000000        	NCT_NCT1839.1     	263.678264        	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	263.678264        	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	263.686446        	
+PostStackReserved 	7900.000000       	167.000000        	NCT_NCT1838.1     	264.615858        	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	264.615858        	
+Moving            	0.000000          	167.000000        	NCT_NCT1838.1     	265.511743        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1838.1     	265.981188        	
+PreStackReserved  	0.000000          	1012.000000       	NCT_NCT1839.1     	265.981188        	
+WorkingStack      	0.000000          	1012.000000       	NCT_NCT1839.1     	266.032046        	
+PostStackReserved 	7900.000000       	1012.000000       	NCT_NCT1839.1     	266.961458        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1839.1     	266.961458        	
+Moving            	0.000000          	1012.000000       	NCT_NCT1839.1     	278.074150        	
+Idle              	0.000000          	167.000000        	NCT_NCT1839.1     	278.543595        	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	278.543595        	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	278.551777        	
+PostStackReserved 	7900.000000       	167.000000        	NCT_NCT1838.1     	279.481188        	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	279.481188        	
+PreStackReserved  	0.000000          	167.000000        	NCT_NCT1838.1     	283.370941        	
+WorkingStack      	0.000000          	167.000000        	NCT_NCT1838.1     	283.379123        	
+PostStackReserved 	7900.000000       	167.000000        	NCT_NCT1838.1     	284.308534        	
+Idle              	0.000000          	167.000000        	NCT_NCT1838.1     	284.308534        	
+PreReclaimReserved	-nan              	167.000000        	NCT_NCT1838.1     	285.926434        	
+WorkingReclaim    	-nan              	167.000000        	NCT_NCT1838.1     	285.926434        	
+PostReclaimReserved	106400.000000     	167.000000        	NCT_NCT1838.1     	298.444081        	
+Idle              	106400.000000     	167.000000        	NCT_NCT1838.1     	298.522891        	
+Moving            	0.000000          	167.000000        	NCT_NCT1838.1     	298.523169        	
+Idle              	0.000000          	1012.000000       	NCT_NCT1838.1     	298.992613        	
+PreReclaimReserved	106400.000000     	1012.000000       	NCT_NCT1839.1     	298.992613        	
+WorkingReclaim    	106400.000000     	1012.000000       	NCT_NCT1839.1     	298.992613        	
+PostReclaimReserved	80600.000000      	1012.000000       	NCT_NCT1839.1     	308.474966        	
+Idle              	80600.000000      	1012.000000       	NCT_NCT1839.1     	308.609762        	
+Moving            	0.000000          	1012.000000       	NCT_NCT1838.1     	322.732675        	
+Idle              	0.000000          	572.500000        	NCT_NCT1838.1     	322.976842        	
+PreDoubleHandleReserved	0.000000          	572.500000        	NCT_Pad A remnant 	322.976842        	
+WorkingDoubleHandle	0.000000          	572.500000        	NCT_Pad A remnant 	323.071110        	
+PostDoubleHandleReserved	5100.000000       	572.500000        	NCT_Pad A remnant 	323.671110        	
+Idle              	5100.000000       	572.500000        	NCT_Pad A remnant 	323.671110        	
+Moving            	5100.000000       	572.500000        	NCT_Pad A remnant 	326.487975        	
+Idle              	5100.000000       	1012.000000       	NCT_Pad A remnant 	326.732142        	
+PreDoubleHandleReserved	80600.000000      	1012.000000       	NCT_NCT1839.1     	326.732142        	
+Invalid           	80600.000000      	1012.000000       	NCT_NCT1839.1     	326.732142        	
+Invalid           	13500.000000      	1012.000000       	NCT_NCT1839.1     	328.320377        	
+Invalid           	13500.000000      	1012.000000       	NCT_NCT1839.1     	328.456413        	
+Moving            	5100.000000       	1012.000000       	NCT_Pad A remnant 	329.432852        	
+Idle              	5100.000000       	167.000000        	NCT_Pad A remnant 	329.902297        	
+Invalid           	13500.000000      	167.000000        	NCT_NCT1838.1     	329.902297        	
+Invalid           	13500.000000      	167.000000        	NCT_NCT1838.1     	329.902297        	
+Invalid           	10600.000000      	167.000000        	NCT_NCT1838.1     	331.149355        	
+Invalid           	10600.000000      	167.000000        	NCT_NCT1838.1     	331.242714        	
+Moving            	5100.000000       	167.000000        	NCT_Pad A remnant 	351.441495        	
+Idle              	5100.000000       	572.500000        	NCT_Pad A remnant 	351.666773        	
+PreDoubleHandleReserved	5100.000000       	572.500000        	NCT_Pad A remnant 	351.666773        	
+WorkingDoubleHandle	5100.000000       	572.500000        	NCT_Pad A remnant 	351.772126        	
+PostDoubleHandleReserved	5300.000000       	572.500000        	NCT_Pad A remnant 	352.395656        	
+Idle              	5300.000000       	572.500000        	NCT_Pad A remnant 	352.395656        	
+PreDoubleHandleReserved	5300.000000       	572.500000        	NCT_Pad A remnant 	477.893685        	
+WorkingDoubleHandle	5300.000000       	572.500000        	NCT_Pad A remnant 	478.023079        	
+PostDoubleHandleReserved	14300.000000      	572.500000        	NCT_Pad A remnant 	479.705431        	
+Idle              	14300.000000      	572.500000        	NCT_Pad A remnant 	479.705431        	
+Moving            	14300.000000      	572.500000        	NCT_Pad A remnant 	651.144558        	
+Idle              	14300.000000      	205.000000        	NCT_Pad A remnant 	651.348725        	
+Invalid           	10600.000000      	205.000000        	NCT_NCT1852.1     	651.361225        	
+Invalid           	10600.000000      	205.000000        	NCT_NCT1852.1     	651.361225        	
+Invalid           	7000.000000       	205.000000        	NCT_NCT1852.1     	652.184754        	
+Invalid           	7000.000000       	205.000000        	NCT_NCT1852.1     	652.278188        	
+Moving            	14300.000000      	205.000000        	NCT_Pad A remnant 	716.055517        	
+Idle              	14300.000000      	572.500000        	NCT_Pad A remnant 	716.259684        	
+PreDoubleHandleReserved	14300.000000      	572.500000        	NCT_Pad A remnant 	716.316906        	
+WorkingDoubleHandle	14300.000000      	572.500000        	NCT_Pad A remnant 	716.457714        	
+PostDoubleHandleReserved	2800.000000       	572.500000        	NCT_Pad A remnant 	716.787126        	
+Idle              	2800.000000       	572.500000        	NCT_Pad A remnant 	716.787126        	
+Moving            	2800.000000       	572.500000        	NCT_Pad A remnant 	761.527966        	
+Idle              	2800.000000       	104.500000        	NCT_Pad A remnant 	761.787966        	
+Invalid           	7000.000000       	104.500000        	NCT_NCT1848.1     	761.800466        	
+Invalid           	7000.000000       	104.500000        	NCT_NCT1848.1     	761.800466        	
+Invalid           	5300.000000       	104.500000        	NCT_NCT1848.1     	762.423996        	
+Invalid           	5300.000000       	104.500000        	NCT_NCT1848.1     	762.512354        	
+Moving            	2800.000000       	104.500000        	NCT_Pad A remnant 	924.757188        	
+Idle              	2800.000000       	1105.500000       	NCT_Pad A remnant 	925.313299        	
+Invalid           	5300.000000       	1105.500000       	NCT_NCT1850.1     	925.313299        	
+Invalid           	5300.000000       	1105.500000       	NCT_NCT1850.1     	925.313299        	
+Invalid           	5200.000000       	1105.500000       	NCT_NCT1850.1     	925.925063        	
+Invalid           	5200.000000       	1105.500000       	NCT_NCT1850.1     	926.063977        	
+Moving            	2800.000000       	1105.500000       	NCT_Pad A remnant 	928.260316        	
+Idle              	2800.000000       	1017.500000       	NCT_Pad A remnant 	928.309205        	
+Invalid           	5200.000000       	1017.500000       	NCT_NCT1855.1     	928.426427        	
+Invalid           	5200.000000       	1017.500000       	NCT_NCT1855.1     	928.426427        	
+Invalid           	2100.000000       	1017.500000       	NCT_NCT1855.1     	928.673486        	
+Invalid           	2100.000000       	1017.500000       	NCT_NCT1855.1     	928.807955        	
+Moving            	2800.000000       	1017.500000       	NCT_Pad A remnant 	990.234182        	
+Idle              	2800.000000       	296.000000        	NCT_Pad A remnant 	990.635015        	
+Invalid           	2100.000000       	296.000000        	NCT_NCT1858.1     	990.635015        	
+Invalid           	2100.000000       	296.000000        	NCT_NCT1858.1     	990.635015        	
+Invalid           	8200.000000       	296.000000        	NCT_NCT1858.1     	991.599721        	
+Invalid           	8200.000000       	296.000000        	NCT_NCT1858.1     	991.697752        	
+WrappedUp         	2800.000000       	296.000000        	NCT_Pad A remnant 	1091.317791       	
+

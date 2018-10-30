@@ -1,0 +1,149 @@
+StateType                     	amount                        	position                      	stockpileID                   	time                          	
+Moving                        	0.000000                      	820.000000                    	Invalid_                      	96.967658                     	
+Idle                          	0.000000                      	720.000000                    	Invalid_                      	97.023214                     	
+PreStackReserved              	0.000000                      	720.000000                    	CCT_CCT1394.1                 	97.023214                     	
+WorkingStack                  	0.000000                      	720.000000                    	CCT_CCT1394.1                 	97.059325                     	
+PostStackReserved             	9200.000000                   	720.000000                    	CCT_CCT1394.1                 	98.141678                     	
+Idle                          	0.000000                      	720.000000                    	CCT_CCT1394.1                 	98.141678                     	
+PreStackReserved              	0.000000                      	720.000000                    	CCT_CCT1394.1                 	111.389246                    	
+WorkingStack                  	0.000000                      	720.000000                    	CCT_CCT1394.1                 	111.425357                    	
+PostStackReserved             	9200.000000                   	720.000000                    	CCT_CCT1394.1                 	112.507710                    	
+Idle                          	0.000000                      	720.000000                    	CCT_CCT1394.1                 	112.507710                    	
+PreStackReserved              	0.000000                      	720.000000                    	CCT_CCT1394.1                 	112.870478                    	
+WorkingStack                  	0.000000                      	720.000000                    	CCT_CCT1394.1                 	112.906589                    	
+PostStackReserved             	8600.000000                   	720.000000                    	CCT_CCT1394.1                 	113.918354                    	
+Idle                          	0.000000                      	720.000000                    	CCT_CCT1394.1                 	113.918354                    	
+PreStackReserved              	0.000000                      	720.000000                    	CCT_CCT1394.1                 	130.996384                    	
+WorkingStack                  	0.000000                      	720.000000                    	CCT_CCT1394.1                 	131.032495                    	
+PostStackReserved             	8600.000000                   	720.000000                    	CCT_CCT1394.1                 	132.044260                    	
+Idle                          	0.000000                      	720.000000                    	CCT_CCT1394.1                 	132.044260                    	
+PreStackReserved              	0.000000                      	720.000000                    	CCT_CCT1394.1                 	134.572776                    	
+WorkingStack                  	0.000000                      	720.000000                    	CCT_CCT1394.1                 	134.608887                    	
+PostStackReserved             	7900.000000                   	720.000000                    	CCT_CCT1394.1                 	135.538299                    	
+Idle                          	0.000000                      	720.000000                    	CCT_CCT1394.1                 	135.538299                    	
+PreStackReserved              	0.000000                      	720.000000                    	CCT_CCT1394.1                 	136.919237                    	
+WorkingStack                  	0.000000                      	720.000000                    	CCT_CCT1394.1                 	136.955348                    	
+PostStackReserved             	8600.000000                   	720.000000                    	CCT_CCT1394.1                 	137.967112                    	
+Idle                          	0.000000                      	720.000000                    	CCT_CCT1394.1                 	137.967112                    	
+PreStackReserved              	0.000000                      	720.000000                    	CCT_CCT1394.1                 	167.952288                    	
+WorkingStack                  	0.000000                      	720.000000                    	CCT_CCT1394.1                 	167.988399                    	
+PostStackReserved             	9200.000000                   	720.000000                    	CCT_CCT1394.1                 	169.070752                    	
+Idle                          	0.000000                      	720.000000                    	CCT_CCT1394.1                 	169.070752                    	
+PreStackReserved              	0.000000                      	720.000000                    	CCT_CCT1394.1                 	177.142096                    	
+WorkingStack                  	0.000000                      	720.000000                    	CCT_CCT1394.1                 	177.178207                    	
+PostStackReserved             	9200.000000                   	720.000000                    	CCT_CCT1394.1                 	178.260560                    	
+Idle                          	0.000000                      	720.000000                    	CCT_CCT1394.1                 	178.260560                    	
+PreStackReserved              	0.000000                      	720.000000                    	CCT_CCT1394.1                 	182.663887                    	
+WorkingStack                  	0.000000                      	720.000000                    	CCT_CCT1394.1                 	182.699999                    	
+PostStackReserved             	9200.000000                   	720.000000                    	CCT_CCT1394.1                 	183.782351                    	
+Idle                          	0.000000                      	720.000000                    	CCT_CCT1394.1                 	183.782351                    	
+PreStackReserved              	0.000000                      	720.000000                    	CCT_CCT1394.1                 	186.892491                    	
+WorkingStack                  	0.000000                      	720.000000                    	CCT_CCT1394.1                 	186.928602                    	
+PostStackReserved             	9100.000000                   	720.000000                    	CCT_CCT1394.1                 	187.999190                    	
+Idle                          	0.000000                      	720.000000                    	CCT_CCT1394.1                 	187.999190                    	
+PreStackReserved              	0.000000                      	720.000000                    	CCT_CCT1394.1                 	188.642002                    	
+WorkingStack                  	0.000000                      	720.000000                    	CCT_CCT1394.1                 	188.678113                    	
+PostStackReserved             	9200.000000                   	720.000000                    	CCT_CCT1394.1                 	189.760466                    	
+Idle                          	0.000000                      	720.000000                    	CCT_CCT1394.1                 	189.760466                    	
+Moving                        	0.000000                      	720.000000                    	CCT_CCT1394.1                 	238.906772                    	
+Idle                          	0.000000                      	727.000000                    	CCT_CCT1394.1                 	238.910661                    	
+PreStackReserved              	0.000000                      	727.000000                    	CCT_CCT1398.1                 	238.910661                    	
+WorkingStack                  	0.000000                      	727.000000                    	CCT_CCT1398.1                 	238.946115                    	
+PostStackReserved             	7900.000000                   	727.000000                    	CCT_CCT1398.1                 	239.875527                    	
+Idle                          	0.000000                      	727.000000                    	CCT_CCT1398.1                 	239.875527                    	
+PreStackReserved              	0.000000                      	727.000000                    	CCT_CCT1398.1                 	276.666790                    	
+WorkingStack                  	0.000000                      	727.000000                    	CCT_CCT1398.1                 	276.702244                    	
+PostStackReserved             	9200.000000                   	727.000000                    	CCT_CCT1398.1                 	277.784597                    	
+Idle                          	0.000000                      	727.000000                    	CCT_CCT1398.1                 	277.784597                    	
+PreStackReserved              	0.000000                      	727.000000                    	CCT_CCT1398.1                 	282.997109                    	
+WorkingStack                  	0.000000                      	727.000000                    	CCT_CCT1398.1                 	283.032563                    	
+PostStackReserved             	9200.000000                   	727.000000                    	CCT_CCT1398.1                 	284.114916                    	
+Idle                          	0.000000                      	727.000000                    	CCT_CCT1398.1                 	284.114916                    	
+PreStackReserved              	0.000000                      	727.000000                    	CCT_CCT1398.1                 	340.980792                    	
+WorkingStack                  	0.000000                      	727.000000                    	CCT_CCT1398.1                 	341.016246                    	
+PostStackReserved             	7900.000000                   	727.000000                    	CCT_CCT1398.1                 	341.945658                    	
+Idle                          	0.000000                      	727.000000                    	CCT_CCT1398.1                 	341.945658                    	
+PreStackReserved              	0.000000                      	727.000000                    	CCT_CCT1398.1                 	388.580316                    	
+WorkingStack                  	0.000000                      	727.000000                    	CCT_CCT1398.1                 	388.615771                    	
+PostStackReserved             	7900.000000                   	727.000000                    	CCT_CCT1398.1                 	389.545183                    	
+Idle                          	0.000000                      	727.000000                    	CCT_CCT1398.1                 	389.545183                    	
+PreStackReserved              	0.000000                      	727.000000                    	CCT_CCT1398.1                 	432.370101                    	
+WorkingStack                  	0.000000                      	727.000000                    	CCT_CCT1398.1                 	432.405555                    	
+PostStackReserved             	7900.000000                   	727.000000                    	CCT_CCT1398.1                 	433.334967                    	
+Idle                          	0.000000                      	727.000000                    	CCT_CCT1398.1                 	433.334967                    	
+PreStackReserved              	0.000000                      	727.000000                    	CCT_CCT1398.1                 	443.302292                    	
+WorkingStack                  	0.000000                      	727.000000                    	CCT_CCT1398.1                 	443.337746                    	
+PostStackReserved             	6800.000000                   	727.000000                    	CCT_CCT1398.1                 	444.137746                    	
+Idle                          	0.000000                      	727.000000                    	CCT_CCT1398.1                 	444.137746                    	
+PreStackReserved              	0.000000                      	727.000000                    	CCT_CCT1398.1                 	450.265626                    	
+WorkingStack                  	0.000000                      	727.000000                    	CCT_CCT1398.1                 	450.301080                    	
+PostStackReserved             	7900.000000                   	727.000000                    	CCT_CCT1398.1                 	451.230492                    	
+Idle                          	0.000000                      	727.000000                    	CCT_CCT1398.1                 	451.230492                    	
+Moving                        	0.000000                      	727.000000                    	CCT_CCT1398.1                 	452.153380                    	
+Idle                          	0.000000                      	430.000000                    	CCT_CCT1398.1                 	452.318380                    	
+PreDoubleHandleReserved       	0.000000                      	430.000000                    	CCT_Pad B remnant             	452.318380                    	
+WorkingDoubleHandle           	0.000000                      	430.000000                    	CCT_Pad B remnant             	452.412825                    	
+PostDoubleHandleReserved      	9900.000000                   	430.000000                    	CCT_Pad B remnant             	453.577531                    	
+Idle                          	9900.000000                   	430.000000                    	CCT_Pad B remnant             	453.577531                    	
+Moving                        	9900.000000                   	430.000000                    	CCT_Pad B remnant             	460.421683                    	
+Idle                          	9900.000000                   	727.000000                    	CCT_Pad B remnant             	460.586683                    	
+PreStackReserved              	9900.000000                   	727.000000                    	CCT_CCT1398.1                 	460.586683                    	
+WorkingStack                  	9900.000000                   	727.000000                    	CCT_CCT1398.1                 	460.622137                    	
+PostStackReserved             	7900.000000                   	727.000000                    	CCT_CCT1398.1                 	461.551549                    	
+Idle                          	0.000000                      	727.000000                    	CCT_CCT1398.1                 	461.551549                    	
+PreStackReserved              	0.000000                      	727.000000                    	CCT_CCT1398.1                 	466.327197                    	
+WorkingStack                  	0.000000                      	727.000000                    	CCT_CCT1398.1                 	466.362652                    	
+PostStackReserved             	7900.000000                   	727.000000                    	CCT_CCT1398.1                 	467.292064                    	
+Idle                          	0.000000                      	727.000000                    	CCT_CCT1398.1                 	467.292064                    	
+PreStackReserved              	0.000000                      	727.000000                    	CCT_CCT1398.1                 	475.612800                    	
+WorkingStack                  	0.000000                      	727.000000                    	CCT_CCT1398.1                 	475.648254                    	
+PostStackReserved             	7900.000000                   	727.000000                    	CCT_CCT1398.1                 	476.577666                    	
+Idle                          	0.000000                      	727.000000                    	CCT_CCT1398.1                 	476.577666                    	
+Moving                        	0.000000                      	727.000000                    	CCT_CCT1398.1                 	517.221433                    	
+Idle                          	0.000000                      	430.000000                    	CCT_CCT1398.1                 	517.386433                    	
+PreDoubleHandleReserved       	0.000000                      	430.000000                    	CCT_Pad C remnant             	517.386433                    	
+WorkingDoubleHandle           	0.000000                      	430.000000                    	CCT_Pad C remnant             	517.481230                    	
+PostDoubleHandleReserved      	7800.000000                   	430.000000                    	CCT_Pad C remnant             	518.398878                    	
+Idle                          	7800.000000                   	430.000000                    	CCT_Pad C remnant             	518.398878                    	
+Moving                        	7800.000000                   	430.000000                    	CCT_Pad C remnant             	518.618730                    	
+Idle                          	7800.000000                   	747.000000                    	CCT_Pad C remnant             	518.794841                    	
+PreStackReserved              	7800.000000                   	747.000000                    	CCT_CCT1403.1                 	518.794841                    	
+WorkingStack                  	7800.000000                   	747.000000                    	CCT_CCT1403.1                 	518.832316                    	
+PostStackReserved             	9100.000000                   	747.000000                    	CCT_CCT1403.1                 	519.902904                    	
+Idle                          	0.000000                      	747.000000                    	CCT_CCT1403.1                 	519.902904                    	
+PreStackReserved              	0.000000                      	747.000000                    	CCT_CCT1403.1                 	525.271026                    	
+WorkingStack                  	0.000000                      	747.000000                    	CCT_CCT1403.1                 	525.308501                    	
+PostStackReserved             	9100.000000                   	747.000000                    	CCT_CCT1403.1                 	526.379089                    	
+Idle                          	0.000000                      	747.000000                    	CCT_CCT1403.1                 	526.379089                    	
+PreStackReserved              	0.000000                      	747.000000                    	CCT_CCT1403.1                 	529.274149                    	
+WorkingStack                  	0.000000                      	747.000000                    	CCT_CCT1403.1                 	529.311624                    	
+PostStackReserved             	9100.000000                   	747.000000                    	CCT_CCT1403.1                 	530.382212                    	
+Idle                          	0.000000                      	747.000000                    	CCT_CCT1403.1                 	530.382212                    	
+PreStackReserved              	0.000000                      	747.000000                    	CCT_CCT1403.1                 	541.791241                    	
+WorkingStack                  	0.000000                      	747.000000                    	CCT_CCT1403.1                 	541.828715                    	
+PostStackReserved             	9100.000000                   	747.000000                    	CCT_CCT1403.1                 	542.899304                    	
+Idle                          	0.000000                      	747.000000                    	CCT_CCT1403.1                 	542.899304                    	
+PreStackReserved              	0.000000                      	747.000000                    	CCT_CCT1403.1                 	549.149884                    	
+WorkingStack                  	0.000000                      	747.000000                    	CCT_CCT1403.1                 	549.187359                    	
+PostStackReserved             	9100.000000                   	747.000000                    	CCT_CCT1403.1                 	550.257947                    	
+Idle                          	0.000000                      	747.000000                    	CCT_CCT1403.1                 	550.257947                    	
+PreStackReserved              	0.000000                      	747.000000                    	CCT_CCT1403.1                 	603.804908                    	
+WorkingStack                  	0.000000                      	747.000000                    	CCT_CCT1403.1                 	603.842383                    	
+PostStackReserved             	7900.000000                   	747.000000                    	CCT_CCT1403.1                 	604.771795                    	
+Idle                          	0.000000                      	747.000000                    	CCT_CCT1403.1                 	604.771795                    	
+PreStackReserved              	0.000000                      	747.000000                    	CCT_CCT1403.1                 	608.025450                    	
+WorkingStack                  	0.000000                      	747.000000                    	CCT_CCT1403.1                 	608.062925                    	
+PostStackReserved             	7900.000000                   	747.000000                    	CCT_CCT1403.1                 	608.992337                    	
+Idle                          	0.000000                      	747.000000                    	CCT_CCT1403.1                 	608.992337                    	
+PreStackReserved              	0.000000                      	747.000000                    	CCT_CCT1403.1                 	613.586310                    	
+WorkingStack                  	0.000000                      	747.000000                    	CCT_CCT1403.1                 	613.623785                    	
+PostStackReserved             	6800.000000                   	747.000000                    	CCT_CCT1403.1                 	614.423785                    	
+Idle                          	0.000000                      	747.000000                    	CCT_CCT1403.1                 	614.423785                    	
+Moving                        	0.000000                      	747.000000                    	CCT_CCT1403.1                 	645.884530                    	
+Idle                          	0.000000                      	430.000000                    	CCT_CCT1403.1                 	646.060641                    	
+PreDoubleHandleReserved       	0.000000                      	430.000000                    	CCT_Pad B remnant             	646.060641                    	
+WorkingDoubleHandle           	0.000000                      	430.000000                    	CCT_Pad B remnant             	646.156449                    	
+PostDoubleHandleReserved      	9200.000000                   	430.000000                    	CCT_Pad B remnant             	647.238802                    	
+Idle                          	9200.000000                   	430.000000                    	CCT_Pad B remnant             	647.238802                    	
+WrappedUp                     	9200.000000                   	430.000000                    	CCT_Pad B remnant             	1091.317791                   	
+

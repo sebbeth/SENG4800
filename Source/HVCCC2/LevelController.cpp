@@ -18,6 +18,8 @@
 
 #include "data/loadData.h"
 
+#include "data/LogDataFunctor.h"
+
 using namespace std;
 
 int mock_state;
@@ -123,7 +125,7 @@ bool ALevelController::loadXMLData(const  FString& srcPath) {
 	auto stateResultPair = ::loadXMLData(TCHAR_TO_UTF8(*srcPath));
 
 	//only do the rest if the data-loading was successful
-	if (stateResultPair.second) {
+	if (stateResultPair.second) {		
 		clearDataFunctor();
 
 		//add the new data in
@@ -133,6 +135,11 @@ bool ALevelController::loadXMLData(const  FString& srcPath) {
 		for (auto& eachVessel : std::get<DataMap<Vessel>>(data)) {
 			eachVessel.second.determineArrivalLocation(data);
 		}
+
+
+		//log all the data read successfully, not just data mapping to recognised entities
+		forEachInTuple(stateResultPair.first, LogDataFunctor("C:/Users/marcos/Documents/git/SENG4800/DataLogs"));
+
 	}
 
 	return stateResultPair.second;

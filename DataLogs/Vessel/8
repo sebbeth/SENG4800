@@ -1,0 +1,11 @@
+StateType                     	isTidal                       	metermark                     	terminalID                    	time                          	tugs                          	
+Idle                          	6                             	0.000000                      	                              	58.000000                     	1959829163                    	
+WaitingForCoal                	6                             	0.000000                      	kct                           	297.983333                    	1959829163                    	
+WaitingForBerth               	6                             	0.000000                      	kct                           	567.856403                    	1959829163                    	
+WaitingToEnter                	1                             	0.000000                      	kct                           	567.856403                    	1959829163                    	
+TravellingToTerminal          	1                             	0.000000                      	kct                           	568.135198                    	3                             	
+Berthed                       	1                             	561.000000                    	kct                           	569.007085                    	3                             	
+Invalid                       	1                             	561.000000                    	kct                           	586.844633                    	3                             	
+Invalid                       	1                             	561.000000                    	kct                           	594.937361                    	1                             	
+Invalid                       	1                             	561.000000                    	kct                           	595.081945                    	1                             	
+

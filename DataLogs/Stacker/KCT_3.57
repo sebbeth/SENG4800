@@ -1,0 +1,403 @@
+StateType                     	amount                        	position                      	stockpileID                   	time                          	
+Moving                        	0.000000                      	2370.000000                   	Invalid_                      	67.360998                     	
+Idle                          	0.000000                      	2153.000000                   	Invalid_                      	67.481553                     	
+PreStackReserved              	0.000000                      	2153.000000                   	KCT_KCT8.2                    	67.481553                     	
+WorkingStack                  	0.000000                      	2153.000000                   	KCT_KCT8.2                    	67.613776                     	
+PostStackReserved             	9200.000000                   	2153.000000                   	KCT_KCT8.2                    	68.696129                     	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT8.2                    	68.696129                     	
+PreStackReserved              	0.000000                      	2153.000000                   	KCT_KCT8.2                    	71.469929                     	
+WorkingStack                  	0.000000                      	2153.000000                   	KCT_KCT8.2                    	71.602151                     	
+PostStackReserved             	9200.000000                   	2153.000000                   	KCT_KCT8.2                    	72.684504                     	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT8.2                    	72.684504                     	
+PreStackReserved              	0.000000                      	2153.000000                   	KCT_KCT8.2                    	80.456906                     	
+WorkingStack                  	0.000000                      	2153.000000                   	KCT_KCT8.2                    	80.495492                     	
+PostStackReserved             	7900.000000                   	2153.000000                   	KCT_KCT8.2                    	81.424903                     	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT8.2                    	81.424903                     	
+PreStackReserved              	0.000000                      	2153.000000                   	KCT_KCT8.2                    	84.593000                     	
+WorkingStack                  	0.000000                      	2153.000000                   	KCT_KCT8.2                    	84.631586                     	
+PostStackReserved             	9200.000000                   	2153.000000                   	KCT_KCT8.2                    	85.713939                     	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT8.2                    	85.713939                     	
+PreStackReserved              	0.000000                      	2153.000000                   	KCT_KCT8.2                    	87.734518                     	
+WorkingStack                  	0.000000                      	2153.000000                   	KCT_KCT8.2                    	87.779165                     	
+PostStackReserved             	9200.000000                   	2153.000000                   	KCT_KCT8.2                    	88.861518                     	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT8.2                    	88.861518                     	
+Moving                        	0.000000                      	2153.000000                   	KCT_KCT8.2                    	89.013573                     	
+Idle                          	0.000000                      	2298.500000                   	KCT_KCT8.2                    	89.094407                     	
+PreStackReserved              	0.000000                      	2298.500000                   	KCT_KCT8.3                    	89.094407                     	
+WorkingStack                  	0.000000                      	2298.500000                   	KCT_KCT8.3                    	89.233977                     	
+PostStackReserved             	7900.000000                   	2298.500000                   	KCT_KCT8.3                    	90.163389                     	
+Idle                          	0.000000                      	2298.500000                   	KCT_KCT8.3                    	90.163389                     	
+PreStackReserved              	0.000000                      	2298.500000                   	KCT_KCT8.3                    	104.255608                    	
+WorkingStack                  	0.000000                      	2298.500000                   	KCT_KCT8.3                    	104.285911                    	
+PostStackReserved             	7900.000000                   	2298.500000                   	KCT_KCT8.3                    	105.215323                    	
+Idle                          	0.000000                      	2298.500000                   	KCT_KCT8.3                    	105.215323                    	
+Moving                        	0.000000                      	2298.500000                   	KCT_KCT8.3                    	116.778948                    	
+Idle                          	0.000000                      	1650.500000                   	KCT_KCT8.3                    	117.138948                    	
+PreStackReserved              	0.000000                      	1650.500000                   	KCT_KCT10.1                   	117.138948                    	
+WorkingStack                  	0.000000                      	1650.500000                   	KCT_KCT10.1                   	117.245792                    	
+PostStackReserved             	9100.000000                   	1650.500000                   	KCT_KCT10.1                   	118.316380                    	
+Idle                          	0.000000                      	1650.500000                   	KCT_KCT10.1                   	118.316380                    	
+Moving                        	0.000000                      	1650.500000                   	KCT_KCT10.1                   	168.097667                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT10.1                   	168.217389                    	
+PreStackReserved              	0.000000                      	1866.000000                   	KCT_KCT10.3                   	168.217389                    	
+WorkingStack                  	0.000000                      	1866.000000                   	KCT_KCT10.3                   	168.335116                    	
+PostStackReserved             	9200.000000                   	1866.000000                   	KCT_KCT10.3                   	169.417469                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT10.3                   	169.417469                    	
+Moving                        	0.000000                      	1866.000000                   	KCT_KCT10.3                   	176.576238                    	
+Idle                          	0.000000                      	1650.500000                   	KCT_KCT10.3                   	176.695960                    	
+PreStackReserved              	0.000000                      	1650.500000                   	KCT_KCT10.1                   	176.695960                    	
+WorkingStack                  	0.000000                      	1650.500000                   	KCT_KCT10.1                   	176.802803                    	
+PostStackReserved             	8600.000000                   	1650.500000                   	KCT_KCT10.1                   	177.814568                    	
+Idle                          	0.000000                      	1650.500000                   	KCT_KCT10.1                   	177.814568                    	
+Moving                        	0.000000                      	1650.500000                   	KCT_KCT10.1                   	181.233452                    	
+Idle                          	0.000000                      	1724.000000                   	KCT_KCT10.1                   	181.274286                    	
+PreStackReserved              	0.000000                      	1724.000000                   	KCT_KCT10.2                   	181.274286                    	
+WorkingStack                  	0.000000                      	1724.000000                   	KCT_KCT10.2                   	181.384841                    	
+PostStackReserved             	8600.000000                   	1724.000000                   	KCT_KCT10.2                   	182.396606                    	
+Idle                          	0.000000                      	1724.000000                   	KCT_KCT10.2                   	182.396606                    	
+PreStackReserved              	0.000000                      	1724.000000                   	KCT_KCT10.2                   	202.522177                    	
+WorkingStack                  	0.000000                      	1724.000000                   	KCT_KCT10.2                   	202.552480                    	
+PostStackReserved             	8600.000000                   	1724.000000                   	KCT_KCT10.2                   	203.564245                    	
+Idle                          	0.000000                      	1724.000000                   	KCT_KCT10.2                   	203.564245                    	
+Moving                        	0.000000                      	1724.000000                   	KCT_KCT10.2                   	219.031044                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT10.2                   	219.147711                    	
+PreStackReserved              	0.000000                      	1514.000000                   	KCT_KCT16.1                   	219.147711                    	
+WorkingStack                  	0.000000                      	1514.000000                   	KCT_KCT16.1                   	219.247660                    	
+PostStackReserved             	8600.000000                   	1514.000000                   	KCT_KCT16.1                   	220.259425                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT16.1                   	220.259425                    	
+Moving                        	0.000000                      	1514.000000                   	KCT_KCT16.1                   	242.237591                    	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT16.1                   	242.592591                    	
+PreStackReserved              	0.000000                      	2153.000000                   	KCT_KCT8.2                    	242.592591                    	
+WorkingStack                  	0.000000                      	2153.000000                   	KCT_KCT8.2                    	242.724813                    	
+PostStackReserved             	9200.000000                   	2153.000000                   	KCT_KCT8.2                    	243.807166                    	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT8.2                    	243.807166                    	
+Moving                        	0.000000                      	2153.000000                   	KCT_KCT8.2                    	269.307811                    	
+Idle                          	0.000000                      	1724.000000                   	KCT_KCT8.2                    	269.546145                    	
+PreStackReserved              	0.000000                      	1724.000000                   	KCT_KCT10.2                   	269.546145                    	
+WorkingStack                  	0.000000                      	1724.000000                   	KCT_KCT10.2                   	269.656700                    	
+PostStackReserved             	8600.000000                   	1724.000000                   	KCT_KCT10.2                   	270.668465                    	
+Idle                          	0.000000                      	1724.000000                   	KCT_KCT10.2                   	270.668465                    	
+Moving                        	0.000000                      	1724.000000                   	KCT_KCT10.2                   	272.291773                    	
+Idle                          	0.000000                      	2298.500000                   	KCT_KCT10.2                   	272.610940                    	
+PreStackReserved              	0.000000                      	2298.500000                   	KCT_KCT8.3                    	272.610940                    	
+WorkingStack                  	0.000000                      	2298.500000                   	KCT_KCT8.3                    	272.750510                    	
+WorkingStackFail              	0.000000                      	2298.500000                   	KCT_Stockpile ID              	273.454570                    	
+WorkingStack                  	0.000000                      	2298.500000                   	KCT_Stockpile ID              	273.922340                    	
+PostStackReserved             	6800.000000                   	2298.500000                   	KCT_KCT8.3                    	274.018281                    	
+Idle                          	0.000000                      	2298.500000                   	KCT_KCT8.3                    	274.018281                    	
+Moving                        	0.000000                      	2298.500000                   	KCT_KCT8.3                    	293.205197                    	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT8.3                    	293.286030                    	
+PreStackReserved              	0.000000                      	2153.000000                   	KCT_KCT8.2                    	293.286030                    	
+WorkingStack                  	0.000000                      	2153.000000                   	KCT_KCT8.2                    	293.418252                    	
+PostStackReserved             	9200.000000                   	2153.000000                   	KCT_KCT8.2                    	294.500605                    	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT8.2                    	294.500605                    	
+PreStackReserved              	0.000000                      	2153.000000                   	KCT_KCT8.2                    	304.360887                    	
+WorkingStack                  	0.000000                      	2153.000000                   	KCT_KCT8.2                    	304.399473                    	
+PostStackReserved             	9200.000000                   	2153.000000                   	KCT_KCT8.2                    	305.481826                    	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT8.2                    	305.481826                    	
+PreStackReserved              	0.000000                      	2153.000000                   	KCT_KCT8.2                    	320.559546                    	
+WorkingStack                  	0.000000                      	2153.000000                   	KCT_KCT8.2                    	320.598132                    	
+PostStackReserved             	9200.000000                   	2153.000000                   	KCT_KCT8.2                    	321.680485                    	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT8.2                    	321.680485                    	
+Moving                        	0.000000                      	2153.000000                   	KCT_KCT8.2                    	350.786651                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT8.2                    	350.946095                    	
+PreStackReserved              	0.000000                      	1866.000000                   	KCT_KCT10.3                   	350.946095                    	
+WorkingStack                  	0.000000                      	1866.000000                   	KCT_KCT10.3                   	351.063822                    	
+PostStackReserved             	9200.000000                   	1866.000000                   	KCT_KCT10.3                   	352.146175                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT10.3                   	352.146175                    	
+PreStackReserved              	0.000000                      	1866.000000                   	KCT_KCT10.3                   	353.308909                    	
+WorkingStack                  	0.000000                      	1866.000000                   	KCT_KCT10.3                   	353.426636                    	
+PostStackReserved             	9200.000000                   	1866.000000                   	KCT_KCT10.3                   	354.508989                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT10.3                   	354.508989                    	
+Moving                        	0.000000                      	1866.000000                   	KCT_KCT10.3                   	358.496508                    	
+Idle                          	0.000000                      	2007.500000                   	KCT_KCT10.3                   	358.575119                    	
+PreStackReserved              	0.000000                      	2007.500000                   	KCT_KCT8.1                    	358.575119                    	
+WorkingStack                  	0.000000                      	2007.500000                   	KCT_KCT8.1                    	358.699993                    	
+PostStackReserved             	8600.000000                   	2007.500000                   	KCT_KCT8.1                    	359.711758                    	
+Idle                          	0.000000                      	2007.500000                   	KCT_KCT8.1                    	359.711758                    	
+Moving                        	0.000000                      	2007.500000                   	KCT_KCT8.1                    	372.853204                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT8.1                    	372.931815                    	
+PreStackReserved              	0.000000                      	1866.000000                   	KCT_KCT10.3                   	372.931815                    	
+WorkingStack                  	0.000000                      	1866.000000                   	KCT_KCT10.3                   	373.049542                    	
+PostStackReserved             	9200.000000                   	1866.000000                   	KCT_KCT10.3                   	374.131895                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT10.3                   	374.131895                    	
+Moving                        	0.000000                      	1866.000000                   	KCT_KCT10.3                   	387.958776                    	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT10.3                   	388.118221                    	
+PreStackReserved              	0.000000                      	2153.000000                   	KCT_KCT8.2                    	388.118221                    	
+WorkingStack                  	0.000000                      	2153.000000                   	KCT_KCT8.2                    	388.250443                    	
+PostStackReserved             	8600.000000                   	2153.000000                   	KCT_KCT8.2                    	389.262208                    	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT8.2                    	389.262208                    	
+Moving                        	0.000000                      	2153.000000                   	KCT_KCT8.2                    	407.560921                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT8.2                    	407.915921                    	
+PreStackReserved              	0.000000                      	1514.000000                   	KCT_KCT16.1                   	407.915921                    	
+WorkingStack                  	0.000000                      	1514.000000                   	KCT_KCT16.1                   	408.015870                    	
+PostStackReserved             	8600.000000                   	1514.000000                   	KCT_KCT16.1                   	409.027635                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT16.1                   	409.027635                    	
+Moving                        	0.000000                      	1514.000000                   	KCT_KCT16.1                   	409.468241                    	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT16.1                   	409.823241                    	
+PreStackReserved              	0.000000                      	2153.000000                   	KCT_KCT8.2                    	409.823241                    	
+WorkingStack                  	0.000000                      	2153.000000                   	KCT_KCT8.2                    	409.955463                    	
+PostStackReserved             	9200.000000                   	2153.000000                   	KCT_KCT8.2                    	411.037816                    	
+Idle                          	0.000000                      	2153.000000                   	KCT_KCT8.2                    	411.037816                    	
+Moving                        	0.000000                      	2153.000000                   	KCT_KCT8.2                    	416.196768                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT8.2                    	416.551768                    	
+PreStackReserved              	0.000000                      	1514.000000                   	KCT_KCT16.1                   	416.551768                    	
+WorkingStack                  	0.000000                      	1514.000000                   	KCT_KCT16.1                   	416.651717                    	
+PostStackReserved             	7900.000000                   	1514.000000                   	KCT_KCT16.1                   	417.581129                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT16.1                   	417.581129                    	
+PreStackReserved              	0.000000                      	1514.000000                   	KCT_KCT16.1                   	420.420244                    	
+WorkingStack                  	0.000000                      	1514.000000                   	KCT_KCT16.1                   	420.520194                    	
+PostStackReserved             	8600.000000                   	1514.000000                   	KCT_KCT16.1                   	421.531958                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT16.1                   	421.531958                    	
+Moving                        	0.000000                      	1514.000000                   	KCT_KCT16.1                   	421.986617                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT16.1                   	422.182173                    	
+PreStackReserved              	0.000000                      	1866.000000                   	KCT_KCT10.3                   	422.182173                    	
+WorkingStack                  	0.000000                      	1866.000000                   	KCT_KCT10.3                   	422.299900                    	
+PostStackReserved             	9200.000000                   	1866.000000                   	KCT_KCT10.3                   	423.382253                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT10.3                   	423.382253                    	
+PreStackReserved              	0.000000                      	1866.000000                   	KCT_KCT10.3                   	427.643764                    	
+WorkingStack                  	0.000000                      	1866.000000                   	KCT_KCT10.3                   	427.712173                    	
+WorkingStackFail              	0.000000                      	1866.000000                   	KCT_Stockpile ID              	428.024637                    	
+WorkingStack                  	0.000000                      	1866.000000                   	KCT_Stockpile ID              	428.507264                    	
+WorkingStackFail              	0.000000                      	1866.000000                   	KCT_Stockpile ID              	428.633126                    	
+WorkingStack                  	0.000000                      	1866.000000                   	KCT_Stockpile ID              	429.068771                    	
+PostStackReserved             	8600.000000                   	1866.000000                   	KCT_KCT10.3                   	429.642210                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT10.3                   	429.642210                    	
+Moving                        	0.000000                      	1866.000000                   	KCT_KCT10.3                   	433.147537                    	
+Idle                          	0.000000                      	1650.500000                   	KCT_KCT10.3                   	433.267259                    	
+PreStackReserved              	0.000000                      	1650.500000                   	KCT_KCT10.1                   	433.267259                    	
+WorkingStack                  	0.000000                      	1650.500000                   	KCT_KCT10.1                   	433.374102                    	
+PostStackReserved             	9100.000000                   	1650.500000                   	KCT_KCT10.1                   	434.444691                    	
+Idle                          	0.000000                      	1650.500000                   	KCT_KCT10.1                   	434.444691                    	
+Moving                        	0.000000                      	1650.500000                   	KCT_KCT10.1                   	438.411361                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT10.1                   	438.487195                    	
+PreStackReserved              	0.000000                      	1514.000000                   	KCT_KCT16.1                   	438.487195                    	
+WorkingStack                  	0.000000                      	1514.000000                   	KCT_KCT16.1                   	438.587144                    	
+PostStackReserved             	9100.000000                   	1514.000000                   	KCT_KCT16.1                   	439.657732                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT16.1                   	439.657732                    	
+Moving                        	0.000000                      	1514.000000                   	KCT_KCT16.1                   	448.787684                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT16.1                   	448.983240                    	
+PreStackReserved              	0.000000                      	1866.000000                   	KCT_KCT10.3                   	448.983240                    	
+WorkingStack                  	0.000000                      	1866.000000                   	KCT_KCT10.3                   	449.100967                    	
+PostStackReserved             	9200.000000                   	1866.000000                   	KCT_KCT10.3                   	450.183320                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT10.3                   	450.183320                    	
+PreStackReserved              	0.000000                      	1866.000000                   	KCT_KCT10.3                   	454.335609                    	
+WorkingStack                  	0.000000                      	1866.000000                   	KCT_KCT10.3                   	454.453337                    	
+PostStackReserved             	9200.000000                   	1866.000000                   	KCT_KCT10.3                   	455.535690                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT10.3                   	455.535690                    	
+PreStackReserved              	0.000000                      	1866.000000                   	KCT_KCT10.3                   	469.108702                    	
+WorkingStack                  	0.000000                      	1866.000000                   	KCT_KCT10.3                   	469.165874                    	
+PostStackReserved             	9200.000000                   	1866.000000                   	KCT_KCT10.3                   	470.248227                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT10.3                   	470.248227                    	
+Moving                        	0.000000                      	1866.000000                   	KCT_KCT10.3                   	480.261976                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT10.3                   	480.457531                    	
+PreStackReserved              	0.000000                      	1514.000000                   	KCT_KCT16.1                   	480.457531                    	
+WorkingStack                  	0.000000                      	1514.000000                   	KCT_KCT16.1                   	480.557481                    	
+PostStackReserved             	9100.000000                   	1514.000000                   	KCT_KCT16.1                   	481.628069                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT16.1                   	481.628069                    	
+Moving                        	0.000000                      	1514.000000                   	KCT_KCT16.1                   	501.948161                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT16.1                   	502.143717                    	
+PreStackReserved              	0.000000                      	1866.000000                   	KCT_KCT10.3                   	502.143717                    	
+WorkingStack                  	0.000000                      	1866.000000                   	KCT_KCT10.3                   	502.261444                    	
+PostStackReserved             	9100.000000                   	1866.000000                   	KCT_KCT10.3                   	503.332032                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT10.3                   	503.332032                    	
+PreStackReserved              	0.000000                      	1866.000000                   	KCT_KCT10.3                   	530.861764                    	
+WorkingStack                  	0.000000                      	1866.000000                   	KCT_KCT10.3                   	530.918936                    	
+PostStackReserved             	9200.000000                   	1866.000000                   	KCT_KCT10.3                   	532.001289                    	
+Idle                          	0.000000                      	1866.000000                   	KCT_KCT10.3                   	532.001289                    	
+Moving                        	0.000000                      	1866.000000                   	KCT_KCT10.3                   	534.928433                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT10.3                   	535.123989                    	
+PreStackReserved              	0.000000                      	1514.000000                   	KCT_KCT16.1                   	535.123989                    	
+WorkingStack                  	0.000000                      	1514.000000                   	KCT_KCT16.1                   	535.223938                    	
+PostStackReserved             	7900.000000                   	1514.000000                   	KCT_KCT16.1                   	536.153350                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT16.1                   	536.153350                    	
+Moving                        	0.000000                      	1514.000000                   	KCT_KCT16.1                   	559.623251                    	
+Idle                          	0.000000                      	1187.500000                   	KCT_KCT16.1                   	559.804639                    	
+PreDoubleHandleReserved       	0.000000                      	1187.500000                   	KCT_Pad A remnant             	559.879362                    	
+WorkingDoubleHandle           	0.000000                      	1187.500000                   	KCT_Pad A remnant             	560.141054                    	
+PostDoubleHandleReserved      	5300.000000                   	1187.500000                   	KCT_Pad A remnant             	560.764583                    	
+Idle                          	5300.000000                   	1187.500000                   	KCT_Pad A remnant             	560.764583                    	
+Moving                        	5300.000000                   	1187.500000                   	KCT_Pad A remnant             	560.764861                    	
+Idle                          	5300.000000                   	2007.500000                   	KCT_Pad A remnant             	561.220416                    	
+PreStackReserved              	5300.000000                   	2007.500000                   	KCT_KCT8.1                    	561.220416                    	
+WorkingStack                  	5300.000000                   	2007.500000                   	KCT_KCT8.1                    	561.345290                    	
+PostStackReserved             	9100.000000                   	2007.500000                   	KCT_KCT8.1                    	562.415878                    	
+Idle                          	0.000000                      	2007.500000                   	KCT_KCT8.1                    	562.415878                    	
+Moving                        	0.000000                      	2007.500000                   	KCT_KCT8.1                    	562.837502                    	
+Idle                          	0.000000                      	1187.500000                   	KCT_KCT8.1                    	563.293057                    	
+PreDoubleHandleReserved       	0.000000                      	1187.500000                   	KCT_Pad A remnant             	563.293057                    	
+WorkingDoubleHandle           	0.000000                      	1187.500000                   	KCT_Pad A remnant             	563.551037                    	
+PostDoubleHandleReserved      	6800.000000                   	1187.500000                   	KCT_Pad A remnant             	564.351037                    	
+Idle                          	6800.000000                   	1187.500000                   	KCT_Pad A remnant             	564.351037                    	
+PreDoubleHandleReserved       	6800.000000                   	1187.500000                   	KCT_Pad A remnant             	564.471037                    	
+WorkingDoubleHandle           	6800.000000                   	1187.500000                   	KCT_Pad A remnant             	564.739901                    	
+PostDoubleHandleReserved      	6900.000000                   	1187.500000                   	KCT_Pad A remnant             	565.551666                    	
+Idle                          	6900.000000                   	1187.500000                   	KCT_Pad A remnant             	565.551666                    	
+Moving                        	6900.000000                   	1187.500000                   	KCT_Pad A remnant             	566.264209                    	
+Idle                          	6900.000000                   	2007.500000                   	KCT_Pad A remnant             	566.719765                    	
+PreStackReserved              	6900.000000                   	2007.500000                   	KCT_KCT8.1                    	566.719765                    	
+WorkingStack                  	6900.000000                   	2007.500000                   	KCT_KCT8.1                    	566.844638                    	
+PostStackReserved             	8600.000000                   	2007.500000                   	KCT_KCT8.1                    	567.856403                    	
+Idle                          	0.000000                      	2007.500000                   	KCT_KCT8.1                    	567.856403                    	
+Moving                        	0.000000                      	2007.500000                   	KCT_KCT8.1                    	586.344911                    	
+Idle                          	0.000000                      	1187.500000                   	KCT_KCT8.1                    	586.800466                    	
+PreDoubleHandleReserved       	0.000000                      	1187.500000                   	KCT_Pad A remnant             	586.800466                    	
+WorkingDoubleHandle           	0.000000                      	1187.500000                   	KCT_Pad A remnant             	587.091173                    	
+PostDoubleHandleReserved      	2600.000000                   	1187.500000                   	KCT_Pad A remnant             	587.397056                    	
+Idle                          	2600.000000                   	1187.500000                   	KCT_Pad A remnant             	587.397056                    	
+PreDoubleHandleReserved       	2600.000000                   	1187.500000                   	KCT_Pad A remnant             	587.478167                    	
+WorkingDoubleHandle           	2600.000000                   	1187.500000                   	KCT_Pad A remnant             	587.761525                    	
+PostDoubleHandleReserved      	1700.000000                   	1187.500000                   	KCT_Pad A remnant             	587.961525                    	
+Idle                          	1700.000000                   	1187.500000                   	KCT_Pad A remnant             	587.961525                    	
+PreDoubleHandleReserved       	1700.000000                   	1187.500000                   	KCT_Pad A remnant             	588.042636                    	
+WorkingDoubleHandle           	1700.000000                   	1187.500000                   	KCT_Pad A remnant             	588.318646                    	
+PostDoubleHandleReserved      	6300.000000                   	1187.500000                   	KCT_Pad A remnant             	589.059823                    	
+Idle                          	6300.000000                   	1187.500000                   	KCT_Pad A remnant             	589.059823                    	
+Moving                        	6300.000000                   	1187.500000                   	KCT_Pad A remnant             	589.060101                    	
+Idle                          	6300.000000                   	1514.000000                   	KCT_Pad A remnant             	589.241490                    	
+PreStackReserved              	6300.000000                   	1514.000000                   	KCT_KCT16.1                   	589.241490                    	
+WorkingStack                  	6300.000000                   	1514.000000                   	KCT_KCT16.1                   	589.341439                    	
+PostStackReserved             	9100.000000                   	1514.000000                   	KCT_KCT16.1                   	590.412027                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT16.1                   	590.412027                    	
+PreStackReserved              	0.000000                      	1514.000000                   	KCT_KCT16.1                   	601.725886                    	
+WorkingStack                  	0.000000                      	1514.000000                   	KCT_KCT16.1                   	601.825836                    	
+PostStackReserved             	8600.000000                   	1514.000000                   	KCT_KCT16.1                   	602.837601                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT16.1                   	602.837601                    	
+PreStackReserved              	0.000000                      	1514.000000                   	KCT_KCT16.1                   	646.926854                    	
+WorkingStack                  	0.000000                      	1514.000000                   	KCT_KCT16.1                   	646.965869                    	
+PostStackReserved             	7900.000000                   	1514.000000                   	KCT_KCT16.1                   	647.895281                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT16.1                   	647.895281                    	
+Moving                        	0.000000                      	1514.000000                   	KCT_KCT16.1                   	649.678776                    	
+Idle                          	0.000000                      	1689.500000                   	KCT_KCT16.1                   	649.776276                    	
+PreStackReserved              	0.000000                      	1689.500000                   	KCT_KCT37.1                   	649.776276                    	
+WorkingStack                  	0.000000                      	1689.500000                   	KCT_KCT37.1                   	649.885089                    	
+PostStackReserved             	8000.000000                   	1689.500000                   	KCT_KCT37.1                   	650.826265                    	
+Idle                          	0.000000                      	1689.500000                   	KCT_KCT37.1                   	650.826265                    	
+PreStackReserved              	0.000000                      	1689.500000                   	KCT_KCT37.1                   	662.300398                    	
+WorkingStack                  	0.000000                      	1689.500000                   	KCT_KCT37.1                   	662.357570                    	
+PostStackReserved             	7900.000000                   	1689.500000                   	KCT_KCT37.1                   	663.286982                    	
+Idle                          	0.000000                      	1689.500000                   	KCT_KCT37.1                   	663.286982                    	
+Moving                        	0.000000                      	1689.500000                   	KCT_KCT37.1                   	672.898729                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.1                   	672.987063                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	672.987063                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	673.103906                    	
+PostStackReserved             	8600.000000                   	1848.500000                   	KCT_KCT37.2                   	674.115671                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	674.115671                    	
+Moving                        	0.000000                      	1848.500000                   	KCT_KCT37.2                   	674.474971                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT37.2                   	674.660805                    	
+PreStackReserved              	0.000000                      	1514.000000                   	KCT_KCT16.1                   	674.660805                    	
+WorkingStack                  	0.000000                      	1514.000000                   	KCT_KCT16.1                   	674.760754                    	
+PostStackReserved             	7900.000000                   	1514.000000                   	KCT_KCT16.1                   	675.690166                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT16.1                   	675.690166                    	
+Moving                        	0.000000                      	1514.000000                   	KCT_KCT16.1                   	681.779182                    	
+Idle                          	0.000000                      	1689.500000                   	KCT_KCT16.1                   	681.876682                    	
+PreStackReserved              	0.000000                      	1689.500000                   	KCT_KCT37.1                   	681.876682                    	
+WorkingStack                  	0.000000                      	1689.500000                   	KCT_KCT37.1                   	681.985495                    	
+PostStackReserved             	8000.000000                   	1689.500000                   	KCT_KCT37.1                   	682.926671                    	
+Idle                          	0.000000                      	1689.500000                   	KCT_KCT37.1                   	682.926671                    	
+Moving                        	0.000000                      	1689.500000                   	KCT_KCT37.1                   	684.795123                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.1                   	684.883457                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	684.883457                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	685.000300                    	
+PostStackReserved             	7900.000000                   	1848.500000                   	KCT_KCT37.2                   	685.929712                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	685.929712                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	685.929989                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	686.046833                    	
+PostStackReserved             	8000.000000                   	1848.500000                   	KCT_KCT37.2                   	686.988009                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	686.988009                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	687.461414                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	687.578257                    	
+PostStackReserved             	7900.000000                   	1848.500000                   	KCT_KCT37.2                   	688.507669                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	688.507669                    	
+Moving                        	0.000000                      	1848.500000                   	KCT_KCT37.2                   	692.411231                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT37.2                   	692.597064                    	
+PreStackReserved              	0.000000                      	1514.000000                   	KCT_KCT16.1                   	692.597064                    	
+WorkingStack                  	0.000000                      	1514.000000                   	KCT_KCT16.1                   	692.697014                    	
+PostStackReserved             	7900.000000                   	1514.000000                   	KCT_KCT16.1                   	693.626425                    	
+Idle                          	0.000000                      	1514.000000                   	KCT_KCT16.1                   	693.626425                    	
+Moving                        	0.000000                      	1514.000000                   	KCT_KCT16.1                   	707.775479                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT16.1                   	707.961312                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	707.961312                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	708.078156                    	
+PostStackReserved             	8600.000000                   	1848.500000                   	KCT_KCT37.2                   	709.089921                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	709.089921                    	
+Moving                        	0.000000                      	1848.500000                   	KCT_KCT37.2                   	723.007311                    	
+Idle                          	0.000000                      	1187.500000                   	KCT_KCT37.2                   	723.374533                    	
+PreDoubleHandleReserved       	0.000000                      	1187.500000                   	KCT_Pad A remnant             	723.374533                    	
+WorkingDoubleHandle           	0.000000                      	1187.500000                   	KCT_Pad A remnant             	723.625619                    	
+WorkingDoubleHandleSyncFail   	0.000000                      	1187.500000                   	KCT_Stockpile ID              	724.159233                    	
+WorkingDoubleHandle           	0.000000                      	1187.500000                   	KCT_Stockpile ID              	724.985969                    	
+WorkingDoubleHandleSyncFail   	0.000000                      	1187.500000                   	KCT_Stockpile ID              	725.061514                    	
+WorkingDoubleHandle           	0.000000                      	1187.500000                   	KCT_Stockpile ID              	725.185960                    	
+PostDoubleHandleReserved      	13300.000000                  	1187.500000                   	KCT_Pad A remnant             	726.141508                    	
+Idle                          	13300.000000                  	1187.500000                   	KCT_Pad A remnant             	726.141508                    	
+Moving                        	13300.000000                  	1187.500000                   	KCT_Pad A remnant             	736.709946                    	
+Idle                          	13300.000000                  	1848.500000                   	KCT_Pad A remnant             	737.077168                    	
+PreStackReserved              	13300.000000                  	1848.500000                   	KCT_KCT37.2                   	737.077168                    	
+WorkingStack                  	13300.000000                  	1848.500000                   	KCT_KCT37.2                   	737.194012                    	
+PostStackReserved             	7900.000000                   	1848.500000                   	KCT_KCT37.2                   	738.123424                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	738.123424                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	745.098808                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	745.137823                    	
+PostStackReserved             	2200.000000                   	1848.500000                   	KCT_KCT37.2                   	745.396647                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	745.396647                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	745.396924                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	745.435939                    	
+PostStackReserved             	7900.000000                   	1848.500000                   	KCT_KCT37.2                   	746.365351                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	746.365351                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	759.155419                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	759.238878                    	
+PostStackReserved             	7900.000000                   	1848.500000                   	KCT_KCT37.2                   	760.168290                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	760.168290                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	774.863710                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	774.947170                    	
+PostStackReserved             	8600.000000                   	1848.500000                   	KCT_KCT37.2                   	775.958935                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	775.958935                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	784.935636                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	785.019095                    	
+PostStackReserved             	8600.000000                   	1848.500000                   	KCT_KCT37.2                   	786.030860                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	786.030860                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	799.860069                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	799.943528                    	
+PostStackReserved             	2200.000000                   	1848.500000                   	KCT_KCT37.2                   	800.202352                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	800.202352                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	801.114183                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	801.197643                    	
+PostStackReserved             	9100.000000                   	1848.500000                   	KCT_KCT37.2                   	802.268231                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	802.268231                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	810.663381                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	810.746841                    	
+PostStackReserved             	8000.000000                   	1848.500000                   	KCT_KCT37.2                   	811.688017                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	811.688017                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	811.801260                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	811.884719                    	
+PostStackReserved             	2200.000000                   	1848.500000                   	KCT_KCT37.2                   	812.143543                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	812.143543                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	813.051928                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	813.135388                    	
+PostStackReserved             	8600.000000                   	1848.500000                   	KCT_KCT37.2                   	814.147152                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	814.147152                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	832.042611                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	832.126071                    	
+PostStackReserved             	7900.000000                   	1848.500000                   	KCT_KCT37.2                   	833.055483                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	833.055483                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	843.745020                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	843.828479                    	
+PostStackReserved             	9100.000000                   	1848.500000                   	KCT_KCT37.2                   	844.899068                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	844.899068                    	
+PreStackReserved              	0.000000                      	1848.500000                   	KCT_KCT37.2                   	867.971343                    	
+WorkingStack                  	0.000000                      	1848.500000                   	KCT_KCT37.2                   	868.039753                    	
+PostStackReserved             	8600.000000                   	1848.500000                   	KCT_KCT37.2                   	869.051517                    	
+Idle                          	0.000000                      	1848.500000                   	KCT_KCT37.2                   	869.051517                    	
+Moving                        	0.000000                      	1848.500000                   	KCT_KCT37.2                   	886.534058                    	
+Idle                          	0.000000                      	1187.500000                   	KCT_KCT37.2                   	886.901280                    	
+PreDoubleHandleReserved       	0.000000                      	1187.500000                   	KCT_Pad A remnant             	886.901280                    	
+WorkingDoubleHandle           	0.000000                      	1187.500000                   	KCT_Pad A remnant             	887.161230                    	
+PostDoubleHandleReserved      	3900.000000                   	1187.500000                   	KCT_Pad A remnant             	887.620053                    	
+Idle                          	3900.000000                   	1187.500000                   	KCT_Pad A remnant             	887.620053                    	
+PreDoubleHandleReserved       	3900.000000                   	1187.500000                   	KCT_Pad A remnant             	887.708664                    	
+WorkingDoubleHandle           	3900.000000                   	1187.500000                   	KCT_Pad A remnant             	887.976644                    	
+PostDoubleHandleReserved      	27500.000000                  	1187.500000                   	KCT_Pad A remnant             	891.211938                    	
+Idle                          	27500.000000                  	1187.500000                   	KCT_Pad A remnant             	891.211938                    	
+WrappedUp                     	27500.000000                  	1187.500000                   	KCT_Pad A remnant             	1091.317791                   	
+

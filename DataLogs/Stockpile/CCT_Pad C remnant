@@ -1,0 +1,7 @@
+StateType                     	amount                        	length                        	machineID                     	padID                         	position                      	time                          	vesselID                      	
+Created                       	0.000000                      	212.000000                    	Invalid_                      	Pad C                         	274.000000                    	0.000000                      	null                          	
+Invalid                       	0.000000                      	212.000000                    	CCT_ST2                       	Pad C                         	274.000000                    	491.176246                    	                              	
+Invalid                       	13100.000000                  	212.000000                    	CCT_ST2                       	Pad C                         	274.000000                    	492.717422                    	                              	
+Invalid                       	13100.000000                  	212.000000                    	CCT_ST4                       	Pad C                         	274.000000                    	517.481230                    	                              	
+Invalid                       	20900.000000                  	212.000000                    	CCT_ST4                       	Pad C                         	274.000000                    	518.398878                    	                              	
+

@@ -1,0 +1,7 @@
+StateType                     	amount                        	length                        	machineID                     	padID                         	position                      	time                          	vesselID                      	
+Created                       	0.000000                      	212.000000                    	Invalid_                      	Pad H                         	475.500000                    	0.000000                      	null                          	
+Invalid                       	0.000000                      	212.000000                    	NCT_SR04                      	Pad H                         	475.500000                    	326.868177                    	                              	
+Invalid                       	13500.000000                  	212.000000                    	NCT_SR04                      	Pad H                         	475.500000                    	328.456413                    	                              	
+Invalid                       	13500.000000                  	212.000000                    	NCT_SR04                      	Pad H                         	475.500000                    	329.995655                    	                              	
+Invalid                       	24100.000000                  	212.000000                    	NCT_SR04                      	Pad H                         	475.500000                    	331.242714                    	                              	
+

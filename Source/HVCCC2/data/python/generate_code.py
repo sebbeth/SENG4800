@@ -855,6 +855,69 @@ def generate_entity_type_lists(entities, merges):
     return decl
 
 
+def generate_statelogs(entities):
+    log_states_impl_template = '''
+//this prints in a fairly neatly tabulated format, with padding designed for doubles
+void logStates(std::ostream& outlet, const std::vector<{entity.name}State>& data) {{
+{tab}for(const std::string& eachHeader : {{ "StateType", {attr_headers} }}) {{
+{tab}{tab}outlet << eachHeader;
+{tab}{tab}outlet << std::string(std::max(0, 30-(int)eachHeader.size()), ' ');
+{tab}{tab}outlet << "\\t";
+{tab}}}
+{tab}outlet << '\n';
+{tab}for(auto& eachState : data) {{
+{tab}{tab}for(std::string eachAttr : {{ encode{entity.name}StateType(eachState.type), {stringified_attrs} }}) {{
+{tab}{tab}{tab}outlet << eachAttr;
+{tab}{tab}{tab}outlet << std::string(std::max(0, 30-(int)eachAttr.size()), ' ');
+{tab}{tab}{tab}outlet << "\\t";
+{tab}{tab}}}
+{tab}{tab}outlet << "\\n";
+{tab}}}
+{tab}outlet << "\\n";
+}}'''
+    def get_strinification_expression(entity, attr_name):
+        attr_type = entity.attribute_types[attr_name]
+        attr_getter = '''eachState.{attr_name}'''.format(entity=entity, attr_name=attr_name)
+        if attr_type in ['bool', 'double', 'int']:
+            return '''std::to_string({attr_getter})'''.format(attr_getter=attr_getter)
+        elif attr_type.find('::Id') != -1:
+            return '''{attr_getter}.nameForBinaryFile()'''.format(attr_getter=attr_getter)
+        elif attr_type.find('StateType') != -1:
+            return '''encode{enum_name}({attr_getter})'''.format(enum_name=attr_type, attr_getter=attr_getter)
+        elif attr_type == 'std::string':
+            return attr_getter
+        else:
+            print(attr_type)
+
+    decl = decl = '''#include <ostream>
+#include <string>
+#include <algorithm>
+#include "../convertData.h"
+''' + '\n\n'.join(
+        '''void logStates(std::ostream& outlet, const std::vector<{entity.name}State>& data);'''.format(entity=each_entity)
+        for each_entity in sorted(entities.values())
+    )
+
+    impl = '''#include "logStates.h"
+#include <string>
+#include <ostream>
+#include <vector>
+''' + '\n\n'.join(
+        log_states_impl_template.format(
+            entity=each_entity,
+            attr_headers='"' + '" , "'.join(sorted(each_entity.attributes)) + '"',
+            stringified_attrs=', '.join(
+                get_strinification_expression(each_entity, each_attr)
+                for each_attr in sorted(each_entity.attributes)
+            ),
+            tab=tab_spaces
+        )
+        for each_entity in sorted(entities.values())
+    )
+
+    return decl, impl
+
+
 def generate_code(json_file_path, xml_folder, out_folder, should_generate_stubs):
     generation_timestamp = '''/**
  * This file contains code generated from/to be compatible with available XML data as at {1}
@@ -930,17 +993,16 @@ def generate_code(json_file_path, xml_folder, out_folder, should_generate_stubs)
         state_enum_map = {each.code: each.name for each in entity.states.values()}
 
         decl, impl = generate_enum(state_id_enum_state, state_enum_map,
-                                   decode=entity.has_encodable_state)
+                                   decode=True)
         each_path = '{}/{}.h'.format(out_path, state_id_enum_state)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
             decl_file.write(generation_timestamp + decl)
 
-        if entity.has_encodable_state:
-            each_path = '{}/{}.cpp'.format(out_path, state_id_enum_state)
-            file_list.append(each_path)
-            with open('{}/{}'.format(out_folder, each_path), 'w') as impl_file:
-                impl_file.write(generation_timestamp + impl)
+        each_path = '{}/{}.cpp'.format(out_path, state_id_enum_state)
+        file_list.append(each_path)
+        with open('{}/{}'.format(out_folder, each_path), 'w') as impl_file:
+            impl_file.write(generation_timestamp + impl)
 
         # generate and write the state class
         decl, impl = generate_state_class(entity, decodable_entities)
@@ -994,6 +1056,11 @@ def generate_code(json_file_path, xml_folder, out_folder, should_generate_stubs)
         file_list.append(each_path)
         with open('{}/{}'.format(out_folder, each_path), 'w') as decl_file:
             decl_file.write(generation_timestamp + decl)
+
+        each_path = '{}/{}.cpp'.format(out_path, state_type_enum_name)
+        file_list.append(each_path)
+        with open('{}/{}'.format(out_folder, each_path), 'w') as impl_file:
+            impl_file.write(generation_timestamp + impl)
 
         # the new entity
         # using a fake class
@@ -1076,6 +1143,15 @@ static const int TERMINAL_CODE_LENGTH = {1};
     file_list.append(each_path)
     with open('{}/{}'.format(out_folder, each_path), 'w') as impl_file:
         impl_file.write(generation_timestamp + impl)
+
+    #now the statelogging stuff
+    decl, impl = generate_statelogs(entities)
+    path_templ = 'logStates.{suffix}'
+    for each_content, each_suffix in zip((decl, impl), ('h', 'cpp')):
+        each_path = path_templ.format(suffix=each_suffix)
+        file_list.append(each_path)
+        with open('{}/{}'.format(out_folder, each_path), 'w') as each_file:
+            each_file.write(generation_timestamp + each_content)
 
     with open('{}/CMakeLists.txt'.format(out_folder, each_path), 'w') as cmake_file:
         cmake_file.write(generation_timestamp + '''set(GENERATED

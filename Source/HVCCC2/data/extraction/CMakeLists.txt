@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-08 19:15:43.572274
+ * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
  **/
 set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Dumpstation/Dumpstation.h
@@ -9,6 +9,7 @@ set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Dumpstation/DumpstationEvent.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Dumpstation/DumpstationEvent.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Dumpstation/DumpstationStateType.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Dumpstation/DumpstationStateType.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Dumpstation/DumpstationState.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Dumpstation/DumpstationState.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Dumpstation/DumpstationStateTraits.h
@@ -19,6 +20,7 @@ set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Loadpoints/LoadpointsEvent.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Loadpoints/LoadpointsEvent.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Loadpoints/LoadpointsStateType.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Loadpoints/LoadpointsStateType.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Loadpoints/LoadpointsState.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Loadpoints/LoadpointsState.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Loadpoints/LoadpointsStateTraits.h
@@ -29,6 +31,7 @@ set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Reclaimer/ReclaimerEvent.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Reclaimer/ReclaimerEvent.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Reclaimer/ReclaimerStateType.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Reclaimer/ReclaimerStateType.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Reclaimer/ReclaimerState.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Reclaimer/ReclaimerState.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Reclaimer/ReclaimerStateTraits.h
@@ -39,6 +42,7 @@ set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Shiploader/ShiploaderEvent.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Shiploader/ShiploaderEvent.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Shiploader/ShiploaderStateType.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Shiploader/ShiploaderStateType.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Shiploader/ShiploaderState.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Shiploader/ShiploaderState.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Shiploader/ShiploaderStateTraits.h
@@ -49,6 +53,7 @@ set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stacker/StackerEvent.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stacker/StackerEvent.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stacker/StackerStateType.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stacker/StackerStateType.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stacker/StackerState.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stacker/StackerState.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stacker/StackerStateTraits.h
@@ -59,6 +64,7 @@ set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stockpile/StockpileEvent.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stockpile/StockpileEvent.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stockpile/StockpileStateType.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stockpile/StockpileStateType.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stockpile/StockpileState.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stockpile/StockpileState.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Stockpile/StockpileStateTraits.h
@@ -69,6 +75,7 @@ set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementEvent.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementEvent.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementStateType.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementStateType.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementState.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementState.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/TrainMovement/TrainMovementStateTraits.h
@@ -79,10 +86,12 @@ set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Vessel/VesselEvent.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Vessel/VesselEvent.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Vessel/VesselStateType.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Vessel/VesselStateType.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Vessel/VesselState.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Vessel/VesselState.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/Vessel/VesselStateTraits.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/StackerReclaimer/StackerReclaimerStateType.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/StackerReclaimer/StackerReclaimerStateType.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/StackerReclaimer/StackerReclaimer.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/StackerReclaimer/StackerReclaimer.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/StackerReclaimer/StackerReclaimerState.h
@@ -94,4 +103,6 @@ set(GENERATED
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/implementedEntities.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/extractData.h
     ${CMAKE_CURRENT_SOURCE_DIR}/python/out/extractData.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/logStates.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/python/out/logStates.cpp
 )

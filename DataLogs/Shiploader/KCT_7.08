@@ -1,0 +1,335 @@
+StateType                     	amount                        	position                      	stockpileID                   	time                          	vesselID                      	
+Maintenance                   	0.000000                      	50.000000                     	Invalid_                      	0.000833                      	                              	
+Idle                          	0.000000                      	50.000000                     	Invalid_                      	5.358746                      	                              	
+Moving                        	0.000000                      	50.000000                     	Invalid_                      	241.142163                    	                              	
+Idle                          	0.000000                      	195.580000                    	Invalid_                      	241.223038                    	                              	
+Idle                          	0.000000                      	195.580000                    	Invalid_                      	241.223038                    	1                             	
+PreLoadReserved               	0.000000                      	195.580000                    	KCT_KCT1.1                    	241.223038                    	1                             	
+Working                       	0.000000                      	195.580000                    	KCT_KCT1.1                    	241.359254                    	1                             	
+PostLoadReserved              	20000.000000                  	195.580000                    	KCT_KCT1.1                    	243.712195                    	1                             	
+Idle                          	20000.000000                  	195.580000                    	KCT_KCT1.1                    	243.712195                    	1                             	
+PreLoadReserved               	20000.000000                  	195.580000                    	KCT_KCT1.3                    	243.794139                    	1                             	
+Working                       	20000.000000                  	195.580000                    	KCT_KCT1.3                    	243.937779                    	1                             	
+PostLoadReserved              	21000.000000                  	195.580000                    	KCT_KCT1.3                    	246.408368                    	1                             	
+Idle                          	21000.000000                  	195.580000                    	KCT_KCT1.3                    	246.408368                    	1                             	
+PreLoadReserved               	21000.000000                  	195.580000                    	KCT_KCT1.2                    	246.449757                    	1                             	
+Working                       	21000.000000                  	195.580000                    	KCT_KCT1.2                    	246.589659                    	1                             	
+WorkingFailed                 	21000.000000                  	195.580000                    	KCT_Stockpile ID              	246.812133                    	1                             	
+Working                       	21000.000000                  	195.580000                    	KCT_Stockpile ID              	247.096768                    	1                             	
+WorkingFailed                 	21000.000000                  	195.580000                    	KCT_Stockpile ID              	247.453604                    	1                             	
+Working                       	21000.000000                  	195.580000                    	KCT_Stockpile ID              	247.470322                    	1                             	
+PostLoadReserved              	20000.000000                  	195.580000                    	KCT_KCT1.2                    	249.243954                    	1                             	
+Idle                          	20000.000000                  	195.580000                    	KCT_KCT1.2                    	249.243954                    	1                             	
+PreLoadReserved               	20000.000000                  	195.580000                    	KCT_KCT1.4                    	249.354787                    	1                             	
+Working                       	20000.000000                  	195.580000                    	KCT_KCT1.4                    	249.504741                    	1                             	
+WorkingFailed                 	20000.000000                  	195.580000                    	KCT_Stockpile ID              	255.660955                    	1                             	
+Working                       	20000.000000                  	195.580000                    	KCT_Stockpile ID              	255.698057                    	1                             	
+PostLoadReserved              	74600.000000                  	195.580000                    	KCT_KCT1.4                    	258.318313                    	1                             	
+Idle                          	74600.000000                  	195.580000                    	KCT_KCT1.4                    	258.318313                    	1                             	
+Moving                        	74600.000000                  	195.580000                    	KCT_KCT1.4                    	277.450116                    	1                             	
+Idle                          	74600.000000                  	178.350000                    	KCT_KCT1.4                    	277.459685                    	1                             	
+Idle                          	74600.000000                  	178.350000                    	KCT_KCT1.4                    	277.618171                    	4                             	
+PreLoadReserved               	74600.000000                  	178.350000                    	KCT_KCT4.1                    	277.618171                    	4                             	
+Working                       	74600.000000                  	178.350000                    	KCT_KCT4.1                    	277.854578                    	4                             	
+PostLoadReserved              	128500.000000                 	178.350000                    	KCT_KCT4.1                    	292.972225                    	4                             	
+Idle                          	128500.000000                 	178.350000                    	KCT_KCT4.1                    	292.972225                    	4                             	
+Moving                        	128500.000000                 	178.350000                    	KCT_KCT4.1                    	292.972503                    	4                             	
+Idle                          	128500.000000                 	476.240000                    	KCT_KCT4.1                    	293.137997                    	4                             	
+Idle                          	128500.000000                 	476.240000                    	KCT_KCT4.1                    	293.137997                    	3                             	
+PreLoadReserved               	128500.000000                 	476.240000                    	KCT_KCT3.1                    	293.137997                    	3                             	
+Working                       	128500.000000                 	476.240000                    	KCT_KCT3.1                    	293.292504                    	3                             	
+PostLoadReserved              	85900.000000                  	476.240000                    	KCT_KCT3.1                    	303.398386                    	3                             	
+Idle                          	85900.000000                  	476.240000                    	KCT_KCT3.1                    	303.398386                    	3                             	
+Moving                        	85900.000000                  	476.240000                    	KCT_KCT3.1                    	319.493152                    	3                             	
+Idle                          	85900.000000                  	212.500000                    	KCT_KCT3.1                    	319.639677                    	3                             	
+Idle                          	85900.000000                  	212.500000                    	KCT_KCT3.1                    	319.639677                    	9                             	
+PreLoadReserved               	85900.000000                  	212.500000                    	KCT_KCT9.1                    	319.639677                    	9                             	
+Working                       	85900.000000                  	212.500000                    	KCT_KCT9.1                    	319.787480                    	9                             	
+WorkingFailed                 	85900.000000                  	212.500000                    	KCT_Stockpile ID              	319.882532                    	9                             	
+Working                       	85900.000000                  	212.500000                    	KCT_Stockpile ID              	320.358651                    	9                             	
+PostLoadReserved              	65400.000000                  	212.500000                    	KCT_KCT9.1                    	327.957716                    	9                             	
+Idle                          	65400.000000                  	212.500000                    	KCT_KCT9.1                    	327.957716                    	9                             	
+PreLoadReserved               	65400.000000                  	212.500000                    	KCT_KCT9.2                    	328.024661                    	9                             	
+Working                       	65400.000000                  	212.500000                    	KCT_KCT9.2                    	328.178524                    	9                             	
+WorkingFailed                 	65400.000000                  	212.500000                    	KCT_Stockpile ID              	329.857161                    	9                             	
+Working                       	65400.000000                  	212.500000                    	KCT_Stockpile ID              	329.881609                    	9                             	
+PostLoadReserved              	24800.000000                  	212.500000                    	KCT_KCT9.2                    	331.120619                    	9                             	
+Idle                          	24800.000000                  	212.500000                    	KCT_KCT9.2                    	331.120619                    	9                             	
+Moving                        	24800.000000                  	212.500000                    	KCT_KCT9.2                    	415.574639                    	9                             	
+Idle                          	24800.000000                  	186.490000                    	KCT_KCT9.2                    	415.589089                    	9                             	
+Idle                          	24800.000000                  	186.490000                    	KCT_KCT9.2                    	415.639361                    	5                             	
+PreLoadReserved               	24800.000000                  	186.490000                    	KCT_KCT5.1                    	415.639361                    	5                             	
+Working                       	24800.000000                  	186.490000                    	KCT_KCT5.1                    	415.780976                    	5                             	
+WorkingFailed                 	24800.000000                  	186.490000                    	KCT_Stockpile ID              	417.678497                    	5                             	
+Working                       	24800.000000                  	186.490000                    	KCT_Stockpile ID              	417.848791                    	5                             	
+WorkingSyncedFail             	24800.000000                  	186.490000                    	KCT_Stockpile ID              	430.009231                    	5                             	
+Working                       	24800.000000                  	186.490000                    	KCT_Stockpile ID              	430.193567                    	5                             	
+PostLoadReserved              	122800.000000                 	186.490000                    	KCT_KCT5.1                    	430.582665                    	5                             	
+Idle                          	122800.000000                 	186.490000                    	KCT_KCT5.1                    	430.582665                    	5                             	
+Moving                        	122800.000000                 	186.490000                    	KCT_KCT5.1                    	430.582943                    	5                             	
+Idle                          	122800.000000                 	415.810000                    	KCT_KCT5.1                    	430.710346                    	5                             	
+Idle                          	122800.000000                 	415.810000                    	KCT_KCT5.1                    	430.710346                    	18                            	
+PreLoadReserved               	122800.000000                 	415.810000                    	KCT_KCT18.1                   	430.710346                    	18                            	
+Working                       	122800.000000                 	415.810000                    	KCT_KCT18.1                   	430.873265                    	18                            	
+PostLoadReserved              	119300.000000                 	415.810000                    	KCT_KCT18.1                   	444.908559                    	18                            	
+Idle                          	119300.000000                 	415.810000                    	KCT_KCT18.1                   	444.908559                    	18                            	
+Moving                        	119300.000000                 	415.810000                    	KCT_KCT18.1                   	444.908837                    	18                            	
+Idle                          	119300.000000                 	185.640000                    	KCT_KCT18.1                   	445.036709                    	18                            	
+Idle                          	119300.000000                 	185.640000                    	KCT_KCT18.1                   	445.090504                    	7                             	
+PreLoadReserved               	119300.000000                 	185.640000                    	KCT_KCT7.3                    	445.090504                    	7                             	
+Working                       	119300.000000                 	185.640000                    	KCT_KCT7.3                    	445.257304                    	7                             	
+PostLoadReserved              	23900.000000                  	185.640000                    	KCT_KCT7.3                    	448.069069                    	7                             	
+Idle                          	23900.000000                  	185.640000                    	KCT_KCT7.3                    	448.069069                    	7                             	
+PreLoadReserved               	23900.000000                  	185.640000                    	KCT_KCT7.2                    	448.131291                    	7                             	
+Working                       	23900.000000                  	185.640000                    	KCT_KCT7.2                    	448.292460                    	7                             	
+PostLoadReserved              	57300.000000                  	185.640000                    	KCT_KCT7.2                    	455.033636                    	7                             	
+Idle                          	57300.000000                  	185.640000                    	KCT_KCT7.2                    	455.033636                    	7                             	
+PreLoadReserved               	57300.000000                  	185.640000                    	KCT_KCT7.1                    	455.093914                    	7                             	
+Working                       	57300.000000                  	185.640000                    	KCT_KCT7.1                    	455.249628                    	7                             	
+PostLoadReserved              	20000.000000                  	185.640000                    	KCT_KCT7.1                    	457.602569                    	7                             	
+Idle                          	20000.000000                  	185.640000                    	KCT_KCT7.1                    	457.602569                    	7                             	
+Moving                        	20000.000000                  	185.640000                    	KCT_KCT7.1                    	487.560008                    	7                             	
+Idle                          	20000.000000                  	193.280000                    	KCT_KCT7.1                    	487.564250                    	7                             	
+Idle                          	20000.000000                  	193.280000                    	KCT_KCT7.1                    	487.586397                    	2                             	
+PreLoadReserved               	20000.000000                  	193.280000                    	KCT_KCT2.1                    	487.586397                    	2                             	
+Working                       	20000.000000                  	193.280000                    	KCT_KCT2.1                    	487.724946                    	2                             	
+WorkingFailed                 	20000.000000                  	193.280000                    	KCT_Stockpile ID              	493.125969                    	2                             	
+Working                       	20000.000000                  	193.280000                    	KCT_Stockpile ID              	493.262191                    	2                             	
+WorkingFailed                 	20000.000000                  	193.280000                    	KCT_Stockpile ID              	494.646194                    	2                             	
+Working                       	20000.000000                  	193.280000                    	KCT_Stockpile ID              	494.685565                    	2                             	
+WorkingFailed                 	20000.000000                  	193.280000                    	KCT_Stockpile ID              	495.806301                    	2                             	
+Working                       	20000.000000                  	193.280000                    	KCT_Stockpile ID              	496.080223                    	2                             	
+PostLoadReserved              	71800.000000                  	193.280000                    	KCT_KCT2.1                    	496.621519                    	2                             	
+Idle                          	71800.000000                  	193.280000                    	KCT_KCT2.1                    	496.621519                    	2                             	
+Moving                        	71800.000000                  	193.280000                    	KCT_KCT2.1                    	500.193005                    	2                             	
+Idle                          	71800.000000                  	447.170000                    	KCT_KCT2.1                    	500.334058                    	2                             	
+Idle                          	71800.000000                  	447.170000                    	KCT_KCT2.1                    	500.340505                    	12                            	
+PreLoadReserved               	71800.000000                  	447.170000                    	KCT_KCT12.1                   	500.340505                    	12                            	
+Working                       	71800.000000                  	447.170000                    	KCT_KCT12.1                   	500.506297                    	12                            	
+PostLoadReserved              	72300.000000                  	447.170000                    	KCT_KCT12.1                   	509.012179                    	12                            	
+Idle                          	72300.000000                  	447.170000                    	KCT_KCT12.1                   	509.012179                    	12                            	
+Moving                        	72300.000000                  	447.170000                    	KCT_KCT12.1                   	524.210365                    	12                            	
+Idle                          	72300.000000                  	213.920000                    	KCT_KCT12.1                   	524.339949                    	12                            	
+Idle                          	72300.000000                  	213.920000                    	KCT_KCT12.1                   	524.383976                    	6                             	
+PreLoadReserved               	72300.000000                  	213.920000                    	KCT_KCT6.2                    	524.383976                    	6                             	
+Working                       	72300.000000                  	213.920000                    	KCT_KCT6.2                    	524.620664                    	6                             	
+PostLoadReserved              	69200.000000                  	213.920000                    	KCT_KCT6.2                    	532.761841                    	6                             	
+Idle                          	69200.000000                  	213.920000                    	KCT_KCT6.2                    	532.761841                    	6                             	
+PreLoadReserved               	69200.000000                  	213.920000                    	KCT_KCT6.1                    	532.832674                    	6                             	
+Working                       	69200.000000                  	213.920000                    	KCT_KCT6.1                    	533.062948                    	6                             	
+PostLoadReserved              	28400.000000                  	213.920000                    	KCT_KCT6.1                    	536.404124                    	6                             	
+Idle                          	28400.000000                  	213.920000                    	KCT_KCT6.1                    	536.404124                    	6                             	
+PreLoadReserved               	28400.000000                  	213.920000                    	KCT_KCT6.3                    	536.545791                    	6                             	
+Working                       	28400.000000                  	213.920000                    	KCT_KCT6.3                    	536.788918                    	6                             	
+PostLoadReserved              	29200.000000                  	213.920000                    	KCT_KCT6.3                    	540.224212                    	6                             	
+Idle                          	29200.000000                  	213.920000                    	KCT_KCT6.3                    	540.224212                    	6                             	
+Moving                        	29200.000000                  	213.920000                    	KCT_KCT6.3                    	540.224490                    	6                             	
+Idle                          	29200.000000                  	475.010000                    	KCT_KCT6.3                    	540.369540                    	6                             	
+Idle                          	29200.000000                  	475.010000                    	KCT_KCT6.3                    	540.401712                    	10                            	
+PreLoadReserved               	29200.000000                  	475.010000                    	KCT_KCT10.3                   	540.401712                    	10                            	
+Working                       	29200.000000                  	475.010000                    	KCT_KCT10.3                   	540.642925                    	10                            	
+WorkingSyncedFail             	29200.000000                  	475.010000                    	KCT_Stockpile ID              	542.678729                    	10                            	
+Working                       	29200.000000                  	475.010000                    	KCT_Stockpile ID              	543.847248                    	10                            	
+PostLoadReserved              	93600.000000                  	475.010000                    	KCT_KCT10.3                   	552.823208                    	10                            	
+Idle                          	93600.000000                  	475.010000                    	KCT_KCT10.3                   	552.823208                    	10                            	
+PreLoadReserved               	93600.000000                  	475.010000                    	KCT_KCT10.1                   	552.943208                    	10                            	
+Working                       	93600.000000                  	475.010000                    	KCT_KCT10.1                   	553.173537                    	10                            	
+PostLoadReserved              	20000.000000                  	475.010000                    	KCT_KCT10.1                   	555.526478                    	10                            	
+Idle                          	20000.000000                  	475.010000                    	KCT_KCT10.1                   	555.526478                    	10                            	
+PreLoadReserved               	20000.000000                  	475.010000                    	KCT_KCT10.2                   	555.567589                    	10                            	
+Working                       	20000.000000                  	475.010000                    	KCT_KCT10.2                   	555.801630                    	10                            	
+PostLoadReserved              	20500.000000                  	475.010000                    	KCT_KCT10.2                   	558.213395                    	10                            	
+Idle                          	20500.000000                  	475.010000                    	KCT_KCT10.2                   	558.213395                    	10                            	
+Moving                        	20500.000000                  	475.010000                    	KCT_KCT10.2                   	558.213672                    	10                            	
+Idle                          	20500.000000                  	202.560000                    	KCT_KCT10.2                   	558.365036                    	10                            	
+Idle                          	20500.000000                  	202.560000                    	KCT_KCT10.2                   	558.365036                    	21                            	
+PreLoadReserved               	20500.000000                  	202.560000                    	KCT_KCT21.1                   	558.365036                    	21                            	
+Working                       	20500.000000                  	202.560000                    	KCT_KCT21.1                   	558.527968                    	21                            	
+WorkingSyncedFail             	20500.000000                  	202.560000                    	KCT_Stockpile ID              	560.840545                    	21                            	
+Working                       	20500.000000                  	202.560000                    	KCT_Stockpile ID              	560.979839                    	21                            	
+WorkingSyncedFail             	20500.000000                  	202.560000                    	KCT_Stockpile ID              	561.130638                    	21                            	
+Working                       	20500.000000                  	202.560000                    	KCT_Stockpile ID              	561.213065                    	21                            	
+PostLoadReserved              	90600.000000                  	202.560000                    	KCT_KCT21.1                   	569.408513                    	21                            	
+Idle                          	90600.000000                  	202.560000                    	KCT_KCT21.1                   	569.408513                    	21                            	
+Moving                        	90600.000000                  	202.560000                    	KCT_KCT21.1                   	569.408791                    	21                            	
+Idle                          	90600.000000                  	480.920000                    	KCT_KCT21.1                   	569.563438                    	21                            	
+Idle                          	90600.000000                  	480.920000                    	KCT_KCT21.1                   	569.563438                    	13                            	
+PreLoadReserved               	90600.000000                  	480.920000                    	KCT_KCT13.2                   	569.563438                    	13                            	
+Working                       	90600.000000                  	480.920000                    	KCT_KCT13.2                   	569.821490                    	13                            	
+PostLoadReserved              	31500.000000                  	480.920000                    	KCT_KCT13.2                   	573.527372                    	13                            	
+Idle                          	31500.000000                  	480.920000                    	KCT_KCT13.2                   	573.527372                    	13                            	
+PreLoadReserved               	31500.000000                  	480.920000                    	KCT_KCT13.1                   	573.574316                    	13                            	
+Working                       	31500.000000                  	480.920000                    	KCT_KCT13.1                   	573.828125                    	13                            	
+PostLoadReserved              	20000.000000                  	480.920000                    	KCT_KCT13.1                   	576.181067                    	13                            	
+Idle                          	20000.000000                  	480.920000                    	KCT_KCT13.1                   	576.181067                    	13                            	
+PreLoadReserved               	20000.000000                  	480.920000                    	KCT_KCT13.3                   	576.283289                    	13                            	
+Working                       	20000.000000                  	480.920000                    	KCT_KCT13.3                   	576.546366                    	13                            	
+PostLoadReserved              	36600.000000                  	480.920000                    	KCT_KCT13.3                   	580.852248                    	13                            	
+Idle                          	36600.000000                  	480.920000                    	KCT_KCT13.3                   	580.852248                    	13                            	
+Moving                        	36600.000000                  	480.920000                    	KCT_KCT13.3                   	654.733628                    	13                            	
+Idle                          	36600.000000                  	182.040000                    	KCT_KCT13.3                   	654.899673                    	13                            	
+Idle                          	36600.000000                  	182.040000                    	KCT_KCT13.3                   	655.142239                    	30                            	
+PreLoadReserved               	36600.000000                  	182.040000                    	KCT_KCT30.1                   	655.142239                    	30                            	
+Working                       	36600.000000                  	182.040000                    	KCT_KCT30.1                   	655.281029                    	30                            	
+WorkingFailed                 	36600.000000                  	182.040000                    	KCT_Stockpile ID              	657.495123                    	30                            	
+Working                       	36600.000000                  	182.040000                    	KCT_Stockpile ID              	657.934156                    	30                            	
+PostLoadReserved              	67500.000000                  	182.040000                    	KCT_KCT30.1                   	663.661238                    	30                            	
+Idle                          	67500.000000                  	182.040000                    	KCT_KCT30.1                   	663.661238                    	30                            	
+PreLoadReserved               	67500.000000                  	182.040000                    	KCT_KCT30.2                   	663.751238                    	30                            	
+Working                       	67500.000000                  	182.040000                    	KCT_KCT30.2                   	663.898185                    	30                            	
+PostLoadReserved              	67000.000000                  	182.040000                    	KCT_KCT30.2                   	671.780538                    	30                            	
+Idle                          	67000.000000                  	182.040000                    	KCT_KCT30.2                   	671.780538                    	30                            	
+Moving                        	67000.000000                  	182.040000                    	KCT_KCT30.2                   	671.780816                    	30                            	
+Idle                          	67000.000000                  	409.150000                    	KCT_KCT30.2                   	671.906988                    	30                            	
+Idle                          	67000.000000                  	409.150000                    	KCT_KCT30.2                   	671.906988                    	11                            	
+PreLoadReserved               	67000.000000                  	409.150000                    	KCT_KCT11.2                   	671.906988                    	11                            	
+Working                       	67000.000000                  	409.150000                    	KCT_KCT11.2                   	672.083308                    	11                            	
+WorkingSyncedFail             	67000.000000                  	409.150000                    	KCT_Stockpile ID              	678.824841                    	11                            	
+Working                       	67000.000000                  	409.150000                    	KCT_Stockpile ID              	679.068883                    	11                            	
+PostLoadReserved              	104000.000000                 	409.150000                    	KCT_KCT11.2                   	684.562644                    	11                            	
+Idle                          	104000.000000                 	409.150000                    	KCT_KCT11.2                   	684.562644                    	11                            	
+PreLoadReserved               	104000.000000                 	409.150000                    	KCT_KCT11.1                   	684.652367                    	11                            	
+Working                       	104000.000000                 	409.150000                    	KCT_KCT11.1                   	684.820556                    	11                            	
+PostLoadReserved              	30000.000000                  	409.150000                    	KCT_KCT11.1                   	688.349968                    	11                            	
+Idle                          	30000.000000                  	409.150000                    	KCT_KCT11.1                   	688.349968                    	11                            	
+Moving                        	30000.000000                  	409.150000                    	KCT_KCT11.1                   	712.334208                    	11                            	
+Idle                          	30000.000000                  	188.300000                    	KCT_KCT11.1                   	712.456902                    	11                            	
+Idle                          	30000.000000                  	188.300000                    	KCT_KCT11.1                   	712.456902                    	16                            	
+PreLoadReserved               	30000.000000                  	188.300000                    	KCT_KCT16.1                   	712.456902                    	16                            	
+Working                       	30000.000000                  	188.300000                    	KCT_KCT16.1                   	712.665857                    	16                            	
+PostLoadReserved              	87900.000000                  	188.300000                    	KCT_KCT16.1                   	723.007033                    	16                            	
+Idle                          	87900.000000                  	188.300000                    	KCT_KCT16.1                   	723.007033                    	16                            	
+Moving                        	87900.000000                  	188.300000                    	KCT_KCT16.1                   	747.099774                    	16                            	
+Idle                          	87900.000000                  	426.170000                    	KCT_KCT16.1                   	747.231924                    	16                            	
+Idle                          	87900.000000                  	426.170000                    	KCT_KCT16.1                   	747.231924                    	35                            	
+PreLoadReserved               	87900.000000                  	426.170000                    	KCT_KCT35.1                   	747.231924                    	35                            	
+Working                       	87900.000000                  	426.170000                    	KCT_KCT35.1                   	747.481377                    	35                            	
+WorkingFailed                 	87900.000000                  	426.170000                    	KCT_Stockpile ID              	749.478621                    	35                            	
+Working                       	87900.000000                  	426.170000                    	KCT_Stockpile ID              	749.702743                    	35                            	
+WorkingFailed                 	87900.000000                  	426.170000                    	KCT_Stockpile ID              	754.003872                    	35                            	
+Working                       	87900.000000                  	426.170000                    	KCT_Stockpile ID              	754.169178                    	35                            	
+PostLoadReserved              	116900.000000                 	426.170000                    	KCT_KCT35.1                   	761.623747                    	35                            	
+Idle                          	116900.000000                 	426.170000                    	KCT_KCT35.1                   	761.623747                    	35                            	
+Moving                        	116900.000000                 	426.170000                    	KCT_KCT35.1                   	797.975038                    	35                            	
+Idle                          	116900.000000                 	176.310000                    	KCT_KCT35.1                   	798.113849                    	35                            	
+Idle                          	116900.000000                 	176.310000                    	KCT_KCT35.1                   	798.113849                    	22                            	
+PreLoadReserved               	116900.000000                 	176.310000                    	KCT_KCT22.3                   	798.113849                    	22                            	
+Working                       	116900.000000                 	176.310000                    	KCT_KCT22.3                   	798.321440                    	22                            	
+PostLoadReserved              	35700.000000                  	176.310000                    	KCT_KCT22.3                   	802.521440                    	22                            	
+Idle                          	35700.000000                  	176.310000                    	KCT_KCT22.3                   	802.521440                    	22                            	
+PreLoadReserved               	35700.000000                  	176.310000                    	KCT_KCT22.2                   	802.570329                    	22                            	
+Working                       	35700.000000                  	176.310000                    	KCT_KCT22.2                   	802.773501                    	22                            	
+PostLoadReserved              	20000.000000                  	176.310000                    	KCT_KCT22.2                   	805.126442                    	22                            	
+Idle                          	20000.000000                  	176.310000                    	KCT_KCT22.2                   	805.126442                    	22                            	
+PreLoadReserved               	20000.000000                  	176.310000                    	KCT_KCT22.1                   	805.172831                    	22                            	
+Working                       	20000.000000                  	176.310000                    	KCT_KCT22.1                   	805.371812                    	22                            	
+WorkingSyncedFail             	20000.000000                  	176.310000                    	KCT_Stockpile ID              	807.510823                    	22                            	
+Working                       	20000.000000                  	176.310000                    	KCT_Stockpile ID              	807.826864                    	22                            	
+PostLoadReserved              	30400.000000                  	176.310000                    	KCT_KCT22.1                   	809.264324                    	22                            	
+Idle                          	30400.000000                  	176.310000                    	KCT_KCT22.1                   	809.264324                    	22                            	
+Moving                        	30400.000000                  	176.310000                    	KCT_KCT22.1                   	828.553591                    	22                            	
+Idle                          	30400.000000                  	179.420000                    	KCT_KCT22.1                   	828.555319                    	22                            	
+Idle                          	30400.000000                  	179.420000                    	KCT_KCT22.1                   	828.828036                    	20                            	
+PreLoadReserved               	30400.000000                  	179.420000                    	KCT_KCT20.1                   	828.828036                    	20                            	
+Working                       	30400.000000                  	179.420000                    	KCT_KCT20.1                   	828.991643                    	20                            	
+WorkingFailed                 	30400.000000                  	179.420000                    	KCT_Stockpile ID              	834.669980                    	20                            	
+Working                       	30400.000000                  	179.420000                    	KCT_Stockpile ID              	835.129474                    	20                            	
+PostLoadReserved              	110900.000000                 	179.420000                    	KCT_KCT20.1                   	842.498196                    	20                            	
+Idle                          	110900.000000                 	179.420000                    	KCT_KCT20.1                   	842.498196                    	20                            	
+Moving                        	110900.000000                 	179.420000                    	KCT_KCT20.1                   	842.498473                    	20                            	
+Idle                          	110900.000000                 	395.610000                    	KCT_KCT20.1                   	842.618579                    	20                            	
+Idle                          	110900.000000                 	395.610000                    	KCT_KCT20.1                   	842.634584                    	27                            	
+PreLoadReserved               	110900.000000                 	395.610000                    	KCT_KCT27.1                   	842.634584                    	27                            	
+Working                       	110900.000000                 	395.610000                    	KCT_KCT27.1                   	842.820474                    	27                            	
+WorkingSyncedFail             	110900.000000                 	395.610000                    	KCT_Stockpile ID              	846.868966                    	27                            	
+Working                       	110900.000000                 	395.610000                    	KCT_Stockpile ID              	847.610581                    	27                            	
+WorkingFailed                 	110900.000000                 	395.610000                    	KCT_Stockpile ID              	853.258345                    	27                            	
+Working                       	110900.000000                 	395.610000                    	KCT_Stockpile ID              	853.321774                    	27                            	
+WorkingSyncedFail             	110900.000000                 	395.610000                    	KCT_Stockpile ID              	854.899815                    	27                            	
+Working                       	110900.000000                 	395.610000                    	KCT_Stockpile ID              	855.771642                    	27                            	
+PostLoadReserved              	118400.000000                 	395.610000                    	KCT_KCT27.1                   	858.426757                    	27                            	
+Idle                          	118400.000000                 	395.610000                    	KCT_KCT27.1                   	858.426757                    	27                            	
+Moving                        	118400.000000                 	395.610000                    	KCT_KCT27.1                   	870.220932                    	27                            	
+Idle                          	118400.000000                 	191.550000                    	KCT_KCT27.1                   	870.334298                    	27                            	
+Idle                          	118400.000000                 	191.550000                    	KCT_KCT27.1                   	870.403987                    	37                            	
+PreLoadReserved               	118400.000000                 	191.550000                    	KCT_KCT37.2                   	870.403987                    	37                            	
+Working                       	118400.000000                 	191.550000                    	KCT_KCT37.2                   	870.630000                    	37                            	
+PostLoadReserved              	112300.000000                 	191.550000                    	KCT_KCT37.2                   	883.841765                    	37                            	
+Idle                          	112300.000000                 	191.550000                    	KCT_KCT37.2                   	883.841765                    	37                            	
+PreLoadReserved               	112300.000000                 	191.550000                    	KCT_KCT37.1                   	883.930376                    	37                            	
+Working                       	112300.000000                 	191.550000                    	KCT_KCT37.1                   	884.148358                    	37                            	
+WorkingSyncedFail             	112300.000000                 	191.550000                    	KCT_Stockpile ID              	886.084091                    	37                            	
+Working                       	112300.000000                 	191.550000                    	KCT_Stockpile ID              	886.116572                    	37                            	
+PostLoadReserved              	20000.000000                  	191.550000                    	KCT_KCT37.1                   	886.533780                    	37                            	
+Idle                          	20000.000000                  	191.550000                    	KCT_KCT37.1                   	886.533780                    	37                            	
+Moving                        	20000.000000                  	191.550000                    	KCT_KCT37.1                   	887.847620                    	37                            	
+Idle                          	20000.000000                  	455.600000                    	KCT_KCT37.1                   	887.994311                    	37                            	
+Idle                          	20000.000000                  	455.600000                    	KCT_KCT37.1                   	887.994311                    	33                            	
+PreLoadReserved               	20000.000000                  	455.600000                    	KCT_KCT33.1                   	887.994311                    	33                            	
+Working                       	20000.000000                  	455.600000                    	KCT_KCT33.1                   	888.179821                    	33                            	
+PostLoadReserved              	20000.000000                  	455.600000                    	KCT_KCT33.1                   	890.532762                    	33                            	
+Idle                          	20000.000000                  	455.600000                    	KCT_KCT33.1                   	890.532762                    	33                            	
+PreLoadReserved               	20000.000000                  	455.600000                    	KCT_KCT33.2                   	890.607484                    	33                            	
+Working                       	20000.000000                  	455.600000                    	KCT_KCT33.2                   	890.799762                    	33                            	
+WorkingSyncedFail             	20000.000000                  	455.600000                    	KCT_Stockpile ID              	897.760237                    	33                            	
+Working                       	20000.000000                  	455.600000                    	KCT_Stockpile ID              	897.961043                    	33                            	
+PostLoadReserved              	85200.000000                  	455.600000                    	KCT_KCT33.2                   	901.024097                    	33                            	
+Idle                          	85200.000000                  	455.600000                    	KCT_KCT33.2                   	901.024097                    	33                            	
+Moving                        	85200.000000                  	455.600000                    	KCT_KCT33.2                   	909.824566                    	33                            	
+Idle                          	85200.000000                  	211.370000                    	KCT_KCT33.2                   	909.960249                    	33                            	
+Idle                          	85200.000000                  	211.370000                    	KCT_KCT33.2                   	909.972066                    	26                            	
+PreLoadReserved               	85200.000000                  	211.370000                    	KCT_KCT26.1                   	909.972066                    	26                            	
+Working                       	85200.000000                  	211.370000                    	KCT_KCT26.1                   	910.147084                    	26                            	
+WorkingFailed                 	85200.000000                  	211.370000                    	KCT_Stockpile ID              	915.877101                    	26                            	
+Working                       	85200.000000                  	211.370000                    	KCT_Stockpile ID              	916.142589                    	26                            	
+WorkingSyncedFail             	85200.000000                  	211.370000                    	KCT_Stockpile ID              	922.621887                    	26                            	
+Working                       	85200.000000                  	211.370000                    	KCT_Stockpile ID              	922.782588                    	26                            	
+PostLoadReserved              	118400.000000                 	211.370000                    	KCT_KCT26.1                   	924.502685                    	26                            	
+Idle                          	118400.000000                 	211.370000                    	KCT_KCT26.1                   	924.502685                    	26                            	
+Moving                        	118400.000000                 	211.370000                    	KCT_KCT26.1                   	924.502963                    	26                            	
+Idle                          	118400.000000                 	475.100000                    	KCT_KCT26.1                   	924.649482                    	26                            	
+Idle                          	118400.000000                 	475.100000                    	KCT_KCT26.1                   	924.725741                    	29                            	
+PreLoadReserved               	118400.000000                 	475.100000                    	KCT_KCT29.3                   	924.725741                    	29                            	
+Working                       	118400.000000                 	475.100000                    	KCT_KCT29.3                   	924.890973                    	29                            	
+PostLoadReserved              	20000.000000                  	475.100000                    	KCT_KCT29.3                   	927.243914                    	29                            	
+Idle                          	20000.000000                  	475.100000                    	KCT_KCT29.3                   	927.243914                    	29                            	
+PreLoadReserved               	20000.000000                  	475.100000                    	KCT_KCT29.1                   	927.408081                    	29                            	
+Working                       	20000.000000                  	475.100000                    	KCT_KCT29.1                   	927.558414                    	29                            	
+WorkingSyncedFail             	20000.000000                  	475.100000                    	KCT_Stockpile ID              	928.048681                    	29                            	
+Working                       	20000.000000                  	475.100000                    	KCT_Stockpile ID              	928.767760                    	29                            	
+PostLoadReserved              	20000.000000                  	475.100000                    	KCT_KCT29.1                   	930.630434                    	29                            	
+Idle                          	20000.000000                  	475.100000                    	KCT_KCT29.1                   	930.630434                    	29                            	
+PreLoadReserved               	20000.000000                  	475.100000                    	KCT_KCT29.2                   	930.712656                    	29                            	
+Working                       	20000.000000                  	475.100000                    	KCT_KCT29.2                   	930.870439                    	29                            	
+PostLoadReserved              	100100.000000                 	475.100000                    	KCT_KCT29.2                   	942.646910                    	29                            	
+Idle                          	100100.000000                 	475.100000                    	KCT_KCT29.2                   	942.646910                    	29                            	
+Moving                        	100100.000000                 	475.100000                    	KCT_KCT29.2                   	956.464596                    	29                            	
+Idle                          	100100.000000                 	221.280000                    	KCT_KCT29.2                   	956.605607                    	29                            	
+Idle                          	100100.000000                 	221.280000                    	KCT_KCT29.2                   	956.786818                    	31                            	
+PreLoadReserved               	100100.000000                 	221.280000                    	KCT_KCT31.2                   	956.786818                    	31                            	
+Working                       	100100.000000                 	221.280000                    	KCT_KCT31.2                   	956.933044                    	31                            	
+WorkingSyncedFail             	100100.000000                 	221.280000                    	KCT_Stockpile ID              	960.306567                    	31                            	
+Working                       	100100.000000                 	221.280000                    	KCT_Stockpile ID              	960.770096                    	31                            	
+WorkingFailed                 	100100.000000                 	221.280000                    	KCT_Stockpile ID              	964.148300                    	31                            	
+Working                       	100100.000000                 	221.280000                    	KCT_Stockpile ID              	964.286216                    	31                            	
+PostLoadReserved              	105100.000000                 	221.280000                    	KCT_KCT31.2                   	969.899194                    	31                            	
+Idle                          	105100.000000                 	221.280000                    	KCT_KCT31.2                   	969.899194                    	31                            	
+PreLoadReserved               	105100.000000                 	221.280000                    	KCT_KCT31.1                   	969.984194                    	31                            	
+Working                       	105100.000000                 	221.280000                    	KCT_KCT31.1                   	970.122718                    	31                            	
+PostLoadReserved              	20000.000000                  	221.280000                    	KCT_KCT31.1                   	972.475659                    	31                            	
+Idle                          	20000.000000                  	221.280000                    	KCT_KCT31.1                   	972.475659                    	31                            	
+PreLoadReserved               	20000.000000                  	221.280000                    	KCT_KCT31.3                   	972.645382                    	31                            	
+Working                       	20000.000000                  	221.280000                    	KCT_KCT31.3                   	972.799310                    	31                            	
+PostLoadReserved              	20000.000000                  	221.280000                    	KCT_KCT31.3                   	975.152251                    	31                            	
+Idle                          	20000.000000                  	221.280000                    	KCT_KCT31.3                   	975.152251                    	31                            	
+Moving                        	20000.000000                  	221.280000                    	KCT_KCT31.3                   	1021.969002                   	31                            	
+Idle                          	20000.000000                  	195.390000                    	KCT_KCT31.3                   	1021.983383                   	31                            	
+Idle                          	20000.000000                  	195.390000                    	KCT_KCT31.3                   	1022.330391                   	23                            	
+PreLoadReserved               	20000.000000                  	195.390000                    	KCT_KCT23.1                   	1022.330391                   	23                            	
+Working                       	20000.000000                  	195.390000                    	KCT_KCT23.1                   	1022.507154                   	23                            	
+WorkingFailed                 	20000.000000                  	195.390000                    	KCT_Stockpile ID              	1028.231769                   	23                            	
+Working                       	20000.000000                  	195.390000                    	KCT_Stockpile ID              	1028.762305                   	23                            	
+PostLoadReserved              	96200.000000                  	195.390000                    	KCT_KCT23.1                   	1034.355337                   	23                            	
+Idle                          	96200.000000                  	195.390000                    	KCT_KCT23.1                   	1034.355337                   	23                            	
+WrappedUp                     	96200.000000                  	195.390000                    	KCT_KCT23.1                   	1091.317791                   	23                            	
+
