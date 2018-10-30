@@ -1,5 +1,5 @@
-from .util import *
-def generate_entity_class(entity, has_event=True, merge_targets=None):
+from generation.util import *
+def generate_entity_class(entity, has_event=True, merge_targets=[]):
     decl_template = '''#pragma once
 #include <string>
 #include "../../util.h"
@@ -8,6 +8,7 @@ def generate_entity_class(entity, has_event=True, merge_targets=None):
 {forward_declarations}
 
 class {entity.name} {{
+public:
 {tab}static const std::string ENTITY_NAME;
 {tab}static const std::string XML_TAG_PREFIX;
 {tab}{type_defs}
@@ -18,12 +19,12 @@ class {entity.name} {{
 {tab}these includes will work after the above has been defined, such that you only ever need to include this header to access all of them.
 {tab}"backward" as in not-forward
 */
-{backward_includes}
-'''
+{backward_includes}'''
+
     forwards_to_declare = []
     relative_backwards_to_include = []
     backward_merges_to_include = []
-    relative_forwards_to_declare = ['State', 'Id']
+    relative_forwards_to_declare = ['Id', 'State']
     comments_to_add = [
         '//State::Type is an enum',
         '//Id.name is an std::string'
@@ -38,7 +39,8 @@ class {entity.name} {{
         comments_to_add.append('//Id.terminal is NOT defined')
 
     if has_event:
-        relative_forwards_to_declare += ['Event']
+        relative_forwards_to_declare.insert(1, 'Event')  # must be after id and before state
+        relative_forwards_to_declare.append('Traits')  # must be last
         comments_to_add.append('//Event::Type is an enum')
     else:
         comments_to_add += [
@@ -53,7 +55,7 @@ class {entity.name} {{
 
         backward_merges_to_include = [
             '''"../{each_mergee}/Entity.h"'''.format(each_mergee=each_mergee)
-            for each_mergee in merge_targets
+            for each_mergee in sorted(merge_targets)
         ]
 
     else:
@@ -70,10 +72,10 @@ class {entity.name} {{
     # apply templates to the lists
     forward_declarations = '\n'.join(
         forward_template.format(class_name=each_to_declare)
-        for each_to_declare in forwards_to_declare+merge_targets
+        for each_to_declare in forwards_to_declare+sorted(merge_targets)
     )
 
-    type_defs = '''\n{tab}'''.join(
+    type_defs = '''\n{tab}'''.format(tab=tab).join(
         typedef_template.format(alias=each_alias, target=each_target)
         for each_alias, each_target in types_to_def.items()
     )
@@ -83,7 +85,7 @@ class {entity.name} {{
         for each_path in relative_backwards_to_include+backward_merges_to_include
     )
 
-    comments = '''\n{tab}'''.join(
+    comments = '''\n{tab}'''.format(tab=tab).join(
         comments_to_add
     )
 
@@ -95,10 +97,8 @@ class {entity.name} {{
         type_defs=type_defs,
         comments=comments,
         backward_includes=backward_includes
-    ).format(
-        tab=tab,
-        entity=entity
-    )  # apply a second time to capture stray tabs etc
+    )
+
     impl = None
 
     return decl, impl

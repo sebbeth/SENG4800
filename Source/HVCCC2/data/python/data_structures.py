@@ -110,8 +110,10 @@ class Event:
     def __hash__(self):
         #uniquely id each event by the combination of it's name and it's parent'a name
         return (self.entity.name + self.name).__hash__()
+
     def __lt__(self, other):
         return self.name < other.name
+
     def __eq__(self, other):
         return self.entity == other.entity and self.name == other.name
 
@@ -207,10 +209,25 @@ class Entity:
     def attributes(self):
         return list(filter(lambda x: x != self.cleaned_identifier, self.attribute_types.keys()))
 
+    # lists the attributes that aren't the id or state for use with the state classes
+    @property
+    def specific_attributes(self):
+        result = list(filter(lambda x: x != self.cleaned_identifier, self.attribute_types.keys()))
+
+        # don't duplicate the statetype if the state is encodable
+        if self.has_encodable_state:
+            to_remove = '''{entity.name[0].lower() + entity.name[1:]}State'''.format(entity=self)
+            if result.count(to_remove):
+                result.remove(to_remove)
+
+        return result
+
     def __hash__(self):
         #uniquely id each event by the combination of it's name and it's parent'a name
         return self.name.__hash__()
+
     def __lt__(self, other):
         return self.name < other.name
+
     def __eq__(self, other):
         return self.name == other.name

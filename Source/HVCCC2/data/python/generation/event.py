@@ -1,15 +1,17 @@
 from .util import *
-from .enum import *
+from .cpp_enum import *
 
 def generate_event_class(entity, decodable_entities):
     decl_template = '''#pragma once
-#include "{entity.name}.h"
+#include "Entity.h"
 {additional_headers}
 
 class {entity.name}Event {{
 public:
-{tab}using Entity = {entity.name};
 {type_enum_decl}
+
+{tab}using Entity = {entity.name};
+
 {tab}Entity::Id id;
 {tab}Type type;
 {tab}{member_declarations};
@@ -18,20 +20,19 @@ public:
 {tab}void serialize(Archive & archive);
 }};
 
-{tab}template<class Archive>
-{tab}void {entity.name}Event::serialize(Archive & archive) {{
-{tab}{tab}archive(id, type, {member_list});
+template<class Archive>
+void {entity.name}Event::serialize(Archive & archive) {{
+{tab}archive(id, type, {member_list});
 }}'''
 
-    impl_template = '''#include "{entity.name}.h"
+    impl_template = '''#include "Event.h"
 
 {type_enum_impl}
 
-{has_member_impls}
-'''
-    has_member_decl_template = '''bool has{member_name[0].upper() + member_name[1:]} const'''
+{has_member_impls}'''
+    has_member_decl_template = '''bool has{pascal_cased_member_name}() const'''
 
-    has_member_impl_template = '''bool {entity.name}Event::has{member_name[0].upper() + member_name[1:]}() const {{
+    has_member_impl_template = '''bool {entity.name}Event::has{pascal_cased_member_name}() const {{
 {tab}switch(type) {{
 {tab}{tab}{cases}
 {tab}{tab}default:
@@ -39,39 +40,44 @@ public:
 {tab}}}
 }}'''
 
-    case_template = '''case {entity.name}EventType::{enumerator}:
+    case_template = '''case {entity.name}::Event::Type::{enumerator}:
 {tab}{tab}{tab}return {result};'''
 
     event_code_map = {each.code: each.name for each in entity.events.values()}
 
     headers_to_add = sorted(list(entity.attribute_headers))
-    if entity.has_encodable_state:
-        to_remove = '''"../{entity.name}/Entity.h"'''.format(entity=entity)
-        if headers_to_add.count(to_remove):
-            headers_to_add.remove(to_remove)
+    to_remove = '''"../{entity.name}/Entity.h"'''.format(entity=entity)
+    if headers_to_add.count(to_remove):
+        headers_to_add.remove(to_remove)
+
+    # for events we want the state attribute to stick for encodables; but that won't be the case for states
+    attributes_to_add = sorted(entity.attributes)
 
     additional_headers = '\n'.join(
         include_template.format(path=each_path)
-        for each_path in headers_to_add
+        for each_path in sorted(headers_to_add)
     )
 
-    type_enum_decl, type_enum_impl = generate_enum('Type', '''{entity.name}Event::'''.format(entity=entity), event_code_map, base_tabs='{tab}')
+    type_enum_decl, type_enum_impl = generate_enum('Type', event_code_map, function_scope='''{entity.name}Event::'''.format(entity=entity), base_tabs='{tab}'.format(tab=tab))
 
-    member_declarations = ';\n{tab}'.join(
+    member_declarations = ''';\n{tab}'''.format(tab=tab).join(
         general_declaration_template.format(name=each_name, type=entity.attribute_types[each_name])
-        for each_name in sorted(entity.attributes)
+        for each_name in attributes_to_add
     )
 
-    has_member_declarations = ';\n{tab}'.join(
-        has_member_decl_template.format(member_name=each_name)
-        for each_name in sorted(entity.attributes)
+    has_member_declarations = ''';\n{tab}'''.format(tab=tab).join(
+        has_member_decl_template.format(
+            member_name=each_name,
+            pascal_cased_member_name=each_name[0].upper()+each_name[1:]
+        )
+        for each_name in attributes_to_add
     )
 
-    member_list = ', '.join(sorted(entity.attributes))
+    member_list = ', '.join(attributes_to_add)
 
     has_member_impls_to_add = []
 
-    for each_attribute in sorted(entity.attributes):
+    for each_attribute in attributes_to_add:
         case_map = {
             "true": [],
             "false": []
@@ -84,10 +90,10 @@ public:
             cases = case_template.format(tab=tab, entity=entity, enumerator='Invalid', result='false')
             default_result = 'true'
         else:
-            cases = '\n{tab}{tab}'.join(
+            cases = '''\n{tab}{tab}'''.format(tab=tab).join(
                 case_template.format(tab=tab, entity=entity, enumerator=each_enumerator, result=each_result)
-                for each_result, each_enumerator_list in case_map
-                    for each_enumerator in each_enumerator_list
+                for each_result, each_enumerator_list in sorted(case_map.items())
+                    for each_enumerator in sorted(each_enumerator_list)
             )
             default_result = 'false'
 
@@ -96,12 +102,13 @@ public:
                 tab=tab,
                 entity=entity,
                 member_name=each_attribute,
+                pascal_cased_member_name=each_attribute[0].upper()+each_attribute[1:],
                 cases=cases,
                 default_result=default_result
             )
         )
 
-    has_member_impls = '\n\n'.join(has_member_impls_to_add)
+    has_member_impls = '\n\n'.join(sorted(has_member_impls_to_add))
 
     decl = decl_template.format(
         tab=tab,
@@ -111,19 +118,12 @@ public:
         member_declarations=member_declarations,
         has_member_declarations=has_member_declarations,
         member_list=member_list
-    ).format(
-        tab=tab,
-        entity=entity
-    )  # apply it a second time to capture stray tabs etc
+    )
 
     impl = impl_template.format(
         tab=tab,
         entity=entity,
         has_member_impls=has_member_impls,
         type_enum_impl=type_enum_impl
-    ).format(
-        tab=tab,
-        entity=entity
-    )  # apply it a second time to capture stray tabs etc
-
+    )
     return decl, impl

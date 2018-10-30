@@ -25,25 +25,25 @@ def guess_type(entities, name, value):
     #allow the statetype of some entities (e.g. track signals) to be used as attributes for some events (e.g. track signals or trains)
     for each_entity in entities.values():
         if name == cleanUpAttributeName(each_entity.identifier):
-            return ('''{0}::Id'''.format(each_entity.name), '''#include "../{0}/{0}.h"'''.format(each_entity.name))
+            return '''{0}::Id'''.format(each_entity.name), '''"../{each_entity.name}/Entity.h"'''.format(each_entity=each_entity)
         if each_entity.has_encodable_state and name == '''{0}State'''.format(each_entity.name[0].lower() + each_entity.name[1:]):
-            return ('''{0}StateType'''.format(each_entity.name), '''#include "../{0}/{0}StateType.h"'''.format(each_entity.name))
+            return '''{0}StateType'''.format(each_entity.name), '''"../{each_entity.name}/Entity.h"'''.format(each_entity=each_entity)
     if value in ['true', 'false']:
-        return ('bool', None)
+        return 'bool', None
     else:
         try:
             int(value)
-            return ('int', None)
+            return 'int', None
         except ValueError:
             pass
 
         try:
             float(value)
-            return ('double', None)
+            return 'double', None
         except ValueError:
             pass
 
-        return ('std::string', None)
+        return 'std::string', '<string>'
 
 """
 this enforces an override pattern that ensures the chosen type can handle all values seen
