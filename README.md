@@ -39,7 +39,7 @@ Before running the game in the engine, ensure you compile once again (using the 
 Once the project is open you can access the C++ files in VS and modify them there.
 
 # Reasons why your project may not be running:
-1. If you are getting over 100 compilation errors in Visual Studio, you can try opening a file explorer outside of UE Editor and Visual Studio, right click on "HVCCC2.uproject" and click on "Generate Visual Studio project files".
+1. If you are getting over 100 compilation errors in Visual Studio, you can try opening a file explorer outside of UE Editor and Visual Studio and double clicking on "HVCCC2.uproject". You have to then open up the same folder in a file explorer, right click on "HVCCC2uproject" and click on "Generate Visual Studio project files".
 2. If you are getting the getting the error "Unable to start program '...\UE4.exe'. The system cannot find the file specified.", you have to right click on "HVCCC2" in the Solution Explorer inside Visual Studio. After that, you need to select "Set as StartUp Project", then recompile.
 3. If you are debugging using Visual Studio code and you are getting errors related to not having Unreal Engine .pdb files loaded, you can try:
 - Downloading the editor symbols for debugging:
