@@ -558,7 +558,7 @@ ATrain * ALevelController::spawnATrain(FString id, FVector position, FRotator ro
 		FActorSpawnParameters spawnParams;
 		spawnParams.Owner = this;
 		ATrain *actor = world->SpawnActor<ATrain>(blueprint, position, rotator, spawnParams);
-		actor->spawnCarriages(train_carriage_full_blueprint,30); // Comment out this line to disable carriages
+		//actor->spawnCarriages(train_carriage_full_blueprint,30); // Comment out this line to disable carriages
 		actor->id = id;
 		trains.Add(actor);
 		return actor;
