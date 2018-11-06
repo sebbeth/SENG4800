@@ -1,12 +1,12 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
+ * This file contains code generated from/to be compatible with available XML data as at 2018-11-06 18:17:17.164006
  **/
 #pragma once
 #include <string>
 #include "DumpstationEventType.h"
 #include "Dumpstation.h"
 #include "../Dumpstation/Dumpstation.h"
-#include "../Stockpile/Stockpile.h"
+#include "../TrainMovement/TrainMovement.h"
 class DumpstationEvent {
 public:
     using Entity = Dumpstation;
@@ -14,14 +14,12 @@ public:
     DumpstationEventType type;
 
     double amount;
-    int cycleID;
-    Stockpile::Id stockpileID;
     double time;
+    TrainMovement::Id trainID;
 
     bool hasAmount() const;
-    bool hasCycleID() const;
-    bool hasStockpileID() const;
     bool hasTime() const;
+    bool hasTrainID() const;
 
     template<class Archive>
     void serialize(Archive & archive);
@@ -29,5 +27,5 @@ public:
 
 template<class Archive>
 void DumpstationEvent::serialize(Archive & archive) {
-    archive(id, type, amount, cycleID, stockpileID, time);
+    archive(id, type, amount, time, trainID);
 }

@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
+ * This file contains code generated from/to be compatible with available XML data as at 2018-11-06 18:17:17.164006
  **/
 #include "StackerReclaimerState.h"
 StackerReclaimerState::StackerReclaimerState(const StackerState& src): type(StackerReclaimerStateType::Invalid), id({src.id.terminal, src.id.name}), position(src.position), time(src.time), stockpileID(src.stockpileID), amount(src.amount){
@@ -10,8 +10,8 @@ StackerReclaimerState::StackerReclaimerState(const StackerState& src): type(Stac
         case StackerStateType::PreStackReserved:
             type = StackerReclaimerStateType::PreStackReserved;
             break;
-        case StackerStateType::PreDoubleHandleReserved:
-            type = StackerReclaimerStateType::PreDoubleHandleReserved;
+        case StackerStateType::PreStackDoubleHandleReserved:
+            type = StackerReclaimerStateType::PreStackDoubleHandleReserved;
             break;
         case StackerStateType::Moving:
             type = StackerReclaimerStateType::Moving;
@@ -46,29 +46,29 @@ StackerReclaimerState::StackerReclaimerState(const StackerState& src): type(Stac
         case StackerStateType::PostStackReservedSyncFail:
             type = StackerReclaimerStateType::PostStackReservedSyncFail;
             break;
-        case StackerStateType::PreDoubleHandleReservedFail:
-            type = StackerReclaimerStateType::PreDoubleHandleReservedFail;
+        case StackerStateType::PreStackDoubleHandleReservedFail:
+            type = StackerReclaimerStateType::PreStackDoubleHandleReservedFail;
             break;
-        case StackerStateType::PreDoubleHandleReservedSyncFail:
-            type = StackerReclaimerStateType::PreDoubleHandleReservedSyncFail;
+        case StackerStateType::PreStackDoubleHandleReservedSyncFail:
+            type = StackerReclaimerStateType::PreStackDoubleHandleReservedSyncFail;
             break;
-        case StackerStateType::WorkingDoubleHandle:
-            type = StackerReclaimerStateType::WorkingDoubleHandle;
+        case StackerStateType::WorkingStackDoubleHandle:
+            type = StackerReclaimerStateType::WorkingStackDoubleHandle;
             break;
-        case StackerStateType::PostDoubleHandleReserved:
-            type = StackerReclaimerStateType::PostDoubleHandleReserved;
+        case StackerStateType::PostStackDoubleHandleReserved:
+            type = StackerReclaimerStateType::PostStackDoubleHandleReserved;
             break;
-        case StackerStateType::WorkingDoubleHandleFail:
-            type = StackerReclaimerStateType::WorkingDoubleHandleFail;
+        case StackerStateType::WorkingStackDoubleHandleFail:
+            type = StackerReclaimerStateType::WorkingStackDoubleHandleFail;
             break;
-        case StackerStateType::WorkingDoubleHandleSyncFail:
-            type = StackerReclaimerStateType::WorkingDoubleHandleSyncFail;
+        case StackerStateType::WorkingStackDoubleHandleSyncFail:
+            type = StackerReclaimerStateType::WorkingStackDoubleHandleSyncFail;
             break;
-        case StackerStateType::PostDoubleHandleReservedFail:
-            type = StackerReclaimerStateType::PostDoubleHandleReservedFail;
+        case StackerStateType::PostStackDoubleHandleReservedFail:
+            type = StackerReclaimerStateType::PostStackDoubleHandleReservedFail;
             break;
-        case StackerStateType::PostDoubleHandleReservedSyncFail:
-            type = StackerReclaimerStateType::PostDoubleHandleReservedSyncFail;
+        case StackerStateType::PostStackDoubleHandleReservedSyncFail:
+            type = StackerReclaimerStateType::PostStackDoubleHandleReservedSyncFail;
             break;
         default:
             type = StackerReclaimerStateType::Invalid;
@@ -82,8 +82,8 @@ StackerReclaimerState::StackerReclaimerState(const ReclaimerState& src): type(St
         case ReclaimerStateType::PreReclaimReserved:
             type = StackerReclaimerStateType::PreReclaimReserved;
             break;
-        case ReclaimerStateType::PreDoubleHandleReserved:
-            type = StackerReclaimerStateType::PreDoubleHandleReserved;
+        case ReclaimerStateType::PreReclaimDoubleHandleReserved:
+            type = StackerReclaimerStateType::PreReclaimDoubleHandleReserved;
             break;
         case ReclaimerStateType::Moving:
             type = StackerReclaimerStateType::Moving;
@@ -118,29 +118,29 @@ StackerReclaimerState::StackerReclaimerState(const ReclaimerState& src): type(St
         case ReclaimerStateType::PostReclaimReservedSyncFail:
             type = StackerReclaimerStateType::PostReclaimReservedSyncFail;
             break;
-        case ReclaimerStateType::PreDoubleHandleReservedFail:
-            type = StackerReclaimerStateType::PreDoubleHandleReservedFail;
+        case ReclaimerStateType::PreReclaimDoubleHandleReservedFail:
+            type = StackerReclaimerStateType::PreReclaimDoubleHandleReservedFail;
             break;
-        case ReclaimerStateType::PreDoubleHandleReservedSyncFail:
-            type = StackerReclaimerStateType::PreDoubleHandleReservedSyncFail;
+        case ReclaimerStateType::PreReclaimDoubleHandleReservedSyncFail:
+            type = StackerReclaimerStateType::PreReclaimDoubleHandleReservedSyncFail;
             break;
-        case ReclaimerStateType::WorkingDoubleHandle:
-            type = StackerReclaimerStateType::WorkingDoubleHandle;
+        case ReclaimerStateType::WorkingReclaimDoubleHandle:
+            type = StackerReclaimerStateType::WorkingReclaimDoubleHandle;
             break;
-        case ReclaimerStateType::PostDoubleHandleReserved:
-            type = StackerReclaimerStateType::PostDoubleHandleReserved;
+        case ReclaimerStateType::PostReclaimDoubleHandleReserved:
+            type = StackerReclaimerStateType::PostReclaimDoubleHandleReserved;
             break;
-        case ReclaimerStateType::WorkingDoubleHandleFail:
-            type = StackerReclaimerStateType::WorkingDoubleHandleFail;
+        case ReclaimerStateType::WorkingReclaimDoubleHandleFail:
+            type = StackerReclaimerStateType::WorkingReclaimDoubleHandleFail;
             break;
-        case ReclaimerStateType::WorkingDoubleHandleSyncFail:
-            type = StackerReclaimerStateType::WorkingDoubleHandleSyncFail;
+        case ReclaimerStateType::WorkingReclaimDoubleHandleSyncFail:
+            type = StackerReclaimerStateType::WorkingReclaimDoubleHandleSyncFail;
             break;
-        case ReclaimerStateType::PostDoubleHandleReservedFail:
-            type = StackerReclaimerStateType::PostDoubleHandleReservedFail;
+        case ReclaimerStateType::PostReclaimDoubleHandleReservedFail:
+            type = StackerReclaimerStateType::PostReclaimDoubleHandleReservedFail;
             break;
-        case ReclaimerStateType::PostDoubleHandleReservedSyncFail:
-            type = StackerReclaimerStateType::PostDoubleHandleReservedSyncFail;
+        case ReclaimerStateType::PostReclaimDoubleHandleReservedSyncFail:
+            type = StackerReclaimerStateType::PostReclaimDoubleHandleReservedSyncFail;
             break;
         default:
             type = StackerReclaimerStateType::Invalid;

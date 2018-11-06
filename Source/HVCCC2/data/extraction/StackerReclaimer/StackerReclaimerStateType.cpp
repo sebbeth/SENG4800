@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
+ * This file contains code generated from/to be compatible with available XML data as at 2018-11-06 18:17:17.164006
  **/
 #include "StackerReclaimerStateType.h"
         
@@ -13,8 +13,8 @@ std::string encodeStackerReclaimerStateType(const StackerReclaimerStateType& val
             return "PreStackReserved";
             break;
 
-        case StackerReclaimerStateType::PreDoubleHandleReserved:
-            return "PreDoubleHandleReserved";
+        case StackerReclaimerStateType::PreStackDoubleHandleReserved:
+            return "PreStackDoubleHandleReserved";
             break;
 
         case StackerReclaimerStateType::Moving:
@@ -61,40 +61,44 @@ std::string encodeStackerReclaimerStateType(const StackerReclaimerStateType& val
             return "PostStackReservedSyncFail";
             break;
 
-        case StackerReclaimerStateType::PreDoubleHandleReservedFail:
-            return "PreDoubleHandleReservedFail";
+        case StackerReclaimerStateType::PreStackDoubleHandleReservedFail:
+            return "PreStackDoubleHandleReservedFail";
             break;
 
-        case StackerReclaimerStateType::PreDoubleHandleReservedSyncFail:
-            return "PreDoubleHandleReservedSyncFail";
+        case StackerReclaimerStateType::PreStackDoubleHandleReservedSyncFail:
+            return "PreStackDoubleHandleReservedSyncFail";
             break;
 
-        case StackerReclaimerStateType::WorkingDoubleHandle:
-            return "WorkingDoubleHandle";
+        case StackerReclaimerStateType::WorkingStackDoubleHandle:
+            return "WorkingStackDoubleHandle";
             break;
 
-        case StackerReclaimerStateType::PostDoubleHandleReserved:
-            return "PostDoubleHandleReserved";
+        case StackerReclaimerStateType::PostStackDoubleHandleReserved:
+            return "PostStackDoubleHandleReserved";
             break;
 
-        case StackerReclaimerStateType::WorkingDoubleHandleFail:
-            return "WorkingDoubleHandleFail";
+        case StackerReclaimerStateType::WorkingStackDoubleHandleFail:
+            return "WorkingStackDoubleHandleFail";
             break;
 
-        case StackerReclaimerStateType::WorkingDoubleHandleSyncFail:
-            return "WorkingDoubleHandleSyncFail";
+        case StackerReclaimerStateType::WorkingStackDoubleHandleSyncFail:
+            return "WorkingStackDoubleHandleSyncFail";
             break;
 
-        case StackerReclaimerStateType::PostDoubleHandleReservedFail:
-            return "PostDoubleHandleReservedFail";
+        case StackerReclaimerStateType::PostStackDoubleHandleReservedFail:
+            return "PostStackDoubleHandleReservedFail";
             break;
 
-        case StackerReclaimerStateType::PostDoubleHandleReservedSyncFail:
-            return "PostDoubleHandleReservedSyncFail";
+        case StackerReclaimerStateType::PostStackDoubleHandleReservedSyncFail:
+            return "PostStackDoubleHandleReservedSyncFail";
             break;
 
         case StackerReclaimerStateType::PreReclaimReserved:
             return "PreReclaimReserved";
+            break;
+
+        case StackerReclaimerStateType::PreReclaimDoubleHandleReserved:
+            return "PreReclaimDoubleHandleReserved";
             break;
 
         case StackerReclaimerStateType::WorkingReclaim:
@@ -127,6 +131,38 @@ std::string encodeStackerReclaimerStateType(const StackerReclaimerStateType& val
 
         case StackerReclaimerStateType::PostReclaimReservedSyncFail:
             return "PostReclaimReservedSyncFail";
+            break;
+
+        case StackerReclaimerStateType::PreReclaimDoubleHandleReservedFail:
+            return "PreReclaimDoubleHandleReservedFail";
+            break;
+
+        case StackerReclaimerStateType::PreReclaimDoubleHandleReservedSyncFail:
+            return "PreReclaimDoubleHandleReservedSyncFail";
+            break;
+
+        case StackerReclaimerStateType::WorkingReclaimDoubleHandle:
+            return "WorkingReclaimDoubleHandle";
+            break;
+
+        case StackerReclaimerStateType::PostReclaimDoubleHandleReserved:
+            return "PostReclaimDoubleHandleReserved";
+            break;
+
+        case StackerReclaimerStateType::WorkingReclaimDoubleHandleFail:
+            return "WorkingReclaimDoubleHandleFail";
+            break;
+
+        case StackerReclaimerStateType::WorkingReclaimDoubleHandleSyncFail:
+            return "WorkingReclaimDoubleHandleSyncFail";
+            break;
+
+        case StackerReclaimerStateType::PostReclaimDoubleHandleReservedFail:
+            return "PostReclaimDoubleHandleReservedFail";
+            break;
+
+        case StackerReclaimerStateType::PostReclaimDoubleHandleReservedSyncFail:
+            return "PostReclaimDoubleHandleReservedSyncFail";
             break;
 
         default:

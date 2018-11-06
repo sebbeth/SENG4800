@@ -864,7 +864,7 @@ void logStates(std::ostream& outlet, const std::vector<{entity.name}State>& data
 {tab}{tab}outlet << std::string(std::max(0, 30-(int)eachHeader.size()), ' ');
 {tab}{tab}outlet << "\\t";
 {tab}}}
-{tab}outlet << '\n';
+{tab}outlet << '\\n';
 {tab}for(auto& eachState : data) {{
 {tab}{tab}for(std::string eachAttr : {{ encode{entity.name}StateType(eachState.type), {stringified_attrs} }}) {{
 {tab}{tab}{tab}outlet << eachAttr;

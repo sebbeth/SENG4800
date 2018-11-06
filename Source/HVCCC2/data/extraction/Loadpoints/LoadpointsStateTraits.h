@@ -10,7 +10,7 @@ public:
     static LoadpointsState initializeFromEvent(const LoadpointsEvent& src) {
         /* STUB: REPLACE WITH LOGIC FOR GUESSING THE INITIAL STATE FROM THE EVENT */
         auto tentativeState = LoadpointsState::determineNextType(LoadpointsStateType::Idle, src.type);//see if the initial event is something that leaves the initial state; (addresses issue where some entities don't have their own creation event in the xml); still just a quickfix stub though
-        return {src.id, tentativeState != LoadpointsStateType::Invalid ? tentativeState : LoadpointsStateType::Idle, src.amount, src.cycleID, src.loadpointName, src.time};
+        return {src.id, tentativeState != LoadpointsStateType::Invalid ? tentativeState : LoadpointsStateType::Idle, src.amount, src.loadpointName, src.time};
     }
 
     static LoadpointsState generateNextState(const LoadpointsState& current, const LoadpointsEvent& event) {
@@ -21,9 +21,6 @@ public:
 
         if(event.hasAmount()) {
         result.amount = event.amount;
-        }
-        if(event.hasCycleID()) {
-        result.cycleID = event.cycleID;
         }
         if(event.hasLoadpointName()) {
         result.loadpointName = event.loadpointName;

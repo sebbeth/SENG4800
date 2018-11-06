@@ -42,7 +42,8 @@
           "RemnantRemoved": "Idle"
         },
         "RemnantReclaiming": {
-          "ReclaimComp": "Remnant"
+          "ReclaimComp": "Remnant",
+          "ReclaimTransComp": "Remnant"
         },
         "RemnantStacking": {
           "StackTransComp": "DedicatedCreated"
@@ -63,7 +64,7 @@
       "transitions": {
         "Idle": {
           "OpStart": "PreStackReserved",
-          "DoubleHandleOpStart": "PreDoubleHandleReserved",
+          "StackDoubleHandleOpStart": "PreStackDoubleHandleReserved",
           "OnMove": "Moving",
           "MaintStart": "Maintenance",
           "WrapUp": "WrappedUp"
@@ -118,44 +119,44 @@
           "SyncedFix": "PostStackReserved",
           "WrapUp": "WrappedUp"
         },
-        "PreDoubleHandleReserved": {
-          "Fail": "PreDoubleHandleReservedFail",
-          "SyncedFail": "PreDoubleHandleReservedSyncFail",
-          "DoubleHandleStart": "WorkingDoubleHandle",
+        "PreStackDoubleHandleReserved": {
+          "Fail": "PreStackDoubleHandleReservedFail",
+          "SyncedFail": "PreStackDoubleHandleReservedSyncFail",
+          "StackDoubleHandleStart": "WorkingStackDoubleHandle",
           "WrapUp": "WrappedUp"
         },
-        "PreDoubleHandleReservedFail": {
-          "Fix": "PreDoubleHandleReserved",
+        "PreStackDoubleHandleReservedFail": {
+          "Fix": "PreStackDoubleHandleReserved",
           "WrapUp": "WrappedUp"
         },
-        "PreDoubleHandleReservedSyncFail": {
-          "SyncedFix": "PreDoubleHandleReserved",
+        "PreStackDoubleHandleReservedSyncFail": {
+          "SyncedFix": "PreStackDoubleHandleReserved",
           "WrapUp": "WrappedUp"
         },
-        "WorkingDoubleHandle": {
-          "DoubleHandleComp": "PostDoubleHandleReserved",
-          "Fail": "WorkingDoubleHandleFail",
-          "SyncedFail": "WorkingDoubleHandleSyncFail",
+        "WorkingStackDoubleHandle": {
+          "StackDoubleHandleComp": "PostStackDoubleHandleReserved",
+          "Fail": "WorkingStackDoubleHandleFail",
+          "SyncedFail": "WorkingStackDoubleHandleSyncFail",
           "WrapUp": "WrappedUp"
         },
-        "WorkingDoubleHandleFail": {
-          "Fix": "WorkingDoubleHandle",
+        "WorkingStackDoubleHandleFail": {
+          "Fix": "WorkingStackDoubleHandle",
           "WrapUp": "WrappedUp"
         },
-        "WorkingDoubleHandleSyncFail": {
-          "SyncedFix": "WorkingDoubleHandle",
+        "WorkingStackDoubleHandleSyncFail": {
+          "SyncedFix": "WorkingStackDoubleHandle",
           "WrapUp": "WrappedUp"
         },
-        "PostDoubleHandleReserved": {
-          "Fail": "PostDoubleHandleReservedFail",
-          "SyncedFail": "PostDoubleHandleReservedSyncFail",
-          "DoubleHandleOpComp": "Idle"
+        "PostStackDoubleHandleReserved": {
+          "Fail": "PostStackDoubleHandleReservedFail",
+          "SyncedFail": "PostStackDoubleHandleReservedSyncFail",
+          "StackDoubleHandleOpComp": "Idle"
         },
-        "PostDoubleHandleReservedFail": {
-          "Fix": "PostDoubleHandleReserved"
+        "PostStackDoubleHandleReservedFail": {
+          "Fix": "PostStackDoubleHandleReserved"
         },
-        "PostDoubleHandleReservedSyncFail": {
-          "SyncedFix": "PostDoubleHandleReserved"
+        "PostStackDoubleHandleReservedSyncFail": {
+          "SyncedFix": "PostStackDoubleHandleReserved"
         },
         "WrappedUp": {}
       }
@@ -168,7 +169,7 @@
       "transitions": {
         "Idle": {
           "OpStart": "PreReclaimReserved",
-          "DoubleHandleOpStart": "PreDoubleHandleReserved",
+          "ReclaimDoubleHandleOpStart": "PreReclaimDoubleHandleReserved",
           "OnMove": "Moving",
           "MaintStart": "Maintenance",
           "WrapUp": "WrappedUp"
@@ -223,44 +224,44 @@
           "SyncedFix": "PostReclaimReserved",
           "WrapUp": "WrappedUp"
         },
-        "PreDoubleHandleReserved": {
-          "Fail": "PreDoubleHandleReservedFail",
-          "SyncedFail": "PreDoubleHandleReservedSyncFail",
-          "DoubleHandleStart": "WorkingDoubleHandle",
+        "PreReclaimDoubleHandleReserved": {
+          "Fail": "PreReclaimDoubleHandleReservedFail",
+          "SyncedFail": "PreReclaimDoubleHandleReservedSyncFail",
+          "ReclaimDoubleHandleStart": "WorkingReclaimDoubleHandle",
           "WrapUp": "WrappedUp"
         },
-        "PreDoubleHandleReservedFail": {
-          "Fix": "PreDoubleHandleReserved",
+        "PreReclaimDoubleHandleReservedFail": {
+          "Fix": "PreReclaimDoubleHandleReserved",
           "WrapUp": "WrappedUp"
         },
-        "PreDoubleHandleReservedSyncFail": {
-          "SyncedFix": "PreDoubleHandleReserved",
+        "PreReclaimDoubleHandleReservedSyncFail": {
+          "SyncedFix": "PreReclaimDoubleHandleReserved",
           "WrapUp": "WrappedUp"
         },
-        "WorkingDoubleHandle": {
-          "DoubleHandleComp": "PostDoubleHandleReserved",
-          "Fail": "WorkingDoubleHandleFail",
-          "SyncedFail": "WorkingDoubleHandleSyncFail",
+        "WorkingReclaimDoubleHandle": {
+          "ReclaimDoubleHandleComp": "PostReclaimDoubleHandleReserved",
+          "Fail": "WorkingReclaimDoubleHandleFail",
+          "SyncedFail": "WorkingReclaimDoubleHandleSyncFail",
           "WrapUp": "WrappedUp"
         },
-        "WorkingDoubleHandleFail": {
-          "Fix": "WorkingDoubleHandle",
+        "WorkingReclaimDoubleHandleFail": {
+          "Fix": "WorkingReclaimDoubleHandle",
           "WrapUp": "WrappedUp"
         },
-        "WorkingDoubleHandleSyncFail": {
-          "SyncedFix": "WorkingDoubleHandle",
+        "WorkingReclaimDoubleHandleSyncFail": {
+          "SyncedFix": "WorkingReclaimDoubleHandle",
           "WrapUp": "WrappedUp"
         },
-        "PostDoubleHandleReserved": {
-          "Fail": "PostDoubleHandleReservedFail",
-          "SyncedFail": "PostDoubleHandleReservedSyncFail",
-          "DoubleHandleOpComp": "Idle"
+        "PostReclaimDoubleHandleReserved": {
+          "Fail": "PostReclaimDoubleHandleReservedFail",
+          "SyncedFail": "PostReclaimDoubleHandleReservedSyncFail",
+          "ReclaimDoubleHandleOpComp": "Idle"
         },
-        "PostDoubleHandleReservedFail": {
-          "Fix": "PostDoubleHandleReserved"
+        "PostReclaimDoubleHandleReservedFail": {
+          "Fix": "PostReclaimDoubleHandleReserved"
         },
-        "PostDoubleHandleReservedSyncFail": {
-          "SyncedFix": "PostDoubleHandleReserved"
+        "PostReclaimDoubleHandleReservedSyncFail": {
+          "SyncedFix": "PostReclaimDoubleHandleReserved"
         },
         "WrappedUp": {}
       }

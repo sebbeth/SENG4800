@@ -1,17 +1,13 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
+ * This file contains code generated from/to be compatible with available XML data as at 2018-11-06 18:17:17.164006
  **/
 #include "ReclaimerEvent.h"
 
 bool ReclaimerEvent::hasAmount() const {
     switch (type) {
         case ReclaimerEventType::Complete:
-        case ReclaimerEventType::DoubleHandleOperationComplete:
         case ReclaimerEventType::OperationComplete:
             return true;
-        case ReclaimerEventType::DoubleHandleComplete:
-        case ReclaimerEventType::DoubleHandleOperationStart:
-        case ReclaimerEventType::DoubleHandleStart:
         case ReclaimerEventType::Fail:
         case ReclaimerEventType::Fix:
         case ReclaimerEventType::MaintenanceComplete:
@@ -19,6 +15,10 @@ bool ReclaimerEvent::hasAmount() const {
         case ReclaimerEventType::OnMove:
         case ReclaimerEventType::OnStopMove:
         case ReclaimerEventType::OperationStart:
+        case ReclaimerEventType::ReclaimDoubleHandleComplete:
+        case ReclaimerEventType::ReclaimDoubleHandleOperationComplete:
+        case ReclaimerEventType::ReclaimDoubleHandleOperationStart:
+        case ReclaimerEventType::ReclaimDoubleHandleStart:
         case ReclaimerEventType::Start:
         case ReclaimerEventType::SyncedFail:
         case ReclaimerEventType::SyncedFix:
@@ -31,8 +31,6 @@ bool ReclaimerEvent::hasAmount() const {
 bool ReclaimerEvent::hasPosition() const {
     switch (type) {
         case ReclaimerEventType::Complete:
-        case ReclaimerEventType::DoubleHandleOperationComplete:
-        case ReclaimerEventType::DoubleHandleOperationStart:
         case ReclaimerEventType::Fail:
         case ReclaimerEventType::Fix:
         case ReclaimerEventType::MaintenanceComplete:
@@ -46,8 +44,10 @@ bool ReclaimerEvent::hasPosition() const {
         case ReclaimerEventType::SyncedFix:
         case ReclaimerEventType::WrapUp:
             return true;
-        case ReclaimerEventType::DoubleHandleComplete:
-        case ReclaimerEventType::DoubleHandleStart:
+        case ReclaimerEventType::ReclaimDoubleHandleComplete:
+        case ReclaimerEventType::ReclaimDoubleHandleOperationComplete:
+        case ReclaimerEventType::ReclaimDoubleHandleOperationStart:
+        case ReclaimerEventType::ReclaimDoubleHandleStart:
         default:
             return false;
     }
@@ -56,8 +56,6 @@ bool ReclaimerEvent::hasPosition() const {
 bool ReclaimerEvent::hasStockpileID() const {
     switch (type) {
         case ReclaimerEventType::Complete:
-        case ReclaimerEventType::DoubleHandleOperationComplete:
-        case ReclaimerEventType::DoubleHandleOperationStart:
         case ReclaimerEventType::Fail:
         case ReclaimerEventType::Fix:
         case ReclaimerEventType::OperationComplete:
@@ -66,12 +64,14 @@ bool ReclaimerEvent::hasStockpileID() const {
         case ReclaimerEventType::SyncedFail:
         case ReclaimerEventType::SyncedFix:
             return true;
-        case ReclaimerEventType::DoubleHandleComplete:
-        case ReclaimerEventType::DoubleHandleStart:
         case ReclaimerEventType::MaintenanceComplete:
         case ReclaimerEventType::MaintenanceStart:
         case ReclaimerEventType::OnMove:
         case ReclaimerEventType::OnStopMove:
+        case ReclaimerEventType::ReclaimDoubleHandleComplete:
+        case ReclaimerEventType::ReclaimDoubleHandleOperationComplete:
+        case ReclaimerEventType::ReclaimDoubleHandleOperationStart:
+        case ReclaimerEventType::ReclaimDoubleHandleStart:
         case ReclaimerEventType::WrapUp:
         default:
             return false;
@@ -81,8 +81,6 @@ bool ReclaimerEvent::hasStockpileID() const {
 bool ReclaimerEvent::hasTime() const {
     switch (type) {
         case ReclaimerEventType::Complete:
-        case ReclaimerEventType::DoubleHandleOperationComplete:
-        case ReclaimerEventType::DoubleHandleOperationStart:
         case ReclaimerEventType::Fail:
         case ReclaimerEventType::Fix:
         case ReclaimerEventType::MaintenanceComplete:
@@ -96,8 +94,10 @@ bool ReclaimerEvent::hasTime() const {
         case ReclaimerEventType::SyncedFix:
         case ReclaimerEventType::WrapUp:
             return true;
-        case ReclaimerEventType::DoubleHandleComplete:
-        case ReclaimerEventType::DoubleHandleStart:
+        case ReclaimerEventType::ReclaimDoubleHandleComplete:
+        case ReclaimerEventType::ReclaimDoubleHandleOperationComplete:
+        case ReclaimerEventType::ReclaimDoubleHandleOperationStart:
+        case ReclaimerEventType::ReclaimDoubleHandleStart:
         default:
             return false;
     }

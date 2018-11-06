@@ -630,46 +630,85 @@ void ALevelController::animateEntity(const SimulationData<StackerReclaimer>& dat
 	//update the actor position
 	data.actorPointer->setPosition(positionScale);
 
-	auto rotationIdentifierIt = data.stateWindow.first;
-	bool foundState = false;
-	while (rotationIdentifierIt != data.states.begin() && !foundState) {
-		switch (rotationIdentifierIt->type)
-		{
-		case StackerReclaimerStateType::Moving:
-		case StackerReclaimerStateType::WorkingStack:
-		case StackerReclaimerStateType::WorkingReclaim:
-			foundState = true;
-			break;
-		default:
-			--rotationIdentifierIt;
-		}
-	}
-		
-	switch (rotationIdentifierIt->type)
+	auto rotationIdentifierIt = data.stateWindow.second;
+	//bool foundState = false;
+	//while (rotationIdentifierIt != data.states.begin() && !foundState) {
+	//	switch (rotationIdentifierIt->type)
+	//	{
+	//	case StackerReclaimerStateType::Moving:
+	//	case StackerReclaimerStateType::WorkingStack:
+
+	//	case StackerReclaimerStateType::WorkingReclaim:
+	//		foundState = true;
+	//		break;
+	//	default:
+	//		++rotationIdentifierIt;
+	//	}
+	//}
+	bool isStacking = false;
+	bool isRelcaiming = false;
+	switch (data.stateWindow.first->type)
 	{
-	case StackerReclaimerStateType::Moving:
-		 // If the SR is moving, set it's arm to forward
-		data.actorPointer->resetRotation(); // The SR needs to point at this coalStack
-		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
-		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer), 0);
-		break;
+	case StackerReclaimerStateType::PostStackDoubleHandleReserved:
+	case StackerReclaimerStateType::PostStackDoubleHandleReservedFail:
+	case StackerReclaimerStateType::PostStackDoubleHandleReservedSyncFail:
+	case StackerReclaimerStateType::PostStackReserved:
+	case StackerReclaimerStateType::PostStackReservedFail:
+	case StackerReclaimerStateType::PostStackReservedSyncFail:
+	case StackerReclaimerStateType::PreStackDoubleHandleReserved:
+	case StackerReclaimerStateType::PreStackDoubleHandleReservedFail:
+	case StackerReclaimerStateType::PreStackDoubleHandleReservedSyncFail:
+	case StackerReclaimerStateType::PreStackReserved:
+	case StackerReclaimerStateType::PreStackReservedFail:
+	case StackerReclaimerStateType::PreStackReservedSyncFail:
 	case StackerReclaimerStateType::WorkingStack:
+	case StackerReclaimerStateType::WorkingStackDoubleHandle:
+	case StackerReclaimerStateType::WorkingStackDoubleHandleFail:
+	case StackerReclaimerStateType::WorkingStackDoubleHandleSyncFail:
+	case StackerReclaimerStateType::WorkingStackFail:
+	case StackerReclaimerStateType::WorkingStackSyncFail:
+		isStacking = true;
+		isRelcaiming = false;
+		break;
+	case StackerReclaimerStateType::PostReclaimDoubleHandleReserved:
+	case StackerReclaimerStateType::PostReclaimDoubleHandleReservedFail:
+	case StackerReclaimerStateType::PostReclaimDoubleHandleReservedSyncFail:
+	case StackerReclaimerStateType::PostReclaimReserved:
+	case StackerReclaimerStateType::PostReclaimReservedFail:
+	case StackerReclaimerStateType::PostReclaimReservedSyncFail:
+	case StackerReclaimerStateType::PreReclaimDoubleHandleReserved:
+	case StackerReclaimerStateType::PreReclaimDoubleHandleReservedFail:
+	case StackerReclaimerStateType::PreReclaimDoubleHandleReservedSyncFail:
+	case StackerReclaimerStateType::PreReclaimReserved:
+	case StackerReclaimerStateType::PreReclaimReservedFail:
+	case StackerReclaimerStateType::PreReclaimReservedSyncFail:
+	case StackerReclaimerStateType::WorkingReclaim:
+	case StackerReclaimerStateType::WorkingReclaimDoubleHandle:
+	case StackerReclaimerStateType::WorkingReclaimDoubleHandleFail:
+	case StackerReclaimerStateType::WorkingReclaimDoubleHandleSyncFail:
+	case StackerReclaimerStateType::WorkingReclaimFail:
+	case StackerReclaimerStateType::WorkingReclaimSyncFail:
+		isStacking = false;
+		isRelcaiming = true;
+		break;
+	default:
+		isStacking = false;
+		isRelcaiming = false;
+	}
+
+	if (isStacking) {
 		// If the SR is Stacking, set it's colour and rotate it over the appropriate pile
 		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer), 0);
 		stackCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
 		data.actorPointer->rotateMastToCoalStack(getCoalStackWithId(previousState.stockpileID)); // The SR needs to point at this coalStack
-		break;
-	case StackerReclaimerStateType::WorkingReclaim:
+	} else if (isRelcaiming) {
 		// If the SR is Reclaiming, set it's colour and rotate it over the appropriate pile
 		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
-		reclaimCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer),0);
+		reclaimCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer), 0);
 		data.actorPointer->rotateMastToCoalStack(getCoalStackWithId(previousState.stockpileID));
-		break;
-	case StackerReclaimerStateType::PostStackReserved:
-	case StackerReclaimerStateType::PostReclaimReserved:
-	default:
+	} else {
 		stopStackingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer));
-		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer),0);
+		stopReclaimingCoal(getIndexOfStackerReclaimer(stackerReclaimers, data.actorPointer), 0);
 		data.actorPointer->resetRotation();
 	}
 }
@@ -703,7 +742,9 @@ void ALevelController::animateEntity(const SimulationData<Vessel>& data, float i
 	double unrealBerthSize;
 	switch (previousState.type) {
 	case VesselStateType::Berthed:
-		
+	case VesselStateType::Loading:
+	case VesselStateType::Loaded:
+	case VesselStateType::WaitingToSail:		
 		switch (data.terminal) {
 		case TerminalId::NCT:
 			berthStart = NCT_berth_start->GetActorLocation();
@@ -721,17 +762,14 @@ void ALevelController::animateEntity(const SimulationData<Vessel>& data, float i
 
 			break;
 		default:
+			data.actorPointer->atSea();
 			return; //don't bother showing
 		}
-		
-		
 		break;
 	case VesselStateType::Idle:
 	case VesselStateType::Invalid:
-		data.actorPointer->atSea();
-		break;
 	default:
-
+		data.actorPointer->atSea();
 		break;
 	}
 

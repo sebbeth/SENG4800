@@ -25,6 +25,7 @@ public:
 					result.amount += event.amount;
 					break;
 				case StockpileEventType::ReclaimComplete:
+				case StockpileEventType::ReclaimTransferComplete:
 					result.amount -= event.amount;
 					break;
 			}

@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
+ * This file contains code generated from/to be compatible with available XML data as at 2018-11-06 18:17:17.164006
  **/
 #pragma once
 #include <string>
@@ -7,7 +7,7 @@
 #include "DumpstationEvent.h"
 #include "DumpstationStateType.h"
 #include "../Dumpstation/Dumpstation.h"
-#include "../Stockpile/Stockpile.h"
+#include "../TrainMovement/TrainMovement.h"
 class DumpstationState {
 public:
     using Entity = Dumpstation;
@@ -16,9 +16,8 @@ public:
     
 
     double amount;
-    int cycleID;
-    Stockpile::Id stockpileID;
     double time;
+    TrainMovement::Id trainID;
     
     DumpstationState() = default;
 
@@ -29,5 +28,5 @@ public:
 
 template<class Archive>
 void DumpstationState::serialize(Archive & archive) {
-    archive(id, type, amount, cycleID, stockpileID, time);
+    archive(id, type, amount, time, trainID);
 }

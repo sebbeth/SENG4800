@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
+ * This file contains code generated from/to be compatible with available XML data as at 2018-11-06 18:17:17.164006
  **/
 #pragma once
 #include <string>
@@ -15,7 +15,6 @@ public:
     
 
     double amount;
-    int cycleID;
     std::string loadpointName;
     double time;
     
@@ -28,5 +27,5 @@ public:
 
 template<class Archive>
 void LoadpointsState::serialize(Archive & archive) {
-    archive(id, type, amount, cycleID, loadpointName, time);
+    archive(id, type, amount, loadpointName, time);
 }

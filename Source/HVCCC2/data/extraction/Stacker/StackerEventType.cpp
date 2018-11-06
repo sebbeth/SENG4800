@@ -1,19 +1,11 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
+ * This file contains code generated from/to be compatible with available XML data as at 2018-11-06 18:17:17.164006
  **/
 #include "StackerEventType.h"
         
 StackerEventType decodeStackerEventType(const std::string& enumeratorString) {
     if (enumeratorString == "Comp") {
         return StackerEventType::Complete;
-    } else if (enumeratorString == "DoubleHandleComp") {
-        return StackerEventType::DoubleHandleComplete;
-    } else if (enumeratorString == "DoubleHandleOpComp") {
-        return StackerEventType::DoubleHandleOperationComplete;
-    } else if (enumeratorString == "DoubleHandleOpStart") {
-        return StackerEventType::DoubleHandleOperationStart;
-    } else if (enumeratorString == "DoubleHandleStart") {
-        return StackerEventType::DoubleHandleStart;
     } else if (enumeratorString == "Fail") {
         return StackerEventType::Fail;
     } else if (enumeratorString == "Fix") {
@@ -30,6 +22,14 @@ StackerEventType decodeStackerEventType(const std::string& enumeratorString) {
         return StackerEventType::OperationComplete;
     } else if (enumeratorString == "OpStart") {
         return StackerEventType::OperationStart;
+    } else if (enumeratorString == "StackDoubleHandleComp") {
+        return StackerEventType::StackDoubleHandleComplete;
+    } else if (enumeratorString == "StackDoubleHandleOpComp") {
+        return StackerEventType::StackDoubleHandleOperationComplete;
+    } else if (enumeratorString == "StackDoubleHandleOpStart") {
+        return StackerEventType::StackDoubleHandleOperationStart;
+    } else if (enumeratorString == "StackDoubleHandleStart") {
+        return StackerEventType::StackDoubleHandleStart;
     } else if (enumeratorString == "Start") {
         return StackerEventType::Start;
     } else if (enumeratorString == "SyncedFail") {
@@ -48,8 +48,8 @@ std::string encodeStackerEventType(const StackerEventType& value) {
             return "OpStart";
             break;
 
-        case StackerEventType::DoubleHandleOperationStart:
-            return "DoubleHandleOpStart";
+        case StackerEventType::StackDoubleHandleOperationStart:
+            return "StackDoubleHandleOpStart";
             break;
 
         case StackerEventType::OnMove:
@@ -100,16 +100,16 @@ std::string encodeStackerEventType(const StackerEventType& value) {
             return "OpComp";
             break;
 
-        case StackerEventType::DoubleHandleStart:
-            return "DoubleHandleStart";
+        case StackerEventType::StackDoubleHandleStart:
+            return "StackDoubleHandleStart";
             break;
 
-        case StackerEventType::DoubleHandleComplete:
-            return "DoubleHandleComp";
+        case StackerEventType::StackDoubleHandleComplete:
+            return "StackDoubleHandleComp";
             break;
 
-        case StackerEventType::DoubleHandleOperationComplete:
-            return "DoubleHandleOpComp";
+        case StackerEventType::StackDoubleHandleOperationComplete:
+            return "StackDoubleHandleOpComp";
             break;
 
         default:

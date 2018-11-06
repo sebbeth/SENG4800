@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
+ * This file contains code generated from/to be compatible with available XML data as at 2018-11-06 18:17:17.164006
  **/
 #include "LoadpointsEvent.h"
 
@@ -23,26 +23,6 @@ bool LoadpointsEvent::hasAmount() const {
     }
 }
 
-bool LoadpointsEvent::hasCycleID() const {
-    switch (type) {
-        case LoadpointsEventType::FinishLoad:
-        case LoadpointsEventType::StartLoad:
-            return true;
-        case LoadpointsEventType::MaintenanceComplete:
-        case LoadpointsEventType::MaintenanceStart:
-        case LoadpointsEventType::OnFail:
-        case LoadpointsEventType::OnFix:
-        case LoadpointsEventType::StartIdle:
-        case LoadpointsEventType::StartPostLoad:
-        case LoadpointsEventType::StartPostload:
-        case LoadpointsEventType::StartPreload:
-        case LoadpointsEventType::StartRecharge:
-        case LoadpointsEventType::WrapUp:
-        default:
-            return false;
-    }
-}
-
 bool LoadpointsEvent::hasLoadpointName() const {
     switch (type) {
         case LoadpointsEventType::FinishLoad:
@@ -53,11 +33,11 @@ bool LoadpointsEvent::hasLoadpointName() const {
         case LoadpointsEventType::StartPostload:
         case LoadpointsEventType::StartPreload:
         case LoadpointsEventType::StartRecharge:
-        case LoadpointsEventType::WrapUp:
             return true;
         case LoadpointsEventType::MaintenanceComplete:
         case LoadpointsEventType::MaintenanceStart:
         case LoadpointsEventType::StartPostLoad:
+        case LoadpointsEventType::WrapUp:
         default:
             return false;
     }
@@ -73,11 +53,11 @@ bool LoadpointsEvent::hasTime() const {
         case LoadpointsEventType::StartPostload:
         case LoadpointsEventType::StartPreload:
         case LoadpointsEventType::StartRecharge:
-        case LoadpointsEventType::WrapUp:
             return true;
         case LoadpointsEventType::MaintenanceComplete:
         case LoadpointsEventType::MaintenanceStart:
         case LoadpointsEventType::StartPostLoad:
+        case LoadpointsEventType::WrapUp:
         default:
             return false;
     }

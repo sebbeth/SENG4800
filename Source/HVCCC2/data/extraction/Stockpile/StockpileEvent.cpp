@@ -1,15 +1,17 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
+ * This file contains code generated from/to be compatible with available XML data as at 2018-11-06 18:17:17.164006
  **/
 #include "StockpileEvent.h"
 
 bool StockpileEvent::hasAmount() const {
     switch (type) {
         case StockpileEventType::ReclaimComplete:
+        case StockpileEventType::ReclaimTransferComplete:
         case StockpileEventType::RemnantRemoved:
         case StockpileEventType::StackComplete:
         case StockpileEventType::StackTransferComplete:
         case StockpileEventType::StockpileRemnant:
+        case StockpileEventType::StockpileRemoved:
             return true;
         case StockpileEventType::DedicatedStockpileCreated:
         case StockpileEventType::ReclaimStart:
@@ -17,7 +19,6 @@ bool StockpileEvent::hasAmount() const {
         case StockpileEventType::StackTransferStart:
         case StockpileEventType::StockpileBuilt:
         case StockpileEventType::StockpileCreated:
-        case StockpileEventType::StockpileRemoved:
         default:
             return false;
     }
@@ -30,6 +31,7 @@ bool StockpileEvent::hasLength() const {
         case StockpileEventType::DedicatedStockpileCreated:
         case StockpileEventType::ReclaimComplete:
         case StockpileEventType::ReclaimStart:
+        case StockpileEventType::ReclaimTransferComplete:
         case StockpileEventType::RemnantRemoved:
         case StockpileEventType::StackComplete:
         case StockpileEventType::StackStart:
@@ -47,17 +49,18 @@ bool StockpileEvent::hasMachineID() const {
     switch (type) {
         case StockpileEventType::ReclaimComplete:
         case StockpileEventType::ReclaimStart:
+        case StockpileEventType::ReclaimTransferComplete:
         case StockpileEventType::RemnantRemoved:
         case StockpileEventType::StackComplete:
         case StockpileEventType::StackStart:
         case StockpileEventType::StackTransferComplete:
         case StockpileEventType::StackTransferStart:
         case StockpileEventType::StockpileRemnant:
+        case StockpileEventType::StockpileRemoved:
             return true;
         case StockpileEventType::DedicatedStockpileCreated:
         case StockpileEventType::StockpileBuilt:
         case StockpileEventType::StockpileCreated:
-        case StockpileEventType::StockpileRemoved:
         default:
             return false;
     }
@@ -67,6 +70,7 @@ bool StockpileEvent::hasPadID() const {
     switch (type) {
         case StockpileEventType::ReclaimComplete:
         case StockpileEventType::ReclaimStart:
+        case StockpileEventType::ReclaimTransferComplete:
         case StockpileEventType::RemnantRemoved:
         case StockpileEventType::StackComplete:
         case StockpileEventType::StackStart:
@@ -75,9 +79,9 @@ bool StockpileEvent::hasPadID() const {
         case StockpileEventType::StockpileBuilt:
         case StockpileEventType::StockpileCreated:
         case StockpileEventType::StockpileRemnant:
+        case StockpileEventType::StockpileRemoved:
             return true;
         case StockpileEventType::DedicatedStockpileCreated:
-        case StockpileEventType::StockpileRemoved:
         default:
             return false;
     }
@@ -90,6 +94,7 @@ bool StockpileEvent::hasPosition() const {
         case StockpileEventType::DedicatedStockpileCreated:
         case StockpileEventType::ReclaimComplete:
         case StockpileEventType::ReclaimStart:
+        case StockpileEventType::ReclaimTransferComplete:
         case StockpileEventType::RemnantRemoved:
         case StockpileEventType::StackComplete:
         case StockpileEventType::StackStart:
@@ -107,6 +112,7 @@ bool StockpileEvent::hasTime() const {
     switch (type) {
         case StockpileEventType::ReclaimComplete:
         case StockpileEventType::ReclaimStart:
+        case StockpileEventType::ReclaimTransferComplete:
         case StockpileEventType::RemnantRemoved:
         case StockpileEventType::StackComplete:
         case StockpileEventType::StackStart:
@@ -115,9 +121,9 @@ bool StockpileEvent::hasTime() const {
         case StockpileEventType::StockpileBuilt:
         case StockpileEventType::StockpileCreated:
         case StockpileEventType::StockpileRemnant:
+        case StockpileEventType::StockpileRemoved:
             return true;
         case StockpileEventType::DedicatedStockpileCreated:
-        case StockpileEventType::StockpileRemoved:
         default:
             return false;
     }
@@ -127,6 +133,7 @@ bool StockpileEvent::hasVesselID() const {
     switch (type) {
         case StockpileEventType::ReclaimComplete:
         case StockpileEventType::ReclaimStart:
+        case StockpileEventType::ReclaimTransferComplete:
         case StockpileEventType::RemnantRemoved:
         case StockpileEventType::StackComplete:
         case StockpileEventType::StackStart:
@@ -135,9 +142,9 @@ bool StockpileEvent::hasVesselID() const {
         case StockpileEventType::StockpileBuilt:
         case StockpileEventType::StockpileCreated:
         case StockpileEventType::StockpileRemnant:
+        case StockpileEventType::StockpileRemoved:
             return true;
         case StockpileEventType::DedicatedStockpileCreated:
-        case StockpileEventType::StockpileRemoved:
         default:
             return false;
     }

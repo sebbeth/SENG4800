@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
+ * This file contains code generated from/to be compatible with available XML data as at 2018-11-06 18:17:17.164006
  **/
 #include "StockpileEventType.h"
         
@@ -10,6 +10,8 @@ StockpileEventType decodeStockpileEventType(const std::string& enumeratorString)
         return StockpileEventType::ReclaimComplete;
     } else if (enumeratorString == "ReclaimStart") {
         return StockpileEventType::ReclaimStart;
+    } else if (enumeratorString == "ReclaimTransComp") {
+        return StockpileEventType::ReclaimTransferComplete;
     } else if (enumeratorString == "RemnantRemoved") {
         return StockpileEventType::RemnantRemoved;
     } else if (enumeratorString == "StackComp") {
@@ -76,6 +78,10 @@ std::string encodeStockpileEventType(const StockpileEventType& value) {
 
         case StockpileEventType::RemnantRemoved:
             return "RemnantRemoved";
+            break;
+
+        case StockpileEventType::ReclaimTransferComplete:
+            return "ReclaimTransComp";
             break;
 
         case StockpileEventType::StackTransferComplete:

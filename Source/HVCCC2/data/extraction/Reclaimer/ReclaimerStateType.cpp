@@ -1,5 +1,5 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
+ * This file contains code generated from/to be compatible with available XML data as at 2018-11-06 18:17:17.164006
  **/
 #include "ReclaimerStateType.h"
         
@@ -10,38 +10,38 @@ ReclaimerStateType decodeReclaimerStateType(const std::string& enumeratorString)
         return ReclaimerStateType::Maintenance;
     } else if (enumeratorString == "Moving") {
         return ReclaimerStateType::Moving;
-    } else if (enumeratorString == "PostDoubleHandleReserved") {
-        return ReclaimerStateType::PostDoubleHandleReserved;
-    } else if (enumeratorString == "PostDoubleHandleReservedFail") {
-        return ReclaimerStateType::PostDoubleHandleReservedFail;
-    } else if (enumeratorString == "PostDoubleHandleReservedSyncFail") {
-        return ReclaimerStateType::PostDoubleHandleReservedSyncFail;
+    } else if (enumeratorString == "PostReclaimDoubleHandleReserved") {
+        return ReclaimerStateType::PostReclaimDoubleHandleReserved;
+    } else if (enumeratorString == "PostReclaimDoubleHandleReservedFail") {
+        return ReclaimerStateType::PostReclaimDoubleHandleReservedFail;
+    } else if (enumeratorString == "PostReclaimDoubleHandleReservedSyncFail") {
+        return ReclaimerStateType::PostReclaimDoubleHandleReservedSyncFail;
     } else if (enumeratorString == "PostReclaimReserved") {
         return ReclaimerStateType::PostReclaimReserved;
     } else if (enumeratorString == "PostReclaimReservedFail") {
         return ReclaimerStateType::PostReclaimReservedFail;
     } else if (enumeratorString == "PostReclaimReservedSyncFail") {
         return ReclaimerStateType::PostReclaimReservedSyncFail;
-    } else if (enumeratorString == "PreDoubleHandleReserved") {
-        return ReclaimerStateType::PreDoubleHandleReserved;
-    } else if (enumeratorString == "PreDoubleHandleReservedFail") {
-        return ReclaimerStateType::PreDoubleHandleReservedFail;
-    } else if (enumeratorString == "PreDoubleHandleReservedSyncFail") {
-        return ReclaimerStateType::PreDoubleHandleReservedSyncFail;
+    } else if (enumeratorString == "PreReclaimDoubleHandleReserved") {
+        return ReclaimerStateType::PreReclaimDoubleHandleReserved;
+    } else if (enumeratorString == "PreReclaimDoubleHandleReservedFail") {
+        return ReclaimerStateType::PreReclaimDoubleHandleReservedFail;
+    } else if (enumeratorString == "PreReclaimDoubleHandleReservedSyncFail") {
+        return ReclaimerStateType::PreReclaimDoubleHandleReservedSyncFail;
     } else if (enumeratorString == "PreReclaimReserved") {
         return ReclaimerStateType::PreReclaimReserved;
     } else if (enumeratorString == "PreReclaimReservedFail") {
         return ReclaimerStateType::PreReclaimReservedFail;
     } else if (enumeratorString == "PreReclaimReservedSyncFail") {
         return ReclaimerStateType::PreReclaimReservedSyncFail;
-    } else if (enumeratorString == "WorkingDoubleHandle") {
-        return ReclaimerStateType::WorkingDoubleHandle;
-    } else if (enumeratorString == "WorkingDoubleHandleFail") {
-        return ReclaimerStateType::WorkingDoubleHandleFail;
-    } else if (enumeratorString == "WorkingDoubleHandleSyncFail") {
-        return ReclaimerStateType::WorkingDoubleHandleSyncFail;
     } else if (enumeratorString == "WorkingReclaim") {
         return ReclaimerStateType::WorkingReclaim;
+    } else if (enumeratorString == "WorkingReclaimDoubleHandle") {
+        return ReclaimerStateType::WorkingReclaimDoubleHandle;
+    } else if (enumeratorString == "WorkingReclaimDoubleHandleFail") {
+        return ReclaimerStateType::WorkingReclaimDoubleHandleFail;
+    } else if (enumeratorString == "WorkingReclaimDoubleHandleSyncFail") {
+        return ReclaimerStateType::WorkingReclaimDoubleHandleSyncFail;
     } else if (enumeratorString == "WorkingReclaimFail") {
         return ReclaimerStateType::WorkingReclaimFail;
     } else if (enumeratorString == "WorkingReclaimSyncFail") {
@@ -62,8 +62,8 @@ std::string encodeReclaimerStateType(const ReclaimerStateType& value) {
             return "PreReclaimReserved";
             break;
 
-        case ReclaimerStateType::PreDoubleHandleReserved:
-            return "PreDoubleHandleReserved";
+        case ReclaimerStateType::PreReclaimDoubleHandleReserved:
+            return "PreReclaimDoubleHandleReserved";
             break;
 
         case ReclaimerStateType::Moving:
@@ -110,36 +110,36 @@ std::string encodeReclaimerStateType(const ReclaimerStateType& value) {
             return "PostReclaimReservedSyncFail";
             break;
 
-        case ReclaimerStateType::PreDoubleHandleReservedFail:
-            return "PreDoubleHandleReservedFail";
+        case ReclaimerStateType::PreReclaimDoubleHandleReservedFail:
+            return "PreReclaimDoubleHandleReservedFail";
             break;
 
-        case ReclaimerStateType::PreDoubleHandleReservedSyncFail:
-            return "PreDoubleHandleReservedSyncFail";
+        case ReclaimerStateType::PreReclaimDoubleHandleReservedSyncFail:
+            return "PreReclaimDoubleHandleReservedSyncFail";
             break;
 
-        case ReclaimerStateType::WorkingDoubleHandle:
-            return "WorkingDoubleHandle";
+        case ReclaimerStateType::WorkingReclaimDoubleHandle:
+            return "WorkingReclaimDoubleHandle";
             break;
 
-        case ReclaimerStateType::PostDoubleHandleReserved:
-            return "PostDoubleHandleReserved";
+        case ReclaimerStateType::PostReclaimDoubleHandleReserved:
+            return "PostReclaimDoubleHandleReserved";
             break;
 
-        case ReclaimerStateType::WorkingDoubleHandleFail:
-            return "WorkingDoubleHandleFail";
+        case ReclaimerStateType::WorkingReclaimDoubleHandleFail:
+            return "WorkingReclaimDoubleHandleFail";
             break;
 
-        case ReclaimerStateType::WorkingDoubleHandleSyncFail:
-            return "WorkingDoubleHandleSyncFail";
+        case ReclaimerStateType::WorkingReclaimDoubleHandleSyncFail:
+            return "WorkingReclaimDoubleHandleSyncFail";
             break;
 
-        case ReclaimerStateType::PostDoubleHandleReservedFail:
-            return "PostDoubleHandleReservedFail";
+        case ReclaimerStateType::PostReclaimDoubleHandleReservedFail:
+            return "PostReclaimDoubleHandleReservedFail";
             break;
 
-        case ReclaimerStateType::PostDoubleHandleReservedSyncFail:
-            return "PostDoubleHandleReservedSyncFail";
+        case ReclaimerStateType::PostReclaimDoubleHandleReservedSyncFail:
+            return "PostReclaimDoubleHandleReservedSyncFail";
             break;
 
         default:

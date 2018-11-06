@@ -1,19 +1,11 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
+ * This file contains code generated from/to be compatible with available XML data as at 2018-11-06 18:17:17.164006
  **/
 #include "ReclaimerEventType.h"
         
 ReclaimerEventType decodeReclaimerEventType(const std::string& enumeratorString) {
     if (enumeratorString == "Comp") {
         return ReclaimerEventType::Complete;
-    } else if (enumeratorString == "DoubleHandleComp") {
-        return ReclaimerEventType::DoubleHandleComplete;
-    } else if (enumeratorString == "DoubleHandleOpComp") {
-        return ReclaimerEventType::DoubleHandleOperationComplete;
-    } else if (enumeratorString == "DoubleHandleOpStart") {
-        return ReclaimerEventType::DoubleHandleOperationStart;
-    } else if (enumeratorString == "DoubleHandleStart") {
-        return ReclaimerEventType::DoubleHandleStart;
     } else if (enumeratorString == "Fail") {
         return ReclaimerEventType::Fail;
     } else if (enumeratorString == "Fix") {
@@ -30,6 +22,14 @@ ReclaimerEventType decodeReclaimerEventType(const std::string& enumeratorString)
         return ReclaimerEventType::OperationComplete;
     } else if (enumeratorString == "OpStart") {
         return ReclaimerEventType::OperationStart;
+    } else if (enumeratorString == "ReclaimDoubleHandleComp") {
+        return ReclaimerEventType::ReclaimDoubleHandleComplete;
+    } else if (enumeratorString == "ReclaimDoubleHandleOpComp") {
+        return ReclaimerEventType::ReclaimDoubleHandleOperationComplete;
+    } else if (enumeratorString == "ReclaimDoubleHandleOpStart") {
+        return ReclaimerEventType::ReclaimDoubleHandleOperationStart;
+    } else if (enumeratorString == "ReclaimDoubleHandleStart") {
+        return ReclaimerEventType::ReclaimDoubleHandleStart;
     } else if (enumeratorString == "Start") {
         return ReclaimerEventType::Start;
     } else if (enumeratorString == "SyncedFail") {
@@ -48,8 +48,8 @@ std::string encodeReclaimerEventType(const ReclaimerEventType& value) {
             return "OpStart";
             break;
 
-        case ReclaimerEventType::DoubleHandleOperationStart:
-            return "DoubleHandleOpStart";
+        case ReclaimerEventType::ReclaimDoubleHandleOperationStart:
+            return "ReclaimDoubleHandleOpStart";
             break;
 
         case ReclaimerEventType::OnMove:
@@ -100,16 +100,16 @@ std::string encodeReclaimerEventType(const ReclaimerEventType& value) {
             return "OpComp";
             break;
 
-        case ReclaimerEventType::DoubleHandleStart:
-            return "DoubleHandleStart";
+        case ReclaimerEventType::ReclaimDoubleHandleStart:
+            return "ReclaimDoubleHandleStart";
             break;
 
-        case ReclaimerEventType::DoubleHandleComplete:
-            return "DoubleHandleComp";
+        case ReclaimerEventType::ReclaimDoubleHandleComplete:
+            return "ReclaimDoubleHandleComp";
             break;
 
-        case ReclaimerEventType::DoubleHandleOperationComplete:
-            return "DoubleHandleOpComp";
+        case ReclaimerEventType::ReclaimDoubleHandleOperationComplete:
+            return "ReclaimDoubleHandleOpComp";
             break;
 
         default:

@@ -1,15 +1,11 @@
 /**
- * This file contains code generated from/to be compatible with available XML data as at 2018-10-30 21:30:03.549963
+ * This file contains code generated from/to be compatible with available XML data as at 2018-11-06 18:17:17.164006
  **/
 #pragma once
 #include <string>
 
 enum class ReclaimerEventType {
     Complete,
-    DoubleHandleComplete,
-    DoubleHandleOperationComplete,
-    DoubleHandleOperationStart,
-    DoubleHandleStart,
     Fail,
     Fix,
     MaintenanceComplete,
@@ -18,6 +14,10 @@ enum class ReclaimerEventType {
     OnStopMove,
     OperationComplete,
     OperationStart,
+    ReclaimDoubleHandleComplete,
+    ReclaimDoubleHandleOperationComplete,
+    ReclaimDoubleHandleOperationStart,
+    ReclaimDoubleHandleStart,
     Start,
     SyncedFail,
     SyncedFix,
